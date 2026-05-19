@@ -1,4 +1,5 @@
 # ⭐ StarOne Galaxy Architecture
+
 > **Document ID:** SOG-GALAXY-README-v1.0  
 > **Repository:** starone-galaxy-architecture  
 > **Status:** 🟢 Architectural Source of Truth  
@@ -8,16 +9,59 @@
 
 ---
 
+# Revision History
+
+| Version | Date | Author | Description |
+|---|---|---|---|
+| 1.0 | Jan 2026 | Sachin Salunke | Initial Global Architecture README |
+| 1.1 | Jan 2026 | Platform Governance | C4 and Governance Navigation Added |
+| 1.2 | Jan 2026 | Sachin Salunke | Governance, Runtime and SDLC Enhancements |
+
+---
+
+# Sign-Off
+
+| Role | Status |
+|---|---|
+| Platform Architect | Pending |
+| Security Review | Pending |
+| DevOps Governance | Pending |
+
+---
+
 # 👀 How to Navigate (For Reviewers)
 
 Start here:
 
-1. Review C4 diagrams → `/architecture/c4/`  
-2. Read architecture decisions → `/docs/adr/`  
-3. Explore high-level design → `/docs/hld/`  
-4. Review governance → `/governance/`  
+1. Review C4 diagrams → `/architecture/c4/`
+2. Read architecture decisions → `/docs/adr/`
+3. Explore high-level design → `/docs/hld/`
+4. Review governance → `/governance/`
 
 This repository represents a structured enterprise architecture system designed with governance, traceability, and scalability as first-class concerns.
+
+---
+
+# 📌 Executive Overview
+
+**StarOne Galaxy** is the architectural and governance source-of-truth for the STARONE-INFOTECH ecosystem.
+
+It provides:
+
+- Shared Control Plane Governance
+- Domain-Isolated Architecture Standards
+- Documentation-as-Code
+- Repository Operating Model
+- Security and Compliance Baselines
+- Platform Engineering Golden Path
+
+The ecosystem is composed of:
+
+1. **starone-galaxy-infra** — Shared Control Plane
+2. **starone-galaxy-config** — Git-backed Config Store
+3. **starone-galaxy-architecture** — Architecture Source of Truth
+4. **starone-dhs-system** — Enterprise OMS Domain
+5. **bookshow-system** — Consumer Ticketing Domain
 
 ---
 
@@ -25,12 +69,12 @@ This repository represents a structured enterprise architecture system designed 
 
 This project demonstrates:
 
-- Event-driven microservices architecture using Kafka  
-- Strict domain isolation (DHS vs Bookshow)  
-- Shared platform control plane (Kubernetes + CI/CD)  
-- Documentation-as-Code with full traceability (EPIC → RTM)  
-- Governance-first engineering model  
-- Saga-based distributed transaction management  
+- Event-driven microservices architecture using Kafka
+- Strict domain isolation (DHS vs Bookshow)
+- Shared platform control plane (Kubernetes + CI/CD)
+- Documentation-as-Code with full traceability (EPIC → RTM)
+- Governance-first engineering model
+- Saga-based distributed transaction management
 
 ---
 
@@ -52,27 +96,12 @@ This project demonstrates:
 
 This architecture is designed to:
 
-- Separate enterprise and consumer domains with clear boundaries  
-- Establish governance as a foundational layer rather than an afterthought  
-- Enable scalable, event-driven communication between systems  
-- Provide a reusable platform model for future services  
+- Separate enterprise and consumer domains with clear boundaries
+- Establish governance as a foundational layer rather than an afterthought
+- Enable scalable, event-driven communication between systems
+- Provide a reusable platform model for future services
 
 The goal is to simulate a production-grade ecosystem with strong architectural discipline.
-
----
-
-# 📌 Executive Overview
-
-**StarOne Galaxy** is the architectural and governance source-of-truth for the STARONE-INFOTECH ecosystem.
-
-It provides:
-
-- Shared Control Plane Governance  
-- Domain-Isolated Architecture Standards  
-- Documentation-as-Code  
-- Repository Operating Model  
-- Security and Compliance Baselines  
-- Platform Engineering Golden Path  
 
 ---
 
@@ -88,7 +117,7 @@ It provides:
 
 ---
 
-# 🏗 C4 — System Context (Improved)
+# 🏗 C4 — System Context
 
 ```mermaid
 flowchart LR
@@ -142,6 +171,25 @@ Governance --> Templates[Templates]
 
 ---
 
+# 🔗 Domain Dependency Map
+
+```mermaid
+flowchart LR
+
+Infra --> Config
+Infra --> DHS
+Infra --> Bookshow
+
+Config --> DHS
+Config --> Bookshow
+
+Architecture --> Infra
+Architecture --> DHS
+Architecture --> Bookshow
+```
+
+---
+
 # 🏗 Infrastructure Overview
 
 ```mermaid
@@ -164,11 +212,11 @@ K8s --> Postgres[PostgreSQL]
 
 ## Key Capabilities
 
-- Containerized microservices (Docker)  
-- Kubernetes orchestration  
-- GitHub Actions CI/CD pipelines  
-- Centralized configuration (Spring Cloud Config)  
-- Event backbone using Kafka  
+- Containerized microservices (Docker)
+- Kubernetes orchestration
+- GitHub Actions CI/CD pipelines
+- Centralized configuration (Spring Cloud Config)
+- Event backbone using Kafka
 
 Infrastructure implementation is maintained in a private repository to ensure security and operational integrity. The architecture and deployment model are fully represented here.
 
@@ -178,11 +226,11 @@ Infrastructure implementation is maintained in a private repository to ensure se
 
 | Repository | Visibility | Reason |
 |---|---|---|
-starone-galaxy-architecture | Public | Architecture portfolio |
-starone-galaxy-infra | Private | Deployment configs |
-starone-dhs-system | Private | Enterprise domain |
-bookshow-system | Private | Consumer domain |
-starone-galaxy-config | Private | Secrets/config |
+| starone-galaxy-architecture | Public | Architecture portfolio |
+| starone-galaxy-infra | Private | Deployment configs |
+| starone-dhs-system | Private | Enterprise domain |
+| bookshow-system | Private | Consumer domain |
+| starone-galaxy-config | Private | Secrets/config |
 
 ---
 
@@ -242,30 +290,47 @@ starone-galaxy-architecture/
 
 ---
 
+# 📦 Internal Taxonomy Standard
+
+```text
+/apps
+/platform
+/libs
+/bom
+/docs
+/scripts
+.github
+```
+
+---
+
 # 🔧 Tech Stack Standards
 
 | Layer | Standard |
 |---|---|
-Language | Java 21 |
-Framework | Spring Boot 3.x |
-API Communication | REST + OpenFeign
-Messaging | Kafka |
-Database | PostgreSQL |
-Cache | Redis |
-Security | JWT / RBAC / TLS 1.3 |
-DevOps | Docker + Kubernetes |
+| Language | Java 21 |
+| Framework | Spring Boot 3.x |
+| API Communication | REST + OpenFeign |
+| Messaging | Kafka |
+| Database | PostgreSQL |
+| Cache | Redis |
+| Security | JWT / RBAC / TLS 1.3 |
+| DevOps | Docker + Kubernetes |
+| CI/CD | GitHub Actions |
 
 ---
 
 # ⚙ Architecture Principles
 
-- Platform First  
-- Domain Isolation  
-- API Gateway Security  
-- Database per Service  
-- Event-Driven Integration  
-- Saga Patterns  
-- Compensating Transactions  
+Mandatory principles:
+
+- Platform First
+- Domain Isolation
+- API Gateway Security
+- Database per Service
+- Event-Driven Integration
+- Saga Patterns
+- Compensating Transactions
 
 ---
 
@@ -280,17 +345,111 @@ All distributed workflows across DHS and Bookshow domains must implement:
 - Retry + Dead Letter Queue (DLQ) handling
 - Distributed correlation identifiers
 
-Two-Phase Commit (2PC) is prohibited for cross-domain runtime flows due to scalability and availability constraints. 
+Two-Phase Commit (2PC) is prohibited for cross-domain runtime flows due to scalability and availability constraints.
 
 ---
 
 # 🧭 Governance Navigation Index
 
+## Architecture Decisions
+
 ```text
 /docs/adr/
+```
+
+- ADR-001 Repository Taxonomy
+- ADR-002 Documentation-as-Code
+- ADR-003 BOM Governance
+
+---
+
+## Architecture Designs
+
+```text
 /docs/hld/
+```
+
+- HLD-001 Global Ecosystem Architecture
+
+---
+
+## Technical Specifications
+
+```text
 /docs/srs/
+```
+
+- SRS-001 Documentation Standards Engine
+
+---
+
+## Traceability
+
+```text
 /docs/rtm/
+```
+
+- RTM-001 Governance Traceability
+
+---
+
+## Policies and Standards
+
+```text
+/governance/
+```
+
+- Contribution Standards
+- Architecture Review Policies
+- Compliance Controls
+
+---
+
+# 🚀 Getting Started
+
+## Prerequisites
+
+- Java 21
+- Maven 3.9+
+- Docker
+- Kubernetes CLI
+- Git
+
+---
+
+## Clone Repositories
+
+```bash
+git clone --recursive git@github.com:starone/starone-galaxy-architecture.git
+```
+
+---
+
+## Explore Architecture
+
+Recommended order:
+
+### 1. Read ADRs
+
+```text
+/docs/adr/
+```
+
+### 2. Review C4 Models
+
+```text
+/architecture/c4/
+```
+
+### 3. Review HLD
+
+```text
+/docs/hld/
+```
+
+### 4. Review Standards
+
+```text
 /governance/
 ```
 
@@ -301,21 +460,54 @@ Two-Phase Commit (2PC) is prohibited for cross-domain runtime flows due to scala
 ```mermaid
 flowchart TD
 
-Start --> ReadREADME
-ReadREADME --> ReviewC4
-ReviewC4 --> ExploreDomains
-ExploreDomains --> Governance
-Governance --> Contribute
+Start[Start]
+
+Start --> ReadREADME[Read Global README]
+ReadREADME --> ReviewC4[Review C4 Maps]
+ReviewC4 --> ExploreDomains[Explore Domains]
+ExploreDomains --> Governance[Read Standards]
+Governance --> Contribute[Start Contributing]
 ```
 
 ---
 
-# 🔐 Governance Rules (Solo Adapted)
+# ✅ Definition of Done For New Domain Repos
 
-- PR-based workflow  
-- Self-review governance  
-- CODEOWNERS for ownership definition  
-- Protected branch discipline  
+Every new domain repository must include:
+
+- README.md using global template
+- CODEOWNERS
+- Reusable workflows
+- Documentation templates
+- Architecture diagrams
+- RTM linkage
+- Security baselines
+
+---
+
+# 🤝 Contribution Model
+
+This repository follows:
+
+- PR-based contribution workflow
+- Protected branch governance
+- Conventional Commits
+- Architecture review approval
+- Documentation-first engineering
+- Traceability-first SDLC governance
+
+---
+
+# 🔐 Governance Rules
+
+Required:
+
+- Trunk based development
+- Conventional commits
+- CODEOWNER approval mandatory
+- Protected branches
+- Architecture review gate
+- Security review gate
 
 ---
 
@@ -330,6 +522,7 @@ Stories --> ADR
 ADR --> HLD
 HLD --> SRS
 SRS --> RTM
+RTM --> Validation
 ```
 
 ---
@@ -350,32 +543,50 @@ LLD --> IMPLEMENTATION
 IMPLEMENTATION --> RTM
 RTM --> QA
 ```
+
+---
+
+# 📚 Standards References
+
+Aligned To:
+
+- ISO/IEC/IEEE 29148
+- IEEE 1016
+- MADR
+- C4 Model
+
+---
+
+# 🛠 Local Bootstrap
+
+```bash
+# Start infrastructure
+docker compose up -d
+
+# Build shared modules
+./mvnw clean install -DskipTests
+```
+
 ---
 
 # 📈 Architecture Roadmap
 
-Current:
-- Governance baseline  
-- C4 models  
-- Architecture repository  
+## Current Baseline
 
-Next:
-- HLD expansion  
-- Domain deep dives  
-- Standards engine  
+- Repository Taxonomy
+- Governance Standards
+- Documentation-as-Code
+- C4 Architecture Models
 
----
+## Next Evolution
 
-# 🤝 Contribution Model
-
-This repository follows:
-
-- PR-based contribution workflow
-- Protected branch governance
-- Conventional Commits
-- Architecture review approval
-- Documentation-first engineering
-- Traceability-first SDLC governance
+- Platform HLD
+- Domain HLDs
+- Control Plane Architecture
+- Runtime Deployment Models
+- Event Catalog & Schema Registry
+- Shared Platform Libraries
+- Observability Architecture
 
 ---
 
@@ -398,13 +609,13 @@ Future roadmap includes:
 
 | Area | Owner |
 |---|---|
-Architecture | Platform Architect |
-Governance | Self-governed |
-Security | Design-driven |
-DevOps | Platform model |
+| Architecture | Platform Architects |
+| Governance | Governance Board |
+| Security | Security Review |
+| DevOps | Platform Engineering |
 
 ---
 
-Architectural Source of Truth — Built with Governance, Designed for Scale
+Architectural Source of Truth — Built with Governance, Designed for Scale.
 
 It serves as the central reference point for all architectural decisions, system boundaries, and governance standards across the ecosystem.
