@@ -4,7 +4,7 @@
 **Repository:** starone-galaxy-architecture  
 **Parent Epic:** EPIC-ARCH-001 Ecosystem Design & Governance Baseline  
 **Parent Story:** STORY-ARCH-003 — Global Ecosystem README  
-**Issue:** S2-I02 Build C4 Context Diagram  
+**Issue:** STORY-ARCH-002 Build C4 Context Diagram  
 **Author:** Sachin Salunke  
 **Version:** 1.0  
 **Status:** Ready for Architecture Review
