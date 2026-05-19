@@ -40,7 +40,7 @@ Start here:
 
 This repository represents a structured enterprise architecture system designed with governance, traceability, and scalability as first-class concerns.
 
----
+It provides:
 
 # 📌 Executive Overview
 
@@ -168,6 +168,12 @@ Governance --> Policies[Policies]
 Governance --> Controls[Controls]
 Governance --> Templates[Templates]
 ```
+
+Contains:
+
+- Spring Cloud Config
+- Encrypted secrets
+- Domain config inheritance
 
 ---
 
@@ -415,7 +421,9 @@ Two-Phase Commit (2PC) is prohibited for cross-domain runtime flows due to scala
 - Kubernetes CLI
 - Git
 
----
+```text
+/docs/adr/
+```
 
 ## Clone Repositories
 
