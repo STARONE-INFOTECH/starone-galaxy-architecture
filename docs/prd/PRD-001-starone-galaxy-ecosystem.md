@@ -102,7 +102,7 @@ PO-05 | Support event-driven interactions between systems |
 
 ## 5.1 DHS (Distributed Hub & Sales)
 
-### Features
+### Order Flow
 
 - Order Creation  
 - Order Validation (Commercial, Accounts, Inventory)  
@@ -114,7 +114,7 @@ PO-05 | Support event-driven interactions between systems |
 
 ## 5.2 Bookshow
 
-### Features
+### Show Booking Flow
 
 - Event Discovery  
 - Show Selection  
@@ -127,7 +127,7 @@ PO-05 | Support event-driven interactions between systems |
 
 ## 5.3 SportStats
 
-### Features
+### Statics Flow
 
 - Fetch data from third-party APIs  
 - Store and process sports data  
@@ -138,7 +138,7 @@ PO-05 | Support event-driven interactions between systems |
 
 ## 5.4 VaultIron
 
-### Features
+### Secret Flow
 
 - Secure credential storage  
 - Password management  
@@ -151,7 +151,7 @@ PO-05 | Support event-driven interactions between systems |
 
 - Independent user management per domain  
 - Domain-isolated data storage  
-- Centralized configuration system   
+- Centralized configuration system
 - Scalable deployment via Kubernetes  
 - Domain-specific communication model:
   - DHS uses event-driven workflows

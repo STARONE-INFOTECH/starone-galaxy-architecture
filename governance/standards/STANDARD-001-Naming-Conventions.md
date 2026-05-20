@@ -60,13 +60,13 @@ Applies to:
 
 # 3. Repository Naming Standard
 
-## Pattern
+## Repository Naming Pattern
 
 ```text
 starone-{domain}-{type}
 ```
 
-## Examples
+## Repository Examples
 
 ```text
 starone-galaxy-infra
@@ -76,7 +76,7 @@ starone-dhs-system
 starone-bookshow-system
 ```
 
-## Rules
+## Repository Naming Rules
 
 - lowercase only
 - kebab-case only
@@ -89,13 +89,13 @@ starone-bookshow-system
 
 # 4. Documentation Artifact Naming
 
-## Pattern
+## Artifact Naming Pattern
 
 ```text
 {TYPE}-{NUMBER}-{Title}.md
 ```
 
-## Examples
+## Artifact Examples
 
 ```text
 ADR-001-Repository-Taxonomy.md
@@ -126,7 +126,7 @@ STANDARD-001-Naming-Conventions.md
 
 # 5. Branch Naming Standard
 
-## Pattern
+## Branch Naming Pattern
 
 ```text
 feature/<name>
@@ -134,7 +134,7 @@ hotfix/<name>
 release/<version>
 ```
 
-## Examples
+## Branch Examples
 
 ```text
 feature/s1-i04-naming-standards
@@ -143,7 +143,7 @@ hotfix/fix-rttm-linkage
 release/v1.0.0
 ```
 
-## Rules
+##  Branch Naming Rules
 
 - lowercase only
 - kebab-case only
@@ -155,13 +155,13 @@ release/v1.0.0
 
 # 6. GitHub Workflow Naming Standard
 
-## Pattern
+## GitHub Workflow Naming Pattern
 
 ```text
 domain-purpose.yml
 ```
 
-## Examples
+## GitHub Workflow Examples
 
 ```text
 doc-validation.yml
@@ -170,7 +170,7 @@ architecture-review.yml
 lint-standards.yml
 ```
 
-## Rules
+## GitHub Workflow Naming Rules
 
 - purpose-driven names
 - no generic names like build.yml
@@ -181,13 +181,13 @@ lint-standards.yml
 
 # 7. Service Naming Standard
 
-## Pattern
+## Service Naming Pattern
 
 ```text
 <domain>-<capability>-service
 ```
 
-## Examples
+## Service Examples
 
 ```text
 dhs-order-service
@@ -195,7 +195,7 @@ dhs-inventory-service
 bookshow-booking-service
 ```
 
-## Rules
+## Service Naming Rules
 
 - domain prefix mandatory
 - service suffix mandatory
@@ -205,13 +205,13 @@ bookshow-booking-service
 
 # 8. Java Package Naming Standard
 
-## Pattern
+## Java Package Naming Pattern
 
 ```text
 com.starone.<domain>.<service>
 ```
 
-## Examples
+## Java Package Examples
 
 ```text
 com.starone.dhs.billing
@@ -222,13 +222,13 @@ com.starone.bookshow.booking
 
 # 9. Kafka Topic Naming Standard
 
-## Pattern
+## Kafka Topic Naming Pattern
 
 ```text
 <domain>.<entity>.<event>
 ```
 
-## Examples
+## Kafka Topic Examples
 
 ```text
 dhs.order.created
@@ -236,7 +236,7 @@ dhs.inventory.updated
 bookshow.booking.confirmed
 ```
 
-## Rules
+## Kafka Topic Naming Rules
 
 - lowercase only
 - dot notation only
@@ -247,13 +247,13 @@ bookshow.booking.confirmed
 
 # 10. Configuration Key Naming Standard
 
-## Pattern
+## Configuration Key Naming Pattern
 
 ```text
 domain.service.property
 ```
 
-## Example
+## Configuration Key Example
 
 ```text
 dhs.billing.retry.maxAttempts
