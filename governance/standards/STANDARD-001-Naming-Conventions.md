@@ -143,7 +143,7 @@ hotfix/fix-rttm-linkage
 release/v1.0.0
 ```
 
-##  Branch Naming Rules
+## Branch Naming Rules
 
 - lowercase only
 - kebab-case only
