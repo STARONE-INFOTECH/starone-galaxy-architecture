@@ -16,6 +16,19 @@ Before contributing, please read this guide fully.
 
 ---
 
+# Project Workflow Lifecycle
+
+| Status | Meaning |
+|---|---|
+| Backlog | Planned |
+| Ready | Sprint-ready |
+| In Progress | Active branch |
+| Review | PR Open |
+| Done | PR Merged |
+| Closed | Released |
+
+---
+
 # 1. Contribution Principles
 
 All contributions must adhere to:
@@ -42,29 +55,42 @@ Every contribution must improve one or more of:
 
 ```text
 starone-galaxy-architecture/
+│
 ├── docs/
 │   ├── adr/
+│   ├── brd/
+│   ├── frd/
 │   ├── hld/
-│   ├── srs/
+│   ├── lld/
+│   ├── prd/
 │   ├── rtm/
-│   └── standards/
+│   ├── srs/
+│   ├── epic/
+│   ├── stories/
+│   ├── milestones/
+│   ├── standards/
+│   └── templates/
 │
 ├── architecture/
 │   ├── c4/
-│   ├── domain/
-│   └── integration/
+│   ├── deployment/
+│   ├── integration/
+│   ├── security/
+│   ├── runtime/
+│   └── domain/
 │
 ├── governance/
+│   ├── standards/
+│   ├── branching/
 │   ├── policies/
 │   ├── controls/
-│   └── templates/
+│   └── compliance/
 │
 └── .github/
     ├── workflows/
+    ├── ISSUE_TEMPLATE/
     └── CODEOWNERS
 ```
-
-Contribute only within your owned or approved domain.
 
 ---
 
@@ -72,10 +98,9 @@ Contribute only within your owned or approved domain.
 
 ## Branching Model
 
-Trunk-based development:
-
 ```text
 main
+develop
 feature/<feature-name>
 hotfix/<fix-name>
 release/<release-version>
@@ -93,14 +118,20 @@ git checkout -b hotfix/fix-rttm-linkage
 
 # 4. Commit Standards
 
+## Commit Format
+
+```text
+type(scope): summary
+```
+
 Use Conventional Commits:
 
 ```text
-feat: add ADR for saga orchestration decision
-fix: correct C4 container dependency mapping
-docs: update HLD architecture diagram
-refactor: improve governance template structure
-chore: update markdown lint workflow
+feat(adr): add saga orchestration decision
+fix(c4): correct container dependency mapping
+docs(hld): update architecture diagram
+refactor(governance): improve template structure
+chore(workflows): update markdown lint workflow
 ```
 
 Allowed prefixes:
@@ -112,9 +143,22 @@ Allowed prefixes:
 - chore
 - test
 
+
 ---
 
 # 5. Pull Request Process
+
+## Mandatory Traceability
+
+Every PR must include:
+
+```markdown
+Epic:
+Story:
+Issue:
+
+Closes #<issue-number>
+```
 
 ## Pull Request Must Include
 
@@ -176,6 +220,19 @@ Contribution is complete only when:
 - Traceability updated
 - Documentation merged
 - Governance validations passed
+
+## Merge Strategy
+
+Approved merge strategy:
+
+✅ Squash and Merge
+
+Reason:
+
+- Cleaner governance history
+- Better auditability
+- Reduced commit noise
+- Stronger release traceability
 
 ---
 
@@ -486,9 +543,10 @@ Approval --> Merge
 Recommended next governance artifacts:
 
 - ADR-002 Documentation-as-Code Strategy
-- STANDARD-001 Contribution Governance Standard
-- PR_TEMPLATE.md
+- STANDARD-003 CODEOWNERS Governance
+- PULL_REQUEST_TEMPLATE.md
 - Architecture Review Checklist
+- CI Governance Validation Workflow
 
 ---
 
@@ -500,11 +558,10 @@ Protect standards.
 Scale intentionally.
 
 **StarOne Galaxy Governance**
-```
 
 
-### Recommended companion files in `.github/`
-Also add:
+
+# Recommended Companion Files
 
 ```text
 .github/
