@@ -1,0 +1,22 @@
+name: pr-validation
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  validate-pr:
+    name: PR Governance Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Validate Pull Request Title
+        uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Check PR Description
+        run: |
+          echo "PR governance validation placeholder."

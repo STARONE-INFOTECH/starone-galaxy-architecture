@@ -1,0 +1,26 @@
+name: governance-check
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  governance-validation:
+    name: Governance Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Governance Structure
+        run: |
+          echo "Validating governance structure..."
+
+          test -d governance
+          test -d docs
+          test -d architecture
+
+          echo "Governance structure validation passed."
