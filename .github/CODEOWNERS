@@ -1,119 +1,66 @@
-# CODEOWNERS
-# Repository: starone-galaxy-architecture
-# Purpose: Governance ownership enforcement
-# Last Updated: Jan 2026
+# =========================================================
+# StarOne Galaxy CODEOWNERS
+# =========================================================
+# Governance-as-Code ownership model
+# =========================================================
 
-###############################################################################
-# GLOBAL DEFAULT OWNERS
-###############################################################################
+# ---------------------------------------------------------
+# Global Owners
+# ---------------------------------------------------------
 
-*                               @starone/platform-architects @starone/devops-governance
+* @STARONE-INFOTECH/platform-architects
 
-###############################################################################
-# REPOSITORY GOVERNANCE
-###############################################################################
+# ---------------------------------------------------------
+# Architecture Governance
+# ---------------------------------------------------------
 
-# Root governance artifacts
-/README.md                       @starone/platform-architects
-/.github/                        @starone/platform-engineering
+/docs/adr/ @STARONE-INFOTECH/platform-architects
+/docs/hld/ @STARONE-INFOTECH/platform-architects
+/docs/lld/ @STARONE-INFOTECH/platform-architects
+/architecture/ @STARONE-INFOTECH/platform-architects
 
-###############################################################################
-# DOCUMENTATION DOMAIN OWNERSHIP
-###############################################################################
+# ---------------------------------------------------------
+# Governance Standards
+# ---------------------------------------------------------
 
-/docs/adr/                       @starone/architecture-governance
-/docs/hld/                       @starone/platform-architects
-/docs/srs/                       @starone/solution-architecture
-/docs/rtm/                       @starone/qa-governance
-/docs/standards/                 @starone/architecture-governance
+/governance/ @STARONE-INFOTECH/governance-board
 
-# Templates
-/docs/templates/                 @starone/architecture-governance
+# ---------------------------------------------------------
+# Security
+# ---------------------------------------------------------
 
-###############################################################################
-# ARCHITECTURE DOMAIN
-###############################################################################
+/architecture/security/ @STARONE-INFOTECH/security-review
+/docs/security/ @STARONE-INFOTECH/security-review
 
-/architecture/c4/                @starone/platform-architects
-/architecture/domain/            @starone/domain-architects
-/architecture/integration/       @starone/integration-architecture
+# ---------------------------------------------------------
+# CI/CD & Workflows
+# ---------------------------------------------------------
 
-###############################################################################
-# GOVERNANCE DOMAIN
-###############################################################################
+/.github/ @STARONE-INFOTECH/devops-governance
+/scripts/ @STARONE-INFOTECH/devops-governance
 
-/governance/policies/            @starone/governance-board
-/governance/controls/            @starone/security-governance
-/governance/templates/           @starone/architecture-governance
+# ---------------------------------------------------------
+# Runtime Platform
+# ---------------------------------------------------------
 
-###############################################################################
-# PLATFORM AUTOMATION
-###############################################################################
+/platform/ @STARONE-INFOTECH/platform-engineering
 
-# GitHub Actions (strict review)
-.github/workflows/               @starone/platform-engineering @starone/devsecops
+# ---------------------------------------------------------
+# Domain Ownership
+# ---------------------------------------------------------
 
-# Branch protection / repo settings
-.github/CODEOWNERS               @starone/platform-architects @starone/devops-governance
+/docs/brd/ @STARONE-INFOTECH/business-analysts
+/docs/prd/ @STARONE-INFOTECH/product-owners
 
-###############################################################################
-# SECURITY / COMPLIANCE
-###############################################################################
+# ---------------------------------------------------------
+# Standards & Templates
+# ---------------------------------------------------------
 
-# Security-related docs
-**/*security*                    @starone/security-governance
-**/*rbac*                        @starone/security-governance
-**/*tls*                         @starone/security-governance
+/docs/templates/ @STARONE-INFOTECH/platform-architects
+/docs/standards/ @STARONE-INFOTECH/governance-board
 
-###############################################################################
-# DOMAIN-SPECIFIC OWNERSHIP
-###############################################################################
+# ---------------------------------------------------------
+# Compliance
+# ---------------------------------------------------------
 
-# DHS Domain
-**/*dhs*                         @starone/dhs-architecture
-
-# Bookshow Domain
-**/*bookshow*                    @starone/bookshow-architecture
-
-# Saga / Distributed Transactions
-**/*saga*                        @starone/platform-architects
-**/*compensation*                @starone/platform-architects
-
-###############################################################################
-# MANDATORY MULTI-APPROVER RULES (Protected Paths)
-###############################################################################
-
-# Architectural Decisions require dual approval
-/docs/adr/*                      @starone/platform-architects @starone/security-governance
-
-# HLD requires architecture + devops
-/docs/hld/*                      @starone/platform-architects @starone/devops-governance
-
-# SRS requires architecture + domain owner
-/docs/srs/*                      @starone/solution-architecture @starone/domain-architects
-
-###############################################################################
-# OPTIONAL FUTURE DOMAIN EXTENSIONS
-###############################################################################
-
-/platform/                       @starone/platform-engineering
-/libs/                           @starone/core-platform-team
-/bom/                            @starone/platform-architecture
-
-###############################################################################
-# REVIEW POLICY NOTES
-###############################################################################
-# Protected branch rules (configured in GitHub):
-#
-# main branch:
-# - Minimum 2 approvals
-# - Require CODEOWNER review
-# - Require status checks:
-#   - architecture-review
-#   - security-compliance
-#   - doc-validation
-#   - lint-standards
-#
-# No direct pushes to main.
-# Trunk-based workflow only.
-###############################################################################
+/governance/compliance/ @STARONE-INFOTECH/security-review
