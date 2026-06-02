@@ -3,8 +3,8 @@
 **Artifact Type:** C4 Level 2 — Container Diagram  
 **Repository:** starone-galaxy-architecture  
 **Parent Epic:** EPIC-ARCH-001 Ecosystem Design & Governance Baseline  
-**Parent Story:** S2 — Global Ecosystem README  
-**Parent Issue:** STORY-ARCH-002 Build C4 Container Diagram  
+**Parent Story:** Global Ecosystem README (Entry Point / C4 Map)
+**Parent Issue:** S2-I03 Build C4 Container Diagram 
 **Author:** Sachin Salunke  
 **Version:** 1.0  
 **Status:** Draft Ready for Architecture Review
@@ -280,6 +280,8 @@ Services | Redis | Caching |
 
 # 9. Security Architecture
 
+Future platform evolution may introduce a centralized Identity and Access Management (IAM) service for authentication and authorization.
+
 Security controls applied across containers:
 
 - JWT authentication
@@ -349,14 +351,15 @@ No direct data coupling.
 
 | Concern | Technology |
 |---|---|
-Runtime | Spring Boot 3.x |
-Messaging | Kafka |
-Persistence | PostgreSQL |
-Caching | Redis |
-Discovery | Eureka |
-Config | Spring Cloud Config |
-Monitoring | Prometheus/Grafana |
-Tracing | Zipkin |
+|Runtime | Spring Boot 3.x |
+|Messaging | Kafka |
+|Persistence | PostgreSQL |
+|Caching | Redis |
+|Discovery | Eureka |
+|Config | Spring Cloud Config |
+|Monitoring | Prometheus/Grafana |
+|Tracing | Zipkin |
+|Gateway | Spring Cloud Gateway |
 
 ---
 
@@ -405,10 +408,10 @@ Issue Ready For Closure: ✅
 
 | Product Vision | Epic | Story | Issue | Artifact |
 |---|---|---|---|---|
-Architectural Source of Truth | EPIC-001 | S2 | S2-I03 | C4-002 |
-
+Architectural Source of Truth | EPIC-ARCH-001 | STORY-ARCH-002 | S2-I03  | C4-002 |
+ 
 Coverage: 100%
-
+ 
 ---
 
 # 17. File Placement
