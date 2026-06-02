@@ -41,6 +41,14 @@ This Product Requirement Document (PRD) defines the product-level capabilities o
 
 StarOne Galaxy is a multi-domain platform that enables independent applications (enterprise, consumer, analytics, and security systems) to operate within a unified yet isolated architecture.
 
+The ecosystem is built on a shared platform foundation consisting of:
+
+- Control Plane (Infrastructure Repository)
+- Config Store (Spring Cloud Config Repository)
+- Domain Platforms (DHS, Bookshow)
+
+The platform follows a domain-isolated, event-driven microservices architecture.
+
 The PRD translates business vision into **product features, user interactions, and functional capabilities** across all domains.
 
 ---
@@ -49,10 +57,14 @@ The PRD translates business vision into **product features, user interactions, a
 
 StarOne Galaxy is composed of multiple independent applications:
 
-- DHS (Enterprise Order Management)
-- Bookshow (Ticket Booking Platform)
-- SportStats (Sports Analytics)
-- VaultIron (Credential Management)
+- StarOne Galaxy Control Plane (Infrastructure Platform)
+- StarOne Galaxy Config Store (Centralized Configuration Platform)
+- DHS (Enterprise Order Management Platform)
+- Bookshow (Consumer Ticket Booking Platform)
+
+Future Domains:
+- SportStats (Sports Analytics Platform)
+- VaultIron (Credential Management Platform)
 
 Each application:
 
@@ -100,7 +112,7 @@ PO-05 | Support event-driven interactions between systems |
 
 ---
 
-## 5.1 DHS (Distributed Hub & Sales)
+## 5.1 DHS (Distributed Hub System)
 
 ### Order Flow
 
@@ -149,6 +161,11 @@ PO-05 | Support event-driven interactions between systems |
 
 ## 5.5 Platform-Level Features
 
+- API Gateway based routing
+- Service Discovery
+- Centralized Configuration Management
+- Distributed Transaction Support
+- Event Backbone using Kafka
 - Independent user management per domain  
 - Domain-isolated data storage  
 - Centralized configuration system
@@ -203,19 +220,23 @@ FR-02 | Each domain must manage its own users independently |
 FR-03 | System must support event-driven communication |
 FR-04 | Applications must support independent deployment |
 FR-05 | System must provide secure authentication mechanisms |
-
+FR-06 | Distributed business transactions shall use Saga orchestration or choreography patterns.
+FR-07 | Services shall retrieve configuration from centralized configuration management.
+FR-08 | Platform shall support service discovery and API gateway routing.
 ---
 
 # 8. Non-Functional Requirements
 
 | Category | Requirement |
 |---|---|
-Scalability | System must scale horizontally |
-Availability | High availability required |
-Security | Data encryption and secure communication |
-Performance | Low latency response |
-Reliability | Fault-tolerant architecture |
-
+|Scalability | System must scale horizontally |
+|Availability | High availability required |
+|Security | JWT + RBAC authentication |
+|Performance | Low latency response |
+|Reliability | Fault-tolerant architecture |
+|Observability	| Centralized logging and monitoring support |
+|Maintainability	| Independent service deployment |
+|Availability	| Zero shared database across domains |
 ---
 
 # 9. Dependencies
@@ -233,6 +254,9 @@ Reliability | Fault-tolerant architecture |
 - Kafka-based messaging  
 - Kubernetes deployment  
 - Secure configuration management  
+- Database per Service pattern
+- Domain Isolation mandatory
+- No distributed 2PC transactions
 
 ---
 
@@ -240,21 +264,24 @@ Reliability | Fault-tolerant architecture |
 
 | Risk | Mitigation |
 |---|---|
-Integration complexity | Use event-driven architecture |
-Data inconsistency | Domain isolation |
-System scalability | Use Kubernetes |
-Security breaches | Strong encryption |
-
+|Integration complexity | Use event-driven architecture |
+|Data inconsistency | Domain isolation |
+|System scalability | Use Kubernetes |
+|Security breaches | Strong encryption |
+|Distributed transaction failures	| Saga compensation strategy|
+|Configuration | drift	Centralized Config Store |
+|Service coupling	| Domain isolation enforcement |
 ---
 
 # 12. Product Roadmap (High-Level)
 
 | Phase | Description |
 |---|---|
-Phase 1 | Core platform setup |
-Phase 2 | DHS & Bookshow implementation |
-Phase 3 | SportStats & VaultIron |
-Phase 4 | Integration & scaling |
+Phase 1 | Architecture & Governance Foundation
+Phase 2 | Control Plane & Config Platform
+Phase 3 | DHS Platform Implementation
+Phase 4 | Bookshow Platform Implementation
+Phase 5 | Future Domains (SportStats, VaultIron)
 
 ---
 
@@ -262,10 +289,12 @@ Phase 4 | Integration & scaling |
 
 | PRD Feature | Maps To |
 |---|---|
-DHS Features | EPIC-DHS |
-Bookshow Features | EPIC-BOOKSHOW |
-SportStats Features | EPIC-SPORTS |
-VaultIron Features | EPIC-SECURITY |
+Control Plane Features | EPIC-INFRA-001
+Config Features | EPIC-CONFIG-001
+DHS Features | EPIC-DHS-001
+Bookshow Features | EPIC-BOOKSHOW-001
+SportStats Features | Future
+VaultIron Features | Future
 
 ---
 
