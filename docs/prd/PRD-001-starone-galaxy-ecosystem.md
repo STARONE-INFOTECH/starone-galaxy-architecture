@@ -220,19 +220,19 @@ Reliability | Fault-tolerant architecture |
 
 # 9. Dependencies
 
-- Third-party APIs (SportStats)  
-- Payment gateway (Bookshow)  
-- Infrastructure platform (Kubernetes)  
-- Messaging system (Kafka)  
+- Third-party APIs (SportStats)
+- Payment gateway (Bookshow)
+- Infrastructure platform (Kubernetes)
+- Messaging system (Kafka)
 
 ---
 
 # 10. Constraints
 
-- Java 21 + Spring Boot  
-- Kafka-based messaging  
-- Kubernetes deployment  
-- Secure configuration management  
+- Java 21 + Spring Boot
+- Kafka-based messaging
+- Kubernetes deployment
+- Secure configuration management
 
 ---
 
