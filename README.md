@@ -470,6 +470,86 @@ Two-Phase Commit (2PC) is prohibited for cross-domain runtime flows due to scala
 
 ---
 
+# 🧭 Engineer Onboarding Guide
+
+Welcome to the StarOne Galaxy ecosystem.
+
+This onboarding path helps new engineers understand the architecture, governance model, repository structure, and contribution workflow.
+
+## Recommended Learning Path
+
+### Step 1 — Understand the Ecosystem
+
+Review:
+
+- Executive Overview
+- Architecture Highlights
+- Ecosystem Repository Topology
+
+Objective:
+
+Understand domain boundaries and platform responsibilities.
+
+---
+
+### Step 2 — Learn the Architecture
+
+Review:
+
+```text
+/architecture/c4/
+/docs/hld/
+/docs/adr/
+```
+
+Objective:
+
+Understand system context, repository relationships, and architecture decisions.
+
+---
+
+### Step 3 — Understand Governance
+
+Review:
+
+```text
+/governance/
+/docs/rtm/
+```
+
+Objective:
+
+Learn contribution standards, traceability requirements, and governance controls.
+
+---
+
+### Step 4 — Explore Domain Systems
+
+Repositories:
+
+- starone-dhs-system
+- starone-bookshow-system
+
+Objective:
+
+Understand business capabilities and domain ownership.
+
+---
+
+### Step 5 — Start Contributing
+
+Follow:
+
+Issue
+→ Branch
+→ Pull Request
+→ Review
+→ Merge
+
+Objective:
+
+Contribute using approved engineering workflows.
+
 # 🚀 Getting Started
 
 ## Prerequisites
@@ -522,20 +602,42 @@ Recommended order:
 
 ---
 
-# 👨‍💻 Engineer Onboarding Flow
+## Engineer Golden Path
 
 ```mermaid
 flowchart TD
 
-Start[Start]
+Start[New Engineer]
 
-Start --> ReadREADME[Read Global README]
-ReadREADME --> ReviewC4[Review C4 Maps]
-ReviewC4 --> ExploreDomains[Explore Domains]
-ExploreDomains --> Governance[Read Standards]
-Governance --> Contribute[Start Contributing]
+Start --> README[Read README]
+
+README --> ADR[Review ADRs]
+
+ADR --> C4[Review C4 Architecture]
+
+C4 --> GOV[Review Governance]
+
+GOV --> DOMAINS[Explore Domains]
+
+DOMAINS --> CONTRIBUTE[Start Contributing]
+```
+## Contribution Workflow
+
+Every contribution should follow:
+
+```text
+Issue
+→ Feature Branch
+→ Pull Request
+→ Architecture Review
+→ Merge
 ```
 
+Example:
+
+```bash
+git checkout -b feature/s2-i05-onboarding-guide
+```
 ---
 
 # ✅ Definition of Done For New Domain Repos
