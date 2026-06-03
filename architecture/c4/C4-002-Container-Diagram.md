@@ -268,9 +268,9 @@ Interaction style:
 
 # 8. Container Dependency Rules
 
-| Source | Target | Dependency Type |
+|Source|Target|Dependency Type|
 |---|---|---|
-Gateway | Services | Routing |
+Gateway|Services|Routing|
 Config | Services | Configuration |
 Discovery | Services | Registry |
 Services | Kafka | Events |
