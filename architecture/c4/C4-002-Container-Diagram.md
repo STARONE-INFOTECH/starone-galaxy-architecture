@@ -4,7 +4,7 @@
 **Repository:** starone-galaxy-architecture  
 **Parent Epic:** EPIC-ARCH-001 Ecosystem Design & Governance Baseline  
 **Parent Story:** Global Ecosystem README (Entry Point / C4 Map)
-**Parent Issue:** S2-I03 Build C4 Container Diagram 
+**Parent Issue:** S2-I03 Build C4 Container Diagram
 **Author:** Sachin Salunke  
 **Version:** 1.0  
 **Status:** Draft Ready for Architecture Review
@@ -88,69 +88,70 @@ Observability Stack | Platform Container | Monitoring, tracing |
 
 ---
 
-# 4. C4 Level-2 Container Diagram
+## C4 Level 2 — Container Diagram
 
 ```mermaid
-flowchart TD
+flowchart TB
 
-Users((Users))
+    User["Business User"]
 
-Users --> Gateway[API Gateway]
+    subgraph DHS["DHS Platform"]
+        DHSGateway["DHS Gateway"]
+        OrderSvc["Order Service"]
+        InventorySvc["Inventory Service"]
+        BillingSvc["Billing Service"]
+    end
 
-subgraph Platform["Shared Platform Containers"]
-Config[Config Server]
-Discovery[Eureka Discovery]
-Kafka[Kafka Event Backbone]
-Redis[Redis Cache]
-Observability[Prometheus Grafana Zipkin]
-end
+    subgraph BOOKSHOW["Bookshow Platform"]
+        BookshowGateway["Bookshow Gateway"]
+        TicketSvc["Ticket Service"]
+        BookingSvc["Booking Service"]
+        PaymentSvc["Payment Service"]
+    end
 
-subgraph DHS["DHS Domain Containers"]
-OrderSvc[Order Service]
-InventorySvc[Inventory Service]
-BillingSvc[Billing Service]
-DHSDB[(PostgreSQL)]
-end
+    subgraph PLATFORM["Shared Platform Services"]
+        Config["Spring Cloud Config"]
+        Kafka["Kafka Event Backbone"]
+        Redis["Redis Cache"]
+    end
 
-subgraph Bookshow["Bookshow Domain Containers"]
-TicketSvc[Ticket Service]
-BookingSvc[Booking Service]
-PaymentSvc[Payment Service]
-BookDB[(PostgreSQL)]
-end
+    subgraph DATA["Persistence Layer"]
+        DHSDB["DHS PostgreSQL"]
+        BookDB["Bookshow PostgreSQL"]
+    end
 
-Gateway --> OrderSvc
-Gateway --> TicketSvc
+    User --> DHSGateway
+    User --> BookshowGateway
 
-Config --> OrderSvc
-Config --> InventorySvc
-Config --> BillingSvc
+    DHSGateway --> OrderSvc
+    DHSGateway --> InventorySvc
+    DHSGateway --> BillingSvc
 
-Config --> TicketSvc
-Config --> BookingSvc
-Config --> PaymentSvc
+    BookshowGateway --> TicketSvc
+    BookshowGateway --> BookingSvc
+    BookshowGateway --> PaymentSvc
 
-Discovery --> OrderSvc
-Discovery --> TicketSvc
+    Config --> OrderSvc
+    Config --> InventorySvc
+    Config --> BillingSvc
 
-OrderSvc --> Kafka
-BillingSvc --> Kafka
-TicketSvc --> Kafka
-BookingSvc --> Kafka
+    Config --> TicketSvc
+    Config --> BookingSvc
+    Config --> PaymentSvc
 
-OrderSvc --> DHSDB
-InventorySvc --> DHSDB
-BillingSvc --> DHSDB
+    OrderSvc <--> Kafka
+    BookingSvc <--> Kafka
 
-TicketSvc --> BookDB
-BookingSvc --> BookDB
-PaymentSvc --> BookDB
+    OrderSvc --> DHSDB
+    InventorySvc --> DHSDB
+    BillingSvc --> DHSDB
 
-OrderSvc --> Redis
-TicketSvc --> Redis
+    TicketSvc --> BookDB
+    BookingSvc --> BookDB
+    PaymentSvc --> BookDB
 
-Observability --> DHS
-Observability --> Bookshow
+    OrderSvc --> Redis
+    BookingSvc --> Redis
 ```
 
 ---
