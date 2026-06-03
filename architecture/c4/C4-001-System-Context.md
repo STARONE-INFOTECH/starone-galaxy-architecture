@@ -3,8 +3,8 @@
 **Artifact Type:** C4 Level 1 – System Context  
 **Repository:** starone-galaxy-architecture  
 **Parent Epic:** EPIC-ARCH-001 Ecosystem Design & Governance Baseline  
-**Parent Story:** STORY-ARCH-003 — Global Ecosystem README  
-**Issue:** STORY-ARCH-002 Build C4 Context Diagram  
+**Parent Story:** STORY-ARCH-002 — Global Ecosystem README (Entry Point / C4 Map)
+**Issue:** ISSUE-S2-I02 Build C4 Context Diagram  
 **Author:** Sachin Salunke  
 **Version:** 1.0  
 **Status:** Ready for Architecture Review
@@ -80,42 +80,43 @@ Out of Scope:
 
 ---
 
-# 4. C4 System Context Diagram
+## C4 Level 1 — System Context
 
 ```mermaid
-flowchart TB
+flowchart LR
 
-Engineer((Platform Engineer))
-Architect((Solution Architect))
-Users((Business Users))
+    Engineer["Platform Engineer"]
+    Architect["Solution Architect"]
+    Users["Business Users"]
 
-subgraph StarOne_Galaxy["StarOne Galaxy Ecosystem"]
-    
-    Arch[Architecture Repository]
-    Infra[Infra Control Plane]
-    Config[Config Store]
-    DHS[DHS System]
-    BK[Bookshow Platform]
+    subgraph StarOneGalaxy["StarOne Galaxy Ecosystem"]
 
-end
+        Arch["Architecture Repository"]
+        Infra["Control Plane"]
+        Config["Config Store"]
 
-Architect -->|Defines Standards| Arch
-Engineer -->|Operates| Infra
+        DHS["DHS System"]
+        Bookshow["Bookshow Platform"]
 
-Arch -.->|Governs Architecture| Infra
-Arch -.->|Defines Standards For| DHS
-Arch -.->|Defines Standards For| BK
+    end
 
-Infra -->|Orchestrates Runtime| DHS
-Infra -->|Orchestrates Runtime| BK
+    Architect -->|Defines Standards| Arch
+    Engineer -->|Operates Platform| Infra
 
-Config -->|Injects Configuration| DHS
-Config -->|Injects Configuration| BK
+    Arch -.->|Governance| Infra
+    Arch -.->|Standards| DHS
+    Arch -.->|Standards| Bookshow
 
-Users -->|Uses| DHS
-Users -->|Uses| BK
+    Infra -->|Runtime Platform| DHS
+    Infra -->|Runtime Platform| Bookshow
 
-DHS <-->|Async Events via Kafka| BK
+    Config -->|Configuration| DHS
+    Config -->|Configuration| Bookshow
+
+    Users -->|Uses| DHS
+    Users -->|Uses| Bookshow
+
+    DHS <-->|Kafka Events| Bookshow
 ```
 
 ---
@@ -296,7 +297,7 @@ Issue Ready For Closure: ✅
 
 | Product Vision | Epic | Story | Issue | Artifact |
 |---|---|---|---|---|
-Architectural Source of Truth | EPIC-001 | S2 | S2-I02 | C4-001 |
+| Architectural Source of Truth | EPIC-ARCH-001 | STORY-ARCH-002 | S2-I02 | C4-001 |
 
 Coverage: 100%
 

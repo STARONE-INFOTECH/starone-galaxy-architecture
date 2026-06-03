@@ -37,6 +37,7 @@ Start here:
 2. Read architecture decisions → `/docs/adr/`
 3. Explore high-level design → `/docs/hld/`
 4. Review governance → `/governance/`
+5. Review traceability artifacts → `/docs/rtm/`
 
 This repository represents a structured enterprise architecture system designed with governance, traceability, and scalability as first-class concerns.
 
@@ -45,23 +46,23 @@ It provides:
 # 📌 Executive Overview
 
 **StarOne Galaxy** is the architectural and governance source-of-truth for the STARONE-INFOTECH ecosystem.
+The repository establishes:
 
-It provides:
-
-- Shared Control Plane Governance
-- Domain-Isolated Architecture Standards
+- Platform Governance
+- Domain Isolation Standards
 - Documentation-as-Code
-- Repository Operating Model
-- Security and Compliance Baselines
-- Platform Engineering Golden Path
+- Architecture Traceability
+- SDLC Governance
+- Security & Compliance Baselines
+- Platform Engineering Standards
 
-The ecosystem is composed of:
+The ecosystem consists of:
 
-1. **starone-galaxy-infra** — Shared Control Plane
-2. **starone-galaxy-config** — Git-backed Config Store
-3. **starone-galaxy-architecture** — Architecture Source of Truth
-4. **starone-dhs-system** — Enterprise OMS Domain
-5. **bookshow-system** — Consumer Ticketing Domain
+1. starone-galaxy-architecture — Architecture Source of Truth
+2. starone-galaxy-infra — Shared Control Plane
+3. starone-galaxy-config — Centralized Configuration Store
+4. starone-dhs-system — Enterprise OMS Platform
+5. starone-bookshow-system — Consumer Ticketing Platform
 
 ---
 
@@ -69,12 +70,14 @@ The ecosystem is composed of:
 
 This project demonstrates:
 
+- Domain-Isolated Microservices Architecture
 - Event-driven microservices architecture using Kafka
 - Strict domain isolation (DHS vs Bookshow)
 - Shared platform control plane (Kubernetes + CI/CD)
 - Documentation-as-Code with full traceability (EPIC → RTM)
 - Governance-first engineering model
 - Saga-based distributed transaction management
+- Kubernetes Native Platform Operations
 
 ---
 
@@ -113,7 +116,7 @@ The goal is to simulate a production-grade ecosystem with strong architectural d
 | starone-galaxy-infra | Shared runtime platform & Kubernetes | Private |
 | starone-galaxy-config | Centralized Spring Cloud Config repository | Private |
 | starone-dhs-system | Enterprise OMS ecosystem | Private |
-| bookshow-system | Consumer ticketing platform | Private |
+| starone-bookshow-system | Consumer ticketing platform | Private |
 
 ---
 
