@@ -182,6 +182,8 @@ Contains:
 
 # 🔗 Domain Dependency Map
 
+
+
 ```mermaid
 flowchart LR
 
@@ -196,6 +198,60 @@ Architecture --> Infra
 Architecture --> DHS
 Architecture --> Bookshow
 ```
+
+---
+
+## Dependency Relationship Matrix
+
+| Source Domain | Target Domain | Dependency Type |
+|---|---|---|
+| starone-dhs-system | starone-galaxy-infra | Platform Dependency |
+| starone-dhs-system | starone-galaxy-config | Configuration Dependency |
+| starone-bookshow-system | starone-galaxy-infra | Platform Dependency |
+| starone-bookshow-system | starone-galaxy-config | Configuration Dependency |
+| All Domains | starone-galaxy-architecture | Governance Dependency |
+
+---
+
+## Dependency Rules
+
+| Dependency | Rule |
+|---|---|
+| Infrastructure → Domains | Shared platform services are consumed by business domains |
+| Configuration → Domains | Centralized configuration inheritance |
+| Architecture → All Domains | Governance source-of-truth |
+| Domain → Domain | Direct coupling should be minimized |
+| Governance → Ecosystem | Standards apply across all repositories |
+
+---
+
+## Architecture Dependency Hierarchy
+
+```text
+starone-galaxy-architecture
+│
+├── starone-galaxy-infra
+│   │
+│   ├── starone-dhs-system
+│   └── starone-bookshow-system
+│
+└── starone-galaxy-config
+    │
+    ├── starone-dhs-system
+    └── starone-bookshow-system
+```
+
+---
+
+## Related Domains
+
+| Repository | Purpose |
+|---|---|
+| starone-galaxy-architecture | Architecture Governance |
+| starone-galaxy-infra | Shared Control Plane |
+| starone-galaxy-config | Centralized Configuration |
+| starone-dhs-system | Enterprise OMS Platform |
+| starone-bookshow-system | Consumer Ticketing Platform |
 
 ---
 
