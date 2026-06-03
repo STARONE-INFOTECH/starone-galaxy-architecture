@@ -234,17 +234,17 @@ FR-08 | Platform shall support service discovery and API gateway routing.
 |Security | JWT + RBAC authentication |
 |Performance | Low latency response |
 |Reliability | Fault-tolerant architecture |
-|Observability	| Centralized logging and monitoring support |
-|Maintainability	| Independent service deployment |
-|Availability	| Zero shared database across domains |
+|Observability | Centralized logging and monitoring support |
+|Maintainability | Independent service deployment |
+|Availability | Zero shared database across domains |
 ---
 
 # 9. Dependencies
 
-- Third-party APIs (SportStats)  
-- Payment gateway (Bookshow)  
-- Infrastructure platform (Kubernetes)  
-- Messaging system (Kafka)  
+- Third-party APIs (SportStats)
+- Payment gateway (Bookshow)
+- Infrastructure platform (Kubernetes)
+- Messaging system (Kafka)
 
 ---
 
@@ -268,9 +268,9 @@ FR-08 | Platform shall support service discovery and API gateway routing.
 |Data inconsistency | Domain isolation |
 |System scalability | Use Kubernetes |
 |Security breaches | Strong encryption |
-|Distributed transaction failures	| Saga compensation strategy|
-|Configuration | drift	Centralized Config Store |
-|Service coupling	| Domain isolation enforcement |
+|Distributed transaction failures| Saga compensation strategy|
+|Configuration | drift Centralized Config Store |
+|Service coupling | Domain isolation enforcement |
 ---
 
 # 12. Product Roadmap (High-Level)
