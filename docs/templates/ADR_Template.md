@@ -173,7 +173,7 @@ Describe:
 
 Describe the alternative.
 
-### Advantages
+### Advantages 1
 
 - Advantage 1
 - Advantage 2
@@ -192,7 +192,7 @@ Describe the alternative.
 
 Describe the alternative.
 
-### Advantages
+### Advantages 2
 
 - Advantage 1
 - Advantage 2
