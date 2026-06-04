@@ -95,6 +95,17 @@ This project demonstrates:
 
 ---
 
+## Visual Modeling Governance
+
+All architecture diagrams shall comply with:
+
+- Mermaid Modeling Standard
+- C4 Modeling Conventions
+- Domain Boundary Standards
+- Architecture Review Controls
+
+---
+
 # 💡 Design Intent
 
 This architecture is designed to:
@@ -337,6 +348,7 @@ starone-galaxy-architecture/
 │   ├── policies/
 │   ├── controls/
 │   ├── compliance/
+│   ├── standards/
 │   ├── branching/
 │   └── naming/
 │
@@ -470,6 +482,27 @@ Two-Phase Commit (2PC) is prohibited for cross-domain runtime flows due to scala
 
 ---
 
+## Documentation Standards
+
+```text
+/docs/templates/
+/governance/standards/
+```
+
+Artifacts:
+
+- ADR Template
+- HLD Template
+- SRS Template
+- RTM Template
+- EPIC Story Linkage Template
+- Documentation Compliance Standard
+- Traceability Standard
+- Mermaid Modeling Standard
+- Review Workflow Standard
+
+---
+
 # 🧭 Engineer Onboarding Guide
 
 Welcome to the StarOne Galaxy ecosystem.
@@ -514,7 +547,9 @@ Review:
 
 ```text
 /governance/
+/governance/standards/
 /docs/rtm/
+/docs/templates/
 ```
 
 Objective:
@@ -693,6 +728,23 @@ HLD --> SRS
 SRS --> RTM
 RTM --> Validation
 ```
+---
+
+## Traceability Governance
+
+Mandatory rules:
+
+```text
+Every Requirement must map to:
+ADR
+HLD
+LLD
+Implementation
+Testing
+Validation
+```
+
+No orphan requirements, architecture artifacts, implementations, or test cases are permitted.
 
 ---
 
@@ -711,18 +763,41 @@ SRS --> LLD
 LLD --> IMPLEMENTATION
 IMPLEMENTATION --> RTM
 RTM --> QA
-```
+```git status
+---
 
+# 📄 Documentation Governance Lifecycle
+
+```mermaid
+flowchart TD
+
+Draft --> PeerReview
+
+PeerReview --> ArchitectureReview
+
+ArchitectureReview --> SecurityReview
+
+SecurityReview --> Approval
+
+Approval --> Published
+```
 ---
 
 # 📚 Standards References
 
-Aligned To:
+## Documentation Standards Ref
 
 - ISO/IEC/IEEE 29148
 - IEEE 1016
 - MADR
 - C4 Model
+
+## Internal Governance Standards
+
+- Documentation Compliance Standard
+- Traceability Standard
+- Mermaid Modeling Standard
+- Review Workflow Standard
 
 ---
 
