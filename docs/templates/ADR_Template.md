@@ -169,7 +169,7 @@ Describe:
 
 ## ❌ Option 1: <Alternative Name>
 
-### Description
+### Description 1
 
 Describe the alternative.
 
@@ -178,7 +178,7 @@ Describe the alternative.
 - Advantage 1
 - Advantage 2
 
-### Rejected Because
+### Rejected Because 1
 
 - Reason 1
 - Reason 2
@@ -188,7 +188,7 @@ Describe the alternative.
 
 ## ❌ Option 2: <Alternative Name>
 
-### Description
+### Description 2
 
 Describe the alternative.
 
@@ -197,7 +197,7 @@ Describe the alternative.
 - Advantage 1
 - Advantage 2
 
-### Rejected Because
+### Rejected Because 2
 
 - Reason 1
 - Reason 2
@@ -206,7 +206,7 @@ Describe the alternative.
 
 ## ✅ Option 3: <Chosen Option>
 
-### Description
+### Description 3
 
 Describe the selected option.
 

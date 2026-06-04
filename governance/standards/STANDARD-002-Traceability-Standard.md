@@ -146,13 +146,13 @@ Traceability compliance shall be mandatory for all architecture and engineering 
 
 # 5. Forward Traceability Standard
 
-## Definition
+## Definition (FTS)
 
 Forward traceability ensures requirements are implemented and validated.
 
 ---
 
-## Standard Model
+## Standard Model (FTS)
 
 ```text
 Requirement
@@ -170,7 +170,7 @@ Validation
 
 ---
 
-## Mandatory Rules
+## Mandatory Rules (FTS)
 
 Every requirement must map to:
 
@@ -185,13 +185,13 @@ Every requirement must map to:
 
 # 6. Backward Traceability Standard
 
-## Definition
+## Definition (BTS)
 
 Backward traceability ensures every implementation artifact originates from a valid requirement.
 
 ---
 
-## Standard Model
+## Standard Model (BTS)
 
 ```text
 Validation
@@ -209,7 +209,7 @@ Requirement
 
 ---
 
-## Mandatory Rules
+## Mandatory Rules (BTS)
 
 Every:
 
@@ -228,7 +228,7 @@ Must trace back to:
 
 # 7. Requirement Linkage Standard
 
-## Strategic Traceability
+## Strategic Traceability (RLS)
 
 ```text
 Vision
@@ -244,7 +244,7 @@ Requirement
 
 ---
 
-## Mandatory Rules
+## Mandatory Rules (RLS)
 
 1. Every Requirement must belong to a Story
 2. Every Story must belong to an Epic
@@ -255,7 +255,7 @@ Requirement
 
 # 8. Architecture Traceability Standard
 
-## Architecture Mapping Model
+## Architecture Mapping Model (ATS)
 
 ```text
 Requirement
@@ -269,7 +269,7 @@ LLD
 
 ---
 
-## Mandatory Rules
+## Mandatory Rules (ATS)
 
 Every requirement shall map to:
 
@@ -279,7 +279,7 @@ Every requirement shall map to:
 
 ---
 
-## Architecture Artifact Ownership
+## Architecture Artifact Ownership (ATS)
 
 | Artifact | Owner |
 |---|---|
@@ -291,7 +291,7 @@ Every requirement shall map to:
 
 # 9. Implementation Traceability Standard
 
-## Implementation Mapping Model
+## Implementation Mapping Model (ITS)
 
 ```text
 Requirement
@@ -307,7 +307,7 @@ Deployment Unit
 
 ---
 
-## Mandatory Rules
+## Mandatory Rules (ITS)
 
 Every implementation artifact must reference:
 
@@ -317,7 +317,7 @@ Every implementation artifact must reference:
 
 ---
 
-## Example
+## Example (ITS)
 
 ```text
 EPIC-001
@@ -329,7 +329,7 @@ FR-DHS-001
 
 # 10. Testing Traceability Standard
 
-## Testing Mapping Model
+## Testing Mapping Model (TTS)
 
 ```text
 Requirement
@@ -343,7 +343,7 @@ Validation
 
 ---
 
-## Mandatory Rules
+## Mandatory Rules (TTS)
 
 Every requirement must have:
 
@@ -353,7 +353,7 @@ Every requirement must have:
 
 ---
 
-## Coverage Requirement
+## Coverage Requirement (TTS)
 
 ```text
 100% Requirement Coverage Mandatory
