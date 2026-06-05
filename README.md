@@ -134,6 +134,7 @@ The goal is to simulate a production-grade ecosystem with strong architectural d
 # 🏗 C4 — System Context
 
 ```mermaid
+
 flowchart LR
 
 Users((Business Users))
@@ -142,21 +143,21 @@ Engineers((Engineers))
 subgraph StarOne_Galaxy
     Infra[Control Plane]
     Config[Config Store]
+
     DHS[DHS Domain]
     Bookshow[Bookshow Domain]
 end
 
 Engineers -->|Develop & Operate| Infra
+
 Users -->|Use| DHS
 Users -->|Use| Bookshow
 
-Infra -->|Orchestrates| DHS
-Infra -->|Orchestrates| Bookshow
+Infra -->|Governance & Deployment| DHS
+Infra -->|Governance & Deployment| Bookshow
 
 Config -->|Injects Config| DHS
 Config -->|Injects Config| Bookshow
-
-DHS <-->|Async Events (Kafka)| Bookshow
 ```
 
 ---
@@ -173,10 +174,10 @@ Client --> README[Global README Entry Point]
 README --> Docs[Documentation Domain]
 README --> Architecture[C4 Architecture]
 README --> Governance[Governance Controls]
-README --> Domains[Domain Systems]
+README --> Systems[Business Systems]
 
-Domains --> DHSModules[DHS Modules]
-Domains --> BookshowServices[Bookshow Services]
+Domains --> DHS[DHS System]
+Domains --> Bookshow[Bookshow System]
 
 Governance --> Policies[Policies]
 Governance --> Controls[Controls]
@@ -193,22 +194,20 @@ Contains:
 
 # 🔗 Domain Dependency Map
 
+### Overview
 
+The StarOne Galaxy ecosystem follows a centralized governance and platform model where shared services are consumed by business domains while architecture remains the authoritative source of truth.
+---
 
-```mermaid
-flowchart LR
+### Domain Inventory
 
-Infra --> Config
-Infra --> DHS
-Infra --> Bookshow
-
-Config --> DHS
-Config --> Bookshow
-
-Architecture --> Infra
-Architecture --> DHS
-Architecture --> Bookshow
-```
+| Domain | Responsibility |
+|----------|----------|
+| starone-galaxy-infra | Shared platform infrastructure |
+| starone-galaxy-config | Centralized configuration management |
+| starone-galaxy-architecture | Architecture governance |
+| starone-dhs-system | Enterprise OMS domain |
+| starone-bookshow-system | Consumer ticketing domain |
 
 ---
 
@@ -223,6 +222,30 @@ Architecture --> Bookshow
 | All Domains | starone-galaxy-architecture | Governance Dependency |
 
 ---
+### Dependency Navigation Diagram
+
+```mermaid
+graph TD
+
+    Infra[starone-galaxy-infra]
+    Config[starone-galaxy-config]
+    Arch[starone-galaxy-architecture]
+
+    DHS[starone-dhs-system]
+    BookShow[starone-bookshow-system]
+
+    DHS --> Infra
+    DHS --> Config
+
+    BookShow --> Infra
+    BookShow --> Config
+
+    DHS -. Governance .-> Arch
+    BookShow -. Governance .-> Arch
+    Infra -. Governance .-> Arch
+    Config -. Governance .-> Arch
+```
+---
 
 ## Dependency Rules
 
@@ -233,6 +256,18 @@ Architecture --> Bookshow
 | Architecture → All Domains | Governance source-of-truth |
 | Domain → Domain | Direct coupling should be minimized |
 | Governance → Ecosystem | Standards apply across all repositories |
+
+---
+
+### Related Domains
+
+| Repository | Purpose |
+|------------|---------|
+| starone-galaxy-infra | Shared platform services |
+| starone-galaxy-config | Centralized configuration |
+| starone-galaxy-architecture | Architecture governance |
+| starone-dhs-system | Enterprise OMS |
+| starone-bookshow-system | Consumer Ticketing |
 
 ---
 
@@ -251,18 +286,6 @@ starone-galaxy-architecture
     ├── starone-dhs-system
     └── starone-bookshow-system
 ```
-
----
-
-## Related Domains
-
-| Repository | Purpose |
-|---|---|
-| starone-galaxy-architecture | Architecture Governance |
-| starone-galaxy-infra | Shared Control Plane |
-| starone-galaxy-config | Centralized Configuration |
-| starone-dhs-system | Enterprise OMS Platform |
-| starone-bookshow-system | Consumer Ticketing Platform |
 
 ---
 
