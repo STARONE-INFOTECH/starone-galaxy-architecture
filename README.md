@@ -194,12 +194,13 @@ Contains:
 
 # 🔗 Domain Dependency Map
 
-### Overview
+## Overview
 
-The StarOne Galaxy ecosystem follows a centralized governance and platform model where shared services are consumed by business domains while architecture remains the authoritative source of truth.
+ The StarOne Galaxy ecosystem follows a centralized governance and platform model where shared services are consumed by business domains while architecture remains the authoritative source of truth.
+ 
 ---
 
-### Domain Inventory
+## Domain Inventory
 
 | Domain | Responsibility |
 |----------|----------|
@@ -222,7 +223,7 @@ The StarOne Galaxy ecosystem follows a centralized governance and platform model
 | All Domains | starone-galaxy-architecture | Governance Dependency |
 
 ---
-### Dependency Navigation Diagram
+## Dependency Navigation Diagram
 
 ```mermaid
 graph TD
@@ -259,7 +260,7 @@ graph TD
 
 ---
 
-### Related Domains
+## Related Domains
 
 | Repository | Purpose |
 |------------|---------|
