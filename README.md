@@ -176,8 +176,8 @@ README --> Architecture[C4 Architecture]
 README --> Governance[Governance Controls]
 README --> Systems[Business Systems]
 
-Domains --> DHS[DHS System]
-Domains --> Bookshow[Bookshow System]
+Systems --> DHS[DHS System]
+Systems --> Bookshow[Bookshow System]
 
 Governance --> Policies[Policies]
 Governance --> Controls[Controls]
