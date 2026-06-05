@@ -63,23 +63,23 @@ Add validation details
 
 ## Governance Checklist
 
-### Traceability
+### Traceability[ ]
 
 - [ ] Epic linked
 - [ ] Story linked
 - [ ] Issue linked
 
-### Documentation
+### Documentation[ ]
 
 - [ ] Documentation reviewed
 - [ ] Documentation updated if required
 
-### Governance
+### Governance[ ]
 
 - [ ] Standards followed
 - [ ] Review completed
 
-### Validation
+### Validation[ ]
 
 - [ ] Validation completed
 - [ ] No known issues remain
