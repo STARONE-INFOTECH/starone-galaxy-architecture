@@ -82,7 +82,7 @@ PO-01 | Deliver a multi-domain platform with independent applications |
 PO-02 | Enable seamless user experience within each domain |
 PO-03 | Ensure scalability and reliability of all product features |
 PO-04 | Provide consistent governance across applications |
-PO-05 | Support event-driven interactions between systems |
+PO-05 | Support event-driven interactions between services |
 
 ---
 
@@ -289,6 +289,7 @@ Phase 5 | Future Domains (SportStats, VaultIron)
 
 | PRD Feature | Maps To |
 |---|---|
+Architecture Governance | EPIC-ARCH-001
 Control Plane Features | EPIC-INFRA-001
 Config Features | EPIC-CONFIG-001
 DHS Features | EPIC-DHS-001
