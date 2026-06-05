@@ -197,7 +197,7 @@ Contains:
 ## Overview
 
  The StarOne Galaxy ecosystem follows a centralized governance and platform model where shared services are consumed by business domains while architecture remains the authoritative source of truth.
- 
+
 ---
 
 ## Domain Inventory
