@@ -93,12 +93,12 @@ The selected repository taxonomy must support:
 
 Each repository independently defines its own structure.
 
-### Advantages
+### Advantages (URL)
 
 - Maximum flexibility
 - Minimal initial governance effort
 
-### Disadvantages
+### Disadvantages (URL)
 
 - Governance drift
 - Inconsistent navigation
@@ -111,7 +111,7 @@ Each repository independently defines its own structure.
 
 All repositories follow a common structural model defined by architecture governance.
 
-### Advantages
+### Advantages (SRT)
 
 - Predictable structure
 - Easier onboarding
@@ -119,7 +119,7 @@ All repositories follow a common structural model defined by architecture govern
 - Better documentation discoverability
 - Easier automation
 
-### Disadvantages
+### Disadvantages (SRT)
 
 - Initial governance overhead
 - Requires enforcement mechanisms
@@ -130,12 +130,12 @@ All repositories follow a common structural model defined by architecture govern
 
 All domains managed in a single repository.
 
-### Advantages
+### Advantages (FCM)
 
 - Single source of code
 - Simplified dependency visibility
 
-### Disadvantages
+### Disadvantages (FCM)
 
 - Reduced domain isolation
 - Larger blast radius

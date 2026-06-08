@@ -260,18 +260,18 @@ F --> G[Continuous Governance Validation]
 
 ## 9.1 DHS (Distributed Hub & System)
 
-### Purpose
+**Purpose**
 
 Enterprise Order Management System.
 
-### Business Capabilities
+**Business Capabilities**
 
 - Order Management
 - Billing
 - Dispatch
 - Inventory Integration
 
-### Key Stakeholders
+**Key Stakeholders**
 
 - Sales Teams
 - Operations Teams
@@ -281,17 +281,17 @@ Enterprise Order Management System.
 
 ## 9.2 Bookshow
 
-### Purpose
+**Purpose**
 
 Consumer Event Ticketing Platform.
 
-### Business Capabilities
+**Business Capabilities**
 
 - Event Management
 - Booking Management
 - Payment Processing
 
-### Key Stakeholders
+**Key Stakeholders**
 
 - Consumers
 - Event Organizers
@@ -300,11 +300,11 @@ Consumer Event Ticketing Platform.
 
 ## 9.3 Control Plane
 
-### Purpose
+**Purpose**
 
 Central Infrastructure Governance Layer.
 
-### Business Capabilities
+**Business Capabilities**
 
 - CI/CD
 - Kubernetes Governance
@@ -315,11 +315,11 @@ Central Infrastructure Governance Layer.
 
 ## 9.4 Config Store
 
-### Purpose
+**Purpose**
 
 Centralized Configuration Repository.
 
-### Business Capabilities
+**Business Capabilities**
 
 - Environment Management
 - Secret Configuration
@@ -330,17 +330,17 @@ Centralized Configuration Repository.
 
 ## 10.1 SportStats
 
-### Purpose
+**Purpose**
 
 Sports Analytics Platform.
 
-### Business Capabilities
+**Business Capabilities**
 
 - Data Aggregation
 - Analytics Processing
 - Statistical Insights
 
-### Key Stakeholders
+**Key Stakeholders**
 
 - Analysts
 - Sports Consumers
@@ -349,17 +349,17 @@ Sports Analytics Platform.
 
 ## 10.2 VaultIron
 
-### Purpose
+**Purpose**
 
 Credential and Secret Management Platform.
 
-### Business Capabilities
+**Business Capabilities**
 
 - Secret Storage
 - Credential Governance
 - Secure Access
 
-### Key Stakeholders
+**Key Stakeholders**
 
 - Security Teams
 - Platform Teams

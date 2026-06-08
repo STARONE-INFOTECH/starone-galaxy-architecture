@@ -93,12 +93,12 @@ without relying solely on manual reviews?
 
 All governance controls enforced through human review.
 
-### Advantages
+### Advantages (MGR)
 
 - Simple implementation
 - No automation overhead
 
-### Disadvantages
+### Disadvantages (MGR)
 
 - Human error
 - Inconsistent enforcement
@@ -111,14 +111,14 @@ All governance controls enforced through human review.
 
 Governance enforced through automated workflows, repository controls, and validation pipelines.
 
-### Advantages
+### Advantages (FAGC)
 
 - Consistent enforcement
 - Faster feedback
 - Better scalability
 - Reduced governance drift
 
-### Disadvantages
+### Disadvantages (FAGC)
 
 - Workflow maintenance required
 - Initial implementation effort
@@ -131,13 +131,13 @@ Critical controls automated.
 
 Architectural decisions remain human-reviewed.
 
-### Advantages
+### Advantages (HGM)
 
 - Strong governance
 - Human oversight for strategic decisions
 - Scalable enforcement
 
-### Disadvantages
+### Disadvantages (HGM)
 
 - More governance design required
 

@@ -87,12 +87,12 @@ while supporting both DHS and Bookshow domains under a common governance framewo
 
 Each team creates its own document formats and lifecycle.
 
-### Advantages
+### Advantages (TSD)
 
 - Flexible
 - Fast initial creation
 
-### Disadvantages
+### Disadvantages (TSD)
 
 - No consistency
 - Difficult audits
@@ -105,7 +105,7 @@ Each team creates its own document formats and lifecycle.
 
 All documentation follows a centrally governed lifecycle, template library, and traceability model.
 
-### Advantages
+### Advantages (SDG)
 
 - Consistent structure
 - Easier reviews
@@ -113,7 +113,7 @@ All documentation follows a centrally governed lifecycle, template library, and 
 - Improved onboarding
 - Governance compliance
 
-### Disadvantages
+### Disadvantages (SDG)
 
 - Additional governance controls
 - Requires template maintenance
@@ -124,11 +124,11 @@ All documentation follows a centrally governed lifecycle, template library, and 
 
 Generate architecture documents directly from tools and code.
 
-### Advantages
+### Advantages (TGD)
 
 - Reduced manual effort
 
-### Disadvantages
+### Disadvantages (TGD)
 
 - Limited business traceability
 - Weak governance controls
