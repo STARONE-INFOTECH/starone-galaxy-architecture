@@ -1,4 +1,4 @@
-# SRS-XXX: Decision Title
+# PRD-XXX: Decision Title
 
 ## 1. Title Page
 
@@ -60,48 +60,46 @@
 
 ---
 
-## 12. System Overview
+## 12. Product Vision
 
 ---
 
-## 13. Functional Requirements
+## 13. Product Objectives
 
 ---
 
-## 14. Non-Functional Requirements
+## 14. User Personas
 
 ---
 
-## 15. User Interface Requirements
+## 15. User Journeys
 
 ---
 
-## 16. External Interface Requirements
+## 16. Product Features
 
 ---
 
-## 17. API Specifications
+## 17. Functional Requirements
 
 ---
 
-## 18. Data Requirements
+## 18. Non-Functional Requirements
 
 ---
 
-## 19. Security Requirements
+## 19. UX Requirements
 
 ---
 
-## 20. Performance Requirements
+## 20. Analytics & Success Metrics
 
 ---
 
-## 21. Operational Requirements
+## 21. Product Constraints
 
 ---
 
-## 22. Technical Constraints
+## 22. Release Considerations
 
 ---
-
-## 23. Acceptance Requirements

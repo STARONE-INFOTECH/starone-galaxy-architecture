@@ -1,4 +1,4 @@
-# SRS-XXX: Decision Title
+# FRD-XXX: Decision Title
 
 ## 1. Title Page
 
@@ -60,7 +60,7 @@
 
 ---
 
-## 12. System Overview
+## 12. Functional Overview
 
 ---
 
@@ -68,40 +68,34 @@
 
 ---
 
-## 14. Non-Functional Requirements
+## 14. Business Rules
 
 ---
 
-## 15. User Interface Requirements
+## 15. User Interaction Requirements
 
 ---
 
-## 16. External Interface Requirements
+## 16. Validation Rules
 
 ---
 
-## 17. API Specifications
+## 17. Workflow Requirements
 
 ---
 
-## 18. Data Requirements
+## 18. Integration Requirements
 
 ---
 
-## 19. Security Requirements
+## 19. Error Handling Requirements
 
 ---
 
-## 20. Performance Requirements
+## 20. Reporting Requirements
 
 ---
 
-## 21. Operational Requirements
+## 21. Functional Acceptance Criteria
 
 ---
-
-## 22. Technical Constraints
-
----
-
-## 23. Acceptance Requirements
