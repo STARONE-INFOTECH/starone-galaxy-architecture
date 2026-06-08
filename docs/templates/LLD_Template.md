@@ -1,4 +1,4 @@
-# SRS-XXX: Decision Title
+# LLD-XXX: Decision Title
 
 ## 1. Title Page
 
@@ -60,48 +60,50 @@
 
 ---
 
-## 12. System Overview
+## 12. Module Overview
 
 ---
 
-## 13. Functional Requirements
+## 13. Component Design
 
 ---
 
-## 14. Non-Functional Requirements
+## 14. Class Design
 
 ---
 
-## 15. User Interface Requirements
+## 15. Interface Design
 
 ---
 
-## 16. External Interface Requirements
+## 16. Sequence Diagrams
 
 ---
 
-## 17. API Specifications
+## 17. Data Structures
 
 ---
 
-## 18. Data Requirements
+## 18. Database Design
 
 ---
 
-## 19. Security Requirements
+## 19. Design Patterns Applied
 
 ---
 
-## 20. Performance Requirements
+## 20. Exception Handling Design
 
 ---
 
-## 21. Operational Requirements
+## 21. Logging & Monitoring Design
 
 ---
 
-## 22. Technical Constraints
+## 22. Unit Testing Strategy
 
 ---
 
-## 23. Acceptance Requirements
+## 23. Performance Considerations
+
+---
