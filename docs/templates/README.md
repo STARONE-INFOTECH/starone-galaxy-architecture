@@ -30,6 +30,34 @@ This registry provides the approved documentation templates for the StarOne Gala
 - README_MS_Template.md
 - README_Global_Template.md
 
+## Documentation Lifecycle
+
+BRD
+ ↓
+PRD
+ ↓
+EPIC
+ ↓
+STORY
+ ↓
+ISSUE
+ ↓
+ADR
+ ↓
+HLD
+ ↓
+SRS
+ ↓
+LLD
+ ↓
+PR
+
+## Governance Notes
+
+- Templates are maintained under Documentation-as-Code principles.
+- Changes to approved templates must be reviewed through Pull Requests.
+- Template governance standards are defined separately from the templates themselves.
+
 ## Usage
 
 All new artifacts must originate from the approved template registry.
