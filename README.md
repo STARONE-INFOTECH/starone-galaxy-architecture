@@ -709,7 +709,7 @@ Future domains such as SportStats and VaultIron will adopt the same governance a
 
 ---
 
-###  11.2 Related Architecture Artifacts
+### 11.2 Related Architecture Artifacts
 
 | Artifact | Purpose |
 |-----------|----------|
