@@ -3,7 +3,7 @@
 > Architecture Source Of Truth
 
 ---
-# README Meatadata
+# README Metadata
 
 | Field | Value |
 |---|---|
@@ -284,7 +284,7 @@ Two-Phase Commit (2PC) is prohibited for cross-domain runtime flows due to scala
 | starone-galaxy-architecture | Public | Architecture portfolio |
 | starone-galaxy-infra | Private | Deployment configs |
 | starone-dhs-system | Private | Enterprise domain |
-| bookshow-system | Private | Consumer domain |
+| starone-bookshow-system | Private | Consumer domain |
 | starone-galaxy-config | Private | Secrets/config |
 
 ---
@@ -334,6 +334,8 @@ All architecture diagrams shall comply with:
 
 ## 5. Repository Catalog
 
+The StarOne Galaxy ecosystem consists of shared platform repositories and domain-specific repositories. The following catalog provides repository ownership and responsibility boundaries.
+
 ### 5.1 Ecosystem Repository Topology
 
 | Repository | Responsibility | Type |
@@ -343,7 +345,8 @@ All architecture diagrams shall comply with:
 | starone-galaxy-config | Centralized Spring Cloud Config repository | Private |
 | starone-dhs-system | Enterprise OMS ecosystem | Private |
 | starone-bookshow-system | Consumer ticketing platform | Private |
-
+| sportstats | Sports analytics | Planned |
+| vaultiron | Secret management | Planned |
 ---
 
 ## 6. Getting Started
@@ -588,7 +591,7 @@ Recommended order:
 
 ---
 
-## 9 Ownership
+## 9. Ownership
 
 | Area | Owner |
 |---|---|
@@ -620,6 +623,7 @@ Recommended order:
 | vaultiron                   | Secret management platform           | Planned |
 
 ---
+
 ### 10.3 Related Domains
 
 | Repository | Purpose |
