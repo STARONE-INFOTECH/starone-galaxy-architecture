@@ -658,27 +658,66 @@ Recommended order:
 flowchart LR
 
 Users((Business Users))
-Engineers((Engineers))
+Engineers((Platform Engineers))
 
 subgraph StarOne_Galaxy
+    Architecture[Architecture Repository]
     Infra[Control Plane]
     Config[Config Store]
 
-    DHS[DHS Domain]
-    Bookshow[Bookshow Domain]
+    DHS[DHS Platform]
+    Bookshow[Bookshow Platform]
+
+    SportStats[SportStats - Planned]
+    VaultIron[VaultIron - Planned]
 end
 
+Engineers -->|Architecture & Governance| Architecture
 Engineers -->|Develop & Operate| Infra
 
 Users -->|Use| DHS
 Users -->|Use| Bookshow
 
-Infra -->|Governance & Deployment| DHS
-Infra -->|Governance & Deployment| Bookshow
+Architecture --> |Standards & Governance| DHS
+Architecture --> |Standards & Governance| Bookshow
+Architecture -. Future .-> SportStats
+Architecture -. Future .-> VaultIron
 
-Config -->|Injects Config| DHS
-Config -->|Injects Config| Bookshow
+Infra -->|Deployment Platform| DHS
+Infra -->|Deployment Platform| Bookshow
+Infra -. Future .-> SportStats
+Infra -. Future .-> VaultIron
+
+Config -->|Configuration| DHS
+Config -->|Configuration| Bookshow
+Config -. Future .-> SportStats
+Config -. Future .-> VaultIron
 ```
+---
+
+### 11.1 Context Description
+
+The StarOne Galaxy ecosystem is composed of shared platform capabilities and independent business domains.
+
+Platform Engineers interact with the Architecture Repository and Control Plane to govern, build, deploy, and operate the ecosystem.
+
+Business Users consume business-facing capabilities exposed through the DHS and Bookshow platforms.
+
+The Architecture Repository acts as the governance source of truth, while the Control Plane and Config Store provide shared operational capabilities to runtime domains.
+
+Future domains such as SportStats and VaultIron will adopt the same governance and platform standards.
+
+---
+
+### 11.2 Related Architecture Artifacts
+
+| Artifact | Purpose |
+|-----------|----------|
+| C4-001 System Context | Ecosystem boundaries |
+| C4-002 Container View | Internal repository structure |
+| Domain Dependency Map | Cross-domain dependencies |
+| Infrastructure Overview | Runtime platform architecture |
+
 ---
 
 ## 12. C4 Container View
