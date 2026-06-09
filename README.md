@@ -336,7 +336,7 @@ All architecture diagrams shall comply with:
 
 The StarOne Galaxy ecosystem consists of shared platform repositories and domain-specific repositories. The following catalog provides repository ownership and responsibility boundaries.
 
-### 5.1 Ecosystem Repository Topology
+### 5.1 Repository Responsibility Matrix
 
 | Repository | Responsibility | Type |
 |---|---|---|
@@ -347,6 +347,7 @@ The StarOne Galaxy ecosystem consists of shared platform repositories and domain
 | starone-bookshow-system | Consumer ticketing platform | Private |
 | sportstats | Sports analytics | Planned |
 | vaultiron | Secret management | Planned |
+
 ---
 
 ## 6. Getting Started
@@ -633,6 +634,20 @@ Recommended order:
 | starone-galaxy-architecture | Architecture governance |
 | starone-dhs-system | Enterprise OMS |
 | starone-bookshow-system | Consumer Ticketing |
+
+---
+
+### 10.4 Domain Boundary Summary
+
+| Domain | Boundary |
+|----------|----------|
+| Architecture | Governance, standards, documentation, architecture decisions |
+| Infrastructure | CI/CD, Kubernetes, shared platform services |
+| Configuration | Environment and application configuration |
+| DHS | Enterprise order management capabilities |
+| Bookshow | Consumer ticketing capabilities |
+| SportStats | Future sports analytics capabilities |
+| VaultIron | Future secret management capabilities |
 
 ---
 
