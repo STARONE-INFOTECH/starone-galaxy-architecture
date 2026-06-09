@@ -1,12 +1,19 @@
 # Mermaid Modeling Standard
 
-**Document ID:** GOV-MERMAID-001  
-**Project:** StarOne Galaxy  
-**Domain:** Architecture Governance  
-**Author:** Sachin Salunke  
-**Version:** 1.0.0  
-**Status:** Draft  
-**Approval Status:** Pending  
+## Document Metadata
+
+| Field | Value |
+|---|---|
+| Document ID | STANDARD-004 |
+| Domain | Governance |
+| Document Type | Mermaid Modeling Standard |
+| Version | 1.0.0 |
+| Author | Sachin Salunke |
+| Status | Draft |
+| Date | 2026-05-01 |
+| Linked Epic | EPIC-ARCH-001 |
+| Linked Story | STORY-ARCH-003 |
+| Approval Status | Approved |
 
 ---
 
@@ -49,7 +56,9 @@ This standard applies to all architecture and engineering documentation produced
 # 2. Scope
 
 This standard applies to:
-
+- BRD Documents
+- PRD Documents
+- FRD Documents
 - ADR Documents
 - HLD Documents
 - SRS Documents
@@ -59,7 +68,7 @@ This standard applies to:
 - Future LLD Documents
 - Infrastructure Documentation
 
-Applicable repositories:
+**Applicable repositories**:
 
 ```text
 starone-galaxy-architecture
@@ -117,6 +126,8 @@ Visual models are governed architecture artifacts and must follow approved stand
 | State Diagram | State transitions |
 | Journey Diagram | User journeys |
 | Class Diagram | Logical design |
+| C4 Context View   | System Context Architecture |
+| C4 Container View | Container Architecture      |
 
 ---
 
@@ -248,6 +259,41 @@ Purpose:
 ```text
 Workflow States
 Entity Lifecycle States
+```
+
+---
+
+## 5.6 Journey Diagrams
+
+Use:
+
+```mermaid
+journey
+```
+
+Purpose:
+
+```text
+User onboarding
+Customer booking flows
+Operational workflows
+```
+---
+
+## 5.7 Class Diagrams
+
+Use:
+
+```mermaid
+classDiagram
+```
+Purpose:
+
+```text
+LLD modeling
+Domain modeling
+Entity relationships
+Component relationships
 ```
 
 ---
@@ -499,15 +545,17 @@ Avoid custom colors unless explicitly required.
 
 # 11. Documentation Integration Standards
 
-Mermaid diagrams should be used in:
+Mermaid diagrams may be used in:
 
-| Artifact | Recommended |
-|---|---|
-| ADR | Yes |
-| HLD | Mandatory |
-| SRS | Recommended |
-| RTM | Optional |
-| LLD | Mandatory |
+- ADR
+- BRD
+- PRD
+- FRD
+- HLD
+- LLD
+- SRS
+- RTM
+- README Documents
 
 ---
 
@@ -526,7 +574,20 @@ Mermaid diagrams should be used in:
 
 ---
 
-# 13. Audit Checklist
+# 13. Validation Rules
+
+Every Mermaid diagram shall:
+
+- Use an approved diagram type
+- Follow approved layout conventions
+- Follow naming standards
+- Follow domain boundary standards
+- Follow C4 modeling guidance where applicable
+- Remain readable and maintainable
+
+---
+
+# 14. Audit Checklist
 
 | Check | Status |
 |---|---|
@@ -539,7 +600,7 @@ Mermaid diagrams should be used in:
 
 ---
 
-# 14. Compliance & Standards Alignment
+# 15. Compliance & Standards Alignment
 
 | Standard | Application |
 |---|---|
@@ -547,10 +608,11 @@ Mermaid diagrams should be used in:
 | C4 Model | Architecture Views |
 | Mermaid Documentation | Diagram Syntax |
 | Internal Governance Standards | Modeling Controls |
+| ISO/IEC/IEEE 29148 | Requirements Visualization |
 
 ---
 
-# 15. Related Artifacts
+# 16. Related Artifacts
 
 ## Governance Artifacts
 
@@ -568,13 +630,7 @@ Mermaid diagrams should be used in:
 
 ---
 
-## Portfolio Artifacts
-
-- EPIC_Story_Linkage_Template.md
-
----
-
-# 16. Strategic Next Steps
+# 17. Strategic Next Steps
 
 - Define Review Workflow Controls
 - Standardize LLD Templates
@@ -583,7 +639,7 @@ Mermaid diagrams should be used in:
 
 ---
 
-# 17. Conclusion
+# 18. Conclusion
 
 This standard establishes the official Mermaid modeling conventions for StarOne Galaxy.
 
@@ -599,7 +655,7 @@ This document is authoritative for all Mermaid-based architecture diagrams acros
 
 ---
 
-# 18. Approval Status
+# 19. Approval Status
 
 | Review Area | Status |
 |---|---|
