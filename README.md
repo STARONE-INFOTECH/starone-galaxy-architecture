@@ -1,4 +1,4 @@
-# ⭐ StarOne Galaxy 
+# ⭐ StarOne Galaxy
 
 > Architecture Source Of Truth
 
