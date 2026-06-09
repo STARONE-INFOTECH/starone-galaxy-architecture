@@ -1,14 +1,20 @@
 # Review Workflow Standard
 
-**Document ID:** GOV-REVIEW-001  
-**Project:** StarOne Galaxy  
-**Domain:** Architecture Governance  
-**Author:** Sachin Salunke  
-**Version:** 1.0.0  
-**Status:** Draft  
-**Approval Status:** Pending
+## Document Metadata
 
----
+| Field | Value |
+|---|---|
+| Document ID | STANDARD-005 |
+| Domain | Governance |
+| Document Type | Documentation Review & Approval Workflow Controls |
+| Version | 1.0.0 |
+| Author | Sachin Salunke |
+| Status | Draft |
+| Date | 2026-05-01 |
+| Linked Epic | EPIC-ARCH-001 |
+| Linked Story | STORY-ARCH-003 |
+| Approval Status | Pending |
+
 
 ## Revision History
 
@@ -50,6 +56,9 @@ This document serves as the authoritative governance workflow for all documentat
 
 This standard applies to:
 
+- BRD Documents
+- PRD Documents
+- FRD Documents
 - ADR Documents
 - HLD Documents
 - SRS Documents
@@ -65,10 +74,10 @@ Applicable repositories:
 starone-galaxy-architecture
 starone-galaxy-infra
 starone-galaxy-config
-dhs-system
-bookshow-system
-sportstats-system
-vaultiron-system
+starone-dhs-system
+starone-bookshow-system
+sportstats
+vaultiron
 ```
 
 ---
@@ -86,9 +95,19 @@ PeerReview --> ArchitectureReview
 
 ArchitectureReview --> SecurityReview
 
-SecurityReview --> Approval
+SecurityReview --> GovernanceApproval
 
-Approval --> Published
+GovernanceApproval --> Published
+
+GovernanceApproval --> Rejected
+
+Rejected --> Draft
+
+Published --> ChangeRequest
+
+ChangeRequest --> ReviewCycle
+
+ReviewCycle --> Published
 ```
 
 ---
@@ -103,7 +122,9 @@ Approval --> Published
 | Security Review | Security and compliance validation |
 | Approval | Governance approval |
 | Published | Official document release |
-
+| Rejected | Review failed, rework required |
+| Change Request | Modification requested |
+| Review Cycle | Re-review of updated document |
 ---
 
 # 4. Document Lifecycle States
@@ -115,9 +136,11 @@ Approval --> Published
 | Draft | Authoring stage |
 | Review | Under formal review |
 | Approved | All approvals completed |
+| Rejected | Review failed, rework required |
 | Published | Official active document |
 | Superseded | Replaced by newer version |
 | Retired | No longer maintained |
+
 
 ---
 
@@ -212,48 +235,44 @@ Responsible for:
 
 # 6. Approval Gate Standards
 
-## ADR Approval Requirements
+**ADR**
 
 Mandatory approvals:
 
 ```text
-Peer Review
 Architecture Review
 Security Review
 ```
 
 ---
 
-## HLD Approval Requirements
+**HLD**
 
 Mandatory approvals:
 
 ```text
-Peer Review
 Architecture Review
 Security Review
 ```
 
 ---
 
-## SRS Approval Requirements
+**SRS**
 
 Mandatory approvals:
 
 ```text
-Peer Review
 Architecture Review
 QA Review
 ```
 
 ---
 
-## RTM Approval Requirements
+**RTM**
 
 Mandatory approvals:
 
 ```text
-Peer Review
 Architecture Review
 QA Review
 ```
@@ -276,6 +295,7 @@ Governance Review
 
 A document may enter the Published state only when:
 
+- Document Status = Approved
 - Required reviews completed
 - Required approvals completed
 - Sign-off table completed
@@ -401,7 +421,21 @@ GovernanceBoard --> Resolution
 
 ---
 
-# 12. Audit Checklist
+# 12. Validation Rules
+
+Verify:
+
+- Review lifecycle defined
+- Review ownership defined
+- Approval gates defined
+- Publication controls defined
+- Change management process defined
+- Status lifecycle defined
+- Escalation process defined
+
+---
+
+# 13. Audit Checklist
 
 | Check | Status |
 |---|---|
@@ -416,7 +450,7 @@ GovernanceBoard --> Resolution
 
 ---
 
-# 13. Compliance & Standards Alignment
+# 14. Compliance & Standards Alignment
 
 | Standard | Application |
 |---|---|
@@ -427,7 +461,7 @@ GovernanceBoard --> Resolution
 
 ---
 
-# 14. Review Metrics
+# 15. Review Metrics
 
 ## Governance KPIs
 
@@ -450,7 +484,7 @@ GovernanceBoard --> Resolution
 
 ---
 
-# 15. Related Artifacts
+# 16. Related Artifacts
 
 ## Governance Standards
 
@@ -466,11 +500,10 @@ GovernanceBoard --> Resolution
 - HLD_Template.md
 - SRS_Template.md
 - RTM_Template.md
-- EPIC_Story_Linkage_Template.md
 
 ---
 
-# 16. Strategic Next Steps
+# 17. Strategic Next Steps
 
 - Automate approval workflows
 - Implement document quality gates
@@ -480,7 +513,7 @@ GovernanceBoard --> Resolution
 
 ---
 
-# 17. Success Criteria
+# 18. Success Criteria
 
 Success is achieved when:
 
@@ -493,7 +526,7 @@ Success is achieved when:
 
 ---
 
-# 18. Conclusion
+# 19. Conclusion
 
 This standard establishes the official review, approval, publication, and governance workflow for StarOne Galaxy documentation.
 
@@ -509,7 +542,7 @@ This document is authoritative for all documentation review and approval activit
 
 ---
 
-# 19. Approval Status
+# 20. Approval Status
 
 | Review Area | Status |
 |---|---|
