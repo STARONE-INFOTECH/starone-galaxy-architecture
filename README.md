@@ -722,6 +722,8 @@ Future domains such as SportStats and VaultIron will adopt the same governance a
 
 ## 12. C4 Container View
 
+### 12.1 Container Diagram
+
 ```mermaid
 flowchart TD
 
@@ -741,6 +743,79 @@ Governance --> Policies[Policies]
 Governance --> Controls[Controls]
 Governance --> Templates[Templates]
 ```
+---
+
+### 12.2 Container Description
+
+The StarOne Galaxy Architecture Repository is organized into logical architecture containers that simplify navigation, governance, documentation management, and engineering onboarding.
+
+The README serves as the primary ecosystem entry point and guides engineers toward the appropriate architecture, documentation, governance, and reference domains.
+
+The container model is structured around the following responsibilities:
+
+| Container | Responsibility |
+|------------|----------------|
+| README Entry Point | Primary ecosystem navigation and discovery |
+| Repository Catalog | Repository discovery and ownership visibility |
+| Domain Catalog | Domain boundaries and ecosystem responsibilities |
+| Documentation Domain | Requirements, architecture, design, and traceability artifacts |
+| Architecture Domain | C4 models, domain architecture, and integration architecture |
+| Governance Domain | Policies, standards, controls, and compliance artifacts |
+| Reference Assets | Reusable diagrams, examples, onboarding assets, and supporting references |
+| Repository Governance | Repository automation, workflows, approvals, and ownership controls |
+
+The container relationships provide a structured navigation path that enables engineers to move from ecosystem understanding to detailed architectural and governance artifacts.
+
+---
+
+### 12.3 Repository Navigation Mapping
+
+| Starting Point | Navigation Target | Purpose |
+|----------------|-------------------|----------|
+| README Entry Point | Repository Catalog | Discover ecosystem repositories |
+| README Entry Point | Domain Catalog | Understand domain responsibilities |
+| README Entry Point | Documentation Domain | Access architecture and requirements documentation |
+| README Entry Point | Architecture Domain | Explore C4 models and architecture artifacts |
+| README Entry Point | Governance Domain | Review governance standards and controls |
+| README Entry Point | Reference Assets | Access reusable reference materials |
+| README Entry Point | Repository Governance | Review automation and repository controls |
+| Repository Catalog | Domain Catalog | Understand repository ownership boundaries |
+| Documentation Domain | ADR | Architecture decision tracking |
+| Documentation Domain | BRD | Business requirements documentation |
+| Documentation Domain | HLD | High-level design documentation |
+| Documentation Domain | SRS | System requirements documentation |
+| Documentation Domain | RTM | Requirements traceability |
+| Architecture Domain | C4 Models | Architecture visualization |
+| Architecture Domain | Domain Architecture | Domain-specific architecture documentation |
+| Architecture Domain | Integration Architecture | Cross-domain integration documentation |
+| Governance Domain | Policies | Governance policies |
+| Governance Domain | Standards | Engineering standards |
+| Governance Domain | Controls | Governance controls |
+| Governance Domain | Compliance | Compliance requirements |
+| Repository Governance | GitHub Workflows | Automation and CI/CD governance |
+| Repository Governance | CODEOWNERS | Ownership and review controls |
+| Repository Governance | PR Governance | Pull request governance and approvals |
+
+---
+
+### 12.4 Related Architecture Artifacts
+
+| Artifact | Purpose |
+|-----------|----------|
+| README.md | Ecosystem entry point and navigation hub |
+| C4-001-StarOne-Galaxy-System-Context.md | Ecosystem boundaries and external interactions |
+| C4-002-StarOne-Galaxy-Container-View.md | Internal repository architecture and navigation structure |
+| Domain Dependency Map | Cross-domain dependency relationships |
+| Integration Architecture | Domain integration patterns and interactions |
+| Infrastructure Overview | Shared platform and runtime architecture |
+| Governance Standards | Governance policies, standards, and controls |
+| ADR Repository | Architecture decisions and rationale |
+| Repository Catalog | Repository ownership and responsibility mapping |
+| Domain Catalog | Domain boundaries and responsibilities |
+
+The C4 Container View builds upon the System Context View and provides a deeper understanding of the internal organizational structure of the StarOne Galaxy Architecture Repository.
+
+This model serves as the foundation for subsequent dependency maps, integration models, governance navigation artifacts, and engineering onboarding documentation.
 
 ---
 
