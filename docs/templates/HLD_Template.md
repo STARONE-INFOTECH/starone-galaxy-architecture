@@ -23,6 +23,9 @@
 
 ## 3. Revision History
 
+| Version | Date | Author | Description |
+|---|---|---|---|
+
 ---
 
 ## 4. References
