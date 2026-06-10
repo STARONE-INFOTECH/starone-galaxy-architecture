@@ -824,12 +824,16 @@ This model serves as the foundation for subsequent dependency maps, integration 
 ### 13.1 Dependency Relationship Matrix
 
 | Source Domain | Target Domain | Dependency Type |
-|---|---|---|
-| starone-dhs-system | starone-galaxy-infra | Platform Dependency |
-| starone-dhs-system | starone-galaxy-config | Configuration Dependency |
-| starone-bookshow-system | starone-galaxy-infra | Platform Dependency |
-| starone-bookshow-system | starone-galaxy-config | Configuration Dependency |
-| All Domains | starone-galaxy-architecture | Governance Dependency |
+|---------------|---------------|-----------------|
+| starone-dhs-system | starone-galaxy-infra | Platform |
+| starone-dhs-system | starone-galaxy-config | Configuration |
+| starone-bookshow-system | starone-galaxy-infra | Platform |
+| starone-bookshow-system | starone-galaxy-config | Configuration |
+| SportStats | starone-galaxy-infra | Planned |
+| SportStats | starone-galaxy-config | Planned |
+| VaultIron | starone-galaxy-infra | Planned |
+| VaultIron | starone-galaxy-config | Planned |
+| All Domains | starone-galaxy-architecture | Governance |
 
 ---
 
@@ -838,35 +842,46 @@ This model serves as the foundation for subsequent dependency maps, integration 
 ```mermaid
 graph TD
 
-    Infra[starone-galaxy-infra]
-    Config[starone-galaxy-config]
-    Arch[starone-galaxy-architecture]
+    Architecture[Architecture Repository]
 
-    DHS[starone-dhs-system]
-    BookShow[starone-bookshow-system]
+    Infra[Control Plane]
+    Config[Config Store]
+    
+    DHS[DHS System]
+    Bookshow[Bookshow System]
 
-    DHS --> Infra
-    DHS --> Config
+    SportStats[SportStats - Planned]
+    VaultIron[VaultIron - Planned]
 
-    BookShow --> Infra
-    BookShow --> Config
+    Architecture --> Infra
+    Architecture --> DHS
+    Architecture --> Bookshow
+    Architecture --> SportStats
+    Architecture --> VaultIron
 
-    DHS -. Governance .-> Arch
-    BookShow -. Governance .-> Arch
-    Infra -. Governance .-> Arch
-    Config -. Governance .-> Arch
+    Infra --> DHS
+    Infra --> Bookshow
+    Infra --> SportStats
+    Infra --> VaultIron
+
+
+    Config --> DHS
+    Config --> Bookshow
+    Config --> SportStats
+    Config --> VaultIron
 ```
 ---
 
 ### 13.3 Dependency Rules
 
 | Dependency | Rule |
-|---|---|
-| Infrastructure → Domains | Shared platform services are consumed by business domains |
+|------------|------|
+| Infrastructure → Domains | Shared platform services |
 | Configuration → Domains | Centralized configuration inheritance |
-| Architecture → All Domains | Governance source-of-truth |
-| Domain → Domain | Direct coupling should be minimized |
-| Governance → Ecosystem | Standards apply across all repositories |
+| Architecture → All Domains | Governance ownership and standards |
+| Domain → Domain | Direct dependency prohibited |
+| Platform → Domains | Shared services only |
+| Domains → Platform | Allowed through approved interfaces |
 
 ---
 
@@ -875,18 +890,55 @@ graph TD
 ```text
 starone-galaxy-architecture
 │
+├── Governance Standards
+│
 ├── starone-galaxy-infra
 │   │
 │   ├── starone-dhs-system
-│   └── starone-bookshow-system
+│   ├── starone-bookshow-system
+│   ├── sportstats (Planned)
+│   └── vaultiron (Planned)
 │
 └── starone-galaxy-config
     │
     ├── starone-dhs-system
-    └── starone-bookshow-system
+    ├── starone-bookshow-system
+    ├── sportstats (Planned)
+    └── vaultiron (Planned)
 ```
 
 ---
+
+### 13.5 Repository Dependency References
+
+| Repository | Dependency Ownership |
+|------------|----------------------|
+| starone-galaxy-architecture | Governance & Standards |
+| starone-galaxy-infra | Shared Platform Services |
+| starone-galaxy-config | Configuration Management |
+| starone-dhs-system | Enterprise OMS Capabilities |
+| starone-bookshow-system | Consumer Ticketing Capabilities |
+| sportstats | Planned Analytics Domain |
+| vaultiron | Planned Secret Management Domain |
+
+---
+
+### 13.6 Dependency Governance Principles
+
+The StarOne Galaxy ecosystem follows strict dependency governance.
+
+Principles:
+
+- Domains remain isolated from one another.
+- Shared capabilities are provided through platform repositories.
+- Governance is centralized through the Architecture Repository.
+- Configuration is centralized through the Config Store.
+- Runtime capabilities are provided through the Control Plane.
+- Direct cross-domain coupling is prohibited.
+
+---
+
+
 
 ## 14. High-Level Integration Overview
 
