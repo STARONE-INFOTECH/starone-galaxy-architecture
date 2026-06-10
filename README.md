@@ -360,6 +360,25 @@ This onboarding path helps new engineers understand the architecture, governance
 
 ### 6.2 Recommended Learning Path
 
+### 6.2.1 Repository Discovery
+
+New engineers should explore repositories in the following order:
+
+| Repository | Purpose |
+|------------|----------|
+| starone-galaxy-architecture | Architecture Source of Truth |
+| starone-galaxy-infra | Shared Control Plane |
+| starone-galaxy-config | Centralized Configuration Store |
+| starone-dhs-system | Enterprise OMS Platform |
+| starone-bookshow-system | Consumer Ticketing Platform |
+
+Recommended starting point:
+
+```text
+starone-galaxy-architecture
+```
+---
+
 #### Step 1 — Understand the Ecosystem
 
 Review:
@@ -376,12 +395,30 @@ Understand domain boundaries and platform responsibilities.
 
 #### Step 2 — Learn the Architecture
 
-Review:
+Recommended order:
+
+**1. Read ADRs**
+
+```text
+/docs/adr/
+```
+
+**2. Review C4 Models**
 
 ```text
 /architecture/c4/
+```
+
+**3. Review HLD**
+
+```text
 /docs/hld/
-/docs/adr/
+```
+
+**4. Review Standards**
+
+```text
+/governance/
 ```
 
 Objective:
@@ -407,16 +444,19 @@ Learn contribution standards, traceability requirements, and governance controls
 
 ---
 
-#### Step 4 — Explore Domain Systems
+#### Step 4 — Explore Platform & Domain Systems
 
 Repositories:
 
+- starone-galaxy-architecture
+- starone-galaxy-infra
+- starone-galaxy-config
 - starone-dhs-system
 - starone-bookshow-system
 
 Objective:
 
-Understand business capabilities and domain ownership.
+Understand platform services, governance ownership, and business domain responsibilities.
 
 ---
 
@@ -436,17 +476,30 @@ Contribute using approved engineering workflows.
 
 ---
 
+
+
 ### 6.3 Prerequisites
 
-- Java 21
-- Maven 3.9+
-- Docker
-- Kubernetes CLI
-- Git
+Before contributing to the StarOne Galaxy ecosystem, engineers should be familiar with the following tools and technologies:
 
-```text
-/docs/adr/
-```
+| Tool | Purpose |
+|--------|--------|
+| Java 21 | Application Development |
+| Maven | Build Management |
+| Docker | Containerization |
+| Git | Source Control |
+| kubectl | Kubernetes Operations |
+
+Recommended knowledge:
+
+- Spring Boot 3.x
+- Kafka Event-Driven Architecture
+- PostgreSQL
+- Redis
+- GitHub Actions
+- Kubernetes
+
+---
 
 ### 6.4 Clone Repositories
 
@@ -468,7 +521,7 @@ docker compose up -d
 
 ---
 
-### 6.6 Engineer Golden Path
+### 6.6 Engineer Onboarding Flow
 
 ```mermaid
 flowchart TD
@@ -490,36 +543,6 @@ DOMAINS --> CONTRIBUTE[Start Contributing]
 
 ---
 
-### 6.7 Explore Architecture
-
-Recommended order:
-
-### 1. Read ADRs
-
-```text
-/docs/adr/
-```
-
-### 2. Review C4 Models
-
-```text
-/architecture/c4/
-```
-
-### 3. Review HLD
-
-```text
-/docs/hld/
-```
-
-### 4. Review Standards
-
-```text
-/governance/
-```
-
----
-
 ## 7. Governance Links
 
 ### 7.1 Architecture Decisions
@@ -527,7 +550,6 @@ Recommended order:
 ```text
 /docs/adr/
 ```
-
 - ADR-001 Repository Taxonomy
 - ADR-002 Documentation-as-Code
 - ADR-003 BOM Governance
