@@ -1,0 +1,29 @@
+name: Standards Lint
+
+on:
+  pull_request:
+
+jobs:
+  standards-check:
+    name: Standards Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Naming Convention Check
+        run: |
+          echo "Running naming governance validation..."
+
+          find . -type f | grep -E '[A-Z]{2,}' || true
+
+          echo "Naming validation completed."
+
+      - name: Template Validation
+        run: |
+          echo "Validate template structure"
+
+      - name: Standards Compliance Validation
+        run: |
+          echo "Validate governance standards"

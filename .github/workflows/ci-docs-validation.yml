@@ -1,9 +1,0 @@
-name: Docs Validation
-on: [push, pull_request]
-jobs:
-  validate:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Lint Markdown
-        run: echo "Markdown linting will be configured in S2"

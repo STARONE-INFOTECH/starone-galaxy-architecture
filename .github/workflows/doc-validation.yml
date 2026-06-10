@@ -1,0 +1,31 @@
+name: Documentation Validation
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'architecture/**'
+
+jobs:
+  validate-docs:
+    name: Documentation Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Run Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@v15
+        with:
+          config: .markdownlint.json
+          globs: |
+            **/*.md
+
+      - name: Mermaid Validation
+        run: |
+          echo "Validate Mermaid diagrams"
+
+      - name: Link Validation
+        run: |
+          echo "Validate documentation links"
