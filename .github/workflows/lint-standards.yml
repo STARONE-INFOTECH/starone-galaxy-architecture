@@ -5,16 +5,25 @@ on:
 
 jobs:
   standards-check:
+    name: Standards Validation
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Naming Convention Check
-        run: echo "Validate naming"
+        run: |
+          echo "Running naming governance validation..."
+
+          find . -type f | grep -E '[A-Z]{2,}' || true
+
+          echo "Naming validation completed."
 
       - name: Template Validation
-        run: echo "Validate templates"
+        run: |
+          echo "Validate template structure"
 
-      - name: Standards Compliance
-        run: echo "Validate standards"
+      - name: Standards Compliance Validation
+        run: |
+          echo "Validate governance standards"

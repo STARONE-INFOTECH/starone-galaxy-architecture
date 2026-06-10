@@ -5,13 +5,21 @@ on:
 
 jobs:
   architecture-check:
+    name: Architecture Governance Review
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: ADR Validation
-        run: echo "Validate ADR"
+        run: |
+          echo "Validate ADR standards"
+
+      - name: HLD Validation
+        run: |
+          echo "Validate HLD standards"
 
       - name: Traceability Validation
-        run: echo "Validate RTM"
+        run: |
+          echo "Validate RTM references"

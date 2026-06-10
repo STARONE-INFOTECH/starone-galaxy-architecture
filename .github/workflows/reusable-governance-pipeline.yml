@@ -5,8 +5,10 @@ on:
 
 jobs:
   governance-info:
+    name: Reusable Governance Workflow
     runs-on: ubuntu-latest
 
     steps:
       - name: Governance Pipeline
-        run: echo "Reusable governance workflow"
+        run: |
+          echo "Reusable governance workflow executed"

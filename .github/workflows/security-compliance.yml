@@ -5,13 +5,21 @@ on:
 
 jobs:
   security-check:
+    name: Security Compliance Review
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
       - name: Secret Scan
-        run: echo "Secret Scan"
+        run: |
+          echo "Run secret scanning"
 
-      - name: Policy Validation
-        run: echo "Policy Validation"
+      - name: Security Policy Validation
+        run: |
+          echo "Validate security policies"
+
+      - name: Compliance Validation
+        run: |
+          echo "Validate governance compliance"

@@ -8,16 +8,24 @@ on:
 
 jobs:
   validate-docs:
+    name: Documentation Validation
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Markdown Validation
-        run: echo "Validate markdown"
+      - name: Run Markdown Lint
+        uses: DavidAnson/markdownlint-cli2-action@v15
+        with:
+          config: .markdownlint.json
+          globs: |
+            **/*.md
 
       - name: Mermaid Validation
-        run: echo "Validate Mermaid"
+        run: |
+          echo "Validate Mermaid diagrams"
 
       - name: Link Validation
-        run: echo "Validate links"
+        run: |
+          echo "Validate documentation links"
