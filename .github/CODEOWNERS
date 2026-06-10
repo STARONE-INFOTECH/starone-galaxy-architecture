@@ -14,53 +14,61 @@
 # Architecture Governance
 # ---------------------------------------------------------
 
-/docs/adr/ @STARONE-INFOTECH/platform-architects
-/docs/hld/ @STARONE-INFOTECH/platform-architects
-/docs/lld/ @STARONE-INFOTECH/platform-architects
-/architecture/ @STARONE-INFOTECH/platform-architects
+/docs/frd/                         @STARONE-INFOTECH/platform-architects
+/docs/srs/                         @STARONE-INFOTECH/platform-architects
+/docs/rtm/                         @STARONE-INFOTECH/platform-architects
+/docs/adr/                         @STARONE-INFOTECH/platform-architects
+/docs/hld/                         @STARONE-INFOTECH/platform-architects
+/docs/lld/                         @STARONE-INFOTECH/platform-architects
+
+/architecture/c4/                  @STARONE-INFOTECH/platform-architects
+/architecture/domain/              @STARONE-INFOTECH/platform-architects
+/architecture/integration/         @STARONE-INFOTECH/platform-architects
+/architecture/                     @STARONE-INFOTECH/platform-architects
 
 # ---------------------------------------------------------
 # Governance Standards
 # ---------------------------------------------------------
 
-/governance/ @STARONE-INFOTECH/governance-board
+/governance/audits/                @STARONE-INFOTECH/governance-board
+/governance/controls/              @STARONE-INFOTECH/governance-board
+/governance/policies/              @STARONE-INFOTECH/governance-board
+/governance/standards/             @STARONE-INFOTECH/governance-board
+/governance/                       @STARONE-INFOTECH/governance-board
 
 # ---------------------------------------------------------
 # Security
 # ---------------------------------------------------------
 
-/architecture/security/ @STARONE-INFOTECH/security-review
-/docs/security/ @STARONE-INFOTECH/security-review
+/architecture/security/            @STARONE-INFOTECH/security-review
+/docs/security/                    @STARONE-INFOTECH/security-review
+/governance/compliance/            @STARONE-INFOTECH/security-review
 
 # ---------------------------------------------------------
 # CI/CD & Workflows
 # ---------------------------------------------------------
 
-/.github/ @STARONE-INFOTECH/devops-governance
-/scripts/ @STARONE-INFOTECH/devops-governance
+.github/workflows/                 @STARONE-INFOTECH/devops-governance
+.github/                           @STARONE-INFOTECH/devops-governance
+/scripts/                          @STARONE-INFOTECH/devops-governance
+/governance/branching/             @STARONE-INFOTECH/devops-governance
 
 # ---------------------------------------------------------
 # Runtime Platform
 # ---------------------------------------------------------
 
-/platform/ @STARONE-INFOTECH/platform-engineering
+/platform/                         @STARONE-INFOTECH/platform-engineering
 
 # ---------------------------------------------------------
 # Domain Ownership
 # ---------------------------------------------------------
 
-/docs/brd/ @STARONE-INFOTECH/business-analysts
-/docs/prd/ @STARONE-INFOTECH/product-owners
+/docs/brd/                         @STARONE-INFOTECH/business-analysts
+/docs/prd/                         @STARONE-INFOTECH/product-owners
 
 # ---------------------------------------------------------
 # Standards & Templates
 # ---------------------------------------------------------
 
-/docs/templates/ @STARONE-INFOTECH/platform-architects
-/docs/standards/ @STARONE-INFOTECH/governance-board
-
-# ---------------------------------------------------------
-# Compliance
-# ---------------------------------------------------------
-
-/governance/compliance/ @STARONE-INFOTECH/security-review
+/docs/templates/                   @STARONE-INFOTECH/platform-architects
+/docs/standards/                   @STARONE-INFOTECH/governance-board
