@@ -1,0 +1,12 @@
+name: Reusable Governance Pipeline
+
+on:
+  workflow_call:
+
+jobs:
+  governance-info:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Governance Pipeline
+        run: echo "Reusable governance workflow"

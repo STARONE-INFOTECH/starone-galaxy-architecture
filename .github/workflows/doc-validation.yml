@@ -1,0 +1,23 @@
+name: Documentation Validation
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'architecture/**'
+
+jobs:
+  validate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Markdown Validation
+        run: echo "Validate markdown"
+
+      - name: Mermaid Validation
+        run: echo "Validate Mermaid"
+
+      - name: Link Validation
+        run: echo "Validate links"
