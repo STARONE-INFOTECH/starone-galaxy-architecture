@@ -576,6 +576,94 @@ Recommended order:
 
 ---
 
+### 7.6 Governance Artifact Catalog
+
+| Location | Purpose |
+|-----------|----------|
+| /docs/adr | Architecture Decisions |
+| /docs/brd | Business Requirements |
+| /docs/hld | High-Level Designs |
+| /docs/srs | System Requirements |
+| /docs/rtm | Traceability Matrix |
+| /governance/policies | Governance Policies |
+| /governance/controls | Governance Controls |
+| /governance/compliance | Compliance Artifacts |
+| /governance/standards | Standards Repository |
+
+---
+
+### 7.7 Governance Repository Structure
+
+```text
+governance/
+├── policies/
+├── controls/
+├── compliance/
+├── standards/
+├── branching/
+└── naming/
+```
+---
+
+### 7.8 Governance Navigation Diagram
+
+```mermaid
+flowchart TD
+
+README[Global README]
+
+README --> ADR[ADR]
+README --> BRD[BRD]
+README --> HLD[HLD]
+README --> SRS[SRS]
+README --> RTM[RTM]
+
+README --> Policies[Policies]
+README --> Controls[Controls]
+README --> Compliance[Compliance]
+README --> Standards[Standards]
+
+Standards --> Naming[Naming Standards]
+Standards --> Contribution[Contribution Governance]
+```
+---
+
+### 7.9 Standards Navigation
+
+| Standard Area | Location |
+|---------------|----------|
+| Documentation Standards | /governance/standards |
+| Traceability Standards | /governance/standards |
+| Mermaid Standards | /governance/standards |
+| Review Standards | /governance/standards |
+| Naming Standards | /governance/naming |
+| Branching Standards | /governance/branching |
+
+---
+
+### 7.10 Governance Principles
+
+The StarOne Galaxy ecosystem follows the following governance principles:
+
+- Documentation-as-Code
+- Platform First Governance
+- Single Source of Truth
+- Traceability First SDLC
+- Architecture Review Before Implementation
+- Governance Ownership Visibility
+- Repository-Level Accountability
+
+---
+
+### 7.11 Related Governance Ownership
+
+Refer to:
+
+```text
+Section 9. Ownership
+```
+---
+
 ## 8. Documentation Links
 
 | Artifact | Location |
@@ -594,12 +682,15 @@ Recommended order:
 
 ## 9. Ownership
 
+### 9.1 Ownership Model Summary
+
 | Area | Owner |
-|---|---|
-| Architecture | Platform Architects |
-| Governance | Governance Board |
-| Security | Security Review |
-| DevOps | Platform Engineering |
+|--------|--------|
+| Architecture | Platform Architect |
+| Governance Standards | Governance Board |
+| Security Controls | Security Governance |
+| CI/CD Governance | Platform Engineering |
+| Documentation Standards | Architecture Governance |
 
 ---
 
