@@ -91,7 +91,7 @@ Add validation details
 
 ## Governance Checklist
 
-### Traceability
+### Traceability[ ]
 
 - [ ] Epic linked
 - [ ] Story linked
