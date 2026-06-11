@@ -1,5 +1,7 @@
 # ADR-002: Documentation Standards Governance
 
+## Title Page
+
 | Field | Value |
 |---------|---------|
 | ADR ID | ADR-002 |
@@ -13,16 +15,16 @@
 
 ---
 
-# Revision History
+## Revision History
 
 | Version | Date | Author | Description |
 |---------|---------|---------|---------|
 | 1.0 | Jan 2026 | Sachin Salunke | Initial ADR |
 | 1.1 | Jan 2026 | Architecture Review Board | Documentation Governance Approved |
-
+| 1.2 | Jan 2026 | Sachin Salunke | Documentation Governance Model Enhancements |
 ---
 
-# Sign-Off
+## Sign-Off
 
 | Role | Status |
 |---------|---------|
@@ -32,7 +34,7 @@
 
 ---
 
-# 1. Context
+## 1. Context
 
 StarOne Galaxy spans multiple domains, repositories, services, and engineering teams.
 
@@ -49,9 +51,11 @@ The ecosystem requires:
 
 A formal documentation governance model is required to establish a single documentation operating standard across the ecosystem.
 
+The governance model shall support both current and future business domains without requiring changes to the documentation operating framework.
+
 ---
 
-# 2. Problem Statement
+## 2. Problem Statement
 
 How should documentation be structured and governed across StarOne Galaxy to ensure:
 
@@ -66,7 +70,7 @@ while supporting both DHS and Bookshow domains under a common governance framewo
 
 ---
 
-# 3. Decision Drivers
+## 3. Decision Drivers
 
 | Driver | Priority |
 |----------|----------|
@@ -78,21 +82,22 @@ while supporting both DHS and Bookshow domains under a common governance framewo
 | Compliance | High |
 | Standardization | High |
 | Scalability | Medium |
+| Documentation-as-Code | Critical |
 
 ---
 
-# 4. Considered Options
+## 4. Considered Options
 
-## Option 1 – Team-Specific Documentation
+### Option 1 – Team-Specific Documentation
 
 Each team creates its own document formats and lifecycle.
 
-### Advantages (TSD)
+**Advantages**
 
 - Flexible
 - Fast initial creation
 
-### Disadvantages (TSD)
+**Disadvantages**
 
 - No consistency
 - Difficult audits
@@ -101,11 +106,11 @@ Each team creates its own document formats and lifecycle.
 
 ---
 
-## Option 2 – Standardized Documentation Governance
+### Option 2 – Standardized Documentation Governance
 
 All documentation follows a centrally governed lifecycle, template library, and traceability model.
 
-### Advantages (SDG)
+**Advantages**
 
 - Consistent structure
 - Easier reviews
@@ -113,22 +118,22 @@ All documentation follows a centrally governed lifecycle, template library, and 
 - Improved onboarding
 - Governance compliance
 
-### Disadvantages (SDG)
+**Disadvantages**
 
 - Additional governance controls
 - Requires template maintenance
 
 ---
 
-## Option 3 – Tool-Generated Documentation Only
+### Option 3 – Tool-Generated Documentation Only
 
 Generate architecture documents directly from tools and code.
 
-### Advantages (TGD)
+**Advantages**
 
 - Reduced manual effort
 
-### Disadvantages (TGD)
+**Disadvantages**
 
 - Limited business traceability
 - Weak governance controls
@@ -136,9 +141,11 @@ Generate architecture documents directly from tools and code.
 
 ---
 
-# 5. Decision
+## 5. Decision
 
-## Chosen Option
+The governance model shall remain product-agnostic and reusable across all current and future StarOne Galaxy domains.
+
+### Chosen Option
 
 **Option 2 – Standardized Documentation Governance**
 
@@ -154,35 +161,39 @@ All architecture and delivery artifacts shall follow the approved documentation 
 
 ---
 
-# 6. Documentation Lifecycle Model
+## 6. Documentation Lifecycle Model
 
-```text
-BRD
- ↓
-PRD
- ↓
-EPIC
- ↓
-STORY
- ↓
-FRD
- ↓
-HLD
- ↓
-SRS
- ↓
-LLD
- ↓
-RTM
- ↓
-TEST EXECUTION
+```mermaid
+flowchart TD
+
+BRD --> PRD
+
+PRD --> EPIC
+
+EPIC --> STORY
+
+STORY --> FRD
+
+FRD --> HLD
+
+HLD --> SRS
+
+SRS --> LLD
+
+LLD --> RTM
+
+RTM --> TEST
 ```
 
 Each artifact must reference its predecessor and successor where applicable.
 
 ---
 
-# 7. Approved Documentation Standards
+## 7. Approved Documentation Standards
+
+The approved template library represents the authoritative documentation baseline for the StarOne Galaxy ecosystem.
+
+Future templates require Architecture Review and ADR approval before adoption.
 
 The following templates are the official governance baseline.
 
@@ -207,9 +218,9 @@ No alternative template may be introduced without an approved ADR.
 
 ---
 
-# 8. Governance Requirements
+## 8. Governance Requirements
 
-## Revision Control
+### Revision Control
 
 Every document shall contain:
 
@@ -220,7 +231,7 @@ Every document shall contain:
 
 ---
 
-## Sign-Off Controls
+### Sign-Off Controls
 
 Every governed document shall contain:
 
@@ -230,7 +241,7 @@ Every governed document shall contain:
 
 ---
 
-## Traceability Controls
+### Traceability Controls
 
 All documents shall maintain traceability to upstream requirements.
 
@@ -256,7 +267,7 @@ LLD → RTM
 
 ---
 
-## Visual Standards
+### Visual Standards
 
 Approved visual notation:
 
@@ -270,41 +281,53 @@ Visual consistency is mandatory.
 
 ---
 
-# 9. Documentation Governance Principles
+## 9. Documentation Governance Principles
 
-## Principle 1
+### Principle 1
 
 Documentation is treated as code.
 
 ---
 
-## Principle 2
+### Principle 2
 
 Every architectural decision must be traceable.
 
 ---
 
-## Principle 3
+### Principle 3
 
 Templates are centrally governed.
 
 ---
 
-## Principle 4
+### Principle 4
 
 Documentation must be version controlled.
 
 ---
 
-## Principle 5
+### Principle 5
 
 Architecture artifacts are subject to review and approval.
 
 ---
 
-# 10. Consequences
+### Principle 6
 
-## Positive Consequences
+Documentation shall precede implementation for all governed initiatives.
+
+---
+
+### Principle 7
+
+Documentation governance shall support future domain expansion without requiring structural redesign.
+
+---
+
+## 10. Consequences
+
+### Positive Consequences
 
 - Consistent documentation structure
 - Improved onboarding
@@ -312,18 +335,21 @@ Architecture artifacts are subject to review and approval.
 - Strong requirement traceability
 - Reduced documentation drift
 - Easier governance automation
+- Consistent architecture review process
+- Improved cross-domain knowledge sharing
 
 ---
 
-## Negative Consequences
+### Negative Consequences
 
 - Additional review effort
 - Template maintenance overhead
 - Governance compliance enforcement required
+- Increased documentation effort during planning phases
 
 ---
 
-# 11. Compliance Impact
+## 11. Compliance Impact
 
 This decision supports:
 
@@ -333,10 +359,12 @@ This decision supports:
 - Architecture Governance
 - Traceability Compliance
 - Review Governance
+- Documentation Lifecycle Governance
+- Architecture Review Governance
 
 ---
 
-# 12. Traceability
+## 12. Traceability
 
 | Source | Reference |
 |----------|----------|
@@ -344,29 +372,53 @@ This decision supports:
 | Story | STORY-ARCH-004 |
 | Related ADR | ADR-001 Repository Taxonomy Governance |
 | Related ADR | ADR-003 Governance Enforcement Controls |
+| Source Story | STORY-ARCH-003 Documentation Standards |
 
 ---
 
-# 13. Implementation Guidance
+## 13. Implementation Guidance
 
 All future architecture and delivery artifacts must use approved governance templates.
 
 Template modifications require Architecture Review Board approval and must be recorded through an Architecture Decision Record.
 
+All newly introduced business domains shall adopt the approved documentation governance model and template library before delivery activities begin.
+
 ---
 
-# 14. References
+## 14. References
 
 - EPIC-ARCH-001 Ecosystem Design & Governance Baseline
 - STORY-ARCH-003 Documentation Standards
 - ADR-001 Repository Taxonomy Governance
 - ISO/IEC/IEEE 29148
 - IEEE 1016
+- BRD Template
+- PRD Template
+- FRD Template
+- HLD Template
+- SRS Template
+- LLD Template
+- RTM Template
+- ADR Template
+- README Templates
+- Mermaid Standards
 
 ---
 
-# ADR Outcome
+## ADR Outcome
 
 **Accepted**
 
-This ADR establishes the official documentation governance model for StarOne Galaxy and serves as the authoritative source for documentation structure, lifecycle, traceability, and standards compliance.
+This ADR establishes the official documentation governance model for the StarOne Galaxy ecosystem.
+
+The decision becomes the authoritative architectural baseline governing:
+
+- Documentation lifecycle management
+- Documentation-as-Code
+- Template governance
+- Architecture traceability
+- Review governance
+- Documentation compliance
+
+All future documentation standards shall align with this approved architecture decision unless superseded by a subsequent ADR.
