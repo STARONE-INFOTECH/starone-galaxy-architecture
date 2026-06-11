@@ -68,6 +68,14 @@ List impacted requirements
 
 ---
 
+### Requirements Impacted
+
+```text
+List impacted requirements
+```
+
+---
+
 ## Documentation Impact
 
 - [ ] No documentation changes required
@@ -110,6 +118,10 @@ Add validation details
 
 ## Governance Checklist
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
 ### Documentation[ ]
 
 - [ ] Documentation reviewed

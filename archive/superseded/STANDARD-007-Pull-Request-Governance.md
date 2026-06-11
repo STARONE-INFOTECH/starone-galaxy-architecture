@@ -4,6 +4,7 @@
 
 ## Title Page
 
+<<<<<<< HEAD
 | Field       | Value                            |
 | ----------- | -------------------------------- |
 | Standard ID | STANDARD-004                     |
@@ -13,6 +14,17 @@
 | Date        | Jan 2026                         |
 | Version     | 1.0                              |
 | Status      | Superseded                       |
+=======
+| Field | Value |
+|---|---|
+| Standard ID | STANDARD-004 |
+| Title | Pull Request Governance Standard |
+| Domain | Governance |
+| Author | Sachin Salunke |
+| Date | Jan 2026 |
+| Version | 1.0 |
+| Status | Superseded |
+>>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
 
 ---
 

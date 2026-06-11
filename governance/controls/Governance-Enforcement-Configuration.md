@@ -253,9 +253,15 @@ Repository names shall comply with STANDARD-007 Enterprise Naming Conventions.
 
 Approved naming patterns:
 
+<<<<<<< HEAD
 - starone-galaxy-\*
 - starone-dhs-\*
 - starone-bookshow-\*
+=======
+- starone-galaxy-*
+- starone-dhs-*
+- starone-bookshow-*
+>>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
 
 Non-compliant repositories shall not be onboarded into the governance model.
 
@@ -504,6 +510,7 @@ Status checks will be implemented through:
 
 # 10. Repository Applicability Matrix
 
+<<<<<<< HEAD
 | Repository                | Governance Model |
 | ------------------------- | ---------------- |
 | starone-galaxy-infra      | Full Enforcement |
@@ -512,6 +519,16 @@ Status checks will be implemented through:
 | starone-bookshow-gateway  | Full Enforcement |
 | starone-bookshow-services | Full Enforcement |
 | Shared Libraries          | Full Enforcement |
+=======
+| Repository | Governance Model |
+|----------|----------|
+| starone-galaxy-infra | Full Enforcement |
+| starone-galaxy-config | Full Enforcement |
+| starone-dhs-system | Full Enforcement |
+| starone-bookshow-gateway | Full Enforcement |
+| starone-bookshow-services | Full Enforcement |
+| Shared Libraries | Full Enforcement |
+>>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
 
 ---
 
