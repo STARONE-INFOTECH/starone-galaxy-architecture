@@ -58,7 +58,7 @@ This configuration applies to:
 - starone-galaxy-infra
 - starone-galaxy-config
 - starone-dhs-system
-- bookshow-system repositories
+- starone-bookshow-system
 - Shared libraries
 - Platform repositories
 - Future StarOne Galaxy repositories
@@ -136,7 +136,7 @@ Approved naming patterns:
 ```text
 starone-galaxy-*
 starone-dhs-*
-bookshow-*
+starone-bookshow-*
 ```
 
 Repositories that do not comply with approved naming conventions shall not be onboarded into the StarOne Galaxy governance model.
@@ -257,7 +257,7 @@ Approved naming patterns:
 
 - starone-galaxy-*
 - starone-dhs-*
-- bookshow-*
+- starone-bookshow-*
 
 Non-compliant repositories shall not be onboarded into the governance model.
 
@@ -511,8 +511,8 @@ Status checks will be implemented through:
 | starone-galaxy-infra | Full Enforcement |
 | starone-galaxy-config | Full Enforcement |
 | starone-dhs-system | Full Enforcement |
-| bookshow-gateway | Full Enforcement |
-| bookshow-services | Full Enforcement |
+| starone-bookshow-gateway | Full Enforcement |
+| starone-bookshow-services | Full Enforcement |
 | Shared Libraries | Full Enforcement |
 
 ---

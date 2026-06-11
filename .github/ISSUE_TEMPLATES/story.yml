@@ -1,0 +1,147 @@
+name: Story
+description: Create a new Story work item
+title: "[STORY] "
+labels:
+  - type:story
+body:
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Describe the business or architecture capability to be delivered.
+      placeholder: Describe the objective of this story.
+    validations:
+      required: true
+
+  - type: input
+    id: epic
+    attributes:
+      label: Epic Reference
+      placeholder: EPIC-ARCH-001
+    validations:
+      required: true
+
+  - type: input
+    id: story-name
+    attributes:
+      label: Story Name
+      placeholder: STORY-ARCH-XXX
+    validations:
+      required: true
+
+  - type: input
+    id: labels
+    attributes:
+      label: Additional Labels
+      placeholder: governance, architecture
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Draft
+        - Ready for Implementation
+        - In Progress
+        - Review
+        - Completed
+    validations:
+      required: true
+
+  - type: input
+    id: area
+    attributes:
+      label: Area
+      placeholder: governance | architecture | platform | security
+    validations:
+      required: true
+
+  - type: input
+    id: owner
+    attributes:
+      label: Owner (Optional)
+      placeholder: sachin-salunke
+    validations:
+      required: false
+
+  - type: textarea
+    id: business-value
+    attributes:
+      label: Business Value
+      description: Explain why this capability is required.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Define what is included and excluded.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Use Given / When / Then format.
+      value: |
+        Given
+
+        When
+
+        Then
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+      value: |
+        - [ ] Scope implemented
+        - [ ] Documentation updated
+        - [ ] Traceability updated
+        - [ ] Validation completed
+        - [ ] Review completed
+        - [ ] Governance checklist satisfied
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverables
+    attributes:
+      label: Deliverables
+      description: List expected outputs of this story.
+    validations:
+      required: true
+
+  - type: textarea
+    id: traceability
+    attributes:
+      label: Traceability
+      value: |
+        Epic Reference:
+        Requirement Reference:
+        Deliverable Reference:
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and Dependencies
+      description: List risks, assumptions, and dependencies.

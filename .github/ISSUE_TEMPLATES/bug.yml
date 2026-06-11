@@ -1,0 +1,190 @@
+name: Bug
+description: Report a defect or issue
+title: "[BUG] "
+labels:
+  - type:bug
+
+body:
+
+  - type: input
+    id: epic
+    attributes:
+      label: Epic Reference
+      placeholder: EPIC-ARCH-001
+    validations:
+      required: true
+
+  - type: input
+    id: related-story
+    attributes:
+      label: Related Story Reference (Optional)
+      placeholder: STORY-ARCH-005
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Draft
+        - Ready for Investigation
+        - In Progress
+        - Review
+        - Resolved
+        - Closed
+    validations:
+      required: true
+
+  - type: input
+    id: area
+    attributes:
+      label: Area
+      placeholder: governance | architecture | platform | security
+    validations:
+      required: true
+
+  - type: input
+    id: owner
+    attributes:
+      label: Owner (Optional)
+      placeholder: sachin-salunke
+    validations:
+      required: false
+
+  - type: input
+    id: labels
+    attributes:
+      label: Additional Labels (Optional)
+      placeholder: defect, production, regression
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: Provide a concise description of the defect.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Describe the environment where the defect occurs.
+      placeholder: |
+        Environment:
+        Application:
+        Version:
+        Browser:
+        OS:
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide steps required to reproduce the defect.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Assessment
+      description: Describe business, operational, or technical impact.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Use Given / When / Then format.
+      value: |
+        Given
+
+        When
+
+        Then
+    validations:
+      required: true
+
+  - type: textarea
+    id: definition-of-done
+    attributes:
+      label: Definition of Done
+      value: |
+        - [ ] Root cause identified
+        - [ ] Fix implemented
+        - [ ] Documentation updated
+        - [ ] Traceability updated
+        - [ ] Validation completed
+        - [ ] Review completed
+        - [ ] Governance checklist satisfied
+    validations:
+      required: true
+
+  - type: textarea
+    id: traceability
+    attributes:
+      label: Traceability
+      value: |
+        Epic Reference:
+        Story Reference:
+        Requirement Reference:
+        Deliverable Reference:
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and Risks
+      description: List dependencies, assumptions, blockers, and risks.
+    validations:
+      required: false
