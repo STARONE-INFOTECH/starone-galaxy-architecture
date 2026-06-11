@@ -1,5 +1,33 @@
 # Pull Request Summary
 
+## Linked Artifacts
+
+| Type | Reference |
+|---|---|
+| Epic | |
+| Story | |
+| Issue | |
+| Related Standard | |
+| Related ADR | |
+
+---
+
+## Governance Traceability
+
+| Requirement | Status |
+|---|---|
+| Refer to linked Issue Requirements | Implemented |
+
+---
+
+| Role | Status |
+|---|---|
+| Platform Architect | |
+| Security Review | Deferred (Solo Contributor Mode) |
+| DevOps Governance | Deferred (Solo Contributor Mode) |
+
+---
+
 ## Description
 
 Provide a concise summary of the change.
@@ -63,7 +91,7 @@ Add validation details
 
 ## Governance Checklist
 
-### Traceability[ ]
+### Traceability
 
 - [ ] Epic linked
 - [ ] Story linked
