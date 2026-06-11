@@ -89,13 +89,32 @@ Add validation details
 
 ---
 
+## Merge Readiness Verification
+
+- [ ] Required approvals obtained
+- [ ] CODEOWNER approval obtained
+- [ ] No unresolved review comments
+- [ ] Documentation updated
+- [ ] Governance checklist completed
+- [ ] Validation completed
+
+---
+
 ## Governance Checklist
 
-### Traceability Check[ ]
+### Traceability
 
-- [ ] Epic linked
-- [ ] Story linked
-- [ ] Issue linked
+| Type | Reference |
+|---|---|
+| Epic | |
+| Story | |
+| Issue | |
+
+### Requirements Impacted
+
+```text
+List impacted requirements
+```
 
 ### Documentation[ ]
 
