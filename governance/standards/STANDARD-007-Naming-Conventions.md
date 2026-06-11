@@ -336,7 +336,7 @@ Deviation from standards requires Platform Architect approval.
 
 ## Documentation Template Baseline
 
-### Purpose
+### Template Purpose
 
 The StarOne Galaxy ecosystem maintains a standardized documentation template baseline to ensure consistency, traceability, governance compliance, and document quality.
 
@@ -369,7 +369,7 @@ README_MS_Template.md
 
 ---
 
-### Governance Rules
+### Template Governance Rules
 
 - All new documents must originate from approved templates.
 - Template modifications require Platform Architect approval.
