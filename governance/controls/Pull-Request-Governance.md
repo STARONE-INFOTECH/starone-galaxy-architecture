@@ -56,7 +56,7 @@ This governance model applies to:
 - starone-galaxy-infra
 - starone-galaxy-config
 - starone-dhs-system
-- bookshow-* repositories
+- starone-bookshow-system
 - Shared libraries
 - Platform repositories
 - Future StarOne Galaxy repositories

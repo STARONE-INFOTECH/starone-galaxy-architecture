@@ -60,6 +60,14 @@ List the primary changes included in this pull request.
 
 ---
 
+### Requirements Impacted
+
+```text
+List impacted requirements
+```
+
+---
+
 ## Documentation Impact
 
 - [ ] No documentation changes required
@@ -102,19 +110,6 @@ Add validation details
 
 ## Governance Checklist
 
-### Traceability
-
-| Type | Reference |
-|---|---|
-| Epic | |
-| Story | |
-| Issue | |
-
-### Requirements Impacted
-
-```text
-List impacted requirements
-```
 
 ### Documentation[ ]
 

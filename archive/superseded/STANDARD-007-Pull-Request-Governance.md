@@ -12,7 +12,7 @@
 | Author | Sachin Salunke |
 | Date | Jan 2026 |
 | Version | 1.0 |
-| Status | Draft |
+| Status | Superseded |
 
 ---
 
