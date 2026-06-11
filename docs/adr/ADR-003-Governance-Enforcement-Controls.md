@@ -1,4 +1,4 @@
-# ADR-003: Governance Enforcement Controls
+## ADR-003: Governance Enforcement Controls
 
 | Field | Value |
 |---------|---------|
@@ -13,16 +13,17 @@
 
 ---
 
-# Revision History
+## Revision History
 
 | Version | Date | Author | Description |
 |---------|---------|---------|---------|
 | 1.0 | Jan 2026 | Sachin Salunke | Initial ADR |
 | 1.1 | Jan 2026 | Architecture Governance Board | Governance Enforcement Approved |
+| 1.2 | Jan 2026 | Sachin Salunke | Governance Enforcement Model Refinements |
 
 ---
 
-# Sign-Off
+## Sign-Off
 
 | Role | Status |
 |---------|---------|
@@ -32,7 +33,7 @@
 
 ---
 
-# 1. Context
+## 1. Context
 
 StarOne Galaxy has established:
 
@@ -55,9 +56,11 @@ Without automated enforcement:
 
 A formal governance enforcement model is required to ensure standards are consistently applied across all repositories.
 
+The governance model shall support both current and future StarOne Galaxy domains while maintaining consistent governance controls across the ecosystem.
+
 ---
 
-# 2. Problem Statement
+## 2. Problem Statement
 
 How should governance controls be enforced across the StarOne Galaxy ecosystem to ensure:
 
@@ -72,7 +75,7 @@ without relying solely on manual reviews?
 
 ---
 
-# 3. Decision Drivers
+## 3. Decision Drivers
 
 | Driver | Priority |
 |----------|----------|
@@ -84,74 +87,83 @@ without relying solely on manual reviews?
 | Consistency | High |
 | Auditability | High |
 | Developer Experience | Medium |
+| Auditability | Critical |
+| Governance-as-Code | High |
 
 ---
 
-# 4. Considered Options
+## 4. Considered Options
 
-## Option 1 – Manual Governance Reviews
+### Option 1 – Manual Governance Reviews
 
 All governance controls enforced through human review.
 
-### Advantages (MGR)
+**Advantages**
 
 - Simple implementation
 - No automation overhead
 
-### Disadvantages (MGR)
+**Disadvantages**
 
 - Human error
 - Inconsistent enforcement
 - Poor scalability
 - Slower delivery
 
+**Decision Outcome**: Rejected
 ---
 
-## Option 2 – Fully Automated Governance Controls
+### Option 2 – Fully Automated Governance Controls
 
 Governance enforced through automated workflows, repository controls, and validation pipelines.
 
-### Advantages (FAGC)
+**Advantages**
 
 - Consistent enforcement
 - Faster feedback
 - Better scalability
 - Reduced governance drift
 
-### Disadvantages (FAGC)
+**Disadvantages**
 
 - Workflow maintenance required
 - Initial implementation effort
 
+**Decision Outcome**: Rejected
 ---
 
-## Option 3 – Hybrid Governance Model
+### Option 3 – Hybrid Governance Model
 
 Critical controls automated.
 
 Architectural decisions remain human-reviewed.
 
-### Advantages (HGM)
+**Advantages**
 
 - Strong governance
 - Human oversight for strategic decisions
 - Scalable enforcement
 
-### Disadvantages (HGM)
+**Disadvantages**
 
 - More governance design required
 
+**Decision Outcome**: Selected
 ---
 
-# 5. Decision
+## 5. Decision
 
-## Chosen Option
+Governance automation shall support governance decisions but shall not replace human architectural authority.
+
+Strategic governance decisions remain human-owned and subject to formal review and approval processes.
+
+### Chosen Option
 
 **Option 3 – Hybrid Governance Model**
 
 StarOne Galaxy shall adopt a hybrid governance approach:
 
-### Automated Controls
+#### Automated Controls
 
 - Documentation Validation
 - Security Validation
@@ -159,7 +171,7 @@ StarOne Galaxy shall adopt a hybrid governance approach:
 - Commit Validation
 - Repository Governance Validation
 
-### Human Controls
+#### Human Controls
 
 - Architecture Reviews
 - ADR Approvals
@@ -168,169 +180,182 @@ StarOne Galaxy shall adopt a hybrid governance approach:
 
 ---
 
-# 6. Governance Enforcement Model
+## 6. Governance Enforcement Model
 
-```text
-Governance Definition
-        ↓
-Governance Validation
-        ↓
-Automated Enforcement
-        ↓
-Review Controls
-        ↓
-Approval Controls
-        ↓
-Protected Merge
+```mermaid
+flowchart TD
+
+STD[Standards]
+
+ADR[Architecture Decisions]
+
+REVIEW[Human Review]
+
+VALIDATION[Governance Validation]
+
+CONTROL[Compliance Controls]
+
+STD --> REVIEW
+ADR --> REVIEW
+
+REVIEW --> VALIDATION
+
+VALIDATION --> CONTROL
 ```
 
 ---
 
-# 7. Governance Control Categories
+## 7. Governance Control Categories
 
-## Repository Governance
+### Repository Governance
 
-Controls:
+**Purpose**
 
-- CODEOWNERS
-- Repository Standards
-- Ownership Validation
+Ensure repository ownership, governance consistency, lifecycle management, and adherence to approved repository standards across the StarOne Galaxy ecosystem.
 
 ---
 
-## Pull Request Governance
+### Change Governance
 
-Controls:
+**Purpose**
 
-- PR Templates
-- Approval Requirements
-- Traceability References
+Ensure all changes to governed assets are reviewed, approved, traceable, and aligned with approved governance standards.
 
 ---
 
-## Issue Governance
+### Documentation Governance
 
-Controls:
+**Purpose**
 
-- Standardized Issue Forms
-- Metadata Validation
-- Acceptance Criteria Enforcement
+Ensure documentation quality, traceability, lifecycle compliance, and adherence to approved documentation standards.
 
 ---
 
-## Documentation Governance
+### Architecture Governance
 
-Controls:
+**Purpose**
 
-- Markdown Validation
-- Link Validation
-- Template Compliance
+Ensure architecture decisions, standards, designs, and governance artifacts remain consistent, reviewable, and aligned with approved architectural principles.
 
 ---
 
-## Visual Governance
+### Compliance Governance
 
-Controls:
+**Purpose**
 
-- Mermaid Validation
-- Diagram Compliance
-
----
-
-## Security Governance
-
-Controls:
-
-- Dependency Scanning
-- Secret Detection
-- Workflow Security Validation
+Ensure compliance obligations, governance requirements, traceability requirements, and review controls are consistently enforced across all domains.
 
 ---
 
-## Commit Governance
+### Security Governance
 
-Controls:
+**Purpose**
 
-- Conventional Commit Validation
-- Branch Policy Validation
-
----
-
-# 8. Repository Protection Strategy
-
-Protected branches shall require:
-
-```text
-Successful Validation Checks
-
-Required Reviewers
-
-CODEOWNERS Approval
-
-Security Validation
-
-Governance Validation
-```
-
-No direct commits shall be permitted to protected branches.
+Protect governance assets, architectural integrity, and ecosystem operations through approved security governance controls.
 
 ---
 
-# 9. Automation Standards
+### Review Governance
 
-The preferred enforcement mechanism shall be:
+**Purpose**
 
-```text
-GitHub Actions
-```
-
-Reusable workflows shall be used wherever possible.
-
-Governance logic shall not be duplicated across repositories.
+Ensure governance reviews, architecture reviews, approvals, and exception handling processes are consistently applied.
 
 ---
 
-# 10. Governance Principles
+### Automation Governance
 
-## Principle 1
+**Purpose**
+
+Provide a scalable governance model that supports automated validation, compliance verification, and governance enforcement while maintaining human oversight for strategic decisions.
+
+---
+
+## 8. Repository Protection Strategy
+
+Protected governance assets shall be subject to governance controls before modification.
+
+Examples include:
+
+- Architecture Decisions
+- Standards
+- Templates
+- Governance Workflows
+- Repository Governance Assets
+- Security Governance Assets
+
+Governance controls shall prevent unauthorized modification and ensure review accountability.
+
+---
+
+## 9. Governance Automation Principles
+
+Governance validation should be automated where practical.
+
+Automation mechanisms shall:
+
+- Improve governance consistency
+- Reduce governance drift
+- Improve auditability
+- Support compliance validation
+
+Technology selections and implementation approaches are outside the scope of this ADR.
+
+---
+
+## 10. Governance Principles
+
+### Principle 1
 
 Governance is enforced by default.
 
 ---
 
-## Principle 2
+### Principle 2
 
 Compliance validation occurs before merge.
 
 ---
 
-## Principle 3
+### Principle 3
 
 Security validation is mandatory.
 
 ---
 
-## Principle 4
+### Principle 4
 
 Traceability is mandatory.
 
 ---
 
-## Principle 5
+### Principle 5
 
 Reusable workflows are preferred over duplicated logic.
 
 ---
 
-## Principle 6
+### Principle 6
 
 Human review remains required for architectural decisions.
 
 ---
 
-# 11. Consequences
+### Principle 7
 
-## Positive Consequences
+Governance controls shall support future domain expansion without requiring redesign of the governance model.
+
+---
+
+### Principle 8
+
+Governance exceptions require formal architectural approval.
+
+---
+
+## 11. Consequences
+
+### Positive Consequences
 
 - Reduced governance drift
 - Consistent standards adoption
@@ -338,18 +363,21 @@ Human review remains required for architectural decisions.
 - Better audit readiness
 - Faster compliance validation
 - Improved scalability
+- Foundation for governance automation initiatives
+- Improved governance auditability
 
 ---
 
-## Negative Consequences
+### Negative Consequences
 
 - Workflow maintenance required
 - Governance exceptions require formal review
 - Additional CI execution time
+- Governance tooling investment required
 
 ---
 
-# 12. Compliance Impact
+## 12. Compliance Impact
 
 This decision supports:
 
@@ -359,10 +387,12 @@ This decision supports:
 - Documentation-as-Code
 - Secure SDLC
 - Audit Readiness
+- Governance Review Controls
+- Compliance Validation Governance
 
 ---
 
-# 13. Traceability
+## 13. Traceability
 
 | Source | Reference |
 |----------|----------|
@@ -370,23 +400,26 @@ This decision supports:
 | Story | STORY-ARCH-004 |
 | Related ADR | ADR-001 Repository Taxonomy Governance |
 | Related ADR | ADR-002 Documentation Standards Governance |
+| Source Story | STORY-ARCH-001 Repository Scaffolding |
+| Source Story | STORY-ARCH-002 Global Ecosystem README |
+| Source Story | STORY-ARCH-003 Documentation Standards |
 
 ---
 
-# 14. Future Impact
+## 14. Future Impact
 
 This ADR authorizes future governance automation initiatives including:
 
-- Governance Validation Pipelines
-- Repository Protection Controls
-- Security Validation Workflows
-- Reusable Governance Workflows
+- Future governance automation initiatives.
+- Future compliance validation capabilities.
+- Future repository protection mechanisms.
+- Future governance operational controls.
 
 This ADR serves as the architectural foundation for Engineering Governance Automation.
 
 ---
 
-# 15. References
+## 15. References
 
 - EPIC-ARCH-001 Ecosystem Design & Governance Baseline
 - STORY-ARCH-001 Repository Scaffolding
@@ -395,11 +428,24 @@ This ADR serves as the architectural foundation for Engineering Governance Autom
 - ADR-001 Repository Taxonomy Governance
 - ADR-002 Documentation Standards Governance
 - GitHub Governance Best Practices
+- STANDARD-006 CODEOWNERS Governance
+- STANDARD-007 Enterprise Naming Conventions
+- STANDARD-008 Contribution Governance
 
 ---
 
-# ADR Outcome
+## ADR Outcome
 
 **Accepted**
 
-This ADR establishes the governance enforcement strategy for StarOne Galaxy and defines how governance controls shall be validated, enforced, and maintained across the ecosystem through a combination of automated controls and human oversight.
+This ADR establishes the official governance enforcement strategy for the StarOne Galaxy ecosystem.
+
+The decision becomes the authoritative architectural baseline governing:
+
+- Governance enforcement
+- Compliance validation
+- Governance protection controls
+- Governance automation principles
+- Governance review accountability
+
+All future governance automation initiatives shall align with this approved architecture decision unless superseded by a subsequent ADR.
