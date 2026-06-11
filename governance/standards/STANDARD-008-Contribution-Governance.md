@@ -170,7 +170,7 @@ The governance model defined by this standard represents the target-state operat
 
 # Approval Governance
 
-## Target-State
+**Target-State**
 
 Mandatory requirements:
 
@@ -178,7 +178,7 @@ Mandatory requirements:
 - CODEOWNER approval
 - All required governance checks passing
 
-## Solo Contributor Mode
+**Solo Contributor Mode**
 
 Mandatory requirements:
 
@@ -203,7 +203,7 @@ Work shall begin only when:
 
 # Definition of Done
 
-## Target-State
+**Target-State**
 
 Contribution is complete when:
 
@@ -214,7 +214,7 @@ Contribution is complete when:
 - Traceability updated
 - Pull Request merged
 
-## Solo Contributor Mode
+**Solo Contributor Mode**
 
 Contribution is complete when:
 

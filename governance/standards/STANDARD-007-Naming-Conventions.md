@@ -86,13 +86,13 @@ Applies to:
 
 # Repository Naming Standard
 
-## Repository Naming Pattern
+**Pattern**
 
 ```text
 starone-{domain}-{type}
 ```
 
-## Examples
+**Examples**
 
 ```text
 starone-galaxy-infra
@@ -102,7 +102,7 @@ starone-dhs-system
 starone-bookshow-system
 ```
 
-## Rules
+**Rules**
 
 - lowercase only
 - kebab-case only
@@ -115,13 +115,13 @@ starone-bookshow-system
 
 # Documentation Artifact Naming
 
-## Pattern
+**Pattern**
 
 ```text
 {TYPE}-{NUMBER}-{Title}.md
 ```
 
-## Examples
+**Examples**
 
 ```text
 ADR-001-Repository-Taxonomy.md
@@ -150,9 +150,9 @@ STANDARD-007-Naming-Conventions.md
 
 ---
 
-# Branch Naming Standard
+## Branch Naming Standard
 
-## Pattern
+**Pattern**
 
 ```text
 feature/<name>
@@ -160,7 +160,7 @@ hotfix/<name>
 release/<version>
 ```
 
-## Examples
+**Examples**
 
 ```text
 feature/s1-i04-naming-standards
@@ -169,7 +169,7 @@ hotfix/fix-rttm-linkage
 release/v1.0.0
 ```
 
-## Rules
+**Rules**
 
 - lowercase only
 - kebab-case only
@@ -179,15 +179,15 @@ release/v1.0.0
 
 ---
 
-# GitHub Workflow Naming Standard
+## GitHub Workflow Naming Standard
 
-## Pattern
+**Pattern**
 
 ```text
 domain-purpose.yml
 ```
 
-## Examples
+**Examples**
 
 ```text
 doc-validation.yml
@@ -197,7 +197,7 @@ lint-standards.yml
 governance-validation.yml
 ```
 
-## Rules
+**Rules**
 
 - purpose-driven names
 - no generic names such as build.yml
@@ -206,15 +206,15 @@ governance-validation.yml
 
 ---
 
-# Service Naming Standard
+## Service Naming Standard
 
-## Pattern
+**Pattern**
 
 ```text
 <domain>-<capability>-service
 ```
 
-## Examples
+**Examples**
 
 ```text
 dhs-order-service
@@ -224,15 +224,15 @@ bookshow-booking-service
 
 ---
 
-# Java Package Naming Standard
+## Java Package Naming Standard
 
-## Pattern
+**Pattern**
 
 ```text
 com.starone.<domain>.<service>
 ```
 
-## Examples
+**Examples**
 
 ```text
 com.starone.dhs.billing
@@ -241,15 +241,15 @@ com.starone.bookshow.booking
 
 ---
 
-# Kafka Topic Naming Standard
+## Kafka Topic Naming Standard
 
-## Pattern
+**Pattern**
 
 ```text
 <domain>.<entity>.<event>
 ```
 
-## Examples
+**Examples**
 
 ```text
 dhs.order.created
@@ -259,15 +259,15 @@ bookshow.booking.confirmed
 
 ---
 
-# Configuration Key Naming Standard
+## Configuration Key Naming Standard
 
-## Pattern
+**Pattern**
 
 ```text
 domain.service.property
 ```
 
-## Example
+**Example**
 
 ```text
 dhs.billing.retry.maxAttempts
@@ -275,7 +275,7 @@ dhs.billing.retry.maxAttempts
 
 ---
 
-# Naming Rules Matrix
+## Naming Rules Matrix
 
 | Asset | Convention |
 |---|---|
@@ -289,9 +289,9 @@ dhs.billing.retry.maxAttempts
 
 ---
 
-# Reserved Prefixes
+## Reserved Prefixes
 
-## Approved Repository Prefixes
+### Approved Repository Prefixes
 
 ```text
 starone-
@@ -299,7 +299,7 @@ dhs-
 bookshow-
 ```
 
-## Reserved Document Prefixes
+### Reserved Document Prefixes
 
 ```text
 ADR
@@ -320,7 +320,7 @@ No ad-hoc prefixes permitted.
 
 ---
 
-# Governance Rules
+## Governance Rules
 
 Mandatory requirements:
 
@@ -334,9 +334,9 @@ Deviation from standards requires Platform Architect approval.
 
 ---
 
-# Documentation Template Baseline
+## Documentation Template Baseline
 
-## Purpose
+### Template Purpose
 
 The StarOne Galaxy ecosystem maintains a standardized documentation template baseline to ensure consistency, traceability, governance compliance, and document quality.
 
@@ -344,7 +344,7 @@ All documentation artifacts shall be created using approved templates.
 
 ---
 
-## Template Repository Location
+### Template Repository Location
 
 ```text
 docs/templates/
@@ -352,7 +352,7 @@ docs/templates/
 
 ---
 
-## Approved Templates
+### Approved Templates
 
 ```text
 ADR_Template.md
@@ -369,7 +369,7 @@ README_MS_Template.md
 
 ---
 
-## Governance Rules
+### Template Governance Rules
 
 - All new documents must originate from approved templates.
 - Template modifications require Platform Architect approval.
@@ -380,7 +380,7 @@ README_MS_Template.md
 
 ---
 
-## Template Ownership Matrix
+### Template Ownership Matrix
 
 | Template Type | Governance Owner |
 |---|---|
@@ -391,7 +391,7 @@ README_MS_Template.md
 
 ---
 
-# Validation Requirements
+## Validation Requirements
 
 The following validations may be automated in future CI/CD pipelines:
 
@@ -404,9 +404,9 @@ The following validations may be automated in future CI/CD pipelines:
 
 ---
 
-# Compliance Examples
+## Compliance Examples
 
-## Valid
+### Valid
 
 ```text
 ADR-001-Repository-Taxonomy.md
@@ -415,7 +415,7 @@ dhs-order-service
 dhs.order.created
 ```
 
-## Invalid
+### Invalid
 
 ```text
 repo_final
@@ -426,7 +426,7 @@ orderservice
 
 ---
 
-# Future Governance Automation
+## Future Governance Automation
 
 Future controls may include:
 
@@ -439,7 +439,7 @@ Future controls may include:
 
 ---
 
-# Related Standards
+## Related Standards
 
 | Standard | Purpose |
 |---|---|
@@ -451,7 +451,7 @@ Future controls may include:
 
 ---
 
-# Requirement Traceability Matrix (RTM)
+## Requirement Traceability Matrix (RTM)
 
 | Requirement ID | Requirement Description | Coverage Section |
 |---|---|---|
@@ -462,7 +462,7 @@ Coverage Status: Complete
 
 ---
 
-# Traceability
+## Traceability
 
 | Epic | Story | Issue | Requirement |
 |---|---|---|---|
@@ -473,7 +473,7 @@ Coverage: 100%
 
 ---
 
-# Approval
+## Approval
 
 | Role | Status |
 |---|---|
