@@ -111,6 +111,7 @@ All governance controls enforced through human review.
 - Slower delivery
 
 **Decision Outcome**: Rejected
+
 ---
 
 ### Option 2 – Fully Automated Governance Controls
@@ -130,6 +131,7 @@ Governance enforced through automated workflows, repository controls, and valida
 - Initial implementation effort
 
 **Decision Outcome**: Rejected
+
 ---
 
 ### Option 3 – Hybrid Governance Model
@@ -149,6 +151,7 @@ Architectural decisions remain human-reviewed.
 - More governance design required
 
 **Decision Outcome**: Selected
+
 ---
 
 ## 5. Decision
