@@ -443,8 +443,8 @@ Future controls may include:
 
 | Standard | Purpose |
 |---|---|
-| STANDARD-002 | Contribution Governance |
-| STANDARD-003 | CODEOWNERS Governance |
+| STANDARD-006 | CODEOWNERS Governance |
+| STANDARD-008 | Contribution Governance |
 | CONTRIBUTING.md | Contribution Governance |
 | ADR-001 | Repository Taxonomy Decision |
 | HLD-001 | Platform Architecture Baseline |
