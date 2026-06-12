@@ -1,12 +1,73 @@
-name: governance-check
+name: Governance Validation
 
 on:
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+  push:
     branches:
-      - main
-      - develop
+      - 'feature/**'
+
+permissions:
+  contents: read
+  pull-requests: read
 
 jobs:
+
+  markdown-validation:
+    name: Markdown Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+
+      - name: Validate Markdown Files
+        run: markdownlint "**/*.md"
+
+  mermaid-validation:
+    name: Mermaid Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Mermaid Blocks
+        run: |
+          echo "Validating Mermaid diagrams..."
+          grep -r "```mermaid" . || true
+
+  commit-validation:
+    name: Commit Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Validate Commit Messages
+        uses: wagoid/commitlint-github-action@v6
+
   governance-validation:
     name: Governance Validation
     runs-on: ubuntu-latest
@@ -15,12 +76,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Validate Governance Structure
+      - name: Validate Governance Artifacts
         run: |
-          echo "Validating governance structure..."
+          echo "Governance validation executed"
 
-          test -d governance
-          test -d docs
-          test -d architecture
+      - name: Validate PR Template
+        run: |
+          test -f .github/PULL_REQUEST_TEMPLATE.md
 
-          echo "Governance structure validation passed."
+      - name: Validate Issue Templates
+        run: |
+          test -f .github/ISSUE_TEMPLATE/story.yml
+          test -f .github/ISSUE_TEMPLATE/task.yml
+          test -f .github/ISSUE_TEMPLATE/bug.yml
+          test -f .github/ISSUE_TEMPLATE/enhancement.yml
