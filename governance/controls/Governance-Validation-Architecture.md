@@ -4,6 +4,7 @@
 
 ## Title Page
 
+<<<<<<< HEAD
 | Field         | Value                                                |
 | ------------- | ---------------------------------------------------- |
 | Document ID   | GOV-VAL-001                                          |
@@ -16,24 +17,52 @@
 | Date          | 2026                                                 |
 | Version       | 1.0                                                  |
 | Status        | Draft                                                |
+=======
+| Field | Value |
+|---|---|
+| Document ID | GOV-VAL-001 |
+| Document Name | Governance Validation Architecture |
+| Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
+| Story | STORY-ARCH-005 Engineering Governance Automation |
+| Issue | S5-I04 Governance Validation Pipeline |
+| Domain | Governance Automation |
+| Author | Sachin Salunke |
+| Date | 2026 |
+| Version | 1.0 |
+| Status | Draft |
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
 
 ---
 
 # Revision History
 
+<<<<<<< HEAD
 | Version | Date | Author         | Description                                |
 | ------- | ---- | -------------- | ------------------------------------------ |
 | 1.0     | 2026 | Sachin Salunke | Initial Governance Validation Architecture |
+=======
+| Version | Date | Author | Description |
+|---|---|---|---|
+| 1.0 | 2026 | Sachin Salunke | Initial Governance Validation Architecture |
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
 
 ---
 
 # Sign-Off Table
 
+<<<<<<< HEAD
 | Role               | Status  |
 | ------------------ | ------- |
 | Platform Architect | Pending |
 | Security Review    | Pending |
 | DevOps Governance  | Pending |
+=======
+| Role | Status |
+|---|---|
+| Platform Architect | Pending |
+| Security Review | Pending |
+| DevOps Governance | Pending |
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
 
 ---
 
@@ -78,7 +107,11 @@ The following capabilities are governed through separate issues:
 - starone-galaxy-infra
 - starone-galaxy-config
 - starone-dhs-system
+<<<<<<< HEAD
 - bookshow-\* repositories
+=======
+- bookshow-* repositories
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
 - Shared libraries
 - Platform repositories
 
@@ -346,11 +379,19 @@ Issue and pull request templates shall comply with governance standards.
 
 The Governance Validation Pipeline shall consist of the following workflow jobs:
 
+<<<<<<< HEAD
 | Job                   | Purpose                                                      |
 | --------------------- | ------------------------------------------------------------ |
 | markdown-validation   | Validate markdown syntax and documentation quality           |
 | mermaid-validation    | Validate Mermaid diagram syntax and rendering compatibility  |
 | commit-validation     | Validate Conventional Commit compliance                      |
+=======
+| Job | Purpose |
+|------|------|
+| markdown-validation | Validate markdown syntax and documentation quality |
+| mermaid-validation | Validate Mermaid diagram syntax and rendering compatibility |
+| commit-validation | Validate Conventional Commit compliance |
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
 | governance-validation | Validate governance compliance and traceability requirements |
 
 ---
@@ -432,6 +473,7 @@ governance-validation
 
 # 10. Validation Control Matrix
 
+<<<<<<< HEAD
 | Validation Area       | Mandatory |
 | --------------------- | --------- |
 | Markdown Lint         | Yes       |
@@ -439,6 +481,15 @@ governance-validation
 | Commit Validation     | Yes       |
 | Governance Compliance | Yes       |
 | Metadata Validation   | Yes       |
+=======
+| Validation Area | Mandatory |
+|---|---|
+| Markdown Lint | Yes |
+| Mermaid Validation | Yes |
+| Commit Validation | Yes |
+| Governance Compliance | Yes |
+| Metadata Validation | Yes |
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
 
 ---
 
@@ -471,11 +522,19 @@ Remediation Required
 
 ## Failure Categories
 
+<<<<<<< HEAD
 | Category           | Action                      |
 | ------------------ | --------------------------- |
 | Markdown Failure   | Fix documentation           |
 | Mermaid Failure    | Fix diagram syntax          |
 | Commit Failure     | Correct commit message      |
+=======
+| Category | Action |
+|---|---|
+| Markdown Failure | Fix documentation |
+| Mermaid Failure | Fix diagram syntax |
+| Commit Failure | Correct commit message |
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
 | Governance Failure | Correct governance metadata |
 
 ---
@@ -520,6 +579,7 @@ A pull request is governance compliant only when all validation checks pass succ
 
 # 13. Requirement Traceability Matrix (RTM)
 
+<<<<<<< HEAD
 | Requirement ID | Requirement                                          | Coverage Section |
 | -------------- | ---------------------------------------------------- | ---------------- |
 | S5-I04-FR1     | Governance validation workflow shall be implemented  | Sections 3, 9    |
@@ -528,6 +588,16 @@ A pull request is governance compliant only when all validation checks pass succ
 | S5-I04-FR4     | Conventional commit validation shall be enforced     | Section 7        |
 | S5-I04-FR5     | Validation results shall be visible in pull requests | Sections 9, 12   |
 | S5-I04-FR6     | Governance failures shall block merge readiness      | Sections 10, 11  |
+=======
+| Requirement ID | Requirement | Coverage Section |
+|---|---|---|
+| S5-I04-FR1 | Governance validation workflow shall be implemented | Sections 3, 9 |
+| S5-I04-FR2 | Markdown linting shall be automated | Section 5 |
+| S5-I04-FR3 | Mermaid diagram validation shall be automated | Section 6 |
+| S5-I04-FR4 | Conventional commit validation shall be enforced | Section 7 |
+| S5-I04-FR5 | Validation results shall be visible in pull requests | Sections 9, 12 |
+| S5-I04-FR6 | Governance failures shall block merge readiness | Sections 10, 11 |
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
 
 ---
 
@@ -569,4 +639,8 @@ This document establishes the Governance Validation Architecture baseline for th
 
 It defines the validation architecture, validation rules, execution model, compliance controls, and governance enforcement requirements necessary to automate governance validation through GitHub Actions and support merge readiness governance across all repositories.
 
+<<<<<<< HEAD
 ---
+=======
+---
+>>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
