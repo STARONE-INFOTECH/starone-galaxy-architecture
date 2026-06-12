@@ -22,7 +22,7 @@ All governed documents shall contain the following section:
 ## Revision History
 
 | Version | Date | Author | Description |
-|---|---|---|---|
+| ------- | ---- | ------ | ----------- |
 ```
 
 ---
@@ -102,10 +102,10 @@ Every approved document change shall create a revision entry.
 
 Example:
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0.0 | 2026-01-01 | Sachin Salunke | Initial creation |
-| 1.1.0 | 2026-02-01 | Sachin Salunke | Added architecture section |
+| Version | Date       | Author         | Description                |
+| ------- | ---------- | -------------- | -------------------------- |
+| 1.0.0   | 2026-01-01 | Sachin Salunke | Initial creation           |
+| 1.1.0   | 2026-02-01 | Sachin Salunke | Added architecture section |
 
 ---
 

@@ -4,14 +4,14 @@
 
 ## Title Page
 
-| Field | Value |
-|---|---|
-Document ID | ADR-004 |
-Project | StarOne Galaxy |
-Decision | Configuration Management Strategy |
-Author | Sachin Salunke |
-Date | Jan 2026 |
-Status | Accepted |
+| Field       | Value                             |
+| ----------- | --------------------------------- |
+| Document ID | ADR-004                           |
+| Project     | StarOne Galaxy                    |
+| Decision    | Configuration Management Strategy |
+| Author      | Sachin Salunke                    |
+| Date        | Jan 2026                          |
+| Status      | Accepted                          |
 
 ---
 
@@ -19,17 +19,17 @@ Status | Accepted |
 
 StarOne Galaxy is a **multi-domain distributed system** with multiple independent services across domains:
 
-- DHS  
-- Bookshow  
-- SportStats  
-- VaultIron  
+- DHS
+- Bookshow
+- SportStats
+- VaultIron
 
 Each service requires:
 
-- Environment-specific configuration  
-- Secure secret management  
-- Consistent configuration governance  
-- Flexibility without cross-domain interference  
+- Environment-specific configuration
+- Secure secret management
+- Consistent configuration governance
+- Flexibility without cross-domain interference
 
 ---
 
@@ -44,11 +44,11 @@ while ensuring security, scalability, and strict domain isolation?
 
 ### Key Challenges
 
-- Avoiding configuration duplication  
-- Managing environment-specific configs (dev, staging, prod)  
-- Securing sensitive data (passwords, keys)  
-- Preventing config leakage across domains  
-- Ensuring dynamic configuration updates  
+- Avoiding configuration duplication
+- Managing environment-specific configs (dev, staging, prod)
+- Securing sensitive data (passwords, keys)
+- Preventing config leakage across domains
+- Ensuring dynamic configuration updates
 
 ---
 
@@ -86,7 +86,7 @@ sportstats-service.yml
 vaultiron-service.yml
 ```
 
-- No domain can access another domain’s configuration  
+- No domain can access another domain’s configuration
 
 ---
 
@@ -112,16 +112,16 @@ JCE Encryption (Spring Cloud Config)
 
 Examples:
 
-- Database passwords  
-- API keys  
-- Tokens  
+- Database passwords
+- API keys
+- Tokens
 
 ---
 
 ### 2.5 Runtime Configuration Injection
 
-- Services fetch configuration at runtime from Config Server  
-- No hardcoded configuration inside services  
+- Services fetch configuration at runtime from Config Server
+- No hardcoded configuration inside services
 
 ---
 
@@ -146,9 +146,9 @@ Each service maintains its own config files
 
 **Rejected Because:**
 
-- Configuration duplication  
-- Hard to manage across environments  
-- No central governance  
+- Configuration duplication
+- Hard to manage across environments
+- No central governance
 
 ---
 
@@ -159,9 +159,9 @@ All configs managed via environment variables
 
 **Rejected Because:**
 
-- Difficult to manage at scale  
-- No version control  
-- Poor visibility  
+- Difficult to manage at scale
+- No version control
+- Poor visibility
 
 ---
 
@@ -172,9 +172,9 @@ Common config shared across all domains
 
 **Rejected Because:**
 
-- Violates domain isolation  
-- Risk of unintended dependency  
-- Security concerns  
+- Violates domain isolation
+- Risk of unintended dependency
+- Security concerns
 
 ---
 
@@ -185,10 +185,10 @@ Central config repository with domain-specific separation and encryption
 
 **Reasons:**
 
-- Central governance  
-- Strong security  
-- Domain isolation maintained  
-- Easy environment management  
+- Central governance
+- Strong security
+- Domain isolation maintained
+- Easy environment management
 
 ---
 
@@ -198,29 +198,29 @@ Central config repository with domain-specific separation and encryption
 
 ### ✅ Positive
 
-- Centralized control of configuration  
-- Improved security via encryption  
-- Simplified environment management  
-- Reduced duplication  
-- Better traceability (Git-based)  
+- Centralized control of configuration
+- Improved security via encryption
+- Simplified environment management
+- Reduced duplication
+- Better traceability (Git-based)
 
 ---
 
 ### ⚠️ Negative
 
-- Dependency on Config Server availability  
-- Initial setup complexity  
-- Requires secure key management  
+- Dependency on Config Server availability
+- Initial setup complexity
+- Requires secure key management
 
 ---
 
 ## 5. Trade-offs
 
-| Trade-off | Decision |
-|---|---|
-Decentralization vs Control | Chose centralized control |
-Flexibility vs Governance | Balanced with isolation |
-Simplicity vs Security | Chose security |
+| Trade-off                   | Decision                  |
+| --------------------------- | ------------------------- |
+| Decentralization vs Control | Chose centralized control |
+| Flexibility vs Governance   | Balanced with isolation   |
+| Simplicity vs Security      | Chose security            |
 
 ---
 
@@ -230,18 +230,18 @@ Simplicity vs Security | Chose security |
 
 ### Affects:
 
-- Infrastructure setup (Config Server)  
-- Service startup configuration  
-- Security model  
-- Deployment pipelines  
+- Infrastructure setup (Config Server)
+- Service startup configuration
+- Security model
+- Deployment pipelines
 
 ---
 
 ### Enables:
 
-- Dynamic configuration updates  
-- Secure secret management  
-- Standardized configuration model  
+- Dynamic configuration updates
+- Secure secret management
+- Standardized configuration model
 
 ---
 
@@ -259,11 +259,11 @@ Simplicity vs Security | Chose security |
 
 ## 8. Related Artifacts
 
-- ADR-001 Repository Strategy  
-- ADR-002 Architecture Style  
-- ADR-003 Domain Isolation  
-- SRS-001 StarOne Galaxy  
-- HLD-001 Global Architecture  
+- ADR-001 Repository Strategy
+- ADR-002 Architecture Style
+- ADR-003 Domain Isolation
+- SRS-001 StarOne Galaxy
+- HLD-001 Global Architecture
 
 ---
 

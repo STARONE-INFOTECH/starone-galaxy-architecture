@@ -33,18 +33,18 @@ This standard applies to:
 
 All governed documents shall contain the following metadata fields.
 
-| Field | Description |
-|---------|---------|
-| Document ID | Unique identifier for the document |
-| Domain | Functional or platform domain |
-| Document Type | Artifact classification |
-| Version | Document version |
-| Author | Document owner |
-| Date | Creation or publication date |
-| Status | Document lifecycle state |
-| Linked Epic | Associated Epic |
-| Linked Story | Associated Story |
-| Approval Status | Governance approval state |
+| Field           | Description                        |
+| --------------- | ---------------------------------- |
+| Document ID     | Unique identifier for the document |
+| Domain          | Functional or platform domain      |
+| Document Type   | Artifact classification            |
+| Version         | Document version                   |
+| Author          | Document owner                     |
+| Date            | Creation or publication date       |
+| Status          | Document lifecycle state           |
+| Linked Epic     | Associated Epic                    |
+| Linked Story    | Associated Story                   |
+| Approval Status | Governance approval state          |
 
 ---
 
@@ -108,14 +108,14 @@ README_GLOBAL
 
 Approved status values:
 
-| Status | Meaning |
-|----------|----------|
-| Draft | Under authoring |
-| Review | Under review |
-| Approved | Approved for use |
-| Frozen | Baseline locked |
-| Deprecated | No longer recommended |
-| Archived | Historical reference only |
+| Status     | Meaning                   |
+| ---------- | ------------------------- |
+| Draft      | Under authoring           |
+| Review     | Under review              |
+| Approved   | Approved for use          |
+| Frozen     | Baseline locked           |
+| Deprecated | No longer recommended     |
+| Archived   | Historical reference only |
 
 ---
 
@@ -123,12 +123,12 @@ Approved status values:
 
 Approved approval values:
 
-| Approval Status | Meaning |
-|-----------------|---------|
-| Pending | Awaiting review |
-| Approved | Approved by reviewers |
-| Rejected | Rejected |
-| Superseded | Replaced by newer artifact |
+| Approval Status | Meaning                    |
+| --------------- | -------------------------- |
+| Pending         | Awaiting review            |
+| Approved        | Approved by reviewers      |
+| Rejected        | Rejected                   |
+| Superseded      | Replaced by newer artifact |
 
 ---
 

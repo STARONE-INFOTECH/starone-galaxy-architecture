@@ -47,7 +47,7 @@ jobs:
       - name: Validate Mermaid Blocks
         run: |
           echo "Validating Mermaid diagrams..."
-          grep -r "```mermaid" . || true
+          grep -r 'mermaid' . --include="*.md"  || true
 
   commit-validation:
     name: Commit Validation
@@ -86,7 +86,7 @@ jobs:
 
       - name: Validate Issue Templates
         run: |
-          test -f .github/ISSUE_TEMPLATE/story.yml
-          test -f .github/ISSUE_TEMPLATE/task.yml
-          test -f .github/ISSUE_TEMPLATE/bug.yml
-          test -f .github/ISSUE_TEMPLATE/enhancement.yml
+          test -f .github/ISSUE_TEMPLATES/story.yml
+          test -f .github/ISSUE_TEMPLATES/task.yml
+          test -f .github/ISSUE_TEMPLATES/bug.yml
+          test -f .github/ISSUE_TEMPLATES/enhancement.yml

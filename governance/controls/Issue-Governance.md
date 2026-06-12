@@ -4,36 +4,36 @@
 
 ## Title Page
 
-| Field | Value |
-|----------|----------|
-| Document ID | GOV-ISSUE-001 |
-| Document Name | Issue Governance |
-| Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
-| Story | STORY-ARCH-005 Engineering Governance Automation |
-| Issue | S5-I03 Issue Management Governance |
-| Domain | Governance Automation |
-| Author | Sachin Salunke |
-| Date | 2026 |
-| Version | 1.0 |
-| Status | Draft |
+| Field         | Value                                                |
+| ------------- | ---------------------------------------------------- |
+| Document ID   | GOV-ISSUE-001                                        |
+| Document Name | Issue Governance                                     |
+| Epic          | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
+| Story         | STORY-ARCH-005 Engineering Governance Automation     |
+| Issue         | S5-I03 Issue Management Governance                   |
+| Domain        | Governance Automation                                |
+| Author        | Sachin Salunke                                       |
+| Date          | 2026                                                 |
+| Version       | 1.0                                                  |
+| Status        | Draft                                                |
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|----------|----------|----------|----------|
-| 1.0 | 2026 | Sachin Salunke | Initial Issue Governance Document |
+| Version | Date | Author         | Description                       |
+| ------- | ---- | -------------- | --------------------------------- |
+| 1.0     | 2026 | Sachin Salunke | Initial Issue Governance Document |
 
 ---
 
 # Sign-Off Table
 
-| Role | Status |
-|----------|----------|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
 
 ---
 
@@ -145,26 +145,26 @@ All issues shall:
 
 ## Governance Responsibilities
 
-| Area | Responsibility |
-|----------|----------|
-| Issue Author | Complete required metadata and traceability |
-| Reviewer | Verify governance completeness |
-| DevOps Governance | Validate governance compliance |
-| Platform Architect | Validate architecture-related work items |
-| Repository Owner | Maintain issue quality and consistency |
+| Area               | Responsibility                              |
+| ------------------ | ------------------------------------------- |
+| Issue Author       | Complete required metadata and traceability |
+| Reviewer           | Verify governance completeness              |
+| DevOps Governance  | Validate governance compliance              |
+| Platform Architect | Validate architecture-related work items    |
+| Repository Owner   | Maintain issue quality and consistency      |
 
 ---
 
 # 5. Standard Issue Types
 
-| Type | Purpose |
-|----------|----------|
-| Story | Business or architecture capability |
-| Task | Implementation work |
-| Bug | Defect correction |
-| Enhancement | Improvement request |
-| Governance | Governance work item |
-| ADR | Architecture decision proposal |
+| Type        | Purpose                             |
+| ----------- | ----------------------------------- |
+| Story       | Business or architecture capability |
+| Task        | Implementation work                 |
+| Bug         | Defect correction                   |
+| Enhancement | Improvement request                 |
+| Governance  | Governance work item                |
+| ADR         | Architecture decision proposal      |
 
 ---
 
@@ -201,18 +201,18 @@ Traceability
 
 ## Metadata Requirements
 
-| Field | Required |
-|----------|----------|
-| Type | Yes |
-| Priority | Yes |
-| Status | Yes |
-| Epic | Yes |
-| Story | Conditional |
-| Area | Yes |
-| Labels | Yes |
-| Acceptance Criteria | Yes |
-| Definition of Done | Yes |
-| Traceability | Yes |
+| Field               | Required    |
+| ------------------- | ----------- |
+| Type                | Yes         |
+| Priority            | Yes         |
+| Status              | Yes         |
+| Epic                | Yes         |
+| Story               | Conditional |
+| Area                | Yes         |
+| Labels              | Yes         |
+| Acceptance Criteria | Yes         |
+| Definition of Done  | Yes         |
+| Traceability        | Yes         |
 
 ---
 
@@ -328,14 +328,14 @@ The issue owner shall verify:
 
 # 10. Governance Validation Matrix
 
-| Control | Required |
-|----------|----------|
-| Template Used | Yes |
-| Priority Defined | Yes |
-| Traceability Linked | Yes |
-| Acceptance Criteria Present | Yes |
-| Definition of Done Present | Yes |
-| Metadata Complete | Yes |
+| Control                     | Required |
+| --------------------------- | -------- |
+| Template Used               | Yes      |
+| Priority Defined            | Yes      |
+| Traceability Linked         | Yes      |
+| Acceptance Criteria Present | Yes      |
+| Definition of Done Present  | Yes      |
+| Metadata Complete           | Yes      |
 
 ---
 
@@ -388,13 +388,13 @@ Governance validation ensures:
 
 # 12. Requirement Traceability Matrix (RTM)
 
-| Requirement ID | Requirement | Coverage Section |
-|----------|----------|----------|
-| S5-I03-FR1 | Standard issue templates shall be created | Sections 3, 5 |
-| S5-I03-FR2 | Mandatory metadata fields shall be defined | Section 6 |
-| S5-I03-FR3 | Traceability fields shall be required | Section 7 |
-| S5-I03-FR4 | Acceptance criteria structure shall be standardized | Section 8 |
-| S5-I03-FR5 | Definition of Done section shall be included | Section 9 |
+| Requirement ID | Requirement                                         | Coverage Section |
+| -------------- | --------------------------------------------------- | ---------------- |
+| S5-I03-FR1     | Standard issue templates shall be created           | Sections 3, 5    |
+| S5-I03-FR2     | Mandatory metadata fields shall be defined          | Section 6        |
+| S5-I03-FR3     | Traceability fields shall be required               | Section 7        |
+| S5-I03-FR4     | Acceptance criteria structure shall be standardized | Section 8        |
+| S5-I03-FR5     | Definition of Done section shall be included        | Section 9        |
 
 ---
 

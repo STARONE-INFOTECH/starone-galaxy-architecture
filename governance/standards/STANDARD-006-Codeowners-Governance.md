@@ -1,35 +1,35 @@
 # STANDARD-006 — CODEOWNERS Governance
 
-| Attribute | Value |
-|------------|------------|
-| Standard ID | STANDARD-006 |
-| Title | CODEOWNERS Governance |
-| Repository | starone-galaxy-architecture |
-| Domain | Governance |
-| Classification | Governance Standard |
-| Author | Sachin Salunke |
-| Version | 1.1 |
-| Status | Approved Draft |
-| Date | Jan 2026 |
+| Attribute      | Value                       |
+| -------------- | --------------------------- |
+| Standard ID    | STANDARD-006                |
+| Title          | CODEOWNERS Governance       |
+| Repository     | starone-galaxy-architecture |
+| Domain         | Governance                  |
+| Classification | Governance Standard         |
+| Author         | Sachin Salunke              |
+| Version        | 1.1                         |
+| Status         | Approved Draft              |
+| Date           | Jan 2026                    |
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|----------|----------|----------|----------|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial CODEOWNERS Governance Standard |
-| 1.1 | Jan 2026 | Sachin Salunke | Added Solo Contributor Operating Mode and Governance Enforcement Clarifications |
+| Version | Date     | Author         | Description                                                                     |
+| ------- | -------- | -------------- | ------------------------------------------------------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke | Initial CODEOWNERS Governance Standard                                          |
+| 1.1     | Jan 2026 | Sachin Salunke | Added Solo Contributor Operating Mode and Governance Enforcement Clarifications |
 
 ---
 
 # Sign-Off Table
 
-| Role | Status |
-|----------|----------|
-| Platform Architect | Approved |
+| Role                | Status   |
+| ------------------- | -------- |
+| Platform Architect  | Approved |
 | Security Governance | Approved |
-| DevOps Governance | Approved |
+| DevOps Governance   | Approved |
 
 ---
 
@@ -85,16 +85,16 @@ Until governance teams are established:
 
 # Ownership Authority Matrix
 
-| Governance Area | Owner |
-|----------|----------|
-| Architecture Artifacts | Platform Architects |
-| Documentation Standards | Platform Architects |
-| Governance Standards | Governance Board |
-| Security Controls | Security Review |
-| CI/CD & Automation | DevOps Governance |
-| Platform Runtime | Platform Engineering |
-| Business Documentation | Business Analysts |
-| Product Documentation | Product Owners |
+| Governance Area         | Owner                |
+| ----------------------- | -------------------- |
+| Architecture Artifacts  | Platform Architects  |
+| Documentation Standards | Platform Architects  |
+| Governance Standards    | Governance Board     |
+| Security Controls       | Security Review      |
+| CI/CD & Automation      | DevOps Governance    |
+| Platform Runtime        | Platform Engineering |
+| Business Documentation  | Business Analysts    |
+| Product Documentation   | Product Owners       |
 
 ---
 
@@ -111,10 +111,10 @@ Until governance teams are established:
 
 # Requirement Traceability Matrix (RTM)
 
-| Epic | Story | Issue | Requirement | Coverage |
-|----------|----------|----------|----------|----------|
-| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I02 | S1-FR-002 | Ownership Model using CODEOWNERS |
-| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I05 | S1-FR-006 | Governance Operating Model |
+| Epic          | Story          | Issue  | Requirement | Coverage                         |
+| ------------- | -------------- | ------ | ----------- | -------------------------------- |
+| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I02 | S1-FR-002   | Ownership Model using CODEOWNERS |
+| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I05 | S1-FR-006   | Governance Operating Model       |
 
 Coverage Status: 100%
 

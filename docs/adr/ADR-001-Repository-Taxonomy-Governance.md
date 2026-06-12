@@ -2,36 +2,36 @@
 
 ## Title Page
 
-| Field | Value |
-|---------|---------|
-| ADR ID | ADR-001 |
-| Title | Repository Taxonomy Governance |
-| Status | Accepted |
-| Date | Jan 2026 |
-| Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
-| Story | STORY-ARCH-004 Architecture Decision Baseline |
-| Author | Sachin Salunke |
+| Field     | Value                                                  |
+| --------- | ------------------------------------------------------ |
+| ADR ID    | ADR-001                                                |
+| Title     | Repository Taxonomy Governance                         |
+| Status    | Accepted                                               |
+| Date      | Jan 2026                                               |
+| Epic      | EPIC-ARCH-001 Ecosystem Design & Governance Baseline   |
+| Story     | STORY-ARCH-004 Architecture Decision Baseline          |
+| Author    | Sachin Salunke                                         |
 | Reviewers | Platform Architect, Security Review, DevOps Governance |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---------|---------|---------|---------|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial ADR |
-| 1.1 | Jan 2026 | Architecture Review | Repository Governance Decision Approved |
-| 1.2 | Jan 2026 | Sachin Salunke | Repository Taxonomy Alignment, Domain Isolation Governance, Ownership Governance Matrix |
+| Version | Date     | Author              | Description                                                                             |
+| ------- | -------- | ------------------- | --------------------------------------------------------------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke      | Initial ADR                                                                             |
+| 1.1     | Jan 2026 | Architecture Review | Repository Governance Decision Approved                                                 |
+| 1.2     | Jan 2026 | Sachin Salunke      | Repository Taxonomy Alignment, Domain Isolation Governance, Ownership Governance Matrix |
 
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---------|---------|
+| Role               | Status   |
+| ------------------ | -------- |
 | Platform Architect | Approved |
-| Security Review | Approved |
-| DevOps Governance | Approved |
+| Security Review    | Approved |
+| DevOps Governance  | Approved |
 
 ---
 
@@ -79,16 +79,16 @@ while maintaining domain isolation and independent evolution?
 
 The selected repository taxonomy must support:
 
-| Driver | Priority |
-|----------|----------|
+| Driver                 | Priority |
+| ---------------------- | -------- |
 | Governance Consistency | Critical |
-| Documentation-as-Code | Critical |
-| Domain Isolation | Critical |
-| Scalability | High |
-| Discoverability | High |
-| Platform Onboarding | High |
-| Reusability | High |
-| Auditability | Medium |
+| Documentation-as-Code  | Critical |
+| Domain Isolation       | Critical |
+| Scalability            | High     |
+| Discoverability        | High     |
+| Platform Onboarding    | High     |
+| Reusability            | High     |
+| Auditability           | Medium   |
 
 ---
 
@@ -171,13 +171,12 @@ New domains shall inherit the approved taxonomy, governance standards, ownership
 
 The StarOne Galaxy ecosystem organizes repositories into the following governance classifications:
 
-| Classification | Purpose |
-|---------------|---------|
-| Architecture Governance | Standards, ADRs, Design Governance |
-| Platform Governance | Infrastructure, Security, CI/CD, Kubernetes |
-| Configuration Governance | Runtime Configuration Management |
-| Business Domain | Product-specific business capabilities |
-
+| Classification           | Purpose                                     |
+| ------------------------ | ------------------------------------------- |
+| Architecture Governance  | Standards, ADRs, Design Governance          |
+| Platform Governance      | Infrastructure, Security, CI/CD, Kubernetes |
+| Configuration Governance | Runtime Configuration Management            |
+| Business Domain          | Product-specific business capabilities      |
 
 Business Domain repositories include:
 
@@ -225,13 +224,13 @@ starone-galaxy-architecture/
 
 The StarOne Galaxy ecosystem is organized into distinct repository categories.
 
-| Repository | Classification | Responsibility |
-|------------|---------------|----------------|
-| starone-galaxy-architecture | Architecture Governance | Standards, ADRs, Design Governance |
-| starone-galaxy-infra | Platform Governance | CI/CD, Security, Kubernetes, Operations |
-| starone-galaxy-config | Configuration Governance | Spring Cloud Config, Environment Governance |
-| starone-dhs-system | Business Domain | Enterprise OMS Platform |
-| starone-bookshow-system | Business Domain | Consumer Ticketing Platform |
+| Repository                  | Classification           | Responsibility                              |
+| --------------------------- | ------------------------ | ------------------------------------------- |
+| starone-galaxy-architecture | Architecture Governance  | Standards, ADRs, Design Governance          |
+| starone-galaxy-infra        | Platform Governance      | CI/CD, Security, Kubernetes, Operations     |
+| starone-galaxy-config       | Configuration Governance | Spring Cloud Config, Environment Governance |
+| starone-dhs-system          | Business Domain          | Enterprise OMS Platform                     |
+| starone-bookshow-system     | Business Domain          | Consumer Ticketing Platform                 |
 
 ---
 
@@ -351,16 +350,17 @@ This decision supports:
 
 ## 9. Traceability
 
-| Source | Reference |
-|----------|----------|
-| Epic | EPIC-ARCH-001 |
-| Story | STORY-ARCH-004 |
-| BRD | StarOne Galaxy Architecture Repository Governance |
-| Related ADR | ADR-002 Documentation Standards Governance |
-| Related ADR | ADR-003 Governance Enforcement Controls |
-| Standard | STANDARD-006 CODEOWNERS Governance |
-| Standard | STANDARD-007 Enterprise Naming Conventions |
-| Standard | STANDARD-008 Contribution Governance |
+| Source      | Reference                                         |
+| ----------- | ------------------------------------------------- |
+| Epic        | EPIC-ARCH-001                                     |
+| Story       | STORY-ARCH-004                                    |
+| BRD         | StarOne Galaxy Architecture Repository Governance |
+| Related ADR | ADR-002 Documentation Standards Governance        |
+| Related ADR | ADR-003 Governance Enforcement Controls           |
+| Standard    | STANDARD-006 CODEOWNERS Governance                |
+| Standard    | STANDARD-007 Enterprise Naming Conventions        |
+| Standard    | STANDARD-008 Contribution Governance              |
+
 ---
 
 ## 10. Implementation Guidance

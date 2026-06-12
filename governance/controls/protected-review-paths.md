@@ -1,4 +1,5 @@
 # Protected Review Paths Standard
+
 **Document ID:** GOV-CTRL-001  
 **Document Type:** Governance Control Standard  
 **Issue Reference:** S1-I02 Implement CODEOWNERS Model  
@@ -11,19 +12,19 @@
 
 # Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial protected review paths baseline |
+| Version | Date     | Author         | Description                             |
+| ------- | -------- | -------------- | --------------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke | Initial protected review paths baseline |
 
 ---
 
 # Sign-Off
 
-| Role | Status |
-|---|---|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
 
 ---
 
@@ -33,10 +34,10 @@ Define **Protected Review Paths** requiring mandatory CODEOWNER approval and gov
 
 Purpose:
 
-- Enforce ownership boundaries  
-- Protect critical architecture artifacts  
-- Prevent governance bypass  
-- Standardize mandatory reviewer routing  
+- Enforce ownership boundaries
+- Protect critical architecture artifacts
+- Prevent governance bypass
+- Standardize mandatory reviewer routing
 - Support controlled change management
 
 ---
@@ -51,10 +52,10 @@ starone-galaxy-architecture
 
 Covers:
 
-- Architecture artifacts  
-- Governance controls  
-- Workflow automation  
-- Security-sensitive changes  
+- Architecture artifacts
+- Governance controls
+- Workflow automation
+- Security-sensitive changes
 - Protected repository configuration
 
 ---
@@ -95,12 +96,12 @@ Mandatory dual approval.
 
 Required reviewers:
 
-| Path | Reviewers |
-|---|---|
-ADR | Platform Architect + Security |
-HLD | Platform Architect + DevOps |
-SRS | Solution Architect + Domain Owner |
-RTM | Architecture + QA Governance |
+| Path | Reviewers                         |
+| ---- | --------------------------------- |
+| ADR  | Platform Architect + Security     |
+| HLD  | Platform Architect + DevOps       |
+| SRS  | Solution Architect + Domain Owner |
+| RTM  | Architecture + QA Governance      |
 
 Approvals Required:
 
@@ -153,14 +154,14 @@ Workflow changes require:
 
 # 5. Protected Path Matrix
 
-| Path | Protection Level | Required Approvals |
-|---|---|---|
-/docs/adr/* | Critical | 2 |
-/docs/hld/* | Critical | 2 |
-/docs/srs/* | Critical | 2 |
-/docs/rtm/* | Critical | 2 |
-/governance/* | High | 2 |
-.github/workflows/* | Critical | 2+ |
+| Path                 | Protection Level | Required Approvals |
+| -------------------- | ---------------- | ------------------ |
+| /docs/adr/\*         | Critical         | 2                  |
+| /docs/hld/\*         | Critical         | 2                  |
+| /docs/srs/\*         | Critical         | 2                  |
+| /docs/rtm/\*         | Critical         | 2                  |
+| /governance/\*       | High             | 2                  |
+| .github/workflows/\* | Critical         | 2+                 |
 
 ---
 
@@ -270,6 +271,7 @@ Merge Gate->>Main: Allow Merge
 # 11. Validation Scenarios
 
 ## Scenario 1
+
 Change:
 
 ```text
@@ -291,6 +293,7 @@ Protected review enforced.
 ---
 
 ## Scenario 2
+
 Change:
 
 ```text
@@ -343,12 +346,12 @@ Audit artifacts retained in:
 
 # 14. Risks
 
-| Risk | Mitigation |
-|---|---|
-Approval bypass | Protected branches |
-Ownership ambiguity | CODEOWNERS |
-Unauthorized changes | Mandatory reviewers |
-Workflow tampering | Protected automation paths |
+| Risk                 | Mitigation                 |
+| -------------------- | -------------------------- |
+| Approval bypass      | Protected branches         |
+| Ownership ambiguity  | CODEOWNERS                 |
+| Unauthorized changes | Mandatory reviewers        |
+| Workflow tampering   | Protected automation paths |
 
 ---
 
@@ -356,9 +359,9 @@ Workflow tampering | Protected automation paths |
 
 Protected review paths support:
 
-- Change control governance  
-- Segregation of duties  
-- Review accountability  
+- Change control governance
+- Segregation of duties
+- Review accountability
 - Auditability
 
 ---
@@ -387,9 +390,8 @@ Store:
 
 # 18. Traceability
 
-| Epic | Story | Issue | Control Artifact |
-|---|---|---|---|
-EPIC-001 | S1 | S1-I02 | GOV-CTRL-001 |
+| Epic     | Story | Issue  | Control Artifact |
+| -------- | ----- | ------ | ---------------- |
+| EPIC-001 | S1    | S1-I02 | GOV-CTRL-001     |
 
 Coverage: 100%
-

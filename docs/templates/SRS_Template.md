@@ -6,25 +6,25 @@
 
 ## 2. Document Metadata
 
-| Field | Value |
-|---------|---------|
-| Document ID | |
-| Domain | |
-| Document Type | |
-| Version | |
-| Author | |
-| Status | |
-| Date | |
-| Linked Epic | |
-| Linked Story | |
-| Approval Status | |
+| Field           | Value |
+| --------------- | ----- |
+| Document ID     |       |
+| Domain          |       |
+| Document Type   |       |
+| Version         |       |
+| Author          |       |
+| Status          |       |
+| Date            |       |
+| Linked Epic     |       |
+| Linked Story    |       |
+| Approval Status |       |
 
 ---
 
 ## 3. Revision History
 
 | Version | Date | Author | Description |
-|---|---|---|---|
+| ------- | ---- | ------ | ----------- |
 
 ---
 
@@ -39,6 +39,7 @@
 ## 6. Scope
 
 ### 6.1 In Scope
+
 ### 6.2 Out Scope
 
 ---

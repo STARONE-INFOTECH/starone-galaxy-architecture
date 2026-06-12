@@ -4,12 +4,12 @@ This directory contains reusable GitHub workflow skeletons for the StarOne Galax
 
 ## Workflow Baseline
 
-| Workflow | Purpose |
-|---|---|
-| markdown-validation.yml | Markdown lint validation |
-| governance-check.yml | Governance structure validation |
-| pr-validation.yml | PR governance enforcement |
-| naming-validation.yml | Naming standards validation |
+| Workflow                | Purpose                         |
+| ----------------------- | ------------------------------- |
+| markdown-validation.yml | Markdown lint validation        |
+| governance-check.yml    | Governance structure validation |
+| pr-validation.yml       | PR governance enforcement       |
+| naming-validation.yml   | Naming standards validation     |
 
 ## Future Expansion
 

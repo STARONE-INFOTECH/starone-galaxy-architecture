@@ -33,23 +33,23 @@ This registry provides the approved documentation templates for the StarOne Gala
 ## Documentation Lifecycle
 
 BRD
- ↓
+↓
 PRD
- ↓
+↓
 EPIC
- ↓
+↓
 STORY
- ↓
+↓
 ISSUE
- ↓
+↓
 ADR
- ↓
+↓
 HLD
- ↓
+↓
 SRS
- ↓
+↓
 LLD
- ↓
+↓
 PR
 
 ## Governance Notes

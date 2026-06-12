@@ -4,14 +4,14 @@
 
 ## Title Page
 
-| Field | Value |
-|---|---|
-Document ID | ADR-001 |
-Project | StarOne Galaxy |
-Decision | Repository & Architecture Strategy |
-Author | Sachin Salunke |
-Date | Jan 2026 |
-Status | Accepted |
+| Field       | Value                              |
+| ----------- | ---------------------------------- |
+| Document ID | ADR-001                            |
+| Project     | StarOne Galaxy                     |
+| Decision    | Repository & Architecture Strategy |
+| Author      | Sachin Salunke                     |
+| Date        | Jan 2026                           |
+| Status      | Accepted                           |
 
 ---
 
@@ -19,16 +19,16 @@ Status | Accepted |
 
 StarOne Galaxy is a **multi-domain, cloud-native ecosystem** consisting of independent application domains:
 
-- DHS (Enterprise OMS)  
-- Bookshow (Consumer Ticketing)  
-- SportStats (Analytics Platform)  
-- VaultIron (Security System)  
+- DHS (Enterprise OMS)
+- Bookshow (Consumer Ticketing)
+- SportStats (Analytics Platform)
+- VaultIron (Security System)
 
 Additionally, the ecosystem includes:
 
-- Shared Control Plane (Infrastructure)  
-- Centralized Configuration Store  
-- Governance and Architecture Repository  
+- Shared Control Plane (Infrastructure)
+- Centralized Configuration Store
+- Governance and Architecture Repository
 
 ---
 
@@ -45,11 +45,11 @@ to ensure scalability, maintainability, and domain isolation
 
 ### Key Challenges
 
-- Managing multiple independent domains  
-- Ensuring no cross-domain interference  
-- Maintaining shared infrastructure without tight coupling  
-- Enforcing governance and standardization  
-- Supporting independent development and deployment  
+- Managing multiple independent domains
+- Ensuring no cross-domain interference
+- Maintaining shared infrastructure without tight coupling
+- Enforcing governance and standardization
+- Supporting independent development and deployment
 
 ---
 
@@ -78,9 +78,9 @@ vaultiron-system             → Security services
 ### 2.2 Domain Isolation Strategy
 
 - Each domain is **fully independent**
-- No shared database across domains  
-- No mandatory cross-domain communication  
-- Each domain manages its own lifecycle  
+- No shared database across domains
+- No mandatory cross-domain communication
+- Each domain manages its own lifecycle
 
 ---
 
@@ -88,8 +88,8 @@ vaultiron-system             → Security services
 
 Shared components include:
 
-- Infrastructure (Kubernetes, CI/CD)  
-- Configuration (Config Store)  
+- Infrastructure (Kubernetes, CI/CD)
+- Configuration (Config Store)
 
 These are:
 
@@ -102,18 +102,18 @@ Isolated at domain level
 
 ### 2.4 Communication Strategy (High-Level)
 
-- Domains operate independently  
-- Communication is **not enforced across domains**  
-- Event-driven or API integration is **optional and controlled**  
+- Domains operate independently
+- Communication is **not enforced across domains**
+- Event-driven or API integration is **optional and controlled**
 
 ---
 
 ### 2.5 Governance Model
 
-- Architecture is defined in a centralized repository  
-- Standards enforced via templates and policies  
-- ADRs capture all critical decisions  
-- GitHub workflows enforce consistency  
+- Architecture is defined in a centralized repository
+- Standards enforced via templates and policies
+- ADRs capture all critical decisions
+- GitHub workflows enforce consistency
 
 ---
 
@@ -128,10 +128,10 @@ Single repository containing all domains and infrastructure
 
 **Rejected Because:**
 
-- Tight coupling between domains  
-- Difficult scalability  
-- Complex dependency management  
-- Reduced autonomy  
+- Tight coupling between domains
+- Difficult scalability
+- Complex dependency management
+- Reduced autonomy
 
 ---
 
@@ -142,10 +142,10 @@ Each domain operates independently without shared standards
 
 **Rejected Because:**
 
-- Inconsistent architecture  
-- Lack of standardization  
-- Difficult maintenance  
-- Governance gaps  
+- Inconsistent architecture
+- Lack of standardization
+- Difficult maintenance
+- Governance gaps
 
 ---
 
@@ -156,10 +156,10 @@ Separate repositories with centralized governance and shared platform
 
 **Reasons:**
 
-- Strong domain isolation  
-- Independent scalability  
-- Centralized standards  
-- Controlled platform sharing  
+- Strong domain isolation
+- Independent scalability
+- Centralized standards
+- Controlled platform sharing
 
 ---
 
@@ -169,29 +169,29 @@ Separate repositories with centralized governance and shared platform
 
 ### ✅ Positive
 
-- Clear separation of concerns  
-- High scalability and flexibility  
-- Independent deployment per domain  
-- Strong governance model  
-- Easier maintenance and evolution  
+- Clear separation of concerns
+- High scalability and flexibility
+- Independent deployment per domain
+- Strong governance model
+- Easier maintenance and evolution
 
 ---
 
 ### ⚠️ Negative
 
-- Increased repository management overhead  
-- Requires strict governance discipline  
-- Initial setup complexity  
+- Increased repository management overhead
+- Requires strict governance discipline
+- Initial setup complexity
 
 ---
 
 ## 5. Trade-offs
 
-| Trade-off | Decision |
-|---|---|
-Simplicity vs Scalability | Chose scalability |
-Coupling vs Independence | Chose independence |
-Centralization vs Flexibility | Balanced via governance |
+| Trade-off                     | Decision                |
+| ----------------------------- | ----------------------- |
+| Simplicity vs Scalability     | Chose scalability       |
+| Coupling vs Independence      | Chose independence      |
+| Centralization vs Flexibility | Balanced via governance |
 
 ---
 
@@ -201,28 +201,28 @@ Centralization vs Flexibility | Balanced via governance |
 
 ### Affects:
 
-- Infrastructure design  
-- CI/CD pipelines  
-- Deployment strategy  
-- Configuration management  
-- Domain architecture  
+- Infrastructure design
+- CI/CD pipelines
+- Deployment strategy
+- Configuration management
+- Domain architecture
 
 ---
 
 ### Enables:
 
-- Parallel development  
-- Domain-driven design  
-- Platform engineering model  
+- Parallel development
+- Domain-driven design
+- Platform engineering model
 
 ---
 
 ## 7. Related Artifacts
 
-- BRD-001 StarOne Galaxy  
-- PRD-001 StarOne Galaxy  
-- SRS-001 StarOne Galaxy  
-- HLD-001 Global Architecture  
+- BRD-001 StarOne Galaxy
+- PRD-001 StarOne Galaxy
+- SRS-001 StarOne Galaxy
+- HLD-001 Global Architecture
 
 ---
 

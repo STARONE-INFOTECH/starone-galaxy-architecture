@@ -1,4 +1,5 @@
 # CONTRIBUTING.md
+
 **Repository:** starone-galaxy-architecture  
 **Version:** 1.0  
 **Author:** Sachin Salunke  
@@ -18,14 +19,14 @@ Before contributing, please read this guide fully.
 
 # Project Workflow Lifecycle
 
-| Status | Meaning |
-|---|---|
-| Backlog | Planned |
-| Ready | Sprint-ready |
+| Status      | Meaning       |
+| ----------- | ------------- |
+| Backlog     | Planned       |
+| Ready       | Sprint-ready  |
 | In Progress | Active branch |
-| Review | PR Open |
-| Done | PR Merged |
-| Closed | Released |
+| Review      | PR Open       |
+| Done        | PR Merged     |
+| Closed      | Released      |
 
 ---
 
@@ -145,7 +146,6 @@ Allowed prefixes:
 - chore
 - test
 
-
 ---
 
 # 5. Pull Request Process
@@ -179,20 +179,25 @@ Every PR must contain:
 
 ```markdown
 ## Summary
+
 What changed?
 
 ## Related Artifact
+
 ADR/HLD/SRS/Issue Reference:
 
 ## Architecture Impact
+
 Explain architectural effect.
 
 ## Compliance Check
+
 - [ ] ISO sections updated
 - [ ] RTM linkage verified
 - [ ] Mermaid validated
 
 ## Review Checklist
+
 - [ ] Self-review completed
 - [ ] Tests/validation completed
 ```
@@ -347,12 +352,12 @@ Rules:
 
 ## Mandatory Reviewers
 
-| Change Type | Required Reviewers |
-|---|---|
-ADR | Platform Architect + Security |
-HLD | Platform Architect + DevOps |
-SRS | Solution Architect + Domain Owner |
-Governance Policies | Governance Board |
+| Change Type         | Required Reviewers                |
+| ------------------- | --------------------------------- |
+| ADR                 | Platform Architect + Security     |
+| HLD                 | Platform Architect + DevOps       |
+| SRS                 | Solution Architect + Domain Owner |
+| Governance Policies | Governance Board                  |
 
 ---
 
@@ -534,12 +539,12 @@ governance
 
 For questions:
 
-| Topic | Contact Team |
-|---|---|
-Architecture | Platform Architects |
-Security | Security Governance |
-DevOps | Platform Engineering |
-Documentation | Architecture Governance |
+| Topic         | Contact Team            |
+| ------------- | ----------------------- |
+| Architecture  | Platform Architects     |
+| Security      | Security Governance     |
+| DevOps        | Platform Engineering    |
+| Documentation | Architecture Governance |
 
 ---
 
@@ -588,8 +593,6 @@ Protect standards.
 Scale intentionally.
 
 **StarOne Galaxy Governance**
-
-
 
 # Recommended Companion Files
 

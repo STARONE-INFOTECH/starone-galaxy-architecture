@@ -4,33 +4,33 @@
 
 ## Title Page
 
-| Field | Value |
-|---|---|
-| Standard ID | STANDARD-003 |
-| Title | Governance Enforcement Standard |
-| Domain | Governance |
-| Author | Sachin Salunke |
-| Date | Jan 2026 |
-| Version | 1.0 |
-| Status | Superseded |
+| Field       | Value                           |
+| ----------- | ------------------------------- |
+| Standard ID | STANDARD-003                    |
+| Title       | Governance Enforcement Standard |
+| Domain      | Governance                      |
+| Author      | Sachin Salunke                  |
+| Date        | Jan 2026                        |
+| Version     | 1.0                             |
+| Status      | Superseded                      |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial Governance Enforcement Standard |
+| Version | Date     | Author         | Description                             |
+| ------- | -------- | -------------- | --------------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke | Initial Governance Enforcement Standard |
 
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---|---|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| DevOps Governance | Pending |
-| Security Review | Pending |
+| DevOps Governance  | Pending |
+| Security Review    | Pending |
 
 ---
 
@@ -82,12 +82,12 @@ Approval
 
 # 4. Governance Control Areas
 
-| Area | Purpose |
-|---|---|
-| Repository Governance | Ownership and review enforcement |
-| Documentation Governance | Standards compliance |
-| Traceability Governance | Requirement linkage validation |
-| Workflow Governance | Automated policy enforcement |
+| Area                     | Purpose                          |
+| ------------------------ | -------------------------------- |
+| Repository Governance    | Ownership and review enforcement |
+| Documentation Governance | Standards compliance             |
+| Traceability Governance  | Requirement linkage validation   |
+| Workflow Governance      | Automated policy enforcement     |
 
 ---
 
@@ -133,12 +133,12 @@ Validate:
 
 # 6. Enforcement Ownership
 
-| Area | Owner |
-|---|---|
-| Architecture Standards | Platform Architect |
-| Governance Standards | DevOps Governance |
-| Security Controls | Security Review |
-| Workflow Controls | Platform Engineering |
+| Area                   | Owner                |
+| ---------------------- | -------------------- |
+| Architecture Standards | Platform Architect   |
+| Governance Standards   | DevOps Governance    |
+| Security Controls      | Security Review      |
+| Workflow Controls      | Platform Engineering |
 
 ---
 
@@ -167,13 +167,13 @@ Merge
 
 # 8. Governance Control Matrix
 
-| Control | Enforcement Method |
-|---|---|
-| Documentation Standards | Validation Workflow |
-| Traceability Standards | Review Check |
-| PR Governance | Template Enforcement |
-| Issue Governance | Template Enforcement |
-| Security Controls | Security Validation |
+| Control                 | Enforcement Method   |
+| ----------------------- | -------------------- |
+| Documentation Standards | Validation Workflow  |
+| Traceability Standards  | Review Check         |
+| PR Governance           | Template Enforcement |
+| Issue Governance        | Template Enforcement |
+| Security Controls       | Security Validation  |
 
 ---
 
@@ -188,8 +188,8 @@ Merge
 
 # 10. Traceability
 
-| Epic | Story | Issue |
-|---|---|---|
+| Epic     | Story          | Issue  |
+| -------- | -------------- | ------ |
 | EPIC-001 | STORY-ARCH-004 | S4-I01 |
 
 Coverage: 100%

@@ -1,35 +1,35 @@
 ## ADR-003: Governance Enforcement Controls
 
-| Field | Value |
-|---------|---------|
-| ADR ID | ADR-003 |
-| Title | Governance Enforcement Controls |
-| Status | Accepted |
-| Date | Jan 2026 |
-| Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
-| Story | STORY-ARCH-004 Architecture Decision Baseline |
-| Author | Sachin Salunke |
+| Field     | Value                                                  |
+| --------- | ------------------------------------------------------ |
+| ADR ID    | ADR-003                                                |
+| Title     | Governance Enforcement Controls                        |
+| Status    | Accepted                                               |
+| Date      | Jan 2026                                               |
+| Epic      | EPIC-ARCH-001 Ecosystem Design & Governance Baseline   |
+| Story     | STORY-ARCH-004 Architecture Decision Baseline          |
+| Author    | Sachin Salunke                                         |
 | Reviewers | Platform Architect, Security Review, DevOps Governance |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---------|---------|---------|---------|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial ADR |
-| 1.1 | Jan 2026 | Architecture Governance Board | Governance Enforcement Approved |
-| 1.2 | Jan 2026 | Sachin Salunke | Governance Enforcement Model Refinements |
+| Version | Date     | Author                        | Description                              |
+| ------- | -------- | ----------------------------- | ---------------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke                | Initial ADR                              |
+| 1.1     | Jan 2026 | Architecture Governance Board | Governance Enforcement Approved          |
+| 1.2     | Jan 2026 | Sachin Salunke                | Governance Enforcement Model Refinements |
 
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---------|---------|
+| Role               | Status   |
+| ------------------ | -------- |
 | Platform Architect | Approved |
-| Security Review | Approved |
-| DevOps Governance | Approved |
+| Security Review    | Approved |
+| DevOps Governance  | Approved |
 
 ---
 
@@ -77,18 +77,18 @@ without relying solely on manual reviews?
 
 ## 3. Decision Drivers
 
-| Driver | Priority |
-|----------|----------|
+| Driver                | Priority |
+| --------------------- | -------- |
 | Governance Compliance | Critical |
-| Automation | Critical |
-| Security | Critical |
-| Traceability | High |
-| Scalability | High |
-| Consistency | High |
-| Auditability | High |
-| Developer Experience | Medium |
-| Auditability | Critical |
-| Governance-as-Code | High |
+| Automation            | Critical |
+| Security              | Critical |
+| Traceability          | High     |
+| Scalability           | High     |
+| Consistency           | High     |
+| Auditability          | High     |
+| Developer Experience  | Medium   |
+| Auditability          | Critical |
+| Governance-as-Code    | High     |
 
 ---
 
@@ -397,15 +397,15 @@ This decision supports:
 
 ## 13. Traceability
 
-| Source | Reference |
-|----------|----------|
-| Epic | EPIC-ARCH-001 |
-| Story | STORY-ARCH-004 |
-| Related ADR | ADR-001 Repository Taxonomy Governance |
-| Related ADR | ADR-002 Documentation Standards Governance |
-| Source Story | STORY-ARCH-001 Repository Scaffolding |
-| Source Story | STORY-ARCH-002 Global Ecosystem README |
-| Source Story | STORY-ARCH-003 Documentation Standards |
+| Source       | Reference                                  |
+| ------------ | ------------------------------------------ |
+| Epic         | EPIC-ARCH-001                              |
+| Story        | STORY-ARCH-004                             |
+| Related ADR  | ADR-001 Repository Taxonomy Governance     |
+| Related ADR  | ADR-002 Documentation Standards Governance |
+| Source Story | STORY-ARCH-001 Repository Scaffolding      |
+| Source Story | STORY-ARCH-002 Global Ecosystem README     |
+| Source Story | STORY-ARCH-003 Documentation Standards     |
 
 ---
 

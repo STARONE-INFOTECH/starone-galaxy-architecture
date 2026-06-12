@@ -4,26 +4,26 @@
 
 ## Document Metadata
 
-| Field | Value |
-|---------|---------|
-| Document ID | STANDARD-003 |
-| Domain | Governance |
-| Document Type | Traceability Standard |
-| Version | 1.0.0 |
-| Author | Sachin Salunke |
-| Status | Approved |
-| Date | 2026-05-01 |
-| Linked Epic | EPIC-ARCH-001 |
-| Linked Story | STORY-ARCH-003 |
-| Approval Status | Approved |
+| Field           | Value                 |
+| --------------- | --------------------- |
+| Document ID     | STANDARD-003          |
+| Domain          | Governance            |
+| Document Type   | Traceability Standard |
+| Version         | 1.0.0                 |
+| Author          | Sachin Salunke        |
+| Status          | Approved              |
+| Date            | 2026-05-01            |
+| Linked Epic     | EPIC-ARCH-001         |
+| Linked Story    | STORY-ARCH-003        |
+| Approval Status | Approved              |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0.0 | 2026-05-01 | Sachin Salunke | Initial version |
+| Version | Date       | Author         | Description     |
+| ------- | ---------- | -------------- | --------------- |
+| 1.0.0   | 2026-05-01 | Sachin Salunke | Initial version |
 
 ---
 
@@ -236,14 +236,14 @@ Provide a standard RTM linkage pattern for all future initiatives.
 
 # Traceability Status Model
 
-| Status | Meaning |
-|---|---|
-| Proposed | Requirement identified |
-| Approved | Requirement approved |
-| Implemented | Development completed |
-| Verified | Testing completed |
-| Validated | Business validation completed |
-| Retired | No longer active |
+| Status      | Meaning                       |
+| ----------- | ----------------------------- |
+| Proposed    | Requirement identified        |
+| Approved    | Requirement approved          |
+| Implemented | Development completed         |
+| Verified    | Testing completed             |
+| Validated   | Business validation completed |
+| Retired     | No longer active              |
 
 ---
 
@@ -298,8 +298,8 @@ Success is achieved when:
 
 # Approval Status
 
-| Review Area | Status |
-|---|---|
+| Review Area         | Status  |
+| ------------------- | ------- |
 | Architecture Review | Pending |
-| Governance Review | Pending |
-| Quality Review | Pending |
+| Governance Review   | Pending |
+| Quality Review      | Pending |

@@ -4,36 +4,36 @@
 
 ## Title Page
 
-| Field | Value |
-|---------|---------|
-| Document ID | GOV-CONFIG-001 |
-| Document Name | Governance Enforcement Configuration |
-| Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
-| Story | STORY-ARCH-005 Engineering Governance Automation |
-| Issue | S5-I01 Governance Enforcement Configuration |
-| Domain | Governance Automation |
-| Author | Sachin Salunke |
-| Date | 2026 |
-| Version | 1.0 |
-| Status | Draft |
+| Field         | Value                                                |
+| ------------- | ---------------------------------------------------- |
+| Document ID   | GOV-CONFIG-001                                       |
+| Document Name | Governance Enforcement Configuration                 |
+| Epic          | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
+| Story         | STORY-ARCH-005 Engineering Governance Automation     |
+| Issue         | S5-I01 Governance Enforcement Configuration          |
+| Domain        | Governance Automation                                |
+| Author        | Sachin Salunke                                       |
+| Date          | 2026                                                 |
+| Version       | 1.0                                                  |
+| Status        | Draft                                                |
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|----------|----------|----------|----------|
-| 1.0 | 2026 | Sachin Salunke | Initial Governance Enforcement Configuration |
+| Version | Date | Author         | Description                                  |
+| ------- | ---- | -------------- | -------------------------------------------- |
+| 1.0     | 2026 | Sachin Salunke | Initial Governance Enforcement Configuration |
 
 ---
 
 # Sign-Off Table
 
-| Role | Status |
-|----------|----------|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
 
 ---
 
@@ -113,7 +113,6 @@ L4 --> A3[Security Scans]
 L4 --> A4[Governance Checks]
 ```
 
-
 ### Level 1 – Repository Governance
 
 Purpose:
@@ -185,7 +184,6 @@ Controls:
 - Security Scans
 - Governance Checks
 
-
 ## 3.2 Governance Enforcement Lifecycle
 
 ```mermaid
@@ -228,14 +226,14 @@ BranchRules
 
 Governance enforcement responsibilities are distributed across designated governance authorities to ensure consistent implementation, validation, and compliance across the StarOne Galaxy ecosystem.
 
-| Governance Area | Responsible Authority |
-|----------|----------|
-| Architecture Standards | Platform Architect |
+| Governance Area         | Responsible Authority   |
+| ----------------------- | ----------------------- |
+| Architecture Standards  | Platform Architect      |
 | Documentation Standards | Architecture Governance |
-| Repository Governance | DevOps Governance |
-| Workflow Governance | Platform Engineering |
-| Security Governance | Security Review |
-| Compliance Controls | Governance Board |
+| Repository Governance   | DevOps Governance       |
+| Workflow Governance     | Platform Engineering    |
+| Security Governance     | Security Review         |
+| Compliance Controls     | Governance Board        |
 
 ### Responsibility Principles
 
@@ -255,9 +253,9 @@ Repository names shall comply with STANDARD-007 Enterprise Naming Conventions.
 
 Approved naming patterns:
 
-- starone-galaxy-*
-- starone-dhs-*
-- starone-bookshow-*
+- starone-galaxy-\*
+- starone-dhs-\*
+- starone-bookshow-\*
 
 Non-compliant repositories shall not be onboarded into the governance model.
 
@@ -300,13 +298,13 @@ All repositories shall include:
 
 Visibility shall be governed according to repository classification.
 
-| Repository Type | Visibility |
-|----------|----------|
-| Platform | Private |
-| Infrastructure | Private |
-| Configuration | Private |
-| Domain Services | Private |
-| Shared Libraries | Private |
+| Repository Type  | Visibility |
+| ---------------- | ---------- |
+| Platform         | Private    |
+| Infrastructure   | Private    |
+| Configuration    | Private    |
+| Domain Services  | Private    |
+| Shared Libraries | Private    |
 
 ---
 
@@ -347,14 +345,14 @@ CODEOWNER approval shall be required for:
 
 ## CODEOWNER Enforcement Matrix
 
-| Area | CODEOWNER Approval Required |
-|----------|----------|
-| Documentation | Yes |
-| Governance | Yes |
-| Security | Yes |
-| Infrastructure | Yes |
-| Platform | Yes |
-| Workflows | Yes |
+| Area           | CODEOWNER Approval Required |
+| -------------- | --------------------------- |
+| Documentation  | Yes                         |
+| Governance     | Yes                         |
+| Security       | Yes                         |
+| Infrastructure | Yes                         |
+| Platform       | Yes                         |
+| Workflows      | Yes                         |
 
 ---
 
@@ -439,15 +437,15 @@ Require Conversation Resolution = TRUE
 
 ## Branch Protection Matrix
 
-| Control | Main | Release |
-|----------|----------|----------|
-| Direct Push Disabled | Yes | Yes |
-| Force Push Disabled | Yes | Yes |
-| Branch Deletion Disabled | Yes | Yes |
-| Pull Request Required | Yes | Yes |
-| Required Reviews | Yes | Yes |
-| CODEOWNER Approval | Yes | Yes |
-| Status Checks | Yes | Yes |
+| Control                  | Main | Release |
+| ------------------------ | ---- | ------- |
+| Direct Push Disabled     | Yes  | Yes     |
+| Force Push Disabled      | Yes  | Yes     |
+| Branch Deletion Disabled | Yes  | Yes     |
+| Pull Request Required    | Yes  | Yes     |
+| Required Reviews         | Yes  | Yes     |
+| CODEOWNER Approval       | Yes  | Yes     |
+| Status Checks            | Yes  | Yes     |
 
 ---
 
@@ -490,30 +488,30 @@ Status checks will be implemented through:
 
 # 9. Governance Control Matrix
 
-| Control Area | Enforcement Mechanism |
-|----------|----------|
-| Repository Ownership | CODEOWNERS |
-| Documentation Compliance | Validation Workflow |
-| Traceability Compliance | Governance Workflow |
-| Pull Request Governance | Branch Protection |
-| Review Governance | Required Review Controls |
-| CODEOWNERS Governance | Required CODEOWNER Approval |
-| Branch Governance | Protected Branch Rules |
-| Security Governance | Security Validation Workflow |
-| Workflow Governance | Required Status Checks |
+| Control Area             | Enforcement Mechanism        |
+| ------------------------ | ---------------------------- |
+| Repository Ownership     | CODEOWNERS                   |
+| Documentation Compliance | Validation Workflow          |
+| Traceability Compliance  | Governance Workflow          |
+| Pull Request Governance  | Branch Protection            |
+| Review Governance        | Required Review Controls     |
+| CODEOWNERS Governance    | Required CODEOWNER Approval  |
+| Branch Governance        | Protected Branch Rules       |
+| Security Governance      | Security Validation Workflow |
+| Workflow Governance      | Required Status Checks       |
 
 ---
 
 # 10. Repository Applicability Matrix
 
-| Repository | Governance Model |
-|----------|----------|
-| starone-galaxy-infra | Full Enforcement |
-| starone-galaxy-config | Full Enforcement |
-| starone-dhs-system | Full Enforcement |
-| starone-bookshow-gateway | Full Enforcement |
+| Repository                | Governance Model |
+| ------------------------- | ---------------- |
+| starone-galaxy-infra      | Full Enforcement |
+| starone-galaxy-config     | Full Enforcement |
+| starone-dhs-system        | Full Enforcement |
+| starone-bookshow-gateway  | Full Enforcement |
 | starone-bookshow-services | Full Enforcement |
-| Shared Libraries | Full Enforcement |
+| Shared Libraries          | Full Enforcement |
 
 ---
 
@@ -552,27 +550,27 @@ Status checks will be implemented through:
 
 # 12. Requirement Traceability Matrix (RTM)
 
-| Requirement ID | Requirement | Configuration Section |
-|----------|----------|----------|
-| S5-I01-FR1 | Governance enforcement controls configured | Sections 3-11 |
-| S5-I01-FR2 | CODEOWNERS enforcement configured | Section 5 |
-| S5-I01-FR3 | Protected branch controls configured | Section 7 |
-| S5-I01-FR4 | Required reviewer controls configured | Section 6 |
-| S5-I01-FR5 | Governance control mappings documented | Section 9 |
+| Requirement ID | Requirement                                | Configuration Section |
+| -------------- | ------------------------------------------ | --------------------- |
+| S5-I01-FR1     | Governance enforcement controls configured | Sections 3-11         |
+| S5-I01-FR2     | CODEOWNERS enforcement configured          | Section 5             |
+| S5-I01-FR3     | Protected branch controls configured       | Section 7             |
+| S5-I01-FR4     | Required reviewer controls configured      | Section 6             |
+| S5-I01-FR5     | Governance control mappings documented     | Section 9             |
 
 ---
 
 # 13. Acceptance Criteria Verification
 
-| Acceptance Criteria | Coverage |
-|----------|----------|
-| AC-01 Governance enforcement configuration documented | Complete |
-| AC-02 CODEOWNERS enforcement configuration defined | Complete |
+| Acceptance Criteria                                     | Coverage |
+| ------------------------------------------------------- | -------- |
+| AC-01 Governance enforcement configuration documented   | Complete |
+| AC-02 CODEOWNERS enforcement configuration defined      | Complete |
 | AC-03 Protected branch governance configuration defined | Complete |
-| AC-04 Required reviewer controls defined | Complete |
-| AC-05 Governance control mappings documented | Complete |
-| AC-06 Architecture review completed | Pending |
-| AC-07 Governance review completed | Pending |
+| AC-04 Required reviewer controls defined                | Complete |
+| AC-05 Governance control mappings documented            | Complete |
+| AC-06 Architecture review completed                     | Pending  |
+| AC-07 Governance review completed                       | Pending  |
 
 ---
 

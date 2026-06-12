@@ -2,35 +2,34 @@
 
 ## Document Metadata
 
-| Field | Value |
-|---|---|
-| Document ID | STANDARD-005 |
-| Domain | Governance |
-| Document Type | Documentation Review & Approval Workflow Controls |
-| Version | 1.0.0 |
-| Author | Sachin Salunke |
-| Status | Draft |
-| Date | 2026-05-01 |
-| Linked Epic | EPIC-ARCH-001 |
-| Linked Story | STORY-ARCH-003 |
-| Approval Status | Pending |
-
+| Field           | Value                                             |
+| --------------- | ------------------------------------------------- |
+| Document ID     | STANDARD-005                                      |
+| Domain          | Governance                                        |
+| Document Type   | Documentation Review & Approval Workflow Controls |
+| Version         | 1.0.0                                             |
+| Author          | Sachin Salunke                                    |
+| Status          | Draft                                             |
+| Date            | 2026-05-01                                        |
+| Linked Epic     | EPIC-ARCH-001                                     |
+| Linked Story    | STORY-ARCH-003                                    |
+| Approval Status | Pending                                           |
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0.0 | Jan 2026 | Sachin Salunke | Initial Review Workflow Standard |
+| Version | Date     | Author         | Description                      |
+| ------- | -------- | -------------- | -------------------------------- |
+| 1.0.0   | Jan 2026 | Sachin Salunke | Initial Review Workflow Standard |
 
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---|---|
-| Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Role                     | Status  |
+| ------------------------ | ------- |
+| Platform Architect       | Pending |
+| Security Review          | Pending |
+| DevOps Governance        | Pending |
 | Documentation Governance | Pending |
 
 ---
@@ -114,33 +113,33 @@ ReviewCycle --> Published
 
 ## Workflow Description
 
-| Stage | Purpose |
-|---|---|
-| Draft | Initial document creation |
-| Peer Review | Quality and completeness validation |
-| Architecture Review | Architecture compliance validation |
-| Security Review | Security and compliance validation |
-| Approval | Governance approval |
-| Published | Official document release |
-| Rejected | Review failed, rework required |
-| Change Request | Modification requested |
-| Review Cycle | Re-review of updated document |
+| Stage               | Purpose                             |
+| ------------------- | ----------------------------------- |
+| Draft               | Initial document creation           |
+| Peer Review         | Quality and completeness validation |
+| Architecture Review | Architecture compliance validation  |
+| Security Review     | Security and compliance validation  |
+| Approval            | Governance approval                 |
+| Published           | Official document release           |
+| Rejected            | Review failed, rework required      |
+| Change Request      | Modification requested              |
+| Review Cycle        | Re-review of updated document       |
+
 ---
 
 # 4. Document Lifecycle States
 
 ## Status Model
 
-| Status | Description |
-|---|---|
-| Draft | Authoring stage |
-| Review | Under formal review |
-| Approved | All approvals completed |
-| Rejected | Review failed, rework required |
-| Published | Official active document |
-| Superseded | Replaced by newer version |
-| Retired | No longer maintained |
-
+| Status     | Description                    |
+| ---------- | ------------------------------ |
+| Draft      | Authoring stage                |
+| Review     | Under formal review            |
+| Approved   | All approvals completed        |
+| Rejected   | Review failed, rework required |
+| Published  | Official active document       |
+| Superseded | Replaced by newer version      |
+| Retired    | No longer maintained           |
 
 ---
 
@@ -166,14 +165,14 @@ Published --> Retired
 
 ## Review Responsibility Matrix
 
-| Stage | Owner |
-|---|---|
-| Draft | Author |
-| Peer Review | Engineering Team |
-| Architecture Review | Platform Architect |
-| Security Review | Security Reviewer |
-| Approval | Governance Board |
-| Publication | Repository Maintainer |
+| Stage               | Owner                 |
+| ------------------- | --------------------- |
+| Draft               | Author                |
+| Peer Review         | Engineering Team      |
+| Architecture Review | Platform Architect    |
+| Security Review     | Security Reviewer     |
+| Approval            | Governance Board      |
+| Publication         | Repository Maintainer |
 
 ---
 
@@ -339,11 +338,11 @@ VersionUpdate --> Publication
 
 ## Change Types
 
-| Change Type | Description |
-|---|---|
-| Major | Significant architectural change |
-| Minor | Content enhancement |
-| Patch | Typographical or formatting update |
+| Change Type | Description                        |
+| ----------- | ---------------------------------- |
+| Major       | Significant architectural change   |
+| Minor       | Content enhancement                |
+| Patch       | Typographical or formatting update |
 
 ---
 
@@ -394,13 +393,13 @@ GovernanceBoard --> Resolution
 
 # 10. Review Service Level Agreements (SLAs)
 
-| Review Type | Target SLA |
-|---|---|
-| Peer Review | 2 Business Days |
+| Review Type         | Target SLA      |
+| ------------------- | --------------- |
+| Peer Review         | 2 Business Days |
 | Architecture Review | 3 Business Days |
-| Security Review | 3 Business Days |
-| Governance Review | 3 Business Days |
-| Final Approval | 2 Business Days |
+| Security Review     | 3 Business Days |
+| Governance Review   | 3 Business Days |
+| Final Approval      | 2 Business Days |
 
 ---
 
@@ -437,27 +436,27 @@ Verify:
 
 # 13. Audit Checklist
 
-| Check | Status |
-|---|---|
-| Peer Review Completed | ☐ |
-| Architecture Review Completed | ☐ |
-| Security Review Completed | ☐ |
-| Governance Review Completed | ☐ |
-| Approval Recorded | ☐ |
-| Publication Authorized | ☐ |
-| Revision History Updated | ☐ |
-| Sign-Off Completed | ☐ |
+| Check                         | Status |
+| ----------------------------- | ------ |
+| Peer Review Completed         | ☐      |
+| Architecture Review Completed | ☐      |
+| Security Review Completed     | ☐      |
+| Governance Review Completed   | ☐      |
+| Approval Recorded             | ☐      |
+| Publication Authorized        | ☐      |
+| Revision History Updated      | ☐      |
+| Sign-Off Completed            | ☐      |
 
 ---
 
 # 14. Compliance & Standards Alignment
 
-| Standard | Application |
-|---|---|
-| ISO/IEC/IEEE 29148 | Documentation Governance |
-| IEEE 1016 | Architecture Reviews |
-| Documentation Compliance Standard | Approval Controls |
-| Internal Governance Standards | Review Workflow |
+| Standard                          | Application              |
+| --------------------------------- | ------------------------ |
+| ISO/IEC/IEEE 29148                | Documentation Governance |
+| IEEE 1016                         | Architecture Reviews     |
+| Documentation Compliance Standard | Approval Controls        |
+| Internal Governance Standards     | Review Workflow          |
 
 ---
 
@@ -465,22 +464,22 @@ Verify:
 
 ## Governance KPIs
 
-| Metric | Target |
-|---|---|
-| Review Completion Rate | 100% |
-| Approval Compliance | 100% |
-| Traceability Compliance | 100% |
-| Audit Readiness | 100% |
+| Metric                  | Target |
+| ----------------------- | ------ |
+| Review Completion Rate  | 100%   |
+| Approval Compliance     | 100%   |
+| Traceability Compliance | 100%   |
+| Audit Readiness         | 100%   |
 
 ---
 
 ## Quality KPIs
 
-| Metric | Target |
-|---|---|
-| Documentation Accuracy | 100% |
-| Review SLA Compliance | ≥95% |
-| Governance Compliance | 100% |
+| Metric                 | Target |
+| ---------------------- | ------ |
+| Documentation Accuracy | 100%   |
+| Review SLA Compliance  | ≥95%   |
+| Governance Compliance  | 100%   |
 
 ---
 
@@ -544,11 +543,11 @@ This document is authoritative for all documentation review and approval activit
 
 # 20. Approval Status
 
-| Review Area | Status |
-|---|---|
-| Architecture Review | Pending |
-| Security Review | Pending |
-| Governance Review | Pending |
+| Review Area          | Status  |
+| -------------------- | ------- |
+| Architecture Review  | Pending |
+| Security Review      | Pending |
+| Governance Review    | Pending |
 | Documentation Review | Pending |
 
 ---

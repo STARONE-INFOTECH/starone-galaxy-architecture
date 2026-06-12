@@ -4,34 +4,34 @@
 
 ## Title Page
 
-| Field | Value |
-|---|---|
-Document ID | HLD-001 |
-Project | StarOne Galaxy |
-Domain | System Architecture |
-Author | Sachin Salunke |
-Date | Jan 2026 |
-Version | 1.0 |
-Status | Draft |
+| Field       | Value               |
+| ----------- | ------------------- |
+| Document ID | HLD-001             |
+| Project     | StarOne Galaxy      |
+| Domain      | System Architecture |
+| Author      | Sachin Salunke      |
+| Date        | Jan 2026            |
+| Version     | 1.0                 |
+| Status      | Draft               |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-1.0 | Jan 2026 | Sachin Salunke | Initial HLD creation |
+| Version | Date     | Author         | Description          |
+| ------- | -------- | -------------- | -------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke | Initial HLD creation |
 
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---|---|
-Platform Architect | Pending |
-Security Review | Pending |
-DevOps Governance | Pending |
-Engineering Lead | Pending |
+| Role               | Status  |
+| ------------------ | ------- |
+| Platform Architect | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
+| Engineering Lead   | Pending |
 
 ---
 
@@ -61,11 +61,11 @@ Covers:
 
 ## 2.1 Architecture Style
 
-- Microservices Architecture  
-- Domain-Driven Design (DDD)  
-- Event-Driven Architecture (Kafka Backbone)  
-- API Gateway Pattern  
-- Saga Pattern (Choreography-based primarily)  
+- Microservices Architecture
+- Domain-Driven Design (DDD)
+- Event-Driven Architecture (Kafka Backbone)
+- API Gateway Pattern
+- Saga Pattern (Choreography-based primarily)
 
 ---
 
@@ -135,22 +135,22 @@ Config --> Booking-Service
 
 ## 4.1 Domain Isolation Strategy
 
-- Each domain is **logically and physically isolated**  
+- Each domain is **logically and physically isolated**
 - Separate:
-  - Database  
-  - Services  
-  - Deployment units  
+  - Database
+  - Services
+  - Deployment units
 
 ---
 
 ## 4.2 Domain Breakdown
 
-| Domain | Type | Description |
-|---|---|---|
-DHS | Enterprise | Order management system |
-Bookshow | Consumer | Ticket booking platform |
-SportStats | Analytics | Data processing system |
-VaultIron | Security | Credential management |
+| Domain     | Type       | Description             |
+| ---------- | ---------- | ----------------------- |
+| DHS        | Enterprise | Order management system |
+| Bookshow   | Consumer   | Ticket booking platform |
+| SportStats | Analytics  | Data processing system  |
+| VaultIron  | Security   | Credential management   |
 
 ---
 
@@ -162,12 +162,12 @@ The StarOne Galaxy ecosystem follows a **domain-specific communication model**, 
 
 ### Communication Model per Domain
 
-| Domain | Communication Type | Justification |
-|---|---|---|
-DHS | Event-Driven (Kafka) + REST | Complex asynchronous workflows |
-Bookshow | REST (Synchronous) | User-driven transactional flows |
-SportStats | API + Batch Processing | Pull-based analytics system |
-VaultIron | REST (Synchronous Only) | Strong consistency & security requirements |
+| Domain     | Communication Type          | Justification                              |
+| ---------- | --------------------------- | ------------------------------------------ |
+| DHS        | Event-Driven (Kafka) + REST | Complex asynchronous workflows             |
+| Bookshow   | REST (Synchronous)          | User-driven transactional flows            |
+| SportStats | API + Batch Processing      | Pull-based analytics system                |
+| VaultIron  | REST (Synchronous Only)     | Strong consistency & security requirements |
 
 ---
 
@@ -214,42 +214,42 @@ Kubernetes --> PostgreSQL
 
 ## 7.1 API Gateway
 
-- Central entry point  
-- JWT authentication  
-- Rate limiting  
-- Routing  
+- Central entry point
+- JWT authentication
+- Rate limiting
+- Routing
 
 ---
 
 ## 7.2 Service Layer
 
-- Stateless microservices  
-- Business logic encapsulation  
-- OpenFeign for inter-service communication  
+- Stateless microservices
+- Business logic encapsulation
+- OpenFeign for inter-service communication
 
 ---
 
 ## 7.3 Data Layer
 
-- PostgreSQL per service  
-- Redis caching layer  
+- PostgreSQL per service
+- Redis caching layer
 
 ---
 
 ## 7.4 Messaging Layer
 
-- Kafka topics per domain  
-- Event-driven workflows  
-- Dead-letter queues  
+- Kafka topics per domain
+- Event-driven workflows
+- Dead-letter queues
 
 ---
 
 # 8. Security Architecture
 
-- JWT Authentication  
-- RBAC Authorization  
-- TLS 1.3 encryption  
-- Secure configuration (JCE encryption)  
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3 encryption
+- Secure configuration (JCE encryption)
 
 ---
 
@@ -257,62 +257,62 @@ Kubernetes --> PostgreSQL
 
 ## 9.1 Saga Pattern
 
-- Choreography-based Saga  
-- Event-driven coordination  
+- Choreography-based Saga
+- Event-driven coordination
 
 ## 9.2 Compensation
 
-- Each service implements compensating transactions  
-- Failure recovery via event rollback  
+- Each service implements compensating transactions
+- Failure recovery via event rollback
 
 ---
 
 # 10. Observability
 
-- Centralized logging  
-- Distributed tracing  
-- Metrics monitoring (Prometheus + Grafana)  
+- Centralized logging
+- Distributed tracing
+- Metrics monitoring (Prometheus + Grafana)
 
 ---
 
 # 11. Scalability & Performance
 
-- Horizontal scaling via Kubernetes  
-- Stateless service design  
-- Load balancing at gateway level  
+- Horizontal scaling via Kubernetes
+- Stateless service design
+- Load balancing at gateway level
 
 ---
 
 # 12. Risks & Mitigation
 
-| Risk | Mitigation |
-|---|---|
-Distributed complexity | Use domain boundaries |
-Event failure | Retry + DLQ |
-Service coupling | Enforce domain isolation |
-Data inconsistency | Saga pattern |
+| Risk                   | Mitigation               |
+| ---------------------- | ------------------------ |
+| Distributed complexity | Use domain boundaries    |
+| Event failure          | Retry + DLQ              |
+| Service coupling       | Enforce domain isolation |
+| Data inconsistency     | Saga pattern             |
 
 ---
 
 # 13. Architecture Decisions (Trace to ADR)
 
-| Decision | ADR |
-|---|---|
-Microservices architecture | ADR-001 |
-Event-driven communication | ADR-002 |
-Domain isolation | ADR-003 |
-Central config store | ADR-004 |
+| Decision                   | ADR     |
+| -------------------------- | ------- |
+| Microservices architecture | ADR-001 |
+| Event-driven communication | ADR-002 |
+| Domain isolation           | ADR-003 |
+| Central config store       | ADR-004 |
 
 ---
 
 # 14. Traceability Matrix (HLD Level)
 
-| Requirement | Source |
-|---|---|
-Architecture Style | SRS |
-Domain Isolation | SRS |
-Event Integration | SRS |
-Security | SRS |
+| Requirement        | Source |
+| ------------------ | ------ |
+| Architecture Style | SRS    |
+| Domain Isolation   | SRS    |
+| Event Integration  | SRS    |
+| Security           | SRS    |
 
 ---
 
@@ -322,15 +322,14 @@ This HLD defines a **scalable, modular, and governance-driven architecture** for
 
 It establishes:
 
-- Domain-driven structure  
-- Event-driven integration  
-- Cloud-native deployment model  
+- Domain-driven structure
+- Event-driven integration
+- Cloud-native deployment model
 
 This document serves as the foundation for:
 
-- Low-Level Design (LLD)  
-- Service implementation  
-- Infrastructure provisioning  
+- Low-Level Design (LLD)
+- Service implementation
+- Infrastructure provisioning
 
 ---
-
