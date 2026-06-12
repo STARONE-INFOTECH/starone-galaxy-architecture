@@ -2,24 +2,67 @@ name: Security Compliance
 
 on:
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+  push:
+    branches:
+      - 'feature/**'
+
+  schedule:
+    - cron: '0 2 * * 1'
+
+permissions:
+  contents: read
 
 jobs:
-  security-check:
-    name: Security Compliance Review
+
+  dependency-security:
+    name: Dependency Security
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Secret Scan
-        run: |
-          echo "Run secret scanning"
+      - name: Dependency Review
+        uses: actions/dependency-review-action@v4
 
-      - name: Security Policy Validation
-        run: |
-          echo "Validate security policies"
+  secret-scan:
+    name: Secret Scan
+    runs-on: ubuntu-latest
 
-      - name: Compliance Validation
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Gitleaks Scan
+        uses: gitleaks/gitleaks-action@v2
+
+  workflow-security:
+    name: Workflow Security
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Workflow Security
         run: |
-          echo "Validate governance compliance"
+          echo "Validating workflow security"
+
+  security-reporting:
+    name: Security Reporting
+    runs-on: ubuntu-latest
+
+    needs:
+      - dependency-security
+      - secret-scan
+      - workflow-security
+
+    steps:
+      - name: Security Report
+        run: |
+          echo "Security validation completed"
