@@ -71,14 +71,6 @@ List impacted requirements
 
 ---
 
-### Requirements Impacted
-
-```text
-List impacted requirements
-```
-
----
-
 ## Documentation Impact
 
 - [ ] No documentation changes required
