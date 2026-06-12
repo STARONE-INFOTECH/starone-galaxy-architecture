@@ -35,6 +35,7 @@ jobs:
 
   dependency-security:
     name: Dependency Security
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
 
     steps:
