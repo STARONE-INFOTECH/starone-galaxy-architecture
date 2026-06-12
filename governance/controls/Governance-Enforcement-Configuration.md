@@ -126,7 +126,7 @@ Controls:
 - Repository Visibility
 - Repository Metadata
 
-#### Repository Naming
+**Repository Naming**
 
 Repository names shall comply with STANDARD-007 Enterprise Naming Conventions.
 
@@ -261,7 +261,7 @@ Non-compliant repositories shall not be onboarded into the governance model.
 
 ---
 
-### Repository Governance
+**Repository Governance**
 
 - [ ] Repository naming compliant
 - [ ] Repository ownership configured
