@@ -5,6 +5,9 @@
 ## Title Page
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 | Field       | Value                            |
 | ----------- | -------------------------------- |
 | Standard ID | STANDARD-004                     |
@@ -14,6 +17,7 @@
 | Date        | Jan 2026                         |
 | Version     | 1.0                              |
 | Status      | Superseded                       |
+<<<<<<< HEAD
 =======
 | Field | Value |
 |---|---|
@@ -25,6 +29,8 @@
 | Version | 1.0 |
 | Status | Superseded |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 

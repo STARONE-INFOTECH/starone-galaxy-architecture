@@ -48,10 +48,14 @@ jobs:
         run: |
           echo "Validating Mermaid diagrams..."
 <<<<<<< HEAD
+<<<<<<< HEAD
           grep -r 'mermaid' . --include="*.md"  || true
 =======
           grep -r "```mermaid" . || true
 >>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
+=======
+          grep -r 'mermaid' . --include="*.md"  || true
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
   commit-validation:
     name: Commit Validation
@@ -91,6 +95,7 @@ jobs:
       - name: Validate Issue Templates
         run: |
 <<<<<<< HEAD
+<<<<<<< HEAD
           test -f .github/ISSUE_TEMPLATES/story.yml
           test -f .github/ISSUE_TEMPLATES/task.yml
           test -f .github/ISSUE_TEMPLATES/bug.yml
@@ -101,3 +106,9 @@ jobs:
           test -f .github/ISSUE_TEMPLATE/bug.yml
           test -f .github/ISSUE_TEMPLATE/enhancement.yml
 >>>>>>> 8f6981a (feat(governance): implement S5-I04 governance validation pipeline)
+=======
+          test -f .github/ISSUE_TEMPLATES/story.yml
+          test -f .github/ISSUE_TEMPLATES/task.yml
+          test -f .github/ISSUE_TEMPLATES/bug.yml
+          test -f .github/ISSUE_TEMPLATES/enhancement.yml
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)

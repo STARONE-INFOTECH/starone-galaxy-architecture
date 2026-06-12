@@ -5,6 +5,9 @@
 ## Title Page
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 | Field         | Value                                                |
 | ------------- | ---------------------------------------------------- |
 | Document ID   | GOV-ISSUE-001                                        |
@@ -17,6 +20,7 @@
 | Date          | 2026                                                 |
 | Version       | 1.0                                                  |
 | Status        | Draft                                                |
+<<<<<<< HEAD
 =======
 | Field | Value |
 |----------|----------|
@@ -31,11 +35,14 @@
 | Version | 1.0 |
 | Status | Draft |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
 # Revision History
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 | Version | Date | Author         | Description                       |
 | ------- | ---- | -------------- | --------------------------------- |
@@ -45,11 +52,17 @@
 |----------|----------|----------|----------|
 | 1.0 | 2026 | Sachin Salunke | Initial Issue Governance Document |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+| Version | Date | Author         | Description                       |
+| ------- | ---- | -------------- | --------------------------------- |
+| 1.0     | 2026 | Sachin Salunke | Initial Issue Governance Document |
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
 # Sign-Off Table
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 | Role               | Status  |
 | ------------------ | ------- |
@@ -63,6 +76,13 @@
 | Security Review | Pending |
 | DevOps Governance | Pending |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+| Role               | Status  |
+| ------------------ | ------- |
+| Platform Architect | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
@@ -175,6 +195,9 @@ All issues shall:
 ## Governance Responsibilities
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 | Area               | Responsibility                              |
 | ------------------ | ------------------------------------------- |
 | Issue Author       | Complete required metadata and traceability |
@@ -182,6 +205,7 @@ All issues shall:
 | DevOps Governance  | Validate governance compliance              |
 | Platform Architect | Validate architecture-related work items    |
 | Repository Owner   | Maintain issue quality and consistency      |
+<<<<<<< HEAD
 =======
 | Area | Responsibility |
 |----------|----------|
@@ -191,12 +215,17 @@ All issues shall:
 | Platform Architect | Validate architecture-related work items |
 | Repository Owner | Maintain issue quality and consistency |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
 # 5. Standard Issue Types
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 | Type        | Purpose                             |
 | ----------- | ----------------------------------- |
 | Story       | Business or architecture capability |
@@ -205,6 +234,7 @@ All issues shall:
 | Enhancement | Improvement request                 |
 | Governance  | Governance work item                |
 | ADR         | Architecture decision proposal      |
+<<<<<<< HEAD
 =======
 | Type | Purpose |
 |----------|----------|
@@ -215,6 +245,8 @@ All issues shall:
 | Governance | Governance work item |
 | ADR | Architecture decision proposal |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
@@ -252,6 +284,9 @@ Traceability
 ## Metadata Requirements
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 | Field               | Required    |
 | ------------------- | ----------- |
 | Type                | Yes         |
@@ -264,6 +299,7 @@ Traceability
 | Acceptance Criteria | Yes         |
 | Definition of Done  | Yes         |
 | Traceability        | Yes         |
+<<<<<<< HEAD
 =======
 | Field | Required |
 |----------|----------|
@@ -278,6 +314,8 @@ Traceability
 | Definition of Done | Yes |
 | Traceability | Yes |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
@@ -394,6 +432,9 @@ The issue owner shall verify:
 # 10. Governance Validation Matrix
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 | Control                     | Required |
 | --------------------------- | -------- |
 | Template Used               | Yes      |
@@ -402,6 +443,7 @@ The issue owner shall verify:
 | Acceptance Criteria Present | Yes      |
 | Definition of Done Present  | Yes      |
 | Metadata Complete           | Yes      |
+<<<<<<< HEAD
 =======
 | Control | Required |
 |----------|----------|
@@ -412,6 +454,8 @@ The issue owner shall verify:
 | Definition of Done Present | Yes |
 | Metadata Complete | Yes |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
@@ -465,6 +509,9 @@ Governance validation ensures:
 # 12. Requirement Traceability Matrix (RTM)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 | Requirement ID | Requirement                                         | Coverage Section |
 | -------------- | --------------------------------------------------- | ---------------- |
 | S5-I03-FR1     | Standard issue templates shall be created           | Sections 3, 5    |
@@ -472,6 +519,7 @@ Governance validation ensures:
 | S5-I03-FR3     | Traceability fields shall be required               | Section 7        |
 | S5-I03-FR4     | Acceptance criteria structure shall be standardized | Section 8        |
 | S5-I03-FR5     | Definition of Done section shall be included        | Section 9        |
+<<<<<<< HEAD
 =======
 | Requirement ID | Requirement | Coverage Section |
 |----------|----------|----------|
@@ -481,6 +529,8 @@ Governance validation ensures:
 | S5-I03-FR4 | Acceptance criteria structure shall be standardized | Section 8 |
 | S5-I03-FR5 | Definition of Done section shall be included | Section 9 |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
@@ -522,7 +572,11 @@ Governance validation ensures:
 This document establishes the Issue Governance baseline for the StarOne Galaxy ecosystem.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 It defines governance requirements for issue creation, metadata management, traceability, acceptance criteria, Definition of Done, and governance validation to ensure all work items are consistently managed, traceable, auditable, and governance compliant.
 =======
 It defines governance requirements for issue creation, metadata management, traceability, acceptance criteria, Definition of Done, and governance validation to ensure all work items are consistently managed, traceable, auditable, and governance compliant.
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+It defines governance requirements for issue creation, metadata management, traceability, acceptance criteria, Definition of Done, and governance validation to ensure all work items are consistently managed, traceable, auditable, and governance compliant.
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)

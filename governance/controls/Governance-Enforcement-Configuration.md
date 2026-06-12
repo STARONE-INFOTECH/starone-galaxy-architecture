@@ -254,6 +254,7 @@ Repository names shall comply with STANDARD-007 Enterprise Naming Conventions.
 Approved naming patterns:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - starone-galaxy-\*
 - starone-dhs-\*
 - starone-bookshow-\*
@@ -262,6 +263,11 @@ Approved naming patterns:
 - starone-dhs-*
 - starone-bookshow-*
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+- starone-galaxy-\*
+- starone-dhs-\*
+- starone-bookshow-\*
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 Non-compliant repositories shall not be onboarded into the governance model.
 
@@ -511,12 +517,16 @@ Status checks will be implemented through:
 # 10. Repository Applicability Matrix
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 | Repository                | Governance Model |
 | ------------------------- | ---------------- |
 | starone-galaxy-infra      | Full Enforcement |
 | starone-galaxy-config     | Full Enforcement |
 | starone-dhs-system        | Full Enforcement |
 | starone-bookshow-gateway  | Full Enforcement |
+<<<<<<< HEAD
 | starone-bookshow-services | Full Enforcement |
 | Shared Libraries          | Full Enforcement |
 =======
@@ -529,6 +539,10 @@ Status checks will be implemented through:
 | starone-bookshow-services | Full Enforcement |
 | Shared Libraries | Full Enforcement |
 >>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+| starone-bookshow-services | Full Enforcement |
+| Shared Libraries          | Full Enforcement |
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
