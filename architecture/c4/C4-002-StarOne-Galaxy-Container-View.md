@@ -6,39 +6,39 @@
 
 # Metadata
 
-| Field | Value |
-|---|---|
-| Document ID | C4-002 |
+| Field         | Value                         |
+| ------------- | ----------------------------- |
+| Document ID   | C4-002                        |
 | Document Name | StarOne Galaxy Container View |
-| Repository | starone-galaxy-architecture |
-| Domain | Architecture |
-| Document Type | C4 Level 2 Container Diagram |
-| Version | 1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Date | 2026-05-01 |
-| Linked Epic | EPIC-ARCH-001 |
-| Linked Story | STORY-ARCH-002 |
-| Linked Issue | S2-I04 |
-| Requirement | S2-FR-003 |
+| Repository    | starone-galaxy-architecture   |
+| Domain        | Architecture                  |
+| Document Type | C4 Level 2 Container Diagram  |
+| Version       | 1.0.0                         |
+| Status        | Draft                         |
+| Author        | Sachin Salunke                |
+| Date          | 2026-05-01                    |
+| Linked Epic   | EPIC-ARCH-001                 |
+| Linked Story  | STORY-ARCH-002                |
+| Linked Issue  | S2-I04                        |
+| Requirement   | S2-FR-003                     |
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | 2026-05-01 | Sachin Salunke | Initial Container View |
+| Version | Date       | Author         | Description            |
+| ------- | ---------- | -------------- | ---------------------- |
+| 1.0     | 2026-05-01 | Sachin Salunke | Initial Container View |
 
 ---
 
 # Sign-Off
 
-| Role | Status |
-|---|---|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
 
 ---
 
@@ -338,13 +338,13 @@ README
 
 # 7. Architectural Decisions
 
-| ADR | Decision |
-|---|---|
-| ADR-001 | Documentation-as-Code |
-| ADR-002 | Platform First Governance |
+| ADR     | Decision                             |
+| ------- | ------------------------------------ |
+| ADR-001 | Documentation-as-Code                |
+| ADR-002 | Platform First Governance            |
 | ADR-003 | Repository Navigation Through README |
-| ADR-004 | Centralized Architecture Governance |
-| ADR-005 | Repository Automation Governance |
+| ADR-004 | Centralized Architecture Governance  |
+| ADR-005 | Repository Automation Governance     |
 
 ---
 
@@ -362,32 +362,32 @@ The following assumptions apply:
 
 # 9. References
 
-| Artifact | Purpose |
-|---|---|
-| README.md | Ecosystem Entry Point |
-| C4-001-StarOne-Galaxy-System-Context.md | System Context Model |
-| Domain Dependency Map | Domain Relationships |
-| Integration Architecture | Cross-Domain Integrations |
-| Governance Standards | Governance Controls |
-| Architecture Decision Records | Architecture Decisions |
+| Artifact                                | Purpose                   |
+| --------------------------------------- | ------------------------- |
+| README.md                               | Ecosystem Entry Point     |
+| C4-001-StarOne-Galaxy-System-Context.md | System Context Model      |
+| Domain Dependency Map                   | Domain Relationships      |
+| Integration Architecture                | Cross-Domain Integrations |
+| Governance Standards                    | Governance Controls       |
+| Architecture Decision Records           | Architecture Decisions    |
 
 ---
 
 # 10. Traceability
 
-| Epic | Story | Issue | Requirement |
-|---|---|---|---|
-| EPIC-ARCH-001 | STORY-ARCH-002 | S2-I04 | S2-FR-003 |
+| Epic          | Story          | Issue  | Requirement |
+| ------------- | -------------- | ------ | ----------- |
+| EPIC-ARCH-001 | STORY-ARCH-002 | S2-I04 | S2-FR-003   |
 
 ---
 
 # Related Deliverables
 
-| Deliverable ID | Deliverable |
-|---|---|
-| D1 | C4-002 StarOne Galaxy Container View |
-| D2 | Mermaid Container Diagram |
-| D3 | Repository Navigation Mapping |
+| Deliverable ID | Deliverable                          |
+| -------------- | ------------------------------------ |
+| D1             | C4-002 StarOne Galaxy Container View |
+| D2             | Mermaid Container Diagram            |
+| D3             | Repository Navigation Mapping        |
 
 ---
 

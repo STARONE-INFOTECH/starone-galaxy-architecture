@@ -4,33 +4,33 @@
 
 ## Title Page
 
-| Field | Value |
-|---|---|
-| Document ID | C4-003 |
-| Project | StarOne Galaxy |
-| View | C4 Level 3 - Deployment View |
-| Author | Sachin Salunke |
-| Date | Jan 2026 |
-| Version | 1.0 |
-| Status | Draft |
+| Field       | Value                        |
+| ----------- | ---------------------------- |
+| Document ID | C4-003                       |
+| Project     | StarOne Galaxy               |
+| View        | C4 Level 3 - Deployment View |
+| Author      | Sachin Salunke               |
+| Date        | Jan 2026                     |
+| Version     | 1.0                          |
+| Status      | Draft                        |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial Deployment Architecture |
+| Version | Date     | Author         | Description                     |
+| ------- | -------- | -------------- | ------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke | Initial Deployment Architecture |
 
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---|---|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
 
 ---
 
@@ -276,8 +276,8 @@ The deployment architecture follows:
 
 # 9. Traceability
 
-| Epic | Story | Issue |
-|---|---|---|
+| Epic          | Story          | Issue  |
+| ------------- | -------------- | ------ |
 | EPIC-ARCH-001 | STORY-ARCH-004 | S4-I01 |
 
 ---

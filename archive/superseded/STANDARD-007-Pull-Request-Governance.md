@@ -4,33 +4,33 @@
 
 ## Title Page
 
-| Field | Value |
-|---|---|
-| Standard ID | STANDARD-004 |
-| Title | Pull Request Governance Standard |
-| Domain | Governance |
-| Author | Sachin Salunke |
-| Date | Jan 2026 |
-| Version | 1.0 |
-| Status | Superseded |
+| Field       | Value                            |
+| ----------- | -------------------------------- |
+| Standard ID | STANDARD-004                     |
+| Title       | Pull Request Governance Standard |
+| Domain      | Governance                       |
+| Author      | Sachin Salunke                   |
+| Date        | Jan 2026                         |
+| Version     | 1.0                              |
+| Status      | Superseded                       |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial PR Governance Standard |
+| Version | Date     | Author         | Description                    |
+| ------- | -------- | -------------- | ------------------------------ |
+| 1.0     | Jan 2026 | Sachin Salunke | Initial PR Governance Standard |
 
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---|---|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| DevOps Governance | Pending |
-| Security Review | Pending |
+| DevOps Governance  | Pending |
+| Security Review    | Pending |
 
 ---
 
@@ -155,8 +155,8 @@ Required:
 
 # 10. Traceability
 
-| Epic | Story | Issue |
-|---|---|---|
+| Epic     | Story          | Issue  |
+| -------- | -------------- | ------ |
 | EPIC-001 | STORY-ARCH-004 | S4-I02 |
 
 Coverage: 100%

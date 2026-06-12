@@ -4,14 +4,14 @@
 
 ## Title Page
 
-| Field | Value |
-|---|---|
-Document ID | ADR-002 |
-Project | StarOne Galaxy |
-Decision | Architecture Style Selection |
-Author | Sachin Salunke |
-Date | Jan 2026 |
-Status | Accepted |
+| Field       | Value                        |
+| ----------- | ---------------------------- |
+| Document ID | ADR-002                      |
+| Project     | StarOne Galaxy               |
+| Decision    | Architecture Style Selection |
+| Author      | Sachin Salunke               |
+| Date        | Jan 2026                     |
+| Status      | Accepted                     |
 
 ---
 
@@ -19,17 +19,17 @@ Status | Accepted |
 
 StarOne Galaxy is designed as a **multi-domain ecosystem** consisting of independent systems:
 
-- DHS (Enterprise OMS)  
-- Bookshow (Consumer Platform)  
-- SportStats (Analytics System)  
-- VaultIron (Security System)  
+- DHS (Enterprise OMS)
+- Bookshow (Consumer Platform)
+- SportStats (Analytics System)
+- VaultIron (Security System)
 
 The platform must support:
 
-- Independent development and deployment  
-- Domain-level isolation  
-- Scalability across multiple systems  
-- Governance and standardization  
+- Independent development and deployment
+- Domain-level isolation
+- Scalability across multiple systems
+- Governance and standardization
 
 ---
 
@@ -44,11 +44,11 @@ flexibility, and strict domain isolation across the ecosystem?
 
 ### Key Considerations
 
-- Multiple independent domains  
-- Need for scalability and resilience  
-- Avoiding tight coupling between systems  
-- Supporting platform-driven infrastructure  
-- Enabling long-term evolution  
+- Multiple independent domains
+- Need for scalability and resilience
+- Avoiding tight coupling between systems
+- Supporting platform-driven infrastructure
+- Enabling long-term evolution
 
 ---
 
@@ -66,9 +66,9 @@ Microservices Architecture combined with Domain-Driven Isolation
 
 Each domain will be composed of **independent, loosely coupled services** that:
 
-- Encapsulate business capabilities  
-- Are independently deployable  
-- Communicate via well-defined interfaces (REST / Events)  
+- Encapsulate business capabilities
+- Are independently deployable
+- Communicate via well-defined interfaces (REST / Events)
 
 ---
 
@@ -76,9 +76,9 @@ Each domain will be composed of **independent, loosely coupled services** that:
 
 The system will enforce strict domain boundaries:
 
-- No shared database across domains  
-- No direct dependency between domains  
-- Each domain manages its own services, data, and lifecycle  
+- No shared database across domains
+- No direct dependency between domains
+- Each domain manages its own services, data, and lifecycle
 
 ---
 
@@ -86,9 +86,9 @@ The system will enforce strict domain boundaries:
 
 All domains will run on a **shared platform (Control Plane)** that provides:
 
-- Kubernetes orchestration  
-- CI/CD pipelines  
-- Centralized configuration  
+- Kubernetes orchestration
+- CI/CD pipelines
+- Centralized configuration
 
 This ensures:
 
@@ -100,9 +100,9 @@ Shared infrastructure + Isolated domain behavior
 
 ### 2.4 Communication Model
 
-- Default: **Synchronous REST communication**  
-- Event-driven (Kafka): **only where required (e.g., DHS workflows)**  
-- No forced cross-domain communication  
+- Default: **Synchronous REST communication**
+- Event-driven (Kafka): **only where required (e.g., DHS workflows)**
+- No forced cross-domain communication
 
 ---
 
@@ -117,10 +117,10 @@ Single application containing all domains
 
 **Rejected Because:**
 
-- No scalability  
-- Tight coupling  
-- Difficult to maintain  
-- Limits independent evolution  
+- No scalability
+- Tight coupling
+- Difficult to maintain
+- Limits independent evolution
 
 ---
 
@@ -131,9 +131,9 @@ Multiple services but tightly coupled
 
 **Rejected Because:**
 
-- Hidden dependencies  
-- Difficult to scale independently  
-- Violates domain isolation principles  
+- Hidden dependencies
+- Difficult to scale independently
+- Violates domain isolation principles
 
 ---
 
@@ -144,9 +144,9 @@ All services communicate via Kafka
 
 **Rejected Because:**
 
-- Over-engineering  
-- Increased complexity  
-- Not suitable for all domains (e.g., VaultIron)  
+- Over-engineering
+- Increased complexity
+- Not suitable for all domains (e.g., VaultIron)
 
 ---
 
@@ -157,10 +157,10 @@ Independent microservices grouped by domain with controlled communication
 
 **Reasons:**
 
-- High scalability  
-- Strong isolation  
-- Flexible communication patterns  
-- Aligns with platform architecture  
+- High scalability
+- Strong isolation
+- Flexible communication patterns
+- Aligns with platform architecture
 
 ---
 
@@ -170,29 +170,29 @@ Independent microservices grouped by domain with controlled communication
 
 ### ✅ Positive
 
-- Independent scalability per domain  
-- Clear separation of concerns  
-- Improved fault isolation  
-- Flexibility in choosing communication patterns  
-- Enables parallel development  
+- Independent scalability per domain
+- Clear separation of concerns
+- Improved fault isolation
+- Flexibility in choosing communication patterns
+- Enables parallel development
 
 ---
 
 ### ⚠️ Negative
 
-- Increased operational complexity  
-- Requires strong governance  
-- More infrastructure overhead  
+- Increased operational complexity
+- Requires strong governance
+- More infrastructure overhead
 
 ---
 
 ## 5. Trade-offs
 
-| Trade-off | Decision |
-|---|---|
-Simplicity vs Scalability | Chose scalability |
-Coupling vs Isolation | Chose isolation |
-Uniformity vs Flexibility | Chose flexible communication |
+| Trade-off                 | Decision                     |
+| ------------------------- | ---------------------------- |
+| Simplicity vs Scalability | Chose scalability            |
+| Coupling vs Isolation     | Chose isolation              |
+| Uniformity vs Flexibility | Chose flexible communication |
 
 ---
 
@@ -202,36 +202,36 @@ Uniformity vs Flexibility | Chose flexible communication |
 
 ### Affects:
 
-- System architecture (HLD)  
-- Service design (LLD)  
-- Integration strategy  
-- Deployment model  
+- System architecture (HLD)
+- Service design (LLD)
+- Integration strategy
+- Deployment model
 
 ---
 
 ### Enables:
 
-- Domain-driven design  
-- Platform engineering model  
-- Independent service evolution  
+- Domain-driven design
+- Platform engineering model
+- Independent service evolution
 
 ---
 
 ## 7. Architecture Principles Enforced
 
-- Domain isolation  
-- Database per service  
-- API-first design  
-- Stateless services  
-- Loose coupling  
+- Domain isolation
+- Database per service
+- API-first design
+- Stateless services
+- Loose coupling
 
 ---
 
 ## 8. Related Artifacts
 
-- ADR-001 Repository Strategy  
-- SRS-001 StarOne Galaxy  
-- HLD-001 Global Architecture  
+- ADR-001 Repository Strategy
+- SRS-001 StarOne Galaxy
+- HLD-001 Global Architecture
 
 ---
 

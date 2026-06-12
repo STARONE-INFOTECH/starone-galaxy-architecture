@@ -7,15 +7,15 @@
 > **Author:** Sachin Salunke  
 > **Version:** 1.0  
 > **Date:** Jan 2026  
-> **Status:** Approved Draft  
+> **Status:** Approved Draft
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial contribution governance baseline |
+| Version | Date     | Author         | Description                              |
+| ------- | -------- | -------------- | ---------------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke | Initial contribution governance baseline |
 
 ---
 
@@ -59,9 +59,9 @@ Covers:
 
 ## Primary Branches
 
-| Branch | Purpose |
-|---|---|
-| main | Production-ready baseline |
+| Branch  | Purpose                   |
+| ------- | ------------------------- |
+| main    | Production-ready baseline |
 | develop | Active integration branch |
 
 ---
@@ -134,14 +134,14 @@ type(scope): summary
 
 ## Approved Types
 
-| Type | Usage |
-|---|---|
-| feat | New feature |
-| docs | Documentation |
-| fix | Bug fix |
-| ci | CI/CD |
-| chore | Governance/config |
-| refactor | Refactoring |
+| Type     | Usage             |
+| -------- | ----------------- |
+| feat     | New feature       |
+| docs     | Documentation     |
+| fix      | Bug fix           |
+| ci       | CI/CD             |
+| chore    | Governance/config |
+| refactor | Refactoring       |
 
 ---
 
@@ -214,12 +214,12 @@ Reason:
 
 ## Mandatory Reviews
 
-| Repository Area | Reviewer |
-|---|---|
-| Architecture | Platform Architect |
-| Security | Security Reviewer |
-| CI/CD | DevOps Governance |
-| Standards | Governance Reviewer |
+| Repository Area | Reviewer            |
+| --------------- | ------------------- |
+| Architecture    | Platform Architect  |
+| Security        | Security Reviewer   |
+| CI/CD           | DevOps Governance   |
+| Standards       | Governance Reviewer |
 
 ---
 
@@ -257,14 +257,14 @@ Merge --> Close
 
 # 11. Project Workflow Governance
 
-| Status | Meaning |
-|---|---|
-| Backlog | Planned |
-| Ready | Sprint-ready |
+| Status      | Meaning       |
+| ----------- | ------------- |
+| Backlog     | Planned       |
+| Ready       | Sprint-ready  |
 | In Progress | Active branch |
-| Review | PR Open |
-| Done | PR Merged |
-| Closed | Released |
+| Review      | PR Open       |
+| Done        | PR Merged     |
+| Closed      | Released      |
 
 ---
 
@@ -293,30 +293,30 @@ Deviation from governance standards requires:
 
 # 14. Related Standards
 
-| Standard | Purpose |
-|---|---|
-| STANDARD-001 | Naming Conventions |
-| CODEOWNERS | Ownership Governance |
+| Standard        | Purpose              |
+| --------------- | -------------------- |
+| STANDARD-001    | Naming Conventions   |
+| CODEOWNERS      | Ownership Governance |
 | CONTRIBUTING.md | Contributor Workflow |
-| ADR-001 | Repository Taxonomy |
+| ADR-001         | Repository Taxonomy  |
 
 ---
 
 # 15. Approval
 
-| Role | Status |
-|---|---|
+| Role               | Status   |
+| ------------------ | -------- |
 | Platform Architect | Approved |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending  |
+| DevOps Governance  | Pending  |
 
 ---
 
 # 16. Traceability
 
-| Epic | Story | Issue | Requirement |
-|---|---|---|---|
-| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I05 | S1-FR-005 |
+| Epic          | Story          | Issue  | Requirement |
+| ------------- | -------------- | ------ | ----------- |
+| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I05 | S1-FR-005   |
 
 Coverage: 100%
 

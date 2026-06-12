@@ -2,36 +2,36 @@
 
 ## Document Metadata
 
-| Field | Value |
-|---|---|
-| Document ID | STANDARD-004 |
-| Domain | Governance |
-| Document Type | Mermaid Modeling Standard |
-| Version | 1.0.0 |
-| Author | Sachin Salunke |
-| Status | Draft |
-| Date | 2026-05-01 |
-| Linked Epic | EPIC-ARCH-001 |
-| Linked Story | STORY-ARCH-003 |
-| Approval Status | Approved |
+| Field           | Value                     |
+| --------------- | ------------------------- |
+| Document ID     | STANDARD-004              |
+| Domain          | Governance                |
+| Document Type   | Mermaid Modeling Standard |
+| Version         | 1.0.0                     |
+| Author          | Sachin Salunke            |
+| Status          | Draft                     |
+| Date            | 2026-05-01                |
+| Linked Epic     | EPIC-ARCH-001             |
+| Linked Story    | STORY-ARCH-003            |
+| Approval Status | Approved                  |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0.0 | Jan 2026 | Sachin Salunke | Initial Mermaid Modeling Standard |
+| Version | Date     | Author         | Description                       |
+| ------- | -------- | -------------- | --------------------------------- |
+| 1.0.0   | Jan 2026 | Sachin Salunke | Initial Mermaid Modeling Standard |
 
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---|---|
-| Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Role                     | Status  |
+| ------------------------ | ------- |
+| Platform Architect       | Pending |
+| Security Review          | Pending |
+| DevOps Governance        | Pending |
 | Documentation Governance | Pending |
 
 ---
@@ -56,6 +56,7 @@ This standard applies to all architecture and engineering documentation produced
 # 2. Scope
 
 This standard applies to:
+
 - BRD Documents
 - PRD Documents
 - FRD Documents
@@ -118,14 +119,14 @@ Visual models are governed architecture artifacts and must follow approved stand
 
 # 4. Approved Diagram Types
 
-| Diagram Type | Purpose |
-|---|---|
-| Flowchart | Process flows |
-| Sequence Diagram | Service interactions |
-| ER Diagram | Data modeling |
-| State Diagram | State transitions |
-| Journey Diagram | User journeys |
-| Class Diagram | Logical design |
+| Diagram Type      | Purpose                     |
+| ----------------- | --------------------------- |
+| Flowchart         | Process flows               |
+| Sequence Diagram  | Service interactions        |
+| ER Diagram        | Data modeling               |
+| State Diagram     | State transitions           |
+| Journey Diagram   | User journeys               |
+| Class Diagram     | Logical design              |
 | C4 Context View   | System Context Architecture |
 | C4 Container View | Container Architecture      |
 
@@ -133,13 +134,13 @@ Visual models are governed architecture artifacts and must follow approved stand
 
 ## Recommended Usage
 
-| Artifact | Diagram Types |
-|---|---|
-| ADR | Flowchart |
-| HLD | Flowchart, Sequence |
-| SRS | Flowchart, Sequence, State |
-| RTM | Flowchart |
-| LLD | Sequence, Class, State |
+| Artifact | Diagram Types              |
+| -------- | -------------------------- |
+| ADR      | Flowchart                  |
+| HLD      | Flowchart, Sequence        |
+| SRS      | Flowchart, Sequence, State |
+| RTM      | Flowchart                  |
+| LLD      | Sequence, Class, State     |
 
 ---
 
@@ -278,6 +279,7 @@ User onboarding
 Customer booking flows
 Operational workflows
 ```
+
 ---
 
 ## 5.7 Class Diagrams
@@ -287,6 +289,7 @@ Use:
 ```mermaid
 classDiagram
 ```
+
 Purpose:
 
 ```text
@@ -589,26 +592,26 @@ Every Mermaid diagram shall:
 
 # 14. Audit Checklist
 
-| Check | Status |
-|---|---|
-| Approved Diagram Type Used | ☐ |
-| Layout Standard Followed | ☐ |
-| Naming Standard Followed | ☐ |
-| Domain Boundaries Defined | ☐ |
-| Reusable Pattern Applied | ☐ |
-| Governance Review Completed | ☐ |
+| Check                       | Status |
+| --------------------------- | ------ |
+| Approved Diagram Type Used  | ☐      |
+| Layout Standard Followed    | ☐      |
+| Naming Standard Followed    | ☐      |
+| Domain Boundaries Defined   | ☐      |
+| Reusable Pattern Applied    | ☐      |
+| Governance Review Completed | ☐      |
 
 ---
 
 # 15. Compliance & Standards Alignment
 
-| Standard | Application |
-|---|---|
-| IEEE 1016 | Architecture Visualization |
-| C4 Model | Architecture Views |
-| Mermaid Documentation | Diagram Syntax |
-| Internal Governance Standards | Modeling Controls |
-| ISO/IEC/IEEE 29148 | Requirements Visualization |
+| Standard                      | Application                |
+| ----------------------------- | -------------------------- |
+| IEEE 1016                     | Architecture Visualization |
+| C4 Model                      | Architecture Views         |
+| Mermaid Documentation         | Diagram Syntax             |
+| Internal Governance Standards | Modeling Controls          |
+| ISO/IEC/IEEE 29148            | Requirements Visualization |
 
 ---
 
@@ -657,11 +660,11 @@ This document is authoritative for all Mermaid-based architecture diagrams acros
 
 # 19. Approval Status
 
-| Review Area | Status |
-|---|---|
-| Architecture Review | Pending |
-| Security Review | Pending |
-| Governance Review | Pending |
+| Review Area          | Status  |
+| -------------------- | ------- |
+| Architecture Review  | Pending |
+| Security Review      | Pending |
+| Governance Review    | Pending |
 | Documentation Review | Pending |
 
 ---

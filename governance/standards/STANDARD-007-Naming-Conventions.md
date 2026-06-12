@@ -2,41 +2,41 @@
 
 # Document Metadata
 
-| Field | Description |
-|---------|---------|
-| Document ID | STANDARD-007 |
-| Document Title | Enterprise Naming Conventions |
-| Domain | Governance Standards |
-| Document Type | Governance Standard |
-| Repository | starone-galaxy-architecture |
-| Version | 1.1 |
-| Author | Sachin Salunke |
-| Date | Jan 2026 |
-| Status | Approved Draft |
-| Linked Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
-| Linked Story | STORY-ARCH-001 Repository Scaffolding |
-| Linked Issue | S1-I04 Publish Naming Standards and Template Baseline |
-| Approval Status | Platform Architect Approved |
-| Classification | Governance Controlled Document |
+| Field           | Description                                           |
+| --------------- | ----------------------------------------------------- |
+| Document ID     | STANDARD-007                                          |
+| Document Title  | Enterprise Naming Conventions                         |
+| Domain          | Governance Standards                                  |
+| Document Type   | Governance Standard                                   |
+| Repository      | starone-galaxy-architecture                           |
+| Version         | 1.1                                                   |
+| Author          | Sachin Salunke                                        |
+| Date            | Jan 2026                                              |
+| Status          | Approved Draft                                        |
+| Linked Epic     | EPIC-ARCH-001 Ecosystem Design & Governance Baseline  |
+| Linked Story    | STORY-ARCH-001 Repository Scaffolding                 |
+| Linked Issue    | S1-I04 Publish Naming Standards and Template Baseline |
+| Approval Status | Platform Architect Approved                           |
+| Classification  | Governance Controlled Document                        |
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial naming governance baseline |
-| 1.1 | Jan 2026 | Sachin Salunke | Added Documentation Template Baseline governance and S1-FR-007 traceability |
+| Version | Date     | Author         | Description                                                                 |
+| ------- | -------- | -------------- | --------------------------------------------------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke | Initial naming governance baseline                                          |
+| 1.1     | Jan 2026 | Sachin Salunke | Added Documentation Template Baseline governance and S1-FR-007 traceability |
 
 ---
 
 # Sign-Off Table
 
-| Role | Status |
-|---|---|
+| Role               | Status   |
+| ------------------ | -------- |
 | Platform Architect | Approved |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending  |
+| DevOps Governance  | Pending  |
 
 ---
 
@@ -133,20 +133,20 @@ STANDARD-007-Naming-Conventions.md
 
 ## Approved Prefixes
 
-| Prefix | Meaning |
-|---|---|
-| ADR | Architecture Decision Record |
-| HLD | High Level Design |
-| LLD | Low Level Design |
-| SRS | Software Requirements Specification |
-| BRD | Business Requirements Document |
-| PRD | Product Requirements Document |
-| RTM | Requirement Traceability Matrix |
-| STANDARD | Governance Standard |
-| EPIC | Agile Epic |
-| STORY | Agile Story |
-| ISSUE | Agile Issue |
-| C4 | C4 Architecture Models |
+| Prefix   | Meaning                             |
+| -------- | ----------------------------------- |
+| ADR      | Architecture Decision Record        |
+| HLD      | High Level Design                   |
+| LLD      | Low Level Design                    |
+| SRS      | Software Requirements Specification |
+| BRD      | Business Requirements Document      |
+| PRD      | Product Requirements Document       |
+| RTM      | Requirement Traceability Matrix     |
+| STANDARD | Governance Standard                 |
+| EPIC     | Agile Epic                          |
+| STORY    | Agile Story                         |
+| ISSUE    | Agile Issue                         |
+| C4       | C4 Architecture Models              |
 
 ---
 
@@ -277,15 +277,15 @@ dhs.billing.retry.maxAttempts
 
 ## Naming Rules Matrix
 
-| Asset | Convention |
-|---|---|
-| Repositories | kebab-case |
-| Artifacts | Prefix-ID-Title |
-| Branches | type/name |
-| Services | domain-capability-service |
-| Packages | dot notation |
-| Topics | domain.entity.event |
-| Config Keys | domain.service.property |
+| Asset        | Convention                |
+| ------------ | ------------------------- |
+| Repositories | kebab-case                |
+| Artifacts    | Prefix-ID-Title           |
+| Branches     | type/name                 |
+| Services     | domain-capability-service |
+| Packages     | dot notation              |
+| Topics       | domain.entity.event       |
+| Config Keys  | domain.service.property   |
 
 ---
 
@@ -382,12 +382,12 @@ README_MS_Template.md
 
 ### Template Ownership Matrix
 
-| Template Type | Governance Owner |
-|---|---|
+| Template Type          | Governance Owner   |
+| ---------------------- | ------------------ |
 | Architecture Templates | Platform Architect |
 | Requirements Templates | Platform Architect |
-| Governance Templates | Governance Board |
-| README Templates | Platform Architect |
+| Governance Templates   | Governance Board   |
+| README Templates       | Platform Architect |
 
 ---
 
@@ -441,22 +441,22 @@ Future controls may include:
 
 ## Related Standards
 
-| Standard | Purpose |
-|---|---|
-| STANDARD-006 | CODEOWNERS Governance |
-| STANDARD-008 | Contribution Governance |
-| CONTRIBUTING.md | Contribution Governance |
-| ADR-001 | Repository Taxonomy Decision |
-| HLD-001 | Platform Architecture Baseline |
+| Standard        | Purpose                        |
+| --------------- | ------------------------------ |
+| STANDARD-006    | CODEOWNERS Governance          |
+| STANDARD-008    | Contribution Governance        |
+| CONTRIBUTING.md | Contribution Governance        |
+| ADR-001         | Repository Taxonomy Decision   |
+| HLD-001         | Platform Architecture Baseline |
 
 ---
 
 ## Requirement Traceability Matrix (RTM)
 
-| Requirement ID | Requirement Description | Coverage Section |
-|---|---|---|
-| S1-FR-004 | Define repository naming conventions | Repository Naming through Governance Rules |
-| S1-FR-007 | Establish documentation template repository baseline | Documentation Template Baseline |
+| Requirement ID | Requirement Description                              | Coverage Section                           |
+| -------------- | ---------------------------------------------------- | ------------------------------------------ |
+| S1-FR-004      | Define repository naming conventions                 | Repository Naming through Governance Rules |
+| S1-FR-007      | Establish documentation template repository baseline | Documentation Template Baseline            |
 
 Coverage Status: Complete
 
@@ -464,10 +464,10 @@ Coverage Status: Complete
 
 ## Traceability
 
-| Epic | Story | Issue | Requirement |
-|---|---|---|---|
-| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I04 | S1-FR-004 |
-| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I04 | S1-FR-007 |
+| Epic          | Story          | Issue  | Requirement |
+| ------------- | -------------- | ------ | ----------- |
+| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I04 | S1-FR-004   |
+| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I04 | S1-FR-007   |
 
 Coverage: 100%
 
@@ -475,11 +475,11 @@ Coverage: 100%
 
 ## Approval
 
-| Role | Status |
-|---|---|
+| Role               | Status   |
+| ------------------ | -------- |
 | Platform Architect | Approved |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending  |
+| DevOps Governance  | Pending  |
 
 ---
 

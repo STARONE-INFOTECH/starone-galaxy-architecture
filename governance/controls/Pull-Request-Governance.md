@@ -4,36 +4,36 @@
 
 ## Title Page
 
-| Field | Value |
-|----------|----------|
-| Document ID | GOV-PR-001 |
-| Document Name | Pull Request Governance |
-| Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
-| Story | STORY-ARCH-005 Engineering Governance Automation |
-| Issue | S5-I02 Pull Request Governance |
-| Domain | Governance Automation |
-| Author | Sachin Salunke |
-| Date | 2026 |
-| Version | 1.0 |
-| Status | Draft |
+| Field         | Value                                                |
+| ------------- | ---------------------------------------------------- |
+| Document ID   | GOV-PR-001                                           |
+| Document Name | Pull Request Governance                              |
+| Epic          | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
+| Story         | STORY-ARCH-005 Engineering Governance Automation     |
+| Issue         | S5-I02 Pull Request Governance                       |
+| Domain        | Governance Automation                                |
+| Author        | Sachin Salunke                                       |
+| Date          | 2026                                                 |
+| Version       | 1.0                                                  |
+| Status        | Draft                                                |
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|----------|----------|----------|----------|
-| 1.0 | 2026 | Sachin Salunke | Initial Pull Request Governance Document |
+| Version | Date | Author         | Description                              |
+| ------- | ---- | -------------- | ---------------------------------------- |
+| 1.0     | 2026 | Sachin Salunke | Initial Pull Request Governance Document |
 
 ---
 
 # Sign-Off Table
 
-| Role | Status |
-|----------|----------|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
 
 ---
 
@@ -137,13 +137,13 @@ All pull requests shall:
 
 ## Governance Responsibilities
 
-| Area | Responsibility |
-|----------|----------|
-| Pull Request Author | Complete required template sections |
-| Reviewer | Validate implementation and governance compliance |
-| CODEOWNER | Validate ownership-specific changes |
-| DevOps Governance | Validate governance compliance |
-| Platform Architect | Validate architecture compliance |
+| Area                | Responsibility                                    |
+| ------------------- | ------------------------------------------------- |
+| Pull Request Author | Complete required template sections               |
+| Reviewer            | Validate implementation and governance compliance |
+| CODEOWNER           | Validate ownership-specific changes               |
+| DevOps Governance   | Validate governance compliance                    |
+| Platform Architect  | Validate architecture compliance                  |
 
 ---
 
@@ -273,14 +273,14 @@ A pull request shall be considered merge-ready only when:
 
 ## Merge Readiness Matrix
 
-| Criteria | Required |
-|----------|----------|
-| Traceability Complete | Yes |
-| Documentation Reviewed | Yes |
-| Governance Checklist Complete | Yes |
-| Required Approvals Obtained | Yes |
-| Validation Completed | Yes |
-| Open Conversations | No |
+| Criteria                      | Required |
+| ----------------------------- | -------- |
+| Traceability Complete         | Yes      |
+| Documentation Reviewed        | Yes      |
+| Governance Checklist Complete | Yes      |
+| Required Approvals Obtained   | Yes      |
+| Validation Completed          | Yes      |
+| Open Conversations            | No       |
 
 ---
 
@@ -357,13 +357,13 @@ A pull request shall be considered merge-ready only when:
 
 # 11. Requirement Traceability Matrix (RTM)
 
-| Requirement ID | Requirement | Coverage Section |
-|----------|----------|----------|
-| S5-I02-FR1 | Standard pull request template shall be created | Section 3 |
-| S5-I02-FR2 | Governance checklist shall be defined | Section 9 |
-| S5-I02-FR3 | Traceability requirements shall be enforced | Section 5 |
-| S5-I02-FR4 | Merge readiness criteria shall be documented | Section 8 |
-| S5-I02-FR5 | Review requirements shall be standardized | Section 6 |
+| Requirement ID | Requirement                                     | Coverage Section |
+| -------------- | ----------------------------------------------- | ---------------- |
+| S5-I02-FR1     | Standard pull request template shall be created | Section 3        |
+| S5-I02-FR2     | Governance checklist shall be defined           | Section 9        |
+| S5-I02-FR3     | Traceability requirements shall be enforced     | Section 5        |
+| S5-I02-FR4     | Merge readiness criteria shall be documented    | Section 8        |
+| S5-I02-FR5     | Review requirements shall be standardized       | Section 6        |
 
 ---
 

@@ -4,18 +4,18 @@
 
 ## 1. Milestone Metadata
 
-| Field | Value |
-|---------|---------|
-| Document ID | |
-| Domain | |
-| Document Type | |
-| Version | |
-| Author | |
-| Status | |
-| Date | |
-| Linked Epic | |
-| Linked Story | |
-| Approval Status | |
+| Field           | Value |
+| --------------- | ----- |
+| Document ID     |       |
+| Domain          |       |
+| Document Type   |       |
+| Version         |       |
+| Author          |       |
+| Status          |       |
+| Date            |       |
+| Linked Epic     |       |
+| Linked Story    |       |
+| Approval Status |       |
 
 ---
 

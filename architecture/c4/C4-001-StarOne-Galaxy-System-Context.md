@@ -6,39 +6,39 @@
 
 # Metadata
 
-| Field | Value |
-|---|---|
-| Document ID | C4-001 |
-| Document Name | StarOne Galaxy System Context |
-| Repository | starone-galaxy-architecture |
-| Domain | Architecture |
+| Field         | Value                             |
+| ------------- | --------------------------------- |
+| Document ID   | C4-001                            |
+| Document Name | StarOne Galaxy System Context     |
+| Repository    | starone-galaxy-architecture       |
+| Domain        | Architecture                      |
 | Document Type | C4 Level 1 System Context Diagram |
-| Version | 1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Date | 2026-05-01 |
-| Linked Epic | EPIC-ARCH-001 |
-| Linked Story | STORY-ARCH-002 |
-| Linked Issue | S2-I03 |
-| Requirement | S2-FR-002 |
+| Version       | 1.0.0                             |
+| Status        | Draft                             |
+| Author        | Sachin Salunke                    |
+| Date          | 2026-05-01                        |
+| Linked Epic   | EPIC-ARCH-001                     |
+| Linked Story  | STORY-ARCH-002                    |
+| Linked Issue  | S2-I03                            |
+| Requirement   | S2-FR-002                         |
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | 2026-05-01 | Sachin Salunke | Initial System Context Diagram |
+| Version | Date       | Author         | Description                    |
+| ------- | ---------- | -------------- | ------------------------------ |
+| 1.0     | 2026-05-01 | Sachin Salunke | Initial System Context Diagram |
 
 ---
 
 # Sign-Off
 
-| Role | Status |
-|---|---|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
 
 ---
 
@@ -86,24 +86,24 @@ These concerns are addressed by subsequent architecture artifacts.
 
 # 3. External Actors
 
-| Actor | Description |
-|---|---|
-| Business Users | Consume business-facing applications and services |
-| Platform Engineers | Build, operate, govern, and evolve the ecosystem |
+| Actor              | Description                                       |
+| ------------------ | ------------------------------------------------- |
+| Business Users     | Consume business-facing applications and services |
+| Platform Engineers | Build, operate, govern, and evolve the ecosystem  |
 
 ---
 
 # 4. Internal Systems
 
-| System | Description |
-|---|---|
-| starone-galaxy-architecture | Architecture governance and source of truth |
-| starone-galaxy-infra | Shared control plane and platform services |
-| starone-galaxy-config | Centralized configuration management |
-| starone-dhs-system | Enterprise OMS platform |
-| starone-bookshow-system | Consumer ticketing platform |
-| sportstats | Planned analytics platform |
-| vaultiron | Planned credential and secret management platform |
+| System                      | Description                                       |
+| --------------------------- | ------------------------------------------------- |
+| starone-galaxy-architecture | Architecture governance and source of truth       |
+| starone-galaxy-infra        | Shared control plane and platform services        |
+| starone-galaxy-config       | Centralized configuration management              |
+| starone-dhs-system          | Enterprise OMS platform                           |
+| starone-bookshow-system     | Consumer ticketing platform                       |
+| sportstats                  | Planned analytics platform                        |
+| vaultiron                   | Planned credential and secret management platform |
 
 ---
 
@@ -256,13 +256,13 @@ These domains are currently informational and do not participate in active ecosy
 
 # 7. Architectural Decisions
 
-| ADR | Decision |
-|---|---|
-| ADR-001 | Documentation-as-Code |
-| ADR-002 | Platform First Governance |
-| ADR-003 | Domain Isolation |
+| ADR     | Decision                             |
+| ------- | ------------------------------------ |
+| ADR-001 | Documentation-as-Code                |
+| ADR-002 | Platform First Governance            |
+| ADR-003 | Domain Isolation                     |
 | ADR-004 | Centralized Configuration Management |
-| ADR-005 | Shared Platform Control Plane |
+| ADR-005 | Shared Platform Control Plane        |
 
 ---
 
@@ -280,32 +280,32 @@ The following assumptions apply:
 
 # 9. References
 
-| Artifact | Purpose |
-|---|---|
-| README.md | Ecosystem Entry Point |
-| C4-002 Container View | Internal Repository Structure |
-| Domain Dependency Map | Domain Relationships |
+| Artifact                | Purpose                       |
+| ----------------------- | ----------------------------- |
+| README.md               | Ecosystem Entry Point         |
+| C4-002 Container View   | Internal Repository Structure |
+| Domain Dependency Map   | Domain Relationships          |
 | Infrastructure Overview | Runtime Platform Architecture |
-| ADR Repository | Architecture Decisions |
-| Governance Standards | Architecture Governance |
+| ADR Repository          | Architecture Decisions        |
+| Governance Standards    | Architecture Governance       |
 
 ---
 
 # Traceability
 
-| Epic | Story | Issue | Requirement |
-|---|---|---|---|
-| EPIC-ARCH-001 | STORY-ARCH-002 | S2-I03 | S2-FR-002 |
+| Epic          | Story          | Issue  | Requirement |
+| ------------- | -------------- | ------ | ----------- |
+| EPIC-ARCH-001 | STORY-ARCH-002 | S2-I03 | S2-FR-002   |
 
 ---
 
 # Related Deliverables
 
-| Deliverable ID | Deliverable |
-|---|---|
-| D1 | C4-001 StarOne Galaxy System Context |
-| D2 | Mermaid System Context Diagram |
-| D3 | README Context Navigation |
+| Deliverable ID | Deliverable                          |
+| -------------- | ------------------------------------ |
+| D1             | C4-001 StarOne Galaxy System Context |
+| D2             | Mermaid System Context Diagram       |
+| D3             | README Context Navigation            |
 
 ---
 

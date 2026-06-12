@@ -2,35 +2,36 @@
 
 ## Title Page
 
-| Field | Value |
-|---------|---------|
-| ADR ID | ADR-002 |
-| Title | Documentation Standards Governance |
-| Status | Accepted |
-| Date | Jan 2026 |
-| Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
-| Story | STORY-ARCH-004 Architecture Decision Baseline |
-| Author | Sachin Salunke |
+| Field     | Value                                                  |
+| --------- | ------------------------------------------------------ |
+| ADR ID    | ADR-002                                                |
+| Title     | Documentation Standards Governance                     |
+| Status    | Accepted                                               |
+| Date      | Jan 2026                                               |
+| Epic      | EPIC-ARCH-001 Ecosystem Design & Governance Baseline   |
+| Story     | STORY-ARCH-004 Architecture Decision Baseline          |
+| Author    | Sachin Salunke                                         |
 | Reviewers | Platform Architect, Security Review, DevOps Governance |
 
 ---
 
 ## Revision History
 
-| Version | Date | Author | Description |
-|---------|---------|---------|---------|
-| 1.0 | Jan 2026 | Sachin Salunke | Initial ADR |
-| 1.1 | Jan 2026 | Architecture Review Board | Documentation Governance Approved |
-| 1.2 | Jan 2026 | Sachin Salunke | Documentation Governance Model Enhancements |
+| Version | Date     | Author                    | Description                                 |
+| ------- | -------- | ------------------------- | ------------------------------------------- |
+| 1.0     | Jan 2026 | Sachin Salunke            | Initial ADR                                 |
+| 1.1     | Jan 2026 | Architecture Review Board | Documentation Governance Approved           |
+| 1.2     | Jan 2026 | Sachin Salunke            | Documentation Governance Model Enhancements |
+
 ---
 
 ## Sign-Off
 
-| Role | Status |
-|---------|---------|
+| Role               | Status   |
+| ------------------ | -------- |
 | Platform Architect | Approved |
-| Security Review | Approved |
-| DevOps Governance | Approved |
+| Security Review    | Approved |
+| DevOps Governance  | Approved |
 
 ---
 
@@ -72,17 +73,17 @@ while supporting both DHS and Bookshow domains under a common governance framewo
 
 ## 3. Decision Drivers
 
-| Driver | Priority |
-|----------|----------|
-| Traceability | Critical |
+| Driver                 | Priority |
+| ---------------------- | -------- |
+| Traceability           | Critical |
 | Governance Consistency | Critical |
-| Auditability | Critical |
-| Reusability | High |
-| Reviewability | High |
-| Compliance | High |
-| Standardization | High |
-| Scalability | Medium |
-| Documentation-as-Code | Critical |
+| Auditability           | Critical |
+| Reusability            | High     |
+| Reviewability          | High     |
+| Compliance             | High     |
+| Standardization        | High     |
+| Scalability            | Medium   |
+| Documentation-as-Code  | Critical |
 
 ---
 
@@ -366,13 +367,13 @@ This decision supports:
 
 ## 12. Traceability
 
-| Source | Reference |
-|----------|----------|
-| Epic | EPIC-ARCH-001 |
-| Story | STORY-ARCH-004 |
-| Related ADR | ADR-001 Repository Taxonomy Governance |
-| Related ADR | ADR-003 Governance Enforcement Controls |
-| Source Story | STORY-ARCH-003 Documentation Standards |
+| Source       | Reference                               |
+| ------------ | --------------------------------------- |
+| Epic         | EPIC-ARCH-001                           |
+| Story        | STORY-ARCH-004                          |
+| Related ADR  | ADR-001 Repository Taxonomy Governance  |
+| Related ADR  | ADR-003 Governance Enforcement Controls |
+| Source Story | STORY-ARCH-003 Documentation Standards  |
 
 ---
 

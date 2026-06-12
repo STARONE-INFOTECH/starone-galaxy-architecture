@@ -2,29 +2,29 @@
 
 ## Linked Artifacts
 
-| Type | Reference |
-|---|---|
-| Epic | |
-| Story | |
-| Issue | |
-| Related Standard | |
-| Related ADR | |
+| Type             | Reference |
+| ---------------- | --------- |
+| Epic             |           |
+| Story            |           |
+| Issue            |           |
+| Related Standard |           |
+| Related ADR      |           |
 
 ---
 
 ## Governance Traceability
 
-| Requirement | Status |
-|---|---|
+| Requirement                        | Status      |
+| ---------------------------------- | ----------- |
 | Refer to linked Issue Requirements | Implemented |
 
 ---
 
-| Role | Status |
-|---|---|
-| Platform Architect | |
-| Security Review | Deferred (Solo Contributor Mode) |
-| DevOps Governance | Deferred (Solo Contributor Mode) |
+| Role               | Status                           |
+| ------------------ | -------------------------------- |
+| Platform Architect |                                  |
+| Security Review    | Deferred (Solo Contributor Mode) |
+| DevOps Governance  | Deferred (Solo Contributor Mode) |
 
 ---
 
@@ -52,11 +52,11 @@ List the primary changes included in this pull request.
 
 ## Traceability
 
-| Type | Reference |
-|---|---|
-| Epic | |
-| Story | |
-| Issue | |
+| Type  | Reference |
+| ----- | --------- |
+| Epic  |           |
+| Story |           |
+| Issue |           |
 
 ---
 
@@ -109,7 +109,6 @@ Add validation details
 ---
 
 ## Governance Checklist
-
 
 ### Documentation[ ]
 

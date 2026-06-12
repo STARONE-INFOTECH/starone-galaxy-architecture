@@ -4,14 +4,14 @@
 
 ## Title Page
 
-| Field | Value |
-|---|---|
-Document ID | ADR-005 |
-Project | StarOne Galaxy |
-Decision | Messaging & Communication Strategy |
-Author | Sachin Salunke |
-Date | Jan 2026 |
-Status | Accepted |
+| Field       | Value                              |
+| ----------- | ---------------------------------- |
+| Document ID | ADR-005                            |
+| Project     | StarOne Galaxy                     |
+| Decision    | Messaging & Communication Strategy |
+| Author      | Sachin Salunke                     |
+| Date        | Jan 2026                           |
+| Status      | Accepted                           |
 
 ---
 
@@ -19,17 +19,17 @@ Status | Accepted |
 
 StarOne Galaxy is a **multi-domain microservices ecosystem** with independently operating systems:
 
-- DHS (Enterprise OMS)  
-- Bookshow (Consumer Platform)  
-- SportStats (Analytics System)  
-- VaultIron (Security System)  
+- DHS (Enterprise OMS)
+- Bookshow (Consumer Platform)
+- SportStats (Analytics System)
+- VaultIron (Security System)
 
 Each domain has different communication needs based on:
 
-- Workflow complexity  
-- Consistency requirements  
-- Performance expectations  
-- Security constraints  
+- Workflow complexity
+- Consistency requirements
+- Performance expectations
+- Security constraints
 
 ---
 
@@ -44,11 +44,11 @@ to balance simplicity, scalability, and domain isolation?
 
 ### Key Challenges
 
-- Avoiding over-engineering with unnecessary messaging systems  
-- Supporting asynchronous workflows where required  
-- Maintaining strong consistency in security-sensitive domains  
-- Preventing tight coupling between services  
-- Ensuring system scalability and resilience  
+- Avoiding over-engineering with unnecessary messaging systems
+- Supporting asynchronous workflows where required
+- Maintaining strong consistency in security-sensitive domains
+- Preventing tight coupling between services
+- Ensuring system scalability and resilience
 
 ---
 
@@ -65,12 +65,12 @@ REST (default) + Event-Driven (Kafka only where required)
 
 ## 2.1 Communication Model per Domain
 
-| Domain | Communication Type | Justification |
-|---|---|---|
-DHS | Event-Driven (Kafka) + REST | Complex multi-step workflows |
-Bookshow | REST (Synchronous) | User-driven transactions |
-SportStats | API + Batch Processing | Pull-based data ingestion |
-VaultIron | REST Only | Strong consistency & security |
+| Domain     | Communication Type          | Justification                 |
+| ---------- | --------------------------- | ----------------------------- |
+| DHS        | Event-Driven (Kafka) + REST | Complex multi-step workflows  |
+| Bookshow   | REST (Synchronous)          | User-driven transactions      |
+| SportStats | API + Batch Processing      | Pull-based data ingestion     |
+| VaultIron  | REST Only                   | Strong consistency & security |
 
 ---
 
@@ -78,15 +78,15 @@ VaultIron | REST Only | Strong consistency & security |
 
 REST APIs will be used as the **default communication mechanism**:
 
-- Synchronous request-response model  
-- Immediate consistency  
-- Suitable for user-driven operations  
+- Synchronous request-response model
+- Immediate consistency
+- Suitable for user-driven operations
 
 Used in:
 
-- Bookshow  
-- VaultIron  
-- Internal service communication  
+- Bookshow
+- VaultIron
+- Internal service communication
 
 ---
 
@@ -125,33 +125,35 @@ Kafka->>DispatchService: Consume Event
 
 ## 2.4 Cross-Domain Communication Policy
 
-- No mandatory cross-domain communication  
+- No mandatory cross-domain communication
 - If required:
-  - Must be explicitly defined  
-  - Must use REST APIs or governed events  
-  - Must not create tight coupling  
+  - Must be explicitly defined
+  - Must use REST APIs or governed events
+  - Must not create tight coupling
 
 ---
 
 ## 2.5 Consistency Model
 
-| Communication Type | Consistency |
-|---|---|
-REST | Strong consistency |
-Kafka | Eventual consistency |
+| Communication Type | Consistency          |
+| ------------------ | -------------------- |
+| REST               | Strong consistency   |
+| Kafka              | Eventual consistency |
 
 ---
 
 ## 2.6 Failure Handling
 
 ### REST:
-- Immediate error response  
-- Retry logic at client level  
+
+- Immediate error response
+- Retry logic at client level
 
 ### Kafka:
-- Retry mechanism  
-- Dead Letter Queue (DLQ)  
-- Idempotent event processing  
+
+- Retry mechanism
+- Dead Letter Queue (DLQ)
+- Idempotent event processing
 
 ---
 
@@ -166,9 +168,9 @@ All communication via Kafka
 
 **Rejected Because:**
 
-- Over-engineering  
-- Increased complexity  
-- Not suitable for security-sensitive systems (VaultIron)  
+- Over-engineering
+- Increased complexity
+- Not suitable for security-sensitive systems (VaultIron)
 
 ---
 
@@ -179,8 +181,8 @@ All communication via synchronous APIs
 
 **Rejected Because:**
 
-- Not suitable for complex workflows (DHS)  
-- Reduced scalability for async operations  
+- Not suitable for complex workflows (DHS)
+- Reduced scalability for async operations
 
 ---
 
@@ -191,9 +193,9 @@ Services directly calling each other across domains
 
 **Rejected Because:**
 
-- Tight coupling  
-- Reduced resilience  
-- Violates domain isolation  
+- Tight coupling
+- Reduced resilience
+- Violates domain isolation
 
 ---
 
@@ -204,10 +206,10 @@ REST as default + Kafka only where needed
 
 **Reasons:**
 
-- Balanced complexity  
-- Scalable architecture  
-- Domain-specific flexibility  
-- Aligns with real-world best practices  
+- Balanced complexity
+- Scalable architecture
+- Domain-specific flexibility
+- Aligns with real-world best practices
 
 ---
 
@@ -217,29 +219,29 @@ REST as default + Kafka only where needed
 
 ### ✅ Positive
 
-- Simplified system design  
-- Reduced operational complexity  
-- Better performance for synchronous flows  
-- Scalable async workflows where needed  
-- Maintains domain isolation  
+- Simplified system design
+- Reduced operational complexity
+- Better performance for synchronous flows
+- Scalable async workflows where needed
+- Maintains domain isolation
 
 ---
 
 ### ⚠️ Negative
 
-- Requires decision discipline per use case  
-- Mixed communication patterns increase learning curve  
-- Event management overhead (Kafka setup)  
+- Requires decision discipline per use case
+- Mixed communication patterns increase learning curve
+- Event management overhead (Kafka setup)
 
 ---
 
 ## 5. Trade-offs
 
-| Trade-off | Decision |
-|---|---|
-Simplicity vs Scalability | Balanced |
-Uniformity vs Flexibility | Chose flexibility |
-Consistency vs Performance | Context-based |
+| Trade-off                  | Decision          |
+| -------------------------- | ----------------- |
+| Simplicity vs Scalability  | Balanced          |
+| Uniformity vs Flexibility  | Chose flexibility |
+| Consistency vs Performance | Context-based     |
 
 ---
 
@@ -249,18 +251,18 @@ Consistency vs Performance | Context-based |
 
 ### Affects:
 
-- Integration design  
-- Service communication  
-- Infrastructure setup (Kafka optional)  
-- Error handling mechanisms  
+- Integration design
+- Service communication
+- Infrastructure setup (Kafka optional)
+- Error handling mechanisms
 
 ---
 
 ### Enables:
 
-- Efficient resource usage  
-- Avoidance of unnecessary complexity  
-- Flexible domain evolution  
+- Efficient resource usage
+- Avoidance of unnecessary complexity
+- Flexible domain evolution
 
 ---
 
@@ -278,11 +280,11 @@ Consistency vs Performance | Context-based |
 
 ## 8. Related Artifacts
 
-- ADR-002 Architecture Style  
-- ADR-003 Domain Isolation  
-- ADR-004 Config Strategy  
-- SRS-001 StarOne Galaxy  
-- HLD-001 Global Architecture  
+- ADR-002 Architecture Style
+- ADR-003 Domain Isolation
+- ADR-004 Config Strategy
+- SRS-001 StarOne Galaxy
+- HLD-001 Global Architecture
 
 ---
 

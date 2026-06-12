@@ -2,30 +2,30 @@
 
 ## Document Metadata
 
-| Field | Description |
-|---------|---------|
-| Document ID | STANDARD-008 |
-| Document Title | Contribution Governance |
-| Domain | Governance Standards |
-| Document Type | Governance Standard |
-| Repository | starone-galaxy-architecture |
-| Version | 1.0 |
-| Author | Sachin Salunke |
-| Date | 2026 |
-| Status | Approved Draft |
-| Linked Epic | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
-| Linked Story | STORY-ARCH-001 Repository Scaffolding |
-| Linked Issue | S1-I05 Define Branching & Contribution Governance |
-| Approval Status | Platform Architect Approved |
-| Classification | Governance Controlled Document |
+| Field           | Description                                          |
+| --------------- | ---------------------------------------------------- |
+| Document ID     | STANDARD-008                                         |
+| Document Title  | Contribution Governance                              |
+| Domain          | Governance Standards                                 |
+| Document Type   | Governance Standard                                  |
+| Repository      | starone-galaxy-architecture                          |
+| Version         | 1.0                                                  |
+| Author          | Sachin Salunke                                       |
+| Date            | 2026                                                 |
+| Status          | Approved Draft                                       |
+| Linked Epic     | EPIC-ARCH-001 Ecosystem Design & Governance Baseline |
+| Linked Story    | STORY-ARCH-001 Repository Scaffolding                |
+| Linked Issue    | S1-I05 Define Branching & Contribution Governance    |
+| Approval Status | Platform Architect Approved                          |
+| Classification  | Governance Controlled Document                       |
 
 ---
 
 # Revision History
 
-| Version | Date | Author | Description |
-|---|---|---|---|
-| 1.0 | 2026 | Sachin Salunke | Initial Contribution Governance baseline |
+| Version | Date | Author         | Description                              |
+| ------- | ---- | -------------- | ---------------------------------------- |
+| 1.0     | 2026 | Sachin Salunke | Initial Contribution Governance baseline |
 
 ---
 
@@ -142,13 +142,13 @@ Approval --> Merge[Merge]
 
 ## Target-State Review Model
 
-| Change Type | Required Reviewers |
-|---|---|
-| ADR | Platform Architect + Security |
-| HLD | Platform Architect + DevOps |
-| SRS | Solution Architect + Domain Owner |
-| Governance Standards | Governance Board |
-| Workflow Changes | Platform Engineering |
+| Change Type          | Required Reviewers                |
+| -------------------- | --------------------------------- |
+| ADR                  | Platform Architect + Security     |
+| HLD                  | Platform Architect + DevOps       |
+| SRS                  | Solution Architect + Domain Owner |
+| Governance Standards | Governance Board                  |
+| Workflow Changes     | Platform Engineering              |
 
 ---
 
@@ -292,29 +292,29 @@ No orphan artifacts are permitted.
 
 # Related Standards
 
-| Standard | Purpose |
-|---|---|
-| STANDARD-007 | Enterprise Naming Conventions |
-| STANDARD-006 | CODEOWNERS Governance |
+| Standard        | Purpose                        |
+| --------------- | ------------------------------ |
+| STANDARD-007    | Enterprise Naming Conventions  |
+| STANDARD-006    | CODEOWNERS Governance          |
 | CONTRIBUTING.md | Operational Contribution Guide |
 
 ---
 
 # Sign-Off
 
-| Role | Status |
-|---|---|
-| Platform Architect | Approved |
-| Security Review | Deferred (Solo Contributor Mode) |
-| DevOps Governance | Deferred (Solo Contributor Mode) |
+| Role               | Status                           |
+| ------------------ | -------------------------------- |
+| Platform Architect | Approved                         |
+| Security Review    | Deferred (Solo Contributor Mode) |
+| DevOps Governance  | Deferred (Solo Contributor Mode) |
 
 ---
 
 # Traceability
 
-| Epic | Story | Issue | Requirement |
-|---|---|---|---|
-| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I05 | S1-FR-005 |
-| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I05 | S1-FR-006 |
+| Epic          | Story          | Issue  | Requirement |
+| ------------- | -------------- | ------ | ----------- |
+| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I05 | S1-FR-005   |
+| EPIC-ARCH-001 | STORY-ARCH-001 | S1-I05 | S1-FR-006   |
 
 Coverage: 100%
