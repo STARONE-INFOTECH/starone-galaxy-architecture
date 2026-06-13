@@ -493,18 +493,30 @@ TC
 
 # 18. Requirement Traceability Matrix
 
-| BR ID | Epic                 | Story                 | Design Artifact     |
-| ----- | -------------------- | --------------------- | ------------------- |
-| BR-01 | EPIC-ARCH-001        | STORY-ARCH-001        | HLD-001             |
-| BR-02 | EPIC-ARCH-001        | STORY-ARCH-001        | ADR-001             |
-| BR-03 | EPIC-ARCH-001        | STORY-ARCH-004        | HLD-002             |
-| BR-04 | EPIC-ARCH-002        | STORY-ARCH-005        | HLD-003             |
-| BR-05 | EPIC-CONFIG-001      | STORY-CONFIG-001      | HLD-CONFIG-001      |
-| BR-06 | EPIC-DEPLOY-001      | STORY-DEPLOY-001      | HLD-DEPLOY-001      |
-| BR-07 | EPIC-ARCH-001        | STORY-ARCH-002        | Governance Model    |
-| BR-08 | EPIC-ARCH-001        | STORY-ARCH-003        | RTM                 |
-| BR-09 | EPIC-INTEGRATION-001 | STORY-INTEGRATION-001 | HLD-INTEGRATION-001 |
-| BR-10 | EPIC-GOVERNANCE-001  | STORY-GOVERNANCE-001  | Standards Framework |
+| BR ID | Epic                 | Story                 | Design Artifact                    |
+| ----- | -------------------- | --------------------- | ---------------------------------- |
+| BR-01 | EPIC-ARCH-001        | STORY-ARCH-001        | HLD-001                            |
+| BR-02 | EPIC-ARCH-001        | STORY-ARCH-001        | ADR-001                            |
+| BR-03 | EPIC-ARCH-001        | STORY-ARCH-004        | HLD-002                            |
+| BR-04 | EPIC-ARCH-002        | STORY-ARCH-005        | HLD-003                            |
+| BR-05 | EPIC-CONFIG-001      | STORY-CONFIG-001      | HLD-CONFIG-001                     |
+| BR-06 | EPIC-DEPLOY-001      | STORY-DEPLOY-001      | HLD-DEPLOY-001                     |
+| BR-07 | EPIC-ARCH-001        | STORY-ARCH-002        | Governance Model                   |
+| BR-07 | EPIC-ARCH-001        | STORY-ARCH-005        | Governance Model                   |
+| BR-07 | EPIC-ARCH-002        | STORY-ARCH-006        | PR Review Automation HLD           |
+| BR-07 | EPIC-ARCH-002        | STORY-ARCH-007        | Repository Onboarding HLD          |
+| BR-07 | EPIC-ARCH-002        | STORY-ARCH-008        | Cross-Repository Integration HLD   |
+| BR-07 | EPIC-ARCH-002        | STORY-ARCH-009        | Governance Release Management HLD  |
+| BR-07 | EPIC-ARCH-002        | STORY-ARCH-010        | Governance Compliance HLD          |
+| BR-08 | EPIC-ARCH-001        | STORY-ARCH-003        | RTM                                |
+| BR-09 | EPIC-INTEGRATION-001 | STORY-INTEGRATION-001 | HLD-INTEGRATION-001                |
+| BR-10 | EPIC-GOVERNANCE-001  | STORY-GOVERNANCE-001  | Standards Framework                |
+| BR-10 | EPIC-ARCH-001        | STORY-ARCH-005        | Reusable Workflow Framework        |
+| BR-10 | EPIC-ARCH-002        | STORY-ARCH-006        | Review Automation ADR              |
+| BR-10 | EPIC-ARCH-002        | STORY-ARCH-007        | Repository Standards Framework     |
+| BR-10 | EPIC-ARCH-002        | STORY-ARCH-008        | Workflow Consumption ADR           |
+| BR-10 | EPIC-ARCH-002        | STORY-ARCH-009        | Versioning and Release ADR         |
+| BR-10 | EPIC-ARCH-002        | STORY-ARCH-010        | Compliance Certification Framework |
 
 ---
 
