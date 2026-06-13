@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - 'feature/**'
+  workflow_dispatch:
   workflow_call:
 
 permissions:
@@ -13,17 +14,13 @@ permissions:
 
 jobs:
   architecture-review:
-    name: Architecture Review
     uses: ./.github/workflows/architecture.yml
 
   documentation-validation:
-    name: Documentation Validation
     uses: ./.github/workflows/documentation.yml
 
   governance-validation:
-    name: Governance Validation
     uses: ./.github/workflows/governance.yml
 
   security-validation:
-    name: Security Validation
     uses: ./.github/workflows/security.yml

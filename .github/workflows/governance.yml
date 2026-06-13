@@ -9,18 +9,18 @@ permissions:
 
 jobs:
   governance-artifact-validation:
-  name: Governance Artifact Validation
-  runs-on: ubuntu-latest
+    name: Governance Artifact Validation
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Validate Governance Artifacts
-      run: |
-        test -d governance
-        test -f CONTRIBUTING.md
-        test -f CODEOWNERS
+      - name: Validate Governance Artifacts
+        run: |
+          test -d governance
+          test -f CONTRIBUTING.md
+          test -f CODEOWNERS
 
   pr-template-validation:
     name: PR Template Validation

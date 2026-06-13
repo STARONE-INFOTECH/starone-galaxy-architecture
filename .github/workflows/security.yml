@@ -5,23 +5,8 @@ on:
 
 permissions:
   contents: read
-    types:
-      - opened
-      - synchronize
-      - reopened
-
-  push:
-    branches:
-      - 'feature/**'
-
-  schedule:
-    - cron: '0 2 * * 1'
-
-permissions:
-  contents: read
 
 jobs:
-
   dependency-security:
     name: Dependency Security
     runs-on: ubuntu-latest
@@ -66,12 +51,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-<<<<<<< HEAD:.github/workflows/security-compliance.yml
       - name: Validate Workflow Security
-      - name: Validate Workflow Security
-=======
-      - name: Workflow Security Validation
->>>>>>> e3413b3 (feat(governance): implement s5-i06 reusable workflow framework):.github/workflows/reusable/reusable-security.yml
         run: |
           echo "Executing workflow security validation"
           echo "Workflow security validation completed"
@@ -86,23 +66,6 @@ jobs:
       - workflow-security
 
     steps:
-<<<<<<< HEAD:.github/workflows/security-compliance.yml
       - name: Security Report
-          echo "Validating workflow security"
-
-  security-reporting:
-    name: Security Reporting
-    runs-on: ubuntu-latest
-
-    needs:
-      - dependency-security
-      - secret-scan
-      - workflow-security
-
-    steps:
-      - name: Security Report
-=======
-      - name: Generate Security Report
->>>>>>> e3413b3 (feat(governance): implement s5-i06 reusable workflow framework):.github/workflows/reusable/reusable-security.yml
         run: |
           echo "Security validation completed successfully"
