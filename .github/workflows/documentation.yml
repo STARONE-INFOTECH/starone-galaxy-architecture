@@ -34,10 +34,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Validate Mermaid Blocks
+      - name: Validate Mermaid Diagrams
         run: |
           echo "Validating Mermaid diagrams..."
-          grep -r "```mermaid" . --include="*.md" || true
+
+          if grep -R '```mermaid' . --include='*.md'; then
+            echo "Mermaid diagrams found"
+          else
+            echo "No Mermaid diagrams found"
+          fi
 
   link-validation:
     name: Link Validation

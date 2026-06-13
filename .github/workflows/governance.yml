@@ -18,9 +18,9 @@ jobs:
 
       - name: Validate Governance Artifacts
         run: |
-          test -d governance
+          test -d governance/
           test -f CONTRIBUTING.md
-          test -f CODEOWNERS
+          test -f .github/CODEOWNERS
 
   pr-template-validation:
     name: PR Template Validation
