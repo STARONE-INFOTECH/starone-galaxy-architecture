@@ -1,0 +1,22 @@
+name: Reusable Validation Framework
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+
+  architecture-review:
+    uses: ./.github/workflows/reusable/reusable-architecture.yml
+
+  governance-validation:
+    uses: ./.github/workflows/reusable/reusable-governance.yml
+
+  security-validation:
+    uses: ./.github/workflows/reusable/reusable-security.yml
+
+  documentation-validation:
+    uses: ./.github/workflows/reusable/reusable-documentation.yml

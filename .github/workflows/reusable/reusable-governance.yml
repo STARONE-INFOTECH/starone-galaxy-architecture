@@ -1,0 +1,69 @@
+name: Reusable Governance Validation
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  governance-artifact-validation:
+  name: Governance Artifact Validation
+  runs-on: ubuntu-latest
+
+  steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Validate Governance Artifacts
+      run: |
+        test -d governance
+        test -f CONTRIBUTING.md
+        test -f CODEOWNERS
+
+  pr-template-validation:
+    name: PR Template Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate PR Template
+        run: |
+          test -f .github/PULL_REQUEST_TEMPLATE.md
+
+  commit-validation:
+    name: Commit Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Validate Commit Messages
+        uses: wagoid/commitlint-github-action@v6
+
+  issue-template-validation:
+    name: Issue Template Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Issue Templates
+        run: |
+          test -f .github/ISSUE_TEMPLATES/story.yml
+          test -f .github/ISSUE_TEMPLATES/task.yml
+          test -f .github/ISSUE_TEMPLATES/bug.yml
+          test -f .github/ISSUE_TEMPLATES/enhancement.yml

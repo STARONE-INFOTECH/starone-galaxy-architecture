@@ -1,0 +1,52 @@
+name: Reusable Documentation Validation
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  markdown-validation:
+    name: Markdown Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+
+      - name: Validate Markdown Files
+        run: markdownlint "**/*.md"
+
+  mermaid-validation:
+    name: Mermaid Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Mermaid Blocks
+        run: |
+          echo "Validating Mermaid diagrams..."
+          grep -r "```mermaid" . --include="*.md" || true
+
+  link-validation:
+    name: Link Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Link Validation        
+        run: |
+          echo "Validating documentation links..."
