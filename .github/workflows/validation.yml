@@ -2,15 +2,28 @@ name: Validation
 
 on:
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-
   push:
     branches:
       - 'feature/**'
+  workflow_call:
+
+permissions:
+  contents: read
+  pull-requests: read
 
 jobs:
-  validation:
-    uses: ./.github/workflows/reusable/reusable-validation.yml
+  architecture-review:
+    name: Architecture Review
+    uses: ./.github/workflows/architecture.yml
+
+  documentation-validation:
+    name: Documentation Validation
+    uses: ./.github/workflows/documentation.yml
+
+  governance-validation:
+    name: Governance Validation
+    uses: ./.github/workflows/governance.yml
+
+  security-validation:
+    name: Security Validation
+    uses: ./.github/workflows/security.yml
