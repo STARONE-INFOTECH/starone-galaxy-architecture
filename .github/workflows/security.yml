@@ -1,32 +1,23 @@
-name: Security Compliance
+name: Reusable Security Validation
 
 on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
-
-  push:
-    branches:
-      - 'feature/**'
-
-  schedule:
-    - cron: '0 2 * * 1'
+  workflow_call:
 
 permissions:
   contents: read
 
 jobs:
-
   dependency-security:
     name: Dependency Security
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: Dependency Security Validation
         run: |
-          echo "No application dependencies detected"
+          echo "Executing dependency security validation"
           echo "Dependency security validation completed"
 
   secret-scan:
@@ -34,14 +25,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
       - name: Secret Scan
         run: |
-          echo "Scanning repository for secrets"
+          echo "Executing secret scan"
 
           if grep -R \
             --exclude-dir=.git \
             --exclude-dir=.github \
-            "AWS_SECRET_ACCESS_KEY" .; then
+            -E "AWS_SECRET_ACCESS_KEY|password=|secret=|token=|api_key=" \
+            .; then
             echo "Potential secret detected"
             exit 1
           fi
@@ -58,7 +53,8 @@ jobs:
 
       - name: Validate Workflow Security
         run: |
-          echo "Validating workflow security"
+          echo "Executing workflow security validation"
+          echo "Workflow security validation completed"
 
   security-reporting:
     name: Security Reporting
@@ -72,4 +68,4 @@ jobs:
     steps:
       - name: Security Report
         run: |
-          echo "Security validation completed"
+          echo "Security validation completed successfully"

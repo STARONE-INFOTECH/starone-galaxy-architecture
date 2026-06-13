@@ -436,3 +436,4 @@ Governance validation ensures:
 This document establishes the Issue Governance baseline for the StarOne Galaxy ecosystem.
 
 It defines governance requirements for issue creation, metadata management, traceability, acceptance criteria, Definition of Done, and governance validation to ensure all work items are consistently managed, traceable, auditable, and governance compliant.
+

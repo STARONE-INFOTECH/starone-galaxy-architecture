@@ -57,6 +57,7 @@ List the primary changes included in this pull request.
 | Epic  |           |
 | Story |           |
 | Issue |           |
+<<<<<<< HEAD
 
 ---
 
@@ -65,6 +66,8 @@ List the primary changes included in this pull request.
 ```text
 List impacted requirements
 ```
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 
 ---
 
@@ -110,6 +113,13 @@ Add validation details
 
 ## Governance Checklist
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> d2df9b4 (feat(governance): implement S5-I03 issue management governance)
+=======
+>>>>>>> ea776e8 (chore(docs): re-arrange white spaces from all.md files using prettier)
 ### Documentation[ ]
 
 - [ ] Documentation reviewed

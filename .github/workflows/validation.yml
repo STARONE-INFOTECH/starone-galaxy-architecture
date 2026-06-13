@@ -1,0 +1,26 @@
+name: Validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - 'feature/**'
+  workflow_dispatch:
+  workflow_call:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  architecture-review:
+    uses: ./.github/workflows/architecture.yml
+
+  documentation-validation:
+    uses: ./.github/workflows/documentation.yml
+
+  governance-validation:
+    uses: ./.github/workflows/governance.yml
+
+  security-validation:
+    uses: ./.github/workflows/security.yml

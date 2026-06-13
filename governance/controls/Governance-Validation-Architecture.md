@@ -78,7 +78,7 @@ The following capabilities are governed through separate issues:
 - starone-galaxy-infra
 - starone-galaxy-config
 - starone-dhs-system
-- bookshow-\* repositories
+- starone-bookshow-system
 - Shared libraries
 - Platform repositories
 
@@ -432,6 +432,7 @@ governance-validation
 
 # 10. Validation Control Matrix
 
+
 | Validation Area       | Mandatory |
 | --------------------- | --------- |
 | Markdown Lint         | Yes       |
@@ -439,6 +440,7 @@ governance-validation
 | Commit Validation     | Yes       |
 | Governance Compliance | Yes       |
 | Metadata Validation   | Yes       |
+
 
 ---
 
@@ -519,6 +521,7 @@ A pull request is governance compliant only when all validation checks pass succ
 ---
 
 # 13. Requirement Traceability Matrix (RTM)
+
 
 | Requirement ID | Requirement                                          | Coverage Section |
 | -------------- | ---------------------------------------------------- | ---------------- |
