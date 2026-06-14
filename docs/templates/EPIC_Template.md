@@ -82,7 +82,7 @@ Explain:
 
 ## 7. User Stories
 
-### STORY-XXX
+### STORY-XX1
 
 **Story Title**
 
@@ -92,7 +92,7 @@ So that <Business Outcome>.
 
 ---
 
-### STORY-XXX
+### STORY-XX2
 
 **Story Title**
 
@@ -102,7 +102,7 @@ So that <Business Outcome>.
 
 ---
 
-### STORY-XXX
+### STORY-XX3
 
 **Story Title**
 
