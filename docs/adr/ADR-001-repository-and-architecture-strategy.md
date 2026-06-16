@@ -15,6 +15,15 @@
 
 ---
 
+## Revision History
+
+| Version | Date     | Description                                                         |
+| ------- | -------- | ------------------------------------------------------------------- |
+| v1.0    | Jan 2026 | Initial Repository & Architecture Strategy                          |
+| v1.1    | Jun 2026 | Added domain-oriented architecture repository organization strategy |
+
+---
+
 ## 1. Context
 
 StarOne Galaxy is a **multi-domain, cloud-native ecosystem** consisting of independent application domains:
@@ -114,6 +123,56 @@ Isolated at domain level
 - Standards enforced via templates and policies
 - ADRs capture all critical decisions
 - GitHub workflows enforce consistency
+
+---
+
+### 2.6 Architecture Repository Organization
+
+The Architecture Repository shall adopt a domain-oriented documentation structure.
+
+Documents shall be grouped by bounded context and platform domain rather than by document type.
+
+```text
+starone-galaxy-architecture
+├── platform
+│   ├── infra-foundation
+│   └── config-management
+│
+├── dhs-system
+│   ├── order-management
+│   ├── inventory-management
+│   └── payment-management
+│
+├── bookshow
+│   ├── booking
+│   ├── payment
+│   └── notification
+│
+├── standards
+├── governance
+└── onboarding
+```
+
+Each domain folder shall contain all related architecture artifacts:
+
+- BRD
+- PRD
+- ADR
+- HLD
+- LLD
+- SRS
+- RTM
+- Roadmaps
+- Milestones
+- Governance documents
+
+This structure provides:
+
+- Clear ownership boundaries
+- Easier navigation
+- Improved traceability
+- Better scalability
+- Domain-centric documentation management
 
 ---
 
@@ -223,6 +282,8 @@ Separate repositories with centralized governance and shared platform
 - PRD-001 StarOne Galaxy
 - SRS-001 StarOne Galaxy
 - HLD-001 Global Architecture
+- Architecture Repository Standards
+- Domain Documentation Organization Strategy
 
 ---
 
