@@ -17,26 +17,26 @@
 
 ## 2. Document Metadata
 
-| Field | Value |
-|-------|--------|
-| Document ID | STARONE-CONFIG-RTM-002-v1.0 |
-| Domain | Platform Configuration Management |
-| Document Type | Requirements Traceability Matrix (ISO/IEC/IEEE 29148 aligned) |
-| Version | v1.0 |
-| Author | Sachin Salunke |
-| Status | Planned |
-| Date | 2026-06-15 |
-| Linked Epic | EPIC-CONFIG-001 |
-| Linked Story | STORY-CONFIG-001 to STORY-CONFIG-005 |
-| Approval Status | Pending |
+| Field           | Value                                                         |
+| --------------- | ------------------------------------------------------------- |
+| Document ID     | STARONE-CONFIG-RTM-002-v1.0                                   |
+| Domain          | Platform Configuration Management                             |
+| Document Type   | Requirements Traceability Matrix (ISO/IEC/IEEE 29148 aligned) |
+| Version         | v1.0                                                          |
+| Author          | Sachin Salunke                                                |
+| Status          | Planned                                                       |
+| Date            | 2026-06-15                                                    |
+| Linked Epic     | EPIC-CONFIG-001                                               |
+| Linked Story    | STORY-CONFIG-001 to STORY-CONFIG-005                          |
+| Approval Status | Pending                                                       |
 
 ---
 
 ## 3. Revision History
 
-| Version | Date | Author | Description |
-|---------|------|---------|-------------|
-| v1.0 | 2026-06-15 | Sachin Salunke | Initial Version |
+| Version | Date       | Author         | Description     |
+| ------- | ---------- | -------------- | --------------- |
+| v1.0    | 2026-06-15 | Sachin Salunke | Initial Version |
 
 ---
 
@@ -54,11 +54,11 @@
 
 ## 5. Sign-Off Table
 
-| Role | Status |
-|------|---------|
+| Role               | Status  |
+| ------------------ | ------- |
 | Platform Architect | Pending |
-| Security Review | Pending |
-| DevOps Governance | Pending |
+| Security Review    | Pending |
+| DevOps Governance  | Pending |
 
 ---
 
@@ -112,11 +112,11 @@ The following business requirements are covered by this RTM.
 
 ## 9. Risks
 
-| Risk | Impact | Mitigation |
-|------|---------|------------|
-| Missing traceability across artifacts | Medium | Maintain RTM and periodic reviews |
-| Requirements evolve without RTM updates | Medium | Enforce documentation governance |
-| Orphan implementation artifacts | Medium | Require issue and story mapping |
+| Risk                                    | Impact | Mitigation                        |
+| --------------------------------------- | ------ | --------------------------------- |
+| Missing traceability across artifacts   | Medium | Maintain RTM and periodic reviews |
+| Requirements evolve without RTM updates | Medium | Enforce documentation governance  |
+| Orphan implementation artifacts         | Medium | Require issue and story mapping   |
 
 ---
 
@@ -135,13 +135,13 @@ The following business requirements are covered by this RTM.
 
 This matrix establishes end-to-end traceability between business requirements, product requirements, architecture artifacts, implementation artifacts, and validation artifacts.
 
-| BRD | PRD | Epic | Story | Requirement | ADR | HLD | LLD | Service / Component | Repository | Test Case | Validation | Status |
-|-----|-----|------|-------|-------------|-----|-----|-----|---------------------|------------|-----------|------------|---------|
-| BR-CONFIG-001 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-001 | FR-001 | ADR-CONFIG-001 | HLD-CONFIG-001 | LLD-CONFIG-001 | Repository Foundation | starone-central-config | TC-CONFIG-S1 | Planned | Proposed |
-| BR-CONFIG-002 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-002 | FR-002 | ADR-CONFIG-002 | HLD-CONFIG-002 | LLD-CONFIG-002 | Environment Management | starone-central-config | TC-CONFIG-S2 | Planned | Proposed |
-| BR-CONFIG-003 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-003 | FR-003 | ADR-CONFIG-003 | HLD-CONFIG-003 | LLD-CONFIG-003 | Repository Governance | starone-central-config | TC-CONFIG-S3 | Planned | Proposed |
-| BR-CONFIG-004 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-004 | FR-004 | ADR-CONFIG-004 | HLD-CONFIG-004 | LLD-CONFIG-004 | Security Framework | starone-central-config | TC-CONFIG-S4 | Planned | Proposed |
-| BR-CONFIG-005 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-005 | FR-005 | ADR-CONFIG-005 | HLD-CONFIG-005 | LLD-CONFIG-005 | Onboarding Framework | starone-central-config | TC-CONFIG-S5 | Planned | Proposed |
+| BRD           | PRD            | Epic            | Story            | Requirement | ADR            | HLD            | LLD            | Service / Component    | Repository             | Test Case    | Validation | Status   |
+| ------------- | -------------- | --------------- | ---------------- | ----------- | -------------- | -------------- | -------------- | ---------------------- | ---------------------- | ------------ | ---------- | -------- |
+| BR-CONFIG-001 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-001 | FR-001      | ADR-CONFIG-001 | HLD-CONFIG-001 | LLD-CONFIG-001 | Repository Foundation  | starone-central-config | TC-CONFIG-S1 | Planned    | Proposed |
+| BR-CONFIG-002 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-002 | FR-002      | ADR-CONFIG-002 | HLD-CONFIG-002 | LLD-CONFIG-002 | Environment Management | starone-central-config | TC-CONFIG-S2 | Planned    | Proposed |
+| BR-CONFIG-003 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-003 | FR-003      | ADR-CONFIG-003 | HLD-CONFIG-003 | LLD-CONFIG-003 | Repository Governance  | starone-central-config | TC-CONFIG-S3 | Planned    | Proposed |
+| BR-CONFIG-004 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-004 | FR-004      | ADR-CONFIG-004 | HLD-CONFIG-004 | LLD-CONFIG-004 | Security Framework     | starone-central-config | TC-CONFIG-S4 | Planned    | Proposed |
+| BR-CONFIG-005 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-005 | FR-005      | ADR-CONFIG-005 | HLD-CONFIG-005 | LLD-CONFIG-005 | Onboarding Framework   | starone-central-config | TC-CONFIG-S5 | Planned    | Proposed |
 
 ---
 
@@ -245,12 +245,12 @@ Business Acceptance
 
 ### 18.1 Coverage Summary
 
-| Area | Coverage |
-|------|-----------|
-| Requirements | 100% |
-| Architecture | 100% |
-| Implementation | 100% |
-| Testing | 100% |
+| Area           | Coverage |
+| -------------- | -------- |
+| Requirements   | 100%     |
+| Architecture   | 100%     |
+| Implementation | 100%     |
+| Testing        | 100%     |
 
 ---
 
@@ -275,14 +275,14 @@ No orphan validation activities exist.
 
 ## 20. Compliance Coverage
 
-| Compliance Area | Coverage |
-|-----------------|-----------|
-| Business Requirements Coverage | 100% |
-| Product Requirements Coverage | 100% |
-| Architecture Coverage | 100% |
-| Implementation Coverage | 100% |
-| Test Coverage | 100% |
-| Validation Coverage | 100% |
+| Compliance Area                | Coverage |
+| ------------------------------ | -------- |
+| Business Requirements Coverage | 100%     |
+| Product Requirements Coverage  | 100%     |
+| Architecture Coverage          | 100%     |
+| Implementation Coverage        | 100%     |
+| Test Coverage                  | 100%     |
+| Validation Coverage            | 100%     |
 
 No compliance gaps identified during traceability review.
 
@@ -290,14 +290,14 @@ No compliance gaps identified during traceability review.
 
 ## 21. Traceability Status
 
-| Status | Meaning |
-|--------|----------|
-| Proposed | Requirement identified |
-| Approved | Requirement approved |
-| Implemented | Development completed |
-| Verified | Testing completed |
-| Validated | Business validation completed |
-| Retired | No longer active |
+| Status      | Meaning                       |
+| ----------- | ----------------------------- |
+| Proposed    | Requirement identified        |
+| Approved    | Requirement approved          |
+| Implemented | Development completed         |
+| Verified    | Testing completed             |
+| Validated   | Business validation completed |
+| Retired     | No longer active              |
 
 ---
 
@@ -316,13 +316,13 @@ No compliance gaps identified during traceability review.
 
 ## 23. Traceability Summary
 
-| Area | Coverage |
-|------|-----------|
-| Business Requirements | 100% |
-| Product Requirements | 100% |
-| Architecture Coverage | 100% |
-| Implementation Coverage | 100% |
-| Test Coverage | 100% |
+| Area                    | Coverage |
+| ----------------------- | -------- |
+| Business Requirements   | 100%     |
+| Product Requirements    | 100%     |
+| Architecture Coverage   | 100%     |
+| Implementation Coverage | 100%     |
+| Test Coverage           | 100%     |
 
 Overall Traceability Status: Complete
 
