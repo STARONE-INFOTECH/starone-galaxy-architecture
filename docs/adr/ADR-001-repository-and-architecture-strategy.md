@@ -17,11 +17,10 @@
 
 ## Revision History
 
-| Version | Date | Description |
-|---------|------|-------------|
-| v1.0 | Jan 2026 | Initial Repository & Architecture Strategy |
-| v1.1 | Jun 2026 | Added domain-oriented architecture repository organization strategy |
-
+| Version | Date     | Description                                                         |
+| ------- | -------- | ------------------------------------------------------------------- |
+| v1.0    | Jan 2026 | Initial Repository & Architecture Strategy                          |
+| v1.1    | Jun 2026 | Added domain-oriented architecture repository organization strategy |
 
 ---
 
@@ -174,6 +173,7 @@ This structure provides:
 - Improved traceability
 - Better scalability
 - Domain-centric documentation management
+
 ---
 
 ## 3. Alternatives Considered
