@@ -42,13 +42,11 @@
 
 ## 4. References
 
-- BRD-StarOne-Galaxy
-- PRD-StarOne-Galaxy Platform Foundation
+- BRD-001-CONFIG Configuration Repository Management
+- PRD-001-CONFIG Configuration Repository Management
+- ADR-001 Repository & Architecture Strategy for StarOne Galaxy
+- ADR-001-CONFIG Configuration Repository Management Strategy
 - EPIC-CONFIG-001 Configuration Repository Management
-- Repository Standards Documentation
-- Repository Governance Documentation
-- Configuration Security Standards
-- Configuration Onboarding Standards
 
 ---
 
@@ -93,11 +91,11 @@ This RTM establishes end-to-end traceability for the Configuration Repository Ma
 
 The following business requirements are covered by this RTM.
 
-- BR-CONFIG-001 Standardized Repository Structure
-- BR-CONFIG-002 Environment Configuration Management
-- BR-CONFIG-003 Repository Governance and Standards
-- BR-CONFIG-004 Configuration Security Baseline
-- BR-CONFIG-005 Application Onboarding Framework
+BR-CONFIG-001 Centralized Configuration Repository
+BR-CONFIG-002 Environment Configuration Management
+BR-CONFIG-003 Shared Configuration Management
+BR-CONFIG-004 Repository Governance and Standards
+BR-CONFIG-005 Application Onboarding Framework
 
 ---
 
@@ -135,13 +133,13 @@ The following business requirements are covered by this RTM.
 
 This matrix establishes end-to-end traceability between business requirements, product requirements, architecture artifacts, implementation artifacts, and validation artifacts.
 
-| BRD           | PRD            | Epic            | Story            | Requirement | ADR            | HLD            | LLD            | Service / Component    | Repository             | Test Case    | Validation | Status   |
-| ------------- | -------------- | --------------- | ---------------- | ----------- | -------------- | -------------- | -------------- | ---------------------- | ---------------------- | ------------ | ---------- | -------- |
-| BR-CONFIG-001 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-001 | FR-001      | ADR-CONFIG-001 | HLD-CONFIG-001 | LLD-CONFIG-001 | Repository Foundation  | starone-central-config | TC-CONFIG-S1 | Planned    | Proposed |
-| BR-CONFIG-002 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-002 | FR-002      | ADR-CONFIG-002 | HLD-CONFIG-002 | LLD-CONFIG-002 | Environment Management | starone-central-config | TC-CONFIG-S2 | Planned    | Proposed |
-| BR-CONFIG-003 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-003 | FR-003      | ADR-CONFIG-003 | HLD-CONFIG-003 | LLD-CONFIG-003 | Repository Governance  | starone-central-config | TC-CONFIG-S3 | Planned    | Proposed |
-| BR-CONFIG-004 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-004 | FR-004      | ADR-CONFIG-004 | HLD-CONFIG-004 | LLD-CONFIG-004 | Security Framework     | starone-central-config | TC-CONFIG-S4 | Planned    | Proposed |
-| BR-CONFIG-005 | PRD-CONFIG-001 | EPIC-CONFIG-001 | STORY-CONFIG-005 | FR-005      | ADR-CONFIG-005 | HLD-CONFIG-005 | LLD-CONFIG-005 | Onboarding Framework   | starone-central-config | TC-CONFIG-S5 | Planned    | Proposed |
+| BRD           | PRD            | Epic            | Story            | Requirement   | ADR            | Service / Component    | Repository             | Validation | Status   |
+| ------------- | -------------- | --------------- | ---------------- | ------------- | -------------- | ---------------------- | ---------------------- | ---------- | -------- |
+| BR-CONFIG-001 | PRD-001-CONFIG | EPIC-CONFIG-001 | STORY-CONFIG-001 | FR-CONFIG-001 | ADR-001-CONFIG | Repository Foundation  | starone-central-config | Planned    | Proposed |
+| BR-CONFIG-002 | PRD-001-CONFIG | EPIC-CONFIG-001 | STORY-CONFIG-002 | FR-CONFIG-002 | ADR-001-CONFIG | Environment Management | starone-central-config | Planned    | Proposed |
+| BR-CONFIG-003 | PRD-001-CONFIG | EPIC-CONFIG-001 | STORY-CONFIG-003 | FR-CONFIG-003 | ADR-001-CONFIG | Repository Governance  | starone-central-config | Planned    | Proposed |
+| BR-CONFIG-004 | PRD-001-CONFIG | EPIC-CONFIG-001 | STORY-CONFIG-004 | FR-CONFIG-004 | ADR-001-CONFIG | Security Framework     | starone-central-config | Planned    | Proposed |
+| BR-CONFIG-005 | PRD-001-CONFIG | EPIC-CONFIG-001 | STORY-CONFIG-005 | FR-CONFIG-005 | ADR-001-CONFIG | Onboarding Framework   | starone-central-config | Planned    | Proposed |
 
 ---
 
@@ -249,14 +247,16 @@ Business Acceptance
 | -------------- | -------- |
 | Requirements   | 100%     |
 | Architecture   | 100%     |
-| Implementation | 100%     |
-| Testing        | 100%     |
+| Implementation | Planned  |
+| Testing        | Planned  |
 
 ---
 
 ## 19. Gap Analysis
 
-No gaps identified.
+No requirements traceability gaps identified.
+
+Implementation and validation activities remain planned and will be updated as repository implementation progresses.
 
 All business requirements are mapped to:
 
@@ -280,9 +280,9 @@ No orphan validation activities exist.
 | Business Requirements Coverage | 100%     |
 | Product Requirements Coverage  | 100%     |
 | Architecture Coverage          | 100%     |
-| Implementation Coverage        | 100%     |
-| Test Coverage                  | 100%     |
-| Validation Coverage            | 100%     |
+| Implementation Coverage        | Planned  |
+| Test Coverage                  | Planned  |
+| Validation Coverage            | Planned  |
 
 No compliance gaps identified during traceability review.
 
@@ -324,6 +324,6 @@ No compliance gaps identified during traceability review.
 | Implementation Coverage | 100%     |
 | Test Coverage           | 100%     |
 
-Overall Traceability Status: Complete
+Overall Traceability Status: planned
 
 ---
