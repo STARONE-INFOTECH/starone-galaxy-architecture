@@ -39,9 +39,9 @@
 
 ## 1.1 Purpose
 
-This High-Level Design (HLD) document defines the **architecture, system components, and interactions** of the StarOne Galaxy ecosystem.
+This High-Level Design (HLD) document defines the **architecture, system components, and interactions*- of the StarOne Galaxy ecosystem.
 
-It translates SRS requirements into a **scalable, domain-driven, and cloud-native architecture** aligned with IEEE 1016 standards.
+It translates SRS requirements into a **scalable, domain-driven, and cloud-native architecture*- aligned with IEEE 1016 standards.
 
 ---
 
@@ -210,6 +210,118 @@ Kubernetes --> PostgreSQL
 
 ---
 
+# 6.1 Configuration Architecture
+
+## Configuration Management Strategy
+
+StarOne Galaxy adopts a centralized, Git-backed configuration management approach using Spring Cloud Config Server and a dedicated configuration repository (`starone-central-config`).
+
+### Repository Responsibilities
+
+| Repository                  | Responsibility                                                                 |
+| --------------------------- | ------------------------------------------------------------------------------ |
+| starone-galaxy-architecture | Architecture standards, governance, ADRs, and documentation                    |
+| starone-galaxy-infra        | Config Server deployment, containerization, networking, and runtime management |
+| starone-central-config      | Configuration assets, environment configurations, and configuration hierarchy  |
+| starone-dhs-system          | Configuration consumption through Spring Cloud Config Client                   |
+| bookshow-services           | Configuration consumption through Spring Cloud Config Client                   |
+
+---
+
+## Configuration Architecture
+
+```mermaid
+flowchart TD
+
+A[Developer]
+    --> B[starone-central-config Repository]
+
+B
+    --> C[Spring Cloud Config Server]
+
+C
+    --> D[Gateway]
+
+C
+    --> E[DHS Services]
+
+C
+    --> F[BookShow Services]
+```
+
+---
+
+## Configuration Repository Structure
+
+```text
+starone-central-config/
+├── global/
+│   ├── application.yml
+│   ├── application-local.yml
+│   ├── application-dev.yml
+│   ├── application-staging.yml
+│   └── application-prod.yml
+│
+├── shared/
+│
+├── applications/
+│   ├── platform/
+│   ├── dhs/
+│   └── bookshow/
+│
+└── scripts/
+```
+
+---
+
+## Configuration Resolution Hierarchy
+
+```text
+global/application.yml
+        ↓
+global/application-{profile}.yml
+        ↓
+applications/{domain}/{service}/{service}.yml
+        ↓
+applications/{domain}/{service}/{service}-{profile}.yml
+        ↓
+Environment Variables
+```
+
+---
+
+## Config Server Responsibilities
+
+- Clone configuration repository
+- Serve configuration through REST endpoints
+- Provide environment-aware configuration resolution
+- Support dynamic configuration refresh
+- Maintain configuration version traceability
+- Externalize application configuration from service repositories
+
+---
+
+## Config Client Responsibilities
+
+- Retrieve configuration during startup
+- Resolve profile-specific configuration
+- Support refresh operations
+- Consume externalized configuration without embedding configuration inside application repositories
+
+---
+
+## Benefits
+
+- Centralized configuration management
+- Independent configuration lifecycle
+- Reduced configuration duplication
+- Environment consistency
+- Git-based configuration versioning
+- Faster operational changes
+- Clear repository ownership boundaries
+
+---
+
 # 7. Component Design
 
 ## 7.1 API Gateway
@@ -318,7 +430,7 @@ Kubernetes --> PostgreSQL
 
 # 15. Conclusion
 
-This HLD defines a **scalable, modular, and governance-driven architecture** for StarOne Galaxy.
+This HLD defines a **scalable, modular, and governance-driven architecture*- for StarOne Galaxy.
 
 It establishes:
 
