@@ -39,9 +39,9 @@
 
 ## 1.1 Purpose
 
-This High-Level Design (HLD) document defines the **architecture, system components, and interactions** of the StarOne Galaxy ecosystem.
+This High-Level Design (HLD) document defines the **architecture, system components, and interactions*- of the StarOne Galaxy ecosystem.
 
-It translates SRS requirements into a **scalable, domain-driven, and cloud-native architecture** aligned with IEEE 1016 standards.
+It translates SRS requirements into a **scalable, domain-driven, and cloud-native architecture*- aligned with IEEE 1016 standards.
 
 ---
 
@@ -292,33 +292,33 @@ Environment Variables
 
 ## Config Server Responsibilities
 
-* Clone configuration repository
-* Serve configuration through REST endpoints
-* Provide environment-aware configuration resolution
-* Support dynamic configuration refresh
-* Maintain configuration version traceability
-* Externalize application configuration from service repositories
+- Clone configuration repository
+- Serve configuration through REST endpoints
+- Provide environment-aware configuration resolution
+- Support dynamic configuration refresh
+- Maintain configuration version traceability
+- Externalize application configuration from service repositories
 
 ---
 
 ## Config Client Responsibilities
 
-* Retrieve configuration during startup
-* Resolve profile-specific configuration
-* Support refresh operations
-* Consume externalized configuration without embedding configuration inside application repositories
+- Retrieve configuration during startup
+- Resolve profile-specific configuration
+- Support refresh operations
+- Consume externalized configuration without embedding configuration inside application repositories
 
 ---
 
 ## Benefits
 
-* Centralized configuration management
-* Independent configuration lifecycle
-* Reduced configuration duplication
-* Environment consistency
-* Git-based configuration versioning
-* Faster operational changes
-* Clear repository ownership boundaries
+- Centralized configuration management
+- Independent configuration lifecycle
+- Reduced configuration duplication
+- Environment consistency
+- Git-based configuration versioning
+- Faster operational changes
+- Clear repository ownership boundaries
 
 ---
 
@@ -430,7 +430,7 @@ Environment Variables
 
 # 15. Conclusion
 
-This HLD defines a **scalable, modular, and governance-driven architecture** for StarOne Galaxy.
+This HLD defines a **scalable, modular, and governance-driven architecture*- for StarOne Galaxy.
 
 It establishes:
 

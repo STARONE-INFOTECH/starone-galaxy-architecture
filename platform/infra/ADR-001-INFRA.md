@@ -2,16 +2,16 @@
 
 ## 1. Title Page
 
-**Project Name:** StarOne Galaxy Infrastructure Platform
-**Document ID:** ADR-001-INFRA
-**Decision Title:** Capability-Based Infrastructure Repository Structure
-**Repository Owner:** starone-galaxy-architecture
-**Consuming Repository:** starone-galaxy-infra
-**Suggested File Path:** `platform/infra/ADR-001-INFRA.md`
-**Author:** Sachin Salunke
-**Status:** Accepted
-**Version:** v1.0.0
-**Effective Date:** 2026-06-17
+**Project Name:*- StarOne Galaxy Infrastructure Platform
+**Document ID:*- ADR-001-INFRA
+**Decision Title:*- Capability-Based Infrastructure Repository Structure
+**Repository Owner:*- starone-galaxy-architecture
+**Consuming Repository:*- starone-galaxy-infra
+**Suggested File Path:*- `platform/infra/ADR-001-INFRA.md`
+**Author:*- Sachin Salunke
+**Status:*- Accepted
+**Version:*- v1.0.0
+**Effective Date:*- 2026-06-17
 
 ---
 
@@ -42,12 +42,12 @@
 
 ## 4. References
 
-* BRD-001-INFRA
-* PRD-001-INFRA
-* EPIC-001-INFRA
-* STORY-001-INFRA
-* HLD-001-INFRA
-* RTM-001-INFRA
+- BRD-001-INFRA
+- PRD-001-INFRA
+- EPIC-001-INFRA
+- STORY-001-INFRA
+- HLD-001-INFRA
+- RTM-001-INFRA
 
 ---
 
@@ -90,22 +90,22 @@
 
 The repository structure shall:
 
-* Support DHS and BookShow domain isolation
-* Provide reusable shared infrastructure assets
-* Organize environments consistently
-* Enable scalable repository growth
-* Improve developer onboarding experience
-* Simplify navigation and maintenance
-* Support future platform capabilities without restructuring
+- Support DHS and BookShow domain isolation
+- Provide reusable shared infrastructure assets
+- Organize environments consistently
+- Enable scalable repository growth
+- Improve developer onboarding experience
+- Simplify navigation and maintenance
+- Support future platform capabilities without restructuring
 
 ---
 
 ## 8. Assumptions
 
-* DHS and BookShow will continue as independent domains.
-* Additional domains may be introduced in the future.
-* Shared infrastructure capabilities will grow over time.
-* Repository standards will be centrally managed by `starone-galaxy-architecture`.
+- DHS and BookShow will continue as independent domains.
+- Additional domains may be introduced in the future.
+- Shared infrastructure capabilities will grow over time.
+- Repository standards will be centrally managed by `starone-galaxy-architecture`.
 
 ---
 
@@ -122,11 +122,11 @@ The repository structure shall:
 
 ## 10. Dependencies
 
-* EPIC-001-INFRA
-* STORY-001-INFRA
-* Kubernetes platform foundation
-* Environment provisioning strategy
-* Namespace isolation strategy
+- EPIC-001-INFRA
+- STORY-001-INFRA
+- Kubernetes platform foundation
+- Environment provisioning strategy
+- Namespace isolation strategy
 
 ---
 
@@ -151,26 +151,26 @@ and automation.
 
 Without a standardized repository structure:
 
-* Domain assets may become mixed.
-* Shared resources may be duplicated.
-* Documentation becomes difficult to locate.
-* Repository navigation becomes increasingly complex.
-* Future domains require expensive restructuring.
+- Domain assets may become mixed.
+- Shared resources may be duplicated.
+- Documentation becomes difficult to locate.
+- Repository navigation becomes increasingly complex.
+- Future domains require expensive restructuring.
 
 ### 12.3 Key Challenges
 
-* Maintaining domain isolation
-* Organizing shared infrastructure assets
-* Supporting future expansion
-* Simplifying onboarding and maintenance
-* Preventing repository sprawl
+- Maintaining domain isolation
+- Organizing shared infrastructure assets
+- Supporting future expansion
+- Simplifying onboarding and maintenance
+- Preventing repository sprawl
 
 ### 12.4 Constraints
 
-* Must support independent DHS and BookShow domains.
-* Must support reusable shared platform assets.
-* Must scale without major restructuring.
-* Must remain simple for developers and operators.
+- Must support independent DHS and BookShow domains.
+- Must support reusable shared platform assets.
+- Must scale without major restructuring.
+- Must remain simple for developers and operators.
 
 ---
 
@@ -186,12 +186,12 @@ Documentation remains externalized in
 starone-galaxy-architecture/platform/infra and is consumed by
 starone-galaxy-infra during implementation.
 
-* DHS infrastructure assets
-* BookShow infrastructure assets
-* Shared platform assets
-* Environment configurations
-* Documentation
-* Operational scripts
+- DHS infrastructure assets
+- BookShow infrastructure assets
+- Shared platform assets
+- Environment configurations
+- Documentation
+- Operational scripts
 
 ### 13.2 Decision Drivers
 
@@ -204,12 +204,12 @@ starone-galaxy-infra during implementation.
 
 ### 13.3 Design Principles
 
-* Platform First
-* Domain Isolation
-* Shared Components Reuse
-* Infrastructure as Code
-* Convention over Configuration
-* Repository Scalability
+- Platform First
+- Domain Isolation
+- Shared Components Reuse
+- Infrastructure as Code
+- Convention over Configuration
+- Repository Scalability
 
 ---
 
@@ -279,9 +279,9 @@ starone-galaxy-infra/
 
 ### 15.3 Long-Term Implications
 
-* Supports future domains without restructuring
-* Enables predictable repository evolution
-* Reduces operational complexity as the platform grows
+- Supports future domains without restructuring
+- Enables predictable repository evolution
+- Reduces operational complexity as the platform grows
 
 ---
 
