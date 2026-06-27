@@ -2,7 +2,7 @@
 
 ---
 
-## Title Page
+# 1. Title Page
 
 | Field       | Value                             |
 | ----------- | --------------------------------- |
@@ -15,7 +15,7 @@
 
 ---
 
-## 1. Context
+# 2. Context
 
 StarOne Galaxy is a **multi-domain distributed system** with multiple independent services across domains:
 
@@ -33,7 +33,7 @@ Each service requires:
 
 ---
 
-### Problem Statement
+## 2.1 Problem Statement
 
 ```text
 How should configuration be managed across multiple domains
@@ -42,7 +42,7 @@ while ensuring security, scalability, and strict domain isolation?
 
 ---
 
-### Key Challenges
+## 2.2 Key Challenges
 
 - Avoiding configuration duplication
 - Managing environment-specific configs (dev, staging, prod)
@@ -52,63 +52,68 @@ while ensuring security, scalability, and strict domain isolation?
 
 ---
 
-## 2. Decision
+# 3. Decision
 
-StarOne Galaxy will adopt a:
+StarOne Galaxy shall implement a centralized configuration management platform that provides:
 
-```text
-Centralized Configuration Management using Spring Cloud Config
-with strict domain-level isolation and encryption
-```
+• Centralized configuration storage
+• Environment isolation
+• Domain isolation
+• Secure secret management
+• Version-controlled configuration
+• Dynamic configuration distribution
+
+The initial implementation shall use:
+
+Spring Cloud Config Server
+
+with
+
+starone-galaxy-central-config
+
+as the Git-backed configuration repository.
 
 ---
 
-### 2.1 Centralized Config Store
+## 3.1 Centralized Config Store
 
 - All configurations will be stored in:
 
 ```text
-starone-galaxy-config repository
+starone-galaxy-central-config repository
 ```
 
-- Managed via **Spring Cloud Config Server**
+- Managed through the enterprise configuration platform.
+
+- The current implementation uses Spring Cloud Config Server.
+- Future implementations may use another centralized configuration technology without changing this architectural decision.
 
 ---
 
-### 2.2 Domain-Level Isolation
+## 3.2 Domain-Level Isolation
 
-- Configurations are separated per domain:
+Configuration assets shall be logically isolated by business domain. The implementation mechanism is defined within the Infrastructure Repository.
 
-```text
-dhs-service.yml
-bookshow-service.yml
-sportstats-service.yml
-vaultiron-service.yml
-```
+Examples are defined in:
 
-- No domain can access another domain’s configuration
+docs/configuration-management/CONFIGURATION_CONVENTIONS.md
 
 ---
 
-### 2.3 Environment Separation
+## 3.3 Environment Separation
 
-Configurations are maintained per environment:
+Configuration shall support environment-specific overrides.
 
-```text
-application-dev.yml
-application-staging.yml
-application-prod.yml
-```
+Implementation is defined by the Infrastructure Repository.
+
 
 ---
 
-### 2.4 Secure Configuration (Encryption)
+## 3.4 Secure Configuration (Encryption)
 
-- Sensitive data must be encrypted using:
+Sensitive configuration values shall be encrypted using the enterprise-approved encryption mechanism.
 
-```text
-JCE Encryption (Spring Cloud Config)
-```
+The initial implementation uses Spring Cloud Config encryption.
 
 Examples:
 
@@ -118,14 +123,15 @@ Examples:
 
 ---
 
-### 2.5 Runtime Configuration Injection
+## 3.5 Runtime Configuration Injection
 
-- Services fetch configuration at runtime from Config Server
+- Services shall obtain configuration from the enterprise configuration platform during startup and refresh events.
+- The current implementation uses Spring Cloud Config Server.
 - No hardcoded configuration inside services
 
 ---
 
-### 2.6 Configuration Access Rules
+## 3.6 Configuration Access Rules
 
 ```text
 ✔ Services can only access their own config
@@ -135,11 +141,100 @@ Examples:
 
 ---
 
-## 3. Alternatives Considered
+# 4. Traceability
+
+## 4.1 Parent Traceability (Backward)
+
+| Source | Reference |
+|--------|-----------|
+| Enterprise Vision | StarOne Galaxy Ecosystem Charter (SGE) |
+| Related ADR | ADR-001 Repository Strategy |
+| Related ADR | ADR-002 Architecture Style |
+| Related ADR | ADR-003 Domain Isolation |
+
+### Parent Relationship
+
+```text
+StarOne Galaxy Ecosystem Charter
+            │
+            ▼
+ADR-001 Repository Strategy
+            │
+            ▼
+ADR-003 Domain Isolation
+            │
+            ▼
+ADR-004 Configuration Management Strategy
+```
 
 ---
 
-### ❌ Option 1: Local Configuration per Service
+## 4.2 Child Traceability (Forward)
+
+| Target | Reference |
+|---------|-----------|
+| Infrastructure HLD | HLD-INFRA-001 Platform Configuration Architecture |
+| Infrastructure LLD | LLD-INFRA-001 Spring Cloud Configuration Implementation |
+| Infrastructure Repository | starone-galaxy-infra |
+| Configuration Repository | starone-galaxy-central-config |
+| Platform Component | Spring Cloud Config Server |
+| Platform Component | Configuration Management Framework |
+| Consumer | All StarOne Services |
+
+### Forward Relationship
+
+```text
+ADR-004
+    │
+    ├── HLD-INFRA-001
+    │       │
+    │       ▼
+    │   LLD-INFRA-001
+    │       │
+    │       ▼
+    │   starone-galaxy-infra
+    │       │
+    │       ▼
+    │   Spring Cloud Config Server
+    │
+    └──────────────► starone-galaxy-central-config
+                        │
+                        ▼
+                 Configuration Assets
+                        │
+                        ▼
+              All Platform & Business Services
+```
+
+---
+
+## 4.3 RTM Relationship
+
+| Parent Artifact | Current Artifact | Child Artifact |
+|-----------------|------------------|----------------|
+| StarOne Galaxy Ecosystem Charter | ADR-004 | HLD-INFRA-001 |
+| ADR-003 Domain Isolation | ADR-004 | LLD-INFRA-001 |
+| ADR-001 Repository Strategy | ADR-004 | starone-galaxy-infra |
+| ADR-002 Architecture Style | ADR-004 | starone-galaxy-central-config |
+
+---
+
+# 5. Repository Responsibilities
+
+| Repository     | Responsibility                                 |
+| -------------- | ---------------------------------------------- |
+| Architecture   | Defines configuration governance and standards |
+| Infrastructure | Implements configuration platform              |
+| Central Config | Stores configuration assets                    |
+| Applications   | Consume centralized configuration              |
+
+---
+
+# 6. Alternatives Considered
+
+---
+
+## 6.1 ❌ Option 1: Local Configuration per Service
 
 **Description:**
 Each service maintains its own config files
@@ -152,7 +247,7 @@ Each service maintains its own config files
 
 ---
 
-### ❌ Option 2: Environment Variables Only
+## 6.2 ❌ Option 2: Environment Variables Only
 
 **Description:**
 All configs managed via environment variables
@@ -165,7 +260,7 @@ All configs managed via environment variables
 
 ---
 
-### ❌ Option 3: Shared Configuration Across Domains
+## 6.3 ❌ Option 3: Shared Configuration Across Domains
 
 **Description:**
 Common config shared across all domains
@@ -178,7 +273,7 @@ Common config shared across all domains
 
 ---
 
-### ✅ Option 4: Centralized Config with Isolation (Chosen)
+## 6.4 ✅ Option 4: Centralized Config with Isolation (Chosen)
 
 **Description:**
 Central config repository with domain-specific separation and encryption
@@ -192,11 +287,11 @@ Central config repository with domain-specific separation and encryption
 
 ---
 
-## 4. Consequences
+# 7. Consequences
 
 ---
 
-### ✅ Positive
+## 7.1 ✅ Positive
 
 - Centralized control of configuration
 - Improved security via encryption
@@ -206,7 +301,7 @@ Central config repository with domain-specific separation and encryption
 
 ---
 
-### ⚠️ Negative
+## 7.2 ⚠️ Negative
 
 - Dependency on Config Server availability
 - Initial setup complexity
@@ -214,7 +309,7 @@ Central config repository with domain-specific separation and encryption
 
 ---
 
-## 5. Trade-offs
+# 8. Trade-offs
 
 | Trade-off                   | Decision                  |
 | --------------------------- | ------------------------- |
@@ -224,20 +319,21 @@ Central config repository with domain-specific separation and encryption
 
 ---
 
-## 6. Impact
+# 9. Impact
 
 ---
 
-### Affects:
+## 9.1 Affected Repositories
 
-- Infrastructure setup (Config Server)
-- Service startup configuration
-- Security model
-- Deployment pipelines
+- starone-galaxy-infra
+- starone-galaxy-central-config
+- starone-dhs-platform
+- starone-bookshow-platform
+- future platform services
 
 ---
 
-### Enables:
+## 9.2 Enables:
 
 - Dynamic configuration updates
 - Secure secret management
@@ -245,7 +341,7 @@ Central config repository with domain-specific separation and encryption
 
 ---
 
-## 7. Rules Enforced
+# 10. Rules Enforced
 
 ```text
 1. All configuration must reside in central config repository
@@ -257,17 +353,8 @@ Central config repository with domain-specific separation and encryption
 
 ---
 
-## 8. Related Artifacts
 
-- ADR-001 Repository Strategy
-- ADR-002 Architecture Style
-- ADR-003 Domain Isolation
-- SRS-001 StarOne Galaxy
-- HLD-001 Global Architecture
-
----
-
-## 9. Decision Summary
+# 11. Decision Summary
 
 ```text
 StarOne Galaxy adopts a centralized configuration management strategy
@@ -277,7 +364,7 @@ secrets to ensure secure, scalable, and manageable configuration handling.
 
 ---
 
-## 10. Status
+# 12. Status
 
 ```text
 ACCEPTED — This configuration model is mandatory across all services

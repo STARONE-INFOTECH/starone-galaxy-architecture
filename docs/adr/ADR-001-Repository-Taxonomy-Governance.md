@@ -41,11 +41,11 @@ StarOne Galaxy consists of multiple independently governed domains that must ope
 
 The ecosystem includes:
 
-- starone-galaxy-infra (Control Plane)
-- starone-galaxy-config (Configuration Store)
-- starone-dhs-system (Enterprise OMS)
-- starone-bookshow-system (Consumer Ticketing Platform)
 - starone-galaxy-architecture (Architecture Source of Truth)
+- starone-galaxy-infra (Control Plane)
+- starone-galaxy-central-config (Configuration Store)
+- starone-dhs-platform (Enterprise OMS)
+- starone-bookshow-platform (Consumer Ticketing Platform)
 
 Additional business domains may be introduced in the future and shall inherit the approved repository taxonomy governance model.
 
@@ -180,8 +180,8 @@ The StarOne Galaxy ecosystem organizes repositories into the following governanc
 
 Business Domain repositories include:
 
-- starone-dhs-system
-- starone-bookshow-system
+- starone-dhs-platform
+- starone-bookshow-platform
 
 Future domain repositories shall follow the same governance model.
 
@@ -193,6 +193,7 @@ Future domain repositories shall follow the same governance model.
 starone-galaxy-architecture/
 
 ├── docs/
+│   ├── ecosystem/
 │   ├── adr/
 │   ├── brd/
 │   ├── prd/
@@ -228,9 +229,9 @@ The StarOne Galaxy ecosystem is organized into distinct repository categories.
 | --------------------------- | ------------------------ | ------------------------------------------- |
 | starone-galaxy-architecture | Architecture Governance  | Standards, ADRs, Design Governance          |
 | starone-galaxy-infra        | Platform Governance      | CI/CD, Security, Kubernetes, Operations     |
-| starone-galaxy-config       | Configuration Governance | Spring Cloud Config, Environment Governance |
-| starone-dhs-system          | Business Domain          | Enterprise OMS Platform                     |
-| starone-bookshow-system     | Business Domain          | Consumer Ticketing Platform                 |
+| starone-galaxy-central-config       | Configuration Governance | Spring Cloud Config, Environment Governance |
+| starone-dhs-platform          | Business Domain          | Enterprise OMS Platform                     |
+| starone-bookshow-platform     | Business Domain          | Consumer Ticketing Platform                 |
 
 ---
 
@@ -243,11 +244,11 @@ ARCH[starone-galaxy-architecture]
 
 INFRA[starone-galaxy-infra]
 
-CONFIG[starone-galaxy-config]
+CONFIG[starone-galaxy-central-config]
 
-DHS[starone-dhs-system]
+DHS[starone-dhs-platform]
 
-BOOKSHOW[starone-bookshow-system]
+BOOKSHOW[starone-bookshow-platform]
 
 ARCH --> INFRA
 ARCH --> CONFIG
@@ -350,16 +351,17 @@ This decision supports:
 
 ## 9. Traceability
 
-| Source      | Reference                                         |
-| ----------- | ------------------------------------------------- |
-| Epic        | EPIC-ARCH-001                                     |
-| Story       | STORY-ARCH-004                                    |
-| BRD         | StarOne Galaxy Architecture Repository Governance |
-| Related ADR | ADR-002 Documentation Standards Governance        |
-| Related ADR | ADR-003 Governance Enforcement Controls           |
-| Standard    | STANDARD-006 CODEOWNERS Governance                |
-| Standard    | STANDARD-007 Enterprise Naming Conventions        |
-| Standard    | STANDARD-008 Contribution Governance              |
+| Relationship | Artifact Type      | Reference                                  |
+| ------------ | ------------------ | ------------------------------------------ |
+| Parent       | Enterprise Charter | StarOne Galaxy Ecosystem Charter           |
+| Parent       | Epic               | EPIC-ARCH-001                              |
+| Parent       | Story              | STORY-ARCH-004                             |
+| Related      | ADR                | ADR-002 Documentation Standards Governance |
+| Related      | ADR                | ADR-003 Governance Enforcement Controls    |
+| Depends On   | Standard           | STANDARD-006 CODEOWNERS Governance         |
+| Depends On   | Standard           | STANDARD-007 Enterprise Naming Conventions |
+| Depends On   | Standard           | STANDARD-008 Contribution Governance       |
+
 
 ---
 
