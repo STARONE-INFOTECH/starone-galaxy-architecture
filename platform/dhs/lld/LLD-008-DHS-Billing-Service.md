@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Billing Service |
-| Document | Low Level Design |
-| Document ID | LLD-008 |
-| Repository | starone-dhs-platform |
-| Module | billing-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Billing Service                        |
+| Document    | Low Level Design                       |
+| Document ID | LLD-008                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | billing-service                        |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -340,16 +340,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Invoice | Customer Invoice |
-| Invoice Line | Invoice Items |
-| Payment | Customer Payments |
-| Payment Allocation | Invoice Settlement |
-| Credit Note | Credit Adjustment |
-| Debit Note | Debit Adjustment |
-| Receivable | Outstanding Balance |
-| Billing Timeline | Billing History |
+| Component          | Responsibility      |
+| ------------------ | ------------------- |
+| Invoice            | Customer Invoice    |
+| Invoice Line       | Invoice Items       |
+| Payment            | Customer Payments   |
+| Payment Allocation | Invoice Settlement  |
+| Credit Note        | Credit Adjustment   |
+| Debit Note         | Debit Adjustment    |
+| Receivable         | Outstanding Balance |
+| Billing Timeline   | Billing History     |
 
 ---
 
@@ -400,18 +400,18 @@ Other services shall reference invoices using **invoiceId**.
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Billing Service |
-| Document | Low Level Design |
-| Document ID | LLD-008 |
-| Repository | starone-dhs-platform |
-| Module | billing-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Billing Service                        |
+| Document    | Low Level Design                       |
+| Document ID | LLD-008                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | billing-service                        |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -738,16 +738,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Invoice | Customer Invoice |
-| Invoice Line | Invoice Items |
-| Payment | Customer Payments |
-| Payment Allocation | Invoice Settlement |
-| Credit Note | Credit Adjustment |
-| Debit Note | Debit Adjustment |
-| Receivable | Outstanding Balance |
-| Billing Timeline | Billing History |
+| Component          | Responsibility      |
+| ------------------ | ------------------- |
+| Invoice            | Customer Invoice    |
+| Invoice Line       | Invoice Items       |
+| Payment            | Customer Payments   |
+| Payment Allocation | Invoice Settlement  |
+| Credit Note        | Credit Adjustment   |
+| Debit Note         | Debit Adjustment    |
+| Receivable         | Outstanding Balance |
+| Billing Timeline   | Billing History     |
 
 ---
 
@@ -1064,16 +1064,16 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| InvoiceRepository | Invoice Master |
-| InvoiceLineRepository | Invoice Lines |
-| PaymentRepository | Payments |
-| PaymentAllocationRepository | Payment Allocation |
-| CreditNoteRepository | Credit Notes |
-| DebitNoteRepository | Debit Notes |
-| ReceivableRepository | Customer Receivables |
-| BillingTimelineRepository | Timeline |
+| Repository                  | Responsibility       |
+| --------------------------- | -------------------- |
+| InvoiceRepository           | Invoice Master       |
+| InvoiceLineRepository       | Invoice Lines        |
+| PaymentRepository           | Payments             |
+| PaymentAllocationRepository | Payment Allocation   |
+| CreditNoteRepository        | Credit Notes         |
+| DebitNoteRepository         | Debit Notes          |
+| ReceivableRepository        | Customer Receivables |
+| BillingTimelineRepository   | Timeline             |
 
 ---
 
@@ -1115,18 +1115,18 @@ dto.response
 
 ## InvoiceResponse
 
-| Field | Type |
-|---------|------|
-| invoiceId | UUID |
-| invoiceNumber | String |
-| orderId | UUID |
-| customerId | UUID |
-| invoiceStatus | InvoiceStatus |
-| invoiceDate | Instant |
-| subtotal | BigDecimal |
-| taxAmount | BigDecimal |
-| totalAmount | BigDecimal |
-| outstandingAmount | BigDecimal |
+| Field             | Type          |
+| ----------------- | ------------- |
+| invoiceId         | UUID          |
+| invoiceNumber     | String        |
+| orderId           | UUID          |
+| customerId        | UUID          |
+| invoiceStatus     | InvoiceStatus |
+| invoiceDate       | Instant       |
+| subtotal          | BigDecimal    |
+| taxAmount         | BigDecimal    |
+| totalAmount       | BigDecimal    |
+| outstandingAmount | BigDecimal    |
 
 ---
 
@@ -1156,30 +1156,30 @@ entity
 
 ## Invoice
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceNumber | String |
-| orderId | UUID |
-| customerId | UUID |
-| invoiceStatus | InvoiceStatus |
-| invoiceDate | Instant |
-| dueDate | LocalDate |
-| subtotal | BigDecimal |
-| taxAmount | BigDecimal |
-| totalAmount | BigDecimal |
-| outstandingAmount | BigDecimal |
+| Attribute         | Type          |
+| ----------------- | ------------- |
+| id                | UUID          |
+| invoiceNumber     | String        |
+| orderId           | UUID          |
+| customerId        | UUID          |
+| invoiceStatus     | InvoiceStatus |
+| invoiceDate       | Instant       |
+| dueDate           | LocalDate     |
+| subtotal          | BigDecimal    |
+| taxAmount         | BigDecimal    |
+| totalAmount       | BigDecimal    |
+| outstandingAmount | BigDecimal    |
 
 ---
 
 ## InvoiceLine
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| productId | UUID |
-| quantity | BigDecimal |
+| Attribute | Type       |
+| --------- | ---------- |
+| id        | UUID       |
+| invoiceId | UUID       |
+| productId | UUID       |
+| quantity  | BigDecimal |
 | unitPrice | BigDecimal |
 | taxAmount | BigDecimal |
 | lineTotal | BigDecimal |
@@ -1188,77 +1188,77 @@ entity
 
 ## Payment
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| paymentReference | String |
-| customerId | UUID |
-| paymentMethod | PaymentMethod |
-| paymentDate | Instant |
-| paymentAmount | BigDecimal |
-| paymentStatus | PaymentStatus |
+| Attribute        | Type          |
+| ---------------- | ------------- |
+| id               | UUID          |
+| paymentReference | String        |
+| customerId       | UUID          |
+| paymentMethod    | PaymentMethod |
+| paymentDate      | Instant       |
+| paymentAmount    | BigDecimal    |
+| paymentStatus    | PaymentStatus |
 
 ---
 
 ## PaymentAllocation
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| paymentId | UUID |
-| invoiceId | UUID |
+| Attribute       | Type       |
+| --------------- | ---------- |
+| id              | UUID       |
+| paymentId       | UUID       |
+| invoiceId       | UUID       |
 | allocatedAmount | BigDecimal |
-| allocationDate | Instant |
+| allocationDate  | Instant    |
 
 ---
 
 ## CreditNote
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| creditNoteNumber | String |
-| invoiceId | UUID |
-| creditAmount | BigDecimal |
-| reason | String |
-| status | CreditNoteStatus |
+| Attribute        | Type             |
+| ---------------- | ---------------- |
+| id               | UUID             |
+| creditNoteNumber | String           |
+| invoiceId        | UUID             |
+| creditAmount     | BigDecimal       |
+| reason           | String           |
+| status           | CreditNoteStatus |
 
 ---
 
 ## DebitNote
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| debitNoteNumber | String |
-| invoiceId | UUID |
-| debitAmount | BigDecimal |
-| reason | String |
-| status | DebitNoteStatus |
+| Attribute       | Type            |
+| --------------- | --------------- |
+| id              | UUID            |
+| debitNoteNumber | String          |
+| invoiceId       | UUID            |
+| debitAmount     | BigDecimal      |
+| reason          | String          |
+| status          | DebitNoteStatus |
 
 ---
 
 ## Receivable
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| invoiceId | UUID |
-| outstandingAmount | BigDecimal |
-| agingBucket | AgingBucket |
+| Attribute         | Type        |
+| ----------------- | ----------- |
+| id                | UUID        |
+| customerId        | UUID        |
+| invoiceId         | UUID        |
+| outstandingAmount | BigDecimal  |
+| agingBucket       | AgingBucket |
 
 ---
 
 ## BillingTimeline
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| eventType | String |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| invoiceId      | UUID    |
+| eventType      | String  |
 | eventTimestamp | Instant |
-| remarks | String |
+| remarks        | String  |
 
 ---
 
@@ -1328,15 +1328,15 @@ ReceivableValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| InvoiceValidator | Invoice Validation |
-| InvoicePostingValidator | Posting Rules |
-| PaymentValidator | Payment Validation |
+| Validator                  | Purpose               |
+| -------------------------- | --------------------- |
+| InvoiceValidator           | Invoice Validation    |
+| InvoicePostingValidator    | Posting Rules         |
+| PaymentValidator           | Payment Validation    |
 | PaymentAllocationValidator | Allocation Validation |
-| CreditNoteValidator | Credit Note Rules |
-| DebitNoteValidator | Debit Note Rules |
-| ReceivableValidator | Receivable Validation |
+| CreditNoteValidator        | Credit Note Rules     |
+| DebitNoteValidator         | Debit Note Rules      |
+| ReceivableValidator        | Receivable Validation |
 
 ---
 
@@ -1577,18 +1577,18 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| INVOICE_CREATE | Generate Invoice |
-| INVOICE_UPDATE | Update Draft Invoice |
-| INVOICE_POST | Post Invoice |
-| INVOICE_CANCEL | Cancel Invoice |
-| INVOICE_VIEW | View Invoice |
-| PAYMENT_RECEIVE | Receive Payment |
-| PAYMENT_ALLOCATE | Allocate Payment |
-| CREDIT_NOTE_CREATE | Create Credit Note |
-| DEBIT_NOTE_CREATE | Create Debit Note |
-| RECEIVABLE_VIEW | View Receivables |
+| Permission         | Description          |
+| ------------------ | -------------------- |
+| INVOICE_CREATE     | Generate Invoice     |
+| INVOICE_UPDATE     | Update Draft Invoice |
+| INVOICE_POST       | Post Invoice         |
+| INVOICE_CANCEL     | Cancel Invoice       |
+| INVOICE_VIEW       | View Invoice         |
+| PAYMENT_RECEIVE    | Receive Payment      |
+| PAYMENT_ALLOCATE   | Allocate Payment     |
+| CREDIT_NOTE_CREATE | Create Credit Note   |
+| DEBIT_NOTE_CREATE  | Create Debit Note    |
+| RECEIVABLE_VIEW    | View Receivables     |
 
 ---
 
@@ -1626,15 +1626,12 @@ Billing Service shall consume authenticated user information from Spring Securit
 
 ```json
 {
-  "sub":"UUID",
-  "username":"finance.manager",
-  "roles":["FINANCE_MANAGER"],
-  "permissions":[
-      "INVOICE_POST",
-      "PAYMENT_RECEIVE"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "finance.manager",
+  "roles": ["FINANCE_MANAGER"],
+  "permissions": ["INVOICE_POST", "PAYMENT_RECEIVE"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1684,18 +1681,18 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Generate Invoice | INVOICE_CREATE |
-| Update Invoice | INVOICE_UPDATE |
-| Post Invoice | INVOICE_POST |
-| Cancel Invoice | INVOICE_CANCEL |
-| View Invoice | INVOICE_VIEW |
-| Receive Payment | PAYMENT_RECEIVE |
-| Allocate Payment | PAYMENT_ALLOCATE |
+| API                | Permission         |
+| ------------------ | ------------------ |
+| Generate Invoice   | INVOICE_CREATE     |
+| Update Invoice     | INVOICE_UPDATE     |
+| Post Invoice       | INVOICE_POST       |
+| Cancel Invoice     | INVOICE_CANCEL     |
+| View Invoice       | INVOICE_VIEW       |
+| Receive Payment    | PAYMENT_RECEIVE    |
+| Allocate Payment   | PAYMENT_ALLOCATE   |
 | Create Credit Note | CREDIT_NOTE_CREATE |
-| Create Debit Note | DEBIT_NOTE_CREATE |
-| View Receivables | RECEIVABLE_VIEW |
+| Create Debit Note  | DEBIT_NOTE_CREATE  |
+| View Receivables   | RECEIVABLE_VIEW    |
 
 ---
 
@@ -1769,12 +1766,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"InvoiceGenerated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "InvoiceGenerated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1802,12 +1799,12 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| OrderClient | Order Validation |
-| CustomerClient | Customer Validation |
-| NotificationClient | Invoice Notification |
-| AuditClient | Audit Submission |
+| Client               | Responsibility        |
+| -------------------- | --------------------- |
+| OrderClient          | Order Validation      |
+| CustomerClient       | Customer Validation   |
+| NotificationClient   | Invoice Notification  |
+| AuditClient          | Audit Submission      |
 | PaymentGatewayClient | Payment Authorization |
 
 ---
@@ -1832,16 +1829,16 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Background Jobs |
-| Metrics | Micrometer |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis                |
+| Validation    | Bean Validation      |
+| Scheduler     | Background Jobs      |
+| Metrics       | Micrometer           |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1855,15 +1852,15 @@ Distributed workflows shall communicate using Kafka events.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Generate Invoice | REQUIRED |
-| Post Invoice | REQUIRED |
-| Receive Payment | REQUIRED |
-| Allocate Payment | REQUIRED |
-| Create Credit Note | REQUIRED |
-| Create Debit Note | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation          | Propagation  |
+| ------------------ | ------------ |
+| Generate Invoice   | REQUIRED     |
+| Post Invoice       | REQUIRED     |
+| Receive Payment    | REQUIRED     |
+| Allocate Payment   | REQUIRED     |
+| Create Credit Note | REQUIRED     |
+| Create Debit Note  | REQUIRED     |
+| Publish Event      | AFTER_COMMIT |
 
 ---
 
@@ -1996,26 +1993,26 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Order Service | Invoice Generation |
-| Customer Service | Customer Validation |
+| Service              | Purpose                         |
+| -------------------- | ------------------------------- |
+| Order Service        | Invoice Generation              |
+| Customer Service     | Customer Validation             |
 | Notification Service | Invoice & Payment Notifications |
-| Audit Service | Audit Logging |
-| Reporting Service | Financial Analytics |
-| Payment Gateway | Payment Processing |
+| Audit Service        | Audit Logging                   |
+| Reporting Service    | Financial Analytics             |
+| Payment Gateway      | Payment Processing              |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| billing.cache.enabled | true |
-| billing.cache.ttl | 3600 |
-| billing.invoice.due.days | 30 |
-| billing.payment.retry | 3 |
-| billing.kafka.retry | 3 |
+| Property                 | Default |
+| ------------------------ | ------- |
+| billing.cache.enabled    | true    |
+| billing.cache.ttl        | 3600    |
+| billing.invoice.due.days | 30      |
+| billing.payment.retry    | 3       |
+| billing.kafka.retry      | 3       |
 
 ---
 
@@ -2056,23 +2053,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -2114,13 +2111,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Business Errors |
-| ERROR | System Failures |
+| Level | Purpose                     |
+| ----- | --------------------------- |
+| TRACE | Framework Diagnostics       |
+| DEBUG | Development                 |
+| INFO  | Business Events             |
+| WARN  | Recoverable Business Errors |
+| ERROR | System Failures             |
 
 ---
 
@@ -2562,14 +2559,14 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2636,35 +2633,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Billing Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Billing Audit |
+| Layer      | Responsibility         |
+| ---------- | ---------------------- |
+| Controller | Request Handling       |
+| Service    | Billing Business Logic |
+| Repository | Persistence            |
+| Kafka      | Event Publishing       |
+| Mapper     | DTO Conversion         |
+| Validation | Request Validation     |
+| Audit      | Billing Audit          |
 
 ---
 
@@ -2768,12 +2765,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Billing Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Billing Service Implementation                  |
 
 ---
 

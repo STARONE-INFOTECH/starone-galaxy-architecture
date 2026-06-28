@@ -52,23 +52,23 @@
 
 The Requirements Traceability Matrix (RTM) establishes end-to-end traceability between:
 
-* Business Requirements
-* Product Requirements
-* System Requirements
-* Functional Requirements
-* Architecture Decisions
-* Epics
-* User Stories
-* Test Cases
+- Business Requirements
+- Product Requirements
+- System Requirements
+- Functional Requirements
+- Architecture Decisions
+- Epics
+- User Stories
+- Test Cases
 
 The RTM ensures:
 
-* Requirement completeness
-* Requirement coverage
-* Change impact analysis
-* Verification and validation support
-* Audit readiness
-* End-to-end traceability
+- Requirement completeness
+- Requirement coverage
+- Change impact analysis
+- Verification and validation support
+- Audit readiness
+- End-to-end traceability
 
 ---
 

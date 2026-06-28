@@ -6,22 +6,22 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
+| Field          | Value                                                |
+| -------------- | ---------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform             |
 | Document Title | Identity Service Software Requirements Specification |
-| Document ID | SRS-002 |
-| Service Name | Identity Service |
-| Domain | Identity & Access Management |
-| Repository | starone-dhs-platform |
-| Module | identity-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-002                                              |
+| Service Name   | Identity Service                                     |
+| Domain         | Identity & Access Management                         |
+| Repository     | starone-dhs-platform                                 |
+| Module         | identity-service                                     |
+| Document Type  | Software Requirements Specification (SRS)            |
+| Standard       | ISO/IEC/IEEE 29148                                   |
+| Version        | v1.0.0                                               |
+| Status         | Draft                                                |
+| Author         | Sachin Salunke                                       |
+| Owner          | Enterprise Architecture                              |
+| Last Updated   | 2026-06-27                                           |
 
 ---
 
@@ -29,34 +29,34 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | DHS High-Level Design |
-| FRD-Identity | Identity Functional Requirements |
-| SRS-001 | Platform Foundation Software Requirements Specification |
+| Document     | Description                                             |
+| ------------ | ------------------------------------------------------- |
+| BRD-001      | Business Requirements Document                          |
+| PRD-001      | Product Requirements Document                           |
+| ADR-001      | Architecture Decision Record                            |
+| HLD-001      | DHS High-Level Design                                   |
+| FRD-Identity | Identity Functional Requirements                        |
+| SRS-001      | Platform Foundation Software Requirements Specification |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -150,13 +150,13 @@ The Identity Service shall provide:
 
 The Identity Service supports the following actors.
 
-| Actor | Description |
-|--------|-------------|
-| Super Administrator | Complete platform access |
-| System Administrator | User & Role Management |
-| Branch Administrator | Branch-level administration |
-| Sales Executive | Business operations |
-| Internal Services | Service-to-service authentication |
+| Actor                | Description                       |
+| -------------------- | --------------------------------- |
+| Super Administrator  | Complete platform access          |
+| System Administrator | User & Role Management            |
+| Branch Administrator | Branch-level administration       |
+| Sales Executive      | Business operations               |
+| Internal Services    | Service-to-service authentication |
 
 ---
 
@@ -215,17 +215,17 @@ Identity Service
 
 The Identity Service consists of the following modules.
 
-| Module | Description |
-|----------|-------------|
-| Authentication | User Login |
-| Authorization | Permission Validation |
-| User Management | User CRUD |
-| Role Management | Role CRUD |
-| Permission Management | Permission CRUD |
-| Password Management | Password Operations |
-| Token Management | JWT & Refresh Tokens |
-| Session Management | Active Sessions |
-| Audit Integration | Security Events |
+| Module                | Description           |
+| --------------------- | --------------------- |
+| Authentication        | User Login            |
+| Authorization         | Permission Validation |
+| User Management       | User CRUD             |
+| Role Management       | Role CRUD             |
+| Permission Management | Permission CRUD       |
+| Password Management   | Password Operations   |
+| Token Management      | JWT & Refresh Tokens  |
+| Session Management    | Active Sessions       |
+| Audit Integration     | Security Events       |
 
 ---
 
@@ -522,10 +522,10 @@ Base URL
 
 ## Login
 
-| Attribute | Value |
-|-----------|-------|
-| Method | POST |
-| URI | /login |
+| Attribute      | Value        |
+| -------------- | ------------ |
+| Method         | POST         |
+| URI            | /login       |
 | Authentication | Not Required |
 
 Purpose
@@ -572,10 +572,10 @@ Errors
 
 ## Refresh Token
 
-| Attribute | Value |
-|-----------|-------|
-| Method | POST |
-| URI | /refresh-token |
+| Attribute | Value          |
+| --------- | -------------- |
+| Method    | POST           |
+| URI       | /refresh-token |
 
 ---
 
@@ -603,10 +603,10 @@ Response
 
 ## Logout
 
-| Attribute | Value |
-|-----------|-------|
-| Method | POST |
-| URI | /logout |
+| Attribute | Value   |
+| --------- | ------- |
+| Method    | POST    |
+| URI       | /logout |
 
 ---
 
@@ -620,41 +620,41 @@ Invalidate refresh token.
 
 ## Create User
 
-| Method | POST |
-|--------|------|
-| URI | /users |
+| Method | POST   |
+| ------ | ------ |
+| URI    | /users |
 
 ---
 
 ## Update User
 
-| Method | PUT |
-|--------|------|
-| URI | /users/{id} |
+| Method | PUT         |
+| ------ | ----------- |
+| URI    | /users/{id} |
 
 ---
 
 ## Get User
 
-| Method | GET |
-|--------|------|
-| URI | /users/{id} |
+| Method | GET         |
+| ------ | ----------- |
+| URI    | /users/{id} |
 
 ---
 
 ## Search Users
 
-| Method | GET |
-|--------|------|
-| URI | /users |
+| Method | GET    |
+| ------ | ------ |
+| URI    | /users |
 
 ---
 
 ## Delete User
 
-| Method | DELETE |
-|--------|------|
-| URI | /users/{id} |
+| Method | DELETE      |
+| ------ | ----------- |
+| URI    | /users/{id} |
 
 ---
 
@@ -682,44 +682,44 @@ Invalidate refresh token.
 
 ## LoginRequest
 
-| Field | Type | Required |
-|--------|------|----------|
-| username | String | Yes |
-| password | String | Yes |
+| Field    | Type   | Required |
+| -------- | ------ | -------- |
+| username | String | Yes      |
+| password | String | Yes      |
 
 ---
 
 ## CreateUserRequest
 
-| Field | Type |
-|--------|------|
-| username | String |
-| password | String |
-| firstName | String |
-| lastName | String |
-| email | String |
-| mobileNumber | String |
-| roles | List<UUID> |
+| Field        | Type       |
+| ------------ | ---------- |
+| username     | String     |
+| password     | String     |
+| firstName    | String     |
+| lastName     | String     |
+| email        | String     |
+| mobileNumber | String     |
+| roles        | List<UUID> |
 
 ---
 
 ## UpdateUserRequest
 
-| Field | Type |
-|--------|------|
-| firstName | String |
-| lastName | String |
-| email | String |
-| mobileNumber | String |
-| roles | List<UUID> |
-| status | UserStatus |
+| Field        | Type       |
+| ------------ | ---------- |
+| firstName    | String     |
+| lastName     | String     |
+| email        | String     |
+| mobileNumber | String     |
+| roles        | List<UUID> |
+| status       | UserStatus |
 
 ---
 
 ## RefreshTokenRequest
 
-| Field | Type |
-|--------|------|
+| Field        | Type   |
+| ------------ | ------ |
 | refreshToken | String |
 
 ---
@@ -728,25 +728,25 @@ Invalidate refresh token.
 
 ## LoginResponse
 
-| Field | Type |
-|--------|------|
-| accessToken | String |
+| Field        | Type   |
+| ------------ | ------ |
+| accessToken  | String |
 | refreshToken | String |
-| expiresIn | Long |
-| tokenType | String |
+| expiresIn    | Long   |
+| tokenType    | String |
 
 ---
 
 ## UserResponse
 
-| Field | Type |
-|--------|------|
-| id | UUID |
-| username | String |
-| fullName | String |
-| email | String |
-| status | UserStatus |
-| roles | List<Role> |
+| Field    | Type       |
+| -------- | ---------- |
+| id       | UUID       |
+| username | String     |
+| fullName | String     |
+| email    | String     |
+| status   | UserStatus |
+| roles    | List<Role> |
 
 ---
 
@@ -785,18 +785,18 @@ Invalidate refresh token.
 
 # 16. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Deleted |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Resource Not Found |
-| 409 | Duplicate Resource |
-| 423 | Account Locked |
-| 500 | Internal Server Error |
+| Status | Description           |
+| ------ | --------------------- |
+| 200    | Success               |
+| 201    | Created               |
+| 204    | Deleted               |
+| 400    | Validation Error      |
+| 401    | Unauthorized          |
+| 403    | Forbidden             |
+| 404    | Resource Not Found    |
+| 409    | Duplicate Resource    |
+| 423    | Account Locked        |
+| 500    | Internal Server Error |
 
 ---
 
@@ -812,9 +812,9 @@ All cross-service interactions shall occur through REST APIs or asynchronous eve
 
 # 17.1 Database Ownership
 
-| Service | Database Ownership |
-|----------|--------------------|
-| Identity Service | identity_db |
+| Service          | Database Ownership |
+| ---------------- | ------------------ |
+| Identity Service | identity_db        |
 
 ---
 
@@ -822,15 +822,15 @@ All cross-service interactions shall occur through REST APIs or asynchronous eve
 
 The Identity Service shall maintain the following entities.
 
-| Entity | Description |
-|----------|-------------|
-| User | Platform User |
-| Role | Security Role |
-| Permission | System Permission |
-| UserRole | User to Role Mapping |
+| Entity         | Description                |
+| -------------- | -------------------------- |
+| User           | Platform User              |
+| Role           | Security Role              |
+| Permission     | System Permission          |
+| UserRole       | User to Role Mapping       |
 | RolePermission | Role to Permission Mapping |
-| RefreshToken | Active Refresh Tokens |
-| LoginAudit | Authentication Audit |
+| RefreshToken   | Active Refresh Tokens      |
+| LoginAudit     | Authentication Audit       |
 
 ---
 
@@ -856,80 +856,80 @@ USER ||--o{ LOGIN_AUDIT : generates
 
 # 17.4 User Entity
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| username | VARCHAR(100) | Unique |
-| password | VARCHAR(255) | Required |
-| first_name | VARCHAR(100) | Required |
-| last_name | VARCHAR(100) | Required |
-| email | VARCHAR(150) | Unique |
-| mobile_number | VARCHAR(20) | Unique |
-| status | ENUM | Required |
-| failed_login_attempts | INTEGER | Default 0 |
-| account_locked | BOOLEAN | Default FALSE |
-| created_at | TIMESTAMP | Required |
-| updated_at | TIMESTAMP | Required |
+| Attribute             | Type         | Constraint    |
+| --------------------- | ------------ | ------------- |
+| id                    | UUID         | Primary Key   |
+| username              | VARCHAR(100) | Unique        |
+| password              | VARCHAR(255) | Required      |
+| first_name            | VARCHAR(100) | Required      |
+| last_name             | VARCHAR(100) | Required      |
+| email                 | VARCHAR(150) | Unique        |
+| mobile_number         | VARCHAR(20)  | Unique        |
+| status                | ENUM         | Required      |
+| failed_login_attempts | INTEGER      | Default 0     |
+| account_locked        | BOOLEAN      | Default FALSE |
+| created_at            | TIMESTAMP    | Required      |
+| updated_at            | TIMESTAMP    | Required      |
 
 ---
 
 # 17.5 Role Entity
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| role_name | VARCHAR(100) |
+| Attribute   | Type         |
+| ----------- | ------------ |
+| id          | UUID         |
+| role_name   | VARCHAR(100) |
 | description | VARCHAR(255) |
 
 ---
 
 # 17.6 Permission Entity
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
+| Attribute       | Type         |
+| --------------- | ------------ |
+| id              | UUID         |
 | permission_name | VARCHAR(150) |
 | permission_code | VARCHAR(150) |
-| description | VARCHAR(255) |
+| description     | VARCHAR(255) |
 
 ---
 
 # 17.7 Refresh Token Entity
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| user_id | UUID |
-| token | VARCHAR(500) |
-| expiry_date | TIMESTAMP |
-| revoked | BOOLEAN |
+| Attribute   | Type         |
+| ----------- | ------------ |
+| id          | UUID         |
+| user_id     | UUID         |
+| token       | VARCHAR(500) |
+| expiry_date | TIMESTAMP    |
+| revoked     | BOOLEAN      |
 
 ---
 
 # 17.8 Login Audit Entity
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| user_id | UUID |
-| login_time | TIMESTAMP |
+| Attribute  | Type         |
+| ---------- | ------------ |
+| id         | UUID         |
+| user_id    | UUID         |
+| login_time | TIMESTAMP    |
 | ip_address | VARCHAR(100) |
 | user_agent | VARCHAR(500) |
-| status | VARCHAR(20) |
+| status     | VARCHAR(20)  |
 
 ---
 
 # 17.9 Database Indexes
 
-| Table | Index |
-|--------|-------|
-| user | username |
-| user | email |
-| user | mobile_number |
-| role | role_name |
-| permission | permission_code |
-| refresh_token | token |
-| login_audit | login_time |
+| Table         | Index           |
+| ------------- | --------------- |
+| user          | username        |
+| user          | email           |
+| user          | mobile_number   |
+| role          | role_name       |
+| permission    | permission_code |
+| refresh_token | token           |
+| login_audit   | login_time      |
 
 ---
 
@@ -1037,25 +1037,25 @@ The Identity Service shall issue JSON Web Tokens for authenticated users.
 
 ## 19.1 JWT Claims
 
-| Claim | Description |
-|--------|-------------|
-| sub | User Identifier |
-| username | Username |
-| roles | Assigned Roles |
+| Claim       | Description           |
+| ----------- | --------------------- |
+| sub         | User Identifier       |
+| username    | Username              |
+| roles       | Assigned Roles        |
 | permissions | Effective Permissions |
-| iss | Token Issuer |
-| iat | Issued At |
-| exp | Expiration Time |
-| jti | Token Identifier |
+| iss         | Token Issuer          |
+| iat         | Issued At             |
+| exp         | Expiration Time       |
+| jti         | Token Identifier      |
 
 ---
 
 ## 19.2 Token Types
 
-| Token | Purpose |
-|--------|---------|
-| Access Token | API Authorization |
-| Refresh Token | Token Renewal |
+| Token         | Purpose           |
+| ------------- | ----------------- |
+| Access Token  | API Authorization |
+| Refresh Token | Token Renewal     |
 
 ---
 
@@ -1087,26 +1087,26 @@ The Identity Service shall publish security-related events.
 
 ## 20.1 Published Events
 
-| Event | Description |
-|--------|-------------|
-| UserCreated | New user created |
-| UserUpdated | User information updated |
-| UserLocked | Account locked |
-| UserUnlocked | Account unlocked |
-| PasswordChanged | Password changed |
-| PasswordReset | Password reset |
-| UserLoggedIn | Successful authentication |
-| UserLoggedOut | User logout |
-| RoleCreated | New role |
-| PermissionAssigned | Permission assignment |
+| Event              | Description               |
+| ------------------ | ------------------------- |
+| UserCreated        | New user created          |
+| UserUpdated        | User information updated  |
+| UserLocked         | Account locked            |
+| UserUnlocked       | Account unlocked          |
+| PasswordChanged    | Password changed          |
+| PasswordReset      | Password reset            |
+| UserLoggedIn       | Successful authentication |
+| UserLoggedOut      | User logout               |
+| RoleCreated        | New role                  |
+| PermissionAssigned | Permission assignment     |
 
 ---
 
 ## 20.2 Consumed Events
 
-| Event | Source |
-|--------|--------|
-| BranchDeleted | Branch Service |
+| Event           | Source                    |
+| --------------- | ------------------------- |
+| BranchDeleted   | Branch Service            |
 | EmployeeCreated | Employee Service (Future) |
 
 > **Note:** Event consumption should reflect actual platform integrations. If services such as `Employee Service` are not part of the DHS platform, these events should be removed or replaced with valid integrations.
@@ -1134,18 +1134,18 @@ The Identity Service shall publish security-related events.
 
 The Identity Service shall invoke the following platform services when required.
 
-| Service | Purpose |
-|----------|---------|
-| Audit Service | Audit logging |
+| Service              | Purpose                     |
+| -------------------- | --------------------------- |
+| Audit Service        | Audit logging               |
 | Notification Service | Email and SMS notifications |
 
 ---
 
 ## 21.2 OpenFeign Clients
 
-| Client | Purpose |
-|---------|---------|
-| AuditClient | Security audit |
+| Client             | Purpose                      |
+| ------------------ | ---------------------------- |
+| AuditClient        | Security audit               |
 | NotificationClient | Password reset notifications |
 
 ---
@@ -1177,13 +1177,13 @@ The Identity Service shall support configuration for:
 
 ## 22.2 Configuration Properties
 
-| Property | Description |
-|----------|-------------|
-| identity.jwt.secret | JWT signing secret |
-| identity.jwt.expiration | Access token expiration |
-| identity.jwt.refresh-expiration | Refresh token expiration |
-| identity.password.max-attempts | Maximum failed login attempts |
-| identity.password.lock-duration | Account lock duration |
+| Property                           | Description                     |
+| ---------------------------------- | ------------------------------- |
+| identity.jwt.secret                | JWT signing secret              |
+| identity.jwt.expiration            | Access token expiration         |
+| identity.jwt.refresh-expiration    | Refresh token expiration        |
+| identity.password.max-attempts     | Maximum failed login attempts   |
+| identity.password.lock-duration    | Account lock duration           |
 | identity.password.reset.expiration | Password reset token expiration |
 
 > **Note:** This SRS specifies the required configuration keys. Their actual values and environment-specific overrides belong in the `starone-galaxy-central-config` repository.
@@ -1270,26 +1270,26 @@ Sensitive implementation details shall not be exposed to API consumers.
 
 # 24.3 Business Error Codes
 
-| Error Code | Description | HTTP Status |
-|------------|-------------|-------------|
-| ID-AUTH-001 | Invalid username or password | 401 |
-| ID-AUTH-002 | Account locked | 423 |
-| ID-AUTH-003 | Account disabled | 403 |
-| ID-AUTH-004 | Account expired | 403 |
-| ID-AUTH-005 | Invalid access token | 401 |
-| ID-AUTH-006 | Access token expired | 401 |
-| ID-AUTH-007 | Refresh token expired | 401 |
-| ID-AUTH-008 | Refresh token revoked | 401 |
-| ID-USER-001 | User not found | 404 |
-| ID-USER-002 | Username already exists | 409 |
-| ID-USER-003 | Email already exists | 409 |
-| ID-USER-004 | Mobile number already exists | 409 |
-| ID-ROLE-001 | Role not found | 404 |
-| ID-ROLE-002 | Duplicate role | 409 |
-| ID-PERM-001 | Permission not found | 404 |
-| ID-PERM-002 | Duplicate permission | 409 |
-| ID-VAL-001 | Validation failed | 400 |
-| ID-SYS-001 | Internal server error | 500 |
+| Error Code  | Description                  | HTTP Status |
+| ----------- | ---------------------------- | ----------- |
+| ID-AUTH-001 | Invalid username or password | 401         |
+| ID-AUTH-002 | Account locked               | 423         |
+| ID-AUTH-003 | Account disabled             | 403         |
+| ID-AUTH-004 | Account expired              | 403         |
+| ID-AUTH-005 | Invalid access token         | 401         |
+| ID-AUTH-006 | Access token expired         | 401         |
+| ID-AUTH-007 | Refresh token expired        | 401         |
+| ID-AUTH-008 | Refresh token revoked        | 401         |
+| ID-USER-001 | User not found               | 404         |
+| ID-USER-002 | Username already exists      | 409         |
+| ID-USER-003 | Email already exists         | 409         |
+| ID-USER-004 | Mobile number already exists | 409         |
+| ID-ROLE-001 | Role not found               | 404         |
+| ID-ROLE-002 | Duplicate role               | 409         |
+| ID-PERM-001 | Permission not found         | 404         |
+| ID-PERM-002 | Duplicate permission         | 409         |
+| ID-VAL-001  | Validation failed            | 400         |
+| ID-SYS-001  | Internal server error        | 500         |
 
 ---
 
@@ -1502,12 +1502,12 @@ The service shall use reusable shared platform components.
 
 # 28. Requirement Traceability Matrix
 
-| Identity Requirement | Source Document | Source Requirement | Verification |
-|----------------------|-----------------|-------------------|--------------|
-| ID-SYS-001 – ID-SYS-020 | FRD-Identity | Authentication & User Management | Functional Testing |
-| ID-SYS-021 – ID-SYS-030 | SRS-001 | Platform Error Handling & Logging | Integration Testing |
-| ID-SYS-031 – ID-SYS-035 | SRS-001 | Platform Observability | System Testing |
-| ID-NFR-001 – ID-NFR-012 | PRD / HLD | Quality Attributes | Performance & Security Testing |
+| Identity Requirement    | Source Document | Source Requirement                | Verification                   |
+| ----------------------- | --------------- | --------------------------------- | ------------------------------ |
+| ID-SYS-001 – ID-SYS-020 | FRD-Identity    | Authentication & User Management  | Functional Testing             |
+| ID-SYS-021 – ID-SYS-030 | SRS-001         | Platform Error Handling & Logging | Integration Testing            |
+| ID-SYS-031 – ID-SYS-035 | SRS-001         | Platform Observability            | System Testing                 |
+| ID-NFR-001 – ID-NFR-012 | PRD / HLD       | Quality Attributes                | Performance & Security Testing |
 
 ---
 
@@ -1536,61 +1536,61 @@ The Identity Service shall be considered complete when:
 
 # Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Authentication | Login, Logout, Refresh Token |
-| Users | Create, Update, Get, Search, Delete |
-| Roles | CRUD |
-| Permissions | CRUD |
+| Resource       | Endpoints                           |
+| -------------- | ----------------------------------- |
+| Authentication | Login, Logout, Refresh Token        |
+| Users          | Create, Update, Get, Search, Delete |
+| Roles          | CRUD                                |
+| Permissions    | CRUD                                |
 
 ---
 
 # Appendix B – Entity Summary
 
-| Entity | Purpose |
-|----------|---------|
-| User | Platform User |
-| Role | Security Role |
-| Permission | Access Permission |
-| UserRole | User-Role Mapping |
-| RolePermission | Role-Permission Mapping |
-| RefreshToken | Token Lifecycle Management |
-| LoginAudit | Authentication Audit Trail |
+| Entity         | Purpose                    |
+| -------------- | -------------------------- |
+| User           | Platform User              |
+| Role           | Security Role              |
+| Permission     | Access Permission          |
+| UserRole       | User-Role Mapping          |
+| RolePermission | Role-Permission Mapping    |
+| RefreshToken   | Token Lifecycle Management |
+| LoginAudit     | Authentication Audit Trail |
 
 ---
 
 # Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Redis | Token & Session Cache |
-| Kafka | Security Event Publishing |
+| Dependency           | Purpose                      |
+| -------------------- | ---------------------------- |
+| Platform Foundation  | Shared Frameworks            |
+| Gateway              | API Routing                  |
+| Eureka               | Service Discovery            |
+| PostgreSQL           | Persistent Storage           |
+| Redis                | Token & Session Cache        |
+| Kafka                | Security Event Publishing    |
 | Notification Service | Password Reset Notifications |
-| Audit Service | Security Audit Processing |
+| Audit Service        | Security Audit Processing    |
 
 ---
 
 # Appendix D – Revision Summary
 
-| Version | Summary |
-|----------|---------|
-| v1.0.0 | Initial Identity Service Software Requirements Specification |
+| Version | Summary                                                      |
+| ------- | ------------------------------------------------------------ |
+| v1.0.0  | Initial Identity Service Software Requirements Specification |
 
 ---
 
 # Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 

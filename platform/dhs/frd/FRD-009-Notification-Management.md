@@ -85,44 +85,44 @@ The Notification Service provides centralized communication and notification cap
 
 Responsibilities:
 
-* Notification Generation
-* Email Notifications
-* SMS Notifications
-* In-App Notifications
-* Notification Template Management
-* Notification Scheduling
-* Notification Delivery Tracking
-* Notification Retry Processing
-* Notification Preferences Management
-* Notification Audit Logging
+- Notification Generation
+- Email Notifications
+- SMS Notifications
+- In-App Notifications
+- Notification Template Management
+- Notification Scheduling
+- Notification Delivery Tracking
+- Notification Retry Processing
+- Notification Preferences Management
+- Notification Audit Logging
 
 The service acts as the centralized communication layer for all business services.
 
 The Notification Service supports:
 
-* Order Management
-* Billing Management
-* Dispatch Management
-* Customer Management
-* Authentication and Security
-* Reporting and Analytics
+- Order Management
+- Billing Management
+- Dispatch Management
+- Customer Management
+- Authentication and Security
+- Reporting and Analytics
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* REST APIs and OpenFeign Communication
-* Event-Driven Architecture
-* Kafka Integration
-* Asynchronous Processing
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- REST APIs and OpenFeign Communication
+- Event-Driven Architecture
+- Kafka Integration
+- Asynchronous Processing
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -146,19 +146,19 @@ notification-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
 ## External Dependencies
 
-* Email Provider
-* SMS Gateway
-* Push Notification Provider
+- Email Provider
+- SMS Gateway
+- Push Notification Provider
 
 ---
 
@@ -166,13 +166,13 @@ notification-db
 
 ### Asynchronous Dependencies
 
-* iam-service
-* customer-service
-* order-service
-* billing-service
-* dispatch-service
-* audit-service
-* reporting-service
+- iam-service
+- customer-service
+- order-service
+- billing-service
+- dispatch-service
+- audit-service
+- reporting-service
 
 ---
 
@@ -499,15 +499,15 @@ Notification Service->>Notification Database: Update Status
 
 Technologies:
 
-* REST APIs
-* OpenFeign
-* Service Discovery
+- REST APIs
+- OpenFeign
+- Service Discovery
 
 Used For:
 
-* Template Retrieval
-* Notification Status Queries
-* Preference Management
+- Template Retrieval
+- Notification Status Queries
+- Preference Management
 
 ---
 
@@ -515,19 +515,19 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Business Event Consumption
-* Notification Generation
-* Delivery Events
-* Retry Events
-* Audit Events
-* Reporting Events
+- Business Event Consumption
+- Notification Generation
+- Delivery Events
+- Retry Events
+- Audit Events
+- Reporting Events
 
 # 14. Published Events
 
@@ -721,19 +721,19 @@ PATCH /api/v1/preferences/{id}
 
 Fields:
 
-* Notification Id
-* Notification Type
-* Recipient
-* Channel
-* Status
-* Created Date
+- Notification Id
+- Notification Type
+- Recipient
+- Channel
+- Status
+- Created Date
 
 Actions:
 
-* View
-* Search
-* Cancel
-* Retry
+- View
+- Search
+- Cancel
+- Retry
 
 ---
 
@@ -741,19 +741,19 @@ Actions:
 
 Fields:
 
-* Template Name
-* Channel
-* Subject
-* Body
-* Status
-* Version
+- Template Name
+- Channel
+- Subject
+- Body
+- Status
+- Version
 
 Actions:
 
-* Create
-* Update
-* Delete
-* Search
+- Create
+- Update
+- Delete
+- Search
 
 ---
 
@@ -761,17 +761,17 @@ Actions:
 
 Fields:
 
-* Notification Id
-* Recipient
-* Delivery Channel
-* Delivery Status
-* Delivery Timestamp
+- Notification Id
+- Recipient
+- Delivery Channel
+- Delivery Status
+- Delivery Timestamp
 
 Actions:
 
-* Search
-* View
-* Retry
+- Search
+- View
+- Retry
 
 ---
 
@@ -779,17 +779,17 @@ Actions:
 
 Fields:
 
-* Email Notifications
-* SMS Notifications
-* In-App Notifications
-* Preferred Language
-* Status
+- Email Notifications
+- SMS Notifications
+- In-App Notifications
+- Preferred Language
+- Status
 
 Actions:
 
-* Update
-* Save
-* Reset
+- Update
+- Save
+- Reset
 
 ---
 
@@ -797,36 +797,36 @@ Actions:
 
 ## Recipient
 
-* Required
-* Valid email or mobile number
+- Required
+- Valid email or mobile number
 
 ---
 
 ## Notification Type
 
-* Required
-* Must be a supported notification type
+- Required
+- Must be a supported notification type
 
 ---
 
 ## Template Name
 
-* Required
-* Unique
-* Maximum 100 characters
+- Required
+- Unique
+- Maximum 100 characters
 
 ---
 
 ## Subject
 
-* Maximum 250 characters
+- Maximum 250 characters
 
 ---
 
 ## Message Body
 
-* Required
-* Maximum 5000 characters
+- Required
+- Maximum 5000 characters
 
 ---
 
@@ -917,13 +917,13 @@ PREFERENCE_UPDATED
 
 System Notifications:
 
-* Notification Sent
-* Notification Failed
-* Notification Retry Completed
-* Template Created
-* Template Updated
-* Preference Updated
-* Notification Channel Failure
+- Notification Sent
+- Notification Failed
+- Notification Retry Completed
+- Template Created
+- Template Updated
+- Preference Updated
+- Notification Channel Failure
 
 ---
 
@@ -931,14 +931,14 @@ System Notifications:
 
 Reports:
 
-* Notification Summary Report
-* Email Delivery Report
-* SMS Delivery Report
-* In-App Notification Report
-* Failed Notification Report
-* Retry Report
-* Template Usage Report
-* Notification Audit Report
+- Notification Summary Report
+- Email Delivery Report
+- SMS Delivery Report
+- In-App Notification Report
+- Failed Notification Report
+- Retry Report
+- Template Usage Report
+- Notification Audit Report
 
 ---
 
@@ -1009,51 +1009,51 @@ NotificationPreference
 
 Notification Service exclusively owns:
 
-* Notification
-* NotificationTemplate
-* NotificationDelivery
-* NotificationPreference
+- Notification
+- NotificationTemplate
+- NotificationDelivery
+- NotificationPreference
 
 ---
 
 # 24. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Circuit Breakers
-* Event Idempotency
-* Audit Logging
-* Database per Service
-* Independent Deployments
-* Observability Integration
-* Dead Letter Topic Support
-* Asynchronous Processing Support
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Circuit Breakers
+- Event Idempotency
+- Audit Logging
+- Database per Service
+- Independent Deployments
+- Observability Integration
+- Dead Letter Topic Support
+- Asynchronous Processing Support
 
 ---
 
 # 25. Success Criteria
 
-* Notifications are generated successfully.
-* Email, SMS, and in-app notifications are delivered successfully.
-* Notification templates are managed correctly.
-* Delivery tracking provides real-time visibility.
-* Failed notifications are retried automatically.
-* Notification preferences are honored.
-* Notification reports are generated successfully.
-* Notification Service registers successfully with Service Discovery.
-* Notification APIs are accessible through API Gateway.
-* Notification events are published successfully to Kafka.
-* Distributed tracing is available for notification workflows.
-* Notification Service remains independently deployable.
+- Notifications are generated successfully.
+- Email, SMS, and in-app notifications are delivered successfully.
+- Notification templates are managed correctly.
+- Delivery tracking provides real-time visibility.
+- Failed notifications are retried automatically.
+- Notification preferences are honored.
+- Notification reports are generated successfully.
+- Notification Service registers successfully with Service Discovery.
+- Notification APIs are accessible through API Gateway.
+- Notification events are published successfully to Kafka.
+- Distributed tracing is available for notification workflows.
+- Notification Service remains independently deployable.
 
 ---
 

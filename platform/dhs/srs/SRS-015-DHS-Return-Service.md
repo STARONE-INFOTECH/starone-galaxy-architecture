@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Returns Service |
+| Field          | Value                                               |
+| -------------- | --------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform            |
+| Service Name   | Returns Service                                     |
 | Document Title | Returns Service Software Requirements Specification |
-| Document ID | SRS-015 |
-| Repository | starone-dhs-platform |
-| Module | returns-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-015                                             |
+| Repository     | starone-dhs-platform                                |
+| Module         | returns-service                                     |
+| Document Type  | Software Requirements Specification (SRS)           |
+| Standard       | ISO/IEC/IEEE 29148                                  |
+| Version        | v1.0.0                                              |
+| Status         | Draft                                               |
+| Author         | Sachin Salunke                                      |
+| Owner          | Enterprise Architecture                             |
+| Last Updated   | 2026-06-27                                          |
 
 ---
 
@@ -26,41 +26,41 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | High-Level Design |
+| Document    | Description                     |
+| ----------- | ------------------------------- |
+| BRD-001     | Business Requirements Document  |
+| PRD-001     | Product Requirements Document   |
+| ADR-001     | Architecture Decision Record    |
+| HLD-001     | High-Level Design               |
 | FRD-Returns | Returns Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-004 | Customer Service |
-| SRS-005 | Product Service |
-| SRS-006 | Inventory Service |
-| SRS-007 | Order Service |
-| SRS-008 | Billing Service |
-| SRS-009 | Dispatch Service |
-| SRS-013 | Supplier Service |
-| SRS-014 | Procurement Service |
+| SRS-001     | Platform Foundation             |
+| SRS-004     | Customer Service                |
+| SRS-005     | Product Service                 |
+| SRS-006     | Inventory Service               |
+| SRS-007     | Order Service                   |
+| SRS-008     | Billing Service                 |
+| SRS-009     | Dispatch Service                |
+| SRS-013     | Supplier Service                |
+| SRS-014     | Procurement Service             |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|---------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -154,18 +154,18 @@ Returns --> Supplier
 
 ## Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Libraries |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Returns Database |
-| Kafka | Event Streaming |
-| Order Service | Validate Customer Orders |
-| Product Service | Product Validation |
-| Inventory Service | Stock Updates |
-| Billing Service | Refund Processing |
-| Supplier Service | Supplier Validation |
+| Dependency          | Purpose                    |
+| ------------------- | -------------------------- |
+| Platform Foundation | Shared Libraries           |
+| Gateway             | API Routing                |
+| Eureka              | Service Discovery          |
+| PostgreSQL          | Returns Database           |
+| Kafka               | Event Streaming            |
+| Order Service       | Validate Customer Orders   |
+| Product Service     | Product Validation         |
+| Inventory Service   | Stock Updates              |
+| Billing Service     | Refund Processing          |
+| Supplier Service    | Supplier Validation        |
 | Procurement Service | Supplier Return Processing |
 
 ---
@@ -329,19 +329,19 @@ Returns
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Returns | Aggregate Root |
-| CustomerReturn | Customer Return |
-| SupplierReturn | Supplier Return |
-| ReturnOrder | Return Order |
-| ReturnOrderItem | Returned Items |
-| ReturnReceipt | Physical Receipt |
-| ReturnInspection | Quality Inspection |
-| RMA | Return Authorization |
-| ReturnApproval | Approval Workflow |
+| Aggregate         | Responsibility                         |
+| ----------------- | -------------------------------------- |
+| Returns           | Aggregate Root                         |
+| CustomerReturn    | Customer Return                        |
+| SupplierReturn    | Supplier Return                        |
+| ReturnOrder       | Return Order                           |
+| ReturnOrderItem   | Returned Items                         |
+| ReturnReceipt     | Physical Receipt                       |
+| ReturnInspection  | Quality Inspection                     |
+| RMA               | Return Authorization                   |
+| ReturnApproval    | Approval Workflow                      |
 | ReturnDisposition | Refund / Replacement / Scrap / Restock |
-| ReturnAudit | Audit Trail |
+| ReturnAudit       | Audit Trail                            |
 
 ---
 
@@ -387,17 +387,17 @@ Completed --> [*]
 
 # 9. Integration Responsibilities
 
-| Service | Purpose |
-|----------|---------|
-| Order Service | Validate Orders & Create Replacements |
-| Billing Service | Refund Processing |
-| Inventory Service | Inventory Adjustments |
-| Supplier Service | Supplier Validation |
-| Procurement Service | Supplier Return Coordination |
-| Dispatch Service | Return Logistics |
-| Notification Service | Customer Notifications |
-| Audit Service | Audit Trail |
-| Reporting Service | Return Analytics |
+| Service              | Purpose                               |
+| -------------------- | ------------------------------------- |
+| Order Service        | Validate Orders & Create Replacements |
+| Billing Service      | Refund Processing                     |
+| Inventory Service    | Inventory Adjustments                 |
+| Supplier Service     | Supplier Validation                   |
+| Procurement Service  | Supplier Return Coordination          |
+| Dispatch Service     | Return Logistics                      |
+| Notification Service | Customer Notifications                |
+| Audit Service        | Audit Trail                           |
+| Reporting Service    | Return Analytics                      |
 
 ---
 
@@ -685,51 +685,51 @@ Base URL
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|---------|-----|-------------|
-| POST | /customer | Create Customer Return |
-| GET | /customer/{returnId} | Get Customer Return |
-| PUT | /customer/{returnId} | Update Customer Return |
-| POST | /customer/{returnId}/approve | Approve Return |
-| POST | /customer/{returnId}/reject | Reject Return |
-| POST | /rma | Generate RMA |
-| GET | /rma/{rmaId} | Get RMA |
-| POST | /receipts | Record Return Receipt |
-| POST | /inspection | Perform Inspection |
-| POST | /refund | Initiate Refund |
-| POST | /replacement | Initiate Replacement |
-| POST | /supplier | Create Supplier Return |
-| GET | /supplier/{returnId} | Get Supplier Return |
-| GET | /search | Search Returns |
+| Method | URI                          | Description            |
+| ------ | ---------------------------- | ---------------------- |
+| POST   | /customer                    | Create Customer Return |
+| GET    | /customer/{returnId}         | Get Customer Return    |
+| PUT    | /customer/{returnId}         | Update Customer Return |
+| POST   | /customer/{returnId}/approve | Approve Return         |
+| POST   | /customer/{returnId}/reject  | Reject Return          |
+| POST   | /rma                         | Generate RMA           |
+| GET    | /rma/{rmaId}                 | Get RMA                |
+| POST   | /receipts                    | Record Return Receipt  |
+| POST   | /inspection                  | Perform Inspection     |
+| POST   | /refund                      | Initiate Refund        |
+| POST   | /replacement                 | Initiate Replacement   |
+| POST   | /supplier                    | Create Supplier Return |
+| GET    | /supplier/{returnId}         | Get Supplier Return    |
+| GET    | /search                      | Search Returns         |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|---------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation ID |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description      |
+| ---------------- | -------- | ---------------- |
+| Authorization    | Yes      | JWT Bearer Token |
+| X-Correlation-ID | Yes      | Correlation ID   |
+| Content-Type     | Yes      | application/json |
+| Accept           | Yes      | application/json |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Description |
-|-----------|-------------|
-| page | Page Number |
-| size | Page Size |
-| sort | Sort Field |
-| direction | ASC/DESC |
-| returnNumber | Return Number |
-| rmaNumber | RMA Number |
-| orderId | Customer Order |
-| supplierId | Supplier |
-| status | Return Status |
-| fromDate | Start Date |
-| toDate | End Date |
+| Parameter    | Description    |
+| ------------ | -------------- |
+| page         | Page Number    |
+| size         | Page Size      |
+| sort         | Sort Field     |
+| direction    | ASC/DESC       |
+| returnNumber | Return Number  |
+| rmaNumber    | RMA Number     |
+| orderId      | Customer Order |
+| supplierId   | Supplier       |
+| status       | Return Status  |
+| fromDate     | Start Date     |
+| toDate       | End Date       |
 
 ---
 
@@ -847,65 +847,65 @@ Creates supplier return transaction.
 
 ## CustomerReturnRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| orderId | UUID | Yes |
-| customerId | UUID | Yes |
-| returnReason | String | Yes |
-| remarks | String | No |
-| items | List<CustomerReturnItemRequest> | Yes |
+| Field        | Type                            | Required |
+| ------------ | ------------------------------- | -------- |
+| orderId      | UUID                            | Yes      |
+| customerId   | UUID                            | Yes      |
+| returnReason | String                          | Yes      |
+| remarks      | String                          | No       |
+| items        | List<CustomerReturnItemRequest> | Yes      |
 
 ---
 
 ## CustomerReturnItemRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| orderItemId | UUID | Yes |
-| quantity | BigDecimal | Yes |
+| Field       | Type       | Required |
+| ----------- | ---------- | -------- |
+| orderItemId | UUID       | Yes      |
+| quantity    | BigDecimal | Yes      |
 
 ---
 
 ## ReturnReceiptRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| rmaId | UUID | Yes |
-| receivedDate | LocalDate | Yes |
-| warehouseId | UUID | Yes |
-| items | List<ReturnReceiptItemRequest> | Yes |
+| Field        | Type                           | Required |
+| ------------ | ------------------------------ | -------- |
+| rmaId        | UUID                           | Yes      |
+| receivedDate | LocalDate                      | Yes      |
+| warehouseId  | UUID                           | Yes      |
+| items        | List<ReturnReceiptItemRequest> | Yes      |
 
 ---
 
 ## InspectionRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| receiptId | UUID | Yes |
-| inspectorId | UUID | Yes |
-| inspectionResult | InspectionResult | Yes |
-| remarks | String | No |
+| Field            | Type             | Required |
+| ---------------- | ---------------- | -------- |
+| receiptId        | UUID             | Yes      |
+| inspectorId      | UUID             | Yes      |
+| inspectionResult | InspectionResult | Yes      |
+| remarks          | String           | No       |
 
 ---
 
 ## RefundRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| returnId | UUID | Yes |
-| refundAmount | BigDecimal | Yes |
-| refundReason | String | Yes |
+| Field        | Type       | Required |
+| ------------ | ---------- | -------- |
+| returnId     | UUID       | Yes      |
+| refundAmount | BigDecimal | Yes      |
+| refundReason | String     | Yes      |
 
 ---
 
 ## SupplierReturnRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| supplierId | UUID | Yes |
-| procurementReferenceId | UUID | Yes |
-| reason | String | Yes |
-| items | List<SupplierReturnItemRequest> | Yes |
+| Field                  | Type                            | Required |
+| ---------------------- | ------------------------------- | -------- |
+| supplierId             | UUID                            | Yes      |
+| procurementReferenceId | UUID                            | Yes      |
+| reason                 | String                          | Yes      |
+| items                  | List<SupplierReturnItemRequest> | Yes      |
 
 ---
 
@@ -913,51 +913,51 @@ Creates supplier return transaction.
 
 ## CustomerReturnResponse
 
-| Field | Type |
-|---------|------|
-| returnId | UUID |
-| returnNumber | String |
-| status | ReturnStatus |
+| Field        | Type         |
+| ------------ | ------------ |
+| returnId     | UUID         |
+| returnNumber | String       |
+| status       | ReturnStatus |
 
 ---
 
 ## RMAResponse
 
-| Field | Type |
-|---------|------|
-| rmaId | UUID |
-| rmaNumber | String |
-| status | RMAStatus |
+| Field     | Type      |
+| --------- | --------- |
+| rmaId     | UUID      |
+| rmaNumber | String    |
+| status    | RMAStatus |
 
 ---
 
 ## ReturnReceiptResponse
 
-| Field | Type |
-|---------|------|
-| receiptId | UUID |
-| receiptNumber | String |
-| status | ReceiptStatus |
+| Field         | Type          |
+| ------------- | ------------- |
+| receiptId     | UUID          |
+| receiptNumber | String        |
+| status        | ReceiptStatus |
 
 ---
 
 ## InspectionResponse
 
-| Field | Type |
-|---------|------|
-| inspectionId | UUID |
-| result | InspectionResult |
-| disposition | ReturnDisposition |
+| Field        | Type              |
+| ------------ | ----------------- |
+| inspectionId | UUID              |
+| result       | InspectionResult  |
+| disposition  | ReturnDisposition |
 
 ---
 
 ## SupplierReturnResponse
 
-| Field | Type |
-|---------|------|
-| supplierReturnId | UUID |
-| supplierReturnNumber | String |
-| status | SupplierReturnStatus |
+| Field                | Type                 |
+| -------------------- | -------------------- |
+| supplierReturnId     | UUID                 |
+| supplierReturnNumber | String               |
+| status               | SupplierReturnStatus |
 
 ---
 
@@ -1011,34 +1011,34 @@ Creates supplier return transaction.
 
 # 13. Permission Matrix
 
-| API | Super Admin | Returns Manager | Returns Executive | Warehouse Manager | Finance | Viewer |
-|------|-------------|-----------------|-------------------|-------------------|----------|--------|
-| Create Customer Return | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Approve Return | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Generate RMA | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Record Return Receipt | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Perform Inspection | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Initiate Refund | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ |
-| Initiate Replacement | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Create Supplier Return | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Search Returns | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| API                    | Super Admin | Returns Manager | Returns Executive | Warehouse Manager | Finance | Viewer |
+| ---------------------- | ----------- | --------------- | ----------------- | ----------------- | ------- | ------ |
+| Create Customer Return | ✅          | ✅              | ✅                | ❌                | ❌      | ❌     |
+| Approve Return         | ✅          | ✅              | ❌                | ❌                | ❌      | ❌     |
+| Generate RMA           | ✅          | ✅              | ✅                | ❌                | ❌      | ❌     |
+| Record Return Receipt  | ✅          | ✅              | ✅                | ✅                | ❌      | ❌     |
+| Perform Inspection     | ✅          | ✅              | ✅                | ✅                | ❌      | ❌     |
+| Initiate Refund        | ✅          | ✅              | ❌                | ❌                | ✅      | ❌     |
+| Initiate Replacement   | ✅          | ✅              | ✅                | ❌                | ❌      | ❌     |
+| Create Supplier Return | ✅          | ✅              | ✅                | ❌                | ❌      | ❌     |
+| Search Returns         | ✅          | ✅              | ✅                | ✅                | ✅      | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|---------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Updated |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Return Not Found |
-| 409 | Duplicate Return |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Updated                 |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Return Not Found        |
+| 409    | Duplicate Return        |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -1078,24 +1078,24 @@ Returns
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Returns | Aggregate Root |
-| CustomerReturn | Customer Return Request |
-| CustomerReturnItem | Returned Customer Items |
-| SupplierReturn | Supplier Return Request |
-| SupplierReturnItem | Supplier Return Items |
-| ReturnOrder | Return Order |
-| ReturnReceipt | Physical Return Receipt |
-| ReturnReceiptItem | Received Returned Items |
-| ReturnInspection | Quality Inspection |
-| ReturnDisposition | Final Decision |
-| ReturnApproval | Approval Workflow |
-| RMA | Return Authorization |
-| ReturnRefund | Refund Reference |
+| Aggregate          | Responsibility              |
+| ------------------ | --------------------------- |
+| Returns            | Aggregate Root              |
+| CustomerReturn     | Customer Return Request     |
+| CustomerReturnItem | Returned Customer Items     |
+| SupplierReturn     | Supplier Return Request     |
+| SupplierReturnItem | Supplier Return Items       |
+| ReturnOrder        | Return Order                |
+| ReturnReceipt      | Physical Return Receipt     |
+| ReturnReceiptItem  | Received Returned Items     |
+| ReturnInspection   | Quality Inspection          |
+| ReturnDisposition  | Final Decision              |
+| ReturnApproval     | Approval Workflow           |
+| RMA                | Return Authorization        |
+| ReturnRefund       | Refund Reference            |
 | ReplacementRequest | Replacement Order Reference |
-| ReturnDocument | Attachments |
-| ReturnAudit | Audit Trail |
+| ReturnDocument     | Attachments                 |
+| ReturnAudit        | Audit Trail                 |
 
 ---
 
@@ -1103,117 +1103,117 @@ Returns
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| CustomerReturn | Customer Return Request |
-| CustomerReturnItem | Customer Return Items |
-| SupplierReturn | Supplier Return Request |
-| SupplierReturnItem | Supplier Return Items |
-| ReturnOrder | Return Order |
-| ReturnReceipt | Return Receipt |
-| ReturnReceiptItem | Returned Products |
-| ReturnInspection | Inspection |
-| ReturnDisposition | Final Disposition |
-| ReturnApproval | Approval Workflow |
-| RMA | Return Authorization |
-| ReturnRefund | Refund Reference |
-| ReplacementRequest | Replacement Reference |
-| ReturnDocument | Attachments |
-| ReturnAudit | Audit Trail |
+| Entity             | Description             |
+| ------------------ | ----------------------- |
+| CustomerReturn     | Customer Return Request |
+| CustomerReturnItem | Customer Return Items   |
+| SupplierReturn     | Supplier Return Request |
+| SupplierReturnItem | Supplier Return Items   |
+| ReturnOrder        | Return Order            |
+| ReturnReceipt      | Return Receipt          |
+| ReturnReceiptItem  | Returned Products       |
+| ReturnInspection   | Inspection              |
+| ReturnDisposition  | Final Disposition       |
+| ReturnApproval     | Approval Workflow       |
+| RMA                | Return Authorization    |
+| ReturnRefund       | Refund Reference        |
+| ReplacementRequest | Replacement Reference   |
+| ReturnDocument     | Attachments             |
+| ReturnAudit        | Audit Trail             |
 
 ---
 
 # 16.2 Customer Return
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| returnNumber | VARCHAR(30) | Unique |
-| orderId | UUID | Required |
-| customerId | UUID | Required |
-| branchId | UUID | Required |
-| returnReason | ENUM | Required |
-| status | ENUM | Required |
-| requestedDate | DATE | Required |
-| totalAmount | DECIMAL(18,2) | Required |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
+| Attribute     | Type          | Constraint  |
+| ------------- | ------------- | ----------- |
+| id            | UUID          | Primary Key |
+| returnNumber  | VARCHAR(30)   | Unique      |
+| orderId       | UUID          | Required    |
+| customerId    | UUID          | Required    |
+| branchId      | UUID          | Required    |
+| returnReason  | ENUM          | Required    |
+| status        | ENUM          | Required    |
+| requestedDate | DATE          | Required    |
+| totalAmount   | DECIMAL(18,2) | Required    |
+| createdBy     | UUID          | Required    |
+| createdAt     | TIMESTAMP     | Required    |
 
 ---
 
 # 16.3 Customer Return Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerReturnId | UUID |
-| orderItemId | UUID |
-| productId | UUID |
-| quantity | DECIMAL(18,3) |
-| unitPrice | DECIMAL(18,2) |
-| lineAmount | DECIMAL(18,2) |
+| Attribute        | Type          |
+| ---------------- | ------------- |
+| id               | UUID          |
+| customerReturnId | UUID          |
+| orderItemId      | UUID          |
+| productId        | UUID          |
+| quantity         | DECIMAL(18,3) |
+| unitPrice        | DECIMAL(18,2) |
+| lineAmount       | DECIMAL(18,2) |
 
 ---
 
 # 16.4 Supplier Return
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierReturnNumber | VARCHAR(30) |
-| supplierId | UUID |
-| procurementReferenceId | UUID |
-| returnReason | ENUM |
-| status | ENUM |
-| createdAt | TIMESTAMP |
+| Attribute              | Type        |
+| ---------------------- | ----------- |
+| id                     | UUID        |
+| supplierReturnNumber   | VARCHAR(30) |
+| supplierId             | UUID        |
+| procurementReferenceId | UUID        |
+| returnReason           | ENUM        |
+| status                 | ENUM        |
+| createdAt              | TIMESTAMP   |
 
 ---
 
 # 16.5 Supplier Return Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierReturnId | UUID |
-| productId | UUID |
-| quantity | DECIMAL(18,3) |
-| unitPrice | DECIMAL(18,2) |
+| Attribute        | Type          |
+| ---------------- | ------------- |
+| id               | UUID          |
+| supplierReturnId | UUID          |
+| productId        | UUID          |
+| quantity         | DECIMAL(18,3) |
+| unitPrice        | DECIMAL(18,2) |
 
 ---
 
 # 16.6 Return Order
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
+| Attribute         | Type        |
+| ----------------- | ----------- |
+| id                | UUID        |
 | returnOrderNumber | VARCHAR(30) |
-| returnType | ENUM |
-| referenceReturnId | UUID |
-| status | ENUM |
-| createdAt | TIMESTAMP |
+| returnType        | ENUM        |
+| referenceReturnId | UUID        |
+| status            | ENUM        |
+| createdAt         | TIMESTAMP   |
 
 ---
 
 # 16.7 Return Receipt
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
+| Attribute     | Type        |
+| ------------- | ----------- |
+| id            | UUID        |
 | receiptNumber | VARCHAR(30) |
-| rmaId | UUID |
-| warehouseId | UUID |
-| receivedDate | DATE |
-| status | ENUM |
+| rmaId         | UUID        |
+| warehouseId   | UUID        |
+| receivedDate  | DATE        |
+| status        | ENUM        |
 
 ---
 
 # 16.8 Return Receipt Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| receiptId | UUID |
-| productId | UUID |
+| Attribute        | Type          |
+| ---------------- | ------------- |
+| id               | UUID          |
+| receiptId        | UUID          |
+| productId        | UUID          |
 | receivedQuantity | DECIMAL(18,3) |
 | acceptedQuantity | DECIMAL(18,3) |
 | rejectedQuantity | DECIMAL(18,3) |
@@ -1222,84 +1222,84 @@ Returns
 
 # 16.9 Return Inspection
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| receiptId | UUID |
-| inspectorId | UUID |
-| inspectionResult | ENUM |
-| remarks | VARCHAR(500) |
-| inspectedAt | TIMESTAMP |
+| Attribute        | Type         |
+| ---------------- | ------------ |
+| id               | UUID         |
+| receiptId        | UUID         |
+| inspectorId      | UUID         |
+| inspectionResult | ENUM         |
+| remarks          | VARCHAR(500) |
+| inspectedAt      | TIMESTAMP    |
 
 ---
 
 # 16.10 Return Disposition
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inspectionId | UUID |
-| disposition | ENUM |
-| inventoryAction | ENUM |
-| completedAt | TIMESTAMP |
+| Attribute       | Type      |
+| --------------- | --------- |
+| id              | UUID      |
+| inspectionId    | UUID      |
+| disposition     | ENUM      |
+| inventoryAction | ENUM      |
+| completedAt     | TIMESTAMP |
 
 ---
 
 # 16.11 Return Approval
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| referenceId | UUID |
-| approvalLevel | INTEGER |
-| approverId | UUID |
-| approvalStatus | ENUM |
-| approvedAt | TIMESTAMP |
+| Attribute      | Type      |
+| -------------- | --------- |
+| id             | UUID      |
+| referenceId    | UUID      |
+| approvalLevel  | INTEGER   |
+| approverId     | UUID      |
+| approvalStatus | ENUM      |
+| approvedAt     | TIMESTAMP |
 
 ---
 
 # 16.12 Return Merchandise Authorization (RMA)
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| rmaNumber | VARCHAR(30) |
-| customerReturnId | UUID |
-| expiryDate | DATE |
-| status | ENUM |
+| Attribute        | Type        |
+| ---------------- | ----------- |
+| id               | UUID        |
+| rmaNumber        | VARCHAR(30) |
+| customerReturnId | UUID        |
+| expiryDate       | DATE        |
+| status           | ENUM        |
 
 ---
 
 # 16.13 Return Refund
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerReturnId | UUID |
-| billingReferenceId | UUID |
-| refundAmount | DECIMAL(18,2) |
-| refundStatus | ENUM |
+| Attribute          | Type          |
+| ------------------ | ------------- |
+| id                 | UUID          |
+| customerReturnId   | UUID          |
+| billingReferenceId | UUID          |
+| refundAmount       | DECIMAL(18,2) |
+| refundStatus       | ENUM          |
 
 ---
 
 # 16.14 Replacement Request
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerReturnId | UUID |
+| Attribute          | Type |
+| ------------------ | ---- |
+| id                 | UUID |
+| customerReturnId   | UUID |
 | replacementOrderId | UUID |
-| replacementStatus | ENUM |
+| replacementStatus  | ENUM |
 
 ---
 
 # 16.15 Return Document
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| referenceId | UUID |
-| documentType | ENUM |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| referenceId  | UUID         |
+| documentType | ENUM         |
 | documentName | VARCHAR(255) |
 | documentPath | VARCHAR(500) |
 
@@ -1307,13 +1307,13 @@ Returns
 
 # 16.16 Return Audit
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| referenceId | UUID |
-| eventType | VARCHAR(100) |
-| correlationId | UUID |
-| createdAt | TIMESTAMP |
+| Attribute     | Type         |
+| ------------- | ------------ |
+| id            | UUID         |
+| referenceId   | UUID         |
+| eventType     | VARCHAR(100) |
+| correlationId | UUID         |
+| createdAt     | TIMESTAMP    |
 
 ---
 
@@ -1335,23 +1335,23 @@ returns
 
 ## 17.1 Tables
 
-| Table |
-|---------|
-| customer_return |
+| Table                |
+| -------------------- |
+| customer_return      |
 | customer_return_item |
-| supplier_return |
+| supplier_return      |
 | supplier_return_item |
-| return_order |
-| return_receipt |
-| return_receipt_item |
-| return_inspection |
-| return_disposition |
-| return_approval |
-| rma |
-| return_refund |
-| replacement_request |
-| return_document |
-| return_audit |
+| return_order         |
+| return_receipt       |
+| return_receipt_item  |
+| return_inspection    |
+| return_disposition   |
+| return_approval      |
+| rma                  |
+| return_refund        |
+| replacement_request  |
+| return_document      |
+| return_audit         |
 
 ---
 
@@ -1413,16 +1413,16 @@ The following identifiers reference external bounded contexts and shall **not** 
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| customer_return | return_number |
-| customer_return | order_id |
-| customer_return | customer_id |
-| customer_return | status |
-| supplier_return | supplier_id |
+| Table           | Index                  |
+| --------------- | ---------------------- |
+| customer_return | return_number          |
+| customer_return | order_id               |
+| customer_return | customer_id            |
+| customer_return | status                 |
+| supplier_return | supplier_id            |
 | supplier_return | supplier_return_number |
-| return_receipt | receipt_number |
-| rma | rma_number |
+| return_receipt  | receipt_number         |
+| rma             | rma_number             |
 
 ---
 
@@ -1608,29 +1608,29 @@ Return audit history shall be immutable.
 
 ## 21.1 Published Events
 
-| Topic | Event |
-|---------|------|
-| returns.customer.requested.v1 | CustomerReturnRequested |
-| returns.customer.approved.v1 | CustomerReturnApproved |
-| returns.rma.created.v1 | RMACreated |
-| returns.receipt.recorded.v1 | ReturnReceiptRecorded |
-| returns.inspection.completed.v1 | ReturnInspectionCompleted |
-| returns.refund.requested.v1 | RefundRequested |
-| returns.replacement.requested.v1 | ReplacementRequested |
-| returns.supplier.created.v1 | SupplierReturnCreated |
-| returns.completed.v1 | ReturnCompleted |
+| Topic                            | Event                     |
+| -------------------------------- | ------------------------- |
+| returns.customer.requested.v1    | CustomerReturnRequested   |
+| returns.customer.approved.v1     | CustomerReturnApproved    |
+| returns.rma.created.v1           | RMACreated                |
+| returns.receipt.recorded.v1      | ReturnReceiptRecorded     |
+| returns.inspection.completed.v1  | ReturnInspectionCompleted |
+| returns.refund.requested.v1      | RefundRequested           |
+| returns.replacement.requested.v1 | ReplacementRequested      |
+| returns.supplier.created.v1      | SupplierReturnCreated     |
+| returns.completed.v1             | ReturnCompleted           |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
-| order.delivered.v1 | Order Service |
-| inventory.stock.updated.v1 | Inventory Service |
-| billing.refund.completed.v1 | Billing Service |
+| Topic                         | Source              |
+| ----------------------------- | ------------------- |
+| order.delivered.v1            | Order Service       |
+| inventory.stock.updated.v1    | Inventory Service   |
+| billing.refund.completed.v1   | Billing Service     |
 | procurement.goods-received.v1 | Procurement Service |
-| supplier.updated.v1 | Supplier Service |
+| supplier.updated.v1           | Supplier Service    |
 
 ---
 
@@ -1651,29 +1651,29 @@ Return audit history shall be immutable.
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | REST APIs |
-| Kafka | Event Streaming |
-| PostgreSQL | Returns Database |
-| Order Service | Order Validation |
-| Inventory Service | Inventory Adjustments |
-| Billing Service | Refund Processing |
-| Supplier Service | Supplier Validation |
-| Procurement Service | Supplier Returns |
+| Interface           | Purpose               |
+| ------------------- | --------------------- |
+| API Gateway         | REST APIs             |
+| Kafka               | Event Streaming       |
+| PostgreSQL          | Returns Database      |
+| Order Service       | Order Validation      |
+| Inventory Service   | Inventory Adjustments |
+| Billing Service     | Refund Processing     |
+| Supplier Service    | Supplier Validation   |
+| Procurement Service | Supplier Returns      |
 
 ---
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
-| OrderClient | Validate Customer Orders |
-| InventoryClient | Inventory Adjustments |
-| BillingClient | Refund Requests |
-| SupplierClient | Supplier Validation |
+| Client            | Purpose                    |
+| ----------------- | -------------------------- |
+| OrderClient       | Validate Customer Orders   |
+| InventoryClient   | Inventory Adjustments      |
+| BillingClient     | Refund Requests            |
+| SupplierClient    | Supplier Validation        |
 | ProcurementClient | Supplier Return Validation |
-| IdentityClient | User Validation |
+| IdentityClient    | User Validation            |
 
 > OpenFeign shall be used only for synchronous validation and request initiation. Business lifecycle synchronization shall occur through Kafka events.
 
@@ -1703,15 +1703,15 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| returns.customer.auto-number | true | Yes | Auto-generate Customer Return Number |
-| returns.supplier.auto-number | true | Yes | Auto-generate Supplier Return Number |
-| returns.rma.auto-number | true | Yes | Auto-generate RMA Number |
-| returns.window.days | 30 | Yes | Customer Return Window |
-| returns.inspection.required | true | Yes | Mandatory Inspection |
-| returns.kafka.retry.max-attempts | 3 | Yes | Kafka Retry Attempts |
-| returns.search.max-page-size | 100 | Yes | Maximum Search Page Size |
+| Property                         | Default | Required | Description                          |
+| -------------------------------- | ------- | -------- | ------------------------------------ |
+| returns.customer.auto-number     | true    | Yes      | Auto-generate Customer Return Number |
+| returns.supplier.auto-number     | true    | Yes      | Auto-generate Supplier Return Number |
+| returns.rma.auto-number          | true    | Yes      | Auto-generate RMA Number             |
+| returns.window.days              | 30      | Yes      | Customer Return Window               |
+| returns.inspection.required      | true    | Yes      | Mandatory Inspection                 |
+| returns.kafka.retry.max-attempts | 3       | Yes      | Kafka Retry Attempts                 |
+| returns.search.max-page-size     | 100     | Yes      | Maximum Search Page Size             |
 
 ---
 
@@ -1817,22 +1817,22 @@ Messages exceeding retry attempts shall be published to the Dead Letter Queue (D
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP |
-|------------|-------------|------|
-| RT-VAL-001 | Validation Failed | 400 |
-| RT-AUTH-001 | Authentication Required | 401 |
-| RT-AUTH-002 | Access Denied | 403 |
-| RT-BUS-001 | Return Window Expired | 422 |
-| RT-BUS-002 | Order Not Eligible for Return | 422 |
-| RT-BUS-003 | Return Not Found | 404 |
-| RT-BUS-004 | RMA Not Found | 404 |
-| RT-BUS-005 | Invalid Return State | 422 |
-| RT-BUS-006 | Inspection Failed | 422 |
-| RT-BUS-007 | Duplicate Return Request | 409 |
-| RT-BUS-008 | Refund Already Initiated | 409 |
-| RT-BUS-009 | Replacement Already Created | 409 |
-| RT-BUS-010 | Supplier Return Not Found | 404 |
-| RT-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                   | HTTP |
+| ----------- | ----------------------------- | ---- |
+| RT-VAL-001  | Validation Failed             | 400  |
+| RT-AUTH-001 | Authentication Required       | 401  |
+| RT-AUTH-002 | Access Denied                 | 403  |
+| RT-BUS-001  | Return Window Expired         | 422  |
+| RT-BUS-002  | Order Not Eligible for Return | 422  |
+| RT-BUS-003  | Return Not Found              | 404  |
+| RT-BUS-004  | RMA Not Found                 | 404  |
+| RT-BUS-005  | Invalid Return State          | 422  |
+| RT-BUS-006  | Inspection Failed             | 422  |
+| RT-BUS-007  | Duplicate Return Request      | 409  |
+| RT-BUS-008  | Refund Already Initiated      | 409  |
+| RT-BUS-009  | Replacement Already Created   | 409  |
+| RT-BUS-010  | Supplier Return Not Found     | 404  |
+| RT-SYS-001  | Internal Server Error         | 500  |
 
 ---
 
@@ -2108,28 +2108,28 @@ The Returns Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source | Verification |
-|-------------|--------|--------------|
-| RT-SYS-001 – RT-SYS-010 | FRD-Returns | Functional Testing |
-| RT-SYS-011 – RT-SYS-029 | SRS-001 Platform Foundation | Integration Testing |
-| RT-NFR-001 – RT-NFR-018 | PRD / HLD | Performance, Reliability & Security Testing |
+| Requirement             | Source                      | Verification                                |
+| ----------------------- | --------------------------- | ------------------------------------------- |
+| RT-SYS-001 – RT-SYS-010 | FRD-Returns                 | Functional Testing                          |
+| RT-SYS-011 – RT-SYS-029 | SRS-001 Platform Foundation | Integration Testing                         |
+| RT-NFR-001 – RT-NFR-018 | PRD / HLD                   | Performance, Reliability & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| RT-SYS-001 | TC-RT-001 |
-| RT-SYS-002 | TC-RT-002 |
-| RT-SYS-003 | TC-RT-003 |
-| RT-SYS-004 | TC-RT-004 |
-| RT-SYS-005 | TC-RT-005 |
-| RT-SYS-006 | TC-RT-006 |
-| RT-SYS-007 | TC-RT-007 |
-| RT-SYS-008 | TC-RT-008 |
-| RT-SYS-009 | TC-RT-009 |
-| RT-SYS-010 | TC-RT-010 |
+| ----------- | --------- |
+| RT-SYS-001  | TC-RT-001 |
+| RT-SYS-002  | TC-RT-002 |
+| RT-SYS-003  | TC-RT-003 |
+| RT-SYS-004  | TC-RT-004 |
+| RT-SYS-005  | TC-RT-005 |
+| RT-SYS-006  | TC-RT-006 |
+| RT-SYS-007  | TC-RT-007 |
+| RT-SYS-008  | TC-RT-008 |
+| RT-SYS-009  | TC-RT-009 |
+| RT-SYS-010  | TC-RT-010 |
 
 ---
 
@@ -2160,82 +2160,82 @@ The Returns Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
+| Resource         | Endpoints                                    |
+| ---------------- | -------------------------------------------- |
 | Customer Returns | Create, Update, Approve, Reject, Search, Get |
-| Supplier Returns | Create, Search, Get |
-| RMA | Generate, Search, Get |
-| Return Receipt | Record, Search, Get |
-| Inspection | Create, Update, Get |
-| Refund | Initiate, Status |
-| Replacement | Initiate, Status |
-| Return Documents | Upload, Download, Delete |
+| Supplier Returns | Create, Search, Get                          |
+| RMA              | Generate, Search, Get                        |
+| Return Receipt   | Record, Search, Get                          |
+| Inspection       | Create, Update, Get                          |
+| Refund           | Initiate, Status                             |
+| Replacement      | Initiate, Status                             |
+| Return Documents | Upload, Download, Delete                     |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Returns | Aggregate Root |
-| CustomerReturn | Customer Return Request |
-| CustomerReturnItem | Returned Customer Items |
-| SupplierReturn | Supplier Return Request |
-| SupplierReturnItem | Returned Supplier Items |
-| ReturnOrder | Return Order |
-| ReturnReceipt | Return Receipt |
-| ReturnReceiptItem | Received Items |
-| ReturnInspection | Inspection |
-| ReturnDisposition | Final Outcome |
-| ReturnApproval | Approval Workflow |
-| RMA | Return Merchandise Authorization |
-| ReturnRefund | Refund Reference |
-| ReplacementRequest | Replacement Reference |
-| ReturnDocument | Attachments |
-| ReturnAudit | Audit Trail |
+| Aggregate          | Description                      |
+| ------------------ | -------------------------------- |
+| Returns            | Aggregate Root                   |
+| CustomerReturn     | Customer Return Request          |
+| CustomerReturnItem | Returned Customer Items          |
+| SupplierReturn     | Supplier Return Request          |
+| SupplierReturnItem | Returned Supplier Items          |
+| ReturnOrder        | Return Order                     |
+| ReturnReceipt      | Return Receipt                   |
+| ReturnReceiptItem  | Received Items                   |
+| ReturnInspection   | Inspection                       |
+| ReturnDisposition  | Final Outcome                    |
+| ReturnApproval     | Approval Workflow                |
+| RMA                | Return Merchandise Authorization |
+| ReturnRefund       | Refund Reference                 |
+| ReplacementRequest | Replacement Reference            |
+| ReturnDocument     | Attachments                      |
+| ReturnAudit        | Audit Trail                      |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Returns Database |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
-| Order Service | Order Validation & Replacement Orders |
-| Product Service | Product Validation |
-| Inventory Service | Inventory Adjustments |
-| Billing Service | Refund Processing |
-| Supplier Service | Supplier Validation |
-| Procurement Service | Supplier Return Processing |
-| Dispatch Service | Return Logistics |
-| Notification Service | Notifications |
-| Audit Service | Audit Trail |
-| Reporting Service | Return Analytics |
+| Dependency           | Purpose                               |
+| -------------------- | ------------------------------------- |
+| Platform Foundation  | Shared Frameworks                     |
+| Gateway              | API Routing                           |
+| Eureka               | Service Discovery                     |
+| PostgreSQL           | Returns Database                      |
+| Kafka                | Event Streaming                       |
+| Identity Service     | Authentication & Authorization        |
+| Order Service        | Order Validation & Replacement Orders |
+| Product Service      | Product Validation                    |
+| Inventory Service    | Inventory Adjustments                 |
+| Billing Service      | Refund Processing                     |
+| Supplier Service     | Supplier Validation                   |
+| Procurement Service  | Supplier Return Processing            |
+| Dispatch Service     | Return Logistics                      |
+| Notification Service | Notifications                         |
+| Audit Service        | Audit Trail                           |
+| Reporting Service    | Return Analytics                      |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Returns Service Software Requirements Specification |
+| Version | Description                                                 |
+| ------- | ----------------------------------------------------------- |
+| v1.0.0  | Initial Returns Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 

@@ -18,52 +18,53 @@
 
 # 2. Document Metadata
 
-| Field         | Value                              |
-| ------------- | ---------------------------------- |
-| Document ID   | FRD-002                            |
-| Domain        | Branch Administration & Operations |
-| Document Type | Functional Requirements Document   |
-| Version       | v1.0.0                             |
-| Author        | Sachin Salunke                     |
-| Status        | Draft                              |
-| Date          | 2026-06-19                         |
-| Linked BRD    | BRD-001                            |
-| Linked PRD    | PRD-001                            |
-| Linked HLD    | HLD-001                            |
-| Linked SRS | SRS-001 |
-| Linked RTM | RTM-001 |
-| Linked CONTEXT | CONTEXT-001 |
-| Linked DOMAIN | DOMAIN-001 |
-| Linked ADRs | ADR-001 to ADR-007 |
+| Field          | Value                              |
+| -------------- | ---------------------------------- |
+| Document ID    | FRD-002                            |
+| Domain         | Branch Administration & Operations |
+| Document Type  | Functional Requirements Document   |
+| Version        | v1.0.0                             |
+| Author         | Sachin Salunke                     |
+| Status         | Draft                              |
+| Date           | 2026-06-19                         |
+| Linked BRD     | BRD-001                            |
+| Linked PRD     | PRD-001                            |
+| Linked HLD     | HLD-001                            |
+| Linked SRS     | SRS-001                            |
+| Linked RTM     | RTM-001                            |
+| Linked CONTEXT | CONTEXT-001                        |
+| Linked DOMAIN  | DOMAIN-001                         |
+| Linked ADRs    | ADR-001 to ADR-007                 |
 
 ---
 
 # 3. Revision History
 
-| Version | Date       | Author         | Description                                        |
-| ------- | ---------- | -------------- | -------------------------------------------------- |
-| v1.0.0  | 2026-06-19 | Sachin Salunke | Initial Branch Management functional specification |
-| v1.1.0 | 2026-06-20 | Sachin Salunke | Updated for Cloud-Native Monorepo-Based Multi-Module Microservices Architecture |
+| Version | Date       | Author         | Description                                                                     |
+| ------- | ---------- | -------------- | ------------------------------------------------------------------------------- |
+| v1.0.0  | 2026-06-19 | Sachin Salunke | Initial Branch Management functional specification                              |
+| v1.1.0  | 2026-06-20 | Sachin Salunke | Updated for Cloud-Native Monorepo-Based Multi-Module Microservices Architecture |
+
 ---
 
 # 4. References
 
-| Reference ID | Document |
-|-------------|-----------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| SRS-001 | Software Requirements Specification |
-| HLD-001 | High-Level Design |
-| RTM-001 | Requirements Traceability Matrix |
-| CONTEXT-001 | System Context Document |
-| DOMAIN-001 | Domain Model |
-| ADR-001 | Monorepo-Based Multi-Module Microservices Architecture |
-| ADR-002 | Database per Service Strategy |
-| ADR-003 | Hybrid Communication Architecture |
-| ADR-004 | Service Discovery Architecture |
-| ADR-005 | API Gateway Strategy |
-| ADR-006 | Saga-Based Distributed Transaction Strategy |
-| ADR-007 | Security Architecture |
+| Reference ID | Document                                               |
+| ------------ | ------------------------------------------------------ |
+| BRD-001      | Business Requirements Document                         |
+| PRD-001      | Product Requirements Document                          |
+| SRS-001      | Software Requirements Specification                    |
+| HLD-001      | High-Level Design                                      |
+| RTM-001      | Requirements Traceability Matrix                       |
+| CONTEXT-001  | System Context Document                                |
+| DOMAIN-001   | Domain Model                                           |
+| ADR-001      | Monorepo-Based Multi-Module Microservices Architecture |
+| ADR-002      | Database per Service Strategy                          |
+| ADR-003      | Hybrid Communication Architecture                      |
+| ADR-004      | Service Discovery Architecture                         |
+| ADR-005      | API Gateway Strategy                                   |
+| ADR-006      | Saga-Based Distributed Transaction Strategy            |
+| ADR-007      | Security Architecture                                  |
 
 ---
 
@@ -84,34 +85,34 @@ The Branch Management module provides centralized administration and operational
 
 Responsibilities:
 
-* Branch Registration
-* Branch Configuration
-* Branch Status Management
-* Branch Contact Management
-* Branch Address Management
-* Branch Operational Settings
-* Branch User Association
-* Branch Search and Reporting
-* Branch Audit Logging
-Implementation Characteristics:
+- Branch Registration
+- Branch Configuration
+- Branch Status Management
+- Branch Contact Management
+- Branch Address Management
+- Branch Operational Settings
+- Branch User Association
+- Branch Search and Reporting
+- Branch Audit Logging
+  Implementation Characteristics:
 
-- Cloud-Native Architecture
-- Monorepo-Based Multi-Module Maven Structure
-- Independently Deployable Microservice
-- Database per Service
-- API Gateway Integration
-- Service Discovery Integration
-- REST APIs and OpenFeign Communication
-- Event-Driven Audit Logging
-- JWT Authentication and RBAC Authorization
+* Cloud-Native Architecture
+* Monorepo-Based Multi-Module Maven Structure
+* Independently Deployable Microservice
+* Database per Service
+* API Gateway Integration
+* Service Discovery Integration
+* REST APIs and OpenFeign Communication
+* Event-Driven Audit Logging
+* JWT Authentication and RBAC Authorization
 
 The module acts as the organizational context for:
 
-* Users
-* Customers
-* Orders
-* Inventory
-* Reporting
+- Users
+- Customers
+- Orders
+- Inventory
+- Reporting
 
 ---
 
@@ -170,8 +171,8 @@ Critical
 
 ### Actors
 
-* Super Admin
-* Company Admin
+- Super Admin
+- Company Admin
 
 ---
 
@@ -191,8 +192,8 @@ Critical
 
 ### Actors
 
-* Super Admin
-* Company Admin
+- Super Admin
+- Company Admin
 
 ---
 
@@ -356,9 +357,9 @@ Only active branches can perform business transactions.
 
 A branch cannot be deleted if:
 
-* Active users exist
-* Active inventory exists
-* Active orders exist
+- Active users exist
+- Active inventory exists
+- Active orders exist
 
 ---
 
@@ -466,6 +467,7 @@ Branch Service->>Branch Database: Save Assignment
 Branch Service-->>API Gateway: Assignment Success
 API Gateway-->>Admin: Success
 ```
+
 ---
 
 ## Synchronous Communication
@@ -507,6 +509,7 @@ BranchConfigurationUpdated
 BranchUserAssigned
 BranchUserRemoved
 ```
+
 ## Consumed Events
 
 ```text
@@ -514,6 +517,7 @@ UserCreated
 UserUpdated
 UserDisabled
 ```
+
 ---
 
 # 13. Screen Requirements
@@ -522,26 +526,26 @@ UserDisabled
 
 Fields:
 
-* Branch Code
-* Branch Name
-* Branch Type
-* Status
-* Email
-* Mobile Number
-* Address
-* City
-* State
-* Country
-* Postal Code
+- Branch Code
+- Branch Name
+- Branch Type
+- Status
+- Email
+- Mobile Number
+- Address
+- City
+- State
+- Country
+- Postal Code
 
 Actions:
 
-* Create
-* Update
-* Activate
-* Deactivate
-* Search
-* View Details
+- Create
+- Update
+- Activate
+- Deactivate
+- Search
+- View Details
 
 ---
 
@@ -549,16 +553,16 @@ Actions:
 
 Fields:
 
-* Branch Status
-* Time Zone
-* Currency
-* GST Number
-* Operational Settings
+- Branch Status
+- Time Zone
+- Currency
+- GST Number
+- Operational Settings
 
 Actions:
 
-* Save Configuration
-* Update Configuration
+- Save Configuration
+- Update Configuration
 
 ---
 
@@ -566,15 +570,15 @@ Actions:
 
 Fields:
 
-* Branch
-* Users
-* Roles
+- Branch
+- Users
+- Roles
 
 Actions:
 
-* Assign
-* Remove
-* Search
+- Assign
+- Remove
+- Search
 
 ---
 
@@ -582,39 +586,39 @@ Actions:
 
 ## Branch Code
 
-* Required
-* Unique
-* Maximum 20 characters
-* Uppercase only
+- Required
+- Unique
+- Maximum 20 characters
+- Uppercase only
 
 ---
 
 ## Branch Name
 
-* Required
-* Maximum 150 characters
+- Required
+- Maximum 150 characters
 
 ---
 
 ## Email
 
-* Optional
-* Valid email format
+- Optional
+- Valid email format
 
 ---
 
 ## Mobile Number
 
-* Optional
-* Numeric
-* Maximum 15 digits
+- Optional
+- Numeric
+- Maximum 15 digits
 
 ---
 
 ## GST Number
 
-* Optional
-* Valid GST format
+- Optional
+- Valid GST format
 
 ---
 
@@ -678,6 +682,7 @@ BRANCH_CONFIGURATION_VIEWED
 ```
 
 ---
+
 # 17. APIs
 
 ## Branch APIs
@@ -705,17 +710,18 @@ POST   /api/v1/branches/{id}/users
 DELETE /api/v1/branches/{id}/users/{userId}
 GET    /api/v1/branches/{id}/users
 ```
+
 ---
 
 # 18. Notifications
 
 System notifications:
 
-* Branch Created
-* Branch Activated
-* Branch Deactivated
-* User Assignment Completed
-* Branch Configuration Updated
+- Branch Created
+- Branch Activated
+- Branch Deactivated
+- User Assignment Completed
+- Branch Configuration Updated
 
 ---
 
@@ -723,12 +729,12 @@ System notifications:
 
 Reports:
 
-* Branch List Report
-* Active Branch Report
-* Inactive Branch Report
-* Branch User Report
-* Branch Activity Report
-* Branch Audit Report
+- Branch List Report
+- Active Branch Report
+- Inactive Branch Report
+- Branch User Report
+- Branch Activity Report
+- Branch Audit Report
 
 ---
 
@@ -827,19 +833,20 @@ BranchUser
 
 # 22. Success Criteria
 
-* Branches can be created and managed successfully.
-* Branch codes remain unique.
-* Branch configurations are maintained.
-* Users can be assigned to branches.
-* Inactive branches cannot participate in business transactions.
-* Branch activities are fully audited.
-* Reporting capabilities are available.
-- Branch Service registers successfully with Service Discovery.
-- Branch APIs are accessible through API Gateway.
-- Branch events are published successfully to Kafka.
-- User validation works through Identity Service.
-- Distributed tracing is available for branch workflows.
-- Branch Service remains independently deployable.
+- Branches can be created and managed successfully.
+- Branch codes remain unique.
+- Branch configurations are maintained.
+- Users can be assigned to branches.
+- Inactive branches cannot participate in business transactions.
+- Branch activities are fully audited.
+- Reporting capabilities are available.
+
+* Branch Service registers successfully with Service Discovery.
+* Branch APIs are accessible through API Gateway.
+* Branch events are published successfully to Kafka.
+* User validation works through Identity Service.
+* Distributed tracing is available for branch workflows.
+* Branch Service remains independently deployable.
 
 ---
 
@@ -857,4 +864,3 @@ BranchUser
 | BR-012 | FR-BR-009 |
 
 ---
-

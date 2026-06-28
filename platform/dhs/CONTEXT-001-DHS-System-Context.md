@@ -85,15 +85,15 @@ This document defines the external environment, users, integrations, communicati
 
 Objectives:
 
-* Define system boundaries
-* Identify actors and external systems
-* Define inbound and outbound integrations
-* Define platform services
-* Establish trust boundaries
-* Identify communication channels
-* Establish architecture baseline
-* Establish integration boundaries
-* Establish operational context for downstream design activities
+- Define system boundaries
+- Identify actors and external systems
+- Define inbound and outbound integrations
+- Define platform services
+- Establish trust boundaries
+- Identify communication channels
+- Establish architecture baseline
+- Establish integration boundaries
+- Establish operational context for downstream design activities
 
 ---
 
@@ -127,16 +127,16 @@ Independent Deployments
 
 The platform provides:
 
-* Centralized order management
-* Real-time inventory visibility
-* Billing and dispatch operations
-* Customer order tracking
-* Event-driven workflows
-* Operational reporting
-* Audit and compliance capabilities
-* Distributed observability
-* Service autonomy
-* Independent deployments
+- Centralized order management
+- Real-time inventory visibility
+- Billing and dispatch operations
+- Customer order tracking
+- Event-driven workflows
+- Operational reporting
+- Audit and compliance capabilities
+- Distributed observability
+- Service autonomy
+- Independent deployments
 
 ---
 
@@ -154,22 +154,22 @@ Electronic Distribution Company
 
 The Central Hub acts as the operational control center for:
 
-* Inventory
-* Order Fulfillment
-* Billing
-* Dispatch
-* Reporting
-* System Administration
-* Platform Operations
+- Inventory
+- Order Fulfillment
+- Billing
+- Dispatch
+- Reporting
+- System Administration
+- Platform Operations
 
 Branches act as customer engagement and sales centers.
 
 Customers can:
 
-* Request products
-* View order status
-* Track shipments
-* Receive notifications
+- Request products
+- View order status
+- Track shipments
+- Receive notifications
 
 ---
 
@@ -254,17 +254,17 @@ DISPATCH_SVC --> SCANNER
 
 Responsibilities:
 
-* Submit product requests
-* View order status
-* View shipment status
-* Receive notifications
+- Submit product requests
+- View order status
+- View shipment status
+- Receive notifications
 
 Permissions:
 
-* View own requests
-* View own orders
-* View own invoices
-* View shipment status
+- View own requests
+- View own orders
+- View own invoices
+- View shipment status
 
 ---
 
@@ -272,10 +272,10 @@ Permissions:
 
 Responsibilities:
 
-* Customer interactions
-* Customer onboarding
-* Order creation
-* Order tracking
+- Customer interactions
+- Customer onboarding
+- Order creation
+- Order tracking
 
 ---
 
@@ -283,10 +283,10 @@ Responsibilities:
 
 Responsibilities:
 
-* Inventory updates
-* Stock reservations
-* Stock movements
-* Barcode operations
+- Inventory updates
+- Stock reservations
+- Stock movements
+- Barcode operations
 
 ---
 
@@ -294,10 +294,10 @@ Responsibilities:
 
 Responsibilities:
 
-* Invoice generation
-* Partial billing management
-* Tax processing
-* Invoice adjustments
+- Invoice generation
+- Partial billing management
+- Tax processing
+- Invoice adjustments
 
 ---
 
@@ -305,9 +305,9 @@ Responsibilities:
 
 Responsibilities:
 
-* Shipment processing
-* Delivery management
-* Shipment tracking
+- Shipment processing
+- Delivery management
+- Shipment tracking
 
 ---
 
@@ -315,10 +315,10 @@ Responsibilities:
 
 Responsibilities:
 
-* Branch operations management
-* Order monitoring
-* Customer oversight
-* Inventory visibility
+- Branch operations management
+- Order monitoring
+- Customer oversight
+- Inventory visibility
 
 ---
 
@@ -326,11 +326,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Central operations
-* Inventory monitoring
-* Billing oversight
-* Dispatch oversight
-* Reporting oversight
+- Central operations
+- Inventory monitoring
+- Billing oversight
+- Dispatch oversight
+- Reporting oversight
 
 ---
 
@@ -338,11 +338,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Business administration
-* System configuration
-* User administration
-* Operational visibility
-* Platform governance
+- Business administration
+- System configuration
+- User administration
+- Operational visibility
+- Platform governance
 
 ---
 
@@ -350,12 +350,12 @@ Responsibilities:
 
 Responsibilities:
 
-* Platform governance
-* Security administration
-* User management
-* Role management
-* Permission management
-* Audit management
+- Platform governance
+- Security administration
+- User management
+- Role management
+- Permission management
+- Audit management
 
 ---
 
@@ -365,9 +365,9 @@ Responsibilities:
 
 Purpose:
 
-* Order notifications
-* Shipment notifications
-* OTP delivery
+- Order notifications
+- Shipment notifications
+- OTP delivery
 
 Communication:
 
@@ -384,9 +384,9 @@ Security  : API Keys + TLS 1.3
 
 Purpose:
 
-* Invoice notifications
-* Shipment updates
-* Operational communications
+- Invoice notifications
+- Shipment updates
+- Operational communications
 
 Communication:
 
@@ -403,9 +403,9 @@ Security  : API Keys + TLS 1.3
 
 Purpose:
 
-* GST validations
-* Tax calculations
-* Invoice verification
+- GST validations
+- Tax calculations
+- Invoice verification
 
 Communication:
 
@@ -422,9 +422,9 @@ Security  : Certificates + TLS 1.3
 
 Purpose:
 
-* Invoice registration
-* E-Invoice generation
-* Invoice verification
+- Invoice registration
+- E-Invoice generation
+- Invoice verification
 
 Communication:
 
@@ -441,9 +441,9 @@ Security  : Certificates + TLS 1.3
 
 Purpose:
 
-* Product scanning
-* Inventory operations
-* Stock identification
+- Product scanning
+- Inventory operations
+- Stock identification
 
 Communication:
 
@@ -459,9 +459,9 @@ Pattern   : Real-Time
 
 Purpose:
 
-* Shipment scanning
-* Stock verification
-* Dispatch operations
+- Shipment scanning
+- Stock verification
+- Dispatch operations
 
 Communication:
 
@@ -479,12 +479,12 @@ Pattern   : Real-Time
 
 Responsibilities:
 
-* Single entry point
-* Authentication
-* Authorization
-* Routing
-* Rate limiting
-* Observability
+- Single entry point
+- Authentication
+- Authorization
+- Routing
+- Rate limiting
+- Observability
 
 ---
 
@@ -492,10 +492,10 @@ Responsibilities:
 
 Responsibilities:
 
-* Dynamic service registration
-* Dynamic service discovery
-* Service health management
-* Runtime resolution
+- Dynamic service registration
+- Dynamic service discovery
+- Service health management
+- Runtime resolution
 
 ---
 
@@ -503,10 +503,10 @@ Responsibilities:
 
 Responsibilities:
 
-* Centralized configuration
-* Environment configuration
-* Secret management
-* Configuration versioning
+- Centralized configuration
+- Environment configuration
+- Secret management
+- Configuration versioning
 
 ---
 
@@ -514,10 +514,10 @@ Responsibilities:
 
 Responsibilities:
 
-* Event-driven communication
-* Saga coordination
-* Event streaming
-* Decoupled integrations
+- Event-driven communication
+- Saga coordination
+- Event streaming
+- Decoupled integrations
 
 ---
 
@@ -525,10 +525,10 @@ Responsibilities:
 
 Responsibilities:
 
-* Caching
-* Performance optimization
-* Temporary data storage
-* Session support
+- Caching
+- Performance optimization
+- Temporary data storage
+- Session support
 
 ---
 
@@ -536,11 +536,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Distributed tracing
-* Metrics collection
-* Structured logging
-* Monitoring dashboards
-* Alerting
+- Distributed tracing
+- Metrics collection
+- Structured logging
+- Monitoring dashboards
+- Alerting
 
 # 12. High-Level Interaction Diagram
 
@@ -654,12 +654,12 @@ The DHS Platform uses a hybrid communication model.
 
 Used for:
 
-* Authentication
-* Inventory Validation
-* Customer Validation
-* Product Lookup
-* Search Operations
-* Master Data Queries
+- Authentication
+- Inventory Validation
+- Customer Validation
+- Product Lookup
+- Search Operations
+- Master Data Queries
 
 Technologies:
 
@@ -675,13 +675,13 @@ Service Discovery
 
 Used for:
 
-* Order Events
-* Billing Events
-* Dispatch Events
-* Notifications
-* Reporting
-* Audit Logging
-* Saga Coordination
+- Order Events
+- Billing Events
+- Dispatch Events
+- Notifications
+- Reporting
+- Audit Logging
+- Saga Coordination
 
 Technologies:
 
@@ -795,45 +795,45 @@ SERVICES --> EINV
 
 # 17. Context Assumptions
 
-* Stable internet connectivity across branches.
-* Third-party providers maintain SLA commitments.
-* Barcode devices support standard protocols.
-* Scanner devices support real-time integrations.
-* Kafka cluster remains highly available.
-* Service Discovery remains continuously available.
-* Configuration services remain accessible.
-* Service databases remain independently available.
-* Platform observability components remain operational.
-* Customers access the platform through secured channels.
+- Stable internet connectivity across branches.
+- Third-party providers maintain SLA commitments.
+- Barcode devices support standard protocols.
+- Scanner devices support real-time integrations.
+- Kafka cluster remains highly available.
+- Service Discovery remains continuously available.
+- Configuration services remain accessible.
+- Service databases remain independently available.
+- Platform observability components remain operational.
+- Customers access the platform through secured channels.
 
 ---
 
 # 18. Context Constraints
 
-* Single centralized hub architecture.
-* Regulatory compliance requirements.
-* Dependence on third-party integrations.
-* Multi-branch operational support requirements.
-* Distributed system complexity.
-* Eventual consistency across business workflows.
-* Independent database management requirements.
-* Service-to-service security requirements.
-* Future scalability and extensibility requirements.
+- Single centralized hub architecture.
+- Regulatory compliance requirements.
+- Dependence on third-party integrations.
+- Multi-branch operational support requirements.
+- Distributed system complexity.
+- Eventual consistency across business workflows.
+- Independent database management requirements.
+- Service-to-service security requirements.
+- Future scalability and extensibility requirements.
 
 ---
 
 # 19. Success Criteria
 
-* Clearly defined system boundary.
-* Clearly identified actors and integrations.
-* Clearly defined trust boundaries.
-* Clearly defined communication channels.
-* Clearly defined platform services.
-* Clearly defined integration responsibilities.
-* Established foundation for ADRs.
-* Established foundation for HLD and LLD.
-* Established foundation for implementation repositories.
-* Established foundation for operational architecture.
+- Clearly defined system boundary.
+- Clearly identified actors and integrations.
+- Clearly defined trust boundaries.
+- Clearly defined communication channels.
+- Clearly defined platform services.
+- Clearly defined integration responsibilities.
+- Established foundation for ADRs.
+- Established foundation for HLD and LLD.
+- Established foundation for implementation repositories.
+- Established foundation for operational architecture.
 
 ---
 
@@ -841,17 +841,17 @@ SERVICES --> EINV
 
 The context model supports future integrations including:
 
-* ERP Systems
-* SAP Integrations
-* Payment Gateways
-* Supplier Portals
-* Marketplace Integrations
-* Warehouse Management Systems
-* Mobile Applications
-* Customer Self-Service Portal
-* Partner APIs
-* Business Intelligence Platforms
-* Data Warehouse Platforms
-* Machine Learning Services
+- ERP Systems
+- SAP Integrations
+- Payment Gateways
+- Supplier Portals
+- Marketplace Integrations
+- Warehouse Management Systems
+- Mobile Applications
+- Customer Self-Service Portal
+- Partner APIs
+- Business Intelligence Platforms
+- Data Warehouse Platforms
+- Machine Learning Services
 
 ---

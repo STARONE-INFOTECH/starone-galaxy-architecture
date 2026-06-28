@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Product Service |
-| Document | Low Level Design |
-| Document ID | LLD-005 |
-| Repository | starone-dhs-platform |
-| Module | product-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Product Service                        |
+| Document    | Low Level Design                       |
+| Document ID | LLD-005                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | product-service                        |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -338,16 +338,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Product | Product Master |
-| Category | Category Master |
-| Brand | Brand Master |
-| Variant | Product Variants |
-| Barcode | Barcode Management |
-| Image | Product Images |
-| UOM | Unit of Measure |
-| Tax | Product Tax Classification |
+| Component | Responsibility             |
+| --------- | -------------------------- |
+| Product   | Product Master             |
+| Category  | Category Master            |
+| Brand     | Brand Master               |
+| Variant   | Product Variants           |
+| Barcode   | Barcode Management         |
+| Image     | Product Images             |
+| UOM       | Unit of Measure            |
+| Tax       | Product Tax Classification |
 
 ---
 
@@ -685,16 +685,16 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| ProductRepository | Product Master |
-| ProductCategoryRepository | Categories |
-| ProductBrandRepository | Brands |
-| ProductVariantRepository | Variants |
-| ProductBarcodeRepository | Barcodes |
-| ProductImageRepository | Images |
-| ProductUomRepository | UOM |
-| ProductTaxRepository | Tax Classification |
+| Repository                | Responsibility     |
+| ------------------------- | ------------------ |
+| ProductRepository         | Product Master     |
+| ProductCategoryRepository | Categories         |
+| ProductBrandRepository    | Brands             |
+| ProductVariantRepository  | Variants           |
+| ProductBarcodeRepository  | Barcodes           |
+| ProductImageRepository    | Images             |
+| ProductUomRepository      | UOM                |
+| ProductTaxRepository      | Tax Classification |
 
 ---
 
@@ -739,16 +739,16 @@ dto.response
 
 ## ProductResponse
 
-| Field | Type |
-|---------|------|
-| id | UUID |
-| sku | String |
-| productName | String |
-| category | String |
-| brand | String |
-| status | ProductStatus |
-| uom | String |
-| hsnCode | String |
+| Field       | Type          |
+| ----------- | ------------- |
+| id          | UUID          |
+| sku         | String        |
+| productName | String        |
+| category    | String        |
+| brand       | String        |
+| status      | ProductStatus |
+| uom         | String        |
+| hsnCode     | String        |
 
 ---
 
@@ -778,37 +778,37 @@ entity
 
 ## Product
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| sku | String |
-| productName | String |
-| shortDescription | String |
-| longDescription | String |
-| categoryId | UUID |
-| brandId | UUID |
-| taxId | UUID |
-| uomId | UUID |
-| status | ProductStatus |
+| Attribute        | Type          |
+| ---------------- | ------------- |
+| id               | UUID          |
+| sku              | String        |
+| productName      | String        |
+| shortDescription | String        |
+| longDescription  | String        |
+| categoryId       | UUID          |
+| brandId          | UUID          |
+| taxId            | UUID          |
+| uomId            | UUID          |
+| status           | ProductStatus |
 
 ---
 
 ## ProductCategory
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| categoryCode | String |
-| categoryName | String |
-| parentCategoryId | UUID |
+| Attribute        | Type   |
+| ---------------- | ------ |
+| id               | UUID   |
+| categoryCode     | String |
+| categoryName     | String |
+| parentCategoryId | UUID   |
 
 ---
 
 ## ProductBrand
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
+| Attribute | Type   |
+| --------- | ------ |
+| id        | UUID   |
 | brandCode | String |
 | brandName | String |
 
@@ -816,57 +816,57 @@ entity
 
 ## ProductVariant
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
+| Attribute   | Type   |
+| ----------- | ------ |
+| id          | UUID   |
+| productId   | UUID   |
 | variantCode | String |
 | variantName | String |
-| sku | String |
+| sku         | String |
 
 ---
 
 ## ProductBarcode
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
-| barcode | String |
+| Attribute   | Type        |
+| ----------- | ----------- |
+| id          | UUID        |
+| productId   | UUID        |
+| barcode     | String      |
 | barcodeType | BarcodeType |
 
 ---
 
 ## ProductImage
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
-| imageUrl | String |
+| Attribute    | Type    |
+| ------------ | ------- |
+| id           | UUID    |
+| productId    | UUID    |
+| imageUrl     | String  |
 | primaryImage | Boolean |
 
 ---
 
 ## ProductUom
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| uomCode | String |
-| uomName | String |
+| Attribute        | Type    |
+| ---------------- | ------- |
+| id               | UUID    |
+| uomCode          | String  |
+| uomName          | String  |
 | decimalPrecision | Integer |
 
 ---
 
 ## ProductTax
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| hsnCode | String |
-| gstRate | BigDecimal |
-| cessRate | BigDecimal |
+| Attribute | Type       |
+| --------- | ---------- |
+| id        | UUID       |
+| hsnCode   | String     |
+| gstRate   | BigDecimal |
+| cessRate  | BigDecimal |
 
 ---
 
@@ -936,15 +936,15 @@ UomValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| SkuValidator | SKU Uniqueness |
-| BarcodeValidator | Barcode Uniqueness |
+| Validator         | Purpose             |
+| ----------------- | ------------------- |
+| SkuValidator      | SKU Uniqueness      |
+| BarcodeValidator  | Barcode Uniqueness  |
 | CategoryValidator | Category Validation |
-| BrandValidator | Brand Validation |
-| VariantValidator | Variant Validation |
-| HsnValidator | HSN Validation |
-| UomValidator | UOM Validation |
+| BrandValidator    | Brand Validation    |
+| VariantValidator  | Variant Validation  |
+| HsnValidator      | HSN Validation      |
+| UomValidator      | UOM Validation      |
 
 ---
 
@@ -1188,20 +1188,20 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| PRODUCT_CREATE | Create Product |
-| PRODUCT_UPDATE | Update Product |
-| PRODUCT_DELETE | Archive Product |
-| PRODUCT_VIEW | View Product |
-| PRODUCT_SEARCH | Search Products |
-| PRODUCT_CATEGORY_MANAGE | Manage Categories |
-| PRODUCT_BRAND_MANAGE | Manage Brands |
-| PRODUCT_VARIANT_MANAGE | Manage Variants |
-| PRODUCT_BARCODE_MANAGE | Manage Barcodes |
-| PRODUCT_IMAGE_MANAGE | Manage Images |
-| PRODUCT_UOM_MANAGE | Manage UOM |
-| PRODUCT_TAX_MANAGE | Manage Tax Classification |
+| Permission              | Description               |
+| ----------------------- | ------------------------- |
+| PRODUCT_CREATE          | Create Product            |
+| PRODUCT_UPDATE          | Update Product            |
+| PRODUCT_DELETE          | Archive Product           |
+| PRODUCT_VIEW            | View Product              |
+| PRODUCT_SEARCH          | Search Products           |
+| PRODUCT_CATEGORY_MANAGE | Manage Categories         |
+| PRODUCT_BRAND_MANAGE    | Manage Brands             |
+| PRODUCT_VARIANT_MANAGE  | Manage Variants           |
+| PRODUCT_BARCODE_MANAGE  | Manage Barcodes           |
+| PRODUCT_IMAGE_MANAGE    | Manage Images             |
+| PRODUCT_UOM_MANAGE      | Manage UOM                |
+| PRODUCT_TAX_MANAGE      | Manage Tax Classification |
 
 ---
 
@@ -1239,15 +1239,12 @@ Product Service shall consume authenticated user context.
 
 ```json
 {
-  "sub":"UUID",
-  "username":"product.manager",
-  "roles":["PRODUCT_MANAGER"],
-  "permissions":[
-      "PRODUCT_CREATE",
-      "PRODUCT_UPDATE"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "product.manager",
+  "roles": ["PRODUCT_MANAGER"],
+  "permissions": ["PRODUCT_CREATE", "PRODUCT_UPDATE"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1297,20 +1294,20 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Product | PRODUCT_CREATE |
-| Update Product | PRODUCT_UPDATE |
-| Archive Product | PRODUCT_DELETE |
-| View Product | PRODUCT_VIEW |
-| Search Product | PRODUCT_SEARCH |
+| API               | Permission              |
+| ----------------- | ----------------------- |
+| Create Product    | PRODUCT_CREATE          |
+| Update Product    | PRODUCT_UPDATE          |
+| Archive Product   | PRODUCT_DELETE          |
+| View Product      | PRODUCT_VIEW            |
+| Search Product    | PRODUCT_SEARCH          |
 | Manage Categories | PRODUCT_CATEGORY_MANAGE |
-| Manage Brands | PRODUCT_BRAND_MANAGE |
-| Manage Variants | PRODUCT_VARIANT_MANAGE |
-| Manage Barcodes | PRODUCT_BARCODE_MANAGE |
-| Manage Images | PRODUCT_IMAGE_MANAGE |
-| Manage UOM | PRODUCT_UOM_MANAGE |
-| Manage Tax | PRODUCT_TAX_MANAGE |
+| Manage Brands     | PRODUCT_BRAND_MANAGE    |
+| Manage Variants   | PRODUCT_VARIANT_MANAGE  |
+| Manage Barcodes   | PRODUCT_BARCODE_MANAGE  |
+| Manage Images     | PRODUCT_IMAGE_MANAGE    |
+| Manage UOM        | PRODUCT_UOM_MANAGE      |
+| Manage Tax        | PRODUCT_TAX_MANAGE      |
 
 ---
 
@@ -1382,12 +1379,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"ProductCreated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "ProductCreated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1414,12 +1411,12 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|---------|----------------|
-| SupplierClient | Preferred Supplier Validation |
-| InventoryClient | Inventory Availability Lookup |
-| AuditClient | Audit Submission |
-| NotificationClient | Product Notifications |
+| Client             | Responsibility                |
+| ------------------ | ----------------------------- |
+| SupplierClient     | Preferred Supplier Validation |
+| InventoryClient    | Inventory Availability Lookup |
+| AuditClient        | Audit Submission              |
+| NotificationClient | Product Notifications         |
 
 ---
 
@@ -1443,16 +1440,16 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Background Jobs |
-| Metrics | Micrometer |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis                |
+| Validation    | Bean Validation      |
+| Scheduler     | Background Jobs      |
+| Metrics       | Micrometer           |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1466,14 +1463,14 @@ Distributed workflows shall use Kafka events.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Create Product | REQUIRED |
-| Update Product | REQUIRED |
-| Archive Product | REQUIRED |
-| Variant Update | REQUIRED |
-| Category Update | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation       | Propagation  |
+| --------------- | ------------ |
+| Create Product  | REQUIRED     |
+| Update Product  | REQUIRED     |
+| Archive Product | REQUIRED     |
+| Variant Update  | REQUIRED     |
+| Category Update | REQUIRED     |
+| Publish Event   | AFTER_COMMIT |
 
 ---
 
@@ -1607,26 +1604,26 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Identity Service | Authentication |
-| Supplier Service | Supplier Validation |
-| Inventory Service | Stock Validation |
-| Audit Service | Audit Logging |
+| Service              | Purpose               |
+| -------------------- | --------------------- |
+| Identity Service     | Authentication        |
+| Supplier Service     | Supplier Validation   |
+| Inventory Service    | Stock Validation      |
+| Audit Service        | Audit Logging         |
 | Notification Service | Product Notifications |
-| Reporting Service | Product Analytics |
+| Reporting Service    | Product Analytics     |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| product.cache.enabled | true |
-| product.cache.ttl | 3600 |
-| product.search.max-page-size | 100 |
-| product.image.max-size | 5MB |
-| product.kafka.retry | 3 |
+| Property                     | Default |
+| ---------------------------- | ------- |
+| product.cache.enabled        | true    |
+| product.cache.ttl            | 3600    |
+| product.search.max-page-size | 100     |
+| product.image.max-size       | 5MB     |
+| product.kafka.retry          | 3       |
 
 ---
 
@@ -1668,23 +1665,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1726,12 +1723,12 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Errors |
+| Level | Purpose                  |
+| ----- | ------------------------ |
+| TRACE | Framework Diagnostics    |
+| DEBUG | Development              |
+| INFO  | Business Events          |
+| WARN  | Recoverable Errors       |
 | ERROR | Business/System Failures |
 
 ---
@@ -2159,14 +2156,14 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2229,35 +2226,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Product Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Audit Trail |
+| Layer      | Responsibility         |
+| ---------- | ---------------------- |
+| Controller | Request Handling       |
+| Service    | Product Business Logic |
+| Repository | Persistence            |
+| Kafka      | Event Publishing       |
+| Mapper     | DTO Conversion         |
+| Validation | Request Validation     |
+| Audit      | Audit Trail            |
 
 ---
 
@@ -2363,12 +2360,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Architecture, Standards & Governance |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, CI/CD & Infrastructure |
-| starone-dhs-platform | Product Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Architecture, Standards & Governance |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, CI/CD & Infrastructure              |
+| starone-dhs-platform          | Product Service Implementation                  |
 
 ---
 

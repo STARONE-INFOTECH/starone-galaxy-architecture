@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Billing Service |
+| Field          | Value                                               |
+| -------------- | --------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform            |
+| Service Name   | Billing Service                                     |
 | Document Title | Billing Service Software Requirements Specification |
-| Document ID | SRS-008 |
-| Repository | starone-dhs-platform |
-| Module | billing-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-008                                             |
+| Repository     | starone-dhs-platform                                |
+| Module         | billing-service                                     |
+| Document Type  | Software Requirements Specification (SRS)           |
+| Standard       | ISO/IEC/IEEE 29148                                  |
+| Version        | v1.0.0                                              |
+| Status         | Draft                                               |
+| Author         | Sachin Salunke                                      |
+| Owner          | Enterprise Architecture                             |
+| Last Updated   | 2026-06-27                                          |
 
 ---
 
@@ -26,34 +26,34 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | High-Level Design |
+| Document    | Description                     |
+| ----------- | ------------------------------- |
+| BRD-001     | Business Requirements Document  |
+| PRD-001     | Product Requirements Document   |
+| ADR-001     | Architecture Decision Record    |
+| HLD-001     | High-Level Design               |
 | FRD-Billing | Billing Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-007 | Order Service |
+| SRS-001     | Platform Foundation             |
+| SRS-007     | Order Service                   |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -98,13 +98,13 @@ The Billing Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Invoice | Customer Billing Document |
-| Payment | Recorded Customer Payment |
-| Credit Note | Billing Reduction |
-| Debit Note | Additional Billing |
-| Receivable | Outstanding Amount |
+| Term        | Description               |
+| ----------- | ------------------------- |
+| Invoice     | Customer Billing Document |
+| Payment     | Recorded Customer Payment |
+| Credit Note | Billing Reduction         |
+| Debit Note  | Additional Billing        |
+| Receivable  | Outstanding Amount        |
 
 ---
 
@@ -162,34 +162,34 @@ ReportingService --> BillingService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
+| Dependency          | Purpose           |
+| ------------------- | ----------------- |
 | Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Billing Database |
-| Kafka | Event Streaming |
-| Order Service | Order Validation |
+| Gateway             | API Routing       |
+| Eureka              | Service Discovery |
+| PostgreSQL          | Billing Database  |
+| Kafka               | Event Streaming   |
+| Order Service       | Order Validation  |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Gateway | API Routing |
-| Identity Service | Authentication |
-| Order Service | Invoice Requests |
+| Service          | Purpose          |
+| ---------------- | ---------------- |
+| Gateway          | API Routing      |
+| Identity Service | Authentication   |
+| Order Service    | Invoice Requests |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Dispatch Service | Shipment Authorization |
-| Reporting Service | Financial Analytics |
-| Notification Service | Invoice Notifications |
+| Service              | Purpose                |
+| -------------------- | ---------------------- |
+| Dispatch Service     | Shipment Authorization |
+| Reporting Service    | Financial Analytics    |
+| Notification Service | Invoice Notifications  |
 
 ---
 
@@ -562,55 +562,55 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | /invoice | Generate Invoice |
-| GET | /invoice/{invoiceId} | Get Invoice |
-| GET | /invoice/order/{orderId} | Invoice by Order |
-| GET | /invoice | Search Invoices |
-| POST | /payment | Record Payment |
-| GET | /payment/{paymentId} | Get Payment |
-| POST | /credit-note | Create Credit Note |
-| POST | /debit-note | Create Debit Note |
-| PATCH | /invoice/{invoiceId}/issue | Issue Invoice |
-| PATCH | /invoice/{invoiceId}/close | Close Invoice |
+| Method | URI                        | Description        |
+| ------ | -------------------------- | ------------------ |
+| POST   | /invoice                   | Generate Invoice   |
+| GET    | /invoice/{invoiceId}       | Get Invoice        |
+| GET    | /invoice/order/{orderId}   | Invoice by Order   |
+| GET    | /invoice                   | Search Invoices    |
+| POST   | /payment                   | Record Payment     |
+| GET    | /payment/{paymentId}       | Get Payment        |
+| POST   | /credit-note               | Create Credit Note |
+| POST   | /debit-note                | Create Debit Note  |
+| PATCH  | /invoice/{invoiceId}/issue | Issue Invoice      |
+| PATCH  | /invoice/{invoiceId}/close | Close Invoice      |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation ID |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description      |
+| ---------------- | -------- | ---------------- |
+| Authorization    | Yes      | JWT Bearer Token |
+| X-Correlation-ID | Yes      | Correlation ID   |
+| Content-Type     | Yes      | application/json |
+| Accept           | Yes      | application/json |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC / DESC |
-| customerId | No | Customer Identifier |
-| invoiceStatus | No | Invoice Status |
-| paymentStatus | No | Payment Status |
-| fromDate | No | Billing Date From |
-| toDate | No | Billing Date To |
+| Parameter     | Required | Description         |
+| ------------- | -------- | ------------------- |
+| page          | No       | Page Number         |
+| size          | No       | Page Size           |
+| sort          | No       | Sort Field          |
+| direction     | No       | ASC / DESC          |
+| customerId    | No       | Customer Identifier |
+| invoiceStatus | No       | Invoice Status      |
+| paymentStatus | No       | Payment Status      |
+| fromDate      | No       | Billing Date From   |
+| toDate        | No       | Billing Date To     |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
+| Parameter | Description        |
+| --------- | ------------------ |
 | invoiceId | Invoice Identifier |
 | paymentId | Payment Identifier |
-| orderId | Order Identifier |
+| orderId   | Order Identifier   |
 
 ---
 
@@ -652,7 +652,7 @@ Request
 {
   "invoiceId": "UUID",
   "paymentMethod": "UPI",
-  "amount": 5000.00,
+  "amount": 5000.0,
   "transactionReference": "TXN123456789"
 }
 ```
@@ -709,40 +709,40 @@ Supports:
 
 ## GenerateInvoiceRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| orderId | UUID | Yes |
+| Field   | Type | Required |
+| ------- | ---- | -------- |
+| orderId | UUID | Yes      |
 
 ---
 
 ## RecordPaymentRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| invoiceId | UUID | Yes |
-| paymentMethod | PaymentMethod | Yes |
-| amount | Decimal | Yes |
-| transactionReference | String | Yes |
+| Field                | Type          | Required |
+| -------------------- | ------------- | -------- |
+| invoiceId            | UUID          | Yes      |
+| paymentMethod        | PaymentMethod | Yes      |
+| amount               | Decimal       | Yes      |
+| transactionReference | String        | Yes      |
 
 ---
 
 ## CreditNoteRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| invoiceId | UUID | Yes |
-| amount | Decimal | Yes |
-| reason | String | Yes |
+| Field     | Type    | Required |
+| --------- | ------- | -------- |
+| invoiceId | UUID    | Yes      |
+| amount    | Decimal | Yes      |
+| reason    | String  | Yes      |
 
 ---
 
 ## DebitNoteRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| invoiceId | UUID | Yes |
-| amount | Decimal | Yes |
-| reason | String | Yes |
+| Field     | Type    | Required |
+| --------- | ------- | -------- |
+| invoiceId | UUID    | Yes      |
+| amount    | Decimal | Yes      |
+| reason    | String  | Yes      |
 
 ---
 
@@ -750,26 +750,26 @@ Supports:
 
 ## InvoiceResponse
 
-| Field | Type |
-|---------|------|
-| invoiceId | UUID |
-| invoiceNumber | String |
-| orderId | UUID |
-| subtotal | Decimal |
-| taxAmount | Decimal |
-| totalAmount | Decimal |
-| outstandingBalance | Decimal |
-| status | InvoiceStatus |
+| Field              | Type          |
+| ------------------ | ------------- |
+| invoiceId          | UUID          |
+| invoiceNumber      | String        |
+| orderId            | UUID          |
+| subtotal           | Decimal       |
+| taxAmount          | Decimal       |
+| totalAmount        | Decimal       |
+| outstandingBalance | Decimal       |
+| status             | InvoiceStatus |
 
 ---
 
 ## PaymentResponse
 
-| Field | Type |
-|---------|------|
-| paymentId | UUID |
-| invoiceId | UUID |
-| amount | Decimal |
+| Field         | Type          |
+| ------------- | ------------- |
+| paymentId     | UUID          |
+| invoiceId     | UUID          |
+| amount        | Decimal       |
 | paymentMethod | PaymentMethod |
 | paymentStatus | PaymentStatus |
 
@@ -777,14 +777,14 @@ Supports:
 
 ## InvoiceSummaryResponse
 
-| Field | Type |
-|---------|------|
-| invoiceNumber | String |
-| customerName | String |
-| invoiceDate | Timestamp |
-| totalAmount | Decimal |
-| outstandingBalance | Decimal |
-| status | InvoiceStatus |
+| Field              | Type          |
+| ------------------ | ------------- |
+| invoiceNumber      | String        |
+| customerName       | String        |
+| invoiceDate        | Timestamp     |
+| totalAmount        | Decimal       |
+| outstandingBalance | Decimal       |
+| status             | InvoiceStatus |
 
 ---
 
@@ -826,32 +826,32 @@ Supports:
 
 # 13. Permission Matrix
 
-| API | Super Admin | Billing Manager | Billing Executive | Viewer |
-|------|-------------|-----------------|-------------------|--------|
-| Generate Invoice | ✅ | ✅ | ✅ | ❌ |
-| Issue Invoice | ✅ | ✅ | ❌ | ❌ |
-| Record Payment | ✅ | ✅ | ✅ | ❌ |
-| Credit Note | ✅ | ✅ | ❌ | ❌ |
-| Debit Note | ✅ | ✅ | ❌ | ❌ |
-| View Invoice | ✅ | ✅ | ✅ | ✅ |
-| Search Invoice | ✅ | ✅ | ✅ | ✅ |
+| API              | Super Admin | Billing Manager | Billing Executive | Viewer |
+| ---------------- | ----------- | --------------- | ----------------- | ------ |
+| Generate Invoice | ✅          | ✅              | ✅                | ❌     |
+| Issue Invoice    | ✅          | ✅              | ❌                | ❌     |
+| Record Payment   | ✅          | ✅              | ✅                | ❌     |
+| Credit Note      | ✅          | ✅              | ❌                | ❌     |
+| Debit Note       | ✅          | ✅              | ❌                | ❌     |
+| View Invoice     | ✅          | ✅              | ✅                | ✅     |
+| Search Invoice   | ✅          | ✅              | ✅                | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Updated |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Invoice Not Found |
-| 409 | Billing Conflict |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Updated                 |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Invoice Not Found       |
+| 409    | Billing Conflict        |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -884,17 +884,17 @@ Billing
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Billing | Aggregate Root |
-| Invoice | Invoice Lifecycle |
-| InvoiceItem | Invoice Line Items |
-| Payment | Payment Recording |
-| CreditNote | Invoice Credit Adjustment |
-| DebitNote | Invoice Debit Adjustment |
-| BillingAdjustment | Financial Corrections |
-| BillingTax | Tax Calculation |
-| BillingAudit | Financial Audit Trail |
+| Aggregate         | Responsibility            |
+| ----------------- | ------------------------- |
+| Billing           | Aggregate Root            |
+| Invoice           | Invoice Lifecycle         |
+| InvoiceItem       | Invoice Line Items        |
+| Payment           | Payment Recording         |
+| CreditNote        | Invoice Credit Adjustment |
+| DebitNote         | Invoice Debit Adjustment  |
+| BillingAdjustment | Financial Corrections     |
+| BillingTax        | Tax Calculation           |
+| BillingAudit      | Financial Audit Trail     |
 
 ---
 
@@ -902,134 +902,134 @@ Billing
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Billing | Aggregate Root |
-| Invoice | Customer Invoice |
-| InvoiceItem | Invoice Products |
-| Payment | Payment Record |
-| CreditNote | Invoice Credit |
-| DebitNote | Invoice Debit |
+| Entity            | Description          |
+| ----------------- | -------------------- |
+| Billing           | Aggregate Root       |
+| Invoice           | Customer Invoice     |
+| InvoiceItem       | Invoice Products     |
+| Payment           | Payment Record       |
+| CreditNote        | Invoice Credit       |
+| DebitNote         | Invoice Debit        |
 | BillingAdjustment | Financial Adjustment |
-| BillingTax | Tax Details |
-| BillingAudit | Audit History |
+| BillingTax        | Tax Details          |
+| BillingAudit      | Audit History        |
 
 ---
 
 ## 16.2 Invoice Entity
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| invoiceNumber | VARCHAR(30) | Unique |
-| orderId | UUID | Required |
-| customerId | UUID | Required |
-| invoiceDate | TIMESTAMP | Required |
-| dueDate | DATE | Required |
-| subtotal | DECIMAL(18,2) | Required |
-| taxAmount | DECIMAL(18,2) | Required |
-| discountAmount | DECIMAL(18,2) | Required |
-| totalAmount | DECIMAL(18,2) | Required |
-| outstandingBalance | DECIMAL(18,2) | Required |
-| status | ENUM | Required |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedBy | UUID | Required |
-| updatedAt | TIMESTAMP | Required |
-| deleted | BOOLEAN | Default FALSE |
+| Attribute          | Type          | Constraint    |
+| ------------------ | ------------- | ------------- |
+| id                 | UUID          | Primary Key   |
+| invoiceNumber      | VARCHAR(30)   | Unique        |
+| orderId            | UUID          | Required      |
+| customerId         | UUID          | Required      |
+| invoiceDate        | TIMESTAMP     | Required      |
+| dueDate            | DATE          | Required      |
+| subtotal           | DECIMAL(18,2) | Required      |
+| taxAmount          | DECIMAL(18,2) | Required      |
+| discountAmount     | DECIMAL(18,2) | Required      |
+| totalAmount        | DECIMAL(18,2) | Required      |
+| outstandingBalance | DECIMAL(18,2) | Required      |
+| status             | ENUM          | Required      |
+| createdBy          | UUID          | Required      |
+| createdAt          | TIMESTAMP     | Required      |
+| updatedBy          | UUID          | Required      |
+| updatedAt          | TIMESTAMP     | Required      |
+| deleted            | BOOLEAN       | Default FALSE |
 
 ---
 
 ## 16.3 Invoice Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| productId | UUID |
-| quantity | DECIMAL(18,3) |
-| unitPrice | DECIMAL(18,2) |
-| taxAmount | DECIMAL(18,2) |
+| Attribute      | Type          |
+| -------------- | ------------- |
+| id             | UUID          |
+| invoiceId      | UUID          |
+| productId      | UUID          |
+| quantity       | DECIMAL(18,3) |
+| unitPrice      | DECIMAL(18,2) |
+| taxAmount      | DECIMAL(18,2) |
 | discountAmount | DECIMAL(18,2) |
-| lineTotal | DECIMAL(18,2) |
+| lineTotal      | DECIMAL(18,2) |
 
 ---
 
 ## 16.4 Payment
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| paymentReference | VARCHAR(100) |
-| paymentMethod | ENUM |
-| amount | DECIMAL(18,2) |
-| paymentDate | TIMESTAMP |
-| status | ENUM |
+| Attribute        | Type          |
+| ---------------- | ------------- |
+| id               | UUID          |
+| invoiceId        | UUID          |
+| paymentReference | VARCHAR(100)  |
+| paymentMethod    | ENUM          |
+| amount           | DECIMAL(18,2) |
+| paymentDate      | TIMESTAMP     |
+| status           | ENUM          |
 
 ---
 
 ## 16.5 Credit Note
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| creditNoteNumber | VARCHAR(30) |
-| amount | DECIMAL(18,2) |
-| reason | VARCHAR(255) |
-| issuedDate | TIMESTAMP |
+| Attribute        | Type          |
+| ---------------- | ------------- |
+| id               | UUID          |
+| invoiceId        | UUID          |
+| creditNoteNumber | VARCHAR(30)   |
+| amount           | DECIMAL(18,2) |
+| reason           | VARCHAR(255)  |
+| issuedDate       | TIMESTAMP     |
 
 ---
 
 ## 16.6 Debit Note
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| debitNoteNumber | VARCHAR(30) |
-| amount | DECIMAL(18,2) |
-| reason | VARCHAR(255) |
-| issuedDate | TIMESTAMP |
+| Attribute       | Type          |
+| --------------- | ------------- |
+| id              | UUID          |
+| invoiceId       | UUID          |
+| debitNoteNumber | VARCHAR(30)   |
+| amount          | DECIMAL(18,2) |
+| reason          | VARCHAR(255)  |
+| issuedDate      | TIMESTAMP     |
 
 ---
 
 ## 16.7 Billing Adjustment
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| adjustmentType | ENUM |
-| amount | DECIMAL(18,2) |
-| reason | VARCHAR(255) |
-| adjustmentDate | TIMESTAMP |
+| Attribute      | Type          |
+| -------------- | ------------- |
+| id             | UUID          |
+| invoiceId      | UUID          |
+| adjustmentType | ENUM          |
+| amount         | DECIMAL(18,2) |
+| reason         | VARCHAR(255)  |
+| adjustmentDate | TIMESTAMP     |
 
 ---
 
 ## 16.8 Billing Tax
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| taxCategory | VARCHAR(50) |
-| taxPercentage | DECIMAL(5,2) |
-| taxAmount | DECIMAL(18,2) |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| invoiceId     | UUID          |
+| taxCategory   | VARCHAR(50)   |
+| taxPercentage | DECIMAL(5,2)  |
+| taxAmount     | DECIMAL(18,2) |
 
 ---
 
 ## 16.9 Billing Audit
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| invoiceId | UUID |
-| eventType | VARCHAR(100) |
-| eventSource | VARCHAR(100) |
-| correlationId | UUID |
-| eventTime | TIMESTAMP |
+| Attribute     | Type         |
+| ------------- | ------------ |
+| id            | UUID         |
+| invoiceId     | UUID         |
+| eventType     | VARCHAR(100) |
+| eventSource   | VARCHAR(100) |
+| correlationId | UUID         |
+| eventTime     | TIMESTAMP    |
 
 ---
 
@@ -1051,16 +1051,16 @@ billing
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| invoice | Invoice Master |
-| invoice_item | Invoice Line Items |
-| payment | Payment Records |
-| credit_note | Credit Notes |
-| debit_note | Debit Notes |
+| Table              | Purpose               |
+| ------------------ | --------------------- |
+| invoice            | Invoice Master        |
+| invoice_item       | Invoice Line Items    |
+| payment            | Payment Records       |
+| credit_note        | Credit Notes          |
+| debit_note         | Debit Notes           |
 | billing_adjustment | Financial Adjustments |
-| billing_tax | Tax Details |
-| billing_audit | Audit Trail |
+| billing_tax        | Tax Details           |
+| billing_audit      | Audit Trail           |
 
 ---
 
@@ -1072,15 +1072,15 @@ All tables shall use UUID as the Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
-| invoice_item | invoice |
-| payment | invoice |
-| credit_note | invoice |
-| debit_note | invoice |
-| billing_adjustment | invoice |
-| billing_tax | invoice |
-| billing_audit | invoice |
+| Child Table        | Parent Table |
+| ------------------ | ------------ |
+| invoice_item       | invoice      |
+| payment            | invoice      |
+| credit_note        | invoice      |
+| debit_note         | invoice      |
+| billing_adjustment | invoice      |
+| billing_tax        | invoice      |
+| billing_audit      | invoice      |
 
 ---
 
@@ -1109,17 +1109,17 @@ Debit Note
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| invoice | invoice_number |
-| invoice | order_id |
-| invoice | customer_id |
-| invoice | status |
-| invoice | invoice_date |
-| payment | payment_reference |
-| payment | payment_date |
+| Table       | Index              |
+| ----------- | ------------------ |
+| invoice     | invoice_number     |
+| invoice     | order_id           |
+| invoice     | customer_id        |
+| invoice     | status             |
+| invoice     | invoice_date       |
+| payment     | payment_reference  |
+| payment     | payment_date       |
 | credit_note | credit_note_number |
-| debit_note | debit_note_number |
+| debit_note  | debit_note_number  |
 
 ---
 
@@ -1277,23 +1277,23 @@ The Billing Service shall publish domain events for every significant financial 
 
 ## 22.1 Published Events
 
-| Topic | Event |
-|---------|------|
-| invoice.generated.v1 | InvoiceGenerated |
-| invoice.issued.v1 | InvoiceIssued |
-| payment.received.v1 | PaymentReceived |
-| payment.completed.v1 | PaymentCompleted |
-| payment.failed.v1 | PaymentFailed |
-| invoice.closed.v1 | InvoiceClosed |
+| Topic                  | Event             |
+| ---------------------- | ----------------- |
+| invoice.generated.v1   | InvoiceGenerated  |
+| invoice.issued.v1      | InvoiceIssued     |
+| payment.received.v1    | PaymentReceived   |
+| payment.completed.v1   | PaymentCompleted  |
+| payment.failed.v1      | PaymentFailed     |
+| invoice.closed.v1      | InvoiceClosed     |
 | credit.note.created.v1 | CreditNoteCreated |
-| debit.note.created.v1 | DebitNoteCreated |
+| debit.note.created.v1  | DebitNoteCreated  |
 
 ---
 
 ## 22.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
+| Topic              | Source        |
+| ------------------ | ------------- |
 | order.confirmed.v1 | Order Service |
 | order.cancelled.v1 | Order Service |
 
@@ -1316,9 +1316,9 @@ The Billing Service shall publish domain events for every significant financial 
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
-| OrderClient | Validate Order |
+| Client         | Purpose                               |
+| -------------- | ------------------------------------- |
+| OrderClient    | Validate Order                        |
 | CustomerClient | Retrieve Customer Billing Information |
 
 > Financial state transitions shall primarily be driven by Kafka events. OpenFeign shall be limited to synchronous validation and read-only queries.
@@ -1349,16 +1349,16 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| billing.invoice.prefix | INV | Yes | Invoice Number Prefix |
-| billing.payment.timeout | 900 | Yes | Payment Timeout (seconds) |
-| billing.search.max-page-size | 100 | Yes | Maximum Search Page Size |
-| billing.tax.rounding-mode | HALF_UP | Yes | Tax Rounding Strategy |
-| billing.event.topic.invoice-generated | invoice.generated.v1 | Yes | Invoice Generated Topic |
-| billing.event.topic.payment-completed | payment.completed.v1 | Yes | Payment Completed Topic |
-| billing.retry.max-attempts | 3 | Yes | Retry Attempts |
-| billing.retry.backoff-ms | 1000 | Yes | Retry Backoff Interval |
+| Property                              | Default              | Required | Description               |
+| ------------------------------------- | -------------------- | -------- | ------------------------- |
+| billing.invoice.prefix                | INV                  | Yes      | Invoice Number Prefix     |
+| billing.payment.timeout               | 900                  | Yes      | Payment Timeout (seconds) |
+| billing.search.max-page-size          | 100                  | Yes      | Maximum Search Page Size  |
+| billing.tax.rounding-mode             | HALF_UP              | Yes      | Tax Rounding Strategy     |
+| billing.event.topic.invoice-generated | invoice.generated.v1 | Yes      | Invoice Generated Topic   |
+| billing.event.topic.payment-completed | payment.completed.v1 | Yes      | Payment Completed Topic   |
+| billing.retry.max-attempts            | 3                    | Yes      | Retry Attempts            |
+| billing.retry.backoff-ms              | 1000                 | Yes      | Retry Backoff Interval    |
 
 ---
 
@@ -1446,22 +1446,22 @@ Internal implementation details shall never be exposed to API consumers.
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP Status |
-|------------|-------------|-------------|
-| BL-VAL-001 | Validation Failed | 400 |
-| BL-AUTH-001 | Authentication Required | 401 |
-| BL-AUTH-002 | Access Denied | 403 |
-| BL-BUS-001 | Invoice Already Exists | 409 |
-| BL-BUS-002 | Invoice Not Found | 404 |
-| BL-BUS-003 | Payment Not Found | 404 |
-| BL-BUS-004 | Credit Note Not Found | 404 |
-| BL-BUS-005 | Debit Note Not Found | 404 |
-| BL-BUS-006 | Invalid Invoice Status | 422 |
-| BL-BUS-007 | Payment Amount Exceeds Outstanding Balance | 422 |
-| BL-BUS-008 | Invoice Already Paid | 409 |
-| BL-BUS-009 | Credit Amount Exceeds Invoice Amount | 422 |
-| BL-BUS-010 | Debit Amount Invalid | 422 |
-| BL-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                                | HTTP Status |
+| ----------- | ------------------------------------------ | ----------- |
+| BL-VAL-001  | Validation Failed                          | 400         |
+| BL-AUTH-001 | Authentication Required                    | 401         |
+| BL-AUTH-002 | Access Denied                              | 403         |
+| BL-BUS-001  | Invoice Already Exists                     | 409         |
+| BL-BUS-002  | Invoice Not Found                          | 404         |
+| BL-BUS-003  | Payment Not Found                          | 404         |
+| BL-BUS-004  | Credit Note Not Found                      | 404         |
+| BL-BUS-005  | Debit Note Not Found                       | 404         |
+| BL-BUS-006  | Invalid Invoice Status                     | 422         |
+| BL-BUS-007  | Payment Amount Exceeds Outstanding Balance | 422         |
+| BL-BUS-008  | Invoice Already Paid                       | 409         |
+| BL-BUS-009  | Credit Amount Exceeds Invoice Amount       | 422         |
+| BL-BUS-010  | Debit Amount Invalid                       | 422         |
+| BL-SYS-001  | Internal Server Error                      | 500         |
 
 ---
 
@@ -1716,31 +1716,31 @@ The Billing Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source Document | Verification |
-|-------------|-----------------|--------------|
-| BL-SYS-001 – BL-SYS-013 | FRD-Billing | Functional Testing |
-| BL-SYS-014 – BL-SYS-030 | SRS-001 Platform Foundation | Integration Testing |
-| BL-NFR-001 – BL-NFR-016 | PRD / HLD | Performance, Security & Reliability Testing |
+| Requirement             | Source Document             | Verification                                |
+| ----------------------- | --------------------------- | ------------------------------------------- |
+| BL-SYS-001 – BL-SYS-013 | FRD-Billing                 | Functional Testing                          |
+| BL-SYS-014 – BL-SYS-030 | SRS-001 Platform Foundation | Integration Testing                         |
+| BL-NFR-001 – BL-NFR-016 | PRD / HLD                   | Performance, Security & Reliability Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| BL-SYS-001 | TC-BL-001 |
-| BL-SYS-002 | TC-BL-002 |
-| BL-SYS-003 | TC-BL-003 |
-| BL-SYS-004 | TC-BL-004 |
-| BL-SYS-005 | TC-BL-005 |
-| BL-SYS-006 | TC-BL-006 |
-| BL-SYS-007 | TC-BL-007 |
-| BL-SYS-008 | TC-BL-008 |
-| BL-SYS-009 | TC-BL-009 |
-| BL-SYS-010 | TC-BL-010 |
-| BL-SYS-011 | TC-BL-011 |
-| BL-SYS-012 | TC-BL-012 |
-| BL-SYS-013 | TC-BL-013 |
+| ----------- | --------- |
+| BL-SYS-001  | TC-BL-001 |
+| BL-SYS-002  | TC-BL-002 |
+| BL-SYS-003  | TC-BL-003 |
+| BL-SYS-004  | TC-BL-004 |
+| BL-SYS-005  | TC-BL-005 |
+| BL-SYS-006  | TC-BL-006 |
+| BL-SYS-007  | TC-BL-007 |
+| BL-SYS-008  | TC-BL-008 |
+| BL-SYS-009  | TC-BL-009 |
+| BL-SYS-010  | TC-BL-010 |
+| BL-SYS-011  | TC-BL-011 |
+| BL-SYS-012  | TC-BL-012 |
+| BL-SYS-013  | TC-BL-013 |
 
 ---
 
@@ -1770,70 +1770,67 @@ The Billing Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Invoice | Generate, Issue, Get, Search, Close |
-| Payment | Record Payment, Get Payment |
-| Credit Note | Create Credit Note |
-| Debit Note | Create Debit Note |
-| Billing Adjustment | Manage Adjustments |
+| Resource           | Endpoints                           |
+| ------------------ | ----------------------------------- |
+| Invoice            | Generate, Issue, Get, Search, Close |
+| Payment            | Record Payment, Get Payment         |
+| Credit Note        | Create Credit Note                  |
+| Debit Note         | Create Debit Note                   |
+| Billing Adjustment | Manage Adjustments                  |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Billing | Aggregate Root |
-| Invoice | Invoice Lifecycle |
-| InvoiceItem | Invoice Line Items |
-| Payment | Payment Record |
-| CreditNote | Credit Adjustment |
-| DebitNote | Debit Adjustment |
+| Aggregate         | Description          |
+| ----------------- | -------------------- |
+| Billing           | Aggregate Root       |
+| Invoice           | Invoice Lifecycle    |
+| InvoiceItem       | Invoice Line Items   |
+| Payment           | Payment Record       |
+| CreditNote        | Credit Adjustment    |
+| DebitNote         | Debit Adjustment     |
 | BillingAdjustment | Financial Adjustment |
-| BillingTax | Tax Details |
-| BillingAudit | Audit Trail |
+| BillingTax        | Tax Details          |
+| BillingAudit      | Audit Trail          |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Kafka | Event Streaming |
-| Order Service | Order Validation |
-| Identity Service | Authentication & Authorization |
-| Notification Service | Invoice Notifications |
-| Reporting Service | Financial Analytics |
-| Audit Service | Audit Processing |
+| Dependency           | Purpose                        |
+| -------------------- | ------------------------------ |
+| Platform Foundation  | Shared Frameworks              |
+| Gateway              | API Routing                    |
+| Eureka               | Service Discovery              |
+| PostgreSQL           | Persistent Storage             |
+| Kafka                | Event Streaming                |
+| Order Service        | Order Validation               |
+| Identity Service     | Authentication & Authorization |
+| Notification Service | Invoice Notifications          |
+| Reporting Service    | Financial Analytics            |
+| Audit Service        | Audit Processing               |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Billing Service Software Requirements Specification |
+| Version | Description                                                 |
+| ------- | ----------------------------------------------------------- |
+| v1.0.0  | Initial Billing Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
 # End of Document
-
-
-

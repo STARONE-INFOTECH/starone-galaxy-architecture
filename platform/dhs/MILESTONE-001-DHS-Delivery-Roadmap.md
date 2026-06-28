@@ -52,24 +52,24 @@ The objective of this roadmap is to provide a phased implementation plan for del
 
 ## Architecture Principles
 
-* Modular Monolith Architecture
-* Domain-Driven Design
-* API First Development
-* Event-Driven Communication
-* Security by Design
-* Observability by Design
-* Automated Delivery Pipeline
+- Modular Monolith Architecture
+- Domain-Driven Design
+- API First Development
+- Event-Driven Communication
+- Security by Design
+- Observability by Design
+- Automated Delivery Pipeline
 
 ---
 
 ## Delivery Principles
 
-* Deliver vertical business slices
-* Build reusable platform capabilities first
-* Deliver customer value incrementally
-* Prioritize core business operations
-* Minimize cross-team dependencies
-* Support continuous deployment
+- Deliver vertical business slices
+- Build reusable platform capabilities first
+- Deliver customer value incrementally
+- Prioritize core business operations
+- Minimize cross-team dependencies
+- Support continuous deployment
 
 ---
 
@@ -99,33 +99,33 @@ Sprint 2
 
 Deliverables:
 
-* Platform Bootstrap
-* Parent Maven Project
-* BOM
-* Core Libraries
-* Common Spring Libraries
-* Authentication
-* Authorization
-* RBAC
-* JWT Security
-* Database Foundation
-* Configuration Management
-* CI/CD Pipeline
-* Logging Framework
-* Observability Foundation
+- Platform Bootstrap
+- Parent Maven Project
+- BOM
+- Core Libraries
+- Common Spring Libraries
+- Authentication
+- Authorization
+- RBAC
+- JWT Security
+- Database Foundation
+- Configuration Management
+- CI/CD Pipeline
+- Logging Framework
+- Observability Foundation
 
 Linked Epics:
 
-* EPIC-001 Platform Foundation
-* EPIC-002 Identity & Access Management
+- EPIC-001 Platform Foundation
+- EPIC-002 Identity & Access Management
 
 Success Criteria:
 
-* Developers can bootstrap services
-* Authentication works
-* Authorization works
-* CI/CD pipeline works
-* Application can be deployed
+- Developers can bootstrap services
+- Authentication works
+- Authorization works
+- CI/CD pipeline works
+- Application can be deployed
 
 ---
 
@@ -140,24 +140,24 @@ Sprint 4
 
 Deliverables:
 
-* Branch Management
-* Customer Management
-* Product Catalog Management
-* Search APIs
-* Validation Framework
+- Branch Management
+- Customer Management
+- Product Catalog Management
+- Search APIs
+- Validation Framework
 
 Linked Epics:
 
-* EPIC-003 Branch Management
-* EPIC-004 Customer Management
-* EPIC-005 Product Catalog Management
+- EPIC-003 Branch Management
+- EPIC-004 Customer Management
+- EPIC-005 Product Catalog Management
 
 Success Criteria:
 
-* Branches can be managed
-* Customers can be managed
-* Products can be managed
-* Master data APIs are stable
+- Branches can be managed
+- Customers can be managed
+- Products can be managed
+- Master data APIs are stable
 
 ---
 
@@ -173,26 +173,26 @@ Sprint 7
 
 Deliverables:
 
-* Inventory Management
-* Inventory Reservation
-* Stock Adjustments
-* Order Management
-* Order Validation
-* Backorders
-* Partial Fulfillment
-* Event Publishing
+- Inventory Management
+- Inventory Reservation
+- Stock Adjustments
+- Order Management
+- Order Validation
+- Backorders
+- Partial Fulfillment
+- Event Publishing
 
 Linked Epics:
 
-* EPIC-006 Inventory Management
-* EPIC-007 Order Management
+- EPIC-006 Inventory Management
+- EPIC-007 Order Management
 
 Success Criteria:
 
-* Orders can be created
-* Inventory reservation works
-* Partial fulfillment works
-* Backorders work correctly
+- Orders can be created
+- Inventory reservation works
+- Partial fulfillment works
+- Backorders work correctly
 
 ---
 
@@ -207,25 +207,25 @@ Sprint 9
 
 Deliverables:
 
-* Billing Management
-* Partial Billing
-* GST Calculation
-* E-Invoice Support
-* Dispatch Management
-* Shipment Tracking
-* Delivery Confirmation
+- Billing Management
+- Partial Billing
+- GST Calculation
+- E-Invoice Support
+- Dispatch Management
+- Shipment Tracking
+- Delivery Confirmation
 
 Linked Epics:
 
-* EPIC-008 Billing Management
-* EPIC-009 Dispatch Management
+- EPIC-008 Billing Management
+- EPIC-009 Dispatch Management
 
 Success Criteria:
 
-* Invoices can be generated
-* Partial billing works
-* Dispatch works
-* Shipment tracking works
+- Invoices can be generated
+- Partial billing works
+- Dispatch works
+- Shipment tracking works
 
 ---
 
@@ -240,25 +240,25 @@ Sprint 11
 
 Deliverables:
 
-* Notification Management
-* Reporting Dashboards
-* Analytics Reports
-* Audit Logging
-* Compliance Reports
-* Security Monitoring
+- Notification Management
+- Reporting Dashboards
+- Analytics Reports
+- Audit Logging
+- Compliance Reports
+- Security Monitoring
 
 Linked Epics:
 
-* EPIC-010 Notification Management
-* EPIC-011 Reporting & Analytics
-* EPIC-012 Audit & Compliance
+- EPIC-010 Notification Management
+- EPIC-011 Reporting & Analytics
+- EPIC-012 Audit & Compliance
 
 Success Criteria:
 
-* Notifications work
-* Reports are available
-* Audit reports are available
-* Compliance requirements are met
+- Notifications work
+- Reports are available
+- Audit reports are available
+- Compliance requirements are met
 
 ---
 
@@ -272,20 +272,20 @@ Sprint 12
 
 Deliverables:
 
-* Performance Testing
-* Security Testing
-* Load Testing
-* Disaster Recovery Validation
-* Production Readiness Validation
-* Documentation Completion
-* Release Readiness Assessment
+- Performance Testing
+- Security Testing
+- Load Testing
+- Disaster Recovery Validation
+- Production Readiness Validation
+- Documentation Completion
+- Release Readiness Assessment
 
 Success Criteria:
 
-* Performance SLAs achieved
-* Security validation passed
-* Production checklist completed
-* Go-Live approval received
+- Performance SLAs achieved
+- Security validation passed
+- Production checklist completed
+- Go-Live approval received
 
 ---
 
@@ -344,38 +344,38 @@ EPIC-012 Audit & Compliance
 
 ### Platform Foundation
 
-* Authentication
-* Authorization
-* Branch Management
+- Authentication
+- Authorization
+- Branch Management
 
 ### Master Data
 
-* Customer Management
-* Product Catalog
+- Customer Management
+- Product Catalog
 
 ### Business Operations
 
-* Inventory Management
-* Order Management
-* Billing Management
-* Dispatch Management
+- Inventory Management
+- Order Management
+- Billing Management
+- Dispatch Management
 
 ### Platform Services
 
-* Notifications
-* Reporting
-* Audit Logging
+- Notifications
+- Reporting
+- Audit Logging
 
 ---
 
 ## Excluded from MVP
 
-* Payment Gateway Integration
-* ERP Integration
-* SAP Integration
-* Tally Integration
-* Advanced BI Analytics
-* Machine Learning Forecasting
+- Payment Gateway Integration
+- ERP Integration
+- SAP Integration
+- Tally Integration
+- Advanced BI Analytics
+- Machine Learning Forecasting
 
 ---
 
@@ -415,19 +415,19 @@ EPIC-012 Audit & Compliance
 
 ## Business Metrics
 
-* 100+ Orders per Day
-* 1000 Concurrent Users
-* 99.9% Availability
-* < 2 Second API Response Time
+- 100+ Orders per Day
+- 1000 Concurrent Users
+- 99.9% Availability
+- < 2 Second API Response Time
 
 ---
 
 ## Delivery Metrics
 
-* Sprint Predictability > 85%
-* Production Defect Leakage < 5%
-* Test Automation Coverage > 80%
-* Deployment Automation Coverage = 100%
+- Sprint Predictability > 85%
+- Production Defect Leakage < 5%
+- Test Automation Coverage > 80%
+- Deployment Automation Coverage = 100%
 
 ---
 
@@ -435,28 +435,28 @@ EPIC-012 Audit & Compliance
 
 ## Architecture
 
-* Modular boundaries validated
-* Security architecture validated
-* Database architecture validated
+- Modular boundaries validated
+- Security architecture validated
+- Database architecture validated
 
 ---
 
 ## Engineering
 
-* Unit tests completed
-* Integration tests completed
-* API documentation completed
-* Runbooks completed
+- Unit tests completed
+- Integration tests completed
+- API documentation completed
+- Runbooks completed
 
 ---
 
 ## Operations
 
-* Monitoring configured
-* Alerting configured
-* Dashboards configured
-* Backup validated
-* Disaster recovery validated
+- Monitoring configured
+- Alerting configured
+- Dashboards configured
+- Backup validated
+- Disaster recovery validated
 
 ---
 

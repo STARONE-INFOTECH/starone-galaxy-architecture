@@ -4,20 +4,20 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
+| Field          | Value                                                   |
+| -------------- | ------------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform                |
 | Document Title | Platform Foundation Software Requirements Specification |
-| Document ID | SRS-001 |
-| Domain | Enterprise Order Management System (OMS) |
-| Repository | starone-dhs-platform |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-001                                                 |
+| Domain         | Enterprise Order Management System (OMS)                |
+| Repository     | starone-dhs-platform                                    |
+| Document Type  | Software Requirements Specification (SRS)               |
+| Standard       | ISO/IEC/IEEE 29148                                      |
+| Version        | v1.0.0                                                  |
+| Status         | Draft                                                   |
+| Author         | Sachin Salunke                                          |
+| Owner          | Enterprise Architecture                                 |
+| Last Updated   | 2026-06-27                                              |
 
 ---
 
@@ -25,58 +25,58 @@
 
 ## 2.1 Document Metadata
 
-| Field | Value |
-|--------|-------|
-| Repository | starone-dhs-platform |
-| Platform | StarOne Galaxy |
-| Architecture Style | Cloud-Native Monorepo Multi-Module Microservices |
-| Programming Language | Java 21 |
-| Framework | Spring Boot 3.x |
-| Build Tool | Maven |
-| Repository Strategy | Monorepo |
-| Deployment Target | Kubernetes |
-| Runtime | JVM |
-| Status | Draft |
+| Field                | Value                                            |
+| -------------------- | ------------------------------------------------ |
+| Repository           | starone-dhs-platform                             |
+| Platform             | StarOne Galaxy                                   |
+| Architecture Style   | Cloud-Native Monorepo Multi-Module Microservices |
+| Programming Language | Java 21                                          |
+| Framework            | Spring Boot 3.x                                  |
+| Build Tool           | Maven                                            |
+| Repository Strategy  | Monorepo                                         |
+| Deployment Target    | Kubernetes                                       |
+| Runtime              | JVM                                              |
+| Status               | Draft                                            |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| v1.0.0 | 2026-06-27 | Sachin Salunke | Initial Platform Foundation SRS |
+| Version | Date       | Author         | Description                     |
+| ------- | ---------- | -------------- | ------------------------------- |
+| v1.0.0  | 2026-06-27 | Sachin Salunke | Initial Platform Foundation SRS |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Solution Architect | Pending |
-| Platform Lead | Pending |
-| DevOps Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Solution Architect   | Pending |
+| Platform Lead        | Pending |
+| DevOps Lead          | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
 ## 2.4 References
 
-| Reference ID | Document |
-|--------------|----------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Monorepo-Based Multi-Module Microservices Architecture |
-| ADR-002 | Database Strategy Decision |
-| ADR-003 | Inter-Service Communication Strategy |
-| ADR-004 | Service Discovery Strategy |
-| ADR-005 | API Gateway Strategy |
-| ADR-006 | Distributed Transaction Strategy |
-| HLD-001 | High-Level Design |
-| FRD-001 | Platform Foundation Functional Requirements |
-| RTM-001 | Requirements Traceability Matrix |
+| Reference ID | Document                                               |
+| ------------ | ------------------------------------------------------ |
+| BRD-001      | Business Requirements Document                         |
+| PRD-001      | Product Requirements Document                          |
+| ADR-001      | Monorepo-Based Multi-Module Microservices Architecture |
+| ADR-002      | Database Strategy Decision                             |
+| ADR-003      | Inter-Service Communication Strategy                   |
+| ADR-004      | Service Discovery Strategy                             |
+| ADR-005      | API Gateway Strategy                                   |
+| ADR-006      | Distributed Transaction Strategy                       |
+| HLD-001      | High-Level Design                                      |
+| FRD-001      | Platform Foundation Functional Requirements            |
+| RTM-001      | Requirements Traceability Matrix                       |
 
 ---
 
@@ -303,14 +303,14 @@ starone-dhs-platform
 
 ## 5.2 Platform Components
 
-| Component | Responsibility |
-|------------|----------------|
-| Parent | Parent Maven Project |
-| BOM | Central Dependency Management |
-| Core Common | Shared DTOs, Events, Utilities |
-| Spring Common | Shared Spring Configuration |
-| Gateway | External API Entry Point |
-| Eureka | Service Registration & Discovery |
+| Component     | Responsibility                   |
+| ------------- | -------------------------------- |
+| Parent        | Parent Maven Project             |
+| BOM           | Central Dependency Management    |
+| Core Common   | Shared DTOs, Events, Utilities   |
+| Spring Common | Shared Spring Configuration      |
+| Gateway       | External API Entry Point         |
+| Eureka        | Service Registration & Discovery |
 
 ---
 
@@ -363,14 +363,14 @@ Audit --> SpringCommon
 
 The Platform Foundation consists of the following software components.
 
-| Component | Type | Purpose |
-|-----------|------|---------|
-| Parent | Build Component | Parent Maven Configuration |
-| BOM | Build Component | Dependency Version Management |
-| Core Common | Shared Library | Common Business Objects |
-| Spring Common | Shared Library | Shared Spring Boot Configuration |
-| Gateway | Runtime Service | API Routing |
-| Eureka | Runtime Service | Service Discovery |
+| Component     | Type            | Purpose                          |
+| ------------- | --------------- | -------------------------------- |
+| Parent        | Build Component | Parent Maven Configuration       |
+| BOM           | Build Component | Dependency Version Management    |
+| Core Common   | Shared Library  | Common Business Objects          |
+| Spring Common | Shared Library  | Shared Spring Boot Configuration |
+| Gateway       | Runtime Service | API Routing                      |
+| Eureka        | Runtime Service | Service Discovery                |
 
 Each component shall expose clearly defined responsibilities and shall avoid embedding business logic.
 
@@ -1051,19 +1051,19 @@ Routes shall support:
 
 Example:
 
-| Client Path | Target Service |
-|-------------|----------------|
-| /api/v1/auth/** | Identity Service |
-| /api/v1/branches/** | Branch Service |
-| /api/v1/customers/** | Customer Service |
-| /api/v1/products/** | Product Service |
-| /api/v1/inventory/** | Inventory Service |
-| /api/v1/orders/** | Order Service |
-| /api/v1/billing/** | Billing Service |
-| /api/v1/dispatch/** | Dispatch Service |
-| /api/v1/notifications/** | Notification Service |
-| /api/v1/reporting/** | Reporting Service |
-| /api/v1/audit/** | Audit Service |
+| Client Path                | Target Service       |
+| -------------------------- | -------------------- |
+| /api/v1/auth/\*\*          | Identity Service     |
+| /api/v1/branches/\*\*      | Branch Service       |
+| /api/v1/customers/\*\*     | Customer Service     |
+| /api/v1/products/\*\*      | Product Service      |
+| /api/v1/inventory/\*\*     | Inventory Service    |
+| /api/v1/orders/\*\*        | Order Service        |
+| /api/v1/billing/\*\*       | Billing Service      |
+| /api/v1/dispatch/\*\*      | Dispatch Service     |
+| /api/v1/notifications/\*\* | Notification Service |
+| /api/v1/reporting/\*\*     | Reporting Service    |
+| /api/v1/audit/\*\*         | Audit Service        |
 
 ---
 
@@ -1484,19 +1484,19 @@ Registered services shall discover target services using logical service names r
 
 Example:
 
-| Logical Service Name | Description |
-|----------------------|-------------|
-| identity-service | Authentication & Authorization |
-| branch-service | Branch Management |
-| customer-service | Customer Management |
-| product-service | Product Catalog |
-| inventory-service | Inventory Management |
-| order-service | Order Processing |
-| billing-service | Billing |
-| dispatch-service | Dispatch |
-| notification-service | Notifications |
-| reporting-service | Reporting |
-| audit-service | Audit |
+| Logical Service Name | Description                    |
+| -------------------- | ------------------------------ |
+| identity-service     | Authentication & Authorization |
+| branch-service       | Branch Management              |
+| customer-service     | Customer Management            |
+| product-service      | Product Catalog                |
+| inventory-service    | Inventory Management           |
+| order-service        | Order Processing               |
+| billing-service      | Billing                        |
+| dispatch-service     | Dispatch                       |
+| notification-service | Notifications                  |
+| reporting-service    | Reporting                      |
+| audit-service        | Audit                          |
 
 ---
 
@@ -1504,16 +1504,16 @@ Example:
 
 The Service Registry shall maintain the following information for every registered service instance.
 
-| Attribute | Description |
-|-----------|-------------|
-| Service Name | Logical service identifier |
-| Instance ID | Unique instance identifier |
-| Host | Service host |
-| Port | Listening port |
-| Status | Current health status |
-| Registration Time | Registration timestamp |
-| Last Heartbeat | Latest heartbeat timestamp |
-| Metadata | Custom service metadata |
+| Attribute         | Description                |
+| ----------------- | -------------------------- |
+| Service Name      | Logical service identifier |
+| Instance ID       | Unique instance identifier |
+| Host              | Service host               |
+| Port              | Listening port             |
+| Status            | Current health status      |
+| Registration Time | Registration timestamp     |
+| Last Heartbeat    | Latest heartbeat timestamp |
+| Metadata          | Custom service metadata    |
 
 ---
 
@@ -2215,17 +2215,17 @@ Configuration validation shall occur during application startup.
 
 # 10.12 Requirement Traceability
 
-| Requirement | Platform Component |
-|-------------|-------------------|
-| SYS-PF-078 to SYS-PF-082 | Shared Framework |
-| SYS-PF-083 to SYS-PF-087 | DTO Framework |
-| SYS-PF-088 to SYS-PF-092 | Response Framework |
-| SYS-PF-093 to SYS-PF-097 | Event Framework |
-| SYS-PF-098 to SYS-PF-101 | Validation Framework |
-| SYS-PF-102 to SYS-PF-106 | Exception Framework |
-| SYS-PF-107 to SYS-PF-110 | OpenAPI Framework |
-| SYS-PF-111 to SYS-PF-115 | OpenFeign Framework |
-| SYS-PF-116 to SYS-PF-118 | Utility Framework |
+| Requirement              | Platform Component      |
+| ------------------------ | ----------------------- |
+| SYS-PF-078 to SYS-PF-082 | Shared Framework        |
+| SYS-PF-083 to SYS-PF-087 | DTO Framework           |
+| SYS-PF-088 to SYS-PF-092 | Response Framework      |
+| SYS-PF-093 to SYS-PF-097 | Event Framework         |
+| SYS-PF-098 to SYS-PF-101 | Validation Framework    |
+| SYS-PF-102 to SYS-PF-106 | Exception Framework     |
+| SYS-PF-107 to SYS-PF-110 | OpenAPI Framework       |
+| SYS-PF-111 to SYS-PF-115 | OpenFeign Framework     |
+| SYS-PF-116 to SYS-PF-118 | Utility Framework       |
 | SYS-PF-119 to SYS-PF-121 | Configuration Framework |
 
 ---
@@ -2312,13 +2312,13 @@ Example:
 
 REST APIs shall use standard HTTP methods.
 
-| Method | Usage |
-|---------|-------|
-| GET | Retrieve Resources |
-| POST | Create Resources |
-| PUT | Replace Resources |
-| PATCH | Partial Updates |
-| DELETE | Delete Resources |
+| Method | Usage              |
+| ------ | ------------------ |
+| GET    | Retrieve Resources |
+| POST   | Create Resources   |
+| PUT    | Replace Resources  |
+| PATCH  | Partial Updates    |
+| DELETE | Delete Resources   |
 
 ---
 
@@ -2338,13 +2338,13 @@ REST APIs shall support idempotent operations where applicable.
 
 The Gateway shall expose:
 
-| Endpoint | Purpose |
-|----------|---------|
-| /actuator/health | Health Check |
-| /actuator/info | Platform Information |
-| /actuator/prometheus | Metrics |
-| /v3/api-docs | OpenAPI Specification |
-| /swagger-ui | API Documentation |
+| Endpoint             | Purpose               |
+| -------------------- | --------------------- |
+| /actuator/health     | Health Check          |
+| /actuator/info       | Platform Information  |
+| /actuator/prometheus | Metrics               |
+| /v3/api-docs         | OpenAPI Specification |
+| /swagger-ui          | API Documentation     |
 
 ---
 
@@ -2812,7 +2812,6 @@ The Platform Foundation shall satisfy all external interface and non-functional 
 
 ---
 
-
 # 13. Logging Requirements
 
 The Platform Foundation shall provide standardized logging capabilities for all platform and business services.
@@ -2902,13 +2901,13 @@ Every log entry shall contain:
 
 # 13.4 Log Levels
 
-| Level | Purpose |
-|--------|---------|
+| Level | Purpose                         |
+| ----- | ------------------------------- |
 | TRACE | Detailed diagnostic information |
-| DEBUG | Development diagnostics |
-| INFO | Normal application events |
-| WARN | Recoverable warnings |
-| ERROR | Runtime failures |
+| DEBUG | Development diagnostics         |
+| INFO  | Normal application events       |
+| WARN  | Recoverable warnings            |
+| ERROR | Runtime failures                |
 
 ---
 
@@ -3298,15 +3297,15 @@ Traceability supports:
 
 ## 19.2 Requirement Traceability Matrix
 
-| SRS Requirement | Source Document | Source Requirement | Verification |
-|-----------------|-----------------|-------------------|--------------|
-| SYS-PF-001 – SYS-PF-008 | HLD-001 | Platform Build Architecture | Unit Testing |
-| SYS-PF-009 – SYS-PF-018 | ADR-001 | Dependency Management | Integration Testing |
-| SYS-PF-019 – SYS-PF-038 | FRD-001 | Shared Platform Components | Integration Testing |
-| SYS-PF-039 – SYS-PF-059 | FRD-001 | API Gateway | Functional Testing |
-| SYS-PF-060 – SYS-PF-077 | FRD-001 | Service Discovery | Functional Testing |
-| SYS-PF-078 – SYS-PF-121 | FRD-001 | Platform Frameworks | Integration Testing |
-| SYS-PF-122 – SYS-PF-154 | FRD-001 | Platform Runtime | System Testing |
+| SRS Requirement         | Source Document | Source Requirement          | Verification        |
+| ----------------------- | --------------- | --------------------------- | ------------------- |
+| SYS-PF-001 – SYS-PF-008 | HLD-001         | Platform Build Architecture | Unit Testing        |
+| SYS-PF-009 – SYS-PF-018 | ADR-001         | Dependency Management       | Integration Testing |
+| SYS-PF-019 – SYS-PF-038 | FRD-001         | Shared Platform Components  | Integration Testing |
+| SYS-PF-039 – SYS-PF-059 | FRD-001         | API Gateway                 | Functional Testing  |
+| SYS-PF-060 – SYS-PF-077 | FRD-001         | Service Discovery           | Functional Testing  |
+| SYS-PF-078 – SYS-PF-121 | FRD-001         | Platform Frameworks         | Integration Testing |
+| SYS-PF-122 – SYS-PF-154 | FRD-001         | Platform Runtime            | System Testing      |
 
 ---
 
@@ -3314,14 +3313,14 @@ Traceability supports:
 
 The following implementation artifacts shall be derived from this SRS.
 
-| Target Artifact | Relationship |
-|-----------------|--------------|
-| LLD-001 Platform Foundation | Software Design |
-| EPIC-PF-001 | Platform Foundation Implementation |
-| User Stories | Functional Implementation |
-| GitHub Issues | Development Tasks |
-| Pull Requests | Code Changes |
-| Test Cases | Requirement Verification |
+| Target Artifact             | Relationship                       |
+| --------------------------- | ---------------------------------- |
+| LLD-001 Platform Foundation | Software Design                    |
+| EPIC-PF-001                 | Platform Foundation Implementation |
+| User Stories                | Functional Implementation          |
+| GitHub Issues               | Development Tasks                  |
+| Pull Requests               | Code Changes                       |
+| Test Cases                  | Requirement Verification           |
 
 ---
 
@@ -3329,25 +3328,25 @@ The following implementation artifacts shall be derived from this SRS.
 
 The following matrix identifies runtime dependencies among platform components.
 
-| Component | Depends On |
-|-----------|------------|
-| Parent | None |
-| BOM | Parent |
-| Core Common | Parent |
-| Spring Common | Parent, Core Common |
-| Gateway | Spring Common, Core Common, Eureka |
-| Eureka | Spring Common, Core Common |
-| Identity Service | Gateway, Eureka, Core Common, Spring Common |
-| Branch Service | Gateway, Eureka, Core Common, Spring Common |
-| Customer Service | Gateway, Eureka, Core Common, Spring Common |
-| Product Service | Gateway, Eureka, Core Common, Spring Common |
-| Inventory Service | Gateway, Eureka, Core Common, Spring Common |
-| Order Service | Gateway, Eureka, Core Common, Spring Common |
-| Billing Service | Gateway, Eureka, Core Common, Spring Common |
-| Dispatch Service | Gateway, Eureka, Core Common, Spring Common |
+| Component            | Depends On                                  |
+| -------------------- | ------------------------------------------- |
+| Parent               | None                                        |
+| BOM                  | Parent                                      |
+| Core Common          | Parent                                      |
+| Spring Common        | Parent, Core Common                         |
+| Gateway              | Spring Common, Core Common, Eureka          |
+| Eureka               | Spring Common, Core Common                  |
+| Identity Service     | Gateway, Eureka, Core Common, Spring Common |
+| Branch Service       | Gateway, Eureka, Core Common, Spring Common |
+| Customer Service     | Gateway, Eureka, Core Common, Spring Common |
+| Product Service      | Gateway, Eureka, Core Common, Spring Common |
+| Inventory Service    | Gateway, Eureka, Core Common, Spring Common |
+| Order Service        | Gateway, Eureka, Core Common, Spring Common |
+| Billing Service      | Gateway, Eureka, Core Common, Spring Common |
+| Dispatch Service     | Gateway, Eureka, Core Common, Spring Common |
 | Notification Service | Gateway, Eureka, Core Common, Spring Common |
-| Reporting Service | Gateway, Eureka, Core Common, Spring Common |
-| Audit Service | Gateway, Eureka, Core Common, Spring Common |
+| Reporting Service    | Gateway, Eureka, Core Common, Spring Common |
+| Audit Service        | Gateway, Eureka, Core Common, Spring Common |
 
 ---
 
@@ -3431,76 +3430,76 @@ The Platform Foundation shall operate within the following constraints.
 
 # 23. Risks
 
-| Risk | Impact | Mitigation |
-|------|--------|------------|
-| Shared library changes affect multiple services | High | Semantic Versioning |
-| Gateway outage | High | High Availability Deployment |
-| Service registry outage | High | Eureka Cluster |
-| Dependency incompatibility | Medium | Central BOM |
-| Configuration errors | Medium | Startup Validation |
-| Security vulnerabilities | High | Continuous Security Scanning |
+| Risk                                            | Impact | Mitigation                   |
+| ----------------------------------------------- | ------ | ---------------------------- |
+| Shared library changes affect multiple services | High   | Semantic Versioning          |
+| Gateway outage                                  | High   | High Availability Deployment |
+| Service registry outage                         | High   | Eureka Cluster               |
+| Dependency incompatibility                      | Medium | Central BOM                  |
+| Configuration errors                            | Medium | Startup Validation           |
+| Security vulnerabilities                        | High   | Continuous Security Scanning |
 
 ---
 
 # 24. Glossary
 
-| Term | Description |
-|------|-------------|
-| API Gateway | Central request routing component |
-| BOM | Bill of Materials |
-| Correlation ID | Request tracking identifier |
-| DTO | Data Transfer Object |
-| Eureka | Service Discovery Server |
-| Feign | Declarative HTTP Client |
-| JWT | JSON Web Token |
-| Micrometer | Metrics Framework |
-| OpenAPI | REST API Documentation Specification |
-| Platform Foundation | Shared runtime platform components |
-| RBAC | Role-Based Access Control |
-| SRS | Software Requirements Specification |
-| Trace ID | Distributed tracing identifier |
+| Term                | Description                          |
+| ------------------- | ------------------------------------ |
+| API Gateway         | Central request routing component    |
+| BOM                 | Bill of Materials                    |
+| Correlation ID      | Request tracking identifier          |
+| DTO                 | Data Transfer Object                 |
+| Eureka              | Service Discovery Server             |
+| Feign               | Declarative HTTP Client              |
+| JWT                 | JSON Web Token                       |
+| Micrometer          | Metrics Framework                    |
+| OpenAPI             | REST API Documentation Specification |
+| Platform Foundation | Shared runtime platform components   |
+| RBAC                | Role-Based Access Control            |
+| SRS                 | Software Requirements Specification  |
+| Trace ID            | Distributed tracing identifier       |
 
 ---
 
 # 25. Acronyms
 
-| Acronym | Meaning |
-|----------|---------|
-| ADR | Architecture Decision Record |
-| API | Application Programming Interface |
-| BOM | Bill of Materials |
-| CI | Continuous Integration |
-| CD | Continuous Deployment |
-| DTO | Data Transfer Object |
-| HLD | High-Level Design |
-| LLD | Low-Level Design |
-| NFR | Non-Functional Requirement |
-| OMS | Order Management System |
-| PRD | Product Requirements Document |
-| RBAC | Role-Based Access Control |
-| REST | Representational State Transfer |
-| RTM | Requirements Traceability Matrix |
-| SRS | Software Requirements Specification |
-| TLS | Transport Layer Security |
+| Acronym | Meaning                             |
+| ------- | ----------------------------------- |
+| ADR     | Architecture Decision Record        |
+| API     | Application Programming Interface   |
+| BOM     | Bill of Materials                   |
+| CI      | Continuous Integration              |
+| CD      | Continuous Deployment               |
+| DTO     | Data Transfer Object                |
+| HLD     | High-Level Design                   |
+| LLD     | Low-Level Design                    |
+| NFR     | Non-Functional Requirement          |
+| OMS     | Order Management System             |
+| PRD     | Product Requirements Document       |
+| RBAC    | Role-Based Access Control           |
+| REST    | Representational State Transfer     |
+| RTM     | Requirements Traceability Matrix    |
+| SRS     | Software Requirements Specification |
+| TLS     | Transport Layer Security            |
 
 ---
 
 # 26. Requirement Summary
 
-| Category | Requirement IDs |
-|----------|-----------------|
-| Platform Components | SYS-PF-001 – SYS-PF-038 |
-| Gateway | SYS-PF-039 – SYS-PF-059 |
-| Service Discovery | SYS-PF-060 – SYS-PF-077 |
+| Category                  | Requirement IDs         |
+| ------------------------- | ----------------------- |
+| Platform Components       | SYS-PF-001 – SYS-PF-038 |
+| Gateway                   | SYS-PF-039 – SYS-PF-059 |
+| Service Discovery         | SYS-PF-060 – SYS-PF-077 |
 | Shared Platform Framework | SYS-PF-078 – SYS-PF-121 |
-| Logging | SYS-PF-122 – SYS-PF-128 |
-| Observability | SYS-PF-129 – SYS-PF-137 |
-| Error Handling | SYS-PF-138 – SYS-PF-142 |
-| Configuration | SYS-PF-143 – SYS-PF-147 |
-| Deployment | SYS-PF-148 – SYS-PF-154 |
-| Communication | COM-PF-001 – COM-PF-026 |
-| Security | SEC-PF-001 – SEC-PF-022 |
-| Non-Functional | NFR-PF-001 – NFR-PF-042 |
+| Logging                   | SYS-PF-122 – SYS-PF-128 |
+| Observability             | SYS-PF-129 – SYS-PF-137 |
+| Error Handling            | SYS-PF-138 – SYS-PF-142 |
+| Configuration             | SYS-PF-143 – SYS-PF-147 |
+| Deployment                | SYS-PF-148 – SYS-PF-154 |
+| Communication             | COM-PF-001 – COM-PF-026 |
+| Security                  | SEC-PF-001 – SEC-PF-022 |
+| Non-Functional            | NFR-PF-001 – NFR-PF-042 |
 
 ---
 
@@ -3528,52 +3527,52 @@ The DHS Platform Foundation shall be considered complete when all of the followi
 
 # 28. Document Sign-off
 
-| Role | Name | Status | Date |
-|------|------|--------|------|
-| Product Owner | | Pending | |
-| Enterprise Architect | | Pending | |
-| Solution Architect | | Pending | |
-| Platform Lead | | Pending | |
-| Security Lead | | Pending | |
-| DevOps Lead | | Pending | |
-| QA Lead | | Pending | |
+| Role                 | Name | Status  | Date |
+| -------------------- | ---- | ------- | ---- |
+| Product Owner        |      | Pending |      |
+| Enterprise Architect |      | Pending |      |
+| Solution Architect   |      | Pending |      |
+| Platform Lead        |      | Pending |      |
+| Security Lead        |      | Pending |      |
+| DevOps Lead          |      | Pending |      |
+| QA Lead              |      | Pending |      |
 
 ---
 
 # Appendix A – Platform Module Matrix
 
-| Module | Type |
-|--------|------|
-| Parent | Build |
-| BOM | Build |
-| Core Common | Shared Library |
-| Spring Common | Shared Library |
-| Gateway | Runtime Service |
-| Eureka | Runtime Service |
+| Module        | Type            |
+| ------------- | --------------- |
+| Parent        | Build           |
+| BOM           | Build           |
+| Core Common   | Shared Library  |
+| Spring Common | Shared Library  |
+| Gateway       | Runtime Service |
+| Eureka        | Runtime Service |
 
 ---
 
 # Appendix B – Verification Strategy
 
-| Verification Type | Purpose |
-|-------------------|---------|
-| Unit Testing | Validate shared libraries |
-| Integration Testing | Validate component interaction |
-| API Testing | Validate Gateway APIs |
-| Contract Testing | Validate service contracts |
-| Performance Testing | Validate performance objectives |
-| Security Testing | Validate authentication and authorization |
-| End-to-End Testing | Validate platform behavior |
+| Verification Type   | Purpose                                   |
+| ------------------- | ----------------------------------------- |
+| Unit Testing        | Validate shared libraries                 |
+| Integration Testing | Validate component interaction            |
+| API Testing         | Validate Gateway APIs                     |
+| Contract Testing    | Validate service contracts                |
+| Performance Testing | Validate performance objectives           |
+| Security Testing    | Validate authentication and authorization |
+| End-to-End Testing  | Validate platform behavior                |
 
 ---
 
 # Appendix C – Repository Ownership
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-dhs-platform | Platform Foundation software components |
-| starone-galaxy-central-config | Configuration assets |
-| starone-galaxy-infra | Infrastructure implementation |
-| starone-galaxy-architecture | Architecture governance, ADRs, standards |
+| Repository                    | Responsibility                           |
+| ----------------------------- | ---------------------------------------- |
+| starone-dhs-platform          | Platform Foundation software components  |
+| starone-galaxy-central-config | Configuration assets                     |
+| starone-galaxy-infra          | Infrastructure implementation            |
+| starone-galaxy-architecture   | Architecture governance, ADRs, standards |
 
 ---

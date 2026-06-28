@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Dispatch Service |
-| Document | Low Level Design |
-| Document ID | LLD-009 |
-| Repository | starone-dhs-platform |
-| Module | dispatch-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Dispatch Service                       |
+| Document    | Low Level Design                       |
+| Document ID | LLD-009                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | dispatch-service                       |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -341,16 +341,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Shipment | Shipment Lifecycle |
-| Shipment Item | Products to Deliver |
-| Picking | Warehouse Picking |
-| Packing | Packaging |
-| Dispatch | Dispatch Execution |
-| Delivery | Delivery Confirmation |
-| Tracking Event | Shipment Tracking |
-| Dispatch Timeline | Shipment History |
+| Component         | Responsibility        |
+| ----------------- | --------------------- |
+| Shipment          | Shipment Lifecycle    |
+| Shipment Item     | Products to Deliver   |
+| Picking           | Warehouse Picking     |
+| Packing           | Packaging             |
+| Dispatch          | Dispatch Execution    |
+| Delivery          | Delivery Confirmation |
+| Tracking Event    | Shipment Tracking     |
+| Dispatch Timeline | Shipment History      |
 
 ---
 
@@ -672,16 +672,16 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| ShipmentRepository | Shipment Master |
-| ShipmentItemRepository | Shipment Items |
-| PickingRepository | Picking Operations |
-| PackingRepository | Packing Operations |
-| DispatchRepository | Dispatch Execution |
-| DeliveryRepository | Delivery Records |
-| TrackingRepository | Tracking Events |
-| DispatchTimelineRepository | Timeline |
+| Repository                 | Responsibility     |
+| -------------------------- | ------------------ |
+| ShipmentRepository         | Shipment Master    |
+| ShipmentItemRepository     | Shipment Items     |
+| PickingRepository          | Picking Operations |
+| PackingRepository          | Packing Operations |
+| DispatchRepository         | Dispatch Execution |
+| DeliveryRepository         | Delivery Records   |
+| TrackingRepository         | Tracking Events    |
+| DispatchTimelineRepository | Timeline           |
 
 ---
 
@@ -723,16 +723,16 @@ dto.response
 
 ## ShipmentResponse
 
-| Field | Type |
-|---------|------|
-| shipmentId | UUID |
-| shipmentNumber | String |
-| orderId | UUID |
-| warehouseId | UUID |
-| shipmentStatus | ShipmentStatus |
-| dispatchDate | Instant |
-| expectedDeliveryDate | LocalDate |
-| deliveredDate | Instant |
+| Field                | Type           |
+| -------------------- | -------------- |
+| shipmentId           | UUID           |
+| shipmentNumber       | String         |
+| orderId              | UUID           |
+| warehouseId          | UUID           |
+| shipmentStatus       | ShipmentStatus |
+| dispatchDate         | Instant        |
+| expectedDeliveryDate | LocalDate      |
+| deliveredDate        | Instant        |
 
 ---
 
@@ -762,105 +762,105 @@ entity
 
 ## Shipment
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentNumber | String |
-| orderId | UUID |
-| warehouseId | UUID |
-| shipmentStatus | ShipmentStatus |
-| dispatchDate | Instant |
-| expectedDeliveryDate | LocalDate |
-| deliveredDate | Instant |
+| Attribute            | Type           |
+| -------------------- | -------------- |
+| id                   | UUID           |
+| shipmentNumber       | String         |
+| orderId              | UUID           |
+| warehouseId          | UUID           |
+| shipmentStatus       | ShipmentStatus |
+| dispatchDate         | Instant        |
+| expectedDeliveryDate | LocalDate      |
+| deliveredDate        | Instant        |
 
 ---
 
 ## ShipmentItem
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| productId | UUID |
-| orderedQuantity | BigDecimal |
-| pickedQuantity | BigDecimal |
-| packedQuantity | BigDecimal |
+| Attribute          | Type       |
+| ------------------ | ---------- |
+| id                 | UUID       |
+| shipmentId         | UUID       |
+| productId          | UUID       |
+| orderedQuantity    | BigDecimal |
+| pickedQuantity     | BigDecimal |
+| packedQuantity     | BigDecimal |
 | dispatchedQuantity | BigDecimal |
 
 ---
 
 ## Picking
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| pickerId | UUID |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| shipmentId    | UUID          |
+| pickerId      | UUID          |
 | pickingStatus | PickingStatus |
-| pickedAt | Instant |
+| pickedAt      | Instant       |
 
 ---
 
 ## Packing
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| packageNumber | String |
-| packageCount | Integer |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| shipmentId    | UUID          |
+| packageNumber | String        |
+| packageCount  | Integer       |
 | packingStatus | PackingStatus |
 
 ---
 
 ## Dispatch
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| vehicleId | UUID |
-| driverId | UUID |
+| Attribute      | Type           |
+| -------------- | -------------- |
+| id             | UUID           |
+| shipmentId     | UUID           |
+| vehicleId      | UUID           |
+| driverId       | UUID           |
 | dispatchStatus | DispatchStatus |
-| dispatchedAt | Instant |
+| dispatchedAt   | Instant        |
 
 ---
 
 ## Delivery
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| deliveredBy | UUID |
-| deliveredAt | Instant |
-| proofOfDeliveryUrl | String |
-| deliveryStatus | DeliveryStatus |
+| Attribute          | Type           |
+| ------------------ | -------------- |
+| id                 | UUID           |
+| shipmentId         | UUID           |
+| deliveredBy        | UUID           |
+| deliveredAt        | Instant        |
+| proofOfDeliveryUrl | String         |
+| deliveryStatus     | DeliveryStatus |
 
 ---
 
 ## TrackingEvent
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
+| Attribute      | Type           |
+| -------------- | -------------- |
+| id             | UUID           |
+| shipmentId     | UUID           |
 | trackingStatus | TrackingStatus |
-| latitude | BigDecimal |
-| longitude | BigDecimal |
-| eventTime | Instant |
+| latitude       | BigDecimal     |
+| longitude      | BigDecimal     |
+| eventTime      | Instant        |
 
 ---
 
 ## DispatchTimeline
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| eventType | String |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| shipmentId     | UUID    |
+| eventType      | String  |
 | eventTimestamp | Instant |
-| remarks | String |
+| remarks        | String  |
 
 ---
 
@@ -928,11 +928,11 @@ TrackingValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
+| Validator         | Purpose             |
+| ----------------- | ------------------- |
 | ShipmentValidator | Shipment Validation |
-| PickingValidator | Picking Validation |
-| PackingValidator | Packing Validation |
+| PickingValidator  | Picking Validation  |
+| PackingValidator  | Packing Validation  |
 | DispatchValidator | Dispatch Validation |
 | DeliveryValidator | Delivery Validation |
 | TrackingValidator | Tracking Validation |
@@ -1104,6 +1104,7 @@ Shipment "1" --> "*" DispatchTimeline
 - APIs shall return `ApiResponse<T>`.
 
 ---
+
 # 30. Security Configuration
 
 The Dispatch Service shall inherit the enterprise security framework from the Platform Foundation.
@@ -1169,18 +1170,18 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| SHIPMENT_CREATE | Create Shipment |
-| SHIPMENT_UPDATE | Update Shipment |
-| SHIPMENT_VIEW | View Shipment |
-| SHIPMENT_CANCEL | Cancel Shipment |
-| PICKING_EXECUTE | Execute Picking |
-| PACKING_EXECUTE | Execute Packing |
-| DISPATCH_EXECUTE | Dispatch Shipment |
-| DELIVERY_CONFIRM | Confirm Delivery |
-| TRACKING_UPDATE | Update Shipment Tracking |
-| SHIPMENT_SEARCH | Search Shipments |
+| Permission       | Description              |
+| ---------------- | ------------------------ |
+| SHIPMENT_CREATE  | Create Shipment          |
+| SHIPMENT_UPDATE  | Update Shipment          |
+| SHIPMENT_VIEW    | View Shipment            |
+| SHIPMENT_CANCEL  | Cancel Shipment          |
+| PICKING_EXECUTE  | Execute Picking          |
+| PACKING_EXECUTE  | Execute Packing          |
+| DISPATCH_EXECUTE | Dispatch Shipment        |
+| DELIVERY_CONFIRM | Confirm Delivery         |
+| TRACKING_UPDATE  | Update Shipment Tracking |
+| SHIPMENT_SEARCH  | Search Shipments         |
 
 ---
 
@@ -1218,16 +1219,12 @@ Dispatch Service shall consume authenticated user information from Spring Securi
 
 ```json
 {
-  "sub":"UUID",
-  "username":"warehouse.operator",
-  "roles":["WAREHOUSE_OPERATOR"],
-  "permissions":[
-      "PICKING_EXECUTE",
-      "PACKING_EXECUTE",
-      "DISPATCH_EXECUTE"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "warehouse.operator",
+  "roles": ["WAREHOUSE_OPERATOR"],
+  "permissions": ["PICKING_EXECUTE", "PACKING_EXECUTE", "DISPATCH_EXECUTE"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1277,18 +1274,18 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Shipment | SHIPMENT_CREATE |
-| Update Shipment | SHIPMENT_UPDATE |
-| View Shipment | SHIPMENT_VIEW |
-| Cancel Shipment | SHIPMENT_CANCEL |
-| Execute Picking | PICKING_EXECUTE |
-| Execute Packing | PACKING_EXECUTE |
+| API               | Permission       |
+| ----------------- | ---------------- |
+| Create Shipment   | SHIPMENT_CREATE  |
+| Update Shipment   | SHIPMENT_UPDATE  |
+| View Shipment     | SHIPMENT_VIEW    |
+| Cancel Shipment   | SHIPMENT_CANCEL  |
+| Execute Picking   | PICKING_EXECUTE  |
+| Execute Packing   | PACKING_EXECUTE  |
 | Dispatch Shipment | DISPATCH_EXECUTE |
-| Confirm Delivery | DELIVERY_CONFIRM |
-| Update Tracking | TRACKING_UPDATE |
-| Search Shipments | SHIPMENT_SEARCH |
+| Confirm Delivery  | DELIVERY_CONFIRM |
+| Update Tracking   | TRACKING_UPDATE  |
+| Search Shipments  | SHIPMENT_SEARCH  |
 
 ---
 
@@ -1360,12 +1357,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"ShipmentDispatched",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "ShipmentDispatched",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1394,14 +1391,14 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| OrderClient | Order Validation |
-| InventoryClient | Allocation Validation |
-| CustomerClient | Delivery Address Validation |
-| WarehouseClient | Warehouse Validation |
-| NotificationClient | Delivery Notifications |
-| AuditClient | Audit Submission |
+| Client             | Responsibility              |
+| ------------------ | --------------------------- |
+| OrderClient        | Order Validation            |
+| InventoryClient    | Allocation Validation       |
+| CustomerClient     | Delivery Address Validation |
+| WarehouseClient    | Warehouse Validation        |
+| NotificationClient | Delivery Notifications      |
+| AuditClient        | Audit Submission            |
 
 ---
 
@@ -1425,16 +1422,16 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Background Jobs |
-| Metrics | Micrometer |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis                |
+| Validation    | Bean Validation      |
+| Scheduler     | Background Jobs      |
+| Metrics       | Micrometer           |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1448,15 +1445,15 @@ Distributed fulfillment shall communicate through Kafka events.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Create Shipment | REQUIRED |
-| Picking | REQUIRED |
-| Packing | REQUIRED |
-| Dispatch | REQUIRED |
-| Delivery Confirmation | REQUIRED |
-| Tracking Update | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation             | Propagation  |
+| --------------------- | ------------ |
+| Create Shipment       | REQUIRED     |
+| Picking               | REQUIRED     |
+| Packing               | REQUIRED     |
+| Dispatch              | REQUIRED     |
+| Delivery Confirmation | REQUIRED     |
+| Tracking Update       | REQUIRED     |
+| Publish Event         | AFTER_COMMIT |
 
 ---
 
@@ -1591,27 +1588,27 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Order Service | Shipment Creation |
-| Inventory Service | Allocation Validation |
-| Warehouse Service | Warehouse Validation |
-| Customer Service | Delivery Validation |
+| Service              | Purpose                |
+| -------------------- | ---------------------- |
+| Order Service        | Shipment Creation      |
+| Inventory Service    | Allocation Validation  |
+| Warehouse Service    | Warehouse Validation   |
+| Customer Service     | Delivery Validation    |
 | Notification Service | Delivery Notifications |
-| Audit Service | Audit Logging |
-| Reporting Service | Shipment Analytics |
+| Audit Service        | Audit Logging          |
+| Reporting Service    | Shipment Analytics     |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| dispatch.cache.enabled | true |
-| dispatch.cache.ttl | 3600 |
-| dispatch.tracking.interval | 5m |
-| dispatch.delivery.retry | 3 |
-| dispatch.kafka.retry | 3 |
+| Property                   | Default |
+| -------------------------- | ------- |
+| dispatch.cache.enabled     | true    |
+| dispatch.cache.ttl         | 3600    |
+| dispatch.tracking.interval | 5m      |
+| dispatch.delivery.retry    | 3       |
+| dispatch.kafka.retry       | 3       |
 
 ---
 
@@ -1651,23 +1648,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1709,13 +1706,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Business Errors |
-| ERROR | System Failures |
+| Level | Purpose                     |
+| ----- | --------------------------- |
+| TRACE | Framework Diagnostics       |
+| DEBUG | Development                 |
+| INFO  | Business Events             |
+| WARN  | Recoverable Business Errors |
+| ERROR | System Failures             |
 
 ---
 
@@ -2156,14 +2153,14 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2230,35 +2227,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Dispatch Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Dispatch Audit |
+| Layer      | Responsibility          |
+| ---------- | ----------------------- |
+| Controller | Request Handling        |
+| Service    | Dispatch Business Logic |
+| Repository | Persistence             |
+| Kafka      | Event Publishing        |
+| Mapper     | DTO Conversion          |
+| Validation | Request Validation      |
+| Audit      | Dispatch Audit          |
 
 ---
 
@@ -2362,12 +2359,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Dispatch Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Dispatch Service Implementation                 |
 
 ---
 

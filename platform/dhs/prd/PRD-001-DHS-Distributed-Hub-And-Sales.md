@@ -34,26 +34,27 @@
 
 ## 3. Revision History
 
-| Version | Date       | Author         | Description                           |
-| ------- | ---------- | -------------- | ------------------------------------- |
-| v1.0.0  | 2026-06-19 | Sachin Salunke | Initial Product Requirements baseline |
-| v1.1.0 | 2026-06-20 | Sachin Salunke | Updated PRD for cloud-native monorepo-based multi-module microservices architecture and platform capabilities |
+| Version | Date       | Author         | Description                                                                                                   |
+| ------- | ---------- | -------------- | ------------------------------------------------------------------------------------------------------------- |
+| v1.0.0  | 2026-06-19 | Sachin Salunke | Initial Product Requirements baseline                                                                         |
+| v1.1.0  | 2026-06-20 | Sachin Salunke | Updated PRD for cloud-native monorepo-based multi-module microservices architecture and platform capabilities |
+
 ---
 
 ## 4. References
 
-| Reference ID | Document |
-|--------------|-----------|
-| BRD-001 | Business Requirements Document |
-| SRS-001 | Software Requirements Specification |
-| RTM-001 | Requirements Traceability Matrix |
-| HLD-001 | Platform Foundation High-Level Design |
-| ADR-001 | Monorepo-Based Multi-Module Microservices Architecture |
-| ADR-002 | Database Strategy Decision |
-| ADR-003 | Inter-Service Communication Strategy |
-| ADR-004 | Service Discovery Strategy |
-| ADR-005 | API Gateway Strategy |
-| ADR-006 | Event-Driven Communication Strategy |
+| Reference ID | Document                                               |
+| ------------ | ------------------------------------------------------ |
+| BRD-001      | Business Requirements Document                         |
+| SRS-001      | Software Requirements Specification                    |
+| RTM-001      | Requirements Traceability Matrix                       |
+| HLD-001      | Platform Foundation High-Level Design                  |
+| ADR-001      | Monorepo-Based Multi-Module Microservices Architecture |
+| ADR-002      | Database Strategy Decision                             |
+| ADR-003      | Inter-Service Communication Strategy                   |
+| ADR-004      | Service Discovery Strategy                             |
+| ADR-005      | API Gateway Strategy                                   |
+| ADR-006      | Event-Driven Communication Strategy                    |
 
 ---
 
@@ -78,26 +79,26 @@ Build a cloud-native, distributed order management platform that provides real-t
 
 Electronic distribution businesses face several operational challenges:
 
-* Manual order processing
-* No real-time inventory visibility
-* Disconnected billing and dispatch processes
-* Delayed reporting and analytics
-* Lack of centralized monitoring
-* Limited customer order tracking
-* Operational inefficiencies across branches and hub
-* Limited operational observability
-* Lack of centralized API management
-* Difficulty integrating new business capabilities
-* Challenges in scaling individual platform capabilities
+- Manual order processing
+- No real-time inventory visibility
+- Disconnected billing and dispatch processes
+- Delayed reporting and analytics
+- Lack of centralized monitoring
+- Limited customer order tracking
+- Operational inefficiencies across branches and hub
+- Limited operational observability
+- Lack of centralized API management
+- Difficulty integrating new business capabilities
+- Challenges in scaling individual platform capabilities
 
 These challenges result in:
 
-* Increased operational costs
-* Billing errors
-* Inventory discrepancies
-* Delayed deliveries
-* Poor customer experience
-* Limited business scalability
+- Increased operational costs
+- Billing errors
+- Inventory discrepancies
+- Delayed deliveries
+- Poor customer experience
+- Limited business scalability
 
 ---
 
@@ -132,18 +133,23 @@ Provide centralized operational reporting.
 Build a scalable platform supporting future business growth.
 
 ## PG-008
+
 Provide centralized API access management.
 
 ## PG-009
+
 Provide service discovery and dynamic service communication capabilities.
 
 ## PG-010
+
 Provide centralized configuration management.
 
 ## PG-011
+
 Provide platform observability and operational monitoring.
 
 ## PG-012
+
 Enable independent service evolution and future business scalability.
 
 ---
@@ -154,16 +160,16 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Platform administration
-* User and role management
-* System configuration
-* Audit monitoring
+- Platform administration
+- User and role management
+- System configuration
+- Audit monitoring
 
 **Goals**
 
-* Platform governance
-* Security compliance
-* Operational monitoring
+- Platform governance
+- Security compliance
+- Operational monitoring
 
 ---
 
@@ -171,14 +177,14 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Business administration
-* Branch oversight
-* Operational management
+- Business administration
+- Branch oversight
+- Operational management
 
 **Goals**
 
-* Business visibility
-* Performance monitoring
+- Business visibility
+- Performance monitoring
 
 ---
 
@@ -186,14 +192,14 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Central inventory management
-* Order fulfillment oversight
-* Billing and dispatch monitoring
+- Central inventory management
+- Order fulfillment oversight
+- Billing and dispatch monitoring
 
 **Goals**
 
-* Faster fulfillment
-* Inventory optimization
+- Faster fulfillment
+- Inventory optimization
 
 ---
 
@@ -201,14 +207,14 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Branch operations
-* Order monitoring
-* Customer management
+- Branch operations
+- Order monitoring
+- Customer management
 
 **Goals**
 
-* Efficient branch operations
-* Customer satisfaction
+- Efficient branch operations
+- Customer satisfaction
 
 ---
 
@@ -216,14 +222,14 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Customer interactions
-* Order creation
-* Order tracking
+- Customer interactions
+- Order creation
+- Order tracking
 
 **Goals**
 
-* Faster order processing
-* Better customer experience
+- Faster order processing
+- Better customer experience
 
 ---
 
@@ -231,14 +237,14 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Stock management
-* Inventory adjustments
-* Barcode operations
+- Stock management
+- Inventory adjustments
+- Barcode operations
 
 **Goals**
 
-* Inventory accuracy
-* Faster stock processing
+- Inventory accuracy
+- Faster stock processing
 
 ---
 
@@ -246,13 +252,13 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Invoice generation
-* Partial billing management
+- Invoice generation
+- Partial billing management
 
 **Goals**
 
-* Billing accuracy
-* Faster invoice processing
+- Billing accuracy
+- Faster invoice processing
 
 ---
 
@@ -260,13 +266,13 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Shipment processing
-* Delivery tracking
+- Shipment processing
+- Delivery tracking
 
 **Goals**
 
-* Faster deliveries
-* Shipment visibility
+- Faster deliveries
+- Shipment visibility
 
 ---
 
@@ -274,13 +280,13 @@ Enable independent service evolution and future business scalability.
 
 **Responsibilities**
 
-* Submit order requests
-* Track order status
+- Submit order requests
+- Track order status
 
 **Goals**
 
-* Easy ordering experience
-* Real-time order visibility
+- Easy ordering experience
+- Real-time order visibility
 
 ---
 
@@ -317,23 +323,23 @@ Performance monitoring
 
 # 10. Product Modules
 
-| Module | Description |
-|---------|-------------|
-| Platform Foundation | Shared platform services and frameworks |
-| API Gateway | Centralized API access and routing |
-| Configuration Management | Centralized configuration management |
-| Service Discovery | Service registration and discovery |
-| Identity & Access Management | Authentication and authorization |
-| Branch Management | Branch administration |
-| Customer Management | Customer lifecycle management |
-| Product Catalog | Product information management |
-| Inventory Management | Stock and inventory operations |
-| Order Management | Order lifecycle management |
-| Billing Management | Invoice and billing operations |
-| Dispatch Management | Shipment and delivery management |
-| Notification Management | SMS and Email notifications |
-| Reporting & Analytics | Operational dashboards and reports |
-| Audit & Compliance | Audit trails and compliance |
+| Module                       | Description                             |
+| ---------------------------- | --------------------------------------- |
+| Platform Foundation          | Shared platform services and frameworks |
+| API Gateway                  | Centralized API access and routing      |
+| Configuration Management     | Centralized configuration management    |
+| Service Discovery            | Service registration and discovery      |
+| Identity & Access Management | Authentication and authorization        |
+| Branch Management            | Branch administration                   |
+| Customer Management          | Customer lifecycle management           |
+| Product Catalog              | Product information management          |
+| Inventory Management         | Stock and inventory operations          |
+| Order Management             | Order lifecycle management              |
+| Billing Management           | Invoice and billing operations          |
+| Dispatch Management          | Shipment and delivery management        |
+| Notification Management      | SMS and Email notifications             |
+| Reporting & Analytics        | Operational dashboards and reports      |
+| Audit & Compliance           | Audit trails and compliance             |
 
 ---
 
@@ -354,54 +360,55 @@ Business Services
         ↓
 Shared Platform Services
 ```
+
 # 12. Product Scope
 
 ## 12.1 MVP Scope (Release 1)
 
-* Platform Foundation
-* API Gateway
-* Configuration Management
-* Service Discovery
-* Authentication
-* Branch Management
-* Customer Management
-* Product Catalog
-* Inventory Management
-* Order Management
-* Billing Management
-* Dispatch Management
-* Notification Management
+- Platform Foundation
+- API Gateway
+- Configuration Management
+- Service Discovery
+- Authentication
+- Branch Management
+- Customer Management
+- Product Catalog
+- Inventory Management
+- Order Management
+- Billing Management
+- Dispatch Management
+- Notification Management
 
 ---
 
 ## 12.2 Release 2
 
-* Reporting
-* Analytics
-* Audit Management
-* GST Integration
-* Barcode Integration
-* Distributed Tracing
-* Metrics and Monitoring
-* Reporting
-* Analytics
-* Audit Management
-* GST Integration
-* Barcode Integration
+- Reporting
+- Analytics
+- Audit Management
+- GST Integration
+- Barcode Integration
+- Distributed Tracing
+- Metrics and Monitoring
+- Reporting
+- Analytics
+- Audit Management
+- GST Integration
+- Barcode Integration
 
 ---
 
 ## 12.3 Release 3
 
-* Advanced Dashboards
-* Operational Insights
-* Forecasting
-* Customer Self-Service Enhancements
-* Service resiliency enhancements
-* Advanced dashboards
-* Forecasting
-* Customer self-service enhancements
-* Platform optimization
+- Advanced Dashboards
+- Operational Insights
+- Forecasting
+- Customer Self-Service Enhancements
+- Service resiliency enhancements
+- Advanced dashboards
+- Forecasting
+- Customer self-service enhancements
+- Platform optimization
 
 ---
 
@@ -525,9 +532,9 @@ Inventory shall be reserved during order creation.
 
 Benefits:
 
-* Prevents overselling
-* Improves inventory accuracy
-* Improves fulfillment planning
+- Prevents overselling
+- Improves inventory accuracy
+- Improves fulfillment planning
 
 ---
 
@@ -547,36 +554,36 @@ Backorder : 4
 
 Benefits:
 
-* Faster deliveries
-* Improved customer satisfaction
-* Reduced order cancellations
+- Faster deliveries
+- Improved customer satisfaction
+- Reduced order cancellations
 
 ---
 
 # 15. Functional Requirements
 
-| ID     | Requirement                | Priority |
-| ------ | -------------------------- | -------- |
-| FR-001 | User Authentication        | Critical |
-| FR-002 | Role-Based Access Control  | Critical |
-| FR-003 | Branch Management          | Critical |
-| FR-004 | Customer Management        | Critical |
-| FR-005 | Product Catalog Management | Critical |
-| FR-006 | Inventory Management       | Critical |
-| FR-007 | Order Management           | Critical |
-| FR-008 | Inventory Reservation      | Critical |
-| FR-009 | Billing Management         | Critical |
-| FR-010 | Partial Billing            | Critical |
-| FR-011 | Dispatch Management        | Critical |
-| FR-012 | Customer Order Tracking    | High     |
-| FR-013 | Notifications              | High     |
-| FR-014 | Reporting                  | High     |
-| FR-015 | Audit Logging              | High     |
-| FR-016 | Centralized API Management | Critical |
-| FR-017 | Service Registration and Discovery | Critical |
-| FR-018 | Centralized Configuration Management | Critical |
-| FR-019 | Platform Monitoring and Observability | High |
-| FR-020 | Distributed Tracing | High |
+| ID     | Requirement                           | Priority |
+| ------ | ------------------------------------- | -------- |
+| FR-001 | User Authentication                   | Critical |
+| FR-002 | Role-Based Access Control             | Critical |
+| FR-003 | Branch Management                     | Critical |
+| FR-004 | Customer Management                   | Critical |
+| FR-005 | Product Catalog Management            | Critical |
+| FR-006 | Inventory Management                  | Critical |
+| FR-007 | Order Management                      | Critical |
+| FR-008 | Inventory Reservation                 | Critical |
+| FR-009 | Billing Management                    | Critical |
+| FR-010 | Partial Billing                       | Critical |
+| FR-011 | Dispatch Management                   | Critical |
+| FR-012 | Customer Order Tracking               | High     |
+| FR-013 | Notifications                         | High     |
+| FR-014 | Reporting                             | High     |
+| FR-015 | Audit Logging                         | High     |
+| FR-016 | Centralized API Management            | Critical |
+| FR-017 | Service Registration and Discovery    | Critical |
+| FR-018 | Centralized Configuration Management  | Critical |
+| FR-019 | Platform Monitoring and Observability | High     |
+| FR-020 | Distributed Tracing                   | High     |
 
 ---
 
@@ -584,7 +591,7 @@ Benefits:
 
 ## Availability
 
-* System Availability: 99.9%
+- System Availability: 99.9%
 
 ## Performance
 
@@ -603,11 +610,11 @@ Benefits:
 
 ## Security
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* Audit Logging
-* Data Encryption
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- Audit Logging
+- Data Encryption
 
 ## Reliability
 
@@ -621,39 +628,39 @@ Benefits:
 
 # 17. Integrations
 
-| Integration      | Purpose                       |
-| ---------------- | ----------------------------- |
-| SMS Gateway      | Customer notifications        |
-| Email Provider   | Operational notifications     |
-| GST APIs         | Tax calculations              |
-| E-Invoicing APIs | Invoice generation            |
-| Barcode Devices  | Inventory operations          |
-| Scanner Devices  | Dispatch and stock processing |
-| Configuration Repository | Centralized configuration management |
-| Monitoring Platform | Operational monitoring and metrics |
-| Distributed Tracing Platform | End-to-end request visibility |
+| Integration                  | Purpose                              |
+| ---------------------------- | ------------------------------------ |
+| SMS Gateway                  | Customer notifications               |
+| Email Provider               | Operational notifications            |
+| GST APIs                     | Tax calculations                     |
+| E-Invoicing APIs             | Invoice generation                   |
+| Barcode Devices              | Inventory operations                 |
+| Scanner Devices              | Dispatch and stock processing        |
+| Configuration Repository     | Centralized configuration management |
+| Monitoring Platform          | Operational monitoring and metrics   |
+| Distributed Tracing Platform | End-to-end request visibility        |
 
 ---
 
 # 18. Assumptions
 
-* Branches have stable internet connectivity.
-* Users are trained on operational workflows.
-* Third-party APIs are available.
-* Infrastructure environments are provisioned.
-* Barcode devices follow standard protocols.
-* Platform services may evolve independently.
-* Distributed service communication infrastructure is available.
-* Platform observability tooling is provisioned.
+- Branches have stable internet connectivity.
+- Users are trained on operational workflows.
+- Third-party APIs are available.
+- Infrastructure environments are provisioned.
+- Barcode devices follow standard protocols.
+- Platform services may evolve independently.
+- Distributed service communication infrastructure is available.
+- Platform observability tooling is provisioned.
 
 ---
 
 # 19. Constraints
 
-* Distributed platform services shall operate under centralized business governance.
-* Regulatory requirements for GST and invoicing.
-* Integration dependencies on external providers.
-* Existing business processes must remain uninterrupted.
+- Distributed platform services shall operate under centralized business governance.
+- Regulatory requirements for GST and invoicing.
+- Integration dependencies on external providers.
+- Existing business processes must remain uninterrupted.
 
 ---
 
@@ -661,35 +668,35 @@ Benefits:
 
 ## Platform Metrics
 
-* Service availability
-* API response times
-* Platform observability coverage
-* Service communication success rates
-* Error recovery effectiveness
-* Configuration deployment success rates
+- Service availability
+- API response times
+- Platform observability coverage
+- Service communication success rates
+- Error recovery effectiveness
+- Configuration deployment success rates
 
 ---
 
 ## Operational Metrics
 
-* Reduced order processing time
-* Reduced billing errors
-* Faster dispatch operations
-* Improved inventory accuracy
+- Reduced order processing time
+- Reduced billing errors
+- Faster dispatch operations
+- Improved inventory accuracy
 
 ## Product Metrics
 
-* Real-time inventory visibility
-* Customer order tracking
-* Centralized reporting
-* Single source of truth
+- Real-time inventory visibility
+- Customer order tracking
+- Centralized reporting
+- Single source of truth
 
 ## Business Metrics
 
-* Improved customer satisfaction
-* Increased operational efficiency
-* Reduced manual activities
-* Improved decision making
+- Improved customer satisfaction
+- Increased operational efficiency
+- Reduced manual activities
+- Improved decision making
 
 ---
 
@@ -697,22 +704,22 @@ Benefits:
 
 The product shall be considered successful when:
 
-* Authentication and authorization are operational.
-* Orders can be created and tracked.
-* Inventory is visible in real time.
-* Inventory reservation works correctly.
-* Partial billing is supported.
-* Dispatch processes are operational.
-* Customers can track order status.
-* Notifications are delivered successfully.
-* Reporting dashboards are available.
-* System availability meets 99.9% SLA.
-* Standard API response times remain below 200 ms.
-* Centralized API management is operational.
-* Services can register and discover each other.
-* Configuration management is operational.
-* Platform monitoring and tracing are operational.
-* Platform services are independently deployable.
+- Authentication and authorization are operational.
+- Orders can be created and tracked.
+- Inventory is visible in real time.
+- Inventory reservation works correctly.
+- Partial billing is supported.
+- Dispatch processes are operational.
+- Customers can track order status.
+- Notifications are delivered successfully.
+- Reporting dashboards are available.
+- System availability meets 99.9% SLA.
+- Standard API response times remain below 200 ms.
+- Centralized API management is operational.
+- Services can register and discover each other.
+- Configuration management is operational.
+- Platform monitoring and tracing are operational.
+- Platform services are independently deployable.
 
 ---
 
@@ -733,25 +740,23 @@ R2 --> R3
 
 # 23. Traceability to BRD
 
-| BR ID | Product Capability |
-|--------|-------------------|
-| BR-001 | Platform Foundation |
-| BR-002 | Identity & Access Management |
-| BR-003 | Branch Management |
-| BR-004 | Customer Management |
-| BR-005 | Product Management |
-| BR-006 | Inventory Management |
-| BR-007 | Order Management |
-| BR-008 | Billing Management |
-| BR-009 | Dispatch Management |
-| BR-010 | Notification Management |
-| BR-011 | Reporting & Analytics |
-| BR-012 | Audit & Compliance |
-| BR-015 | API Gateway |
-| BR-016 | Service Discovery |
-| BR-017 | Configuration Management |
+| BR ID  | Product Capability                  |
+| ------ | ----------------------------------- |
+| BR-001 | Platform Foundation                 |
+| BR-002 | Identity & Access Management        |
+| BR-003 | Branch Management                   |
+| BR-004 | Customer Management                 |
+| BR-005 | Product Management                  |
+| BR-006 | Inventory Management                |
+| BR-007 | Order Management                    |
+| BR-008 | Billing Management                  |
+| BR-009 | Dispatch Management                 |
+| BR-010 | Notification Management             |
+| BR-011 | Reporting & Analytics               |
+| BR-012 | Audit & Compliance                  |
+| BR-015 | API Gateway                         |
+| BR-016 | Service Discovery                   |
+| BR-017 | Configuration Management            |
 | BR-018 | Platform Monitoring & Observability |
 
 ---
-
-

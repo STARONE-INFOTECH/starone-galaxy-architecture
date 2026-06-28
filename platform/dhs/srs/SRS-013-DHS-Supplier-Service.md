@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Supplier Service |
+| Field          | Value                                                |
+| -------------- | ---------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform             |
+| Service Name   | Supplier Service                                     |
 | Document Title | Supplier Service Software Requirements Specification |
-| Document ID | SRS-013 |
-| Repository | starone-dhs-platform |
-| Module | supplier-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-013                                              |
+| Repository     | starone-dhs-platform                                 |
+| Module         | supplier-service                                     |
+| Document Type  | Software Requirements Specification (SRS)            |
+| Standard       | ISO/IEC/IEEE 29148                                   |
+| Version        | v1.0.0                                               |
+| Status         | Draft                                                |
+| Author         | Sachin Salunke                                       |
+| Owner          | Enterprise Architecture                              |
+| Last Updated   | 2026-06-27                                           |
 
 ---
 
@@ -26,37 +26,37 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | High-Level Design |
+| Document     | Description                      |
+| ------------ | -------------------------------- |
+| BRD-001      | Business Requirements Document   |
+| PRD-001      | Product Requirements Document    |
+| ADR-001      | Architecture Decision Record     |
+| HLD-001      | High-Level Design                |
 | FRD-Supplier | Supplier Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-002 | Identity Service |
-| SRS-003 | Branch Service |
-| SRS-005 | Product Service |
-| SRS-014 | Procurement Service |
+| SRS-001      | Platform Foundation              |
+| SRS-002      | Identity Service                 |
+| SRS-003      | Branch Service                   |
+| SRS-005      | Product Service                  |
+| SRS-014      | Procurement Service              |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|---------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -154,14 +154,14 @@ Audit --> Supplier
 
 ## Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Libraries |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Database |
-| Kafka | Event Streaming |
-| Identity Service | Authentication |
+| Dependency          | Purpose           |
+| ------------------- | ----------------- |
+| Platform Foundation | Shared Libraries  |
+| Gateway             | API Routing       |
+| Eureka              | Service Discovery |
+| PostgreSQL          | Database          |
+| Kafka               | Event Streaming   |
+| Identity Service    | Authentication    |
 
 ---
 
@@ -324,19 +324,19 @@ Supplier
 
 ## Supplier Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Supplier | Aggregate Root |
-| SupplierContact | Contact Persons |
-| SupplierAddress | Addresses |
-| SupplierBankAccount | Banking Details |
-| SupplierCategory | Vendor Classification |
-| SupplierContract | Commercial Contracts |
+| Aggregate             | Responsibility               |
+| --------------------- | ---------------------------- |
+| Supplier              | Aggregate Root               |
+| SupplierContact       | Contact Persons              |
+| SupplierAddress       | Addresses                    |
+| SupplierBankAccount   | Banking Details              |
+| SupplierCategory      | Vendor Classification        |
+| SupplierContract      | Commercial Contracts         |
 | SupplierCertification | ISO/GST/Compliance Documents |
-| SupplierDocument | Uploaded Documents |
-| SupplierRating | Supplier Ratings |
-| SupplierPerformance | Delivery & Quality KPIs |
-| SupplierAudit | Audit Trail |
+| SupplierDocument      | Uploaded Documents           |
+| SupplierRating        | Supplier Ratings             |
+| SupplierPerformance   | Delivery & Quality KPIs      |
+| SupplierAudit         | Audit Trail                  |
 
 ---
 
@@ -370,13 +370,13 @@ Archived --> [*]
 
 # 9. Integration Responsibilities
 
-| Service | Interaction |
-|----------|-------------|
-| Procurement Service | Supplier Lookup |
-| Billing Service | Supplier Payment Information |
-| Notification Service | Supplier Notifications |
-| Reporting Service | Supplier Analytics |
-| Audit Service | Supplier Audit Events |
+| Service              | Interaction                  |
+| -------------------- | ---------------------------- |
+| Procurement Service  | Supplier Lookup              |
+| Billing Service      | Supplier Payment Information |
+| Notification Service | Supplier Notifications       |
+| Reporting Service    | Supplier Analytics           |
+| Audit Service        | Supplier Audit Events        |
 
 ---
 
@@ -400,8 +400,8 @@ Archived --> [*]
 
 - procurement.purchase-order.completed.v1
 - billing.supplier-payment.completed.v1
-- audit.*
-- notification.*
+- audit.\*
+- notification.\*
 
 ---
 
@@ -657,58 +657,58 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | / | Create Supplier |
-| PUT | /{supplierId} | Update Supplier |
-| GET | /{supplierId} | Get Supplier |
-| GET | / | Search Suppliers |
-| POST | /verify/{supplierId} | Verify Supplier |
-| POST | /approve/{supplierId} | Approve Supplier |
-| POST | /activate/{supplierId} | Activate Supplier |
-| POST | /deactivate/{supplierId} | Deactivate Supplier |
-| POST | /blacklist/{supplierId} | Blacklist Supplier |
-| POST | /preferred/{supplierId} | Mark Preferred Supplier |
-| POST | /bank-account | Add Bank Account |
-| POST | /contract | Add Supplier Contract |
-| POST | /rating | Update Rating |
-| POST | /performance | Update Performance |
+| Method | URI                      | Description             |
+| ------ | ------------------------ | ----------------------- |
+| POST   | /                        | Create Supplier         |
+| PUT    | /{supplierId}            | Update Supplier         |
+| GET    | /{supplierId}            | Get Supplier            |
+| GET    | /                        | Search Suppliers        |
+| POST   | /verify/{supplierId}     | Verify Supplier         |
+| POST   | /approve/{supplierId}    | Approve Supplier        |
+| POST   | /activate/{supplierId}   | Activate Supplier       |
+| POST   | /deactivate/{supplierId} | Deactivate Supplier     |
+| POST   | /blacklist/{supplierId}  | Blacklist Supplier      |
+| POST   | /preferred/{supplierId}  | Mark Preferred Supplier |
+| POST   | /bank-account            | Add Bank Account        |
+| POST   | /contract                | Add Supplier Contract   |
+| POST   | /rating                  | Update Rating           |
+| POST   | /performance             | Update Performance      |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC / DESC |
-| supplierCode | No | Supplier Code |
-| supplierName | No | Supplier Name |
-| category | No | Supplier Category |
-| status | No | Supplier Status |
-| city | No | City |
-| state | No | State |
-| country | No | Country |
+| Parameter    | Required | Description       |
+| ------------ | -------- | ----------------- |
+| page         | No       | Page Number       |
+| size         | No       | Page Size         |
+| sort         | No       | Sort Field        |
+| direction    | No       | ASC / DESC        |
+| supplierCode | No       | Supplier Code     |
+| supplierName | No       | Supplier Name     |
+| category     | No       | Supplier Category |
+| status       | No       | Supplier Status   |
+| city         | No       | City              |
+| state        | No       | State             |
+| country      | No       | Country           |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
+| Parameter  | Description         |
+| ---------- | ------------------- |
 | supplierId | Supplier Identifier |
 
 ---
@@ -795,61 +795,61 @@ Supports:
 
 ## SupplierRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| supplierName | String | Yes |
-| supplierCategoryId | UUID | Yes |
-| gstNumber | String | Yes |
-| panNumber | String | Yes |
-| email | String | Yes |
-| mobileNumber | String | Yes |
+| Field              | Type   | Required |
+| ------------------ | ------ | -------- |
+| supplierName       | String | Yes      |
+| supplierCategoryId | UUID   | Yes      |
+| gstNumber          | String | Yes      |
+| panNumber          | String | Yes      |
+| email              | String | Yes      |
+| mobileNumber       | String | Yes      |
 
 ---
 
 ## SupplierAddressRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| addressType | AddressType | Yes |
-| addressLine1 | String | Yes |
-| city | String | Yes |
-| state | String | Yes |
-| country | String | Yes |
-| postalCode | String | Yes |
+| Field        | Type        | Required |
+| ------------ | ----------- | -------- |
+| addressType  | AddressType | Yes      |
+| addressLine1 | String      | Yes      |
+| city         | String      | Yes      |
+| state        | String      | Yes      |
+| country      | String      | Yes      |
+| postalCode   | String      | Yes      |
 
 ---
 
 ## SupplierContactRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| contactName | String | Yes |
-| designation | String | Yes |
-| email | String | Yes |
-| mobileNumber | String | Yes |
+| Field        | Type   | Required |
+| ------------ | ------ | -------- |
+| contactName  | String | Yes      |
+| designation  | String | Yes      |
+| email        | String | Yes      |
+| mobileNumber | String | Yes      |
 
 ---
 
 ## SupplierBankAccountRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| bankName | String | Yes |
-| accountNumber | String | Yes |
-| ifscCode | String | Yes |
-| accountType | AccountType | Yes |
-| defaultAccount | Boolean | Yes |
+| Field          | Type        | Required |
+| -------------- | ----------- | -------- |
+| bankName       | String      | Yes      |
+| accountNumber  | String      | Yes      |
+| ifscCode       | String      | Yes      |
+| accountType    | AccountType | Yes      |
+| defaultAccount | Boolean     | Yes      |
 
 ---
 
 ## SupplierContractRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| contractNumber | String | Yes |
-| effectiveFrom | Date | Yes |
-| effectiveTo | Date | Yes |
-| paymentTerms | String | Yes |
+| Field          | Type   | Required |
+| -------------- | ------ | -------- |
+| contractNumber | String | Yes      |
+| effectiveFrom  | Date   | Yes      |
+| effectiveTo    | Date   | Yes      |
+| paymentTerms   | String | Yes      |
 
 ---
 
@@ -857,36 +857,36 @@ Supports:
 
 ## SupplierResponse
 
-| Field | Type |
-|---------|------|
-| supplierId | UUID |
-| supplierCode | String |
-| supplierName | String |
-| supplierStatus | SupplierStatus |
-| preferredSupplier | Boolean |
+| Field             | Type           |
+| ----------------- | -------------- |
+| supplierId        | UUID           |
+| supplierCode      | String         |
+| supplierName      | String         |
+| supplierStatus    | SupplierStatus |
+| preferredSupplier | Boolean        |
 
 ---
 
 ## SupplierPerformanceResponse
 
-| Field | Type |
-|---------|------|
-| supplierId | UUID |
-| deliveryScore | Decimal |
-| qualityScore | Decimal |
+| Field           | Type    |
+| --------------- | ------- |
+| supplierId      | UUID    |
+| deliveryScore   | Decimal |
+| qualityScore    | Decimal |
 | complianceScore | Decimal |
-| overallRating | Decimal |
+| overallRating   | Decimal |
 
 ---
 
 ## SupplierContractResponse
 
-| Field | Type |
-|---------|------|
-| contractId | UUID |
-| contractNumber | String |
-| effectiveFrom | Date |
-| effectiveTo | Date |
+| Field          | Type           |
+| -------------- | -------------- |
+| contractId     | UUID           |
+| contractNumber | String         |
+| effectiveFrom  | Date           |
+| effectiveTo    | Date           |
 | contractStatus | ContractStatus |
 
 ---
@@ -936,36 +936,36 @@ Supports:
 
 # 13. Permission Matrix
 
-| API | Super Admin | Supplier Admin | Procurement Manager | Procurement Officer | Viewer |
-|------|-------------|----------------|---------------------|---------------------|--------|
-| Create Supplier | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Update Supplier | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Verify Supplier | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Approve Supplier | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Activate Supplier | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Deactivate Supplier | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Blacklist Supplier | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Add Bank Account | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Manage Contracts | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Update Rating | ✅ | ✅ | ✅ | ❌ | ❌ |
-| View Supplier | ✅ | ✅ | ✅ | ✅ | ✅ |
+| API                 | Super Admin | Supplier Admin | Procurement Manager | Procurement Officer | Viewer |
+| ------------------- | ----------- | -------------- | ------------------- | ------------------- | ------ |
+| Create Supplier     | ✅          | ✅             | ✅                  | ❌                  | ❌     |
+| Update Supplier     | ✅          | ✅             | ✅                  | ❌                  | ❌     |
+| Verify Supplier     | ✅          | ✅             | ❌                  | ❌                  | ❌     |
+| Approve Supplier    | ✅          | ✅             | ❌                  | ❌                  | ❌     |
+| Activate Supplier   | ✅          | ✅             | ❌                  | ❌                  | ❌     |
+| Deactivate Supplier | ✅          | ✅             | ❌                  | ❌                  | ❌     |
+| Blacklist Supplier  | ✅          | ✅             | ❌                  | ❌                  | ❌     |
+| Add Bank Account    | ✅          | ✅             | ❌                  | ❌                  | ❌     |
+| Manage Contracts    | ✅          | ✅             | ❌                  | ❌                  | ❌     |
+| Update Rating       | ✅          | ✅             | ✅                  | ❌                  | ❌     |
+| View Supplier       | ✅          | ✅             | ✅                  | ✅                  | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Updated |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Supplier Not Found |
-| 409 | Duplicate Supplier |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Updated                 |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Supplier Not Found      |
+| 409    | Duplicate Supplier      |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -1000,19 +1000,19 @@ Supplier
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Supplier | Aggregate Root |
-| SupplierContact | Contact Persons |
-| SupplierAddress | Registered & Communication Addresses |
-| SupplierBankAccount | Banking Details |
-| SupplierCategory | Vendor Classification |
-| SupplierContract | Commercial Agreements |
-| SupplierCertification | Compliance Certificates |
-| SupplierDocument | Supporting Documents |
-| SupplierRating | Supplier Evaluation |
-| SupplierPerformance | KPI Tracking |
-| SupplierAudit | Audit Trail |
+| Aggregate             | Responsibility                       |
+| --------------------- | ------------------------------------ |
+| Supplier              | Aggregate Root                       |
+| SupplierContact       | Contact Persons                      |
+| SupplierAddress       | Registered & Communication Addresses |
+| SupplierBankAccount   | Banking Details                      |
+| SupplierCategory      | Vendor Classification                |
+| SupplierContract      | Commercial Agreements                |
+| SupplierCertification | Compliance Certificates              |
+| SupplierDocument      | Supporting Documents                 |
+| SupplierRating        | Supplier Evaluation                  |
+| SupplierPerformance   | KPI Tracking                         |
+| SupplierAudit         | Audit Trail                          |
 
 ---
 
@@ -1020,175 +1020,175 @@ Supplier
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Supplier | Supplier Master |
-| SupplierContact | Contact Information |
-| SupplierAddress | Address Information |
-| SupplierBankAccount | Banking Details |
-| SupplierCategory | Business Classification |
-| SupplierContract | Commercial Contracts |
+| Entity                | Description             |
+| --------------------- | ----------------------- |
+| Supplier              | Supplier Master         |
+| SupplierContact       | Contact Information     |
+| SupplierAddress       | Address Information     |
+| SupplierBankAccount   | Banking Details         |
+| SupplierCategory      | Business Classification |
+| SupplierContract      | Commercial Contracts    |
 | SupplierCertification | Compliance Certificates |
-| SupplierDocument | Uploaded Documents |
-| SupplierRating | Rating History |
-| SupplierPerformance | Performance Metrics |
-| SupplierAudit | Audit Trail |
+| SupplierDocument      | Uploaded Documents      |
+| SupplierRating        | Rating History          |
+| SupplierPerformance   | Performance Metrics     |
+| SupplierAudit         | Audit Trail             |
 
 ---
 
 ## 16.2 Supplier
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| supplierCode | VARCHAR(30) | Unique |
-| supplierName | VARCHAR(200) | Required |
-| legalName | VARCHAR(250) | Required |
-| supplierType | ENUM | Required |
-| supplierCategoryId | UUID | Required |
-| gstNumber | VARCHAR(20) | Unique |
-| panNumber | VARCHAR(20) | Unique |
-| tanNumber | VARCHAR(20) | Optional |
-| email | VARCHAR(255) | Required |
-| mobileNumber | VARCHAR(20) | Required |
-| website | VARCHAR(255) | Optional |
-| preferredSupplier | BOOLEAN | Default FALSE |
-| supplierStatus | ENUM | Required |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedBy | UUID | Required |
-| updatedAt | TIMESTAMP | Required |
-| deleted | BOOLEAN | Default FALSE |
+| Attribute          | Type         | Constraint    |
+| ------------------ | ------------ | ------------- |
+| id                 | UUID         | Primary Key   |
+| supplierCode       | VARCHAR(30)  | Unique        |
+| supplierName       | VARCHAR(200) | Required      |
+| legalName          | VARCHAR(250) | Required      |
+| supplierType       | ENUM         | Required      |
+| supplierCategoryId | UUID         | Required      |
+| gstNumber          | VARCHAR(20)  | Unique        |
+| panNumber          | VARCHAR(20)  | Unique        |
+| tanNumber          | VARCHAR(20)  | Optional      |
+| email              | VARCHAR(255) | Required      |
+| mobileNumber       | VARCHAR(20)  | Required      |
+| website            | VARCHAR(255) | Optional      |
+| preferredSupplier  | BOOLEAN      | Default FALSE |
+| supplierStatus     | ENUM         | Required      |
+| createdBy          | UUID         | Required      |
+| createdAt          | TIMESTAMP    | Required      |
+| updatedBy          | UUID         | Required      |
+| updatedAt          | TIMESTAMP    | Required      |
+| deleted            | BOOLEAN      | Default FALSE |
 
 ---
 
 ## 16.3 Supplier Contact
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| contactName | VARCHAR(150) |
-| designation | VARCHAR(100) |
-| department | VARCHAR(100) |
-| email | VARCHAR(255) |
-| mobileNumber | VARCHAR(20) |
-| primaryContact | BOOLEAN |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| supplierId     | UUID         |
+| contactName    | VARCHAR(150) |
+| designation    | VARCHAR(100) |
+| department     | VARCHAR(100) |
+| email          | VARCHAR(255) |
+| mobileNumber   | VARCHAR(20)  |
+| primaryContact | BOOLEAN      |
 
 ---
 
 ## 16.4 Supplier Address
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| addressType | ENUM |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| supplierId   | UUID         |
+| addressType  | ENUM         |
 | addressLine1 | VARCHAR(250) |
 | addressLine2 | VARCHAR(250) |
-| city | VARCHAR(100) |
-| district | VARCHAR(100) |
-| state | VARCHAR(100) |
-| country | VARCHAR(100) |
-| postalCode | VARCHAR(20) |
+| city         | VARCHAR(100) |
+| district     | VARCHAR(100) |
+| state        | VARCHAR(100) |
+| country      | VARCHAR(100) |
+| postalCode   | VARCHAR(20)  |
 
 ---
 
 ## 16.5 Supplier Bank Account
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| bankName | VARCHAR(150) |
+| Attribute         | Type         |
+| ----------------- | ------------ |
+| id                | UUID         |
+| supplierId        | UUID         |
+| bankName          | VARCHAR(150) |
 | accountHolderName | VARCHAR(200) |
-| accountNumber | VARCHAR(255) |
-| ifscCode | VARCHAR(20) |
-| swiftCode | VARCHAR(20) |
-| accountType | ENUM |
-| defaultAccount | BOOLEAN |
+| accountNumber     | VARCHAR(255) |
+| ifscCode          | VARCHAR(20)  |
+| swiftCode         | VARCHAR(20)  |
+| accountType       | ENUM         |
+| defaultAccount    | BOOLEAN      |
 
 ---
 
 ## 16.6 Supplier Contract
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| contractNumber | VARCHAR(100) |
-| effectiveFrom | DATE |
-| effectiveTo | DATE |
-| paymentTerms | VARCHAR(100) |
-| creditLimit | DECIMAL(18,2) |
-| contractStatus | ENUM |
+| Attribute      | Type          |
+| -------------- | ------------- |
+| id             | UUID          |
+| supplierId     | UUID          |
+| contractNumber | VARCHAR(100)  |
+| effectiveFrom  | DATE          |
+| effectiveTo    | DATE          |
+| paymentTerms   | VARCHAR(100)  |
+| creditLimit    | DECIMAL(18,2) |
+| contractStatus | ENUM          |
 
 ---
 
 ## 16.7 Supplier Certification
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| certificateType | ENUM |
+| Attribute         | Type         |
+| ----------------- | ------------ |
+| id                | UUID         |
+| supplierId        | UUID         |
+| certificateType   | ENUM         |
 | certificateNumber | VARCHAR(100) |
-| issuedDate | DATE |
-| expiryDate | DATE |
+| issuedDate        | DATE         |
+| expiryDate        | DATE         |
 
 ---
 
 ## 16.8 Supplier Document
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| documentType | ENUM |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| supplierId   | UUID         |
+| documentType | ENUM         |
 | documentName | VARCHAR(255) |
 | documentPath | VARCHAR(500) |
-| uploadedAt | TIMESTAMP |
+| uploadedAt   | TIMESTAMP    |
 
 ---
 
 ## 16.9 Supplier Rating
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| deliveryRating | DECIMAL(3,2) |
-| qualityRating | DECIMAL(3,2) |
+| Attribute        | Type         |
+| ---------------- | ------------ |
+| id               | UUID         |
+| supplierId       | UUID         |
+| deliveryRating   | DECIMAL(3,2) |
+| qualityRating    | DECIMAL(3,2) |
 | complianceRating | DECIMAL(3,2) |
-| overallRating | DECIMAL(3,2) |
-| calculatedAt | TIMESTAMP |
+| overallRating    | DECIMAL(3,2) |
+| calculatedAt     | TIMESTAMP    |
 
 ---
 
 ## 16.10 Supplier Performance
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| completedPurchaseOrders | INTEGER |
-| onTimeDeliveries | INTEGER |
-| delayedDeliveries | INTEGER |
-| rejectedDeliveries | INTEGER |
-| averageLeadTime | INTEGER |
-| lastEvaluated | TIMESTAMP |
+| Attribute               | Type      |
+| ----------------------- | --------- |
+| id                      | UUID      |
+| supplierId              | UUID      |
+| completedPurchaseOrders | INTEGER   |
+| onTimeDeliveries        | INTEGER   |
+| delayedDeliveries       | INTEGER   |
+| rejectedDeliveries      | INTEGER   |
+| averageLeadTime         | INTEGER   |
+| lastEvaluated           | TIMESTAMP |
 
 ---
 
 ## 16.11 Supplier Audit
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| eventType | VARCHAR(100) |
-| correlationId | UUID |
-| eventTimestamp | TIMESTAMP |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| supplierId     | UUID         |
+| eventType      | VARCHAR(100) |
+| correlationId  | UUID         |
+| eventTimestamp | TIMESTAMP    |
 
 ---
 
@@ -1210,19 +1210,19 @@ supplier
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| supplier | Supplier Master |
-| supplier_contact | Contacts |
-| supplier_address | Addresses |
-| supplier_bank_account | Banking Details |
-| supplier_category | Categories |
-| supplier_contract | Contracts |
-| supplier_certification | Certifications |
-| supplier_document | Documents |
-| supplier_rating | Rating History |
-| supplier_performance | Performance Metrics |
-| supplier_audit | Audit Trail |
+| Table                  | Purpose             |
+| ---------------------- | ------------------- |
+| supplier               | Supplier Master     |
+| supplier_contact       | Contacts            |
+| supplier_address       | Addresses           |
+| supplier_bank_account  | Banking Details     |
+| supplier_category      | Categories          |
+| supplier_contract      | Contracts           |
+| supplier_certification | Certifications      |
+| supplier_document      | Documents           |
+| supplier_rating        | Rating History      |
+| supplier_performance   | Performance Metrics |
+| supplier_audit         | Audit Trail         |
 
 ---
 
@@ -1234,17 +1234,17 @@ All tables shall use UUID as Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
-| supplier_contact | supplier |
-| supplier_address | supplier |
-| supplier_bank_account | supplier |
-| supplier_contract | supplier |
-| supplier_certification | supplier |
-| supplier_document | supplier |
-| supplier_rating | supplier |
-| supplier_performance | supplier |
-| supplier_audit | supplier |
+| Child Table            | Parent Table |
+| ---------------------- | ------------ |
+| supplier_contact       | supplier     |
+| supplier_address       | supplier     |
+| supplier_bank_account  | supplier     |
+| supplier_contract      | supplier     |
+| supplier_certification | supplier     |
+| supplier_document      | supplier     |
+| supplier_rating        | supplier     |
+| supplier_performance   | supplier     |
+| supplier_audit         | supplier     |
 
 ---
 
@@ -1273,16 +1273,16 @@ All tables shall use UUID as Primary Key.
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| supplier | supplier_code |
-| supplier | supplier_name |
-| supplier | gst_number |
-| supplier | supplier_status |
-| supplier_contact | email |
-| supplier_bank_account | account_number |
-| supplier_contract | contract_number |
-| supplier_rating | overall_rating |
+| Table                 | Index           |
+| --------------------- | --------------- |
+| supplier              | supplier_code   |
+| supplier              | supplier_name   |
+| supplier              | gst_number      |
+| supplier              | supplier_status |
+| supplier_contact      | email           |
+| supplier_bank_account | account_number  |
+| supplier_contract     | contract_number |
+| supplier_rating       | overall_rating  |
 
 ---
 
@@ -1406,27 +1406,27 @@ The Supplier Service shall publish supplier lifecycle events for downstream serv
 
 ## 21.1 Published Events
 
-| Topic | Event |
-|---------|------|
-| supplier.created.v1 | SupplierCreated |
-| supplier.updated.v1 | SupplierUpdated |
-| supplier.verified.v1 | SupplierVerified |
-| supplier.approved.v1 | SupplierApproved |
-| supplier.activated.v1 | SupplierActivated |
-| supplier.deactivated.v1 | SupplierDeactivated |
-| supplier.blacklisted.v1 | SupplierBlacklisted |
-| supplier.rating.updated.v1 | SupplierRatingUpdated |
+| Topic                           | Event                      |
+| ------------------------------- | -------------------------- |
+| supplier.created.v1             | SupplierCreated            |
+| supplier.updated.v1             | SupplierUpdated            |
+| supplier.verified.v1            | SupplierVerified           |
+| supplier.approved.v1            | SupplierApproved           |
+| supplier.activated.v1           | SupplierActivated          |
+| supplier.deactivated.v1         | SupplierDeactivated        |
+| supplier.blacklisted.v1         | SupplierBlacklisted        |
+| supplier.rating.updated.v1      | SupplierRatingUpdated      |
 | supplier.performance.updated.v1 | SupplierPerformanceUpdated |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
+| Topic                                   | Source              |
+| --------------------------------------- | ------------------- |
 | procurement.purchase-order.completed.v1 | Procurement Service |
-| billing.supplier-payment.completed.v1 | Billing Service |
-| audit.* | Audit Service |
+| billing.supplier-payment.completed.v1   | Billing Service     |
+| audit.\*                                | Audit Service       |
 
 ---
 
@@ -1447,23 +1447,23 @@ The Supplier Service shall publish supplier lifecycle events for downstream serv
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | REST APIs |
-| Kafka | Event Streaming |
-| PostgreSQL | Supplier Database |
+| Interface        | Purpose            |
+| ---------------- | ------------------ |
+| API Gateway      | REST APIs          |
+| Kafka            | Event Streaming    |
+| PostgreSQL       | Supplier Database  |
 | Document Storage | Supplier Documents |
-| Identity Service | Authentication |
+| Identity Service | Authentication     |
 
 ---
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
-| IdentityClient | Authentication & User Validation |
-| NotificationClient | Supplier Notifications |
-| DocumentClient *(Optional)* | Document Storage Metadata |
+| Client                      | Purpose                          |
+| --------------------------- | -------------------------------- |
+| IdentityClient              | Authentication & User Validation |
+| NotificationClient          | Supplier Notifications           |
+| DocumentClient _(Optional)_ | Document Storage Metadata        |
 
 > Supplier master data shall be distributed to downstream services using Kafka. OpenFeign shall be limited to synchronous validation and notification use cases.
 
@@ -1492,16 +1492,16 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| supplier.auto-number | true | Yes | Auto-generate Supplier Code |
-| supplier.code.prefix | SUP | Yes | Supplier Code Prefix |
-| supplier.rating.max | 5 | Yes | Maximum Rating |
-| supplier.performance.recalculate.cron | 0 0 2 * * * | Yes | Performance Recalculation Schedule |
-| supplier.document.max-size-mb | 25 | Yes | Maximum Upload Size |
-| supplier.allowed-document-types | pdf,jpg,png,docx,xlsx | Yes | Allowed File Types |
-| supplier.search.max-page-size | 100 | Yes | Maximum Search Page Size |
-| supplier.event.retry.max-attempts | 3 | Yes | Kafka Retry Attempts |
+| Property                              | Default               | Required | Description                        |
+| ------------------------------------- | --------------------- | -------- | ---------------------------------- |
+| supplier.auto-number                  | true                  | Yes      | Auto-generate Supplier Code        |
+| supplier.code.prefix                  | SUP                   | Yes      | Supplier Code Prefix               |
+| supplier.rating.max                   | 5                     | Yes      | Maximum Rating                     |
+| supplier.performance.recalculate.cron | 0 0 2 \* \* \*        | Yes      | Performance Recalculation Schedule |
+| supplier.document.max-size-mb         | 25                    | Yes      | Maximum Upload Size                |
+| supplier.allowed-document-types       | pdf,jpg,png,docx,xlsx | Yes      | Allowed File Types                 |
+| supplier.search.max-page-size         | 100                   | Yes      | Maximum Search Page Size           |
+| supplier.event.retry.max-attempts     | 3                     | Yes      | Kafka Retry Attempts               |
 
 ---
 
@@ -1603,21 +1603,21 @@ Events exceeding retry attempts shall be published to the Dead Letter Queue (DLQ
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP |
-|------------|-------------|------|
-| SP-VAL-001 | Validation Failed | 400 |
-| SP-AUTH-001 | Authentication Required | 401 |
-| SP-AUTH-002 | Access Denied | 403 |
-| SP-BUS-001 | Supplier Verification Failed | 422 |
-| SP-BUS-002 | Supplier Not Found | 404 |
-| SP-BUS-003 | Duplicate Supplier Code | 409 |
-| SP-BUS-004 | Duplicate GST Number | 409 |
-| SP-BUS-005 | Duplicate PAN Number | 409 |
-| SP-BUS-006 | Supplier Already Approved | 409 |
-| SP-BUS-007 | Supplier Already Blacklisted | 409 |
-| SP-BUS-008 | Invalid Supplier State Transition | 422 |
-| SP-BUS-009 | Contract Expired | 422 |
-| SP-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                       | HTTP |
+| ----------- | --------------------------------- | ---- |
+| SP-VAL-001  | Validation Failed                 | 400  |
+| SP-AUTH-001 | Authentication Required           | 401  |
+| SP-AUTH-002 | Access Denied                     | 403  |
+| SP-BUS-001  | Supplier Verification Failed      | 422  |
+| SP-BUS-002  | Supplier Not Found                | 404  |
+| SP-BUS-003  | Duplicate Supplier Code           | 409  |
+| SP-BUS-004  | Duplicate GST Number              | 409  |
+| SP-BUS-005  | Duplicate PAN Number              | 409  |
+| SP-BUS-006  | Supplier Already Approved         | 409  |
+| SP-BUS-007  | Supplier Already Blacklisted      | 409  |
+| SP-BUS-008  | Invalid Supplier State Transition | 422  |
+| SP-BUS-009  | Contract Expired                  | 422  |
+| SP-SYS-001  | Internal Server Error             | 500  |
 
 ---
 
@@ -1888,33 +1888,33 @@ The Supplier Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source Document | Verification |
-|-------------|-----------------|--------------|
-| SP-SYS-001 – SP-SYS-015 | FRD-Supplier | Functional Testing |
-| SP-SYS-016 – SP-SYS-034 | SRS-001 Platform Foundation | Integration Testing |
-| SP-NFR-001 – SP-NFR-018 | PRD / HLD | Performance, Reliability & Security Testing |
+| Requirement             | Source Document             | Verification                                |
+| ----------------------- | --------------------------- | ------------------------------------------- |
+| SP-SYS-001 – SP-SYS-015 | FRD-Supplier                | Functional Testing                          |
+| SP-SYS-016 – SP-SYS-034 | SRS-001 Platform Foundation | Integration Testing                         |
+| SP-NFR-001 – SP-NFR-018 | PRD / HLD                   | Performance, Reliability & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| SP-SYS-001 | TC-SP-001 |
-| SP-SYS-002 | TC-SP-002 |
-| SP-SYS-003 | TC-SP-003 |
-| SP-SYS-004 | TC-SP-004 |
-| SP-SYS-005 | TC-SP-005 |
-| SP-SYS-006 | TC-SP-006 |
-| SP-SYS-007 | TC-SP-007 |
-| SP-SYS-008 | TC-SP-008 |
-| SP-SYS-009 | TC-SP-009 |
-| SP-SYS-010 | TC-SP-010 |
-| SP-SYS-011 | TC-SP-011 |
-| SP-SYS-012 | TC-SP-012 |
-| SP-SYS-013 | TC-SP-013 |
-| SP-SYS-014 | TC-SP-014 |
-| SP-SYS-015 | TC-SP-015 |
+| ----------- | --------- |
+| SP-SYS-001  | TC-SP-001 |
+| SP-SYS-002  | TC-SP-002 |
+| SP-SYS-003  | TC-SP-003 |
+| SP-SYS-004  | TC-SP-004 |
+| SP-SYS-005  | TC-SP-005 |
+| SP-SYS-006  | TC-SP-006 |
+| SP-SYS-007  | TC-SP-007 |
+| SP-SYS-008  | TC-SP-008 |
+| SP-SYS-009  | TC-SP-009 |
+| SP-SYS-010  | TC-SP-010 |
+| SP-SYS-011  | TC-SP-011 |
+| SP-SYS-012  | TC-SP-012 |
+| SP-SYS-013  | TC-SP-013 |
+| SP-SYS-014  | TC-SP-014 |
+| SP-SYS-015  | TC-SP-015 |
 
 ---
 
@@ -1942,81 +1942,77 @@ The Supplier Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Supplier | Create, Update, Search, Get |
-| Verification | Verify, Approve |
-| Lifecycle | Activate, Deactivate, Blacklist |
-| Contacts | Create, Update, Delete |
-| Addresses | Create, Update, Delete |
-| Bank Accounts | Create, Update, Set Default |
-| Contracts | Create, Update, Renew |
-| Certifications | Upload, Update |
-| Documents | Upload, Download, Delete |
-| Ratings | Update, View |
-| Performance | Calculate, View |
+| Resource       | Endpoints                       |
+| -------------- | ------------------------------- |
+| Supplier       | Create, Update, Search, Get     |
+| Verification   | Verify, Approve                 |
+| Lifecycle      | Activate, Deactivate, Blacklist |
+| Contacts       | Create, Update, Delete          |
+| Addresses      | Create, Update, Delete          |
+| Bank Accounts  | Create, Update, Set Default     |
+| Contracts      | Create, Update, Renew           |
+| Certifications | Upload, Update                  |
+| Documents      | Upload, Download, Delete        |
+| Ratings        | Update, View                    |
+| Performance    | Calculate, View                 |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Supplier | Aggregate Root |
-| SupplierContact | Contact Management |
-| SupplierAddress | Address Management |
-| SupplierBankAccount | Banking Information |
-| SupplierCategory | Supplier Classification |
-| SupplierContract | Commercial Agreements |
-| SupplierCertification | Regulatory Compliance |
-| SupplierDocument | Document Repository |
-| SupplierRating | Rating History |
-| SupplierPerformance | KPI Metrics |
-| SupplierAudit | Audit Trail |
+| Aggregate             | Description             |
+| --------------------- | ----------------------- |
+| Supplier              | Aggregate Root          |
+| SupplierContact       | Contact Management      |
+| SupplierAddress       | Address Management      |
+| SupplierBankAccount   | Banking Information     |
+| SupplierCategory      | Supplier Classification |
+| SupplierContract      | Commercial Agreements   |
+| SupplierCertification | Regulatory Compliance   |
+| SupplierDocument      | Document Repository     |
+| SupplierRating        | Rating History          |
+| SupplierPerformance   | KPI Metrics             |
+| SupplierAudit         | Audit Trail             |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Supplier Database |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
-| Notification Service | Supplier Notifications |
-| Procurement Service | Supplier Consumption |
-| Billing Service | Supplier Payment Integration |
-| Audit Service | Audit Trail |
-| Reporting Service | Supplier Analytics |
-| Document Storage | Supplier Document Repository |
+| Dependency           | Purpose                        |
+| -------------------- | ------------------------------ |
+| Platform Foundation  | Shared Frameworks              |
+| Gateway              | API Routing                    |
+| Eureka               | Service Discovery              |
+| PostgreSQL           | Supplier Database              |
+| Kafka                | Event Streaming                |
+| Identity Service     | Authentication & Authorization |
+| Notification Service | Supplier Notifications         |
+| Procurement Service  | Supplier Consumption           |
+| Billing Service      | Supplier Payment Integration   |
+| Audit Service        | Audit Trail                    |
+| Reporting Service    | Supplier Analytics             |
+| Document Storage     | Supplier Document Repository   |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Supplier Service Software Requirements Specification |
+| Version | Description                                                  |
+| ------- | ------------------------------------------------------------ |
+| v1.0.0  | Initial Supplier Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
 # End of Document
-
-
-
-

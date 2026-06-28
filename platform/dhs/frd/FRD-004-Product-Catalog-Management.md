@@ -85,40 +85,40 @@ The Product Service provides centralized product catalog management capabilities
 
 Responsibilities:
 
-* Product Management
-* Product Categorization
-* Product Pricing Management
-* Product Attribute Management
-* Product Barcode Management
-* Product Search
-* Product Activation and Deactivation
-* Product Lifecycle Management
-* Product Audit Logging
+- Product Management
+- Product Categorization
+- Product Pricing Management
+- Product Attribute Management
+- Product Barcode Management
+- Product Search
+- Product Activation and Deactivation
+- Product Lifecycle Management
+- Product Audit Logging
 
 The Product Service acts as the master source of product information for:
 
-* Inventory Management
-* Order Management
-* Billing
-* Dispatch
-* Reporting
-* Analytics
+- Inventory Management
+- Order Management
+- Billing
+- Dispatch
+- Reporting
+- Analytics
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* REST APIs and OpenFeign Communication
-* Event-Driven Architecture
-* Kafka Integration
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- REST APIs and OpenFeign Communication
+- Event-Driven Architecture
+- Kafka Integration
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -142,11 +142,11 @@ product-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
@@ -154,14 +154,14 @@ product-db
 
 ### Synchronous Dependencies
 
-* inventory-service
-* order-service
+- inventory-service
+- order-service
 
 ### Asynchronous Dependencies
 
-* reporting-service
-* audit-service
-* notification-service
+- reporting-service
+- audit-service
+- notification-service
 
 ---
 
@@ -183,8 +183,8 @@ Critical
 
 ### Actors
 
-* Company Admin
-* Product Administrator
+- Company Admin
+- Product Administrator
 
 ---
 
@@ -494,16 +494,16 @@ API Gateway-->>Administrator: Success
 
 Technologies:
 
-* REST APIs
-* OpenFeign
-* Service Discovery
+- REST APIs
+- OpenFeign
+- Service Discovery
 
 Used For:
 
-* Product Lookup
-* Product Search
-* Product Validation
-* Product Pricing Retrieval
+- Product Lookup
+- Product Search
+- Product Validation
+- Product Pricing Retrieval
 
 ---
 
@@ -511,17 +511,17 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Product Lifecycle Events
-* Reporting Events
-* Audit Events
-* Analytics Events
+- Product Lifecycle Events
+- Reporting Events
+- Audit Events
+- Analytics Events
 
 # 14. Published Events
 
@@ -673,22 +673,22 @@ GET    /api/v1/products/{id}/barcodes
 
 Fields:
 
-* Product Code
-* Product Name
-* Description
-* Category
-* Status
-* Barcode
-* Base Price
+- Product Code
+- Product Name
+- Description
+- Category
+- Status
+- Barcode
+- Base Price
 
 Actions:
 
-* Create
-* Update
-* Activate
-* Deactivate
-* Search
-* View
+- Create
+- Update
+- Activate
+- Deactivate
+- Search
+- View
 
 ---
 
@@ -696,17 +696,17 @@ Actions:
 
 Fields:
 
-* Category Code
-* Category Name
-* Description
-* Status
+- Category Code
+- Category Name
+- Description
+- Status
 
 Actions:
 
-* Create
-* Update
-* Delete
-* Search
+- Create
+- Update
+- Delete
+- Search
 
 ---
 
@@ -714,19 +714,19 @@ Actions:
 
 Fields:
 
-* Product
-* Price Type
-* Amount
-* Effective Date
-* Expiry Date
-* Status
+- Product
+- Price Type
+- Amount
+- Effective Date
+- Expiry Date
+- Status
 
 Actions:
 
-* Add
-* Update
-* Activate
-* Deactivate
+- Add
+- Update
+- Activate
+- Deactivate
 
 ---
 
@@ -734,15 +734,15 @@ Actions:
 
 Fields:
 
-* Attribute Name
-* Attribute Value
-* Status
+- Attribute Name
+- Attribute Value
+- Status
 
 Actions:
 
-* Add
-* Update
-* Remove
+- Add
+- Update
+- Remove
 
 ---
 
@@ -750,39 +750,39 @@ Actions:
 
 ## Product Code
 
-* Required
-* Unique
-* Maximum 50 characters
-* Uppercase only
+- Required
+- Unique
+- Maximum 50 characters
+- Uppercase only
 
 ---
 
 ## Product Name
 
-* Required
-* Maximum 200 characters
+- Required
+- Maximum 200 characters
 
 ---
 
 ## Barcode
 
-* Optional
-* Unique
-* Maximum 50 characters
+- Optional
+- Unique
+- Maximum 50 characters
 
 ---
 
 ## Price
 
-* Required
-* Greater than zero
+- Required
+- Greater than zero
 
 ---
 
 ## Category Name
 
-* Required
-* Maximum 100 characters
+- Required
+- Maximum 100 characters
 
 ---
 
@@ -876,12 +876,12 @@ PRODUCT_BARCODE_UPDATED
 
 System Notifications:
 
-* Product Created
-* Product Updated
-* Product Activated
-* Product Deactivated
-* Product Price Updated
-* Product Category Updated
+- Product Created
+- Product Updated
+- Product Activated
+- Product Deactivated
+- Product Price Updated
+- Product Category Updated
 
 ---
 
@@ -889,13 +889,13 @@ System Notifications:
 
 Reports:
 
-* Product Catalog Report
-* Active Product Report
-* Inactive Product Report
-* Product Category Report
-* Product Price Report
-* Product Barcode Report
-* Product Audit Report
+- Product Catalog Report
+- Active Product Report
+- Inactive Product Report
+- Product Category Report
+- Product Price Report
+- Product Barcode Report
+- Product Audit Report
 
 ---
 
@@ -973,51 +973,51 @@ ProductBarcode
 
 Product Service exclusively owns:
 
-* Product
-* ProductCategory
-* ProductPrice
-* ProductAttribute
-* ProductBarcode
+- Product
+- ProductCategory
+- ProductPrice
+- ProductAttribute
+- ProductBarcode
 
 ---
 
 # 24. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Circuit Breakers
-* Event Idempotency
-* Audit Logging
-* Database per Service
-* Independent Deployments
-* Observability Integration
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Circuit Breakers
+- Event Idempotency
+- Audit Logging
+- Database per Service
+- Independent Deployments
+- Observability Integration
 
 ---
 
 # 25. Success Criteria
 
-* Products can be created successfully.
-* Product codes remain unique.
-* Products can be categorized correctly.
-* Product prices can be managed.
-* Product attributes can be maintained.
-* Product barcodes can be managed.
-* Product activities are fully audited.
-* Product reports are available.
-* Product Service registers successfully with Service Discovery.
-* Product APIs are accessible through API Gateway.
-* Product events are published successfully to Kafka.
-* Distributed tracing is available for product workflows.
-* Product Service remains independently deployable.
+- Products can be created successfully.
+- Product codes remain unique.
+- Products can be categorized correctly.
+- Product prices can be managed.
+- Product attributes can be maintained.
+- Product barcodes can be managed.
+- Product activities are fully audited.
+- Product reports are available.
+- Product Service registers successfully with Service Discovery.
+- Product APIs are accessible through API Gateway.
+- Product events are published successfully to Kafka.
+- Distributed tracing is available for product workflows.
+- Product Service remains independently deployable.
 
 ---
 

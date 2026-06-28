@@ -22,14 +22,14 @@ The Distributed Hub and Sales (DHS) Platform follows a Cloud-Native Monorepo-Bas
 
 The platform supports business processes that span multiple services, including:
 
-* Order Creation
-* Inventory Reservation
-* Partial Billing
-* Invoice Generation
-* Shipment Creation
-* Customer Notifications
-* Reporting and Analytics
-* Audit Logging
+- Order Creation
+- Inventory Reservation
+- Partial Billing
+- Invoice Generation
+- Shipment Creation
+- Customer Notifications
+- Reporting and Analytics
+- Audit Logging
 
 A typical business transaction spans multiple services.
 
@@ -49,23 +49,23 @@ Notification Service
 
 Failures can occur at any stage:
 
-* Inventory unavailable
-* Billing failure
-* Dispatch failure
-* Notification failure
-* Service unavailability
-* Integration failures
+- Inventory unavailable
+- Billing failure
+- Dispatch failure
+- Notification failure
+- Service unavailability
+- Integration failures
 
 The platform requires:
 
-* Data consistency
-* Failure recovery
-* Service independence
-* High availability
-* Independent deployments
-* Partial billing support
-* Backorder management
-* Distributed resiliency
+- Data consistency
+- Failure recovery
+- Service independence
+- High availability
+- Independent deployments
+- Partial billing support
+- Backorder management
+- Distributed resiliency
 
 Traditional distributed transactions such as Two-Phase Commit (2PC) are unsuitable because they introduce tight coupling, blocking behavior, and reduced availability.
 
@@ -75,33 +75,33 @@ Traditional distributed transactions such as Two-Phase Commit (2PC) are unsuitab
 
 ## Business Drivers
 
-* Prevent inconsistent business states
-* Support partial fulfillment
-* Minimize order failures
-* Ensure operational reliability
-* Improve customer satisfaction
+- Prevent inconsistent business states
+- Support partial fulfillment
+- Minimize order failures
+- Ensure operational reliability
+- Improve customer satisfaction
 
 ---
 
 ## Technical Drivers
 
-* Loose coupling
-* Failure isolation
-* Event-driven workflows
-* Scalability
-* Independent deployments
-* Service autonomy
-* Distributed resiliency
+- Loose coupling
+- Failure isolation
+- Event-driven workflows
+- Scalability
+- Independent deployments
+- Service autonomy
+- Distributed resiliency
 
 ---
 
 ## Operational Drivers
 
-* Better observability
-* Easier troubleshooting
-* Improved resiliency
-* Simplified operations
-* Independent deployments
+- Better observability
+- Easier troubleshooting
+- Improved resiliency
+- Simplified operations
+- Independent deployments
 
 ---
 
@@ -117,17 +117,17 @@ All participating services commit or rollback together.
 
 ### Advantages
 
-* Strong consistency
-* Simple conceptual model
+- Strong consistency
+- Simple conceptual model
 
 ### Disadvantages
 
-* Tight coupling
-* Blocking transactions
-* Single point of failure
-* Poor scalability
-* Reduced availability
-* Operational complexity
+- Tight coupling
+- Blocking transactions
+- Single point of failure
+- Poor scalability
+- Reduced availability
+- Operational complexity
 
 ---
 
@@ -139,16 +139,16 @@ Business services invoke each other synchronously and maintain transaction state
 
 ### Advantages
 
-* Easier implementation
-* Immediate consistency
+- Easier implementation
+- Immediate consistency
 
 ### Disadvantages
 
-* Tight runtime coupling
-* Cascading failures
-* Reduced availability
-* Poor scalability
-* Complex recovery
+- Tight runtime coupling
+- Cascading failures
+- Reduced availability
+- Poor scalability
+- Complex recovery
 
 ---
 
@@ -160,19 +160,19 @@ Business transactions are decomposed into local transactions coordinated through
 
 ### Advantages
 
-* Loose coupling
-* High availability
-* Scalable architecture
-* Failure isolation
-* Independent service deployments
-* Distributed resiliency
-* Supports partial billing workflows
+- Loose coupling
+- High availability
+- Scalable architecture
+- Failure isolation
+- Independent service deployments
+- Distributed resiliency
+- Supports partial billing workflows
 
 ### Disadvantages
 
-* Eventual consistency
-* Requires compensating logic
-* Additional observability requirements
+- Eventual consistency
+- Requires compensating logic
+- Additional observability requirements
 
 ---
 
@@ -463,10 +463,10 @@ NotificationFailed
 
 Consumers shall:
 
-* Process an event only once
-* Ignore duplicate events
-* Maintain processing status
-* Support replay mechanisms
+- Process an event only once
+- Ignore duplicate events
+- Maintain processing status
+- Support replay mechanisms
 
 Implementation:
 
@@ -536,16 +536,16 @@ COMPENSATED --> [*]
 
 Monitor:
 
-* Transaction completion rates
-* Compensation success rates
-* Retry counts
-* Dead letter events
-* Processing latency
-* Event lag
-* Failed workflows
-* Saga completion time
-* Workflow execution time
-* Service retry counts
+- Transaction completion rates
+- Compensation success rates
+- Retry counts
+- Dead letter events
+- Processing latency
+- Event lag
+- Failed workflows
+- Saga completion time
+- Workflow execution time
+- Service retry counts
 
 Technology:
 
@@ -566,17 +566,17 @@ Audit Events
 
 Events shall:
 
-* Be immutable
-* Be authenticated
-* Be authorized
-* Be audited
-* Avoid sensitive payload exposure
+- Be immutable
+- Be authenticated
+- Be authorized
+- Be audited
+- Avoid sensitive payload exposure
 
 Compensation activities shall:
 
-* Be logged
-* Be traceable
-* Preserve audit trails
+- Be logged
+- Be traceable
+- Preserve audit trails
 
 ---
 
@@ -584,24 +584,24 @@ Compensation activities shall:
 
 ## Positive Consequences
 
-* Loose coupling
-* High availability
-* Failure isolation
-* Better resiliency
-* Independent service deployments
-* Distributed resiliency
-* Partial billing support
-* Backorder support
-* Better scalability
+- Loose coupling
+- High availability
+- Failure isolation
+- Better resiliency
+- Independent service deployments
+- Distributed resiliency
+- Partial billing support
+- Backorder support
+- Better scalability
 
 ---
 
 ## Negative Consequences
 
-* Eventual consistency
-* Increased observability requirements
-* More complex troubleshooting
-* Compensation logic complexity
+- Eventual consistency
+- Increased observability requirements
+- More complex troubleshooting
+- Compensation logic complexity
 
 ---
 
@@ -628,14 +628,14 @@ resiliency.
 
 # 21. Related Documents
 
-* BRD-001
-* PRD-001
-* SRS-001
-* HLD-001
-* ADR-001 Monorepo-Based Multi-Module Microservices Architecture
-* ADR-002 Database per Service Strategy
-* ADR-003 Hybrid Communication Architecture
-* ADR-004 Service Discovery Architecture
-* ADR-005 API Gateway Strategy
+- BRD-001
+- PRD-001
+- SRS-001
+- HLD-001
+- ADR-001 Monorepo-Based Multi-Module Microservices Architecture
+- ADR-002 Database per Service Strategy
+- ADR-003 Hybrid Communication Architecture
+- ADR-004 Service Discovery Architecture
+- ADR-005 API Gateway Strategy
 
 ---

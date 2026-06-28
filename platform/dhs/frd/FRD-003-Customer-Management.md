@@ -85,41 +85,41 @@ The Customer Service provides centralized customer lifecycle management capabili
 
 Responsibilities:
 
-* Customer Registration
-* Customer Profile Management
-* Customer Address Management
-* Customer Contact Management
-* Customer Classification
-* Customer Search
-* Customer Status Management
-* Customer Branch Association
-* Customer Order Visibility
-* Customer Audit Logging
+- Customer Registration
+- Customer Profile Management
+- Customer Address Management
+- Customer Contact Management
+- Customer Classification
+- Customer Search
+- Customer Status Management
+- Customer Branch Association
+- Customer Order Visibility
+- Customer Audit Logging
 
 The service acts as the primary business entity driving:
 
-* Orders
-* Billing
-* Dispatch
-* Notifications
-* Reporting
-* Analytics
+- Orders
+- Billing
+- Dispatch
+- Notifications
+- Reporting
+- Analytics
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* REST APIs and OpenFeign Communication
-* Event-Driven Architecture
-* Kafka Integration
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- REST APIs and OpenFeign Communication
+- Event-Driven Architecture
+- Kafka Integration
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -143,11 +143,11 @@ customer-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
@@ -155,14 +155,14 @@ customer-db
 
 ### Synchronous Dependencies
 
-* branch-service
-* order-service
+- branch-service
+- order-service
 
 ### Asynchronous Dependencies
 
-* reporting-service
-* audit-service
-* notification-service
+- reporting-service
+- audit-service
+- notification-service
 
 ---
 
@@ -186,9 +186,9 @@ Critical
 
 ### Actors
 
-* Company Admin
-* Branch Manager
-* Sales Executive
+- Company Admin
+- Branch Manager
+- Sales Executive
 
 ---
 
@@ -511,17 +511,17 @@ API Gateway-->>Customer: Order History
 
 Technologies:
 
-* REST APIs
-* OpenFeign
-* Service Discovery
+- REST APIs
+- OpenFeign
+- Service Discovery
 
 Used For:
 
-* Branch Validation
-* Branch Lookup
-* Customer Lookup
-* Customer Search
-* Customer Order Visibility
+- Branch Validation
+- Branch Lookup
+- Customer Lookup
+- Customer Search
+- Customer Order Visibility
 
 ---
 
@@ -529,18 +529,18 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Customer Lifecycle Events
-* Reporting Events
-* Audit Events
-* Notification Events
-* Analytics Events
+- Customer Lifecycle Events
+- Reporting Events
+- Audit Events
+- Notification Events
+- Analytics Events
 
 # 14. Published Events
 
@@ -686,22 +686,22 @@ GET /api/v1/customers/{id}/orders/{orderId}
 
 Fields:
 
-* Customer Code
-* Customer Name
-* Customer Type
-* Email
-* Mobile Number
-* GST Number
-* Branch
-* Status
+- Customer Code
+- Customer Name
+- Customer Type
+- Email
+- Mobile Number
+- GST Number
+- Branch
+- Status
 
 Actions:
 
-* Create
-* Update
-* Activate
-* Deactivate
-* Search
+- Create
+- Update
+- Activate
+- Deactivate
+- Search
 
 ---
 
@@ -709,19 +709,19 @@ Actions:
 
 Fields:
 
-* Address Type
-* Address Line 1
-* Address Line 2
-* City
-* State
-* Country
-* Postal Code
+- Address Type
+- Address Line 1
+- Address Line 2
+- City
+- State
+- Country
+- Postal Code
 
 Actions:
 
-* Add
-* Update
-* Remove
+- Add
+- Update
+- Remove
 
 ---
 
@@ -729,16 +729,16 @@ Actions:
 
 Fields:
 
-* Contact Person Name
-* Designation
-* Email
-* Mobile Number
+- Contact Person Name
+- Designation
+- Email
+- Mobile Number
 
 Actions:
 
-* Add
-* Update
-* Remove
+- Add
+- Update
+- Remove
 
 ---
 
@@ -746,17 +746,17 @@ Actions:
 
 Fields:
 
-* Order Number
-* Order Date
-* Status
-* Invoice Number
-* Shipment Number
+- Order Number
+- Order Date
+- Status
+- Invoice Number
+- Shipment Number
 
 Actions:
 
-* View Details
-* Search
-* Filter
+- View Details
+- Search
+- Filter
 
 ---
 
@@ -764,39 +764,39 @@ Actions:
 
 ## Customer Code
 
-* Required
-* Unique
-* Maximum 20 characters
-* Uppercase only
+- Required
+- Unique
+- Maximum 20 characters
+- Uppercase only
 
 ---
 
 ## Customer Name
 
-* Required
-* Maximum 150 characters
+- Required
+- Maximum 150 characters
 
 ---
 
 ## Email
 
-* Optional
-* Valid email format
+- Optional
+- Valid email format
 
 ---
 
 ## Mobile Number
 
-* Required
-* Numeric
-* Maximum 15 digits
+- Required
+- Numeric
+- Maximum 15 digits
 
 ---
 
 ## GST Number
 
-* Optional
-* Valid GST format
+- Optional
+- Valid GST format
 
 ---
 
@@ -879,11 +879,11 @@ CUSTOMER_SEARCHED
 
 System notifications:
 
-* Customer Registration Completed
-* Customer Activation Completed
-* Customer Deactivation Completed
-* Customer Profile Updated
-* Customer Branch Assignment Completed
+- Customer Registration Completed
+- Customer Activation Completed
+- Customer Deactivation Completed
+- Customer Profile Updated
+- Customer Branch Assignment Completed
 
 ---
 
@@ -891,13 +891,13 @@ System notifications:
 
 Reports:
 
-* Customer List Report
-* Active Customer Report
-* Inactive Customer Report
-* Customer by Branch Report
-* Customer Order History Report
-* Customer Activity Report
-* Customer Audit Report
+- Customer List Report
+- Active Customer Report
+- Inactive Customer Report
+- Customer by Branch Report
+- Customer Order History Report
+- Customer Activity Report
+- Customer Audit Report
 
 ---
 
@@ -969,51 +969,51 @@ CustomerBranch
 
 Customer Service exclusively owns:
 
-* Customer
-* CustomerAddress
-* CustomerContact
-* CustomerBranch
+- Customer
+- CustomerAddress
+- CustomerContact
+- CustomerBranch
 
 ---
 
 # 24. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Circuit Breakers
-* Event Idempotency
-* Audit Logging
-* Database per Service
-* Independent Deployments
-* Observability Integration
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Circuit Breakers
+- Event Idempotency
+- Audit Logging
+- Database per Service
+- Independent Deployments
+- Observability Integration
 
 ---
 
 # 25. Success Criteria
 
-* Customers can be registered successfully.
-* Customer codes remain unique.
-* Customers can be associated with branches.
-* Customer addresses and contacts are maintained.
-* Customers can view their own order history.
-* Inactive customers cannot initiate new order requests.
-* Customer activities are fully audited.
-* Customer reports are available.
-* Customer Service registers successfully with Service Discovery.
-* Customer APIs are accessible through API Gateway.
-* Customer events are published successfully to Kafka.
-* Branch validation works through Branch Service APIs.
-* Distributed tracing is available for customer workflows.
-* Customer Service remains independently deployable.
+- Customers can be registered successfully.
+- Customer codes remain unique.
+- Customers can be associated with branches.
+- Customer addresses and contacts are maintained.
+- Customers can view their own order history.
+- Inactive customers cannot initiate new order requests.
+- Customer activities are fully audited.
+- Customer reports are available.
+- Customer Service registers successfully with Service Discovery.
+- Customer APIs are accessible through API Gateway.
+- Customer events are published successfully to Kafka.
+- Branch validation works through Branch Service APIs.
+- Distributed tracing is available for customer workflows.
+- Customer Service remains independently deployable.
 
 ---
 
@@ -1033,4 +1033,3 @@ Customer Service exclusively owns:
 | BR-011 | FR-CUST-010 |
 
 ---
-

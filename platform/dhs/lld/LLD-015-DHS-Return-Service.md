@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Returns Service |
-| Document | Low Level Design |
-| Document ID | LLD-015 |
-| Repository | starone-dhs-platform |
-| Module | returns-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Returns Service                        |
+| Document    | Low Level Design                       |
+| Document ID | LLD-015                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | returns-service                        |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -364,16 +364,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Customer Return | Customer Return Processing |
-| Supplier Return | Supplier Return Processing |
-| Return Order | Return Transaction |
-| RMA | Return Authorization |
-| Return Receipt | Returned Item Receipt |
-| Return Inspection | Quality Inspection |
+| Component         | Responsibility                |
+| ----------------- | ----------------------------- |
+| Customer Return   | Customer Return Processing    |
+| Supplier Return   | Supplier Return Processing    |
+| Return Order      | Return Transaction            |
+| RMA               | Return Authorization          |
+| Return Receipt    | Returned Item Receipt         |
+| Return Inspection | Quality Inspection            |
 | Return Resolution | Refund / Replacement / Reject |
-| Return Timeline | Lifecycle History |
+| Return Timeline   | Lifecycle History             |
 
 ---
 
@@ -714,16 +714,16 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| CustomerReturnRepository | Customer Returns |
-| SupplierReturnRepository | Supplier Returns |
-| ReturnOrderRepository | Return Orders |
-| RMARepository | RMAs |
-| ReturnReceiptRepository | Return Receipts |
+| Repository                 | Responsibility    |
+| -------------------------- | ----------------- |
+| CustomerReturnRepository   | Customer Returns  |
+| SupplierReturnRepository   | Supplier Returns  |
+| ReturnOrderRepository      | Return Orders     |
+| RMARepository              | RMAs              |
+| ReturnReceiptRepository    | Return Receipts   |
 | ReturnInspectionRepository | Return Inspection |
 | ReturnResolutionRepository | Return Resolution |
-| ReturnTimelineRepository | Timeline |
+| ReturnTimelineRepository   | Timeline          |
 
 ---
 
@@ -765,15 +765,15 @@ dto.response
 
 ## ReturnOrderResponse
 
-| Field | Type |
-|---------|------|
-| returnOrderId | UUID |
-| returnOrderNumber | String |
-| returnType | ReturnType |
-| referenceDocumentId | UUID |
-| returnStatus | ReturnStatus |
-| returnDate | LocalDate |
-| totalReturnAmount | BigDecimal |
+| Field               | Type         |
+| ------------------- | ------------ |
+| returnOrderId       | UUID         |
+| returnOrderNumber   | String       |
+| returnType          | ReturnType   |
+| referenceDocumentId | UUID         |
+| returnStatus        | ReturnStatus |
+| returnDate          | LocalDate    |
+| totalReturnAmount   | BigDecimal   |
 
 ---
 
@@ -803,100 +803,100 @@ entity
 
 ## CustomerReturn
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| salesOrderId | UUID |
-| returnReason | ReturnReason |
-| requestedDate | LocalDate |
-| status | CustomerReturnStatus |
+| Attribute     | Type                 |
+| ------------- | -------------------- |
+| id            | UUID                 |
+| customerId    | UUID                 |
+| salesOrderId  | UUID                 |
+| returnReason  | ReturnReason         |
+| requestedDate | LocalDate            |
+| status        | CustomerReturnStatus |
 
 ---
 
 ## SupplierReturn
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| purchaseOrderId | UUID |
-| returnReason | ReturnReason |
-| returnDate | LocalDate |
-| status | SupplierReturnStatus |
+| Attribute       | Type                 |
+| --------------- | -------------------- |
+| id              | UUID                 |
+| supplierId      | UUID                 |
+| purchaseOrderId | UUID                 |
+| returnReason    | ReturnReason         |
+| returnDate      | LocalDate            |
+| status          | SupplierReturnStatus |
 
 ---
 
 ## ReturnOrder
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| returnOrderNumber | String |
-| returnType | ReturnType |
-| referenceDocumentId | UUID |
-| rmaId | UUID |
-| status | ReturnStatus |
+| Attribute           | Type         |
+| ------------------- | ------------ |
+| id                  | UUID         |
+| returnOrderNumber   | String       |
+| returnType          | ReturnType   |
+| referenceDocumentId | UUID         |
+| rmaId               | UUID         |
+| status              | ReturnStatus |
 
 ---
 
 ## RMA
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| rmaNumber | String |
+| Attribute  | Type      |
+| ---------- | --------- |
+| id         | UUID      |
+| rmaNumber  | String    |
 | issuedDate | LocalDate |
 | expiryDate | LocalDate |
-| status | RMAStatus |
+| status     | RMAStatus |
 
 ---
 
 ## ReturnReceipt
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| receiptNumber | String |
-| receiptDate | LocalDate |
-| warehouseId | UUID |
-| status | ReceiptStatus |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| receiptNumber | String        |
+| receiptDate   | LocalDate     |
+| warehouseId   | UUID          |
+| status        | ReceiptStatus |
 
 ---
 
 ## ReturnInspection
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inspectionDate | LocalDate |
-| inspectedBy | UUID |
+| Attribute        | Type             |
+| ---------------- | ---------------- |
+| id               | UUID             |
+| inspectionDate   | LocalDate        |
+| inspectedBy      | UUID             |
 | inspectionResult | InspectionResult |
-| remarks | String |
+| remarks          | String           |
 
 ---
 
 ## ReturnResolution
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| resolutionType | ResolutionType |
+| Attribute        | Type             |
+| ---------------- | ---------------- |
+| id               | UUID             |
+| resolutionType   | ResolutionType   |
 | resolutionStatus | ResolutionStatus |
-| resolvedBy | UUID |
-| resolvedAt | Instant |
+| resolvedBy       | UUID             |
+| resolvedAt       | Instant          |
 
 ---
 
 ## ReturnTimeline
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| returnOrderId | UUID |
-| eventType | String |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| returnOrderId  | UUID    |
+| eventType      | String  |
 | eventTimestamp | Instant |
-| remarks | String |
+| remarks        | String  |
 
 ---
 
@@ -966,15 +966,15 @@ ReturnResolutionValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| CustomerReturnValidator | Customer Return Validation |
-| SupplierReturnValidator | Supplier Return Validation |
-| ReturnOrderValidator | Return Order Validation |
-| RMAValidator | RMA Validation |
-| ReturnReceiptValidator | Receipt Validation |
-| ReturnInspectionValidator | Inspection Validation |
-| ReturnResolutionValidator | Resolution Validation |
+| Validator                 | Purpose                    |
+| ------------------------- | -------------------------- |
+| CustomerReturnValidator   | Customer Return Validation |
+| SupplierReturnValidator   | Supplier Return Validation |
+| ReturnOrderValidator      | Return Order Validation    |
+| RMAValidator              | RMA Validation             |
+| ReturnReceiptValidator    | Receipt Validation         |
+| ReturnInspectionValidator | Inspection Validation      |
+| ReturnResolutionValidator | Resolution Validation      |
 
 ---
 
@@ -1197,18 +1197,18 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| CUSTOMER_RETURN_CREATE | Create Customer Return |
-| CUSTOMER_RETURN_APPROVE | Approve Customer Return |
-| SUPPLIER_RETURN_CREATE | Create Supplier Return |
-| SUPPLIER_RETURN_APPROVE | Approve Supplier Return |
-| RMA_MANAGE | Manage Return Merchandise Authorization |
-| RETURN_RECEIPT_CREATE | Create Return Receipt |
-| RETURN_INSPECTION_MANAGE | Manage Return Inspection |
-| RETURN_RESOLUTION_MANAGE | Manage Return Resolution |
-| RETURN_VIEW | View Returns |
-| RETURN_SEARCH | Search Returns |
+| Permission               | Description                             |
+| ------------------------ | --------------------------------------- |
+| CUSTOMER_RETURN_CREATE   | Create Customer Return                  |
+| CUSTOMER_RETURN_APPROVE  | Approve Customer Return                 |
+| SUPPLIER_RETURN_CREATE   | Create Supplier Return                  |
+| SUPPLIER_RETURN_APPROVE  | Approve Supplier Return                 |
+| RMA_MANAGE               | Manage Return Merchandise Authorization |
+| RETURN_RECEIPT_CREATE    | Create Return Receipt                   |
+| RETURN_INSPECTION_MANAGE | Manage Return Inspection                |
+| RETURN_RESOLUTION_MANAGE | Manage Return Resolution                |
+| RETURN_VIEW              | View Returns                            |
+| RETURN_SEARCH            | Search Returns                          |
 
 ---
 
@@ -1246,16 +1246,16 @@ Returns Service shall consume authenticated user information from Spring Securit
 
 ```json
 {
-  "sub":"UUID",
-  "username":"returns.manager",
-  "roles":["RETURNS_MANAGER"],
-  "permissions":[
-      "CUSTOMER_RETURN_CREATE",
-      "RETURN_INSPECTION_MANAGE",
-      "RETURN_RESOLUTION_MANAGE"
+  "sub": "UUID",
+  "username": "returns.manager",
+  "roles": ["RETURNS_MANAGER"],
+  "permissions": [
+    "CUSTOMER_RETURN_CREATE",
+    "RETURN_INSPECTION_MANAGE",
+    "RETURN_RESOLUTION_MANAGE"
   ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1305,18 +1305,18 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Customer Return | CUSTOMER_RETURN_CREATE |
-| Approve Customer Return | CUSTOMER_RETURN_APPROVE |
-| Create Supplier Return | SUPPLIER_RETURN_CREATE |
-| Approve Supplier Return | SUPPLIER_RETURN_APPROVE |
-| Manage RMA | RMA_MANAGE |
-| Create Return Receipt | RETURN_RECEIPT_CREATE |
+| API                      | Permission               |
+| ------------------------ | ------------------------ |
+| Create Customer Return   | CUSTOMER_RETURN_CREATE   |
+| Approve Customer Return  | CUSTOMER_RETURN_APPROVE  |
+| Create Supplier Return   | SUPPLIER_RETURN_CREATE   |
+| Approve Supplier Return  | SUPPLIER_RETURN_APPROVE  |
+| Manage RMA               | RMA_MANAGE               |
+| Create Return Receipt    | RETURN_RECEIPT_CREATE    |
 | Manage Return Inspection | RETURN_INSPECTION_MANAGE |
 | Manage Return Resolution | RETURN_RESOLUTION_MANAGE |
-| View Returns | RETURN_VIEW |
-| Search Returns | RETURN_SEARCH |
+| View Returns             | RETURN_VIEW              |
+| Search Returns           | RETURN_SEARCH            |
 
 ---
 
@@ -1394,12 +1394,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"CustomerReturnCreated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "CustomerReturnCreated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1430,16 +1430,16 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| CustomerClient | Customer Validation |
-| SupplierClient | Supplier Validation |
-| OrderClient | Sales/Purchase Order Validation |
-| InventoryClient | Inventory Validation |
-| BillingClient | Credit Note / Refund Validation |
-| IdentityClient | User Validation |
-| NotificationClient | Return Notifications |
-| AuditClient | Audit Submission |
+| Client             | Responsibility                  |
+| ------------------ | ------------------------------- |
+| CustomerClient     | Customer Validation             |
+| SupplierClient     | Supplier Validation             |
+| OrderClient        | Sales/Purchase Order Validation |
+| InventoryClient    | Inventory Validation            |
+| BillingClient      | Credit Note / Refund Validation |
+| IdentityClient     | User Validation                 |
+| NotificationClient | Return Notifications            |
+| AuditClient        | Audit Submission                |
 
 ---
 
@@ -1464,17 +1464,17 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Return Jobs |
-| Metrics | Micrometer |
-| Returns | Return Processing Engine |
-| OpenAPI | Swagger |
+| Configuration | Responsibility           |
+| ------------- | ------------------------ |
+| Security      | Spring Security          |
+| Kafka         | Kafka Infrastructure     |
+| Feign         | OpenFeign                |
+| Cache         | Redis                    |
+| Validation    | Bean Validation          |
+| Scheduler     | Return Jobs              |
+| Metrics       | Micrometer               |
+| Returns       | Return Processing Engine |
+| OpenAPI       | Swagger                  |
 
 ---
 
@@ -1488,15 +1488,15 @@ Cross-service consistency shall be achieved using event-driven integration.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Create Customer Return | REQUIRED |
-| Create Supplier Return | REQUIRED |
-| Generate RMA | REQUIRED |
-| Complete Return Receipt | REQUIRED |
-| Complete Inspection | REQUIRED |
-| Resolve Return | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation               | Propagation  |
+| ----------------------- | ------------ |
+| Create Customer Return  | REQUIRED     |
+| Create Supplier Return  | REQUIRED     |
+| Generate RMA            | REQUIRED     |
+| Complete Return Receipt | REQUIRED     |
+| Complete Inspection     | REQUIRED     |
+| Resolve Return          | REQUIRED     |
+| Publish Event           | AFTER_COMMIT |
 
 ---
 
@@ -1639,28 +1639,28 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Customer Service | Customer Validation |
-| Supplier Service | Supplier Validation |
-| Order Service | Original Order Validation |
-| Inventory Service | Inventory Update |
-| Billing Service | Refund / Credit Note |
-| Notification Service | Return Notifications |
-| Audit Service | Audit Logging |
-| Identity Service | User Validation |
+| Service              | Purpose                   |
+| -------------------- | ------------------------- |
+| Customer Service     | Customer Validation       |
+| Supplier Service     | Supplier Validation       |
+| Order Service        | Original Order Validation |
+| Inventory Service    | Inventory Update          |
+| Billing Service      | Refund / Credit Note      |
+| Notification Service | Return Notifications      |
+| Audit Service        | Audit Logging             |
+| Identity Service     | User Validation           |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| returns.cache.enabled | true |
-| returns.cache.ttl | 3600 |
-| returns.rma.expiry.days | 30 |
-| returns.inspection.required | true |
-| returns.kafka.retry | 3 |
+| Property                    | Default |
+| --------------------------- | ------- |
+| returns.cache.enabled       | true    |
+| returns.cache.ttl           | 3600    |
+| returns.rma.expiry.days     | 30      |
+| returns.inspection.required | true    |
+| returns.kafka.retry         | 3       |
 
 ---
 
@@ -1699,23 +1699,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1757,13 +1757,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Return Business Events |
-| WARN | Recoverable Business Errors |
-| ERROR | Return Processing Failures |
+| Level | Purpose                     |
+| ----- | --------------------------- |
+| TRACE | Framework Diagnostics       |
+| DEBUG | Development                 |
+| INFO  | Return Business Events      |
+| WARN  | Recoverable Business Errors |
+| ERROR | Return Processing Failures  |
 
 ---
 
@@ -2235,15 +2235,15 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Return Workflow Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Return Workflow Tests    | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2313,35 +2313,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Returns Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Returns Audit |
+| Layer      | Responsibility         |
+| ---------- | ---------------------- |
+| Controller | Request Handling       |
+| Service    | Returns Business Logic |
+| Repository | Persistence            |
+| Kafka      | Event Publishing       |
+| Mapper     | DTO Conversion         |
+| Validation | Request Validation     |
+| Audit      | Returns Audit          |
 
 ---
 
@@ -2461,12 +2461,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Returns Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Returns Service Implementation                  |
 
 ---
 

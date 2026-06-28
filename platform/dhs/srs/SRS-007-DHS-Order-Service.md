@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Order Service |
+| Field          | Value                                             |
+| -------------- | ------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform          |
+| Service Name   | Order Service                                     |
 | Document Title | Order Service Software Requirements Specification |
-| Document ID | SRS-007 |
-| Repository | starone-dhs-platform |
-| Module | order-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-007                                           |
+| Repository     | starone-dhs-platform                              |
+| Module         | order-service                                     |
+| Document Type  | Software Requirements Specification (SRS)         |
+| Standard       | ISO/IEC/IEEE 29148                                |
+| Version        | v1.0.0                                            |
+| Status         | Draft                                             |
+| Author         | Sachin Salunke                                    |
+| Owner          | Enterprise Architecture                           |
+| Last Updated   | 2026-06-27                                        |
 
 ---
 
@@ -26,36 +26,36 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | DHS High-Level Design |
-| FRD-Order | Order Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-004 | Customer Service |
-| SRS-005 | Product Service |
-| SRS-006 | Inventory Service |
+| Document  | Description                    |
+| --------- | ------------------------------ |
+| BRD-001   | Business Requirements Document |
+| PRD-001   | Product Requirements Document  |
+| ADR-001   | Architecture Decision Record   |
+| HLD-001   | DHS High-Level Design          |
+| FRD-Order | Order Functional Requirements  |
+| SRS-001   | Platform Foundation            |
+| SRS-004   | Customer Service               |
+| SRS-005   | Product Service                |
+| SRS-006   | Inventory Service              |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -107,13 +107,13 @@ The Order Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Order | Customer purchase request |
-| Order Item | Individual product within an order |
-| Saga | Distributed transaction pattern |
-| Reservation | Reserved inventory for an order |
-| Fulfillment | End-to-end order execution |
+| Term        | Description                        |
+| ----------- | ---------------------------------- |
+| Order       | Customer purchase request          |
+| Order Item  | Individual product within an order |
+| Saga        | Distributed transaction pattern    |
+| Reservation | Reserved inventory for an order    |
+| Fulfillment | End-to-end order execution         |
 
 ---
 
@@ -185,41 +185,41 @@ ReportingService --> OrderService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Order Database |
-| Kafka | Event Streaming |
-| Customer Service | Customer Validation |
-| Product Service | Product Validation |
-| Inventory Service | Inventory Reservation |
-| Billing Service | Billing Integration |
-| Dispatch Service | Shipment Integration |
+| Dependency          | Purpose               |
+| ------------------- | --------------------- |
+| Platform Foundation | Shared Frameworks     |
+| Gateway             | API Routing           |
+| Eureka              | Service Discovery     |
+| PostgreSQL          | Order Database        |
+| Kafka               | Event Streaming       |
+| Customer Service    | Customer Validation   |
+| Product Service     | Product Validation    |
+| Inventory Service   | Inventory Reservation |
+| Billing Service     | Billing Integration   |
+| Dispatch Service    | Shipment Integration  |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Gateway | Request Routing |
-| Identity Service | Authentication |
+| Service          | Purpose             |
+| ---------------- | ------------------- |
+| Gateway          | Request Routing     |
+| Identity Service | Authentication      |
 | Customer Service | Customer Validation |
-| Product Service | Product Validation |
+| Product Service  | Product Validation  |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Inventory Service | Reserve Inventory |
-| Billing Service | Generate Invoice |
-| Dispatch Service | Create Shipment |
+| Service              | Purpose                |
+| -------------------- | ---------------------- |
+| Inventory Service    | Reserve Inventory      |
+| Billing Service      | Generate Invoice       |
+| Dispatch Service     | Create Shipment        |
 | Notification Service | Customer Notifications |
-| Reporting Service | Analytics |
+| Reporting Service    | Analytics              |
 
 ---
 
@@ -749,54 +749,54 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | / | Create Order |
-| PUT | /{orderId} | Update Draft Order |
-| GET | /{orderId} | Get Order |
-| DELETE | /{orderId} | Cancel Order |
-| GET | / | Search Orders |
-| POST | /{orderId}/confirm | Confirm Order |
-| POST | /{orderId}/cancel | Cancel Confirmed Order |
-| GET | /number/{orderNumber} | Find by Order Number |
-| GET | /customer/{customerId} | Customer Orders |
-| GET | /status/{status} | Orders by Status |
+| Method | URI                    | Description            |
+| ------ | ---------------------- | ---------------------- |
+| POST   | /                      | Create Order           |
+| PUT    | /{orderId}             | Update Draft Order     |
+| GET    | /{orderId}             | Get Order              |
+| DELETE | /{orderId}             | Cancel Order           |
+| GET    | /                      | Search Orders          |
+| POST   | /{orderId}/confirm     | Confirm Order          |
+| POST   | /{orderId}/cancel      | Cancel Confirmed Order |
+| GET    | /number/{orderNumber}  | Find by Order Number   |
+| GET    | /customer/{customerId} | Customer Orders        |
+| GET    | /status/{status}       | Orders by Status       |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC or DESC |
-| customerId | No | Customer Identifier |
-| orderStatus | No | Order Status |
-| fromDate | No | Order Date From |
-| toDate | No | Order Date To |
+| Parameter   | Required | Description         |
+| ----------- | -------- | ------------------- |
+| page        | No       | Page Number         |
+| size        | No       | Page Size           |
+| sort        | No       | Sort Field          |
+| direction   | No       | ASC or DESC         |
+| customerId  | No       | Customer Identifier |
+| orderStatus | No       | Order Status        |
+| fromDate    | No       | Order Date From     |
+| toDate      | No       | Order Date To       |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
-| orderId | Order Identifier |
-| orderNumber | Order Number |
-| customerId | Customer Identifier |
+| Parameter   | Description         |
+| ----------- | ------------------- |
+| orderId     | Order Identifier    |
+| orderNumber | Order Number        |
+| customerId  | Customer Identifier |
 
 ---
 
@@ -874,35 +874,35 @@ Supports:
 
 ## CreateOrderRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| customerId | UUID | Yes |
-| branchId | UUID | Yes |
-| orderItems | List<OrderItemRequest> | Yes |
+| Field      | Type                   | Required |
+| ---------- | ---------------------- | -------- |
+| customerId | UUID                   | Yes      |
+| branchId   | UUID                   | Yes      |
+| orderItems | List<OrderItemRequest> | Yes      |
 
 ---
 
 ## OrderItemRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| productId | UUID | Yes |
-| quantity | Decimal | Yes |
+| Field     | Type    | Required |
+| --------- | ------- | -------- |
+| productId | UUID    | Yes      |
+| quantity  | Decimal | Yes      |
 
 ---
 
 ## ConfirmOrderRequest
 
-| Field | Type |
-|---------|------|
+| Field   | Type |
+| ------- | ---- |
 | orderId | UUID |
 
 ---
 
 ## CancelOrderRequest
 
-| Field | Type |
-|---------|------|
+| Field              | Type   |
+| ------------------ | ------ |
 | cancellationReason | String |
 
 ---
@@ -911,38 +911,38 @@ Supports:
 
 ## OrderResponse
 
-| Field | Type |
-|---------|------|
-| orderId | UUID |
-| orderNumber | String |
-| customerId | UUID |
-| subtotal | Decimal |
-| tax | Decimal |
-| discount | Decimal |
-| grandTotal | Decimal |
-| status | OrderStatus |
+| Field       | Type        |
+| ----------- | ----------- |
+| orderId     | UUID        |
+| orderNumber | String      |
+| customerId  | UUID        |
+| subtotal    | Decimal     |
+| tax         | Decimal     |
+| discount    | Decimal     |
+| grandTotal  | Decimal     |
+| status      | OrderStatus |
 
 ---
 
 ## OrderSummaryResponse
 
-| Field | Type |
-|---------|------|
-| orderNumber | String |
-| customerName | String |
-| orderDate | Timestamp |
-| totalAmount | Decimal |
-| status | OrderStatus |
+| Field        | Type        |
+| ------------ | ----------- |
+| orderNumber  | String      |
+| customerName | String      |
+| orderDate    | Timestamp   |
+| totalAmount  | Decimal     |
+| status       | OrderStatus |
 
 ---
 
 ## OrderSearchResponse
 
-| Field | Type |
-|---------|------|
-| totalRecords | Long |
-| totalPages | Integer |
-| orders | List<OrderSummaryResponse> |
+| Field        | Type                       |
+| ------------ | -------------------------- |
+| totalRecords | Long                       |
+| totalPages   | Integer                    |
+| orders       | List<OrderSummaryResponse> |
 
 ---
 
@@ -977,49 +977,49 @@ Supports:
 
 # 13. Permission Matrix
 
-| API | Super Admin | Sales Manager | Sales Executive | Viewer |
-|------|-------------|---------------|-----------------|--------|
-| Create Order | ✅ | ✅ | ✅ | ❌ |
-| Update Draft | ✅ | ✅ | ✅ | ❌ |
-| Confirm Order | ✅ | ✅ | ✅ | ❌ |
-| Cancel Order | ✅ | ✅ | ❌ | ❌ |
-| View Order | ✅ | ✅ | ✅ | ✅ |
-| Search Orders | ✅ | ✅ | ✅ | ✅ |
+| API           | Super Admin | Sales Manager | Sales Executive | Viewer |
+| ------------- | ----------- | ------------- | --------------- | ------ |
+| Create Order  | ✅          | ✅            | ✅              | ❌     |
+| Update Draft  | ✅          | ✅            | ✅              | ❌     |
+| Confirm Order | ✅          | ✅            | ✅              | ❌     |
+| Cancel Order  | ✅          | ✅            | ❌              | ❌     |
+| View Order    | ✅          | ✅            | ✅              | ✅     |
+| Search Orders | ✅          | ✅            | ✅              | ✅     |
 
 ---
 
 # 14. Order State Transition Rules
 
-| Current State | Allowed Next State |
-|---------------|--------------------|
-| Draft | Validated, Cancelled |
-| Validated | Confirmed, Cancelled |
-| Confirmed | Reserved, Cancelled |
-| Reserved | Billed, Cancelled |
-| Billed | Paid |
-| Paid | Packed |
-| Packed | Dispatched |
-| Dispatched | Delivered |
-| Delivered | Completed |
-| Completed | No Transition |
-| Cancelled | No Transition |
+| Current State | Allowed Next State   |
+| ------------- | -------------------- |
+| Draft         | Validated, Cancelled |
+| Validated     | Confirmed, Cancelled |
+| Confirmed     | Reserved, Cancelled  |
+| Reserved      | Billed, Cancelled    |
+| Billed        | Paid                 |
+| Paid          | Packed               |
+| Packed        | Dispatched           |
+| Dispatched    | Delivered            |
+| Delivered     | Completed            |
+| Completed     | No Transition        |
+| Cancelled     | No Transition        |
 
 ---
 
 # 15. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Cancelled |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Order Not Found |
-| 409 | Business Conflict |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Cancelled               |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Order Not Found         |
+| 409    | Business Conflict       |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -1052,17 +1052,17 @@ Order
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Order | Order Aggregate Root |
-| OrderItem | Ordered Products |
-| OrderAddress | Billing & Delivery Address |
-| OrderDiscount | Applied Discounts |
-| OrderTax | Applied Taxes |
-| OrderPaymentReference | Billing Reference |
-| OrderShipmentReference | Dispatch Reference |
-| OrderStatusHistory | Status Timeline |
-| OrderAudit | Order Audit Trail |
+| Aggregate              | Responsibility             |
+| ---------------------- | -------------------------- |
+| Order                  | Order Aggregate Root       |
+| OrderItem              | Ordered Products           |
+| OrderAddress           | Billing & Delivery Address |
+| OrderDiscount          | Applied Discounts          |
+| OrderTax               | Applied Taxes              |
+| OrderPaymentReference  | Billing Reference          |
+| OrderShipmentReference | Dispatch Reference         |
+| OrderStatusHistory     | Status Timeline            |
+| OrderAudit             | Order Audit Trail          |
 
 ---
 
@@ -1070,148 +1070,148 @@ Order
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Order | Aggregate Root |
-| OrderItem | Ordered Products |
-| OrderAddress | Customer Addresses |
-| OrderDiscount | Discounts |
-| OrderTax | Taxes |
-| OrderPaymentReference | Invoice & Payment References |
-| OrderShipmentReference | Shipment References |
-| OrderStatusHistory | Status Changes |
-| OrderAudit | Business Audit |
+| Entity                 | Description                  |
+| ---------------------- | ---------------------------- |
+| Order                  | Aggregate Root               |
+| OrderItem              | Ordered Products             |
+| OrderAddress           | Customer Addresses           |
+| OrderDiscount          | Discounts                    |
+| OrderTax               | Taxes                        |
+| OrderPaymentReference  | Invoice & Payment References |
+| OrderShipmentReference | Shipment References          |
+| OrderStatusHistory     | Status Changes               |
+| OrderAudit             | Business Audit               |
 
 ---
 
 ## 16.2 Order Entity
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| orderNumber | VARCHAR(30) | Unique |
-| customerId | UUID | Required |
-| branchId | UUID | Required |
-| subtotal | DECIMAL(18,2) | Required |
-| taxAmount | DECIMAL(18,2) | Required |
-| discountAmount | DECIMAL(18,2) | Required |
-| totalAmount | DECIMAL(18,2) | Required |
-| currency | VARCHAR(10) | Required |
-| status | ENUM | Required |
-| orderDate | TIMESTAMP | Required |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedBy | UUID | Required |
-| updatedAt | TIMESTAMP | Required |
-| deleted | BOOLEAN | Default FALSE |
+| Attribute      | Type          | Constraint    |
+| -------------- | ------------- | ------------- |
+| id             | UUID          | Primary Key   |
+| orderNumber    | VARCHAR(30)   | Unique        |
+| customerId     | UUID          | Required      |
+| branchId       | UUID          | Required      |
+| subtotal       | DECIMAL(18,2) | Required      |
+| taxAmount      | DECIMAL(18,2) | Required      |
+| discountAmount | DECIMAL(18,2) | Required      |
+| totalAmount    | DECIMAL(18,2) | Required      |
+| currency       | VARCHAR(10)   | Required      |
+| status         | ENUM          | Required      |
+| orderDate      | TIMESTAMP     | Required      |
+| createdBy      | UUID          | Required      |
+| createdAt      | TIMESTAMP     | Required      |
+| updatedBy      | UUID          | Required      |
+| updatedAt      | TIMESTAMP     | Required      |
+| deleted        | BOOLEAN       | Default FALSE |
 
 ---
 
 ## 16.3 Order Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| productId | UUID |
-| quantity | DECIMAL(18,3) |
+| Attribute | Type          |
+| --------- | ------------- |
+| id        | UUID          |
+| orderId   | UUID          |
+| productId | UUID          |
+| quantity  | DECIMAL(18,3) |
 | unitPrice | DECIMAL(18,2) |
-| discount | DECIMAL(18,2) |
-| tax | DECIMAL(18,2) |
+| discount  | DECIMAL(18,2) |
+| tax       | DECIMAL(18,2) |
 | lineTotal | DECIMAL(18,2) |
 
 ---
 
 ## 16.4 Order Address
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| addressType | ENUM |
-| contactName | VARCHAR(150) |
-| mobileNumber | VARCHAR(20) |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| orderId      | UUID         |
+| addressType  | ENUM         |
+| contactName  | VARCHAR(150) |
+| mobileNumber | VARCHAR(20)  |
 | addressLine1 | VARCHAR(255) |
 | addressLine2 | VARCHAR(255) |
-| city | VARCHAR(100) |
-| state | VARCHAR(100) |
-| country | VARCHAR(100) |
-| postalCode | VARCHAR(20) |
+| city         | VARCHAR(100) |
+| state        | VARCHAR(100) |
+| country      | VARCHAR(100) |
+| postalCode   | VARCHAR(20)  |
 
 ---
 
 ## 16.5 Order Discount
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| discountType | ENUM |
-| discountCode | VARCHAR(50) |
+| Attribute      | Type          |
+| -------------- | ------------- |
+| id             | UUID          |
+| orderId        | UUID          |
+| discountType   | ENUM          |
+| discountCode   | VARCHAR(50)   |
 | discountAmount | DECIMAL(18,2) |
 
 ---
 
 ## 16.6 Order Tax
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| taxCategory | VARCHAR(50) |
-| taxPercentage | DECIMAL(5,2) |
-| taxAmount | DECIMAL(18,2) |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| orderId       | UUID          |
+| taxCategory   | VARCHAR(50)   |
+| taxPercentage | DECIMAL(5,2)  |
+| taxAmount     | DECIMAL(18,2) |
 
 ---
 
 ## 16.7 Order Payment Reference
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| invoiceId | UUID |
-| paymentId | UUID |
+| Attribute     | Type |
+| ------------- | ---- |
+| id            | UUID |
+| orderId       | UUID |
+| invoiceId     | UUID |
+| paymentId     | UUID |
 | paymentStatus | ENUM |
 
 ---
 
 ## 16.8 Order Shipment Reference
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| shipmentId | UUID |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| orderId        | UUID         |
+| shipmentId     | UUID         |
 | trackingNumber | VARCHAR(100) |
-| shipmentStatus | ENUM |
+| shipmentStatus | ENUM         |
 
 ---
 
 ## 16.9 Order Status History
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| previousStatus | ENUM |
-| currentStatus | ENUM |
-| changedBy | UUID |
-| changedAt | TIMESTAMP |
-| remarks | VARCHAR(500) |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| orderId        | UUID         |
+| previousStatus | ENUM         |
+| currentStatus  | ENUM         |
+| changedBy      | UUID         |
+| changedAt      | TIMESTAMP    |
+| remarks        | VARCHAR(500) |
 
 ---
 
 ## 16.10 Order Audit
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| eventType | VARCHAR(100) |
-| eventSource | VARCHAR(100) |
-| correlationId | UUID |
-| eventTime | TIMESTAMP |
+| Attribute     | Type         |
+| ------------- | ------------ |
+| id            | UUID         |
+| orderId       | UUID         |
+| eventType     | VARCHAR(100) |
+| eventSource   | VARCHAR(100) |
+| correlationId | UUID         |
+| eventTime     | TIMESTAMP    |
 
 ---
 
@@ -1233,17 +1233,17 @@ order
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| orders | Order Master |
-| order_item | Ordered Products |
-| order_address | Billing & Shipping Address |
-| order_discount | Applied Discounts |
-| order_tax | Applied Taxes |
-| order_payment_reference | Payment References |
-| order_shipment_reference | Shipment References |
-| order_status_history | Status Timeline |
-| order_audit | Business Audit |
+| Table                    | Purpose                    |
+| ------------------------ | -------------------------- |
+| orders                   | Order Master               |
+| order_item               | Ordered Products           |
+| order_address            | Billing & Shipping Address |
+| order_discount           | Applied Discounts          |
+| order_tax                | Applied Taxes              |
+| order_payment_reference  | Payment References         |
+| order_shipment_reference | Shipment References        |
+| order_status_history     | Status Timeline            |
+| order_audit              | Business Audit             |
 
 ---
 
@@ -1255,16 +1255,16 @@ All tables shall use UUID as the Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
-| order_item | orders |
-| order_address | orders |
-| order_discount | orders |
-| order_tax | orders |
-| order_payment_reference | orders |
-| order_shipment_reference | orders |
-| order_status_history | orders |
-| order_audit | orders |
+| Child Table              | Parent Table |
+| ------------------------ | ------------ |
+| order_item               | orders       |
+| order_address            | orders       |
+| order_discount           | orders       |
+| order_tax                | orders       |
+| order_payment_reference  | orders       |
+| order_shipment_reference | orders       |
+| order_status_history     | orders       |
+| order_audit              | orders       |
 
 ---
 
@@ -1293,15 +1293,15 @@ Shipment Reference
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| orders | order_number |
-| orders | customer_id |
-| orders | branch_id |
-| orders | order_date |
-| orders | status |
-| order_item | product_id |
-| order_status_history | changed_at |
+| Table                | Index        |
+| -------------------- | ------------ |
+| orders               | order_number |
+| orders               | customer_id  |
+| orders               | branch_id    |
+| orders               | order_date   |
+| orders               | status       |
+| order_item           | product_id   |
+| order_status_history | changed_at   |
 
 ---
 
@@ -1374,16 +1374,16 @@ D -->|No| I[Continue Saga]
 
 ## 18.3 Saga States
 
-| State | Description |
-|--------|-------------|
-| INITIATED | Order Created |
-| INVENTORY_RESERVED | Stock Reserved |
-| BILLING_COMPLETED | Invoice Generated |
-| PAYMENT_CONFIRMED | Payment Completed |
-| SHIPMENT_CREATED | Shipment Generated |
-| DISPATCHED | Goods Dispatched |
-| COMPLETED | Order Completed |
-| COMPENSATED | Saga Rolled Back |
+| State              | Description        |
+| ------------------ | ------------------ |
+| INITIATED          | Order Created      |
+| INVENTORY_RESERVED | Stock Reserved     |
+| BILLING_COMPLETED  | Invoice Generated  |
+| PAYMENT_CONFIRMED  | Payment Completed  |
+| SHIPMENT_CREATED   | Shipment Generated |
+| DISPATCHED         | Goods Dispatched   |
+| COMPLETED          | Order Completed    |
+| COMPENSATED        | Saga Rolled Back   |
 
 ---
 
@@ -1527,28 +1527,28 @@ The Order Service shall publish domain events for every significant lifecycle tr
 
 ## 22.1 Published Events
 
-| Topic | Event |
-|---------|------|
-| order.created.v1 | OrderCreated |
-| order.validated.v1 | OrderValidated |
-| order.confirmed.v1 | OrderConfirmed |
-| order.cancelled.v1 | OrderCancelled |
-| order.completed.v1 | OrderCompleted |
-| order.compensated.v1 | OrderCompensated |
+| Topic                   | Event              |
+| ----------------------- | ------------------ |
+| order.created.v1        | OrderCreated       |
+| order.validated.v1      | OrderValidated     |
+| order.confirmed.v1      | OrderConfirmed     |
+| order.cancelled.v1      | OrderCancelled     |
+| order.completed.v1      | OrderCompleted     |
+| order.compensated.v1    | OrderCompensated   |
 | order.status.changed.v1 | OrderStatusChanged |
 
 ---
 
 ## 22.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
+| Topic                 | Source            |
+| --------------------- | ----------------- |
 | inventory.reserved.v1 | Inventory Service |
-| inventory.failed.v1 | Inventory Service |
-| payment.completed.v1 | Billing Service |
-| payment.failed.v1 | Billing Service |
-| shipment.created.v1 | Dispatch Service |
-| shipment.delivered.v1 | Dispatch Service |
+| inventory.failed.v1   | Inventory Service |
+| payment.completed.v1  | Billing Service   |
+| payment.failed.v1     | Billing Service   |
+| shipment.created.v1   | Dispatch Service  |
+| shipment.delivered.v1 | Dispatch Service  |
 
 ---
 
@@ -1569,13 +1569,13 @@ The Order Service shall publish domain events for every significant lifecycle tr
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
-| CustomerClient | Validate Customer |
-| ProductClient | Validate Products |
-| InventoryClient | Inventory Availability Check |
-| BillingClient | Invoice Status Query (Read Only) |
-| DispatchClient | Shipment Status Query (Read Only) |
+| Client          | Purpose                           |
+| --------------- | --------------------------------- |
+| CustomerClient  | Validate Customer                 |
+| ProductClient   | Validate Products                 |
+| InventoryClient | Inventory Availability Check      |
+| BillingClient   | Invoice Status Query (Read Only)  |
+| DispatchClient  | Shipment Status Query (Read Only) |
 
 > Business workflow progression should primarily occur through Kafka events. OpenFeign should be limited to synchronous validation or read-only queries where immediate responses are required.
 
@@ -1604,15 +1604,15 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| order.search.max-page-size | 100 | Yes | Maximum page size |
-| order.saga.timeout | 300 | Yes | Saga timeout (seconds) |
-| order.cancellation.window | 24h | Yes | Allowed cancellation period |
-| order.event.topic.created | order.created.v1 | Yes | Order created topic |
-| order.event.topic.completed | order.completed.v1 | Yes | Order completed topic |
-| order.retry.max-attempts | 3 | Yes | Retry attempts for transient failures |
-| order.retry.backoff-ms | 1000 | Yes | Retry backoff interval |
+| Property                    | Default            | Required | Description                           |
+| --------------------------- | ------------------ | -------- | ------------------------------------- |
+| order.search.max-page-size  | 100                | Yes      | Maximum page size                     |
+| order.saga.timeout          | 300                | Yes      | Saga timeout (seconds)                |
+| order.cancellation.window   | 24h                | Yes      | Allowed cancellation period           |
+| order.event.topic.created   | order.created.v1   | Yes      | Order created topic                   |
+| order.event.topic.completed | order.completed.v1 | Yes      | Order completed topic                 |
+| order.retry.max-attempts    | 3                  | Yes      | Retry attempts for transient failures |
+| order.retry.backoff-ms      | 1000               | Yes      | Retry backoff interval                |
 
 ---
 
@@ -1712,22 +1712,22 @@ Saga failures shall be logged and compensated automatically whenever possible.
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP |
-|------------|-------------|------|
-| OR-VAL-001 | Validation Failed | 400 |
-| OR-AUTH-001 | Authentication Required | 401 |
-| OR-AUTH-002 | Access Denied | 403 |
-| OR-BUS-001 | Inventory Reservation Failed | 409 |
-| OR-BUS-002 | Customer Not Found | 404 |
-| OR-BUS-003 | Product Not Found | 404 |
-| OR-BUS-004 | Order Not Found | 404 |
-| OR-BUS-005 | Order Already Cancelled | 409 |
-| OR-BUS-006 | Invalid Order Status | 422 |
-| OR-BUS-007 | Billing Failed | 409 |
-| OR-BUS-008 | Payment Failed | 409 |
-| OR-BUS-009 | Dispatch Failed | 409 |
-| OR-BUS-010 | Saga Compensation Failed | 500 |
-| OR-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                  | HTTP |
+| ----------- | ---------------------------- | ---- |
+| OR-VAL-001  | Validation Failed            | 400  |
+| OR-AUTH-001 | Authentication Required      | 401  |
+| OR-AUTH-002 | Access Denied                | 403  |
+| OR-BUS-001  | Inventory Reservation Failed | 409  |
+| OR-BUS-002  | Customer Not Found           | 404  |
+| OR-BUS-003  | Product Not Found            | 404  |
+| OR-BUS-004  | Order Not Found              | 404  |
+| OR-BUS-005  | Order Already Cancelled      | 409  |
+| OR-BUS-006  | Invalid Order Status         | 422  |
+| OR-BUS-007  | Billing Failed               | 409  |
+| OR-BUS-008  | Payment Failed               | 409  |
+| OR-BUS-009  | Dispatch Failed              | 409  |
+| OR-BUS-010  | Saga Compensation Failed     | 500  |
+| OR-SYS-001  | Internal Server Error        | 500  |
 
 ---
 
@@ -1971,53 +1971,53 @@ The service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source | Verification |
-|-------------|--------|--------------|
-| OR-SYS-001 – OR-SYS-020 | FRD-Order | Functional Testing |
-| OR-SYS-021 – OR-SYS-036 | SRS-001 Platform Foundation | Integration Testing |
-| OR-NFR-001 – OR-NFR-016 | PRD / HLD | Performance & Security Testing |
+| Requirement             | Source                      | Verification                   |
+| ----------------------- | --------------------------- | ------------------------------ |
+| OR-SYS-001 – OR-SYS-020 | FRD-Order                   | Functional Testing             |
+| OR-SYS-021 – OR-SYS-036 | SRS-001 Platform Foundation | Integration Testing            |
+| OR-NFR-001 – OR-NFR-016 | PRD / HLD                   | Performance & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| OR-SYS-001 | TC-OR-001 |
-| OR-SYS-002 | TC-OR-002 |
-| OR-SYS-003 | TC-OR-003 |
-| OR-SYS-004 | TC-OR-004 |
-| OR-SYS-005 | TC-OR-005 |
-| OR-SYS-006 | TC-OR-006 |
-| OR-SYS-007 | TC-OR-007 |
-| OR-SYS-008 | TC-OR-008 |
-| OR-SYS-009 | TC-OR-009 |
-| OR-SYS-010 | TC-OR-010 |
-| OR-SYS-011 | TC-OR-011 |
-| OR-SYS-012 | TC-OR-012 |
-| OR-SYS-013 | TC-OR-013 |
-| OR-SYS-014 | TC-OR-014 |
-| OR-SYS-015 | TC-OR-015 |
-| OR-SYS-016 | TC-OR-016 |
-| OR-SYS-017 | TC-OR-017 |
-| OR-SYS-018 | TC-OR-018 |
-| OR-SYS-019 | TC-OR-019 |
-| OR-SYS-020 | TC-OR-020 |
+| ----------- | --------- |
+| OR-SYS-001  | TC-OR-001 |
+| OR-SYS-002  | TC-OR-002 |
+| OR-SYS-003  | TC-OR-003 |
+| OR-SYS-004  | TC-OR-004 |
+| OR-SYS-005  | TC-OR-005 |
+| OR-SYS-006  | TC-OR-006 |
+| OR-SYS-007  | TC-OR-007 |
+| OR-SYS-008  | TC-OR-008 |
+| OR-SYS-009  | TC-OR-009 |
+| OR-SYS-010  | TC-OR-010 |
+| OR-SYS-011  | TC-OR-011 |
+| OR-SYS-012  | TC-OR-012 |
+| OR-SYS-013  | TC-OR-013 |
+| OR-SYS-014  | TC-OR-014 |
+| OR-SYS-015  | TC-OR-015 |
+| OR-SYS-016  | TC-OR-016 |
+| OR-SYS-017  | TC-OR-017 |
+| OR-SYS-018  | TC-OR-018 |
+| OR-SYS-019  | TC-OR-019 |
+| OR-SYS-020  | TC-OR-020 |
 
 ---
 
 # 32. Complete Saga Failure Matrix
 
-| Failed Step | Compensation Action | Final Order Status |
-|--------------|--------------------|--------------------|
-| Customer Validation | Reject Order | Cancelled |
-| Product Validation | Reject Order | Cancelled |
-| Inventory Reservation | Reject Order | Cancelled |
-| Invoice Generation | Release Inventory | Cancelled |
-| Payment Processing | Cancel Invoice, Release Inventory | Cancelled |
-| Shipment Creation | Refund Payment (if applicable), Cancel Invoice, Release Inventory | Cancelled |
-| Dispatch Failure | Create Operational Exception, Manual Intervention | Pending Resolution |
-| Notification Failure | Retry Notification | Completed |
+| Failed Step           | Compensation Action                                               | Final Order Status |
+| --------------------- | ----------------------------------------------------------------- | ------------------ |
+| Customer Validation   | Reject Order                                                      | Cancelled          |
+| Product Validation    | Reject Order                                                      | Cancelled          |
+| Inventory Reservation | Reject Order                                                      | Cancelled          |
+| Invoice Generation    | Release Inventory                                                 | Cancelled          |
+| Payment Processing    | Cancel Invoice, Release Inventory                                 | Cancelled          |
+| Shipment Creation     | Refund Payment (if applicable), Cancel Invoice, Release Inventory | Cancelled          |
+| Dispatch Failure      | Create Operational Exception, Manual Intervention                 | Pending Resolution |
+| Notification Failure  | Retry Notification                                                | Completed          |
 
 ---
 
@@ -2048,71 +2048,68 @@ The Order Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Order | Create, Update, Get, Search, Cancel |
-| Order Confirmation | Confirm Order |
-| Order Status | Status History |
-| Order Items | Manage Items |
+| Resource           | Endpoints                           |
+| ------------------ | ----------------------------------- |
+| Order              | Create, Update, Get, Search, Cancel |
+| Order Confirmation | Confirm Order                       |
+| Order Status       | Status History                      |
+| Order Items        | Manage Items                        |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Order | Aggregate Root |
-| OrderItem | Ordered Products |
-| OrderAddress | Billing & Shipping |
-| OrderDiscount | Discounts |
-| OrderTax | Taxes |
-| OrderPaymentReference | Payment Reference |
+| Aggregate              | Description        |
+| ---------------------- | ------------------ |
+| Order                  | Aggregate Root     |
+| OrderItem              | Ordered Products   |
+| OrderAddress           | Billing & Shipping |
+| OrderDiscount          | Discounts          |
+| OrderTax               | Taxes              |
+| OrderPaymentReference  | Payment Reference  |
 | OrderShipmentReference | Shipment Reference |
-| OrderStatusHistory | Status Timeline |
-| OrderAudit | Audit Trail |
+| OrderStatusHistory     | Status Timeline    |
+| OrderAudit             | Audit Trail        |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Kafka | Event Streaming |
-| Customer Service | Customer Validation |
-| Product Service | Product Validation |
-| Inventory Service | Inventory Reservation |
-| Billing Service | Invoice & Payment |
-| Dispatch Service | Shipment Processing |
+| Dependency           | Purpose                |
+| -------------------- | ---------------------- |
+| Platform Foundation  | Shared Frameworks      |
+| Gateway              | API Routing            |
+| Eureka               | Service Discovery      |
+| PostgreSQL           | Persistent Storage     |
+| Kafka                | Event Streaming        |
+| Customer Service     | Customer Validation    |
+| Product Service      | Product Validation     |
+| Inventory Service    | Inventory Reservation  |
+| Billing Service      | Invoice & Payment      |
+| Dispatch Service     | Shipment Processing    |
 | Notification Service | Customer Notifications |
-| Audit Service | Audit Processing |
+| Audit Service        | Audit Processing       |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Order Service Software Requirements Specification |
+| Version | Description                                               |
+| ------- | --------------------------------------------------------- |
+| v1.0.0  | Initial Order Service Software Requirements Specification |
 
 ---
 
 # 35. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
 # End of Document
-
-
-

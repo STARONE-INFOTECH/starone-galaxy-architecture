@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Branch Service |
+| Field          | Value                                              |
+| -------------- | -------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform           |
+| Service Name   | Branch Service                                     |
 | Document Title | Branch Service Software Requirements Specification |
-| Document ID | SRS-003 |
-| Repository | starone-dhs-platform |
-| Module | branch-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-003                                            |
+| Repository     | starone-dhs-platform                               |
+| Module         | branch-service                                     |
+| Document Type  | Software Requirements Specification (SRS)          |
+| Standard       | ISO/IEC/IEEE 29148                                 |
+| Version        | v1.0.0                                             |
+| Status         | Draft                                              |
+| Author         | Sachin Salunke                                     |
+| Owner          | Enterprise Architecture                            |
+| Last Updated   | 2026-06-27                                         |
 
 ---
 
@@ -26,34 +26,34 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | DHS High-Level Design |
+| Document   | Description                    |
+| ---------- | ------------------------------ |
+| BRD-001    | Business Requirements Document |
+| PRD-001    | Product Requirements Document  |
+| ADR-001    | Architecture Decision Record   |
+| HLD-001    | DHS High-Level Design          |
 | FRD-Branch | Branch Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-002 | Identity Service |
+| SRS-001    | Platform Foundation            |
+| SRS-002    | Identity Service               |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -102,12 +102,12 @@ The Branch Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Branch | Physical or logical business location |
-| Parent Branch | Higher-level organizational branch |
-| Child Branch | Branch reporting to another branch |
-| Headquarters | Root branch within the hierarchy |
+| Term          | Description                           |
+| ------------- | ------------------------------------- |
+| Branch        | Physical or logical business location |
+| Parent Branch | Higher-level organizational branch    |
+| Child Branch  | Branch reporting to another branch    |
+| Headquarters  | Root branch within the hierarchy      |
 
 ---
 
@@ -168,36 +168,36 @@ BranchService --> NotificationService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Kafka | Event Publishing |
-| Audit Service | Audit Processing |
+| Dependency           | Purpose                |
+| -------------------- | ---------------------- |
+| Platform Foundation  | Shared Frameworks      |
+| Gateway              | API Routing            |
+| Eureka               | Service Discovery      |
+| PostgreSQL           | Persistent Storage     |
+| Kafka                | Event Publishing       |
+| Audit Service        | Audit Processing       |
 | Notification Service | Business Notifications |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Gateway | Request Routing |
+| Service          | Purpose                        |
+| ---------------- | ------------------------------ |
+| Gateway          | Request Routing                |
 | Identity Service | Authentication & Authorization |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Customer Service | Branch Reference |
+| Service           | Purpose            |
+| ----------------- | ------------------ |
+| Customer Service  | Branch Reference   |
 | Inventory Service | Inventory Location |
-| Order Service | Order Fulfillment |
-| Reporting Service | Analytics |
-| Audit Service | Audit Processing |
+| Order Service     | Order Fulfillment  |
+| Reporting Service | Analytics          |
+| Audit Service     | Audit Processing   |
 
 ---
 
@@ -545,28 +545,28 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 8.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | / | Create Branch |
-| PUT | /{branchId} | Update Branch |
-| GET | /{branchId} | Get Branch |
-| DELETE | /{branchId} | Soft Delete Branch |
-| GET | / | Search Branches |
-| PATCH | /{branchId}/activate | Activate Branch |
-| PATCH | /{branchId}/deactivate | Deactivate Branch |
-| GET | /hierarchy | Branch Hierarchy |
-| GET | /code/{branchCode} | Find by Branch Code |
+| Method | URI                    | Description         |
+| ------ | ---------------------- | ------------------- |
+| POST   | /                      | Create Branch       |
+| PUT    | /{branchId}            | Update Branch       |
+| GET    | /{branchId}            | Get Branch          |
+| DELETE | /{branchId}            | Soft Delete Branch  |
+| GET    | /                      | Search Branches     |
+| PATCH  | /{branchId}/activate   | Activate Branch     |
+| PATCH  | /{branchId}/deactivate | Deactivate Branch   |
+| GET    | /hierarchy             | Branch Hierarchy    |
+| GET    | /code/{branchCode}     | Find by Branch Code |
 
 ---
 
 # 8.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Request Correlation |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description         |
+| ---------------- | -------- | ------------------- |
+| Authorization    | Yes      | JWT Bearer Token    |
+| X-Correlation-ID | Yes      | Request Correlation |
+| Content-Type     | Yes      | application/json    |
+| Accept           | Yes      | application/json    |
 
 ---
 
@@ -574,26 +574,26 @@ All APIs shall be exposed through the DHS API Gateway.
 
 Search API supports:
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC or DESC |
-| keyword | No | Global Search |
-| status | No | Branch Status |
-| city | No | City |
-| state | No | State |
-| country | No | Country |
+| Parameter | Required | Description   |
+| --------- | -------- | ------------- |
+| page      | No       | Page Number   |
+| size      | No       | Page Size     |
+| sort      | No       | Sort Field    |
+| direction | No       | ASC or DESC   |
+| keyword   | No       | Global Search |
+| status    | No       | Branch Status |
+| city      | No       | City          |
+| state     | No       | State         |
+| country   | No       | Country       |
 
 ---
 
 # 8.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
-| branchId | Branch Identifier |
-| branchCode | Branch Code |
+| Parameter  | Description       |
+| ---------- | ----------------- |
+| branchId   | Branch Identifier |
+| branchCode | Branch Code       |
 
 ---
 
@@ -732,38 +732,38 @@ Returns complete organizational hierarchy.
 
 ## CreateBranchRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| branchCode | String | Yes |
-| branchName | String | Yes |
-| parentBranchId | UUID | No |
-| email | String | Yes |
-| phone | String | Yes |
-| address | AddressDTO | Yes |
+| Field          | Type       | Required |
+| -------------- | ---------- | -------- |
+| branchCode     | String     | Yes      |
+| branchName     | String     | Yes      |
+| parentBranchId | UUID       | No       |
+| email          | String     | Yes      |
+| phone          | String     | Yes      |
+| address        | AddressDTO | Yes      |
 
 ---
 
 ## UpdateBranchRequest
 
-| Field | Type |
-|---------|------|
-| branchName | String |
-| email | String |
-| phone | String |
-| address | AddressDTO |
-| status | BranchStatus |
+| Field      | Type         |
+| ---------- | ------------ |
+| branchName | String       |
+| email      | String       |
+| phone      | String       |
+| address    | AddressDTO   |
+| status     | BranchStatus |
 
 ---
 
 ## SearchBranchRequest
 
-| Field | Type |
-|---------|------|
-| keyword | String |
-| city | String |
-| state | String |
-| country | String |
-| status | BranchStatus |
+| Field   | Type         |
+| ------- | ------------ |
+| keyword | String       |
+| city    | String       |
+| state   | String       |
+| country | String       |
+| status  | BranchStatus |
 
 ---
 
@@ -771,36 +771,36 @@ Returns complete organizational hierarchy.
 
 ## BranchResponse
 
-| Field | Type |
-|---------|------|
-| branchId | UUID |
-| branchCode | String |
-| branchName | String |
-| status | BranchStatus |
-| address | AddressDTO |
+| Field      | Type         |
+| ---------- | ------------ |
+| branchId   | UUID         |
+| branchCode | String       |
+| branchName | String       |
+| status     | BranchStatus |
+| address    | AddressDTO   |
 
 ---
 
 ## BranchSummaryResponse
 
-| Field | Type |
-|---------|------|
-| branchId | UUID |
-| branchCode | String |
-| branchName | String |
-| city | String |
-| state | String |
-| status | BranchStatus |
+| Field      | Type         |
+| ---------- | ------------ |
+| branchId   | UUID         |
+| branchCode | String       |
+| branchName | String       |
+| city       | String       |
+| state      | String       |
+| status     | BranchStatus |
 
 ---
 
 ## BranchHierarchyResponse
 
-| Field | Type |
-|---------|------|
-| branchId | UUID |
-| parentBranchId | UUID |
-| children | List<BranchHierarchyResponse> |
+| Field          | Type                          |
+| -------------- | ----------------------------- |
+| branchId       | UUID                          |
+| parentBranchId | UUID                          |
+| children       | List<BranchHierarchyResponse> |
 
 ---
 
@@ -841,33 +841,33 @@ Returns complete organizational hierarchy.
 
 # 12. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Deleted |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Branch Not Found |
-| 409 | Duplicate Branch |
-| 422 | Invalid Hierarchy |
-| 500 | Internal Server Error |
+| Status | Description           |
+| ------ | --------------------- |
+| 200    | Success               |
+| 201    | Created               |
+| 204    | Deleted               |
+| 400    | Validation Error      |
+| 401    | Unauthorized          |
+| 403    | Forbidden             |
+| 404    | Branch Not Found      |
+| 409    | Duplicate Branch      |
+| 422    | Invalid Hierarchy     |
+| 500    | Internal Server Error |
 
 ---
 
 ## Permission Matrix
 
-| API | Super Admin | Admin | Branch Manager | Viewer |
-|------|-------------|--------|----------------|--------|
-| Create Branch | ✅ | ✅ | ❌ | ❌ |
-| Update Branch | ✅ | ✅ | ✅ | ❌ |
-| Delete Branch | ✅ | ❌ | ❌ | ❌ |
-| Activate Branch | ✅ | ✅ | ❌ | ❌ |
-| Deactivate Branch | ✅ | ✅ | ❌ | ❌ |
-| View Branch | ✅ | ✅ | ✅ | ✅ |
-| Search Branch | ✅ | ✅ | ✅ | ✅ |
-| View Hierarchy | ✅ | ✅ | ✅ | ✅ |
+| API               | Super Admin | Admin | Branch Manager | Viewer |
+| ----------------- | ----------- | ----- | -------------- | ------ |
+| Create Branch     | ✅          | ✅    | ❌             | ❌     |
+| Update Branch     | ✅          | ✅    | ✅             | ❌     |
+| Delete Branch     | ✅          | ❌    | ❌             | ❌     |
+| Activate Branch   | ✅          | ✅    | ❌             | ❌     |
+| Deactivate Branch | ✅          | ✅    | ❌             | ❌     |
+| View Branch       | ✅          | ✅    | ✅             | ✅     |
+| Search Branch     | ✅          | ✅    | ✅             | ✅     |
+| View Hierarchy    | ✅          | ✅    | ✅             | ✅     |
 
 ---
 
@@ -883,78 +883,78 @@ No external service shall directly access or modify the Branch Service database.
 
 # 13.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Branch | Primary branch master |
-| BranchAddress | Branch address information |
-| BranchContact | Branch contact information |
+| Entity               | Description                 |
+| -------------------- | --------------------------- |
+| Branch               | Primary branch master       |
+| BranchAddress        | Branch address information  |
+| BranchContact        | Branch contact information  |
 | BranchOperatingHours | Business operating schedule |
 
 ---
 
 # 13.2 Branch Entity
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| branchCode | VARCHAR(30) | Unique, Immutable |
-| branchName | VARCHAR(200) | Required |
-| parentBranchId | UUID | Nullable |
-| legalEntityId | UUID | Required |
-| status | ENUM | Required |
-| type | ENUM | Required |
-| email | VARCHAR(150) | Unique |
-| gstNumber | VARCHAR(20) | Unique |
-| panNumber | VARCHAR(20) | Unique |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedBy | UUID | Required |
-| updatedAt | TIMESTAMP | Required |
-| deleted | BOOLEAN | Default FALSE |
+| Attribute      | Type         | Constraint        |
+| -------------- | ------------ | ----------------- |
+| id             | UUID         | Primary Key       |
+| branchCode     | VARCHAR(30)  | Unique, Immutable |
+| branchName     | VARCHAR(200) | Required          |
+| parentBranchId | UUID         | Nullable          |
+| legalEntityId  | UUID         | Required          |
+| status         | ENUM         | Required          |
+| type           | ENUM         | Required          |
+| email          | VARCHAR(150) | Unique            |
+| gstNumber      | VARCHAR(20)  | Unique            |
+| panNumber      | VARCHAR(20)  | Unique            |
+| createdBy      | UUID         | Required          |
+| createdAt      | TIMESTAMP    | Required          |
+| updatedBy      | UUID         | Required          |
+| updatedAt      | TIMESTAMP    | Required          |
+| deleted        | BOOLEAN      | Default FALSE     |
 
 ---
 
 # 13.3 Branch Address Entity
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchId | UUID |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| branchId     | UUID         |
 | addressLine1 | VARCHAR(255) |
 | addressLine2 | VARCHAR(255) |
-| landmark | VARCHAR(255) |
-| city | VARCHAR(100) |
-| district | VARCHAR(100) |
-| state | VARCHAR(100) |
-| country | VARCHAR(100) |
-| postalCode | VARCHAR(20) |
+| landmark     | VARCHAR(255) |
+| city         | VARCHAR(100) |
+| district     | VARCHAR(100) |
+| state        | VARCHAR(100) |
+| country      | VARCHAR(100) |
+| postalCode   | VARCHAR(20)  |
 
 ---
 
 # 13.4 Branch Contact Entity
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchId | UUID |
-| contactPerson | VARCHAR(150) |
-| designation | VARCHAR(100) |
-| phoneNumber | VARCHAR(25) |
-| alternatePhone | VARCHAR(25) |
-| email | VARCHAR(150) |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| branchId       | UUID         |
+| contactPerson  | VARCHAR(150) |
+| designation    | VARCHAR(100) |
+| phoneNumber    | VARCHAR(25)  |
+| alternatePhone | VARCHAR(25)  |
+| email          | VARCHAR(150) |
 
 ---
 
 # 13.5 Branch Operating Hours Entity
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchId | UUID |
-| dayOfWeek | ENUM |
-| openingTime | TIME |
-| closingTime | TIME |
-| working | BOOLEAN |
+| Attribute   | Type    |
+| ----------- | ------- |
+| id          | UUID    |
+| branchId    | UUID    |
+| dayOfWeek   | ENUM    |
+| openingTime | TIME    |
+| closingTime | TIME    |
+| working     | BOOLEAN |
 
 ---
 
@@ -976,12 +976,12 @@ branch
 
 # 14.1 Tables
 
-| Table | Purpose |
-|---------|----------|
-| branch | Branch Master |
-| branch_address | Branch Address |
-| branch_contact | Branch Contact |
-| branch_operating_hours | Working Hours |
+| Table                  | Purpose        |
+| ---------------------- | -------------- |
+| branch                 | Branch Master  |
+| branch_address         | Branch Address |
+| branch_contact         | Branch Contact |
+| branch_operating_hours | Working Hours  |
 
 ---
 
@@ -993,11 +993,11 @@ Every table shall use UUID as its primary key.
 
 # 14.3 Foreign Keys
 
-| Child Table | Parent Table |
-|-------------|--------------|
-| branch_address | branch |
-| branch_contact | branch |
-| branch_operating_hours | branch |
+| Child Table            | Parent Table |
+| ---------------------- | ------------ |
+| branch_address         | branch       |
+| branch_contact         | branch       |
+| branch_operating_hours | branch       |
 
 ---
 
@@ -1037,16 +1037,16 @@ Every table shall use UUID as its primary key.
 
 # 14.5 Database Indexes
 
-| Table | Index |
-|---------|-------|
-| branch | branch_code |
-| branch | branch_name |
-| branch | status |
-| branch | parent_branch_id |
-| branch | legal_entity_id |
-| branch_address | city |
-| branch_address | state |
-| branch_address | postal_code |
+| Table          | Index            |
+| -------------- | ---------------- |
+| branch         | branch_code      |
+| branch         | branch_name      |
+| branch         | status           |
+| branch         | parent_branch_id |
+| branch         | legal_entity_id  |
+| branch_address | city             |
+| branch_address | state            |
+| branch_address | postal_code      |
 
 ---
 
@@ -1156,20 +1156,20 @@ The Branch Service shall publish domain events whenever branch master data chang
 
 ## 17.1 Published Events
 
-| Topic | Event | Key | Version |
-|---------|-------|-----|----------|
-| branch.created.v1 | BranchCreated | Branch ID | v1 |
-| branch.updated.v1 | BranchUpdated | Branch ID | v1 |
-| branch.activated.v1 | BranchActivated | Branch ID | v1 |
-| branch.deactivated.v1 | BranchDeactivated | Branch ID | v1 |
-| branch.deleted.v1 | BranchDeleted | Branch ID | v1 |
+| Topic                 | Event             | Key       | Version |
+| --------------------- | ----------------- | --------- | ------- |
+| branch.created.v1     | BranchCreated     | Branch ID | v1      |
+| branch.updated.v1     | BranchUpdated     | Branch ID | v1      |
+| branch.activated.v1   | BranchActivated   | Branch ID | v1      |
+| branch.deactivated.v1 | BranchDeactivated | Branch ID | v1      |
+| branch.deleted.v1     | BranchDeleted     | Branch ID | v1      |
 
 ---
 
 ## 17.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
+| Topic           | Source           |
+| --------------- | ---------------- |
 | user.updated.v1 | Identity Service |
 | user.deleted.v1 | Identity Service |
 
@@ -1194,10 +1194,10 @@ The Branch Service shall publish domain events whenever branch master data chang
 
 ## REST Interfaces
 
-| Service | Purpose |
-|----------|---------|
-| Identity Service | Authentication & Authorization |
-| Reporting Service | Branch Analytics |
+| Service           | Purpose                        |
+| ----------------- | ------------------------------ |
+| Identity Service  | Authentication & Authorization |
+| Reporting Service | Branch Analytics               |
 
 ---
 
@@ -1221,10 +1221,10 @@ Redis shall be used for branch reference caching where applicable.
 
 # 19. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
-| IdentityClient | Validate authenticated user context |
-| ReportingClient | Optional reporting integration |
+| Client          | Purpose                             |
+| --------------- | ----------------------------------- |
+| IdentityClient  | Validate authenticated user context |
+| ReportingClient | Optional reporting integration      |
 
 > **Implementation Note:** Avoid synchronous calls for audit processing. Audit events should be published to Kafka and consumed by the Audit Service, preserving loose coupling.
 
@@ -1252,14 +1252,14 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| branch.search.max-page-size | 100 | Yes | Maximum page size |
-| branch.cache.enabled | true | Yes | Enable branch cache |
-| branch.cache.ttl | 3600 | Yes | Cache expiration |
-| branch.hierarchy.max-depth | 10 | Yes | Maximum hierarchy depth |
-| branch.kafka.topic.created | branch.created.v1 | Yes | Create event topic |
-| branch.kafka.topic.updated | branch.updated.v1 | Yes | Update event topic |
+| Property                    | Default           | Required | Description             |
+| --------------------------- | ----------------- | -------- | ----------------------- |
+| branch.search.max-page-size | 100               | Yes      | Maximum page size       |
+| branch.cache.enabled        | true              | Yes      | Enable branch cache     |
+| branch.cache.ttl            | 3600              | Yes      | Cache expiration        |
+| branch.hierarchy.max-depth  | 10                | Yes      | Maximum hierarchy depth |
+| branch.kafka.topic.created  | branch.created.v1 | Yes      | Create event topic      |
+| branch.kafka.topic.updated  | branch.updated.v1 | Yes      | Update event topic      |
 
 ---
 
@@ -1349,22 +1349,22 @@ Internal implementation details shall never be exposed to API consumers.
 
 # 22.3 Business Error Catalog
 
-| Error Code | Description | HTTP Status |
-|------------|-------------|-------------|
-| BR-001 | Branch Code already exists | 409 |
-| BR-002 | Branch Name already exists | 409 |
-| BR-003 | Branch not found | 404 |
-| BR-004 | Invalid Parent Branch | 422 |
-| BR-005 | Circular Branch Hierarchy | 422 |
-| BR-006 | Branch already active | 409 |
-| BR-007 | Branch already inactive | 409 |
-| BR-008 | Branch already archived | 409 |
-| BR-009 | Branch cannot be deleted | 409 |
-| BR-010 | Invalid Branch Status | 400 |
-| BR-011 | Validation failed | 400 |
-| BR-012 | Unauthorized Access | 401 |
-| BR-013 | Forbidden Operation | 403 |
-| BR-500 | Internal Server Error | 500 |
+| Error Code | Description                | HTTP Status |
+| ---------- | -------------------------- | ----------- |
+| BR-001     | Branch Code already exists | 409         |
+| BR-002     | Branch Name already exists | 409         |
+| BR-003     | Branch not found           | 404         |
+| BR-004     | Invalid Parent Branch      | 422         |
+| BR-005     | Circular Branch Hierarchy  | 422         |
+| BR-006     | Branch already active      | 409         |
+| BR-007     | Branch already inactive    | 409         |
+| BR-008     | Branch already archived    | 409         |
+| BR-009     | Branch cannot be deleted   | 409         |
+| BR-010     | Invalid Branch Status      | 400         |
+| BR-011     | Validation failed          | 400         |
+| BR-012     | Unauthorized Access        | 401         |
+| BR-013     | Forbidden Operation        | 403         |
+| BR-500     | Internal Server Error      | 500         |
 
 ---
 
@@ -1591,28 +1591,28 @@ The service shall follow enterprise coding standards.
 
 # 26. Requirement Traceability Matrix
 
-| Requirement | Source Document | Source Requirement | Verification |
-|-------------|-----------------|--------------------|--------------|
-| BR-SYS-001 – BR-SYS-020 | FRD-Branch | Branch Functional Requirements | Functional Testing |
-| BR-SYS-021 – BR-SYS-035 | SRS-001 | Platform Runtime Requirements | Integration Testing |
-| BR-NFR-001 – BR-NFR-014 | PRD / HLD | Quality Attributes | Performance & Security Testing |
+| Requirement             | Source Document | Source Requirement             | Verification                   |
+| ----------------------- | --------------- | ------------------------------ | ------------------------------ |
+| BR-SYS-001 – BR-SYS-020 | FRD-Branch      | Branch Functional Requirements | Functional Testing             |
+| BR-SYS-021 – BR-SYS-035 | SRS-001         | Platform Runtime Requirements  | Integration Testing            |
+| BR-NFR-001 – BR-NFR-014 | PRD / HLD       | Quality Attributes             | Performance & Security Testing |
 
 ---
 
 # 27. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| BR-SYS-001 | TC-BR-001 |
-| BR-SYS-002 | TC-BR-002 |
-| BR-SYS-003 | TC-BR-003 |
-| BR-SYS-004 | TC-BR-004 |
-| BR-SYS-005 | TC-BR-005 |
-| BR-SYS-006 | TC-BR-006 |
-| BR-SYS-007 | TC-BR-007 |
-| BR-SYS-008 | TC-BR-008 |
-| BR-SYS-009 | TC-BR-009 |
-| BR-SYS-010 | TC-BR-010 |
+| ----------- | --------- |
+| BR-SYS-001  | TC-BR-001 |
+| BR-SYS-002  | TC-BR-002 |
+| BR-SYS-003  | TC-BR-003 |
+| BR-SYS-004  | TC-BR-004 |
+| BR-SYS-005  | TC-BR-005 |
+| BR-SYS-006  | TC-BR-006 |
+| BR-SYS-007  | TC-BR-007 |
+| BR-SYS-008  | TC-BR-008 |
+| BR-SYS-009  | TC-BR-009 |
+| BR-SYS-010  | TC-BR-010 |
 
 ---
 
@@ -1638,57 +1638,57 @@ The Branch Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Branch | Create, Update, Get, Delete, Search |
-| Branch Hierarchy | View Hierarchy |
-| Branch Status | Activate, Deactivate |
+| Resource         | Endpoints                           |
+| ---------------- | ----------------------------------- |
+| Branch           | Create, Update, Get, Delete, Search |
+| Branch Hierarchy | View Hierarchy                      |
+| Branch Status    | Activate, Deactivate                |
 
 ---
 
 ## Appendix B – Entity Summary
 
-| Entity | Description |
-|---------|-------------|
-| Branch | Branch Master |
-| BranchAddress | Branch Address |
-| BranchContact | Contact Information |
-| BranchOperatingHours | Operating Schedule |
+| Entity               | Description         |
+| -------------------- | ------------------- |
+| Branch               | Branch Master       |
+| BranchAddress        | Branch Address      |
+| BranchContact        | Contact Information |
+| BranchOperatingHours | Operating Schedule  |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Redis | Caching |
-| Kafka | Event Publishing |
-| Identity Service | Authentication Context |
-| Audit Service | Audit Processing |
+| Dependency          | Purpose                |
+| ------------------- | ---------------------- |
+| Platform Foundation | Shared Frameworks      |
+| Gateway             | API Routing            |
+| Eureka              | Service Discovery      |
+| PostgreSQL          | Persistent Storage     |
+| Redis               | Caching                |
+| Kafka               | Event Publishing       |
+| Identity Service    | Authentication Context |
+| Audit Service       | Audit Processing       |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Branch Service Software Requirements Specification |
+| Version | Description                                                |
+| ------- | ---------------------------------------------------------- |
+| v1.0.0  | Initial Branch Service Software Requirements Specification |
 
 ---
 
 # 30. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 

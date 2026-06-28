@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Branch Service |
-| Document | Low Level Design |
-| Document ID | LLD-003 |
-| Repository | starone-dhs-platform |
-| Module | branch-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Branch Service                         |
+| Document    | Low Level Design                       |
+| Document ID | LLD-003                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | branch-service                         |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -147,13 +147,13 @@ branch-service
 
 ## Module Responsibilities
 
-| Module | Responsibility |
-|----------|----------------|
-| api | REST APIs |
-| application | Business Services |
-| domain | Domain Model |
-| infrastructure | Database, Kafka |
-| bootstrap | Spring Boot Startup |
+| Module         | Responsibility      |
+| -------------- | ------------------- |
+| api            | REST APIs           |
+| application    | Business Services   |
+| domain         | Domain Model        |
+| infrastructure | Database, Kafka     |
+| bootstrap      | Spring Boot Startup |
 
 ---
 
@@ -419,15 +419,15 @@ Platform Foundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Branch | Branch Master |
-| BranchHierarchy | Parent/Child Structure |
-| BranchConfiguration | Operational Settings |
-| BranchAddress | Address Details |
-| BranchContact | Contact Information |
-| BusinessHours | Working Hours |
-| Audit | Change Tracking |
+| Component           | Responsibility         |
+| ------------------- | ---------------------- |
+| Branch              | Branch Master          |
+| BranchHierarchy     | Parent/Child Structure |
+| BranchConfiguration | Operational Settings   |
+| BranchAddress       | Address Details        |
+| BranchContact       | Contact Information    |
+| BusinessHours       | Working Hours          |
+| Audit               | Change Tracking        |
 
 ---
 
@@ -693,13 +693,13 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| BranchRepository | Branch Master |
-| BranchHierarchyRepository | Hierarchy |
-| BranchConfigurationRepository | Configuration |
-| BranchAddressRepository | Address |
-| BranchContactRepository | Contacts |
+| Repository                    | Responsibility |
+| ----------------------------- | -------------- |
+| BranchRepository              | Branch Master  |
+| BranchHierarchyRepository     | Hierarchy      |
+| BranchConfigurationRepository | Configuration  |
+| BranchAddressRepository       | Address        |
+| BranchContactRepository       | Contacts       |
 | BranchBusinessHoursRepository | Business Hours |
 
 ---
@@ -740,25 +740,25 @@ dto.response
 
 ## BranchResponse
 
-| Field | Type |
-|---------|------|
-| id | UUID |
-| branchCode | String |
-| branchName | String |
-| status | BranchStatus |
-| region | String |
-| zone | String |
+| Field      | Type         |
+| ---------- | ------------ |
+| id         | UUID         |
+| branchCode | String       |
+| branchName | String       |
+| status     | BranchStatus |
+| region     | String       |
+| zone       | String       |
 
 ---
 
 ## BranchHierarchyResponse
 
-| Field | Type |
-|---------|------|
-| branchId | UUID |
-| parentBranchId | UUID |
-| level | Integer |
-| children | List |
+| Field          | Type    |
+| -------------- | ------- |
+| branchId       | UUID    |
+| parentBranchId | UUID    |
+| level          | Integer |
+| children       | List    |
 
 ---
 
@@ -788,78 +788,78 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchCode | String |
-| branchName | String |
-| branchType | BranchType |
-| status | BranchStatus |
-| region | String |
-| zone | String |
-| currency | String |
-| timezone | String |
+| Attribute  | Type         |
+| ---------- | ------------ |
+| id         | UUID         |
+| branchCode | String       |
+| branchName | String       |
+| branchType | BranchType   |
+| status     | BranchStatus |
+| region     | String       |
+| zone       | String       |
+| currency   | String       |
+| timezone   | String       |
 
 ---
 
 ## BranchHierarchy
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchId | UUID |
-| parentBranchId | UUID |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| branchId       | UUID    |
+| parentBranchId | UUID    |
 | hierarchyLevel | Integer |
 
 ---
 
 ## BranchConfiguration
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchId | UUID |
-| allowSales | Boolean |
-| allowPurchase | Boolean |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| branchId       | UUID    |
+| allowSales     | Boolean |
+| allowPurchase  | Boolean |
 | allowInventory | Boolean |
-| timezone | String |
-| currency | String |
+| timezone       | String  |
+| currency       | String  |
 
 ---
 
 ## BranchAddress
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchId | UUID |
+| Attribute    | Type   |
+| ------------ | ------ |
+| id           | UUID   |
+| branchId     | UUID   |
 | addressLine1 | String |
-| city | String |
-| state | String |
-| postalCode | String |
-| country | String |
+| city         | String |
+| state        | String |
+| postalCode   | String |
+| country      | String |
 
 ---
 
 ## BranchContact
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchId | UUID |
+| Attribute   | Type   |
+| ----------- | ------ |
+| id          | UUID   |
+| branchId    | UUID   |
 | contactName | String |
-| mobile | String |
-| email | String |
+| mobile      | String |
+| email       | String |
 
 ---
 
 ## BranchBusinessHours
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| branchId | UUID |
-| dayOfWeek | DayOfWeek |
+| Attribute   | Type      |
+| ----------- | --------- |
+| id          | UUID      |
+| branchId    | UUID      |
+| dayOfWeek   | DayOfWeek |
 | openingTime | LocalTime |
 | closingTime | LocalTime |
 
@@ -924,13 +924,13 @@ BranchConfigurationValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| BranchCodeValidator | Unique Branch Code |
-| BranchHierarchyValidator | Prevent Circular Hierarchy |
-| BusinessHoursValidator | Opening < Closing |
-| AddressValidator | Address Validation |
-| BranchConfigurationValidator | Configuration Validation |
+| Validator                    | Purpose                    |
+| ---------------------------- | -------------------------- |
+| BranchCodeValidator          | Unique Branch Code         |
+| BranchHierarchyValidator     | Prevent Circular Hierarchy |
+| BusinessHoursValidator       | Opening < Closing          |
+| AddressValidator             | Address Validation         |
+| BranchConfigurationValidator | Configuration Validation   |
 
 ---
 
@@ -1177,15 +1177,15 @@ security
 
 ## 30.3 Required Permissions
 
-| Permission | Description |
-|------------|-------------|
-| BRANCH_CREATE | Create Branch |
-| BRANCH_UPDATE | Update Branch |
-| BRANCH_DELETE | Soft Delete Branch |
-| BRANCH_VIEW | View Branch |
-| BRANCH_SEARCH | Search Branches |
+| Permission       | Description          |
+| ---------------- | -------------------- |
+| BRANCH_CREATE    | Create Branch        |
+| BRANCH_UPDATE    | Update Branch        |
+| BRANCH_DELETE    | Soft Delete Branch   |
+| BRANCH_VIEW      | View Branch          |
+| BRANCH_SEARCH    | Search Branches      |
 | BRANCH_CONFIGURE | Manage Configuration |
-| BRANCH_HIERARCHY | Manage Hierarchy |
+| BRANCH_HIERARCHY | Manage Hierarchy     |
 
 ---
 
@@ -1223,15 +1223,12 @@ The Branch Service shall consume authenticated user information from the Spring 
 
 ```json
 {
-  "sub":"UUID",
-  "username":"admin",
-  "roles":["ADMIN"],
-  "permissions":[
-      "BRANCH_CREATE",
-      "BRANCH_UPDATE"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "admin",
+  "roles": ["ADMIN"],
+  "permissions": ["BRANCH_CREATE", "BRANCH_UPDATE"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1281,13 +1278,13 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Branch | BRANCH_CREATE |
-| Update Branch | BRANCH_UPDATE |
-| Delete Branch | BRANCH_DELETE |
-| View Branch | BRANCH_VIEW |
-| Search Branch | BRANCH_SEARCH |
+| API              | Permission       |
+| ---------------- | ---------------- |
+| Create Branch    | BRANCH_CREATE    |
+| Update Branch    | BRANCH_UPDATE    |
+| Delete Branch    | BRANCH_DELETE    |
+| View Branch      | BRANCH_VIEW      |
+| Search Branch    | BRANCH_SEARCH    |
 | Configure Branch | BRANCH_CONFIGURE |
 | Manage Hierarchy | BRANCH_HIERARCHY |
 
@@ -1349,12 +1346,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"BranchCreated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "BranchCreated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1380,11 +1377,11 @@ client
 
 ## Responsibilities
 
-| Client | Purpose |
-|---------|----------|
-| IdentityClient | Validate User |
+| Client          | Purpose                        |
+| --------------- | ------------------------------ |
+| IdentityClient  | Validate User                  |
 | WarehouseClient | Validate Warehouse Association |
-| AuditClient | Publish Audit Logs |
+| AuditClient     | Publish Audit Logs             |
 
 ---
 
@@ -1408,16 +1405,16 @@ config
 
 ## Responsibilities
 
-| Configuration | Purpose |
-|---------------|---------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Jackson | JSON |
-| Metrics | Micrometer |
-| Scheduler | Scheduled Tasks |
-| Validation | Bean Validation |
+| Configuration | Purpose              |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis                |
+| Jackson       | JSON                 |
+| Metrics       | Micrometer           |
+| Scheduler     | Scheduled Tasks      |
+| Validation    | Bean Validation      |
 
 ---
 
@@ -1431,13 +1428,13 @@ Distributed business workflows shall communicate using Kafka events.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Create Branch | REQUIRED |
-| Update Branch | REQUIRED |
-| Delete Branch | REQUIRED |
-| Update Configuration | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation            | Propagation  |
+| -------------------- | ------------ |
+| Create Branch        | REQUIRED     |
+| Update Branch        | REQUIRED     |
+| Delete Branch        | REQUIRED     |
+| Update Configuration | REQUIRED     |
+| Publish Event        | AFTER_COMMIT |
 
 ---
 
@@ -1564,25 +1561,25 @@ scheduler
 
 The Branch Service integrates with
 
-| Service | Purpose |
-|----------|---------|
-| Identity Service | Authentication |
-| Warehouse Service | Warehouse Validation |
-| Audit Service | Audit Logging |
+| Service              | Purpose                      |
+| -------------------- | ---------------------------- |
+| Identity Service     | Authentication               |
+| Warehouse Service    | Warehouse Validation         |
+| Audit Service        | Audit Logging                |
 | Notification Service | Administrative Notifications |
-| Reporting Service | Branch Analytics |
+| Reporting Service    | Branch Analytics             |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| branch.cache.enabled | true |
-| branch.cache.ttl | 3600 |
-| branch.search.max-page-size | 100 |
-| branch.kafka.retry | 3 |
-| branch.audit.enabled | true |
+| Property                    | Default |
+| --------------------------- | ------- |
+| branch.cache.enabled        | true    |
+| branch.cache.ttl            | 3600    |
+| branch.search.max-page-size | 100     |
+| branch.kafka.retry          | 3       |
+| branch.audit.enabled        | true    |
 
 ---
 
@@ -1621,23 +1618,23 @@ The Branch Service integrates with
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Messaging | Apache Kafka |
-| Cache | Redis |
-| Service Discovery | Eureka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Messaging         | Apache Kafka            |
+| Cache             | Redis                   |
+| Service Discovery | Eureka                  |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
 
 ---
 
@@ -1679,13 +1676,13 @@ ELK / OpenSearch
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
+| Level | Purpose               |
+| ----- | --------------------- |
 | TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Problems |
-| ERROR | Failures |
+| DEBUG | Development           |
+| INFO  | Business Events       |
+| WARN  | Recoverable Problems  |
+| ERROR | Failures              |
 
 ---
 
@@ -2096,14 +2093,14 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2162,35 +2159,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Branch Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Input Validation |
-| Audit | Audit Trail |
+| Layer      | Responsibility        |
+| ---------- | --------------------- |
+| Controller | Request Handling      |
+| Service    | Branch Business Logic |
+| Repository | Persistence           |
+| Kafka      | Event Publishing      |
+| Mapper     | DTO Conversion        |
+| Validation | Input Validation      |
+| Audit      | Audit Trail           |
 
 ---
 
@@ -2278,12 +2275,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Architecture, Standards & Governance |
-| starone-galaxy-central-config | Centralized Configuration |
-| starone-galaxy-infra | Kubernetes, CI/CD & Infrastructure |
-| starone-dhs-platform | Branch Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Architecture, Standards & Governance |
+| starone-galaxy-central-config | Centralized Configuration                       |
+| starone-galaxy-infra          | Kubernetes, CI/CD & Infrastructure              |
+| starone-dhs-platform          | Branch Service Implementation                   |
 
 ---
 

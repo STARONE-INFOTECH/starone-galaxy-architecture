@@ -4,18 +4,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Identity Service |
-| Document | Low Level Design |
-| Document ID | LLD-002 |
-| Repository | starone-dhs-platform |
-| Module | identity-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Identity Service                       |
+| Document    | Low Level Design                       |
+| Document ID | LLD-002                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | identity-service                       |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -144,13 +144,13 @@ identity-service
 
 ## Module Responsibilities
 
-| Module | Responsibility |
-|----------|----------------|
-| api | REST APIs |
-| application | Business Services |
-| domain | Domain Model |
+| Module         | Responsibility       |
+| -------------- | -------------------- |
+| api            | REST APIs            |
+| application    | Business Services    |
+| domain         | Domain Model         |
 | infrastructure | JPA, Kafka, Security |
-| bootstrap | Spring Boot Startup |
+| bootstrap      | Spring Boot Startup  |
 
 ---
 
@@ -441,16 +441,16 @@ Platform Foundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Authentication | Login & Logout |
-| Authorization | RBAC |
-| User | User Lifecycle |
-| Role | Role Management |
-| Permission | Permission Management |
-| Session | Session Tracking |
-| Password | Password Lifecycle |
-| JWT | Token Management |
+| Component      | Responsibility        |
+| -------------- | --------------------- |
+| Authentication | Login & Logout        |
+| Authorization  | RBAC                  |
+| User           | User Lifecycle        |
+| Role           | Role Management       |
+| Permission     | Permission Management |
+| Session        | Session Tracking      |
+| Password       | Password Lifecycle    |
+| JWT            | Token Management      |
 
 ---
 
@@ -721,16 +721,16 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| UserRepository | User Persistence |
-| RoleRepository | Role Persistence |
-| PermissionRepository | Permission Persistence |
-| UserRoleRepository | User-Role Mapping |
+| Repository               | Responsibility          |
+| ------------------------ | ----------------------- |
+| UserRepository           | User Persistence        |
+| RoleRepository           | Role Persistence        |
+| PermissionRepository     | Permission Persistence  |
+| UserRoleRepository       | User-Role Mapping       |
 | RolePermissionRepository | Role-Permission Mapping |
-| RefreshTokenRepository | Refresh Token Storage |
-| UserSessionRepository | Active Sessions |
-| LoginAuditRepository | Login History |
+| RefreshTokenRepository   | Refresh Token Storage   |
+| UserSessionRepository    | Active Sessions         |
+| LoginAuditRepository     | Login History           |
 
 ---
 
@@ -805,20 +805,20 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| username | String |
-| email | String |
-| mobileNumber | String |
-| passwordHash | String |
-| firstName | String |
-| lastName | String |
-| status | UserStatus |
-| accountLocked | Boolean |
-| passwordExpired | Boolean |
-| failedLoginAttempts | Integer |
-| lastLogin | Instant |
+| Attribute           | Type       |
+| ------------------- | ---------- |
+| id                  | UUID       |
+| username            | String     |
+| email               | String     |
+| mobileNumber        | String     |
+| passwordHash        | String     |
+| firstName           | String     |
+| lastName            | String     |
+| status              | UserStatus |
+| accountLocked       | Boolean    |
+| passwordExpired     | Boolean    |
+| failedLoginAttempts | Integer    |
+| lastLogin           | Instant    |
 
 ---
 
@@ -826,13 +826,13 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| roleCode | String |
-| roleName | String |
-| description | String |
-| active | Boolean |
+| Attribute   | Type    |
+| ----------- | ------- |
+| id          | UUID    |
+| roleCode    | String  |
+| roleName    | String  |
+| description | String  |
+| active      | Boolean |
 
 ---
 
@@ -840,13 +840,13 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
+| Attribute      | Type   |
+| -------------- | ------ |
+| id             | UUID   |
 | permissionCode | String |
 | permissionName | String |
-| module | String |
-| description | String |
+| module         | String |
+| description    | String |
 
 ---
 
@@ -855,10 +855,10 @@ entity
 ### Attributes
 
 | Attribute | Type |
-|------------|------|
-| id | UUID |
-| userId | UUID |
-| roleId | UUID |
+| --------- | ---- |
+| id        | UUID |
+| userId    | UUID |
+| roleId    | UUID |
 
 ---
 
@@ -866,10 +866,10 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| roleId | UUID |
+| Attribute    | Type |
+| ------------ | ---- |
+| id           | UUID |
+| roleId       | UUID |
 | permissionId | UUID |
 
 ---
@@ -878,13 +878,13 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| token | String |
-| userId | UUID |
+| Attribute | Type    |
+| --------- | ------- |
+| id        | UUID    |
+| token     | String  |
+| userId    | UUID    |
 | expiresAt | Instant |
-| revoked | Boolean |
+| revoked   | Boolean |
 
 ---
 
@@ -892,16 +892,16 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| userId | UUID |
-| sessionId | UUID |
-| ipAddress | String |
-| userAgent | String |
-| loginTime | Instant |
+| Attribute  | Type    |
+| ---------- | ------- |
+| id         | UUID    |
+| userId     | UUID    |
+| sessionId  | UUID    |
+| ipAddress  | String  |
+| userAgent  | String  |
+| loginTime  | Instant |
 | logoutTime | Instant |
-| active | Boolean |
+| active     | Boolean |
 
 ---
 
@@ -909,12 +909,12 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| userId | UUID |
-| passwordHash | String |
-| changedAt | Instant |
+| Attribute    | Type    |
+| ------------ | ------- |
+| id           | UUID    |
+| userId       | UUID    |
+| passwordHash | String  |
+| changedAt    | Instant |
 
 ---
 
@@ -922,13 +922,13 @@ entity
 
 ### Attributes
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| username | String |
-| ipAddress | String |
+| Attribute   | Type    |
+| ----------- | ------- |
+| id          | UUID    |
+| username    | String  |
+| ipAddress   | String  |
 | attemptedAt | Instant |
-| successful | Boolean |
+| successful  | Boolean |
 
 ---
 
@@ -1036,15 +1036,15 @@ RefreshTokenValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|---------|
-| UsernameValidator | Username Format |
-| PasswordStrengthValidator | Password Policy |
-| EmailValidator | Email Format |
-| MobileNumberValidator | Mobile Format |
-| RoleValidator | Valid Role Assignment |
-| PermissionValidator | Permission Validation |
-| RefreshTokenValidator | Refresh Token Integrity |
+| Validator                 | Purpose                 |
+| ------------------------- | ----------------------- |
+| UsernameValidator         | Username Format         |
+| PasswordStrengthValidator | Password Policy         |
+| EmailValidator            | Email Format            |
+| MobileNumberValidator     | Mobile Format           |
+| RoleValidator             | Valid Role Assignment   |
+| PermissionValidator       | Permission Validation   |
+| RefreshTokenValidator     | Refresh Token Integrity |
 
 ---
 
@@ -1317,14 +1317,14 @@ security
 
 ## Security Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| JwtAuthenticationFilter | Validate JWT |
-| AuthorizationFilter | Permission Validation |
-| IdentityUserPrincipal | Authenticated User |
-| JwtTokenProvider | Token Generation |
-| JwtTokenValidator | Signature Validation |
-| PermissionEvaluator | RBAC Enforcement |
+| Component               | Responsibility        |
+| ----------------------- | --------------------- |
+| JwtAuthenticationFilter | Validate JWT          |
+| AuthorizationFilter     | Permission Validation |
+| IdentityUserPrincipal   | Authenticated User    |
+| JwtTokenProvider        | Token Generation      |
+| JwtTokenValidator       | Signature Validation  |
+| PermissionEvaluator     | RBAC Enforcement      |
 
 ---
 
@@ -1366,17 +1366,14 @@ Expiration
 
 ```json
 {
-  "sub":"UUID",
-  "username":"john.doe",
-  "roles":["ADMIN"],
-  "permissions":[
-      "USER_CREATE",
-      "ROLE_ASSIGN"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID",
-  "iat":1710000000,
-  "exp":1710000900
+  "sub": "UUID",
+  "username": "john.doe",
+  "roles": ["ADMIN"],
+  "permissions": ["USER_CREATE", "ROLE_ASSIGN"],
+  "tenantId": "UUID",
+  "branchId": "UUID",
+  "iat": 1710000000,
+  "exp": 1710000900
 }
 ```
 
@@ -1695,11 +1692,11 @@ client
 
 ## Responsibilities
 
-| Client | Purpose |
-|---------|----------|
-| EmployeeClient | Employee Validation |
-| NotificationClient | OTP / Email |
-| AuditClient | Audit Submission |
+| Client             | Purpose             |
+| ------------------ | ------------------- |
+| EmployeeClient     | Employee Validation |
+| NotificationClient | OTP / Email         |
+| AuditClient        | Audit Submission    |
 
 ---
 
@@ -1724,17 +1721,17 @@ config
 
 ## Configuration Responsibilities
 
-| Configuration | Purpose |
-|---------------|---------|
-| Security | Spring Security |
-| JWT | Token Properties |
-| Password | BCrypt |
-| Kafka | Event Infrastructure |
-| Feign | Client Configuration |
-| OpenAPI | Swagger |
-| Cache | Redis |
-| Scheduler | Cleanup Jobs |
-| Metrics | Micrometer |
+| Configuration | Purpose              |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| JWT           | Token Properties     |
+| Password      | BCrypt               |
+| Kafka         | Event Infrastructure |
+| Feign         | Client Configuration |
+| OpenAPI       | Swagger              |
+| Cache         | Redis                |
+| Scheduler     | Cleanup Jobs         |
+| Metrics       | Micrometer           |
 
 ---
 
@@ -1748,13 +1745,13 @@ Distributed workflows shall use asynchronous events.
 
 ## Transaction Types
 
-| Operation | Transaction |
-|------------|-------------|
-| User Create | REQUIRED |
-| Role Create | REQUIRED |
-| Password Change | REQUIRED |
-| Login Audit | REQUIRES_NEW |
-| Event Publish | AFTER_COMMIT |
+| Operation       | Transaction  |
+| --------------- | ------------ |
+| User Create     | REQUIRED     |
+| Role Create     | REQUIRED     |
+| Password Change | REQUIRED     |
+| Login Audit     | REQUIRES_NEW |
+| Event Publish   | AFTER_COMMIT |
 
 ---
 
@@ -1922,23 +1919,23 @@ RSA-4096
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Password | BCrypt |
-| Messaging | Kafka |
-| Database | PostgreSQL |
-| Cache | Redis |
-| API Docs | OpenAPI 3 |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Calls | OpenFeign |
+| Concern        | Technology        |
+| -------------- | ----------------- |
+| Java           | Java 21           |
+| Framework      | Spring Boot 3.x   |
+| Security       | Spring Security 6 |
+| Authentication | JWT               |
+| Authorization  | RBAC              |
+| Password       | BCrypt            |
+| Messaging      | Kafka             |
+| Database       | PostgreSQL        |
+| Cache          | Redis             |
+| API Docs       | OpenAPI 3         |
+| Mapping        | MapStruct         |
+| Logging        | SLF4J + Logback   |
+| Metrics        | Micrometer        |
+| Tracing        | OpenTelemetry     |
+| Service Calls  | OpenFeign         |
 
 ---
 
@@ -1980,13 +1977,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
+| Level | Purpose                        |
+| ----- | ------------------------------ |
 | TRACE | Internal Framework Diagnostics |
-| DEBUG | Development & Troubleshooting |
-| INFO | Business Events |
-| WARN | Recoverable Errors |
-| ERROR | Failures & Exceptions |
+| DEBUG | Development & Troubleshooting  |
+| INFO  | Business Events                |
+| WARN  | Recoverable Errors             |
+| ERROR | Failures & Exceptions          |
 
 ---
 
@@ -2410,14 +2407,14 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2477,36 +2474,36 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Authentication & Authorization Logic |
-| Repository | Persistence |
-| Security | JWT & RBAC |
-| Kafka | Security Events |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Security Audit |
+| Layer      | Responsibility                       |
+| ---------- | ------------------------------------ |
+| Controller | Request Handling                     |
+| Service    | Authentication & Authorization Logic |
+| Repository | Persistence                          |
+| Security   | JWT & RBAC                           |
+| Kafka      | Security Events                      |
+| Mapper     | DTO Conversion                       |
+| Validation | Request Validation                   |
+| Audit      | Security Audit                       |
 
 ---
 
@@ -2598,12 +2595,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards & Architecture |
-| starone-galaxy-central-config | Configuration |
-| starone-galaxy-infra | Infrastructure & CI/CD |
-| starone-dhs-platform | Identity Service Implementation |
+| Repository                    | Responsibility                      |
+| ----------------------------- | ----------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards & Architecture |
+| starone-galaxy-central-config | Configuration                       |
+| starone-galaxy-infra          | Infrastructure & CI/CD              |
+| starone-dhs-platform          | Identity Service Implementation     |
 
 ---
 
@@ -2614,5 +2611,3 @@ The Identity Service provides centralized authentication, authorization, user li
 ---
 
 # End of Document
-
-

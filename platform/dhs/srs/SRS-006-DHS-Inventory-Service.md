@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Inventory Service |
+| Field          | Value                                                 |
+| -------------- | ----------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform              |
+| Service Name   | Inventory Service                                     |
 | Document Title | Inventory Service Software Requirements Specification |
-| Document ID | SRS-006 |
-| Repository | starone-dhs-platform |
-| Module | inventory-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-006                                               |
+| Repository     | starone-dhs-platform                                  |
+| Module         | inventory-service                                     |
+| Document Type  | Software Requirements Specification (SRS)             |
+| Standard       | ISO/IEC/IEEE 29148                                    |
+| Version        | v1.0.0                                                |
+| Status         | Draft                                                 |
+| Author         | Sachin Salunke                                        |
+| Owner          | Enterprise Architecture                               |
+| Last Updated   | 2026-06-27                                            |
 
 ---
 
@@ -26,34 +26,34 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | DHS High-Level Design |
+| Document      | Description                       |
+| ------------- | --------------------------------- |
+| BRD-001       | Business Requirements Document    |
+| PRD-001       | Product Requirements Document     |
+| ADR-001       | Architecture Decision Record      |
+| HLD-001       | DHS High-Level Design             |
 | FRD-Inventory | Inventory Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-005 | Product Service |
+| SRS-001       | Platform Foundation               |
+| SRS-005       | Product Service                   |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -102,12 +102,12 @@ The Inventory Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Inventory | Available quantity of a product |
-| Reservation | Quantity reserved for an order |
-| Movement | Stock movement transaction |
-| Adjustment | Manual stock correction |
+| Term        | Description                     |
+| ----------- | ------------------------------- |
+| Inventory   | Available quantity of a product |
+| Reservation | Quantity reserved for an order  |
+| Movement    | Stock movement transaction      |
+| Adjustment  | Manual stock correction         |
 
 ---
 
@@ -168,35 +168,35 @@ ReportingService --> InventoryService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Inventory Database |
-| Kafka | Event Streaming |
-| Product Service | Product Validation |
+| Dependency          | Purpose              |
+| ------------------- | -------------------- |
+| Platform Foundation | Shared Frameworks    |
+| Gateway             | API Routing          |
+| Eureka              | Service Discovery    |
+| PostgreSQL          | Inventory Database   |
+| Kafka               | Event Streaming      |
+| Product Service     | Product Validation   |
 | Master Data Service | Warehouse Validation |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Gateway | Request Routing |
-| Identity Service | Authentication |
-| Order Service | Stock Reservation Requests |
+| Service          | Purpose                    |
+| ---------------- | -------------------------- |
+| Gateway          | Request Routing            |
+| Identity Service | Authentication             |
+| Order Service    | Stock Reservation Requests |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Billing Service | Stock Confirmation |
-| Dispatch Service | Shipment Preparation |
-| Reporting Service | Inventory Analytics |
+| Service           | Purpose              |
+| ----------------- | -------------------- |
+| Billing Service   | Stock Confirmation   |
+| Dispatch Service  | Shipment Preparation |
+| Reporting Service | Inventory Analytics  |
 
 ---
 
@@ -538,53 +538,53 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | / | Create Inventory |
-| PUT | /{inventoryId} | Update Inventory |
-| GET | /{inventoryId} | Get Inventory |
-| GET | /product/{productId} | Product Inventory |
-| GET | /availability/{productId} | Check Availability |
-| POST | /reserve | Reserve Inventory |
-| POST | /release | Release Reservation |
-| POST | /allocate | Allocate Inventory |
-| POST | /adjust | Inventory Adjustment |
-| GET | /movements | Inventory Movement History |
-| GET | / | Search Inventory |
+| Method | URI                       | Description                |
+| ------ | ------------------------- | -------------------------- |
+| POST   | /                         | Create Inventory           |
+| PUT    | /{inventoryId}            | Update Inventory           |
+| GET    | /{inventoryId}            | Get Inventory              |
+| GET    | /product/{productId}      | Product Inventory          |
+| GET    | /availability/{productId} | Check Availability         |
+| POST   | /reserve                  | Reserve Inventory          |
+| POST   | /release                  | Release Reservation        |
+| POST   | /allocate                 | Allocate Inventory         |
+| POST   | /adjust                   | Inventory Adjustment       |
+| GET    | /movements                | Inventory Movement History |
+| GET    | /                         | Search Inventory           |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC or DESC |
-| productId | No | Product Identifier |
-| warehouseId | No | Warehouse Identifier |
-| status | No | Inventory Status |
+| Parameter   | Required | Description          |
+| ----------- | -------- | -------------------- |
+| page        | No       | Page Number          |
+| size        | No       | Page Size            |
+| sort        | No       | Sort Field           |
+| direction   | No       | ASC or DESC          |
+| productId   | No       | Product Identifier   |
+| warehouseId | No       | Warehouse Identifier |
+| status      | No       | Inventory Status     |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
+| Parameter   | Description          |
+| ----------- | -------------------- |
 | inventoryId | Inventory Identifier |
-| productId | Product Identifier |
+| productId   | Product Identifier   |
 
 ---
 
@@ -697,44 +697,44 @@ Supports:
 
 ## CreateInventoryRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| productId | UUID | Yes |
-| warehouseId | UUID | Yes |
-| onHandQuantity | Decimal | Yes |
-| reorderLevel | Decimal | Yes |
-| maximumLevel | Decimal | Yes |
+| Field          | Type    | Required |
+| -------------- | ------- | -------- |
+| productId      | UUID    | Yes      |
+| warehouseId    | UUID    | Yes      |
+| onHandQuantity | Decimal | Yes      |
+| reorderLevel   | Decimal | Yes      |
+| maximumLevel   | Decimal | Yes      |
 
 ---
 
 ## ReserveInventoryRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| orderId | UUID | Yes |
-| productId | UUID | Yes |
-| warehouseId | UUID | Yes |
-| quantity | Decimal | Yes |
+| Field       | Type    | Required |
+| ----------- | ------- | -------- |
+| orderId     | UUID    | Yes      |
+| productId   | UUID    | Yes      |
+| warehouseId | UUID    | Yes      |
+| quantity    | Decimal | Yes      |
 
 ---
 
 ## ReleaseReservationRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| reservationId | UUID | Yes |
-| reason | String | Yes |
+| Field         | Type   | Required |
+| ------------- | ------ | -------- |
+| reservationId | UUID   | Yes      |
+| reason        | String | Yes      |
 
 ---
 
 ## InventoryAdjustmentRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| inventoryId | UUID | Yes |
-| adjustmentQuantity | Decimal | Yes |
-| adjustmentType | AdjustmentType | Yes |
-| reason | String | Yes |
+| Field              | Type           | Required |
+| ------------------ | -------------- | -------- |
+| inventoryId        | UUID           | Yes      |
+| adjustmentQuantity | Decimal        | Yes      |
+| adjustmentType     | AdjustmentType | Yes      |
+| reason             | String         | Yes      |
 
 ---
 
@@ -742,37 +742,37 @@ Supports:
 
 ## InventoryResponse
 
-| Field | Type |
-|---------|------|
-| inventoryId | UUID |
-| productId | UUID |
-| warehouseId | UUID |
-| onHandQuantity | Decimal |
-| reservedQuantity | Decimal |
-| availableQuantity | Decimal |
-| status | InventoryStatus |
+| Field             | Type            |
+| ----------------- | --------------- |
+| inventoryId       | UUID            |
+| productId         | UUID            |
+| warehouseId       | UUID            |
+| onHandQuantity    | Decimal         |
+| reservedQuantity  | Decimal         |
+| availableQuantity | Decimal         |
+| status            | InventoryStatus |
 
 ---
 
 ## InventoryAvailabilityResponse
 
-| Field | Type |
-|---------|------|
-| productId | UUID |
-| warehouseId | UUID |
+| Field             | Type    |
+| ----------------- | ------- |
+| productId         | UUID    |
+| warehouseId       | UUID    |
 | availableQuantity | Decimal |
-| reservable | Boolean |
+| reservable        | Boolean |
 
 ---
 
 ## InventoryMovementResponse
 
-| Field | Type |
-|---------|------|
-| movementId | UUID |
-| movementType | MovementType |
-| quantity | Decimal |
-| transactionDate | Timestamp |
+| Field           | Type         |
+| --------------- | ------------ |
+| movementId      | UUID         |
+| movementType    | MovementType |
+| quantity        | Decimal      |
+| transactionDate | Timestamp    |
 
 ---
 
@@ -815,33 +815,33 @@ Supports:
 
 # 13. Permission Matrix
 
-| API | Super Admin | Inventory Manager | Inventory Executive | Viewer |
-|------|-------------|-------------------|---------------------|--------|
-| Create Inventory | ✅ | ✅ | ❌ | ❌ |
-| Update Inventory | ✅ | ✅ | ❌ | ❌ |
-| Reserve Inventory | ✅ | ✅ | ✅ | ❌ |
-| Release Reservation | ✅ | ✅ | ✅ | ❌ |
-| Allocate Inventory | ✅ | ✅ | ✅ | ❌ |
-| Inventory Adjustment | ✅ | ✅ | ❌ | ❌ |
-| View Inventory | ✅ | ✅ | ✅ | ✅ |
-| Search Inventory | ✅ | ✅ | ✅ | ✅ |
+| API                  | Super Admin | Inventory Manager | Inventory Executive | Viewer |
+| -------------------- | ----------- | ----------------- | ------------------- | ------ |
+| Create Inventory     | ✅          | ✅                | ❌                  | ❌     |
+| Update Inventory     | ✅          | ✅                | ❌                  | ❌     |
+| Reserve Inventory    | ✅          | ✅                | ✅                  | ❌     |
+| Release Reservation  | ✅          | ✅                | ✅                  | ❌     |
+| Allocate Inventory   | ✅          | ✅                | ✅                  | ❌     |
+| Inventory Adjustment | ✅          | ✅                | ❌                  | ❌     |
+| View Inventory       | ✅          | ✅                | ✅                  | ✅     |
+| Search Inventory     | ✅          | ✅                | ✅                  | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Updated |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Inventory Not Found |
-| 409 | Inventory Conflict |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Updated                 |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Inventory Not Found     |
+| 409    | Inventory Conflict      |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -873,16 +873,16 @@ Inventory
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Inventory | Inventory Aggregate Root |
-| InventoryStock | Current Stock Balance |
-| InventoryReservation | Reserved Stock |
-| InventoryAllocation | Allocated Inventory |
-| InventoryMovement | Stock Movement History |
-| InventoryAdjustment | Stock Corrections |
-| InventoryTransaction | Inventory Transactions |
-| InventorySnapshot | Historical Inventory Snapshot |
+| Aggregate            | Responsibility                |
+| -------------------- | ----------------------------- |
+| Inventory            | Inventory Aggregate Root      |
+| InventoryStock       | Current Stock Balance         |
+| InventoryReservation | Reserved Stock                |
+| InventoryAllocation  | Allocated Inventory           |
+| InventoryMovement    | Stock Movement History        |
+| InventoryAdjustment  | Stock Corrections             |
+| InventoryTransaction | Inventory Transactions        |
+| InventorySnapshot    | Historical Inventory Snapshot |
 
 ---
 
@@ -890,132 +890,132 @@ Inventory
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Inventory | Aggregate Root |
-| InventoryStock | Current Stock |
-| InventoryReservation | Reserved Inventory |
-| InventoryAllocation | Allocated Inventory |
-| InventoryMovement | Movement History |
-| InventoryAdjustment | Manual Adjustments |
-| InventoryTransaction | Inventory Ledger |
-| InventorySnapshot | Historical Inventory |
+| Entity               | Description          |
+| -------------------- | -------------------- |
+| Inventory            | Aggregate Root       |
+| InventoryStock       | Current Stock        |
+| InventoryReservation | Reserved Inventory   |
+| InventoryAllocation  | Allocated Inventory  |
+| InventoryMovement    | Movement History     |
+| InventoryAdjustment  | Manual Adjustments   |
+| InventoryTransaction | Inventory Ledger     |
+| InventorySnapshot    | Historical Inventory |
 
 ---
 
 ## 16.2 Inventory Entity
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| productId | UUID | Required |
-| warehouseId | UUID | Required |
-| onHandQuantity | DECIMAL(18,3) | Required |
-| reservedQuantity | DECIMAL(18,3) | Required |
-| availableQuantity | DECIMAL(18,3) | Calculated |
-| allocatedQuantity | DECIMAL(18,3) | Required |
-| reorderLevel | DECIMAL(18,3) | Required |
-| maximumLevel | DECIMAL(18,3) | Required |
-| status | ENUM | Required |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedBy | UUID | Required |
-| updatedAt | TIMESTAMP | Required |
-| deleted | BOOLEAN | Default FALSE |
+| Attribute         | Type          | Constraint    |
+| ----------------- | ------------- | ------------- |
+| id                | UUID          | Primary Key   |
+| productId         | UUID          | Required      |
+| warehouseId       | UUID          | Required      |
+| onHandQuantity    | DECIMAL(18,3) | Required      |
+| reservedQuantity  | DECIMAL(18,3) | Required      |
+| availableQuantity | DECIMAL(18,3) | Calculated    |
+| allocatedQuantity | DECIMAL(18,3) | Required      |
+| reorderLevel      | DECIMAL(18,3) | Required      |
+| maximumLevel      | DECIMAL(18,3) | Required      |
+| status            | ENUM          | Required      |
+| createdBy         | UUID          | Required      |
+| createdAt         | TIMESTAMP     | Required      |
+| updatedBy         | UUID          | Required      |
+| updatedAt         | TIMESTAMP     | Required      |
+| deleted           | BOOLEAN       | Default FALSE |
 
 ---
 
 ## 16.3 Inventory Stock
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| batchNumber | VARCHAR(100) |
-| lotNumber | VARCHAR(100) |
-| serialNumber | VARCHAR(100) |
-| manufacturingDate | DATE |
-| expiryDate | DATE |
-| quantity | DECIMAL(18,3) |
+| Attribute         | Type          |
+| ----------------- | ------------- |
+| id                | UUID          |
+| inventoryId       | UUID          |
+| batchNumber       | VARCHAR(100)  |
+| lotNumber         | VARCHAR(100)  |
+| serialNumber      | VARCHAR(100)  |
+| manufacturingDate | DATE          |
+| expiryDate        | DATE          |
+| quantity          | DECIMAL(18,3) |
 
 ---
 
 ## 16.4 Inventory Reservation
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| orderId | UUID |
+| Attribute        | Type          |
+| ---------------- | ------------- |
+| id               | UUID          |
+| inventoryId      | UUID          |
+| orderId          | UUID          |
 | reservedQuantity | DECIMAL(18,3) |
-| reservationDate | TIMESTAMP |
-| expiryDate | TIMESTAMP |
-| status | ENUM |
+| reservationDate  | TIMESTAMP     |
+| expiryDate       | TIMESTAMP     |
+| status           | ENUM          |
 
 ---
 
 ## 16.5 Inventory Allocation
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reservationId | UUID |
+| Attribute         | Type          |
+| ----------------- | ------------- |
+| id                | UUID          |
+| reservationId     | UUID          |
 | allocatedQuantity | DECIMAL(18,3) |
-| allocationDate | TIMESTAMP |
-| status | ENUM |
+| allocationDate    | TIMESTAMP     |
+| status            | ENUM          |
 
 ---
 
 ## 16.6 Inventory Movement
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| movementType | ENUM |
-| quantity | DECIMAL(18,3) |
-| referenceType | VARCHAR(50) |
-| referenceId | UUID |
-| movementDate | TIMESTAMP |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| inventoryId   | UUID          |
+| movementType  | ENUM          |
+| quantity      | DECIMAL(18,3) |
+| referenceType | VARCHAR(50)   |
+| referenceId   | UUID          |
+| movementDate  | TIMESTAMP     |
 
 ---
 
 ## 16.7 Inventory Adjustment
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| adjustmentType | ENUM |
+| Attribute          | Type          |
+| ------------------ | ------------- |
+| id                 | UUID          |
+| inventoryId        | UUID          |
+| adjustmentType     | ENUM          |
 | adjustmentQuantity | DECIMAL(18,3) |
-| reason | VARCHAR(255) |
-| adjustedBy | UUID |
-| adjustmentDate | TIMESTAMP |
+| reason             | VARCHAR(255)  |
+| adjustedBy         | UUID          |
+| adjustmentDate     | TIMESTAMP     |
 
 ---
 
 ## 16.8 Inventory Transaction
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| transactionType | ENUM |
-| quantity | DECIMAL(18,3) |
+| Attribute               | Type          |
+| ----------------------- | ------------- |
+| id                      | UUID          |
+| inventoryId             | UUID          |
+| transactionType         | ENUM          |
+| quantity                | DECIMAL(18,3) |
 | balanceAfterTransaction | DECIMAL(18,3) |
-| transactionDate | TIMESTAMP |
+| transactionDate         | TIMESTAMP     |
 
 ---
 
 ## 16.9 Inventory Snapshot
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| snapshotDate | DATE |
-| onHandQuantity | DECIMAL(18,3) |
-| reservedQuantity | DECIMAL(18,3) |
+| Attribute         | Type          |
+| ----------------- | ------------- |
+| id                | UUID          |
+| inventoryId       | UUID          |
+| snapshotDate      | DATE          |
+| onHandQuantity    | DECIMAL(18,3) |
+| reservedQuantity  | DECIMAL(18,3) |
 | availableQuantity | DECIMAL(18,3) |
 
 ---
@@ -1038,16 +1038,16 @@ inventory
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| inventory | Inventory Master |
-| inventory_stock | Stock Details |
-| inventory_reservation | Stock Reservations |
-| inventory_allocation | Stock Allocations |
-| inventory_movement | Stock Movement History |
-| inventory_adjustment | Inventory Adjustments |
-| inventory_transaction | Inventory Ledger |
-| inventory_snapshot | Daily Inventory Snapshot |
+| Table                 | Purpose                  |
+| --------------------- | ------------------------ |
+| inventory             | Inventory Master         |
+| inventory_stock       | Stock Details            |
+| inventory_reservation | Stock Reservations       |
+| inventory_allocation  | Stock Allocations        |
+| inventory_movement    | Stock Movement History   |
+| inventory_adjustment  | Inventory Adjustments    |
+| inventory_transaction | Inventory Ledger         |
+| inventory_snapshot    | Daily Inventory Snapshot |
 
 ---
 
@@ -1059,15 +1059,15 @@ All tables shall use UUID as the Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
-| inventory_stock | inventory |
-| inventory_reservation | inventory |
-| inventory_allocation | inventory_reservation |
-| inventory_movement | inventory |
-| inventory_adjustment | inventory |
-| inventory_transaction | inventory |
-| inventory_snapshot | inventory |
+| Child Table           | Parent Table          |
+| --------------------- | --------------------- |
+| inventory_stock       | inventory             |
+| inventory_reservation | inventory             |
+| inventory_allocation  | inventory_reservation |
+| inventory_movement    | inventory             |
+| inventory_adjustment  | inventory             |
+| inventory_transaction | inventory             |
+| inventory_snapshot    | inventory             |
 
 ---
 
@@ -1095,15 +1095,15 @@ Inventory Transaction
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| inventory | product_id |
-| inventory | warehouse_id |
-| inventory | status |
-| inventory_stock | batch_number |
-| inventory_stock | expiry_date |
-| inventory_reservation | order_id |
-| inventory_movement | movement_date |
+| Table                 | Index            |
+| --------------------- | ---------------- |
+| inventory             | product_id       |
+| inventory             | warehouse_id     |
+| inventory             | status           |
+| inventory_stock       | batch_number     |
+| inventory_stock       | expiry_date      |
+| inventory_reservation | order_id         |
+| inventory_movement    | movement_date    |
 | inventory_transaction | transaction_date |
 
 ---
@@ -1228,25 +1228,25 @@ The Inventory Service shall publish domain events whenever inventory changes occ
 
 ## 21.1 Published Events
 
-| Topic | Event | Key | Version |
-|---------|-------|-----|----------|
-| inventory.created.v1 | InventoryCreated | Inventory ID | v1 |
-| inventory.updated.v1 | InventoryUpdated | Inventory ID | v1 |
-| inventory.reserved.v1 | InventoryReserved | Reservation ID | v1 |
-| inventory.released.v1 | InventoryReleased | Reservation ID | v1 |
-| inventory.allocated.v1 | InventoryAllocated | Allocation ID | v1 |
-| inventory.adjusted.v1 | InventoryAdjusted | Inventory ID | v1 |
-| inventory.low-stock.v1 | InventoryLowStock | Inventory ID | v1 |
+| Topic                  | Event              | Key            | Version |
+| ---------------------- | ------------------ | -------------- | ------- |
+| inventory.created.v1   | InventoryCreated   | Inventory ID   | v1      |
+| inventory.updated.v1   | InventoryUpdated   | Inventory ID   | v1      |
+| inventory.reserved.v1  | InventoryReserved  | Reservation ID | v1      |
+| inventory.released.v1  | InventoryReleased  | Reservation ID | v1      |
+| inventory.allocated.v1 | InventoryAllocated | Allocation ID  | v1      |
+| inventory.adjusted.v1  | InventoryAdjusted  | Inventory ID   | v1      |
+| inventory.low-stock.v1 | InventoryLowStock  | Inventory ID   | v1      |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
-| product.updated.v1 | Product Service |
+| Topic                | Source              |
+| -------------------- | ------------------- |
+| product.updated.v1   | Product Service     |
 | warehouse.updated.v1 | Master Data Service |
-| order.cancelled.v1 | Order Service |
+| order.cancelled.v1   | Order Service       |
 
 ---
 
@@ -1267,23 +1267,23 @@ The Inventory Service shall publish domain events whenever inventory changes occ
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | Request Routing |
-| Kafka | Event Streaming |
-| PostgreSQL | Persistent Storage |
-| Redis | Inventory Cache |
-| Audit Service | Audit Events |
+| Interface     | Purpose            |
+| ------------- | ------------------ |
+| API Gateway   | Request Routing    |
+| Kafka         | Event Streaming    |
+| PostgreSQL    | Persistent Storage |
+| Redis         | Inventory Cache    |
+| Audit Service | Audit Events       |
 
 ---
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
-| ProductClient | Validate Product |
-| MasterDataClient | Validate Warehouse |
-| OrderClient | Validate Reservation Requests (if synchronous validation is required) |
+| Client           | Purpose                                                               |
+| ---------------- | --------------------------------------------------------------------- |
+| ProductClient    | Validate Product                                                      |
+| MasterDataClient | Validate Warehouse                                                    |
+| OrderClient      | Validate Reservation Requests (if synchronous validation is required) |
 
 > **Implementation Note:** Inventory updates should primarily be driven by domain events. Use synchronous OpenFeign calls only where immediate validation is required.
 
@@ -1311,15 +1311,15 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| inventory.search.max-page-size | 100 | Yes | Maximum page size |
-| inventory.cache.enabled | true | Yes | Enable inventory cache |
-| inventory.cache.ttl | 3600 | Yes | Cache expiration (seconds) |
-| inventory.low-stock.threshold | 10 | Yes | Low stock alert threshold |
-| inventory.snapshot.schedule | 0 0 * * * | Yes | Daily snapshot schedule |
-| inventory.event.topic.reserved | inventory.reserved.v1 | Yes | Reservation topic |
-| inventory.event.topic.adjusted | inventory.adjusted.v1 | Yes | Adjustment topic |
+| Property                       | Default               | Required | Description                |
+| ------------------------------ | --------------------- | -------- | -------------------------- |
+| inventory.search.max-page-size | 100                   | Yes      | Maximum page size          |
+| inventory.cache.enabled        | true                  | Yes      | Enable inventory cache     |
+| inventory.cache.ttl            | 3600                  | Yes      | Cache expiration (seconds) |
+| inventory.low-stock.threshold  | 10                    | Yes      | Low stock alert threshold  |
+| inventory.snapshot.schedule    | 0 0 \* \* \*          | Yes      | Daily snapshot schedule    |
+| inventory.event.topic.reserved | inventory.reserved.v1 | Yes      | Reservation topic          |
+| inventory.event.topic.adjusted | inventory.adjusted.v1 | Yes      | Adjustment topic           |
 
 ---
 
@@ -1411,21 +1411,21 @@ Internal implementation details shall never be exposed to API consumers.
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP Status |
-|------------|-------------|-------------|
-| IN-VAL-001 | Validation Failed | 400 |
-| IN-AUTH-001 | Authentication Required | 401 |
-| IN-AUTH-002 | Access Denied | 403 |
-| IN-BUS-001 | Insufficient Inventory | 409 |
-| IN-BUS-002 | Inventory Not Found | 404 |
-| IN-BUS-003 | Reservation Not Found | 404 |
-| IN-BUS-004 | Reservation Already Released | 409 |
-| IN-BUS-005 | Allocation Failed | 409 |
-| IN-BUS-006 | Negative Inventory Not Allowed | 422 |
-| IN-BUS-007 | Invalid Warehouse | 422 |
-| IN-BUS-008 | Invalid Product | 422 |
-| IN-BUS-009 | Inventory Already Archived | 409 |
-| IN-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                    | HTTP Status |
+| ----------- | ------------------------------ | ----------- |
+| IN-VAL-001  | Validation Failed              | 400         |
+| IN-AUTH-001 | Authentication Required        | 401         |
+| IN-AUTH-002 | Access Denied                  | 403         |
+| IN-BUS-001  | Insufficient Inventory         | 409         |
+| IN-BUS-002  | Inventory Not Found            | 404         |
+| IN-BUS-003  | Reservation Not Found          | 404         |
+| IN-BUS-004  | Reservation Already Released   | 409         |
+| IN-BUS-005  | Allocation Failed              | 409         |
+| IN-BUS-006  | Negative Inventory Not Allowed | 422         |
+| IN-BUS-007  | Invalid Warehouse              | 422         |
+| IN-BUS-008  | Invalid Product                | 422         |
+| IN-BUS-009  | Inventory Already Archived     | 409         |
+| IN-SYS-001  | Internal Server Error          | 500         |
 
 ---
 
@@ -1666,33 +1666,33 @@ The Inventory Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source Document | Source Requirement | Verification |
-|-------------|-----------------|--------------------|--------------|
-| IN-SYS-001 – IN-SYS-015 | FRD-Inventory | Inventory Functional Requirements | Functional Testing |
-| IN-SYS-016 – IN-SYS-031 | SRS-001 | Platform Runtime Requirements | Integration Testing |
-| IN-NFR-001 – IN-NFR-015 | PRD / HLD | Quality Attributes | Performance & Security Testing |
+| Requirement             | Source Document | Source Requirement                | Verification                   |
+| ----------------------- | --------------- | --------------------------------- | ------------------------------ |
+| IN-SYS-001 – IN-SYS-015 | FRD-Inventory   | Inventory Functional Requirements | Functional Testing             |
+| IN-SYS-016 – IN-SYS-031 | SRS-001         | Platform Runtime Requirements     | Integration Testing            |
+| IN-NFR-001 – IN-NFR-015 | PRD / HLD       | Quality Attributes                | Performance & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| IN-SYS-001 | TC-IN-001 |
-| IN-SYS-002 | TC-IN-002 |
-| IN-SYS-003 | TC-IN-003 |
-| IN-SYS-004 | TC-IN-004 |
-| IN-SYS-005 | TC-IN-005 |
-| IN-SYS-006 | TC-IN-006 |
-| IN-SYS-007 | TC-IN-007 |
-| IN-SYS-008 | TC-IN-008 |
-| IN-SYS-009 | TC-IN-009 |
-| IN-SYS-010 | TC-IN-010 |
-| IN-SYS-011 | TC-IN-011 |
-| IN-SYS-012 | TC-IN-012 |
-| IN-SYS-013 | TC-IN-013 |
-| IN-SYS-014 | TC-IN-014 |
-| IN-SYS-015 | TC-IN-015 |
+| ----------- | --------- |
+| IN-SYS-001  | TC-IN-001 |
+| IN-SYS-002  | TC-IN-002 |
+| IN-SYS-003  | TC-IN-003 |
+| IN-SYS-004  | TC-IN-004 |
+| IN-SYS-005  | TC-IN-005 |
+| IN-SYS-006  | TC-IN-006 |
+| IN-SYS-007  | TC-IN-007 |
+| IN-SYS-008  | TC-IN-008 |
+| IN-SYS-009  | TC-IN-009 |
+| IN-SYS-010  | TC-IN-010 |
+| IN-SYS-011  | TC-IN-011 |
+| IN-SYS-012  | TC-IN-012 |
+| IN-SYS-013  | TC-IN-013 |
+| IN-SYS-014  | TC-IN-014 |
+| IN-SYS-015  | TC-IN-015 |
 
 ---
 
@@ -1720,66 +1720,66 @@ The Inventory Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Inventory | Create, Update, Get, Search |
-| Reservation | Reserve, Release |
-| Allocation | Allocate |
-| Adjustment | Adjust Inventory |
-| Movement | Inventory History |
+| Resource    | Endpoints                   |
+| ----------- | --------------------------- |
+| Inventory   | Create, Update, Get, Search |
+| Reservation | Reserve, Release            |
+| Allocation  | Allocate                    |
+| Adjustment  | Adjust Inventory            |
+| Movement    | Inventory History           |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Inventory | Aggregate Root |
-| InventoryStock | Current Stock |
-| InventoryReservation | Reserved Stock |
-| InventoryAllocation | Allocated Stock |
-| InventoryMovement | Stock Movements |
-| InventoryAdjustment | Stock Adjustments |
-| InventoryTransaction | Inventory Ledger |
-| InventorySnapshot | Historical Snapshot |
+| Aggregate            | Description         |
+| -------------------- | ------------------- |
+| Inventory            | Aggregate Root      |
+| InventoryStock       | Current Stock       |
+| InventoryReservation | Reserved Stock      |
+| InventoryAllocation  | Allocated Stock     |
+| InventoryMovement    | Stock Movements     |
+| InventoryAdjustment  | Stock Adjustments   |
+| InventoryTransaction | Inventory Ledger    |
+| InventorySnapshot    | Historical Snapshot |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Redis | Inventory Cache |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
-| Product Service | Product Validation |
-| Master Data Service | Warehouse Validation |
-| Order Service | Inventory Reservation Requests |
-| Audit Service | Audit Processing |
+| Dependency          | Purpose                        |
+| ------------------- | ------------------------------ |
+| Platform Foundation | Shared Frameworks              |
+| Gateway             | API Routing                    |
+| Eureka              | Service Discovery              |
+| PostgreSQL          | Persistent Storage             |
+| Redis               | Inventory Cache                |
+| Kafka               | Event Streaming                |
+| Identity Service    | Authentication & Authorization |
+| Product Service     | Product Validation             |
+| Master Data Service | Warehouse Validation           |
+| Order Service       | Inventory Reservation Requests |
+| Audit Service       | Audit Processing               |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Inventory Service Software Requirements Specification |
+| Version | Description                                                   |
+| ------- | ------------------------------------------------------------- |
+| v1.0.0  | Initial Inventory Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 

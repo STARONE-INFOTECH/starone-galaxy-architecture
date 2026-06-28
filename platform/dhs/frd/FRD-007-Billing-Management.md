@@ -85,45 +85,45 @@ The Billing Service provides centralized billing and invoice management capabili
 
 Responsibilities:
 
-* Invoice Generation
-* Partial Billing
-* Invoice Cancellation
-* Invoice Search
-* Invoice Tracking
-* Tax Calculation
-* GST Validation
-* E-Invoice Generation
-* Credit Note Management
-* Billing Audit Logging
+- Invoice Generation
+- Partial Billing
+- Invoice Cancellation
+- Invoice Search
+- Invoice Tracking
+- Tax Calculation
+- GST Validation
+- E-Invoice Generation
+- Credit Note Management
+- Billing Audit Logging
 
 The service acts as the system of record for financial transactions resulting from order fulfillment processes.
 
 The Billing Service supports:
 
-* Order Management
-* Partial Fulfillment
-* Dispatch
-* Notifications
-* Reporting
-* Analytics
-* Financial Compliance
+- Order Management
+- Partial Fulfillment
+- Dispatch
+- Notifications
+- Reporting
+- Analytics
+- Financial Compliance
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* REST APIs and OpenFeign Communication
-* Event-Driven Architecture
-* Kafka Integration
-* Saga-Based Distributed Transactions
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- REST APIs and OpenFeign Communication
+- Event-Driven Architecture
+- Kafka Integration
+- Saga-Based Distributed Transactions
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -147,11 +147,11 @@ billing-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
@@ -159,15 +159,15 @@ billing-db
 
 ### Synchronous Dependencies
 
-* order-service
-* customer-service
+- order-service
+- customer-service
 
 ### Asynchronous Dependencies
 
-* dispatch-service
-* notification-service
-* reporting-service
-* audit-service
+- dispatch-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -497,18 +497,18 @@ API Gateway-->>User: Success
 
 Technologies:
 
-* REST APIs
-* OpenFeign
-* Service Discovery
+- REST APIs
+- OpenFeign
+- Service Discovery
 
 Used For:
 
-* Order Validation
-* Customer Validation
-* Invoice Lookup
-* Invoice Search
-* GST Validation
-* E-Invoice Generation
+- Order Validation
+- Customer Validation
+- Invoice Lookup
+- Invoice Search
+- GST Validation
+- E-Invoice Generation
 
 ---
 
@@ -516,19 +516,19 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Invoice Lifecycle Events
-* Dispatch Events
-* Notification Events
-* Reporting Events
-* Audit Events
-* Saga Coordination
+- Invoice Lifecycle Events
+- Dispatch Events
+- Notification Events
+- Reporting Events
+- Audit Events
+- Saga Coordination
 
 # 14. Published Events
 
@@ -678,19 +678,19 @@ PATCH  /api/v1/credit-notes/{id}/cancel
 
 Fields:
 
-* Invoice Number
-* Customer
-* Order Number
-* Invoice Date
-* Invoice Status
-* Total Amount
+- Invoice Number
+- Customer
+- Order Number
+- Invoice Date
+- Invoice Status
+- Total Amount
 
 Actions:
 
-* Generate
-* View
-* Search
-* Cancel
+- Generate
+- View
+- Search
+- Cancel
 
 ---
 
@@ -698,17 +698,17 @@ Actions:
 
 Fields:
 
-* Invoice Number
-* Order Number
-* Available Quantity
-* Invoice Amount
-* Status
+- Invoice Number
+- Order Number
+- Available Quantity
+- Invoice Amount
+- Status
 
 Actions:
 
-* Generate
-* View
-* Search
+- Generate
+- View
+- Search
 
 ---
 
@@ -716,17 +716,17 @@ Actions:
 
 Fields:
 
-* Invoice Number
-* IRN Number
-* Acknowledgement Number
-* Generation Date
-* Status
+- Invoice Number
+- IRN Number
+- Acknowledgement Number
+- Generation Date
+- Status
 
 Actions:
 
-* Generate
-* View
-* Download
+- Generate
+- View
+- Download
 
 ---
 
@@ -734,18 +734,18 @@ Actions:
 
 Fields:
 
-* Credit Note Number
-* Invoice Number
-* Amount
-* Reason
-* Status
+- Credit Note Number
+- Invoice Number
+- Amount
+- Reason
+- Status
 
 Actions:
 
-* Create
-* Approve
-* Cancel
-* Search
+- Create
+- Approve
+- Cancel
+- Search
 
 ---
 
@@ -753,45 +753,45 @@ Actions:
 
 ## Invoice Number
 
-* System generated
-* Unique
-* Read-only
+- System generated
+- Unique
+- Read-only
 
 ---
 
 ## Order Number
 
-* Required
-* Must exist
-* Must be active
+- Required
+- Must exist
+- Must be active
 
 ---
 
 ## Customer
 
-* Required
-* Must exist
-* Must be active
+- Required
+- Must exist
+- Must be active
 
 ---
 
 ## Invoice Amount
 
-* Required
-* Greater than zero
+- Required
+- Greater than zero
 
 ---
 
 ## GST Number
 
-* Required
-* Must be valid
+- Required
+- Must be valid
 
 ---
 
 ## Credit Note Amount
 
-* Cannot exceed invoice amount
+- Cannot exceed invoice amount
 
 ---
 
@@ -890,12 +890,12 @@ INVOICE_SEARCHED
 
 System Notifications:
 
-* Invoice Generated
-* Partial Invoice Generated
-* Invoice Cancelled
-* E-Invoice Generated
-* Credit Note Generated
-* Invoice Delivered to Customer
+- Invoice Generated
+- Partial Invoice Generated
+- Invoice Cancelled
+- E-Invoice Generated
+- Credit Note Generated
+- Invoice Delivered to Customer
 
 ---
 
@@ -903,14 +903,14 @@ System Notifications:
 
 Reports:
 
-* Invoice Report
-* Invoices by Customer Report
-* Invoices by Branch Report
-* Partial Invoice Report
-* Credit Note Report
-* Tax Report
-* GST Report
-* Billing Audit Report
+- Invoice Report
+- Invoices by Customer Report
+- Invoices by Branch Report
+- Partial Invoice Report
+- Credit Note Report
+- Tax Report
+- GST Report
+- Billing Audit Report
 
 ---
 
@@ -998,55 +998,55 @@ EInvoice
 
 Billing Service exclusively owns:
 
-* Invoice
-* InvoiceItem
-* PartialInvoice
-* CreditNote
-* EInvoice
+- Invoice
+- InvoiceItem
+- PartialInvoice
+- CreditNote
+- EInvoice
 
 ---
 
 # 24. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Circuit Breakers
-* Event Idempotency
-* Audit Logging
-* Database per Service
-* Independent Deployments
-* Observability Integration
-* Saga Participation Support
-* Dead Letter Topic Support
-* Regulatory Compliance Support
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Circuit Breakers
+- Event Idempotency
+- Audit Logging
+- Database per Service
+- Independent Deployments
+- Observability Integration
+- Saga Participation Support
+- Dead Letter Topic Support
+- Regulatory Compliance Support
 
 ---
 
 # 25. Success Criteria
 
-* Invoices can be generated successfully.
-* Partial billing workflows operate correctly.
-* Taxes are calculated accurately.
-* GST validation works successfully.
-* E-invoices are generated successfully.
-* Credit notes are managed correctly.
-* Invoice history remains immutable.
-* Billing reports are generated successfully.
-* Billing Service registers successfully with Service Discovery.
-* Billing APIs are accessible through API Gateway.
-* Billing events are published successfully to Kafka.
-* Distributed tracing is available for billing workflows.
-* Billing Service participates successfully in Saga workflows.
-* Billing Service remains independently deployable.
+- Invoices can be generated successfully.
+- Partial billing workflows operate correctly.
+- Taxes are calculated accurately.
+- GST validation works successfully.
+- E-invoices are generated successfully.
+- Credit notes are managed correctly.
+- Invoice history remains immutable.
+- Billing reports are generated successfully.
+- Billing Service registers successfully with Service Discovery.
+- Billing APIs are accessible through API Gateway.
+- Billing events are published successfully to Kafka.
+- Distributed tracing is available for billing workflows.
+- Billing Service participates successfully in Saga workflows.
+- Billing Service remains independently deployable.
 
 ---
 

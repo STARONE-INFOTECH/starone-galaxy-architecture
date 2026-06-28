@@ -22,29 +22,29 @@ The Distributed Hub and Sales (DHS) Platform follows a Cloud-Native Monorepo-Bas
 
 The platform consists of:
 
-* API Gateway
-* Identity Service
-* Branch Service
-* Customer Service
-* Product Service
-* Inventory Service
-* Order Service
-* Billing Service
-* Dispatch Service
-* Notification Service
-* Reporting Service
-* Audit Service
+- API Gateway
+- Identity Service
+- Branch Service
+- Customer Service
+- Product Service
+- Inventory Service
+- Order Service
+- Billing Service
+- Dispatch Service
+- Notification Service
+- Reporting Service
+- Audit Service
 
 The system requires:
 
-* Dynamic service registration
-* Dynamic service discovery
-* Independent deployments
-* Horizontal scalability
-* Failure isolation
-* Load balancing
-* Simplified service communication
-* Runtime service resolution
+- Dynamic service registration
+- Dynamic service discovery
+- Independent deployments
+- Horizontal scalability
+- Failure isolation
+- Load balancing
+- Simplified service communication
+- Runtime service resolution
 
 Hardcoded service endpoints would introduce operational complexity and tightly couple services.
 
@@ -54,29 +54,29 @@ Hardcoded service endpoints would introduce operational complexity and tightly c
 
 ## Business Drivers
 
-* Continuous availability
-* Faster deployments
-* Future scalability
-* Operational simplicity
+- Continuous availability
+- Faster deployments
+- Future scalability
+- Operational simplicity
 
 ---
 
 ## Technical Drivers
 
-* Independent deployments
-* Dynamic service resolution
-* Service scaling
-* Reduced configuration complexity
-* Runtime discovery
+- Independent deployments
+- Dynamic service resolution
+- Service scaling
+- Reduced configuration complexity
+- Runtime discovery
 
 ---
 
 ## Operational Drivers
 
-* Easier deployments
-* Reduced maintenance overhead
-* Better resiliency
-* Simplified operations
+- Easier deployments
+- Reduced maintenance overhead
+- Better resiliency
+- Simplified operations
 
 ---
 
@@ -92,16 +92,16 @@ All service endpoints are maintained using fixed URLs.
 
 ### Advantages
 
-* Simple implementation
-* Easy to understand
+- Simple implementation
+- Easy to understand
 
 ### Disadvantages
 
-* Tight coupling
-* Difficult scaling
-* Operational overhead
-* Manual configuration changes
-* Poor resiliency
+- Tight coupling
+- Difficult scaling
+- Operational overhead
+- Manual configuration changes
+- Poor resiliency
 
 ---
 
@@ -113,14 +113,14 @@ Services communicate using Kubernetes Service DNS names.
 
 ### Advantages
 
-* Native Kubernetes support
-* Reduced infrastructure components
+- Native Kubernetes support
+- Reduced infrastructure components
 
 ### Disadvantages
 
-* Limited service metadata
-* Limited client-side discovery capabilities
-* Tightly coupled to Kubernetes
+- Limited service metadata
+- Limited client-side discovery capabilities
+- Tightly coupled to Kubernetes
 
 ---
 
@@ -132,18 +132,18 @@ Services dynamically register themselves with a central registry and discover ot
 
 ### Advantages
 
-* Dynamic discovery
-* Independent deployments
-* Runtime resolution
-* Horizontal scalability
-* Better resiliency
-* Simplified communication
+- Dynamic discovery
+- Independent deployments
+- Runtime resolution
+- Horizontal scalability
+- Better resiliency
+- Simplified communication
 
 ### Disadvantages
 
-* Additional infrastructure component
-* Registry availability requirements
-* Additional operational monitoring
+- Additional infrastructure component
+- Registry availability requirements
+- Additional operational monitoring
 
 ---
 
@@ -315,10 +315,10 @@ Order Service
 
 Services shall expose:
 
-* Liveness endpoint
-* Readiness endpoint
-* Health endpoint
-* Metrics endpoint
+- Liveness endpoint
+- Readiness endpoint
+- Health endpoint
+- Metrics endpoint
 
 ---
 
@@ -328,9 +328,9 @@ Services shall expose:
 
 Mechanisms:
 
-* Client cache
-* Retry policies
-* Graceful degradation
+- Client cache
+- Retry policies
+- Graceful degradation
 
 ---
 
@@ -338,20 +338,20 @@ Mechanisms:
 
 Mechanisms:
 
-* Heartbeat expiration
-* Automatic deregistration
-* Retry policies
-* Circuit breakers
+- Heartbeat expiration
+- Automatic deregistration
+- Retry policies
+- Circuit breakers
 
 ---
 
 # 13. Security Considerations
 
-* TLS communication
-* Service registration authentication
-* Gateway authorization
-* JWT propagation
-* Audit logging
+- TLS communication
+- Service registration authentication
+- Gateway authorization
+- JWT propagation
+- Audit logging
 
 ---
 
@@ -359,12 +359,12 @@ Mechanisms:
 
 Metrics:
 
-* Registered services
-* Healthy instances
-* Failed registrations
-* Registry response times
-* Discovery failures
-* Service availability
+- Registered services
+- Healthy instances
+- Failed registrations
+- Registry response times
+- Discovery failures
+- Service availability
 
 Technology:
 
@@ -382,18 +382,18 @@ Distributed Tracing
 
 ## Positive Consequences
 
-* Dynamic service discovery
-* Independent deployments
-* Horizontal scalability
-* Better resiliency
-* Simplified communication
-* Reduced configuration management
+- Dynamic service discovery
+- Independent deployments
+- Horizontal scalability
+- Better resiliency
+- Simplified communication
+- Reduced configuration management
 
 ## Negative Consequences
 
-* Additional infrastructure component
-* Registry availability requirements
-* Additional monitoring requirements
+- Additional infrastructure component
+- Registry availability requirements
+- Additional monitoring requirements
 
 ---
 
@@ -418,15 +418,15 @@ services using logical service identifiers.
 
 # 17. Related Documents
 
-* BRD-001
-* PRD-001
-* SRS-001
-* HLD-001
-* ADR-001 Monorepo-Based Multi-Module Microservices Architecture
-* ADR-002 Database per Service Strategy
-* ADR-003 Hybrid Communication Architecture
-* ADR-005 API Gateway Strategy
-* ADR-006 Distributed Transaction Strategy
+- BRD-001
+- PRD-001
+- SRS-001
+- HLD-001
+- ADR-001 Monorepo-Based Multi-Module Microservices Architecture
+- ADR-002 Database per Service Strategy
+- ADR-003 Hybrid Communication Architecture
+- ADR-005 API Gateway Strategy
+- ADR-006 Distributed Transaction Strategy
 
 ---
 

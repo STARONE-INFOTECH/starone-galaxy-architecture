@@ -22,29 +22,29 @@ The Distributed Hub and Sales (DHS) Platform follows a Cloud-Native Monorepo-Bas
 
 The platform consists of:
 
-* Identity Service
-* Branch Service
-* Customer Service
-* Product Service
-* Inventory Service
-* Order Service
-* Billing Service
-* Dispatch Service
-* Notification Service
-* Reporting Service
-* Audit Service
+- Identity Service
+- Branch Service
+- Customer Service
+- Product Service
+- Inventory Service
+- Order Service
+- Billing Service
+- Dispatch Service
+- Notification Service
+- Reporting Service
+- Audit Service
 
 The system requires:
 
-* Centralized API access
-* Authentication and authorization enforcement
-* Unified routing mechanism
-* Service abstraction
-* Request filtering
-* Rate limiting
-* API versioning
-* Observability
-* Security controls
+- Centralized API access
+- Authentication and authorization enforcement
+- Unified routing mechanism
+- Service abstraction
+- Request filtering
+- Rate limiting
+- API versioning
+- Observability
+- Security controls
 
 Direct client-to-service communication would expose internal services, increase coupling, and duplicate security and operational concerns across all services.
 
@@ -54,33 +54,33 @@ Direct client-to-service communication would expose internal services, increase 
 
 ## Business Drivers
 
-* Simplified client integrations
-* Improved security
-* Centralized governance
-* Better operational visibility
-* Future scalability
+- Simplified client integrations
+- Improved security
+- Centralized governance
+- Better operational visibility
+- Future scalability
 
 ---
 
 ## Technical Drivers
 
-* Service abstraction
-* Centralized security
-* Centralized routing
-* Reduced duplication
-* Better observability
-* Independent deployments
-* API versioning support
+- Service abstraction
+- Centralized security
+- Centralized routing
+- Reduced duplication
+- Better observability
+- Independent deployments
+- API versioning support
 
 ---
 
 ## Operational Drivers
 
-* Easier monitoring
-* Easier troubleshooting
-* Centralized policy management
-* Simplified maintenance
-* Reduced operational risks
+- Easier monitoring
+- Easier troubleshooting
+- Centralized policy management
+- Simplified maintenance
+- Reduced operational risks
 
 ---
 
@@ -96,17 +96,17 @@ Clients communicate directly with every service.
 
 ### Advantages
 
-* Simple implementation
-* Lower infrastructure requirements
+- Simple implementation
+- Lower infrastructure requirements
 
 ### Disadvantages
 
-* Service exposure
-* Duplicated security
-* Complex client integrations
-* Difficult monitoring
-* Tight client coupling
-* Increased maintenance effort
+- Service exposure
+- Duplicated security
+- Complex client integrations
+- Difficult monitoring
+- Tight client coupling
+- Increased maintenance effort
 
 ---
 
@@ -118,15 +118,15 @@ A reverse proxy forwards requests to backend services.
 
 ### Advantages
 
-* Centralized entry point
-* Simplified routing
+- Centralized entry point
+- Simplified routing
 
 ### Disadvantages
 
-* Limited API capabilities
-* Limited security features
-* Limited observability
-* No service discovery integration
+- Limited API capabilities
+- Limited security features
+- Limited observability
+- No service discovery integration
 
 ---
 
@@ -138,20 +138,20 @@ All client traffic enters through a dedicated API Gateway that performs routing,
 
 ### Advantages
 
-* Single entry point
-* Centralized security
-* Dynamic routing
-* Service abstraction
-* Better observability
-* Rate limiting
-* API versioning
-* Service discovery integration
+- Single entry point
+- Centralized security
+- Dynamic routing
+- Service abstraction
+- Better observability
+- Rate limiting
+- API versioning
+- Service discovery integration
 
 ### Disadvantages
 
-* Additional infrastructure component
-* Potential bottleneck
-* Additional operational monitoring
+- Additional infrastructure component
+- Potential bottleneck
+- Additional operational monitoring
 
 ---
 
@@ -272,17 +272,17 @@ Gateway shall support API versioning.
 
 The API Gateway shall provide:
 
-* Request Routing
-* Service Discovery Integration
-* Authentication
-* Authorization
-* Rate Limiting
-* Request Validation
-* Correlation ID Management
-* Structured Logging
-* Metrics Collection
-* Distributed Tracing
-* Health Monitoring
+- Request Routing
+- Service Discovery Integration
+- Authentication
+- Authorization
+- Rate Limiting
+- Request Validation
+- Correlation ID Management
+- Structured Logging
+- Metrics Collection
+- Distributed Tracing
+- Health Monitoring
 
 ---
 
@@ -304,19 +304,19 @@ Target Service
 
 ## Example Routes
 
-| Route                    | Target Service       |
-| ------------------------ | -------------------- |
-| /api/v1/auth/**          | identity-service     |
-| /api/v1/branches/**      | branch-service       |
-| /api/v1/customers/**     | customer-service     |
-| /api/v1/products/**      | product-service      |
-| /api/v1/inventory/**     | inventory-service    |
-| /api/v1/orders/**        | order-service        |
-| /api/v1/billing/**       | billing-service      |
-| /api/v1/dispatch/**      | dispatch-service     |
-| /api/v1/notifications/** | notification-service |
-| /api/v1/reports/**       | reporting-service    |
-| /api/v1/audit/**         | audit-service        |
+| Route                      | Target Service       |
+| -------------------------- | -------------------- |
+| /api/v1/auth/\*\*          | identity-service     |
+| /api/v1/branches/\*\*      | branch-service       |
+| /api/v1/customers/\*\*     | customer-service     |
+| /api/v1/products/\*\*      | product-service      |
+| /api/v1/inventory/\*\*     | inventory-service    |
+| /api/v1/orders/\*\*        | order-service        |
+| /api/v1/billing/\*\*       | billing-service      |
+| /api/v1/dispatch/\*\*      | dispatch-service     |
+| /api/v1/notifications/\*\* | notification-service |
+| /api/v1/reports/\*\*       | reporting-service    |
+| /api/v1/audit/\*\*         | audit-service        |
 
 ---
 
@@ -356,16 +356,16 @@ Forward Request
 
 Policies:
 
-* Per User
-* Per Client
-* Per API
-* Configurable Thresholds
+- Per User
+- Per Client
+- Per API
+- Configurable Thresholds
 
 Objectives:
 
-* Prevent abuse
-* Protect backend services
-* Ensure platform stability
+- Prevent abuse
+- Protect backend services
+- Ensure platform stability
 
 ---
 
@@ -373,11 +373,11 @@ Objectives:
 
 Gateway shall:
 
-* Generate Correlation IDs
-* Propagate Correlation IDs
-* Propagate Trace Context
-* Capture Request Metrics
-* Capture Response Metrics
+- Generate Correlation IDs
+- Propagate Correlation IDs
+- Propagate Trace Context
+- Capture Request Metrics
+- Capture Response Metrics
 
 ---
 
@@ -385,34 +385,34 @@ Gateway shall:
 
 ## Authentication Errors
 
-* Invalid Token
-* Expired Token
-* Missing Token
+- Invalid Token
+- Expired Token
+- Missing Token
 
 ---
 
 ## Authorization Errors
 
-* Access Denied
-* Insufficient Permissions
+- Access Denied
+- Insufficient Permissions
 
 ---
 
 ## Routing Errors
 
-* Route Not Found
-* Service Unavailable
-* Timeout
+- Route Not Found
+- Service Unavailable
+- Timeout
 
 ---
 
 ## Resiliency Mechanisms
 
-* Retry Policies
-* Circuit Breakers
-* Timeouts
-* Fallback Responses
-* Graceful Degradation
+- Retry Policies
+- Circuit Breakers
+- Timeouts
+- Fallback Responses
+- Graceful Degradation
 
 ---
 
@@ -420,14 +420,14 @@ Gateway shall:
 
 Gateway Security:
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* Request Validation
-* Header Validation
-* CORS Configuration
-* Rate Limiting
-* Audit Logging
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- Request Validation
+- Header Validation
+- CORS Configuration
+- Rate Limiting
+- Audit Logging
 
 ---
 
@@ -435,14 +435,14 @@ Gateway Security:
 
 Metrics:
 
-* Request Count
-* Request Latency
-* Error Rate
-* Route Failures
-* Authentication Failures
-* Authorization Failures
-* Service Availability
-* Throughput
+- Request Count
+- Request Latency
+- Error Rate
+- Route Failures
+- Authentication Failures
+- Authorization Failures
+- Service Availability
+- Throughput
 
 Technology:
 
@@ -462,21 +462,21 @@ Correlation IDs
 
 ## Positive Consequences
 
-* Centralized API management
-* Improved security
-* Reduced duplication
-* Better observability
-* Simplified client integrations
-* Service abstraction
-* Dynamic routing
-* Easier governance
+- Centralized API management
+- Improved security
+- Reduced duplication
+- Better observability
+- Simplified client integrations
+- Service abstraction
+- Dynamic routing
+- Easier governance
 
 ## Negative Consequences
 
-* Additional infrastructure component
-* Additional operational complexity
-* Potential bottleneck
-* Requires high availability deployment
+- Additional infrastructure component
+- Additional operational complexity
+- Potential bottleneck
+- Requires high availability deployment
 
 ---
 
@@ -502,14 +502,14 @@ Service Discovery.
 
 # 19. Related Documents
 
-* BRD-001
-* PRD-001
-* SRS-001
-* HLD-001
-* ADR-001 Monorepo-Based Multi-Module Microservices Architecture
-* ADR-002 Database per Service Strategy
-* ADR-003 Hybrid Communication Architecture
-* ADR-004 Service Discovery Architecture
-* ADR-006 Distributed Transaction Strategy
+- BRD-001
+- PRD-001
+- SRS-001
+- HLD-001
+- ADR-001 Monorepo-Based Multi-Module Microservices Architecture
+- ADR-002 Database per Service Strategy
+- ADR-003 Hybrid Communication Architecture
+- ADR-004 Service Discovery Architecture
+- ADR-006 Distributed Transaction Strategy
 
 ---

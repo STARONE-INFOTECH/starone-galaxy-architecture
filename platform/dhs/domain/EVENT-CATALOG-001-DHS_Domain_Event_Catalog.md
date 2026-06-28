@@ -22,13 +22,13 @@ This document defines the domain events exchanged between independently deployab
 
 The objective of this catalog is to:
 
-* Establish event contracts
-* Define event ownership
-* Enable service autonomy
-* Support Saga-based distributed transactions
-* Prevent direct database coupling
-* Provide event traceability
-* Standardize event naming conventions
+- Establish event contracts
+- Define event ownership
+- Enable service autonomy
+- Support Saga-based distributed transactions
+- Prevent direct database coupling
+- Provide event traceability
+- Standardize event naming conventions
 
 ---
 
@@ -105,8 +105,8 @@ Published when a new user is created.
 
 ### Consumers
 
-* notification-service
-* audit-service
+- notification-service
+- audit-service
 
 ### Payload
 
@@ -125,7 +125,7 @@ Published when a new user is created.
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -133,8 +133,8 @@ Published when a new user is created.
 
 ### Consumers
 
-* branch-service
-* audit-service
+- branch-service
+- audit-service
 
 ---
 
@@ -142,8 +142,8 @@ Published when a new user is created.
 
 ### Consumers
 
-* branch-service
-* audit-service
+- branch-service
+- audit-service
 
 ---
 
@@ -151,7 +151,7 @@ Published when a new user is created.
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -159,7 +159,7 @@ Published when a new user is created.
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -167,7 +167,7 @@ Published when a new user is created.
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -183,9 +183,9 @@ branch-service
 
 ### Consumers
 
-* customer-service
-* reporting-service
-* audit-service
+- customer-service
+- reporting-service
+- audit-service
 
 ### Payload
 
@@ -204,8 +204,8 @@ branch-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -213,9 +213,9 @@ branch-service
 
 ### Consumers
 
-* product-service
-* reporting-service
-* audit-service
+- product-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -223,9 +223,9 @@ branch-service
 
 ### Consumers
 
-* customer-service
-* reporting-service
-* audit-service
+- customer-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -233,8 +233,8 @@ branch-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -250,9 +250,9 @@ customer-service
 
 ### Consumers
 
-* order-service
-* reporting-service
-* audit-service
+- order-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -260,9 +260,9 @@ customer-service
 
 ### Consumers
 
-* order-service
-* reporting-service
-* audit-service
+- order-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -270,8 +270,8 @@ customer-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -279,8 +279,8 @@ customer-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -288,9 +288,9 @@ customer-service
 
 ### Consumers
 
-* billing-service
-* reporting-service
-* audit-service
+- billing-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -306,9 +306,9 @@ product-service
 
 ### Consumers
 
-* inventory-service
-* reporting-service
-* audit-service
+- inventory-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -316,8 +316,8 @@ product-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -325,10 +325,10 @@ product-service
 
 ### Consumers
 
-* inventory-service
-* order-service
-* reporting-service
-* audit-service
+- inventory-service
+- order-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -336,9 +336,9 @@ product-service
 
 ### Consumers
 
-* inventory-service
-* reporting-service
-* audit-service
+- inventory-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -346,9 +346,9 @@ product-service
 
 ### Consumers
 
-* billing-service
-* reporting-service
-* audit-service
+- billing-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -364,8 +364,8 @@ inventory-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -373,9 +373,9 @@ inventory-service
 
 ### Consumers
 
-* order-service
-* reporting-service
-* audit-service
+- order-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -383,9 +383,9 @@ inventory-service
 
 ### Consumers
 
-* order-service
-* reporting-service
-* audit-service
+- order-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -393,10 +393,10 @@ inventory-service
 
 ### Consumers
 
-* order-service
-* billing-service
-* reporting-service
-* audit-service
+- order-service
+- billing-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -404,8 +404,8 @@ inventory-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -413,9 +413,9 @@ inventory-service
 
 ### Consumers
 
-* billing-service
-* reporting-service
-* audit-service
+- billing-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -431,11 +431,11 @@ order-service
 
 ### Consumers
 
-* inventory-service
-* billing-service
-* notification-service
-* reporting-service
-* audit-service
+- inventory-service
+- billing-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -443,8 +443,8 @@ order-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -452,10 +452,10 @@ order-service
 
 ### Consumers
 
-* billing-service
-* dispatch-service
-* reporting-service
-* audit-service
+- billing-service
+- dispatch-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -463,10 +463,10 @@ order-service
 
 ### Consumers
 
-* inventory-service
-* dispatch-service
-* reporting-service
-* audit-service
+- inventory-service
+- dispatch-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -474,8 +474,8 @@ order-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -483,8 +483,8 @@ order-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -500,8 +500,8 @@ billing-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -509,10 +509,10 @@ billing-service
 
 ### Consumers
 
-* dispatch-service
-* notification-service
-* reporting-service
-* audit-service
+- dispatch-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -520,11 +520,11 @@ billing-service
 
 ### Consumers
 
-* inventory-service
-* dispatch-service
-* notification-service
-* reporting-service
-* audit-service
+- inventory-service
+- dispatch-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -532,8 +532,8 @@ billing-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -541,9 +541,9 @@ billing-service
 
 ### Consumers
 
-* order-service
-* reporting-service
-* audit-service
+- order-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -551,9 +551,9 @@ billing-service
 
 ### Consumers
 
-* notification-service
-* reporting-service
-* audit-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -569,8 +569,8 @@ dispatch-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -578,9 +578,9 @@ dispatch-service
 
 ### Consumers
 
-* notification-service
-* reporting-service
-* audit-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -588,8 +588,8 @@ dispatch-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -597,9 +597,9 @@ dispatch-service
 
 ### Consumers
 
-* notification-service
-* reporting-service
-* audit-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -607,8 +607,8 @@ dispatch-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -616,8 +616,8 @@ dispatch-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -625,8 +625,8 @@ dispatch-service
 
 ### Consumers
 
-* reporting-service
-* audit-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -642,7 +642,7 @@ notification-service
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -650,8 +650,8 @@ notification-service
 
 ### Consumers
 
-* iam-service
-* audit-service
+- iam-service
+- audit-service
 
 ---
 
@@ -659,7 +659,7 @@ notification-service
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -667,7 +667,7 @@ notification-service
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -683,7 +683,7 @@ reporting-service
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -691,7 +691,7 @@ reporting-service
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 
@@ -699,7 +699,7 @@ reporting-service
 
 ### Consumers
 
-* audit-service
+- audit-service
 
 ---
 

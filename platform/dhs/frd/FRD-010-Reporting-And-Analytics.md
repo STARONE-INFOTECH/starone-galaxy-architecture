@@ -85,48 +85,48 @@ The Reporting Service provides centralized reporting, dashboards, metrics, and a
 
 Responsibilities:
 
-* Operational Dashboards
-* Business Reports
-* KPI Management
-* Analytics and Insights
-* Report Scheduling
-* Report Export
-* Real-Time Metrics
-* Data Aggregation
-* Trend Analysis
-* Reporting Audit Logging
+- Operational Dashboards
+- Business Reports
+- KPI Management
+- Analytics and Insights
+- Report Scheduling
+- Report Export
+- Real-Time Metrics
+- Data Aggregation
+- Trend Analysis
+- Reporting Audit Logging
 
 The service acts as the read and analytics platform for business decision-making.
 
 The Reporting Service supports:
 
-* Identity & Access Management
-* Branch Management
-* Customer Management
-* Product Management
-* Inventory Management
-* Order Management
-* Billing Management
-* Dispatch Management
-* Notifications
-* Audit & Compliance
+- Identity & Access Management
+- Branch Management
+- Customer Management
+- Product Management
+- Inventory Management
+- Order Management
+- Billing Management
+- Dispatch Management
+- Notifications
+- Audit & Compliance
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* Event-Driven Architecture
-* Kafka Integration
-* Read-Optimized Projections
-* CQRS Read Models
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- Event-Driven Architecture
+- Kafka Integration
+- Read-Optimized Projections
+- CQRS Read Models
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -150,11 +150,11 @@ reporting-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
@@ -162,16 +162,16 @@ reporting-db
 
 ### Asynchronous Dependencies
 
-* iam-service
-* branch-service
-* customer-service
-* product-service
-* inventory-service
-* order-service
-* billing-service
-* dispatch-service
-* notification-service
-* audit-service
+- iam-service
+- branch-service
+- customer-service
+- product-service
+- inventory-service
+- order-service
+- billing-service
+- dispatch-service
+- notification-service
+- audit-service
 
 ---
 
@@ -495,15 +495,15 @@ Reporting Service-->>Notification Service: Deliver Report
 
 Technologies:
 
-* REST APIs
-* Service Discovery
+- REST APIs
+- Service Discovery
 
 Used For:
 
-* Dashboard Queries
-* Report Generation
-* Report Export
-* KPI Queries
+- Dashboard Queries
+- Report Generation
+- Report Export
+- KPI Queries
 
 ---
 
@@ -511,18 +511,18 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Projection Updates
-* Analytics Processing
-* KPI Calculation
-* Metrics Aggregation
-* Audit Events
+- Projection Updates
+- Analytics Processing
+- KPI Calculation
+- Metrics Aggregation
+- Audit Events
 
 # 14. Published Events
 
@@ -729,17 +729,17 @@ GET /api/v1/metrics
 
 Fields:
 
-* Dashboard Name
-* KPIs
-* Charts
-* Metrics
-* Last Refreshed
+- Dashboard Name
+- KPIs
+- Charts
+- Metrics
+- Last Refreshed
 
 Actions:
 
-* View
-* Refresh
-* Export
+- View
+- Refresh
+- Export
 
 ---
 
@@ -747,18 +747,18 @@ Actions:
 
 Fields:
 
-* Report Name
-* Report Type
-* Generated Date
-* Status
-* Export Format
+- Report Name
+- Report Type
+- Generated Date
+- Status
+- Export Format
 
 Actions:
 
-* Generate
-* View
-* Download
-* Delete
+- Generate
+- View
+- Download
+- Delete
 
 ---
 
@@ -766,18 +766,18 @@ Actions:
 
 Fields:
 
-* Schedule Name
-* Report
-* Frequency
-* Delivery Channel
-* Status
+- Schedule Name
+- Report
+- Frequency
+- Delivery Channel
+- Status
 
 Actions:
 
-* Create
-* Update
-* Pause
-* Delete
+- Create
+- Update
+- Pause
+- Delete
 
 ---
 
@@ -785,17 +785,17 @@ Actions:
 
 Fields:
 
-* KPI Name
-* Current Value
-* Previous Value
-* Trend
-* Threshold
+- KPI Name
+- Current Value
+- Previous Value
+- Trend
+- Threshold
 
 Actions:
 
-* View
-* Filter
-* Export
+- View
+- Filter
+- Export
 
 ---
 
@@ -803,15 +803,15 @@ Actions:
 
 ## Report Name
 
-* Required
-* Maximum 150 characters
+- Required
+- Maximum 150 characters
 
 ---
 
 ## Report Type
 
-* Required
-* Must be supported
+- Required
+- Must be supported
 
 ---
 
@@ -819,9 +819,9 @@ Actions:
 
 Supported formats:
 
-* PDF
-* Excel
-* CSV
+- PDF
+- Excel
+- CSV
 
 ---
 
@@ -829,17 +829,17 @@ Supported formats:
 
 Supported values:
 
-* Hourly
-* Daily
-* Weekly
-* Monthly
+- Hourly
+- Daily
+- Weekly
+- Monthly
 
 ---
 
 ## KPI Threshold
 
-* Numeric
-* Greater than zero
+- Numeric
+- Greater than zero
 
 ---
 
@@ -929,35 +929,35 @@ ANALYTICS_GENERATED
 
 Standard Reports:
 
-* Customer Reports
-* Product Reports
-* Inventory Reports
-* Order Reports
-* Billing Reports
-* Dispatch Reports
-* Notification Reports
-* Audit Reports
+- Customer Reports
+- Product Reports
+- Inventory Reports
+- Order Reports
+- Billing Reports
+- Dispatch Reports
+- Notification Reports
+- Audit Reports
 
 ---
 
 Executive Reports:
 
-* Sales Summary
-* Revenue Summary
-* Inventory Summary
-* Order Fulfillment Summary
-* Branch Performance Summary
-* Customer Analytics Summary
+- Sales Summary
+- Revenue Summary
+- Inventory Summary
+- Order Fulfillment Summary
+- Branch Performance Summary
+- Customer Analytics Summary
 
 ---
 
 Operational Dashboards:
 
-* Orders Dashboard
-* Inventory Dashboard
-* Billing Dashboard
-* Dispatch Dashboard
-* Executive Dashboard
+- Orders Dashboard
+- Inventory Dashboard
+- Billing Dashboard
+- Dispatch Dashboard
+- Executive Dashboard
 
 ---
 
@@ -1051,53 +1051,53 @@ ReportingProjection
 
 Reporting Service exclusively owns:
 
-* Dashboard
-* Report
-* ReportSchedule
-* KPI
-* Metric
-* ReportingProjection
+- Dashboard
+- Report
+- ReportSchedule
+- KPI
+- Metric
+- ReportingProjection
 
 ---
 
 # 23. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Event Idempotency
-* Audit Logging
-* Database per Service
-* Independent Deployments
-* Observability Integration
-* CQRS Read Models
-* Event-Driven Projections
-* Dead Letter Topic Support
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Event Idempotency
+- Audit Logging
+- Database per Service
+- Independent Deployments
+- Observability Integration
+- CQRS Read Models
+- Event-Driven Projections
+- Dead Letter Topic Support
 
 ---
 
 # 24. Success Criteria
 
-* Dashboards are generated successfully.
-* Reports are generated successfully.
-* Reports can be exported in supported formats.
-* Scheduled reports execute successfully.
-* KPIs are calculated accurately.
-* Metrics provide near real-time visibility.
-* Read projections remain synchronized with business events.
-* Reporting Service registers successfully with Service Discovery.
-* Reporting APIs are accessible through API Gateway.
-* Reporting events are processed successfully from Kafka.
-* Distributed tracing is available for reporting workflows.
-* Reporting Service remains independently deployable.
+- Dashboards are generated successfully.
+- Reports are generated successfully.
+- Reports can be exported in supported formats.
+- Scheduled reports execute successfully.
+- KPIs are calculated accurately.
+- Metrics provide near real-time visibility.
+- Read projections remain synchronized with business events.
+- Reporting Service registers successfully with Service Discovery.
+- Reporting APIs are accessible through API Gateway.
+- Reporting events are processed successfully from Kafka.
+- Distributed tracing is available for reporting workflows.
+- Reporting Service remains independently deployable.
 
 ---
 

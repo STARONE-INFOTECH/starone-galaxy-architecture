@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Customer Service |
+| Field          | Value                                                |
+| -------------- | ---------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform             |
+| Service Name   | Customer Service                                     |
 | Document Title | Customer Service Software Requirements Specification |
-| Document ID | SRS-004 |
-| Repository | starone-dhs-platform |
-| Module | customer-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-004                                              |
+| Repository     | starone-dhs-platform                                 |
+| Module         | customer-service                                     |
+| Document Type  | Software Requirements Specification (SRS)            |
+| Standard       | ISO/IEC/IEEE 29148                                   |
+| Version        | v1.0.0                                               |
+| Status         | Draft                                                |
+| Author         | Sachin Salunke                                       |
+| Owner          | Enterprise Architecture                              |
+| Last Updated   | 2026-06-27                                           |
 
 ---
 
@@ -26,35 +26,35 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | DHS High-Level Design |
+| Document     | Description                      |
+| ------------ | -------------------------------- |
+| BRD-001      | Business Requirements Document   |
+| PRD-001      | Product Requirements Document    |
+| ADR-001      | Architecture Decision Record     |
+| HLD-001      | DHS High-Level Design            |
 | FRD-Customer | Customer Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-002 | Identity Service |
-| SRS-003 | Branch Service |
+| SRS-001      | Platform Foundation              |
+| SRS-002      | Identity Service                 |
+| SRS-003      | Branch Service                   |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -104,12 +104,12 @@ The Customer Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Customer | Individual or Organization purchasing products or services |
-| Customer Type | Retail, Wholesale, Distributor, Corporate |
-| KYC | Know Your Customer information |
-| Communication Preference | Customer preferred communication channel |
+| Term                     | Description                                                |
+| ------------------------ | ---------------------------------------------------------- |
+| Customer                 | Individual or Organization purchasing products or services |
+| Customer Type            | Retail, Wholesale, Distributor, Corporate                  |
+| KYC                      | Know Your Customer information                             |
+| Communication Preference | Customer preferred communication channel                   |
 
 ---
 
@@ -174,33 +174,33 @@ ReportingService --> CustomerService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Kafka | Event Publishing |
-| Audit Service | Audit Processing |
+| Dependency          | Purpose            |
+| ------------------- | ------------------ |
+| Platform Foundation | Shared Frameworks  |
+| Gateway             | API Routing        |
+| Eureka              | Service Discovery  |
+| PostgreSQL          | Persistent Storage |
+| Kafka               | Event Publishing   |
+| Audit Service       | Audit Processing   |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Gateway | API Routing |
+| Service          | Purpose                        |
+| ---------------- | ------------------------------ |
+| Gateway          | API Routing                    |
 | Identity Service | Authentication & Authorization |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Order Service | Customer Validation |
-| Billing Service | Billing Customer |
-| Reporting Service | Customer Analytics |
+| Service              | Purpose                |
+| -------------------- | ---------------------- |
+| Order Service        | Customer Validation    |
+| Billing Service      | Billing Customer       |
+| Reporting Service    | Customer Analytics     |
 | Notification Service | Customer Communication |
 
 ---
@@ -605,54 +605,54 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | / | Register Customer |
-| PUT | /{customerId} | Update Customer |
-| GET | /{customerId} | Get Customer |
-| DELETE | /{customerId} | Archive Customer |
-| GET | / | Search Customers |
-| PATCH | /{customerId}/activate | Activate Customer |
-| PATCH | /{customerId}/suspend | Suspend Customer |
-| PATCH | /{customerId}/deactivate | Deactivate Customer |
-| GET | /code/{customerCode} | Find by Customer Code |
+| Method | URI                      | Description           |
+| ------ | ------------------------ | --------------------- |
+| POST   | /                        | Register Customer     |
+| PUT    | /{customerId}            | Update Customer       |
+| GET    | /{customerId}            | Get Customer          |
+| DELETE | /{customerId}            | Archive Customer      |
+| GET    | /                        | Search Customers      |
+| PATCH  | /{customerId}/activate   | Activate Customer     |
+| PATCH  | /{customerId}/suspend    | Suspend Customer      |
+| PATCH  | /{customerId}/deactivate | Deactivate Customer   |
+| GET    | /code/{customerCode}     | Find by Customer Code |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC or DESC |
-| keyword | No | Global Search |
-| customerType | No | Customer Type |
-| category | No | Customer Category |
-| status | No | Customer Status |
-| city | No | City |
-| state | No | State |
+| Parameter    | Required | Description       |
+| ------------ | -------- | ----------------- |
+| page         | No       | Page Number       |
+| size         | No       | Page Size         |
+| sort         | No       | Sort Field        |
+| direction    | No       | ASC or DESC       |
+| keyword      | No       | Global Search     |
+| customerType | No       | Customer Type     |
+| category     | No       | Customer Category |
+| status       | No       | Customer Status   |
+| city         | No       | City              |
+| state        | No       | State             |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
-| customerId | Customer Identifier |
-| customerCode | Customer Code |
+| Parameter    | Description         |
+| ------------ | ------------------- |
+| customerId   | Customer Identifier |
+| customerCode | Customer Code       |
 
 ---
 
@@ -782,39 +782,39 @@ Performs logical deletion.
 
 ## RegisterCustomerRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| customerType | CustomerType | Yes |
-| customerName | String | Yes |
-| email | String | Yes |
-| mobileNumber | String | Yes |
-| address | AddressDTO | Yes |
+| Field        | Type         | Required |
+| ------------ | ------------ | -------- |
+| customerType | CustomerType | Yes      |
+| customerName | String       | Yes      |
+| email        | String       | Yes      |
+| mobileNumber | String       | Yes      |
+| address      | AddressDTO   | Yes      |
 
 ---
 
 ## UpdateCustomerRequest
 
-| Field | Type |
-|---------|------|
-| customerName | String |
-| email | String |
-| mobileNumber | String |
-| status | CustomerStatus |
-| category | String |
+| Field                   | Type                    |
+| ----------------------- | ----------------------- |
+| customerName            | String                  |
+| email                   | String                  |
+| mobileNumber            | String                  |
+| status                  | CustomerStatus          |
+| category                | String                  |
 | communicationPreference | CommunicationPreference |
 
 ---
 
 ## SearchCustomerRequest
 
-| Field | Type |
-|---------|------|
-| keyword | String |
-| customerType | CustomerType |
-| category | String |
-| city | String |
-| state | String |
-| status | CustomerStatus |
+| Field        | Type           |
+| ------------ | -------------- |
+| keyword      | String         |
+| customerType | CustomerType   |
+| category     | String         |
+| city         | String         |
+| state        | String         |
+| status       | CustomerStatus |
 
 ---
 
@@ -822,38 +822,38 @@ Performs logical deletion.
 
 ## CustomerResponse
 
-| Field | Type |
-|---------|------|
-| customerId | UUID |
-| customerCode | String |
-| customerName | String |
-| customerType | CustomerType |
-| status | CustomerStatus |
-| primaryAddress | AddressDTO |
+| Field          | Type           |
+| -------------- | -------------- |
+| customerId     | UUID           |
+| customerCode   | String         |
+| customerName   | String         |
+| customerType   | CustomerType   |
+| status         | CustomerStatus |
+| primaryAddress | AddressDTO     |
 
 ---
 
 ## CustomerSummaryResponse
 
-| Field | Type |
-|---------|------|
-| customerId | UUID |
-| customerCode | String |
-| customerName | String |
-| customerType | CustomerType |
-| city | String |
-| state | String |
-| status | CustomerStatus |
+| Field        | Type           |
+| ------------ | -------------- |
+| customerId   | UUID           |
+| customerCode | String         |
+| customerName | String         |
+| customerType | CustomerType   |
+| city         | String         |
+| state        | String         |
+| status       | CustomerStatus |
 
 ---
 
 ## CustomerSearchResponse
 
-| Field | Type |
-|---------|------|
-| totalRecords | Long |
-| totalPages | Integer |
-| customers | List<CustomerSummaryResponse> |
+| Field        | Type                          |
+| ------------ | ----------------------------- |
+| totalRecords | Long                          |
+| totalPages   | Integer                       |
+| customers    | List<CustomerSummaryResponse> |
 
 ---
 
@@ -903,33 +903,33 @@ Performs logical deletion.
 
 # 13. Permission Matrix
 
-| API | Super Admin | Admin | Sales Manager | Sales Executive | Viewer |
-|------|-------------|--------|---------------|-----------------|--------|
-| Register Customer | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Update Customer | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Archive Customer | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Activate Customer | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Suspend Customer | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Deactivate Customer | ✅ | ✅ | ❌ | ❌ | ❌ |
-| View Customer | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Search Customer | ✅ | ✅ | ✅ | ✅ | ✅ |
+| API                 | Super Admin | Admin | Sales Manager | Sales Executive | Viewer |
+| ------------------- | ----------- | ----- | ------------- | --------------- | ------ |
+| Register Customer   | ✅          | ✅    | ✅            | ✅              | ❌     |
+| Update Customer     | ✅          | ✅    | ✅            | ✅              | ❌     |
+| Archive Customer    | ✅          | ✅    | ❌            | ❌              | ❌     |
+| Activate Customer   | ✅          | ✅    | ✅            | ❌              | ❌     |
+| Suspend Customer    | ✅          | ✅    | ✅            | ❌              | ❌     |
+| Deactivate Customer | ✅          | ✅    | ❌            | ❌              | ❌     |
+| View Customer       | ✅          | ✅    | ✅            | ✅              | ✅     |
+| Search Customer     | ✅          | ✅    | ✅            | ✅              | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Archived |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Customer Not Found |
-| 409 | Duplicate Customer |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Archived                |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Customer Not Found      |
+| 409    | Duplicate Customer      |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -963,14 +963,14 @@ Customer
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Customer | Customer Master |
-| CustomerAddress | Address Management |
-| CustomerContact | Contact Management |
+| Aggregate                       | Responsibility          |
+| ------------------------------- | ----------------------- |
+| Customer                        | Customer Master         |
+| CustomerAddress                 | Address Management      |
+| CustomerContact                 | Contact Management      |
 | CustomerCommunicationPreference | Preferred Communication |
-| CustomerPreference | Business Preferences |
-| CustomerKYC | KYC Information |
+| CustomerPreference              | Business Preferences    |
+| CustomerKYC                     | KYC Information         |
 
 ---
 
@@ -978,106 +978,106 @@ Customer
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Customer | Aggregate Root |
-| CustomerAddress | Customer Addresses |
-| CustomerContact | Contact Persons |
+| Entity                          | Description               |
+| ------------------------------- | ------------------------- |
+| Customer                        | Aggregate Root            |
+| CustomerAddress                 | Customer Addresses        |
+| CustomerContact                 | Contact Persons           |
 | CustomerCommunicationPreference | Communication Preferences |
-| CustomerPreference | Business Preferences |
-| CustomerKYC | Regulatory Information |
+| CustomerPreference              | Business Preferences      |
+| CustomerKYC                     | Regulatory Information    |
 
 ---
 
 ## 16.2 Customer Entity
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| customerCode | VARCHAR(30) | Unique |
-| customerType | ENUM | Required |
-| customerCategory | VARCHAR(50) | Required |
-| customerName | VARCHAR(200) | Required |
-| email | VARCHAR(150) | Unique |
-| mobileNumber | VARCHAR(20) | Unique |
-| status | ENUM | Required |
-| registrationDate | DATE | Required |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedBy | UUID | Required |
-| updatedAt | TIMESTAMP | Required |
-| deleted | BOOLEAN | Default FALSE |
+| Attribute        | Type         | Constraint    |
+| ---------------- | ------------ | ------------- |
+| id               | UUID         | Primary Key   |
+| customerCode     | VARCHAR(30)  | Unique        |
+| customerType     | ENUM         | Required      |
+| customerCategory | VARCHAR(50)  | Required      |
+| customerName     | VARCHAR(200) | Required      |
+| email            | VARCHAR(150) | Unique        |
+| mobileNumber     | VARCHAR(20)  | Unique        |
+| status           | ENUM         | Required      |
+| registrationDate | DATE         | Required      |
+| createdBy        | UUID         | Required      |
+| createdAt        | TIMESTAMP    | Required      |
+| updatedBy        | UUID         | Required      |
+| updatedAt        | TIMESTAMP    | Required      |
+| deleted          | BOOLEAN      | Default FALSE |
 
 ---
 
 ## 16.3 Customer Address
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| addressType | ENUM |
-| line1 | VARCHAR(255) |
-| line2 | VARCHAR(255) |
-| landmark | VARCHAR(255) |
-| city | VARCHAR(100) |
-| district | VARCHAR(100) |
-| state | VARCHAR(100) |
-| country | VARCHAR(100) |
-| postalCode | VARCHAR(20) |
-| primaryAddress | BOOLEAN |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| customerId     | UUID         |
+| addressType    | ENUM         |
+| line1          | VARCHAR(255) |
+| line2          | VARCHAR(255) |
+| landmark       | VARCHAR(255) |
+| city           | VARCHAR(100) |
+| district       | VARCHAR(100) |
+| state          | VARCHAR(100) |
+| country        | VARCHAR(100) |
+| postalCode     | VARCHAR(20)  |
+| primaryAddress | BOOLEAN      |
 
 ---
 
 ## 16.4 Customer Contact
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| contactPerson | VARCHAR(150) |
-| designation | VARCHAR(100) |
-| mobileNumber | VARCHAR(20) |
-| email | VARCHAR(150) |
-| primaryContact | BOOLEAN |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| customerId     | UUID         |
+| contactPerson  | VARCHAR(150) |
+| designation    | VARCHAR(100) |
+| mobileNumber   | VARCHAR(20)  |
+| email          | VARCHAR(150) |
+| primaryContact | BOOLEAN      |
 
 ---
 
 ## 16.5 Customer Communication Preference
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| preferredChannel | ENUM |
-| language | VARCHAR(20) |
-| marketingConsent | BOOLEAN |
+| Attribute        | Type        |
+| ---------------- | ----------- |
+| id               | UUID        |
+| customerId       | UUID        |
+| preferredChannel | ENUM        |
+| language         | VARCHAR(20) |
+| marketingConsent | BOOLEAN     |
 
 ---
 
 ## 16.6 Customer Preference
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| paymentTerms | VARCHAR(100) |
-| preferredCurrency | VARCHAR(10) |
-| preferredBranchId | UUID |
+| Attribute         | Type         |
+| ----------------- | ------------ |
+| id                | UUID         |
+| customerId        | UUID         |
+| paymentTerms      | VARCHAR(100) |
+| preferredCurrency | VARCHAR(10)  |
+| preferredBranchId | UUID         |
 
 ---
 
 ## 16.7 Customer KYC
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| panNumber | VARCHAR(20) |
-| gstNumber | VARCHAR(20) |
-| aadhaarNumber | VARCHAR(20) |
-| verificationStatus | ENUM |
-| verifiedDate | DATE |
+| Attribute          | Type        |
+| ------------------ | ----------- |
+| id                 | UUID        |
+| customerId         | UUID        |
+| panNumber          | VARCHAR(20) |
+| gstNumber          | VARCHAR(20) |
+| aadhaarNumber      | VARCHAR(20) |
+| verificationStatus | ENUM        |
+| verifiedDate       | DATE        |
 
 ---
 
@@ -1099,14 +1099,14 @@ customer
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| customer | Customer Master |
-| customer_address | Customer Addresses |
-| customer_contact | Contact Persons |
-| customer_preference | Customer Preferences |
+| Table                             | Purpose                   |
+| --------------------------------- | ------------------------- |
+| customer                          | Customer Master           |
+| customer_address                  | Customer Addresses        |
+| customer_contact                  | Contact Persons           |
+| customer_preference               | Customer Preferences      |
 | customer_communication_preference | Communication Preferences |
-| customer_kyc | KYC Information |
+| customer_kyc                      | KYC Information           |
 
 ---
 
@@ -1118,13 +1118,13 @@ Every table shall use UUID as its primary key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
-| customer_address | customer |
-| customer_contact | customer |
-| customer_preference | customer |
-| customer_communication_preference | customer |
-| customer_kyc | customer |
+| Child Table                       | Parent Table |
+| --------------------------------- | ------------ |
+| customer_address                  | customer     |
+| customer_contact                  | customer     |
+| customer_preference               | customer     |
+| customer_communication_preference | customer     |
+| customer_kyc                      | customer     |
 
 ---
 
@@ -1154,17 +1154,17 @@ Customer KYC
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| customer | customer_code |
-| customer | customer_name |
-| customer | customer_type |
-| customer | customer_category |
-| customer | status |
-| customer | email |
-| customer | mobile_number |
-| customer_address | city |
-| customer_address | state |
+| Table            | Index             |
+| ---------------- | ----------------- |
+| customer         | customer_code     |
+| customer         | customer_name     |
+| customer         | customer_type     |
+| customer         | customer_category |
+| customer         | status            |
+| customer         | email             |
+| customer         | mobile_number     |
+| customer_address | city              |
+| customer_address | state             |
 
 ---
 
@@ -1284,21 +1284,21 @@ The Customer Service shall publish domain events whenever customer master data c
 
 ## 21.1 Published Events
 
-| Topic | Event | Key | Version |
-|---------|-------|-----|----------|
-| customer.created.v1 | CustomerCreated | Customer ID | v1 |
-| customer.updated.v1 | CustomerUpdated | Customer ID | v1 |
-| customer.activated.v1 | CustomerActivated | Customer ID | v1 |
-| customer.suspended.v1 | CustomerSuspended | Customer ID | v1 |
-| customer.deactivated.v1 | CustomerDeactivated | Customer ID | v1 |
-| customer.archived.v1 | CustomerArchived | Customer ID | v1 |
+| Topic                   | Event               | Key         | Version |
+| ----------------------- | ------------------- | ----------- | ------- |
+| customer.created.v1     | CustomerCreated     | Customer ID | v1      |
+| customer.updated.v1     | CustomerUpdated     | Customer ID | v1      |
+| customer.activated.v1   | CustomerActivated   | Customer ID | v1      |
+| customer.suspended.v1   | CustomerSuspended   | Customer ID | v1      |
+| customer.deactivated.v1 | CustomerDeactivated | Customer ID | v1      |
+| customer.archived.v1    | CustomerArchived    | Customer ID | v1      |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
+| Topic             | Source         |
+| ----------------- | -------------- |
 | branch.updated.v1 | Branch Service |
 | branch.deleted.v1 | Branch Service |
 
@@ -1321,20 +1321,20 @@ The Customer Service shall publish domain events whenever customer master data c
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | Request Routing |
-| Kafka | Event Streaming |
-| PostgreSQL | Persistent Storage |
-| Redis | Reference Cache |
-| Audit Service | Audit Events |
+| Interface     | Purpose            |
+| ------------- | ------------------ |
+| API Gateway   | Request Routing    |
+| Kafka         | Event Streaming    |
+| PostgreSQL    | Persistent Storage |
+| Redis         | Reference Cache    |
+| Audit Service | Audit Events       |
 
 ---
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
+| Client       | Purpose                                   |
+| ------------ | ----------------------------------------- |
 | BranchClient | Validate Preferred Branch (if configured) |
 
 > Audit logging should be event-driven through Kafka rather than synchronous REST integration.
@@ -1363,14 +1363,14 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| customer.search.max-page-size | 100 | Yes | Maximum page size |
-| customer.cache.enabled | true | Yes | Enable cache |
-| customer.cache.ttl | 3600 | Yes | Cache TTL |
-| customer.kyc.enabled | true | Yes | Enable KYC module |
-| customer.event.topic.created | customer.created.v1 | Yes | Created event topic |
-| customer.event.topic.updated | customer.updated.v1 | Yes | Updated event topic |
+| Property                      | Default             | Required | Description         |
+| ----------------------------- | ------------------- | -------- | ------------------- |
+| customer.search.max-page-size | 100                 | Yes      | Maximum page size   |
+| customer.cache.enabled        | true                | Yes      | Enable cache        |
+| customer.cache.ttl            | 3600                | Yes      | Cache TTL           |
+| customer.kyc.enabled          | true                | Yes      | Enable KYC module   |
+| customer.event.topic.created  | customer.created.v1 | Yes      | Created event topic |
+| customer.event.topic.updated  | customer.updated.v1 | Yes      | Updated event topic |
 
 ---
 
@@ -1458,20 +1458,20 @@ Internal implementation details shall never be exposed to API consumers.
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP Status |
-|------------|-------------|-------------|
-| CU-VAL-001 | Validation Failed | 400 |
-| CU-AUTH-001 | Authentication Required | 401 |
-| CU-AUTH-002 | Access Denied | 403 |
-| CU-BUS-001 | Customer Already Exists | 409 |
-| CU-BUS-002 | Customer Not Found | 404 |
-| CU-BUS-003 | Duplicate Email Address | 409 |
-| CU-BUS-004 | Duplicate Mobile Number | 409 |
-| CU-BUS-005 | Duplicate Customer Code | 409 |
-| CU-BUS-006 | Invalid Customer Status | 422 |
-| CU-BUS-007 | Customer Cannot Be Archived | 409 |
-| CU-BUS-008 | Invalid Customer Type | 422 |
-| CU-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                 | HTTP Status |
+| ----------- | --------------------------- | ----------- |
+| CU-VAL-001  | Validation Failed           | 400         |
+| CU-AUTH-001 | Authentication Required     | 401         |
+| CU-AUTH-002 | Access Denied               | 403         |
+| CU-BUS-001  | Customer Already Exists     | 409         |
+| CU-BUS-002  | Customer Not Found          | 404         |
+| CU-BUS-003  | Duplicate Email Address     | 409         |
+| CU-BUS-004  | Duplicate Mobile Number     | 409         |
+| CU-BUS-005  | Duplicate Customer Code     | 409         |
+| CU-BUS-006  | Invalid Customer Status     | 422         |
+| CU-BUS-007  | Customer Cannot Be Archived | 409         |
+| CU-BUS-008  | Invalid Customer Type       | 422         |
+| CU-SYS-001  | Internal Server Error       | 500         |
 
 ---
 
@@ -1701,28 +1701,28 @@ The service shall follow enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source Document | Source Requirement | Verification |
-|-------------|-----------------|--------------------|--------------|
-| CU-SYS-001 – CU-SYS-020 | FRD-Customer | Customer Functional Requirements | Functional Testing |
-| CU-SYS-021 – CU-SYS-035 | SRS-001 | Platform Runtime Requirements | Integration Testing |
-| CU-NFR-001 – CU-NFR-014 | PRD / HLD | Quality Attributes | Performance & Security Testing |
+| Requirement             | Source Document | Source Requirement               | Verification                   |
+| ----------------------- | --------------- | -------------------------------- | ------------------------------ |
+| CU-SYS-001 – CU-SYS-020 | FRD-Customer    | Customer Functional Requirements | Functional Testing             |
+| CU-SYS-021 – CU-SYS-035 | SRS-001         | Platform Runtime Requirements    | Integration Testing            |
+| CU-NFR-001 – CU-NFR-014 | PRD / HLD       | Quality Attributes               | Performance & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| CU-SYS-001 | TC-CU-001 |
-| CU-SYS-002 | TC-CU-002 |
-| CU-SYS-003 | TC-CU-003 |
-| CU-SYS-004 | TC-CU-004 |
-| CU-SYS-005 | TC-CU-005 |
-| CU-SYS-006 | TC-CU-006 |
-| CU-SYS-007 | TC-CU-007 |
-| CU-SYS-008 | TC-CU-008 |
-| CU-SYS-009 | TC-CU-009 |
-| CU-SYS-010 | TC-CU-010 |
+| ----------- | --------- |
+| CU-SYS-001  | TC-CU-001 |
+| CU-SYS-002  | TC-CU-002 |
+| CU-SYS-003  | TC-CU-003 |
+| CU-SYS-004  | TC-CU-004 |
+| CU-SYS-005  | TC-CU-005 |
+| CU-SYS-006  | TC-CU-006 |
+| CU-SYS-007  | TC-CU-007 |
+| CU-SYS-008  | TC-CU-008 |
+| CU-SYS-009  | TC-CU-009 |
+| CU-SYS-010  | TC-CU-010 |
 
 ---
 
@@ -1753,61 +1753,61 @@ The Customer Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Customer | Register, Update, Get, Archive, Search |
-| Customer Status | Activate, Suspend, Deactivate |
-| Customer KYC | Manage KYC |
-| Customer Preferences | Manage Preferences |
+| Resource             | Endpoints                              |
+| -------------------- | -------------------------------------- |
+| Customer             | Register, Update, Get, Archive, Search |
+| Customer Status      | Activate, Suspend, Deactivate          |
+| Customer KYC         | Manage KYC                             |
+| Customer Preferences | Manage Preferences                     |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Customer | Aggregate Root |
-| CustomerAddress | Customer Addresses |
-| CustomerContact | Contact Information |
+| Aggregate                       | Description               |
+| ------------------------------- | ------------------------- |
+| Customer                        | Aggregate Root            |
+| CustomerAddress                 | Customer Addresses        |
+| CustomerContact                 | Contact Information       |
 | CustomerCommunicationPreference | Communication Preferences |
-| CustomerPreference | Business Preferences |
-| CustomerKYC | Regulatory Information |
+| CustomerPreference              | Business Preferences      |
+| CustomerKYC                     | Regulatory Information    |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Redis | Caching |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
-| Branch Service | Preferred Branch Validation |
-| Audit Service | Audit Processing |
+| Dependency          | Purpose                        |
+| ------------------- | ------------------------------ |
+| Platform Foundation | Shared Frameworks              |
+| Gateway             | API Routing                    |
+| Eureka              | Service Discovery              |
+| PostgreSQL          | Persistent Storage             |
+| Redis               | Caching                        |
+| Kafka               | Event Streaming                |
+| Identity Service    | Authentication & Authorization |
+| Branch Service      | Preferred Branch Validation    |
+| Audit Service       | Audit Processing               |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Customer Service Software Requirements Specification |
+| Version | Description                                                  |
+| ------- | ------------------------------------------------------------ |
+| v1.0.0  | Initial Customer Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 

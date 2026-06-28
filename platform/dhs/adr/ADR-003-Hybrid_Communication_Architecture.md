@@ -22,24 +22,24 @@ The Distributed Hub and Sales (DHS) Platform follows a Cloud-Native Monorepo-Bas
 
 The platform supports:
 
-* Customer order requests
-* Inventory management
-* Order processing
-* Billing and partial billing
-* Dispatch operations
-* Notifications
-* Reporting and analytics
-* Audit and compliance
+- Customer order requests
+- Inventory management
+- Order processing
+- Billing and partial billing
+- Dispatch operations
+- Notifications
+- Reporting and analytics
+- Audit and compliance
 
 The system requires communication mechanisms that provide:
 
-* Low latency for request-response interactions
-* Loose coupling between services
-* Scalability
-* Failure isolation
-* Independent deployments
-* Real-time event propagation
-* Resilient distributed workflows
+- Low latency for request-response interactions
+- Loose coupling between services
+- Scalability
+- Failure isolation
+- Independent deployments
+- Real-time event propagation
+- Resilient distributed workflows
 
 A single communication model cannot satisfy all business and technical requirements.
 
@@ -49,33 +49,33 @@ A single communication model cannot satisfy all business and technical requireme
 
 ## Business Drivers
 
-* Real-time business operations
-* Faster order processing
-* Better user experience
-* Reliable notifications
-* Business scalability
+- Real-time business operations
+- Faster order processing
+- Better user experience
+- Reliable notifications
+- Business scalability
 
 ---
 
 ## Technical Drivers
 
-* Service isolation
-* Reduced coupling
-* Event-driven workflows
-* Failure recovery
-* Maintainability
-* Independent deployment
-* Distributed communication
+- Service isolation
+- Reduced coupling
+- Event-driven workflows
+- Failure recovery
+- Maintainability
+- Independent deployment
+- Distributed communication
 
 ---
 
 ## Operational Drivers
 
-* Easier troubleshooting
-* Better observability
-* Failure isolation
-* Operational resilience
-* Platform standardization
+- Easier troubleshooting
+- Better observability
+- Failure isolation
+- Operational resilience
+- Platform standardization
 
 ---
 
@@ -91,17 +91,17 @@ All services communicate exclusively through synchronous APIs.
 
 ### Advantages
 
-* Simple implementation
-* Easy debugging
-* Easy monitoring
+- Simple implementation
+- Easy debugging
+- Easy monitoring
 
 ### Disadvantages
 
-* Tight runtime coupling
-* Cascading failures
-* Poor scalability
-* Increased latency
-* No event-driven workflows
+- Tight runtime coupling
+- Cascading failures
+- Poor scalability
+- Increased latency
+- No event-driven workflows
 
 ---
 
@@ -113,16 +113,16 @@ All services communicate exclusively through events.
 
 ### Advantages
 
-* Loose coupling
-* Better scalability
-* Failure isolation
+- Loose coupling
+- Better scalability
+- Failure isolation
 
 ### Disadvantages
 
-* Complex workflows
-* Eventual consistency
-* Difficult debugging
-* Increased operational complexity
+- Complex workflows
+- Eventual consistency
+- Difficult debugging
+- Increased operational complexity
 
 ---
 
@@ -134,19 +134,19 @@ Services communicate using both synchronous APIs and asynchronous events.
 
 ### Advantages
 
-* Low latency where required
-* Loose coupling where beneficial
-* Better scalability
-* Improved reliability
-* Event-driven workflows
-* Failure isolation
-* Independent deployments
+- Low latency where required
+- Loose coupling where beneficial
+- Better scalability
+- Improved reliability
+- Event-driven workflows
+- Failure isolation
+- Independent deployments
 
 ### Disadvantages
 
-* Requires communication standards
-* Additional governance
-* Increased observability requirements
+- Requires communication standards
+- Additional governance
+- Increased observability requirements
 
 ---
 
@@ -249,9 +249,9 @@ Services shall never directly access another service's database.
 
 Services shall communicate only through:
 
-* Public APIs
-* Domain Events
-* Message Consumers
+- Public APIs
+- Domain Events
+- Message Consumers
 
 ---
 
@@ -265,11 +265,11 @@ All service communication shall be observable and traceable.
 
 ## Technologies
 
-* Spring Cloud Gateway
-* Netflix Eureka
-* REST APIs
-* OpenFeign
-* OpenAPI Specifications
+- Spring Cloud Gateway
+- Netflix Eureka
+- REST APIs
+- OpenFeign
+- OpenAPI Specifications
 
 ---
 
@@ -333,10 +333,10 @@ Reporting Service
 
 ## Technologies
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 ---
 
@@ -516,10 +516,10 @@ Events must be versioned.
 
 Mechanisms:
 
-* Retry
-* Timeout
-* Circuit Breakers
-* Fallback Responses
+- Retry
+- Timeout
+- Circuit Breakers
+- Fallback Responses
 
 ---
 
@@ -527,10 +527,10 @@ Mechanisms:
 
 Mechanisms:
 
-* Retry Policies
-* Dead Letter Topics
-* Event Replay
-* Consumer Recovery
+- Retry Policies
+- Dead Letter Topics
+- Event Replay
+- Consumer Recovery
 
 ---
 
@@ -538,20 +538,20 @@ Mechanisms:
 
 ## REST Communication
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* Input Validation
-* Service-to-Service JWT Propagation
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- Input Validation
+- Service-to-Service JWT Propagation
 
 ---
 
 ## Event Communication
 
-* Encrypted Communication
-* Event Validation
-* Access Control
-* Audit Logging
+- Encrypted Communication
+- Event Validation
+- Access Control
+- Audit Logging
 
 ---
 
@@ -559,12 +559,12 @@ Mechanisms:
 
 Communication Metrics:
 
-* Request Latency
-* Error Rates
-* Throughput
-* Event Processing Time
-* Consumer Lag
-* Dead Letter Events
+- Request Latency
+- Error Rates
+- Throughput
+- Event Processing Time
+- Consumer Lag
+- Dead Letter Events
 
 Technology:
 
@@ -584,20 +584,20 @@ Distributed Tracing
 
 ## Positive Consequences
 
-* Low latency interactions
-* Event-driven workflows
-* Reduced coupling
-* Better scalability
-* Failure isolation
-* Independent deployments
-* Better observability
+- Low latency interactions
+- Event-driven workflows
+- Reduced coupling
+- Better scalability
+- Failure isolation
+- Independent deployments
+- Better observability
 
 ## Negative Consequences
 
-* Increased operational complexity
-* More communication patterns
-* Event monitoring complexity
-* Additional governance requirements
+- Increased operational complexity
+- More communication patterns
+- Event monitoring complexity
+- Additional governance requirements
 
 ---
 
@@ -622,14 +622,14 @@ event-driven workflows and integrations.
 
 # 19. Related Documents
 
-* BRD-001
-* PRD-001
-* SRS-001
-* HLD-001
-* ADR-001 Monorepo-Based Multi-Module Microservices Architecture
-* ADR-002 Database per Service Strategy
-* ADR-004 Service Discovery Strategy
-* ADR-005 API Gateway Strategy
-* ADR-006 Distributed Transaction Strategy
+- BRD-001
+- PRD-001
+- SRS-001
+- HLD-001
+- ADR-001 Monorepo-Based Multi-Module Microservices Architecture
+- ADR-002 Database per Service Strategy
+- ADR-004 Service Discovery Strategy
+- ADR-005 API Gateway Strategy
+- ADR-006 Distributed Transaction Strategy
 
 ---

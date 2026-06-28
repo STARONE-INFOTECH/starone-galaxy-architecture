@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Customer Service |
-| Document | Low Level Design |
-| Document ID | LLD-004 |
-| Repository | starone-dhs-platform |
-| Module | customer-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Customer Service                       |
+| Document    | Low Level Design                       |
+| Document ID | LLD-004                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | customer-service                       |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -326,14 +326,14 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Customer | Customer Master |
-| Address | Customer Address |
-| Contact | Contact Information |
+| Component      | Responsibility          |
+| -------------- | ----------------------- |
+| Customer       | Customer Master         |
+| Address        | Customer Address        |
+| Contact        | Contact Information     |
 | Customer Group | Customer Classification |
-| Credit Profile | Credit Control |
-| Audit | Change Tracking |
+| Credit Profile | Credit Control          |
+| Audit          | Change Tracking         |
 
 ---
 
@@ -606,13 +606,13 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| CustomerRepository | Customer Master |
+| Repository                | Responsibility     |
+| ------------------------- | ------------------ |
+| CustomerRepository        | Customer Master    |
 | CustomerAddressRepository | Customer Addresses |
-| CustomerContactRepository | Customer Contacts |
-| CustomerGroupRepository | Customer Groups |
-| CustomerCreditRepository | Credit Profiles |
+| CustomerContactRepository | Customer Contacts  |
+| CustomerGroupRepository   | Customer Groups    |
+| CustomerCreditRepository  | Credit Profiles    |
 
 ---
 
@@ -651,15 +651,15 @@ dto.response
 
 ## CustomerResponse
 
-| Field | Type |
-|---------|------|
-| id | UUID |
-| customerCode | String |
-| customerName | String |
-| customerType | CustomerType |
-| status | CustomerStatus |
-| customerGroup | String |
-| creditLimit | BigDecimal |
+| Field         | Type           |
+| ------------- | -------------- |
+| id            | UUID           |
+| customerCode  | String         |
+| customerName  | String         |
+| customerType  | CustomerType   |
+| status        | CustomerStatus |
+| customerGroup | String         |
+| creditLimit   | BigDecimal     |
 
 ---
 
@@ -687,85 +687,85 @@ entity
 
 ## Customer
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerCode | String |
-| customerName | String |
-| customerType | CustomerType |
+| Attribute        | Type             |
+| ---------------- | ---------------- |
+| id               | UUID             |
+| customerCode     | String           |
+| customerName     | String           |
+| customerType     | CustomerType     |
 | customerCategory | CustomerCategory |
-| customerStatus | CustomerStatus |
-| gstNumber | String |
-| panNumber | String |
-| email | String |
-| mobileNumber | String |
-| branchId | UUID |
+| customerStatus   | CustomerStatus   |
+| gstNumber        | String           |
+| panNumber        | String           |
+| email            | String           |
+| mobileNumber     | String           |
+| branchId         | UUID             |
 
 ---
 
 ## CustomerAddress
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| addressType | AddressType |
-| addressLine1 | String |
-| city | String |
-| state | String |
-| postalCode | String |
-| country | String |
-| primaryAddress | Boolean |
+| Attribute      | Type        |
+| -------------- | ----------- |
+| id             | UUID        |
+| customerId     | UUID        |
+| addressType    | AddressType |
+| addressLine1   | String      |
+| city           | String      |
+| state          | String      |
+| postalCode     | String      |
+| country        | String      |
+| primaryAddress | Boolean     |
 
 ---
 
 ## CustomerContact
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| contactName | String |
-| designation | String |
-| email | String |
-| mobileNumber | String |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| customerId     | UUID    |
+| contactName    | String  |
+| designation    | String  |
+| email          | String  |
+| mobileNumber   | String  |
 | primaryContact | Boolean |
 
 ---
 
 ## CustomerGroup
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| groupCode | String |
-| groupName | String |
+| Attribute        | Type    |
+| ---------------- | ------- |
+| id               | UUID    |
+| groupCode        | String  |
+| groupName        | String  |
 | discountEligible | Boolean |
 
 ---
 
 ## CustomerCreditProfile
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| creditLimit | BigDecimal |
+| Attribute       | Type       |
+| --------------- | ---------- |
+| id              | UUID       |
+| customerId      | UUID       |
+| creditLimit     | BigDecimal |
 | availableCredit | BigDecimal |
-| creditBlocked | Boolean |
-| paymentTerms | String |
+| creditBlocked   | Boolean    |
+| paymentTerms    | String     |
 
 ---
 
 ## CustomerDocument
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| customerId | UUID |
-| documentType | DocumentType |
-| documentName | String |
-| documentLocation | String |
+| Attribute        | Type         |
+| ---------------- | ------------ |
+| id               | UUID         |
+| customerId       | UUID         |
+| documentType     | DocumentType |
+| documentName     | String       |
+| documentLocation | String       |
 
 ---
 
@@ -833,15 +833,15 @@ CustomerGroupValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| CustomerCodeValidator | Unique Customer Code |
-| GSTValidator | GST Validation |
-| PANValidator | PAN Validation |
-| CreditLimitValidator | Credit Rules |
-| AddressValidator | Address Validation |
-| ContactValidator | Contact Validation |
-| CustomerGroupValidator | Group Validation |
+| Validator              | Purpose              |
+| ---------------------- | -------------------- |
+| CustomerCodeValidator  | Unique Customer Code |
+| GSTValidator           | GST Validation       |
+| PANValidator           | PAN Validation       |
+| CreditLimitValidator   | Credit Rules         |
+| AddressValidator       | Address Validation   |
+| ContactValidator       | Contact Validation   |
+| CustomerGroupValidator | Group Validation     |
 
 ---
 
@@ -1078,15 +1078,15 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| CUSTOMER_CREATE | Register Customer |
-| CUSTOMER_UPDATE | Update Customer |
-| CUSTOMER_DELETE | Delete Customer |
-| CUSTOMER_VIEW | View Customer |
-| CUSTOMER_SEARCH | Search Customers |
+| Permission             | Description           |
+| ---------------------- | --------------------- |
+| CUSTOMER_CREATE        | Register Customer     |
+| CUSTOMER_UPDATE        | Update Customer       |
+| CUSTOMER_DELETE        | Delete Customer       |
+| CUSTOMER_VIEW          | View Customer         |
+| CUSTOMER_SEARCH        | Search Customers      |
 | CUSTOMER_CREDIT_UPDATE | Update Credit Profile |
-| CUSTOMER_GROUP_ASSIGN | Assign Customer Group |
+| CUSTOMER_GROUP_ASSIGN  | Assign Customer Group |
 
 ---
 
@@ -1124,15 +1124,12 @@ JWT validation shall be performed by Platform Foundation.
 
 ```json
 {
-  "sub":"UUID",
-  "username":"sales.user",
-  "roles":["SALES_EXECUTIVE"],
-  "permissions":[
-      "CUSTOMER_CREATE",
-      "CUSTOMER_VIEW"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "sales.user",
+  "roles": ["SALES_EXECUTIVE"],
+  "permissions": ["CUSTOMER_CREATE", "CUSTOMER_VIEW"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1182,15 +1179,15 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Customer | CUSTOMER_CREATE |
-| Update Customer | CUSTOMER_UPDATE |
-| Delete Customer | CUSTOMER_DELETE |
-| View Customer | CUSTOMER_VIEW |
-| Search Customer | CUSTOMER_SEARCH |
-| Update Credit | CUSTOMER_CREDIT_UPDATE |
-| Assign Group | CUSTOMER_GROUP_ASSIGN |
+| API             | Permission             |
+| --------------- | ---------------------- |
+| Create Customer | CUSTOMER_CREATE        |
+| Update Customer | CUSTOMER_UPDATE        |
+| Delete Customer | CUSTOMER_DELETE        |
+| View Customer   | CUSTOMER_VIEW          |
+| Search Customer | CUSTOMER_SEARCH        |
+| Update Credit   | CUSTOMER_CREDIT_UPDATE |
+| Assign Group    | CUSTOMER_GROUP_ASSIGN  |
 
 ---
 
@@ -1248,12 +1245,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"CustomerCreated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "CustomerCreated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1280,12 +1277,12 @@ client
 
 ## Responsibilities
 
-| Client | Purpose |
-|---------|----------|
-| BranchClient | Validate Branch |
-| IdentityClient | User Validation |
+| Client             | Purpose               |
+| ------------------ | --------------------- |
+| BranchClient       | Validate Branch       |
+| IdentityClient     | User Validation       |
 | NotificationClient | Welcome Notifications |
-| AuditClient | Audit Submission |
+| AuditClient        | Audit Submission      |
 
 ---
 
@@ -1309,17 +1306,17 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis Cache |
-| Jackson | JSON Serialization |
-| Validation | Bean Validation |
-| Metrics | Micrometer |
-| Scheduler | Background Jobs |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis Cache          |
+| Jackson       | JSON Serialization   |
+| Validation    | Bean Validation      |
+| Metrics       | Micrometer           |
+| Scheduler     | Background Jobs      |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1333,13 +1330,13 @@ Distributed workflows shall communicate using Kafka.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Customer Registration | REQUIRED |
-| Customer Update | REQUIRED |
-| Credit Update | REQUIRED |
-| Group Assignment | REQUIRED |
-| Event Publish | AFTER_COMMIT |
+| Operation             | Propagation  |
+| --------------------- | ------------ |
+| Customer Registration | REQUIRED     |
+| Customer Update       | REQUIRED     |
+| Credit Update         | REQUIRED     |
+| Group Assignment      | REQUIRED     |
+| Event Publish         | AFTER_COMMIT |
 
 ---
 
@@ -1466,25 +1463,25 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Identity Service | Authentication |
-| Branch Service | Branch Validation |
+| Service              | Purpose               |
+| -------------------- | --------------------- |
+| Identity Service     | Authentication        |
+| Branch Service       | Branch Validation     |
 | Notification Service | Welcome Notifications |
-| Audit Service | Audit Logging |
-| Reporting Service | Customer Analytics |
+| Audit Service        | Audit Logging         |
+| Reporting Service    | Customer Analytics    |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| customer.cache.enabled | true |
-| customer.cache.ttl | 3600 |
-| customer.search.max-page-size | 100 |
-| customer.credit.validation | true |
-| customer.kafka.retry | 3 |
+| Property                      | Default |
+| ----------------------------- | ------- |
+| customer.cache.enabled        | true    |
+| customer.cache.ttl            | 3600    |
+| customer.search.max-page-size | 100     |
+| customer.credit.validation    | true    |
+| customer.kafka.retry          | 3       |
 
 ---
 
@@ -1523,23 +1520,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Spring Boot | 3.x |
-| Spring Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Spring Boot       | 3.x                     |
+| Spring Security   | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1581,12 +1578,12 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Errors |
+| Level | Purpose                  |
+| ----- | ------------------------ |
+| TRACE | Framework Diagnostics    |
+| DEBUG | Development              |
+| INFO  | Business Events          |
+| WARN  | Recoverable Errors       |
 | ERROR | Business/System Failures |
 
 ---
@@ -2005,14 +2002,14 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2072,35 +2069,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Customer Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Audit Trail |
+| Layer      | Responsibility          |
+| ---------- | ----------------------- |
+| Controller | Request Handling        |
+| Service    | Customer Business Logic |
+| Repository | Persistence             |
+| Kafka      | Event Publishing        |
+| Mapper     | DTO Conversion          |
+| Validation | Request Validation      |
+| Audit      | Audit Trail             |
 
 ---
 
@@ -2188,12 +2185,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Infrastructure & CI/CD |
-| starone-dhs-platform | Customer Service Implementation |
+| Repository                    | Responsibility                      |
+| ----------------------------- | ----------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards & Architecture |
+| starone-galaxy-central-config | Configuration Management            |
+| starone-galaxy-infra          | Infrastructure & CI/CD              |
+| starone-dhs-platform          | Customer Service Implementation     |
 
 ---
 

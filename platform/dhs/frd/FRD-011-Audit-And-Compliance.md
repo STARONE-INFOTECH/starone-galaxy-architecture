@@ -86,48 +86,48 @@ The Audit Service provides centralized audit logging, compliance tracking, secur
 
 Responsibilities:
 
-* Audit Event Collection
-* Audit Log Management
-* Security Event Logging
-* Compliance Event Management
-* User Activity Tracking
-* API Activity Logging
-* Data Change Tracking
-* System Activity Monitoring
-* Audit Reporting
-* Compliance Reporting
-* Audit Data Retention Management
+- Audit Event Collection
+- Audit Log Management
+- Security Event Logging
+- Compliance Event Management
+- User Activity Tracking
+- API Activity Logging
+- Data Change Tracking
+- System Activity Monitoring
+- Audit Reporting
+- Compliance Reporting
+- Audit Data Retention Management
 
 The service acts as the centralized system of record for platform observability, compliance, and forensic investigations.
 
 The Audit Service supports:
 
-* Identity & Access Management
-* Branch Management
-* Customer Management
-* Product Management
-* Inventory Management
-* Order Management
-* Billing Management
-* Dispatch Management
-* Notification Management
-* Reporting & Analytics
+- Identity & Access Management
+- Branch Management
+- Customer Management
+- Product Management
+- Inventory Management
+- Order Management
+- Billing Management
+- Dispatch Management
+- Notification Management
+- Reporting & Analytics
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* Event-Driven Architecture
-* Kafka Integration
-* Asynchronous Processing
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- Event-Driven Architecture
+- Kafka Integration
+- Asynchronous Processing
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -151,11 +151,11 @@ audit-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
@@ -163,16 +163,16 @@ audit-db
 
 ### Asynchronous Dependencies
 
-* iam-service
-* branch-service
-* customer-service
-* product-service
-* inventory-service
-* order-service
-* billing-service
-* dispatch-service
-* notification-service
-* reporting-service
+- iam-service
+- branch-service
+- customer-service
+- product-service
+- inventory-service
+- order-service
+- billing-service
+- dispatch-service
+- notification-service
+- reporting-service
 
 ---
 
@@ -502,15 +502,15 @@ API Gateway-->>Auditor: Audit Results
 
 Technologies:
 
-* REST APIs
-* Service Discovery
+- REST APIs
+- Service Discovery
 
 Used For:
 
-* Audit Search
-* Audit Reporting
-* Compliance Reporting
-* Investigation Queries
+- Audit Search
+- Audit Reporting
+- Compliance Reporting
+- Investigation Queries
 
 ---
 
@@ -518,18 +518,18 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Audit Event Collection
-* Security Event Logging
-* User Activity Tracking
-* Compliance Events
-* Metrics Aggregation
+- Audit Event Collection
+- Security Event Logging
+- User Activity Tracking
+- Compliance Events
+- Metrics Aggregation
 
 # 14. Published Events
 
@@ -764,19 +764,19 @@ POST /api/v1/investigations/{id}/export
 
 Fields:
 
-* Audit Id
-* Event Type
-* Service Name
-* User
-* Timestamp
-* Status
+- Audit Id
+- Event Type
+- Service Name
+- User
+- Timestamp
+- Status
 
 Actions:
 
-* View
-* Search
-* Filter
-* Export
+- View
+- Search
+- Filter
+- Export
 
 ---
 
@@ -784,18 +784,18 @@ Actions:
 
 Fields:
 
-* User Id
-* Username
-* Activity Type
-* Service Name
-* Timestamp
-* Correlation Id
+- User Id
+- Username
+- Activity Type
+- Service Name
+- Timestamp
+- Correlation Id
 
 Actions:
 
-* Search
-* View Details
-* Export
+- Search
+- View Details
+- Export
 
 ---
 
@@ -803,18 +803,18 @@ Actions:
 
 Fields:
 
-* Security Event
-* Severity
-* Service Name
-* User
-* Timestamp
-* Status
+- Security Event
+- Severity
+- Service Name
+- User
+- Timestamp
+- Status
 
 Actions:
 
-* Search
-* View
-* Export
+- Search
+- View
+- Export
 
 ---
 
@@ -822,17 +822,17 @@ Actions:
 
 Fields:
 
-* Compliance Report
-* Generated Date
-* Report Type
-* Status
-* Export Format
+- Compliance Report
+- Generated Date
+- Report Type
+- Status
+- Export Format
 
 Actions:
 
-* Generate
-* View
-* Download
+- Generate
+- View
+- Download
 
 ---
 
@@ -840,18 +840,18 @@ Actions:
 
 Fields:
 
-* Investigation Id
-* Investigation Name
-* Start Date
-* Status
-* Evidence Count
+- Investigation Id
+- Investigation Name
+- Start Date
+- Status
+- Evidence Count
 
 Actions:
 
-* Create
-* Search
-* View
-* Export
+- Create
+- Search
+- View
+- Export
 
 ---
 
@@ -859,37 +859,37 @@ Actions:
 
 ## Event Type
 
-* Required
-* Must be a supported event type
+- Required
+- Must be a supported event type
 
 ---
 
 ## Service Name
 
-* Required
-* Must be a registered platform service
+- Required
+- Must be a registered platform service
 
 ---
 
 ## User Id
 
-* Required for user activity events
-* Must exist
+- Required for user activity events
+- Must exist
 
 ---
 
 ## Correlation Id
 
-* Required
-* Must be UUID format
+- Required
+- Must be UUID format
 
 ---
 
 ## Timestamp
 
-* Required
-* UTC format
-* Immutable
+- Required
+- UTC format
+- Immutable
 
 ---
 
@@ -897,10 +897,10 @@ Actions:
 
 Supported formats:
 
-* PDF
-* Excel
-* CSV
-* JSON
+- PDF
+- Excel
+- CSV
+- JSON
 
 ---
 
@@ -989,33 +989,33 @@ RETENTION_POLICY_APPLIED
 
 Standard Reports:
 
-* User Activity Report
-* Security Events Report
-* Authentication Report
-* Authorization Report
-* Compliance Report
-* Audit Trail Report
-* API Activity Report
-* System Activity Report
+- User Activity Report
+- Security Events Report
+- Authentication Report
+- Authorization Report
+- Compliance Report
+- Audit Trail Report
+- API Activity Report
+- System Activity Report
 
 ---
 
 Investigation Reports:
 
-* Incident Investigation Report
-* Security Violation Report
-* User Access Report
-* Data Change Report
-* Forensic Evidence Report
+- Incident Investigation Report
+- Security Violation Report
+- User Access Report
+- Data Change Report
+- Forensic Evidence Report
 
 ---
 
 Compliance Reports:
 
-* Audit Retention Report
-* Regulatory Compliance Report
-* Security Compliance Report
-* Operational Compliance Report
+- Audit Retention Report
+- Regulatory Compliance Report
+- Security Compliance Report
+- Operational Compliance Report
 
 ---
 
@@ -1098,52 +1098,52 @@ Investigation
 
 Audit Service exclusively owns:
 
-* AuditRecord
-* UserActivity
-* SecurityEvent
-* ComplianceReport
-* Investigation
+- AuditRecord
+- UserActivity
+- SecurityEvent
+- ComplianceReport
+- Investigation
 
 ---
 
 # 23. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Event Idempotency
-* Immutable Audit Storage
-* Configurable Retention Policies
-* Database per Service
-* Independent Deployments
-* Observability Integration
-* Dead Letter Topic Support
-* Compliance and Forensic Readiness
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Event Idempotency
+- Immutable Audit Storage
+- Configurable Retention Policies
+- Database per Service
+- Independent Deployments
+- Observability Integration
+- Dead Letter Topic Support
+- Compliance and Forensic Readiness
 
 ---
 
 # 24. Success Criteria
 
-* Audit events are captured from all services.
-* User activities are traceable across the platform.
-* Security events are recorded successfully.
-* Compliance reports are generated successfully.
-* Investigation workflows support forensic analysis.
-* Audit data remains immutable and searchable.
-* Audit reports are generated successfully.
-* Audit Service registers successfully with Service Discovery.
-* Audit APIs are accessible through API Gateway.
-* Audit events are consumed successfully from Kafka.
-* Distributed tracing is available for audit workflows.
-* Audit Service remains independently deployable.
+- Audit events are captured from all services.
+- User activities are traceable across the platform.
+- Security events are recorded successfully.
+- Compliance reports are generated successfully.
+- Investigation workflows support forensic analysis.
+- Audit data remains immutable and searchable.
+- Audit reports are generated successfully.
+- Audit Service registers successfully with Service Discovery.
+- Audit APIs are accessible through API Gateway.
+- Audit events are consumed successfully from Kafka.
+- Distributed tracing is available for audit workflows.
+- Audit Service remains independently deployable.
 
 ---
 
@@ -1163,4 +1163,3 @@ Audit Service exclusively owns:
 | BR-011 | FR-AUD-010 |
 
 ---
-

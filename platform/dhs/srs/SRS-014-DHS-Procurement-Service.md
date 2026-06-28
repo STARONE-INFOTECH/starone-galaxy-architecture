@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Procurement Service |
+| Field          | Value                                                   |
+| -------------- | ------------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform                |
+| Service Name   | Procurement Service                                     |
 | Document Title | Procurement Service Software Requirements Specification |
-| Document ID | SRS-014 |
-| Repository | starone-dhs-platform |
-| Module | procurement-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-014                                                 |
+| Repository     | starone-dhs-platform                                    |
+| Module         | procurement-service                                     |
+| Document Type  | Software Requirements Specification (SRS)               |
+| Standard       | ISO/IEC/IEEE 29148                                      |
+| Version        | v1.0.0                                                  |
+| Status         | Draft                                                   |
+| Author         | Sachin Salunke                                          |
+| Owner          | Enterprise Architecture                                 |
+| Last Updated   | 2026-06-27                                              |
 
 ---
 
@@ -26,37 +26,37 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | High-Level Design |
+| Document        | Description                         |
+| --------------- | ----------------------------------- |
+| BRD-001         | Business Requirements Document      |
+| PRD-001         | Product Requirements Document       |
+| ADR-001         | Architecture Decision Record        |
+| HLD-001         | High-Level Design                   |
 | FRD-Procurement | Procurement Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-005 | Product Service |
-| SRS-006 | Inventory Service |
-| SRS-008 | Billing Service |
-| SRS-013 | Supplier Service |
+| SRS-001         | Platform Foundation                 |
+| SRS-005         | Product Service                     |
+| SRS-006         | Inventory Service                   |
+| SRS-008         | Billing Service                     |
+| SRS-013         | Supplier Service                    |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|---------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version (Revised Supplier Architecture) |
+| Version | Date       | Description                                     |
+| ------- | ---------- | ----------------------------------------------- |
+| v1.0.0  | 2026-06-27 | Initial Version (Revised Supplier Architecture) |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -141,17 +141,17 @@ Reporting --> Procurement
 
 ## Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Libraries |
-| Gateway | API Gateway |
-| Eureka | Service Discovery |
-| PostgreSQL | Procurement Database |
-| Kafka | Event Streaming |
-| Supplier Service | Supplier Validation |
-| Product Service | Product Validation |
-| Inventory Service | Goods Receipt Processing |
-| Billing Service | Supplier Invoice Processing |
+| Dependency          | Purpose                     |
+| ------------------- | --------------------------- |
+| Platform Foundation | Shared Libraries            |
+| Gateway             | API Gateway                 |
+| Eureka              | Service Discovery           |
+| PostgreSQL          | Procurement Database        |
+| Kafka               | Event Streaming             |
+| Supplier Service    | Supplier Validation         |
+| Product Service     | Product Validation          |
+| Inventory Service   | Goods Receipt Processing    |
+| Billing Service     | Supplier Invoice Processing |
 
 ---
 
@@ -579,49 +579,49 @@ All APIs shall be exposed through the Platform API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | /requisitions | Create Purchase Requisition |
-| GET | /requisitions/{id} | Get Purchase Requisition |
-| PUT | /requisitions/{id} | Update Purchase Requisition |
-| POST | /requisitions/{id}/submit | Submit for Approval |
-| POST | /requisitions/{id}/approve | Approve Requisition |
-| POST | /purchase-orders | Create Purchase Order |
-| GET | /purchase-orders/{id} | Get Purchase Order |
-| PUT | /purchase-orders/{id} | Update Purchase Order |
-| POST | /purchase-orders/{id}/approve | Approve Purchase Order |
-| POST | /goods-receipts | Record Goods Receipt |
-| GET | /goods-receipts/{id} | Get Goods Receipt |
-| POST | /supplier-invoices | Register Supplier Invoice |
-| GET | /supplier-invoices/{id} | Get Supplier Invoice |
+| Method | URI                           | Description                 |
+| ------ | ----------------------------- | --------------------------- |
+| POST   | /requisitions                 | Create Purchase Requisition |
+| GET    | /requisitions/{id}            | Get Purchase Requisition    |
+| PUT    | /requisitions/{id}            | Update Purchase Requisition |
+| POST   | /requisitions/{id}/submit     | Submit for Approval         |
+| POST   | /requisitions/{id}/approve    | Approve Requisition         |
+| POST   | /purchase-orders              | Create Purchase Order       |
+| GET    | /purchase-orders/{id}         | Get Purchase Order          |
+| PUT    | /purchase-orders/{id}         | Update Purchase Order       |
+| POST   | /purchase-orders/{id}/approve | Approve Purchase Order      |
+| POST   | /goods-receipts               | Record Goods Receipt        |
+| GET    | /goods-receipts/{id}          | Get Goods Receipt           |
+| POST   | /supplier-invoices            | Register Supplier Invoice   |
+| GET    | /supplier-invoices/{id}       | Get Supplier Invoice        |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Description |
-|------------|-------------|
-| page | Page Number |
-| size | Page Size |
-| sort | Sort Field |
-| direction | ASC/DESC |
-| requisitionNumber | Requisition Number |
+| Parameter           | Description           |
+| ------------------- | --------------------- |
+| page                | Page Number           |
+| size                | Page Size             |
+| sort                | Sort Field            |
+| direction           | ASC/DESC              |
+| requisitionNumber   | Requisition Number    |
 | purchaseOrderNumber | Purchase Order Number |
-| supplierId | Supplier Identifier |
-| status | Procurement Status |
-| fromDate | Start Date |
-| toDate | End Date |
+| supplierId          | Supplier Identifier   |
+| status              | Procurement Status    |
+| fromDate            | Start Date            |
+| toDate              | End Date              |
 
 ---
 
@@ -642,7 +642,7 @@ Request
     {
       "productId": "UUID",
       "quantity": 100,
-      "unitPrice": 250.00
+      "unitPrice": 250.0
     }
   ]
 }
@@ -724,7 +724,7 @@ Request
   "supplierId": "UUID",
   "invoiceNumber": "INV-2026-001",
   "invoiceDate": "2026-08-21",
-  "invoiceAmount": 25000.00
+  "invoiceAmount": 25000.0
 }
 ```
 
@@ -734,62 +734,62 @@ Request
 
 ## PurchaseRequisitionRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| branchId | UUID | Yes |
-| requiredDate | LocalDate | Yes |
-| remarks | String | No |
-| items | List<PurchaseRequisitionItemRequest> | Yes |
+| Field        | Type                                 | Required |
+| ------------ | ------------------------------------ | -------- |
+| branchId     | UUID                                 | Yes      |
+| requiredDate | LocalDate                            | Yes      |
+| remarks      | String                               | No       |
+| items        | List<PurchaseRequisitionItemRequest> | Yes      |
 
 ---
 
 ## PurchaseRequisitionItemRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| productId | UUID | Yes |
-| quantity | BigDecimal | Yes |
-| unitPrice | BigDecimal | Yes |
+| Field     | Type       | Required |
+| --------- | ---------- | -------- |
+| productId | UUID       | Yes      |
+| quantity  | BigDecimal | Yes      |
+| unitPrice | BigDecimal | Yes      |
 
 ---
 
 ## PurchaseOrderRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| requisitionId | UUID | Yes |
-| supplierId | UUID | Yes |
+| Field         | Type | Required |
+| ------------- | ---- | -------- |
+| requisitionId | UUID | Yes      |
+| supplierId    | UUID | Yes      |
 
 ---
 
 ## GoodsReceiptRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| purchaseOrderId | UUID | Yes |
-| receivedDate | LocalDate | Yes |
-| items | List<GoodsReceiptItemRequest> | Yes |
+| Field           | Type                          | Required |
+| --------------- | ----------------------------- | -------- |
+| purchaseOrderId | UUID                          | Yes      |
+| receivedDate    | LocalDate                     | Yes      |
+| items           | List<GoodsReceiptItemRequest> | Yes      |
 
 ---
 
 ## GoodsReceiptItemRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| purchaseOrderItemId | UUID | Yes |
-| receivedQuantity | BigDecimal | Yes |
+| Field               | Type       | Required |
+| ------------------- | ---------- | -------- |
+| purchaseOrderItemId | UUID       | Yes      |
+| receivedQuantity    | BigDecimal | Yes      |
 
 ---
 
 ## SupplierInvoiceRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| purchaseOrderId | UUID | Yes |
-| supplierId | UUID | Yes |
-| invoiceNumber | String | Yes |
-| invoiceDate | LocalDate | Yes |
-| invoiceAmount | BigDecimal | Yes |
+| Field           | Type       | Required |
+| --------------- | ---------- | -------- |
+| purchaseOrderId | UUID       | Yes      |
+| supplierId      | UUID       | Yes      |
+| invoiceNumber   | String     | Yes      |
+| invoiceDate     | LocalDate  | Yes      |
+| invoiceAmount   | BigDecimal | Yes      |
 
 ---
 
@@ -797,44 +797,44 @@ Request
 
 ## PurchaseRequisitionResponse
 
-| Field | Type |
-|---------|------|
-| requisitionId | UUID |
-| requisitionNumber | String |
-| status | RequisitionStatus |
-| totalAmount | BigDecimal |
+| Field             | Type              |
+| ----------------- | ----------------- |
+| requisitionId     | UUID              |
+| requisitionNumber | String            |
+| status            | RequisitionStatus |
+| totalAmount       | BigDecimal        |
 
 ---
 
 ## PurchaseOrderResponse
 
-| Field | Type |
-|---------|------|
-| purchaseOrderId | UUID |
-| purchaseOrderNumber | String |
-| supplierId | UUID |
-| status | PurchaseOrderStatus |
-| totalAmount | BigDecimal |
+| Field               | Type                |
+| ------------------- | ------------------- |
+| purchaseOrderId     | UUID                |
+| purchaseOrderNumber | String              |
+| supplierId          | UUID                |
+| status              | PurchaseOrderStatus |
+| totalAmount         | BigDecimal          |
 
 ---
 
 ## GoodsReceiptResponse
 
-| Field | Type |
-|---------|------|
-| goodsReceiptId | UUID |
-| goodsReceiptNumber | String |
-| status | GoodsReceiptStatus |
+| Field              | Type               |
+| ------------------ | ------------------ |
+| goodsReceiptId     | UUID               |
+| goodsReceiptNumber | String             |
+| status             | GoodsReceiptStatus |
 
 ---
 
 ## SupplierInvoiceResponse
 
-| Field | Type |
-|---------|------|
-| supplierInvoiceId | UUID |
-| invoiceNumber | String |
-| status | InvoiceRegistrationStatus |
+| Field             | Type                      |
+| ----------------- | ------------------------- |
+| supplierInvoiceId | UUID                      |
+| invoiceNumber     | String                    |
+| status            | InvoiceRegistrationStatus |
 
 ---
 
@@ -881,33 +881,33 @@ Request
 
 # 13. Permission Matrix
 
-| API | Super Admin | Procurement Manager | Procurement Officer | Store Manager | Viewer |
-|------|-------------|---------------------|---------------------|---------------|--------|
-| Create Requisition | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Update Requisition | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Approve Requisition | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Create Purchase Order | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Approve Purchase Order | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Record Goods Receipt | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Register Supplier Invoice | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Search Procurement | ✅ | ✅ | ✅ | ✅ | ✅ |
+| API                       | Super Admin | Procurement Manager | Procurement Officer | Store Manager | Viewer |
+| ------------------------- | ----------- | ------------------- | ------------------- | ------------- | ------ |
+| Create Requisition        | ✅          | ✅                  | ✅                  | ✅            | ❌     |
+| Update Requisition        | ✅          | ✅                  | ✅                  | ❌            | ❌     |
+| Approve Requisition       | ✅          | ✅                  | ❌                  | ❌            | ❌     |
+| Create Purchase Order     | ✅          | ✅                  | ✅                  | ❌            | ❌     |
+| Approve Purchase Order    | ✅          | ✅                  | ❌                  | ❌            | ❌     |
+| Record Goods Receipt      | ✅          | ✅                  | ✅                  | ✅            | ❌     |
+| Register Supplier Invoice | ✅          | ✅                  | ✅                  | ❌            | ❌     |
+| Search Procurement        | ✅          | ✅                  | ✅                  | ✅            | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Updated |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Resource Not Found |
-| 409 | Duplicate Resource |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Updated                 |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Resource Not Found      |
+| 409    | Duplicate Resource      |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -942,19 +942,19 @@ Procurement
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Procurement | Aggregate Root |
-| PurchaseRequisition | Internal Purchase Request |
-| PurchaseRequisitionItem | Requested Products |
-| PurchaseOrder | Purchase Contract |
-| PurchaseOrderItem | Ordered Products |
-| PurchaseOrderApproval | Approval Workflow |
-| GoodsReceipt | Goods Receipt |
-| GoodsReceiptItem | Received Products |
+| Aggregate                   | Responsibility                |
+| --------------------------- | ----------------------------- |
+| Procurement                 | Aggregate Root                |
+| PurchaseRequisition         | Internal Purchase Request     |
+| PurchaseRequisitionItem     | Requested Products            |
+| PurchaseOrder               | Purchase Contract             |
+| PurchaseOrderItem           | Ordered Products              |
+| PurchaseOrderApproval       | Approval Workflow             |
+| GoodsReceipt                | Goods Receipt                 |
+| GoodsReceiptItem            | Received Products             |
 | SupplierInvoiceRegistration | Supplier Invoice Registration |
-| ProcurementDocument | Procurement Attachments |
-| ProcurementAudit | Audit Trail |
+| ProcurementDocument         | Procurement Attachments       |
+| ProcurementAudit            | Audit Trail                   |
 
 ---
 
@@ -962,69 +962,69 @@ Procurement
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Procurement | Aggregate Root |
-| PurchaseRequisition | Purchase Request |
-| PurchaseRequisitionItem | Requested Product |
-| PurchaseOrder | Purchase Order |
-| PurchaseOrderItem | Ordered Product |
-| PurchaseOrderApproval | Approval Workflow |
-| GoodsReceipt | Goods Receipt |
-| GoodsReceiptItem | Received Product |
+| Entity                      | Description                |
+| --------------------------- | -------------------------- |
+| Procurement                 | Aggregate Root             |
+| PurchaseRequisition         | Purchase Request           |
+| PurchaseRequisitionItem     | Requested Product          |
+| PurchaseOrder               | Purchase Order             |
+| PurchaseOrderItem           | Ordered Product            |
+| PurchaseOrderApproval       | Approval Workflow          |
+| GoodsReceipt                | Goods Receipt              |
+| GoodsReceiptItem            | Received Product           |
 | SupplierInvoiceRegistration | Supplier Invoice Reference |
-| ProcurementDocument | Attachments |
-| ProcurementAudit | Audit Trail |
+| ProcurementDocument         | Attachments                |
+| ProcurementAudit            | Audit Trail                |
 
 ---
 
 # 16.2 Purchase Requisition
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| requisitionNumber | VARCHAR(30) | Unique |
-| branchId | UUID | Required |
-| requestedBy | UUID | Required |
-| requiredDate | DATE | Required |
-| priority | ENUM | Required |
-| status | ENUM | Required |
-| remarks | VARCHAR(500) | Optional |
-| totalAmount | DECIMAL(18,2) | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedAt | TIMESTAMP | Required |
+| Attribute         | Type          | Constraint  |
+| ----------------- | ------------- | ----------- |
+| id                | UUID          | Primary Key |
+| requisitionNumber | VARCHAR(30)   | Unique      |
+| branchId          | UUID          | Required    |
+| requestedBy       | UUID          | Required    |
+| requiredDate      | DATE          | Required    |
+| priority          | ENUM          | Required    |
+| status            | ENUM          | Required    |
+| remarks           | VARCHAR(500)  | Optional    |
+| totalAmount       | DECIMAL(18,2) | Required    |
+| createdAt         | TIMESTAMP     | Required    |
+| updatedAt         | TIMESTAMP     | Required    |
 
 ---
 
 # 16.3 Purchase Requisition Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| requisitionId | UUID |
-| productId | UUID |
-| quantity | DECIMAL(18,3) |
-| unitPrice | DECIMAL(18,2) |
-| lineAmount | DECIMAL(18,2) |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| requisitionId | UUID          |
+| productId     | UUID          |
+| quantity      | DECIMAL(18,3) |
+| unitPrice     | DECIMAL(18,2) |
+| lineAmount    | DECIMAL(18,2) |
 
 ---
 
 # 16.4 Purchase Order
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| purchaseOrderNumber | VARCHAR(30) |
-| requisitionId | UUID |
-| supplierId | UUID |
-| purchaseOrderDate | DATE |
-| expectedDeliveryDate | DATE |
-| status | ENUM |
-| currency | VARCHAR(10) |
-| subtotal | DECIMAL(18,2) |
-| taxAmount | DECIMAL(18,2) |
-| discountAmount | DECIMAL(18,2) |
-| totalAmount | DECIMAL(18,2) |
+| Attribute            | Type          |
+| -------------------- | ------------- |
+| id                   | UUID          |
+| purchaseOrderNumber  | VARCHAR(30)   |
+| requisitionId        | UUID          |
+| supplierId           | UUID          |
+| purchaseOrderDate    | DATE          |
+| expectedDeliveryDate | DATE          |
+| status               | ENUM          |
+| currency             | VARCHAR(10)   |
+| subtotal             | DECIMAL(18,2) |
+| taxAmount            | DECIMAL(18,2) |
+| discountAmount       | DECIMAL(18,2) |
+| totalAmount          | DECIMAL(18,2) |
 
 > `supplierId` is a foreign business reference to the Supplier Service. Procurement shall not duplicate Supplier master information.
 
@@ -1032,72 +1032,72 @@ Procurement
 
 # 16.5 Purchase Order Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| purchaseOrderId | UUID |
-| productId | UUID |
+| Attribute       | Type          |
+| --------------- | ------------- |
+| id              | UUID          |
+| purchaseOrderId | UUID          |
+| productId       | UUID          |
 | orderedQuantity | DECIMAL(18,3) |
-| unitPrice | DECIMAL(18,2) |
-| taxAmount | DECIMAL(18,2) |
-| discountAmount | DECIMAL(18,2) |
-| lineAmount | DECIMAL(18,2) |
+| unitPrice       | DECIMAL(18,2) |
+| taxAmount       | DECIMAL(18,2) |
+| discountAmount  | DECIMAL(18,2) |
+| lineAmount      | DECIMAL(18,2) |
 
 ---
 
 # 16.6 Purchase Order Approval
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| purchaseOrderId | UUID |
-| approvalLevel | INTEGER |
-| approverId | UUID |
-| approvalStatus | ENUM |
-| approvalDate | TIMESTAMP |
-| remarks | VARCHAR(500) |
+| Attribute       | Type         |
+| --------------- | ------------ |
+| id              | UUID         |
+| purchaseOrderId | UUID         |
+| approvalLevel   | INTEGER      |
+| approverId      | UUID         |
+| approvalStatus  | ENUM         |
+| approvalDate    | TIMESTAMP    |
+| remarks         | VARCHAR(500) |
 
 ---
 
 # 16.7 Goods Receipt
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
+| Attribute          | Type        |
+| ------------------ | ----------- |
+| id                 | UUID        |
 | goodsReceiptNumber | VARCHAR(30) |
-| purchaseOrderId | UUID |
-| receivedDate | DATE |
-| warehouseId | UUID |
-| status | ENUM |
-| receivedBy | UUID |
+| purchaseOrderId    | UUID        |
+| receivedDate       | DATE        |
+| warehouseId        | UUID        |
+| status             | ENUM        |
+| receivedBy         | UUID        |
 
 ---
 
 # 16.8 Goods Receipt Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| goodsReceiptId | UUID |
-| purchaseOrderItemId | UUID |
-| orderedQuantity | DECIMAL(18,3) |
-| receivedQuantity | DECIMAL(18,3) |
-| acceptedQuantity | DECIMAL(18,3) |
-| rejectedQuantity | DECIMAL(18,3) |
+| Attribute           | Type          |
+| ------------------- | ------------- |
+| id                  | UUID          |
+| goodsReceiptId      | UUID          |
+| purchaseOrderItemId | UUID          |
+| orderedQuantity     | DECIMAL(18,3) |
+| receivedQuantity    | DECIMAL(18,3) |
+| acceptedQuantity    | DECIMAL(18,3) |
+| rejectedQuantity    | DECIMAL(18,3) |
 
 ---
 
 # 16.9 Supplier Invoice Registration
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| purchaseOrderId | UUID |
-| supplierId | UUID |
-| invoiceNumber | VARCHAR(100) |
-| invoiceDate | DATE |
-| invoiceAmount | DECIMAL(18,2) |
-| status | ENUM |
+| Attribute       | Type          |
+| --------------- | ------------- |
+| id              | UUID          |
+| purchaseOrderId | UUID          |
+| supplierId      | UUID          |
+| invoiceNumber   | VARCHAR(100)  |
+| invoiceDate     | DATE          |
+| invoiceAmount   | DECIMAL(18,2) |
+| status          | ENUM          |
 
 > Billing Service owns invoice processing and payment. Procurement only records supplier invoice registration.
 
@@ -1105,28 +1105,28 @@ Procurement
 
 # 16.10 Procurement Document
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| referenceType | ENUM |
-| referenceId | UUID |
-| documentType | ENUM |
-| documentName | VARCHAR(255) |
-| documentPath | VARCHAR(500) |
-| uploadedAt | TIMESTAMP |
+| Attribute     | Type         |
+| ------------- | ------------ |
+| id            | UUID         |
+| referenceType | ENUM         |
+| referenceId   | UUID         |
+| documentType  | ENUM         |
+| documentName  | VARCHAR(255) |
+| documentPath  | VARCHAR(500) |
+| uploadedAt    | TIMESTAMP    |
 
 ---
 
 # 16.11 Procurement Audit
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| referenceType | ENUM |
-| referenceId | UUID |
-| eventType | VARCHAR(100) |
-| correlationId | UUID |
-| createdAt | TIMESTAMP |
+| Attribute     | Type         |
+| ------------- | ------------ |
+| id            | UUID         |
+| referenceType | ENUM         |
+| referenceId   | UUID         |
+| eventType     | VARCHAR(100) |
+| correlationId | UUID         |
+| createdAt     | TIMESTAMP    |
 
 ---
 
@@ -1148,18 +1148,18 @@ procurement
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| purchase_requisition | Purchase Requisition |
-| purchase_requisition_item | Requested Products |
-| purchase_order | Purchase Orders |
-| purchase_order_item | Ordered Products |
-| purchase_order_approval | Approval Workflow |
-| goods_receipt | Goods Receipt |
-| goods_receipt_item | Goods Receipt Items |
+| Table                         | Purpose                       |
+| ----------------------------- | ----------------------------- |
+| purchase_requisition          | Purchase Requisition          |
+| purchase_requisition_item     | Requested Products            |
+| purchase_order                | Purchase Orders               |
+| purchase_order_item           | Ordered Products              |
+| purchase_order_approval       | Approval Workflow             |
+| goods_receipt                 | Goods Receipt                 |
+| goods_receipt_item            | Goods Receipt Items           |
 | supplier_invoice_registration | Supplier Invoice Registration |
-| procurement_document | Procurement Attachments |
-| procurement_audit | Audit Trail |
+| procurement_document          | Procurement Attachments       |
+| procurement_audit             | Audit Trail                   |
 
 ---
 
@@ -1171,15 +1171,15 @@ All entities shall use UUID as the Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child | Parent |
-|---------|--------|
-| purchase_requisition_item | purchase_requisition |
-| purchase_order | purchase_requisition |
-| purchase_order_item | purchase_order |
-| purchase_order_approval | purchase_order |
-| goods_receipt | purchase_order |
-| goods_receipt_item | goods_receipt |
-| supplier_invoice_registration | purchase_order |
+| Child                         | Parent               |
+| ----------------------------- | -------------------- |
+| purchase_requisition_item     | purchase_requisition |
+| purchase_order                | purchase_requisition |
+| purchase_order_item           | purchase_order       |
+| purchase_order_approval       | purchase_order       |
+| goods_receipt                 | purchase_order       |
+| goods_receipt_item            | goods_receipt        |
+| supplier_invoice_registration | purchase_order       |
 
 > `supplierId`, `productId`, `branchId`, and `warehouseId` are service references and shall not be enforced as database foreign keys because they belong to separate bounded contexts.
 
@@ -1215,16 +1215,16 @@ All entities shall use UUID as the Primary Key.
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| purchase_requisition | requisition_number |
-| purchase_requisition | status |
-| purchase_order | purchase_order_number |
-| purchase_order | supplier_id |
-| purchase_order | status |
-| goods_receipt | purchase_order_id |
-| supplier_invoice_registration | invoice_number |
-| purchase_order_approval | approver_id |
+| Table                         | Index                 |
+| ----------------------------- | --------------------- |
+| purchase_requisition          | requisition_number    |
+| purchase_requisition          | status                |
+| purchase_order                | purchase_order_number |
+| purchase_order                | supplier_id           |
+| purchase_order                | status                |
+| goods_receipt                 | purchase_order_id     |
+| supplier_invoice_registration | invoice_number        |
+| purchase_order_approval       | approver_id           |
 
 ---
 
@@ -1442,29 +1442,29 @@ The Procurement Service shall publish procurement lifecycle events and consume e
 
 ## 21.1 Published Events
 
-| Topic | Event |
-|---------|------|
-| procurement.requisition.created.v1 | PurchaseRequisitionCreated |
-| procurement.requisition.approved.v1 | PurchaseRequisitionApproved |
-| procurement.purchase-order.created.v1 | PurchaseOrderCreated |
-| procurement.purchase-order.approved.v1 | PurchaseOrderApproved |
-| procurement.goods-receipt.completed.v1 | GoodsReceiptCompleted |
-| procurement.supplier-invoice.registered.v1 | SupplierInvoiceRegistered |
+| Topic                                      | Event                       |
+| ------------------------------------------ | --------------------------- |
+| procurement.requisition.created.v1         | PurchaseRequisitionCreated  |
+| procurement.requisition.approved.v1        | PurchaseRequisitionApproved |
+| procurement.purchase-order.created.v1      | PurchaseOrderCreated        |
+| procurement.purchase-order.approved.v1     | PurchaseOrderApproved       |
+| procurement.goods-receipt.completed.v1     | GoodsReceiptCompleted       |
+| procurement.supplier-invoice.registered.v1 | SupplierInvoiceRegistered   |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
-| supplier.created.v1 | Supplier Service |
-| supplier.updated.v1 | Supplier Service |
-| supplier.activated.v1 | Supplier Service |
-| supplier.deactivated.v1 | Supplier Service |
-| supplier.blacklisted.v1 | Supplier Service |
-| product.updated.v1 | Product Service |
+| Topic                          | Source            |
+| ------------------------------ | ----------------- |
+| supplier.created.v1            | Supplier Service  |
+| supplier.updated.v1            | Supplier Service  |
+| supplier.activated.v1          | Supplier Service  |
+| supplier.deactivated.v1        | Supplier Service  |
+| supplier.blacklisted.v1        | Supplier Service  |
+| product.updated.v1             | Product Service   |
 | inventory.receipt.completed.v1 | Inventory Service |
-| billing.invoice.processed.v1 | Billing Service |
+| billing.invoice.processed.v1   | Billing Service   |
 
 ---
 
@@ -1485,27 +1485,27 @@ The Procurement Service shall publish procurement lifecycle events and consume e
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | REST APIs |
-| Kafka | Event Streaming |
-| PostgreSQL | Procurement Database |
-| Supplier Service | Supplier Validation |
-| Product Service | Product Validation |
-| Inventory Service | Inventory Synchronization |
-| Billing Service | Supplier Invoice Processing |
+| Interface         | Purpose                     |
+| ----------------- | --------------------------- |
+| API Gateway       | REST APIs                   |
+| Kafka             | Event Streaming             |
+| PostgreSQL        | Procurement Database        |
+| Supplier Service  | Supplier Validation         |
+| Product Service   | Product Validation          |
+| Inventory Service | Inventory Synchronization   |
+| Billing Service   | Supplier Invoice Processing |
 
 ---
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
-| SupplierClient | Validate Supplier & Retrieve Supplier Summary |
-| ProductClient | Validate Products |
+| Client          | Purpose                                                |
+| --------------- | ------------------------------------------------------ |
+| SupplierClient  | Validate Supplier & Retrieve Supplier Summary          |
+| ProductClient   | Validate Products                                      |
 | InventoryClient | Inventory Availability & Goods Receipt Synchronization |
-| BillingClient | Supplier Invoice Registration Status |
-| IdentityClient | User & Permission Validation |
+| BillingClient   | Supplier Invoice Registration Status                   |
+| IdentityClient  | User & Permission Validation                           |
 
 > OpenFeign shall be used only for synchronous validation and reference lookups. Business state synchronization shall occur through Kafka events.
 
@@ -1534,16 +1534,16 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| procurement.requisition.auto-number | true | Yes | Auto-generate Requisition Number |
-| procurement.purchase-order.auto-number | true | Yes | Auto-generate Purchase Order Number |
-| procurement.goods-receipt.auto-number | true | Yes | Auto-generate Goods Receipt Number |
-| procurement.approval.enabled | true | Yes | Enable Approval Workflow |
-| procurement.approval.max-level | 5 | Yes | Maximum Approval Levels |
-| procurement.supplier.validation.mode | FEIGN | Yes | Supplier Validation Strategy |
-| procurement.kafka.retry.max-attempts | 3 | Yes | Kafka Retry Attempts |
-| procurement.search.max-page-size | 100 | Yes | Maximum Search Page Size |
+| Property                               | Default | Required | Description                         |
+| -------------------------------------- | ------- | -------- | ----------------------------------- |
+| procurement.requisition.auto-number    | true    | Yes      | Auto-generate Requisition Number    |
+| procurement.purchase-order.auto-number | true    | Yes      | Auto-generate Purchase Order Number |
+| procurement.goods-receipt.auto-number  | true    | Yes      | Auto-generate Goods Receipt Number  |
+| procurement.approval.enabled           | true    | Yes      | Enable Approval Workflow            |
+| procurement.approval.max-level         | 5       | Yes      | Maximum Approval Levels             |
+| procurement.supplier.validation.mode   | FEIGN   | Yes      | Supplier Validation Strategy        |
+| procurement.kafka.retry.max-attempts   | 3       | Yes      | Kafka Retry Attempts                |
+| procurement.search.max-page-size       | 100     | Yes      | Maximum Search Page Size            |
 
 ---
 
@@ -1647,22 +1647,22 @@ Messages exceeding retry attempts shall be published to the Dead Letter Queue (D
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP |
-|------------|-------------|------|
-| PR-VAL-001 | Validation Failed | 400 |
-| PR-AUTH-001 | Authentication Required | 401 |
-| PR-AUTH-002 | Access Denied | 403 |
-| PR-BUS-001 | Supplier Not Active | 422 |
-| PR-BUS-002 | Purchase Requisition Not Found | 404 |
-| PR-BUS-003 | Purchase Order Not Found | 404 |
-| PR-BUS-004 | Goods Receipt Not Found | 404 |
-| PR-BUS-005 | Duplicate Supplier Invoice | 409 |
-| PR-BUS-006 | Approval Required | 422 |
-| PR-BUS-007 | Purchase Order Already Closed | 409 |
-| PR-BUS-008 | Quantity Exceeds Ordered Quantity | 422 |
-| PR-BUS-009 | Invalid Procurement State | 422 |
-| PR-BUS-010 | Supplier Blacklisted | 422 |
-| PR-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                       | HTTP |
+| ----------- | --------------------------------- | ---- |
+| PR-VAL-001  | Validation Failed                 | 400  |
+| PR-AUTH-001 | Authentication Required           | 401  |
+| PR-AUTH-002 | Access Denied                     | 403  |
+| PR-BUS-001  | Supplier Not Active               | 422  |
+| PR-BUS-002  | Purchase Requisition Not Found    | 404  |
+| PR-BUS-003  | Purchase Order Not Found          | 404  |
+| PR-BUS-004  | Goods Receipt Not Found           | 404  |
+| PR-BUS-005  | Duplicate Supplier Invoice        | 409  |
+| PR-BUS-006  | Approval Required                 | 422  |
+| PR-BUS-007  | Purchase Order Already Closed     | 409  |
+| PR-BUS-008  | Quantity Exceeds Ordered Quantity | 422  |
+| PR-BUS-009  | Invalid Procurement State         | 422  |
+| PR-BUS-010  | Supplier Blacklisted              | 422  |
+| PR-SYS-001  | Internal Server Error             | 500  |
 
 ---
 
@@ -1926,28 +1926,28 @@ The Procurement Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source | Verification |
-|-------------|--------|--------------|
-| PR-SYS-001 – PR-SYS-010 | FRD-Procurement | Functional Testing |
-| PR-SYS-011 – PR-SYS-028 | SRS-001 Platform Foundation | Integration Testing |
-| PR-NFR-001 – PR-NFR-018 | PRD / HLD | Performance, Reliability & Security Testing |
+| Requirement             | Source                      | Verification                                |
+| ----------------------- | --------------------------- | ------------------------------------------- |
+| PR-SYS-001 – PR-SYS-010 | FRD-Procurement             | Functional Testing                          |
+| PR-SYS-011 – PR-SYS-028 | SRS-001 Platform Foundation | Integration Testing                         |
+| PR-NFR-001 – PR-NFR-018 | PRD / HLD                   | Performance, Reliability & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| PR-SYS-001 | TC-PR-001 |
-| PR-SYS-002 | TC-PR-002 |
-| PR-SYS-003 | TC-PR-003 |
-| PR-SYS-004 | TC-PR-004 |
-| PR-SYS-005 | TC-PR-005 |
-| PR-SYS-006 | TC-PR-006 |
-| PR-SYS-007 | TC-PR-007 |
-| PR-SYS-008 | TC-PR-008 |
-| PR-SYS-009 | TC-PR-009 |
-| PR-SYS-010 | TC-PR-010 |
+| ----------- | --------- |
+| PR-SYS-001  | TC-PR-001 |
+| PR-SYS-002  | TC-PR-002 |
+| PR-SYS-003  | TC-PR-003 |
+| PR-SYS-004  | TC-PR-004 |
+| PR-SYS-005  | TC-PR-005 |
+| PR-SYS-006  | TC-PR-006 |
+| PR-SYS-007  | TC-PR-007 |
+| PR-SYS-008  | TC-PR-008 |
+| PR-SYS-009  | TC-PR-009 |
+| PR-SYS-010  | TC-PR-010 |
 
 ---
 
@@ -1975,73 +1975,72 @@ The Procurement Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Purchase Requisition | Create, Update, Submit, Approve, Search, Get |
-| Purchase Order | Create, Update, Approve, Search, Get |
-| Goods Receipt | Record, Search, Get |
-| Supplier Invoice Registration | Register, Search, Get |
-| Procurement Documents | Upload, Download, Delete |
+| Resource                      | Endpoints                                    |
+| ----------------------------- | -------------------------------------------- |
+| Purchase Requisition          | Create, Update, Submit, Approve, Search, Get |
+| Purchase Order                | Create, Update, Approve, Search, Get         |
+| Goods Receipt                 | Record, Search, Get                          |
+| Supplier Invoice Registration | Register, Search, Get                        |
+| Procurement Documents         | Upload, Download, Delete                     |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Procurement | Aggregate Root |
-| PurchaseRequisition | Purchase Request |
-| PurchaseRequisitionItem | Requested Products |
-| PurchaseOrder | Purchase Order |
-| PurchaseOrderItem | Ordered Products |
-| PurchaseOrderApproval | Approval Workflow |
-| GoodsReceipt | Goods Receipt |
-| GoodsReceiptItem | Received Products |
+| Aggregate                   | Description                   |
+| --------------------------- | ----------------------------- |
+| Procurement                 | Aggregate Root                |
+| PurchaseRequisition         | Purchase Request              |
+| PurchaseRequisitionItem     | Requested Products            |
+| PurchaseOrder               | Purchase Order                |
+| PurchaseOrderItem           | Ordered Products              |
+| PurchaseOrderApproval       | Approval Workflow             |
+| GoodsReceipt                | Goods Receipt                 |
+| GoodsReceiptItem            | Received Products             |
 | SupplierInvoiceRegistration | Supplier Invoice Registration |
-| ProcurementDocument | Attachments |
-| ProcurementAudit | Audit Trail |
+| ProcurementDocument         | Attachments                   |
+| ProcurementAudit            | Audit Trail                   |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Procurement Database |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
-| Supplier Service | Supplier Master & Validation |
-| Product Service | Product Validation |
-| Inventory Service | Goods Receipt Synchronization |
-| Billing Service | Supplier Invoice Processing |
-| Notification Service | Procurement Notifications |
-| Audit Service | Audit Trail |
-| Reporting Service | Procurement Analytics |
+| Dependency           | Purpose                        |
+| -------------------- | ------------------------------ |
+| Platform Foundation  | Shared Frameworks              |
+| Gateway              | API Routing                    |
+| Eureka               | Service Discovery              |
+| PostgreSQL           | Procurement Database           |
+| Kafka                | Event Streaming                |
+| Identity Service     | Authentication & Authorization |
+| Supplier Service     | Supplier Master & Validation   |
+| Product Service      | Product Validation             |
+| Inventory Service    | Goods Receipt Synchronization  |
+| Billing Service      | Supplier Invoice Processing    |
+| Notification Service | Procurement Notifications      |
+| Audit Service        | Audit Trail                    |
+| Reporting Service    | Procurement Analytics          |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Procurement Service Specification (Supplier Service Integration) |
+| Version | Description                                                              |
+| ------- | ------------------------------------------------------------------------ |
+| v1.0.0  | Initial Procurement Service Specification (Supplier Service Integration) |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
 # End of Document
-

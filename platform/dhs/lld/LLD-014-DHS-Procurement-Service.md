@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Procurement Service |
-| Document | Low Level Design |
-| Document ID | LLD-014 |
-| Repository | starone-dhs-platform |
-| Module | procurement-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Procurement Service                    |
+| Document    | Low Level Design                       |
+| Document ID | LLD-014                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | procurement-service                    |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -358,15 +358,15 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Purchase Requisition | Procurement Request |
-| Purchase Order | Procurement Contract |
-| RFQ | Supplier Quotation Process |
-| Supplier Quotation | Supplier Pricing |
-| Goods Receipt | Receipt Confirmation |
-| Procurement Approval | Approval Workflow |
-| Procurement Timeline | Lifecycle History |
+| Component            | Responsibility             |
+| -------------------- | -------------------------- |
+| Purchase Requisition | Procurement Request        |
+| Purchase Order       | Procurement Contract       |
+| RFQ                  | Supplier Quotation Process |
+| Supplier Quotation   | Supplier Pricing           |
+| Goods Receipt        | Receipt Confirmation       |
+| Procurement Approval | Approval Workflow          |
+| Procurement Timeline | Lifecycle History          |
 
 ---
 
@@ -688,16 +688,16 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
+| Repository                    | Responsibility        |
+| ----------------------------- | --------------------- |
 | PurchaseRequisitionRepository | Purchase Requisitions |
-| PurchaseOrderRepository | Purchase Orders |
-| PurchaseOrderItemRepository | Purchase Order Items |
-| RFQRepository | RFQs |
-| SupplierQuotationRepository | Supplier Quotations |
-| GoodsReceiptRepository | Goods Receipts |
-| ProcurementApprovalRepository | Approval Workflow |
-| ProcurementTimelineRepository | Procurement Timeline |
+| PurchaseOrderRepository       | Purchase Orders       |
+| PurchaseOrderItemRepository   | Purchase Order Items  |
+| RFQRepository                 | RFQs                  |
+| SupplierQuotationRepository   | Supplier Quotations   |
+| GoodsReceiptRepository        | Goods Receipts        |
+| ProcurementApprovalRepository | Approval Workflow     |
+| ProcurementTimelineRepository | Procurement Timeline  |
 
 ---
 
@@ -737,15 +737,15 @@ dto.response
 
 ## PurchaseOrderResponse
 
-| Field | Type |
-|---------|------|
-| purchaseOrderId | UUID |
-| purchaseOrderNumber | String |
-| supplierId | UUID |
-| purchaseOrderStatus | PurchaseOrderStatus |
-| orderDate | LocalDate |
-| expectedDeliveryDate | LocalDate |
-| totalAmount | BigDecimal |
+| Field                | Type                |
+| -------------------- | ------------------- |
+| purchaseOrderId      | UUID                |
+| purchaseOrderNumber  | String              |
+| supplierId           | UUID                |
+| purchaseOrderStatus  | PurchaseOrderStatus |
+| orderDate            | LocalDate           |
+| expectedDeliveryDate | LocalDate           |
+| totalAmount          | BigDecimal          |
 
 ---
 
@@ -775,111 +775,111 @@ entity
 
 ## PurchaseRequisition
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| requisitionNumber | String |
-| requisitionDate | LocalDate |
-| requesterId | UUID |
-| departmentId | UUID |
-| priority | ProcurementPriority |
-| status | RequisitionStatus |
+| Attribute         | Type                |
+| ----------------- | ------------------- |
+| id                | UUID                |
+| requisitionNumber | String              |
+| requisitionDate   | LocalDate           |
+| requesterId       | UUID                |
+| departmentId      | UUID                |
+| priority          | ProcurementPriority |
+| status            | RequisitionStatus   |
 
 ---
 
 ## PurchaseOrder
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| purchaseOrderNumber | String |
-| supplierId | UUID |
-| orderDate | LocalDate |
-| expectedDeliveryDate | LocalDate |
-| currency | String |
-| totalAmount | BigDecimal |
-| status | PurchaseOrderStatus |
+| Attribute            | Type                |
+| -------------------- | ------------------- |
+| id                   | UUID                |
+| purchaseOrderNumber  | String              |
+| supplierId           | UUID                |
+| orderDate            | LocalDate           |
+| expectedDeliveryDate | LocalDate           |
+| currency             | String              |
+| totalAmount          | BigDecimal          |
+| status               | PurchaseOrderStatus |
 
 ---
 
 ## PurchaseOrderItem
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| purchaseOrderId | UUID |
-| productId | UUID |
+| Attribute       | Type       |
+| --------------- | ---------- |
+| id              | UUID       |
+| purchaseOrderId | UUID       |
+| productId       | UUID       |
 | orderedQuantity | BigDecimal |
-| unitPrice | BigDecimal |
-| taxAmount | BigDecimal |
-| lineTotal | BigDecimal |
+| unitPrice       | BigDecimal |
+| taxAmount       | BigDecimal |
+| lineTotal       | BigDecimal |
 
 ---
 
 ## RFQ
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| rfqNumber | String |
-| requisitionId | UUID |
-| closingDate | LocalDate |
-| status | RFQStatus |
+| Attribute     | Type      |
+| ------------- | --------- |
+| id            | UUID      |
+| rfqNumber     | String    |
+| requisitionId | UUID      |
+| closingDate   | LocalDate |
+| status        | RFQStatus |
 
 ---
 
 ## SupplierQuotation
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| rfqId | UUID |
-| supplierId | UUID |
-| quotationNumber | String |
-| quotedAmount | BigDecimal |
-| deliveryDays | Integer |
-| status | QuotationStatus |
+| Attribute       | Type            |
+| --------------- | --------------- |
+| id              | UUID            |
+| rfqId           | UUID            |
+| supplierId      | UUID            |
+| quotationNumber | String          |
+| quotedAmount    | BigDecimal      |
+| deliveryDays    | Integer         |
+| status          | QuotationStatus |
 
 ---
 
 ## GoodsReceipt
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| grnNumber | String |
-| purchaseOrderId | UUID |
-| supplierId | UUID |
-| receiptDate | LocalDate |
-| receivedBy | UUID |
-| receiptStatus | GoodsReceiptStatus |
+| Attribute       | Type               |
+| --------------- | ------------------ |
+| id              | UUID               |
+| grnNumber       | String             |
+| purchaseOrderId | UUID               |
+| supplierId      | UUID               |
+| receiptDate     | LocalDate          |
+| receivedBy      | UUID               |
+| receiptStatus   | GoodsReceiptStatus |
 
 ---
 
 ## ProcurementApproval
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| documentType | ProcurementDocumentType |
-| documentId | UUID |
-| approverId | UUID |
-| approvalLevel | Integer |
-| approvalStatus | ApprovalStatus |
-| approvedAt | Instant |
+| Attribute      | Type                    |
+| -------------- | ----------------------- |
+| id             | UUID                    |
+| documentType   | ProcurementDocumentType |
+| documentId     | UUID                    |
+| approverId     | UUID                    |
+| approvalLevel  | Integer                 |
+| approvalStatus | ApprovalStatus          |
+| approvedAt     | Instant                 |
 
 ---
 
 ## ProcurementTimeline
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| documentType | ProcurementDocumentType |
-| documentId | UUID |
-| eventType | String |
-| eventTimestamp | Instant |
-| remarks | String |
+| Attribute      | Type                    |
+| -------------- | ----------------------- |
+| id             | UUID                    |
+| documentType   | ProcurementDocumentType |
+| documentId     | UUID                    |
+| eventType      | String                  |
+| eventTimestamp | Instant                 |
+| remarks        | String                  |
 
 ---
 
@@ -947,14 +947,14 @@ ProcurementApprovalValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| PurchaseRequisitionValidator | Requisition Validation |
-| PurchaseOrderValidator | Purchase Order Validation |
-| RFQValidator | RFQ Validation |
-| SupplierQuotationValidator | Supplier Quotation Validation |
-| GoodsReceiptValidator | Goods Receipt Validation |
-| ProcurementApprovalValidator | Approval Validation |
+| Validator                    | Purpose                       |
+| ---------------------------- | ----------------------------- |
+| PurchaseRequisitionValidator | Requisition Validation        |
+| PurchaseOrderValidator       | Purchase Order Validation     |
+| RFQValidator                 | RFQ Validation                |
+| SupplierQuotationValidator   | Supplier Quotation Validation |
+| GoodsReceiptValidator        | Goods Receipt Validation      |
+| ProcurementApprovalValidator | Approval Validation           |
 
 ---
 
@@ -1180,18 +1180,18 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| PROCUREMENT_REQUISITION_CREATE | Create Purchase Requisition |
+| Permission                      | Description                  |
+| ------------------------------- | ---------------------------- |
+| PROCUREMENT_REQUISITION_CREATE  | Create Purchase Requisition  |
 | PROCUREMENT_REQUISITION_APPROVE | Approve Purchase Requisition |
-| PROCUREMENT_PO_CREATE | Create Purchase Order |
-| PROCUREMENT_PO_APPROVE | Approve Purchase Order |
-| PROCUREMENT_PO_CANCEL | Cancel Purchase Order |
-| PROCUREMENT_RFQ_MANAGE | Manage RFQs |
-| PROCUREMENT_QUOTATION_MANAGE | Manage Supplier Quotations |
-| PROCUREMENT_GRN_CREATE | Create Goods Receipt |
-| PROCUREMENT_GRN_APPROVE | Approve Goods Receipt |
-| PROCUREMENT_VIEW | View Procurement Documents |
+| PROCUREMENT_PO_CREATE           | Create Purchase Order        |
+| PROCUREMENT_PO_APPROVE          | Approve Purchase Order       |
+| PROCUREMENT_PO_CANCEL           | Cancel Purchase Order        |
+| PROCUREMENT_RFQ_MANAGE          | Manage RFQs                  |
+| PROCUREMENT_QUOTATION_MANAGE    | Manage Supplier Quotations   |
+| PROCUREMENT_GRN_CREATE          | Create Goods Receipt         |
+| PROCUREMENT_GRN_APPROVE         | Approve Goods Receipt        |
+| PROCUREMENT_VIEW                | View Procurement Documents   |
 
 ---
 
@@ -1229,16 +1229,16 @@ Procurement Service shall consume authenticated user information from Spring Sec
 
 ```json
 {
-  "sub":"UUID",
-  "username":"procurement.manager",
-  "roles":["PROCUREMENT_MANAGER"],
-  "permissions":[
-      "PROCUREMENT_PO_CREATE",
-      "PROCUREMENT_PO_APPROVE",
-      "PROCUREMENT_VIEW"
+  "sub": "UUID",
+  "username": "procurement.manager",
+  "roles": ["PROCUREMENT_MANAGER"],
+  "permissions": [
+    "PROCUREMENT_PO_CREATE",
+    "PROCUREMENT_PO_APPROVE",
+    "PROCUREMENT_VIEW"
   ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1288,18 +1288,18 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Purchase Requisition | PROCUREMENT_REQUISITION_CREATE |
+| API                          | Permission                      |
+| ---------------------------- | ------------------------------- |
+| Create Purchase Requisition  | PROCUREMENT_REQUISITION_CREATE  |
 | Approve Purchase Requisition | PROCUREMENT_REQUISITION_APPROVE |
-| Create Purchase Order | PROCUREMENT_PO_CREATE |
-| Approve Purchase Order | PROCUREMENT_PO_APPROVE |
-| Cancel Purchase Order | PROCUREMENT_PO_CANCEL |
-| Manage RFQ | PROCUREMENT_RFQ_MANAGE |
-| Manage Supplier Quotations | PROCUREMENT_QUOTATION_MANAGE |
-| Create Goods Receipt | PROCUREMENT_GRN_CREATE |
-| Approve Goods Receipt | PROCUREMENT_GRN_APPROVE |
-| View Procurement | PROCUREMENT_VIEW |
+| Create Purchase Order        | PROCUREMENT_PO_CREATE           |
+| Approve Purchase Order       | PROCUREMENT_PO_APPROVE          |
+| Cancel Purchase Order        | PROCUREMENT_PO_CANCEL           |
+| Manage RFQ                   | PROCUREMENT_RFQ_MANAGE          |
+| Manage Supplier Quotations   | PROCUREMENT_QUOTATION_MANAGE    |
+| Create Goods Receipt         | PROCUREMENT_GRN_CREATE          |
+| Approve Goods Receipt        | PROCUREMENT_GRN_APPROVE         |
+| View Procurement             | PROCUREMENT_VIEW                |
 
 ---
 
@@ -1375,12 +1375,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"PurchaseOrderCreated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "PurchaseOrderCreated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1409,14 +1409,14 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| SupplierClient | Supplier Validation & Supplier Details |
-| ProductClient | Product Validation |
-| InventoryClient | Stock Receipt Validation |
-| IdentityClient | User Validation |
-| NotificationClient | Procurement Notifications |
-| AuditClient | Audit Submission |
+| Client             | Responsibility                         |
+| ------------------ | -------------------------------------- |
+| SupplierClient     | Supplier Validation & Supplier Details |
+| ProductClient      | Product Validation                     |
+| InventoryClient    | Stock Receipt Validation               |
+| IdentityClient     | User Validation                        |
+| NotificationClient | Procurement Notifications              |
+| AuditClient        | Audit Submission                       |
 
 ---
 
@@ -1441,17 +1441,17 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Procurement Jobs |
-| Metrics | Micrometer |
-| Procurement | Procurement Engine |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis                |
+| Validation    | Bean Validation      |
+| Scheduler     | Procurement Jobs     |
+| Metrics       | Micrometer           |
+| Procurement   | Procurement Engine   |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1465,13 +1465,13 @@ Cross-service consistency shall be achieved using event-driven integration.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Create Purchase Requisition | REQUIRED |
-| Create Purchase Order | REQUIRED |
-| Approve Purchase Order | REQUIRED |
-| Record Goods Receipt | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation                   | Propagation  |
+| --------------------------- | ------------ |
+| Create Purchase Requisition | REQUIRED     |
+| Create Purchase Order       | REQUIRED     |
+| Approve Purchase Order      | REQUIRED     |
+| Record Goods Receipt        | REQUIRED     |
+| Publish Event               | AFTER_COMMIT |
 
 ---
 
@@ -1610,26 +1610,26 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Supplier Service | Supplier Master |
-| Product Service | Product Validation |
-| Inventory Service | Goods Receipt Integration |
+| Service              | Purpose                   |
+| -------------------- | ------------------------- |
+| Supplier Service     | Supplier Master           |
+| Product Service      | Product Validation        |
+| Inventory Service    | Goods Receipt Integration |
 | Notification Service | Procurement Notifications |
-| Audit Service | Audit Logging |
-| Identity Service | User Validation |
+| Audit Service        | Audit Logging             |
+| Identity Service     | User Validation           |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| procurement.cache.enabled | true |
-| procurement.cache.ttl | 3600 |
-| procurement.rfq.default.days | 7 |
-| procurement.approval.enabled | true |
-| procurement.kafka.retry | 3 |
+| Property                     | Default |
+| ---------------------------- | ------- |
+| procurement.cache.enabled    | true    |
+| procurement.cache.ttl        | 3600    |
+| procurement.rfq.default.days | 7       |
+| procurement.approval.enabled | true    |
+| procurement.kafka.retry      | 3       |
 
 ---
 
@@ -1668,23 +1668,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1726,12 +1726,12 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Procurement Business Events |
-| WARN | Recoverable Business Errors |
+| Level | Purpose                         |
+| ----- | ------------------------------- |
+| TRACE | Framework Diagnostics           |
+| DEBUG | Development                     |
+| INFO  | Procurement Business Events     |
+| WARN  | Recoverable Business Errors     |
 | ERROR | Procurement Processing Failures |
 
 ---
@@ -2188,15 +2188,15 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
+| Metric                     | Target    |
+| -------------------------- | --------- |
+| Unit Test Coverage         | ≥90%      |
+| Integration Tests          | 100% Pass |
 | Procurement Workflow Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Critical Bugs              | 0         |
+| Critical Vulnerabilities   | 0         |
+| Code Duplication           | <3%       |
+| Documentation              | Mandatory |
 
 ---
 
@@ -2262,35 +2262,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Procurement Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Procurement Audit |
+| Layer      | Responsibility             |
+| ---------- | -------------------------- |
+| Controller | Request Handling           |
+| Service    | Procurement Business Logic |
+| Repository | Persistence                |
+| Kafka      | Event Publishing           |
+| Mapper     | DTO Conversion             |
+| Validation | Request Validation         |
+| Audit      | Procurement Audit          |
 
 ---
 
@@ -2402,12 +2402,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Procurement Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Procurement Service Implementation              |
 
 ---
 

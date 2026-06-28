@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Notification Service |
-| Document | Low Level Design |
-| Document ID | LLD-010 |
-| Repository | starone-dhs-platform |
-| Module | notification-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Notification Service                   |
+| Document    | Low Level Design                       |
+| Document ID | LLD-010                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | notification-service                   |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -374,16 +374,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
+| Component    | Responsibility         |
+| ------------ | ---------------------- |
 | Notification | Notification Lifecycle |
-| Template | Template Management |
-| Preference | User Preferences |
-| Delivery | Delivery Tracking |
-| Retry | Retry Processing |
-| Provider | Channel Integration |
-| Event | Notification Events |
-| Attachment | Attachments |
+| Template     | Template Management    |
+| Preference   | User Preferences       |
+| Delivery     | Delivery Tracking      |
+| Retry        | Retry Processing       |
+| Provider     | Channel Integration    |
+| Event        | Notification Events    |
+| Attachment   | Attachments            |
 
 ---
 
@@ -712,15 +712,15 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| NotificationRepository | Notification Master |
-| NotificationTemplateRepository | Templates |
-| NotificationPreferenceRepository | User Preferences |
-| NotificationDeliveryRepository | Delivery Tracking |
-| NotificationRetryRepository | Retry Queue |
-| NotificationEventRepository | Notification Events |
-| NotificationAuditRepository | Audit Records |
+| Repository                       | Responsibility      |
+| -------------------------------- | ------------------- |
+| NotificationRepository           | Notification Master |
+| NotificationTemplateRepository   | Templates           |
+| NotificationPreferenceRepository | User Preferences    |
+| NotificationDeliveryRepository   | Delivery Tracking   |
+| NotificationRetryRepository      | Retry Queue         |
+| NotificationEventRepository      | Notification Events |
+| NotificationAuditRepository      | Audit Records       |
 
 ---
 
@@ -762,16 +762,16 @@ dto.response
 
 ## NotificationResponse
 
-| Field | Type |
-|---------|------|
-| notificationId | UUID |
-| notificationType | NotificationType |
-| channel | NotificationChannel |
-| recipient | String |
-| templateId | UUID |
-| notificationStatus | NotificationStatus |
-| scheduledAt | Instant |
-| deliveredAt | Instant |
+| Field              | Type                |
+| ------------------ | ------------------- |
+| notificationId     | UUID                |
+| notificationType   | NotificationType    |
+| channel            | NotificationChannel |
+| recipient          | String              |
+| templateId         | UUID                |
+| notificationStatus | NotificationStatus  |
+| scheduledAt        | Instant             |
+| deliveredAt        | Instant             |
 
 ---
 
@@ -800,94 +800,94 @@ entity
 
 ## Notification
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| notificationType | NotificationType |
-| channel | NotificationChannel |
-| recipient | String |
-| templateId | UUID |
-| subject | String |
-| notificationStatus | NotificationStatus |
-| scheduledAt | Instant |
-| deliveredAt | Instant |
+| Attribute          | Type                |
+| ------------------ | ------------------- |
+| id                 | UUID                |
+| notificationType   | NotificationType    |
+| channel            | NotificationChannel |
+| recipient          | String              |
+| templateId         | UUID                |
+| subject            | String              |
+| notificationStatus | NotificationStatus  |
+| scheduledAt        | Instant             |
+| deliveredAt        | Instant             |
 
 ---
 
 ## NotificationTemplate
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| templateCode | String |
-| templateName | String |
-| channel | NotificationChannel |
-| subject | String |
-| body | Text |
-| version | Integer |
-| status | TemplateStatus |
+| Attribute    | Type                |
+| ------------ | ------------------- |
+| id           | UUID                |
+| templateCode | String              |
+| templateName | String              |
+| channel      | NotificationChannel |
+| subject      | String              |
+| body         | Text                |
+| version      | Integer             |
+| status       | TemplateStatus      |
 
 ---
 
 ## NotificationPreference
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| userId | UUID |
-| emailEnabled | Boolean |
-| smsEnabled | Boolean |
-| pushEnabled | Boolean |
+| Attribute       | Type    |
+| --------------- | ------- |
+| id              | UUID    |
+| userId          | UUID    |
+| emailEnabled    | Boolean |
+| smsEnabled      | Boolean |
+| pushEnabled     | Boolean |
 | whatsappEnabled | Boolean |
 
 ---
 
 ## NotificationDelivery
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| notificationId | UUID |
-| provider | String |
-| providerMessageId | String |
-| deliveryStatus | DeliveryStatus |
-| deliveredAt | Instant |
+| Attribute         | Type           |
+| ----------------- | -------------- |
+| id                | UUID           |
+| notificationId    | UUID           |
+| provider          | String         |
+| providerMessageId | String         |
+| deliveryStatus    | DeliveryStatus |
+| deliveredAt       | Instant        |
 
 ---
 
 ## NotificationRetry
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| notificationId | UUID |
-| retryCount | Integer |
-| nextRetryAt | Instant |
-| retryStatus | RetryStatus |
+| Attribute      | Type        |
+| -------------- | ----------- |
+| id             | UUID        |
+| notificationId | UUID        |
+| retryCount     | Integer     |
+| nextRetryAt    | Instant     |
+| retryStatus    | RetryStatus |
 
 ---
 
 ## NotificationEvent
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| notificationId | UUID |
-| eventType | String |
-| eventTime | Instant |
-| remarks | String |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| notificationId | UUID    |
+| eventType      | String  |
+| eventTime      | Instant |
+| remarks        | String  |
 
 ---
 
 ## NotificationAttachment
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| notificationId | UUID |
-| fileName | String |
-| contentType | String |
-| storagePath | String |
+| Attribute      | Type   |
+| -------------- | ------ |
+| id             | UUID   |
+| notificationId | UUID   |
+| fileName       | String |
+| contentType    | String |
+| storagePath    | String |
 
 ---
 
@@ -954,14 +954,14 @@ AttachmentValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
+| Validator             | Purpose                 |
+| --------------------- | ----------------------- |
 | NotificationValidator | Notification Validation |
-| TemplateValidator | Template Validation |
-| PreferenceValidator | Preference Validation |
-| DeliveryValidator | Delivery Validation |
-| RetryValidator | Retry Policy Validation |
-| AttachmentValidator | Attachment Validation |
+| TemplateValidator     | Template Validation     |
+| PreferenceValidator   | Preference Validation   |
+| DeliveryValidator     | Delivery Validation     |
+| RetryValidator        | Retry Policy Validation |
+| AttachmentValidator   | Attachment Validation   |
 
 ---
 
@@ -1182,17 +1182,17 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| NOTIFICATION_SEND | Send Notification |
-| NOTIFICATION_VIEW | View Notification |
-| NOTIFICATION_CANCEL | Cancel Notification |
-| NOTIFICATION_RETRY | Retry Notification |
-| TEMPLATE_CREATE | Create Template |
-| TEMPLATE_UPDATE | Update Template |
-| TEMPLATE_PUBLISH | Publish Template |
-| PREFERENCE_MANAGE | Manage Preferences |
-| DELIVERY_VIEW | View Delivery Status |
+| Permission          | Description          |
+| ------------------- | -------------------- |
+| NOTIFICATION_SEND   | Send Notification    |
+| NOTIFICATION_VIEW   | View Notification    |
+| NOTIFICATION_CANCEL | Cancel Notification  |
+| NOTIFICATION_RETRY  | Retry Notification   |
+| TEMPLATE_CREATE     | Create Template      |
+| TEMPLATE_UPDATE     | Update Template      |
+| TEMPLATE_PUBLISH    | Publish Template     |
+| PREFERENCE_MANAGE   | Manage Preferences   |
+| DELIVERY_VIEW       | View Delivery Status |
 | NOTIFICATION_SEARCH | Search Notifications |
 
 ---
@@ -1231,15 +1231,12 @@ Notification Service shall consume authenticated user information from Spring Se
 
 ```json
 {
-  "sub":"UUID",
-  "username":"notification.admin",
-  "roles":["NOTIFICATION_ADMIN"],
-  "permissions":[
-      "NOTIFICATION_SEND",
-      "TEMPLATE_PUBLISH"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "notification.admin",
+  "roles": ["NOTIFICATION_ADMIN"],
+  "permissions": ["NOTIFICATION_SEND", "TEMPLATE_PUBLISH"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1289,17 +1286,17 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Send Notification | NOTIFICATION_SEND |
-| View Notification | NOTIFICATION_VIEW |
-| Cancel Notification | NOTIFICATION_CANCEL |
-| Retry Notification | NOTIFICATION_RETRY |
-| Create Template | TEMPLATE_CREATE |
-| Update Template | TEMPLATE_UPDATE |
-| Publish Template | TEMPLATE_PUBLISH |
-| Manage Preferences | PREFERENCE_MANAGE |
-| View Delivery Status | DELIVERY_VIEW |
+| API                  | Permission          |
+| -------------------- | ------------------- |
+| Send Notification    | NOTIFICATION_SEND   |
+| View Notification    | NOTIFICATION_VIEW   |
+| Cancel Notification  | NOTIFICATION_CANCEL |
+| Retry Notification   | NOTIFICATION_RETRY  |
+| Create Template      | TEMPLATE_CREATE     |
+| Update Template      | TEMPLATE_UPDATE     |
+| Publish Template     | TEMPLATE_PUBLISH    |
+| Manage Preferences   | PREFERENCE_MANAGE   |
+| View Delivery Status | DELIVERY_VIEW       |
 | Search Notifications | NOTIFICATION_SEARCH |
 
 ---
@@ -1382,12 +1379,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"NotificationDelivered",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "NotificationDelivered",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1415,13 +1412,13 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| CustomerClient | Recipient Validation |
-| IdentityClient | User Lookup |
-| TemplateClient | Shared Template Validation |
-| AuditClient | Audit Submission |
-| FileStorageClient | Attachment Retrieval |
+| Client            | Responsibility             |
+| ----------------- | -------------------------- |
+| CustomerClient    | Recipient Validation       |
+| IdentityClient    | User Lookup                |
+| TemplateClient    | Shared Template Validation |
+| AuditClient       | Audit Submission           |
+| FileStorageClient | Attachment Retrieval       |
 
 ---
 
@@ -1446,17 +1443,17 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Background Jobs |
-| Metrics | Micrometer |
-| Provider | Provider Registration |
-| OpenAPI | Swagger |
+| Configuration | Responsibility        |
+| ------------- | --------------------- |
+| Security      | Spring Security       |
+| Kafka         | Kafka Infrastructure  |
+| Feign         | OpenFeign             |
+| Cache         | Redis                 |
+| Validation    | Bean Validation       |
+| Scheduler     | Background Jobs       |
+| Metrics       | Micrometer            |
+| Provider      | Provider Registration |
+| OpenAPI       | Swagger               |
 
 ---
 
@@ -1470,14 +1467,14 @@ Notification delivery shall be asynchronous through Kafka consumers.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Create Notification | REQUIRED |
-| Template Update | REQUIRED |
-| Preference Update | REQUIRED |
-| Delivery Status Update | REQUIRED |
-| Retry Scheduling | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation              | Propagation  |
+| ---------------------- | ------------ |
+| Create Notification    | REQUIRED     |
+| Template Update        | REQUIRED     |
+| Preference Update      | REQUIRED     |
+| Delivery Status Update | REQUIRED     |
+| Retry Scheduling       | REQUIRED     |
+| Publish Event          | AFTER_COMMIT |
 
 ---
 
@@ -1616,29 +1613,29 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Customer Service | Recipient Lookup |
-| Identity Service | User Lookup |
-| Audit Service | Audit Logging |
-| File Storage Service | Attachment Retrieval |
-| Reporting Service | Notification Analytics |
-| Email Provider | Email Delivery |
-| SMS Provider | SMS Delivery |
-| Push Provider | Push Delivery |
-| WhatsApp Provider | WhatsApp Delivery |
+| Service              | Purpose                |
+| -------------------- | ---------------------- |
+| Customer Service     | Recipient Lookup       |
+| Identity Service     | User Lookup            |
+| Audit Service        | Audit Logging          |
+| File Storage Service | Attachment Retrieval   |
+| Reporting Service    | Notification Analytics |
+| Email Provider       | Email Delivery         |
+| SMS Provider         | SMS Delivery           |
+| Push Provider        | Push Delivery          |
+| WhatsApp Provider    | WhatsApp Delivery      |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| notification.retry.enabled | true |
-| notification.retry.max-attempts | 5 |
-| notification.cache.ttl | 3600 |
-| notification.provider.timeout | 30s |
-| notification.kafka.retry | 3 |
+| Property                        | Default |
+| ------------------------------- | ------- |
+| notification.retry.enabled      | true    |
+| notification.retry.max-attempts | 5       |
+| notification.cache.ttl          | 3600    |
+| notification.provider.timeout   | 30s     |
+| notification.kafka.retry        | 3       |
 
 ---
 
@@ -1678,23 +1675,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1736,13 +1733,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Delivery Errors |
-| ERROR | Provider/System Failures |
+| Level | Purpose                     |
+| ----- | --------------------------- |
+| TRACE | Framework Diagnostics       |
+| DEBUG | Development                 |
+| INFO  | Business Events             |
+| WARN  | Recoverable Delivery Errors |
+| ERROR | Provider/System Failures    |
 
 ---
 
@@ -2205,15 +2202,15 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Provider Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Provider Tests           | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2280,36 +2277,36 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Notification Orchestration |
-| Provider | Channel Delivery |
-| Repository | Persistence |
-| Kafka | Event Processing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Notification Audit |
+| Layer      | Responsibility             |
+| ---------- | -------------------------- |
+| Controller | Request Handling           |
+| Service    | Notification Orchestration |
+| Provider   | Channel Delivery           |
+| Repository | Persistence                |
+| Kafka      | Event Processing           |
+| Mapper     | DTO Conversion             |
+| Validation | Request Validation         |
+| Audit      | Notification Audit         |
 
 ---
 
@@ -2409,12 +2406,12 @@ Audit Events
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Notification Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Notification Service Implementation             |
 
 ---
 

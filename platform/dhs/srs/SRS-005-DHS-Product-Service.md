@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Product Service |
+| Field          | Value                                               |
+| -------------- | --------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform            |
+| Service Name   | Product Service                                     |
 | Document Title | Product Service Software Requirements Specification |
-| Document ID | SRS-005 |
-| Repository | starone-dhs-platform |
-| Module | product-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-005                                             |
+| Repository     | starone-dhs-platform                                |
+| Module         | product-service                                     |
+| Document Type  | Software Requirements Specification (SRS)           |
+| Standard       | ISO/IEC/IEEE 29148                                  |
+| Version        | v1.0.0                                              |
+| Status         | Draft                                               |
+| Author         | Sachin Salunke                                      |
+| Owner          | Enterprise Architecture                             |
+| Last Updated   | 2026-06-27                                          |
 
 ---
 
@@ -26,36 +26,36 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | DHS High-Level Design |
+| Document    | Description                     |
+| ----------- | ------------------------------- |
+| BRD-001     | Business Requirements Document  |
+| PRD-001     | Product Requirements Document   |
+| ADR-001     | Architecture Decision Record    |
+| HLD-001     | DHS High-Level Design           |
 | FRD-Product | Product Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-002 | Identity Service |
-| SRS-003 | Branch Service |
-| SRS-004 | Customer Service |
+| SRS-001     | Platform Foundation             |
+| SRS-002     | Identity Service                |
+| SRS-003     | Branch Service                  |
+| SRS-004     | Customer Service                |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -103,13 +103,13 @@ The Product Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Product | Sellable Item |
-| SKU | Stock Keeping Unit |
-| Brand | Product Brand |
+| Term     | Description            |
+| -------- | ---------------------- |
+| Product  | Sellable Item          |
+| SKU      | Stock Keeping Unit     |
+| Brand    | Product Brand          |
 | Category | Product Classification |
-| UOM | Unit of Measure |
+| UOM      | Unit of Measure        |
 
 ---
 
@@ -173,34 +173,34 @@ ReportingService --> ProductService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Kafka | Event Streaming |
-| Audit Service | Audit Events |
+| Dependency          | Purpose            |
+| ------------------- | ------------------ |
+| Platform Foundation | Shared Frameworks  |
+| Gateway             | API Routing        |
+| Eureka              | Service Discovery  |
+| PostgreSQL          | Persistent Storage |
+| Kafka               | Event Streaming    |
+| Audit Service       | Audit Events       |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Gateway | API Routing |
+| Service          | Purpose                        |
+| ---------------- | ------------------------------ |
+| Gateway          | API Routing                    |
 | Identity Service | Authentication & Authorization |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Inventory Service | Product Reference |
-| Order Service | Product Validation |
-| Billing Service | Pricing Reference |
-| Reporting Service | Product Analytics |
+| Service           | Purpose            |
+| ----------------- | ------------------ |
+| Inventory Service | Product Reference  |
+| Order Service     | Product Validation |
+| Billing Service   | Pricing Reference  |
+| Reporting Service | Product Analytics  |
 
 ---
 
@@ -617,54 +617,54 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | / | Create Product |
-| PUT | /{productId} | Update Product |
-| GET | /{productId} | Get Product |
-| DELETE | /{productId} | Archive Product |
-| GET | / | Search Products |
-| PATCH | /{productId}/activate | Activate Product |
-| PATCH | /{productId}/deactivate | Deactivate Product |
-| GET | /code/{productCode} | Find by Product Code |
-| GET | /sku/{sku} | Find by SKU |
+| Method | URI                     | Description          |
+| ------ | ----------------------- | -------------------- |
+| POST   | /                       | Create Product       |
+| PUT    | /{productId}            | Update Product       |
+| GET    | /{productId}            | Get Product          |
+| DELETE | /{productId}            | Archive Product      |
+| GET    | /                       | Search Products      |
+| PATCH  | /{productId}/activate   | Activate Product     |
+| PATCH  | /{productId}/deactivate | Deactivate Product   |
+| GET    | /code/{productCode}     | Find by Product Code |
+| GET    | /sku/{sku}              | Find by SKU          |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC or DESC |
-| keyword | No | Global Search |
-| category | No | Product Category |
-| brand | No | Product Brand |
-| status | No | Product Status |
-| taxCategory | No | Tax Category |
+| Parameter   | Required | Description      |
+| ----------- | -------- | ---------------- |
+| page        | No       | Page Number      |
+| size        | No       | Page Size        |
+| sort        | No       | Sort Field       |
+| direction   | No       | ASC or DESC      |
+| keyword     | No       | Global Search    |
+| category    | No       | Product Category |
+| brand       | No       | Product Brand    |
+| status      | No       | Product Status   |
+| taxCategory | No       | Tax Category     |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
-| productId | Product Identifier |
-| productCode | Product Code |
-| sku | Product SKU |
+| Parameter   | Description        |
+| ----------- | ------------------ |
+| productId   | Product Identifier |
+| productCode | Product Code       |
+| sku         | Product SKU        |
 
 ---
 
@@ -683,7 +683,7 @@ Request
   "categoryId": "UUID",
   "brandId": "UUID",
   "uomId": "UUID",
-  "basePrice": 69999.00,
+  "basePrice": 69999.0,
   "taxCategoryId": "UUID"
 }
 ```
@@ -782,40 +782,40 @@ Performs logical deletion.
 
 ## CreateProductRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| productName | String | Yes |
-| sku | String | Yes |
-| categoryId | UUID | Yes |
-| brandId | UUID | Yes |
-| uomId | UUID | Yes |
-| basePrice | Decimal | Yes |
-| taxCategoryId | UUID | Yes |
+| Field         | Type    | Required |
+| ------------- | ------- | -------- |
+| productName   | String  | Yes      |
+| sku           | String  | Yes      |
+| categoryId    | UUID    | Yes      |
+| brandId       | UUID    | Yes      |
+| uomId         | UUID    | Yes      |
+| basePrice     | Decimal | Yes      |
+| taxCategoryId | UUID    | Yes      |
 
 ---
 
 ## UpdateProductRequest
 
-| Field | Type |
-|---------|------|
-| productName | String |
-| categoryId | UUID |
-| brandId | UUID |
-| basePrice | Decimal |
-| taxCategoryId | UUID |
-| status | ProductStatus |
+| Field         | Type          |
+| ------------- | ------------- |
+| productName   | String        |
+| categoryId    | UUID          |
+| brandId       | UUID          |
+| basePrice     | Decimal       |
+| taxCategoryId | UUID          |
+| status        | ProductStatus |
 
 ---
 
 ## SearchProductRequest
 
-| Field | Type |
-|---------|------|
-| keyword | String |
-| categoryId | UUID |
-| brandId | UUID |
-| status | ProductStatus |
-| taxCategoryId | UUID |
+| Field         | Type          |
+| ------------- | ------------- |
+| keyword       | String        |
+| categoryId    | UUID          |
+| brandId       | UUID          |
+| status        | ProductStatus |
+| taxCategoryId | UUID          |
 
 ---
 
@@ -823,41 +823,41 @@ Performs logical deletion.
 
 ## ProductResponse
 
-| Field | Type |
-|---------|------|
-| productId | UUID |
-| productCode | String |
-| productName | String |
-| sku | String |
-| category | CategoryDTO |
-| brand | BrandDTO |
-| price | PriceDTO |
-| tax | TaxDTO |
-| status | ProductStatus |
+| Field       | Type          |
+| ----------- | ------------- |
+| productId   | UUID          |
+| productCode | String        |
+| productName | String        |
+| sku         | String        |
+| category    | CategoryDTO   |
+| brand       | BrandDTO      |
+| price       | PriceDTO      |
+| tax         | TaxDTO        |
+| status      | ProductStatus |
 
 ---
 
 ## ProductSummaryResponse
 
-| Field | Type |
-|---------|------|
-| productId | UUID |
-| productCode | String |
-| productName | String |
-| sku | String |
-| category | String |
-| brand | String |
-| status | ProductStatus |
+| Field       | Type          |
+| ----------- | ------------- |
+| productId   | UUID          |
+| productCode | String        |
+| productName | String        |
+| sku         | String        |
+| category    | String        |
+| brand       | String        |
+| status      | ProductStatus |
 
 ---
 
 ## ProductSearchResponse
 
-| Field | Type |
-|---------|------|
-| totalRecords | Long |
-| totalPages | Integer |
-| products | List<ProductSummaryResponse> |
+| Field        | Type                         |
+| ------------ | ---------------------------- |
+| totalRecords | Long                         |
+| totalPages   | Integer                      |
+| products     | List<ProductSummaryResponse> |
 
 ---
 
@@ -906,32 +906,32 @@ Performs logical deletion.
 
 # 13. Permission Matrix
 
-| API | Super Admin | Admin | Product Manager | Product Executive | Viewer |
-|------|-------------|--------|-----------------|-------------------|--------|
-| Create Product | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Update Product | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Archive Product | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Activate Product | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Deactivate Product | ✅ | ✅ | ✅ | ❌ | ❌ |
-| View Product | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Search Product | ✅ | ✅ | ✅ | ✅ | ✅ |
+| API                | Super Admin | Admin | Product Manager | Product Executive | Viewer |
+| ------------------ | ----------- | ----- | --------------- | ----------------- | ------ |
+| Create Product     | ✅          | ✅    | ✅              | ❌                | ❌     |
+| Update Product     | ✅          | ✅    | ✅              | ❌                | ❌     |
+| Archive Product    | ✅          | ✅    | ❌              | ❌                | ❌     |
+| Activate Product   | ✅          | ✅    | ✅              | ❌                | ❌     |
+| Deactivate Product | ✅          | ✅    | ✅              | ❌                | ❌     |
+| View Product       | ✅          | ✅    | ✅              | ✅                | ✅     |
+| Search Product     | ✅          | ✅    | ✅              | ✅                | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Archived |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Product Not Found |
-| 409 | Duplicate Product |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Archived                |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Product Not Found       |
+| 409    | Duplicate Product       |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -963,16 +963,16 @@ Product
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Product | Product Master |
-| ProductCategory | Product Classification |
-| ProductBrand | Brand Information |
-| ProductAttribute | Product Attributes |
-| ProductPrice | Product Pricing |
-| ProductTax | Tax Classification |
-| ProductSpecification | Technical Specifications |
-| ProductMedia | Product Images & Documents |
+| Aggregate            | Responsibility             |
+| -------------------- | -------------------------- |
+| Product              | Product Master             |
+| ProductCategory      | Product Classification     |
+| ProductBrand         | Brand Information          |
+| ProductAttribute     | Product Attributes         |
+| ProductPrice         | Product Pricing            |
+| ProductTax           | Tax Classification         |
+| ProductSpecification | Technical Specifications   |
+| ProductMedia         | Product Images & Documents |
 
 ---
 
@@ -980,124 +980,124 @@ Product
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Product | Aggregate Root |
-| ProductCategory | Category Master |
-| ProductBrand | Brand Master |
-| ProductAttribute | Configurable Product Attributes |
-| ProductPrice | Pricing Information |
-| ProductTax | Tax Configuration |
-| ProductSpecification | Technical Specifications |
-| ProductMedia | Images & Documents |
+| Entity               | Description                     |
+| -------------------- | ------------------------------- |
+| Product              | Aggregate Root                  |
+| ProductCategory      | Category Master                 |
+| ProductBrand         | Brand Master                    |
+| ProductAttribute     | Configurable Product Attributes |
+| ProductPrice         | Pricing Information             |
+| ProductTax           | Tax Configuration               |
+| ProductSpecification | Technical Specifications        |
+| ProductMedia         | Images & Documents              |
 
 ---
 
 ## 16.2 Product Entity
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| productCode | VARCHAR(30) | Unique |
-| sku | VARCHAR(50) | Unique |
-| productName | VARCHAR(255) | Required |
-| shortDescription | VARCHAR(500) | Optional |
-| description | TEXT | Optional |
-| categoryId | UUID | Required |
-| brandId | UUID | Required |
-| uomId | UUID | Required |
-| status | ENUM | Required |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedBy | UUID | Required |
-| updatedAt | TIMESTAMP | Required |
-| deleted | BOOLEAN | Default FALSE |
+| Attribute        | Type         | Constraint    |
+| ---------------- | ------------ | ------------- |
+| id               | UUID         | Primary Key   |
+| productCode      | VARCHAR(30)  | Unique        |
+| sku              | VARCHAR(50)  | Unique        |
+| productName      | VARCHAR(255) | Required      |
+| shortDescription | VARCHAR(500) | Optional      |
+| description      | TEXT         | Optional      |
+| categoryId       | UUID         | Required      |
+| brandId          | UUID         | Required      |
+| uomId            | UUID         | Required      |
+| status           | ENUM         | Required      |
+| createdBy        | UUID         | Required      |
+| createdAt        | TIMESTAMP    | Required      |
+| updatedBy        | UUID         | Required      |
+| updatedAt        | TIMESTAMP    | Required      |
+| deleted          | BOOLEAN      | Default FALSE |
 
 ---
 
 ## 16.3 Product Category
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| categoryCode | VARCHAR(30) |
-| categoryName | VARCHAR(150) |
-| parentCategoryId | UUID |
-| status | ENUM |
+| Attribute        | Type         |
+| ---------------- | ------------ |
+| id               | UUID         |
+| categoryCode     | VARCHAR(30)  |
+| categoryName     | VARCHAR(150) |
+| parentCategoryId | UUID         |
+| status           | ENUM         |
 
 ---
 
 ## 16.4 Product Brand
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| brandCode | VARCHAR(30) |
-| brandName | VARCHAR(150) |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| brandCode    | VARCHAR(30)  |
+| brandName    | VARCHAR(150) |
 | manufacturer | VARCHAR(150) |
-| status | ENUM |
+| status       | ENUM         |
 
 ---
 
 ## 16.5 Product Attribute
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
-| attributeName | VARCHAR(100) |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| productId      | UUID         |
+| attributeName  | VARCHAR(100) |
 | attributeValue | VARCHAR(500) |
-| displayOrder | INTEGER |
+| displayOrder   | INTEGER      |
 
 ---
 
 ## 16.6 Product Price
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
-| currencyCode | VARCHAR(10) |
-| basePrice | DECIMAL(18,2) |
-| effectiveFrom | DATE |
-| effectiveTo | DATE |
-| active | BOOLEAN |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| productId     | UUID          |
+| currencyCode  | VARCHAR(10)   |
+| basePrice     | DECIMAL(18,2) |
+| effectiveFrom | DATE          |
+| effectiveTo   | DATE          |
+| active        | BOOLEAN       |
 
 ---
 
 ## 16.7 Product Tax
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
-| taxCategoryId | UUID |
+| Attribute     | Type         |
+| ------------- | ------------ |
+| id            | UUID         |
+| productId     | UUID         |
+| taxCategoryId | UUID         |
 | gstPercentage | DECIMAL(5,2) |
-| hsnCode | VARCHAR(20) |
+| hsnCode       | VARCHAR(20)  |
 
 ---
 
 ## 16.8 Product Specification
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
-| specificationKey | VARCHAR(150) |
-| specificationValue | TEXT |
+| Attribute          | Type         |
+| ------------------ | ------------ |
+| id                 | UUID         |
+| productId          | UUID         |
+| specificationKey   | VARCHAR(150) |
+| specificationValue | TEXT         |
 
 ---
 
 ## 16.9 Product Media
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
-| mediaType | ENUM |
-| fileName | VARCHAR(255) |
-| fileUrl | VARCHAR(500) |
-| primaryMedia | BOOLEAN |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| productId    | UUID         |
+| mediaType    | ENUM         |
+| fileName     | VARCHAR(255) |
+| fileUrl      | VARCHAR(500) |
+| primaryMedia | BOOLEAN      |
 
 ---
 
@@ -1119,16 +1119,16 @@ product
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| product | Product Master |
-| product_category | Category Master |
-| product_brand | Brand Master |
-| product_attribute | Product Attributes |
-| product_price | Product Pricing |
-| product_tax | Tax Configuration |
+| Table                 | Purpose                |
+| --------------------- | ---------------------- |
+| product               | Product Master         |
+| product_category      | Category Master        |
+| product_brand         | Brand Master           |
+| product_attribute     | Product Attributes     |
+| product_price         | Product Pricing        |
+| product_tax           | Tax Configuration      |
 | product_specification | Product Specifications |
-| product_media | Product Images |
+| product_media         | Product Images         |
 
 ---
 
@@ -1140,15 +1140,15 @@ All tables shall use UUID as their Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
-| product | product_category |
-| product | product_brand |
-| product_attribute | product |
-| product_price | product |
-| product_tax | product |
-| product_specification | product |
-| product_media | product |
+| Child Table           | Parent Table     |
+| --------------------- | ---------------- |
+| product               | product_category |
+| product               | product_brand    |
+| product_attribute     | product          |
+| product_price         | product          |
+| product_tax           | product          |
+| product_specification | product          |
+| product_media         | product          |
 
 ---
 
@@ -1182,16 +1182,16 @@ Media
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| product | product_code |
-| product | sku |
-| product | product_name |
-| product | category_id |
-| product | brand_id |
-| product | status |
+| Table         | Index          |
+| ------------- | -------------- |
+| product       | product_code   |
+| product       | sku            |
+| product       | product_name   |
+| product       | category_id    |
+| product       | brand_id       |
+| product       | status         |
 | product_price | effective_from |
-| product_tax | hsn_code |
+| product_tax   | hsn_code       |
 
 ---
 
@@ -1315,24 +1315,24 @@ The Product Service shall publish domain events whenever product master data cha
 
 ## 21.1 Published Events
 
-| Topic | Event | Key | Version |
-|---------|-------|-----|----------|
-| product.created.v1 | ProductCreated | Product ID | v1 |
-| product.updated.v1 | ProductUpdated | Product ID | v1 |
-| product.activated.v1 | ProductActivated | Product ID | v1 |
-| product.deactivated.v1 | ProductDeactivated | Product ID | v1 |
-| product.archived.v1 | ProductArchived | Product ID | v1 |
-| product.price.updated.v1 | ProductPriceUpdated | Product ID | v1 |
+| Topic                    | Event               | Key        | Version |
+| ------------------------ | ------------------- | ---------- | ------- |
+| product.created.v1       | ProductCreated      | Product ID | v1      |
+| product.updated.v1       | ProductUpdated      | Product ID | v1      |
+| product.activated.v1     | ProductActivated    | Product ID | v1      |
+| product.deactivated.v1   | ProductDeactivated  | Product ID | v1      |
+| product.archived.v1      | ProductArchived     | Product ID | v1      |
+| product.price.updated.v1 | ProductPriceUpdated | Product ID | v1      |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
+| Topic               | Source              |
+| ------------------- | ------------------- |
 | category.updated.v1 | Master Data Service |
-| brand.updated.v1 | Master Data Service |
-| tax.updated.v1 | Master Data Service |
+| brand.updated.v1    | Master Data Service |
+| tax.updated.v1      | Master Data Service |
 
 ---
 
@@ -1353,20 +1353,20 @@ The Product Service shall publish domain events whenever product master data cha
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | Request Routing |
-| Kafka | Event Streaming |
-| PostgreSQL | Persistent Storage |
-| Redis | Product Cache |
-| Audit Service | Audit Events |
+| Interface     | Purpose            |
+| ------------- | ------------------ |
+| API Gateway   | Request Routing    |
+| Kafka         | Event Streaming    |
+| PostgreSQL    | Persistent Storage |
+| Redis         | Product Cache      |
+| Audit Service | Audit Events       |
 
 ---
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
+| Client           | Purpose                                        |
+| ---------------- | ---------------------------------------------- |
 | MasterDataClient | Validate Category, Brand, UOM and Tax Category |
 
 > **Architectural Note:** Rather than separate `Category`, `Brand`, `UOM`, and `Tax` services, consider introducing a shared **Master Data Service** for enterprise reference data. Product Service becomes the owner of Product Master, while Master Data Service owns reusable reference entities. This avoids duplication and provides a single source of truth for master/reference data.
@@ -1395,15 +1395,15 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| product.search.max-page-size | 100 | Yes | Maximum page size |
-| product.cache.enabled | true | Yes | Enable product cache |
-| product.cache.ttl | 3600 | Yes | Cache expiration (seconds) |
-| product.price.history.enabled | true | Yes | Maintain pricing history |
-| product.media.max-size | 10MB | Yes | Maximum media file size |
-| product.event.topic.created | product.created.v1 | Yes | Product created topic |
-| product.event.topic.updated | product.updated.v1 | Yes | Product updated topic |
+| Property                      | Default            | Required | Description                |
+| ----------------------------- | ------------------ | -------- | -------------------------- |
+| product.search.max-page-size  | 100                | Yes      | Maximum page size          |
+| product.cache.enabled         | true               | Yes      | Enable product cache       |
+| product.cache.ttl             | 3600               | Yes      | Cache expiration (seconds) |
+| product.price.history.enabled | true               | Yes      | Maintain pricing history   |
+| product.media.max-size        | 10MB               | Yes      | Maximum media file size    |
+| product.event.topic.created   | product.created.v1 | Yes      | Product created topic      |
+| product.event.topic.updated   | product.updated.v1 | Yes      | Product updated topic      |
 
 ---
 
@@ -1495,21 +1495,21 @@ Internal implementation details shall never be exposed to API consumers.
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP Status |
-|------------|-------------|-------------|
-| PR-VAL-001 | Validation Failed | 400 |
-| PR-AUTH-001 | Authentication Required | 401 |
-| PR-AUTH-002 | Access Denied | 403 |
-| PR-BUS-001 | Product Already Exists | 409 |
-| PR-BUS-002 | Product Not Found | 404 |
-| PR-BUS-003 | Duplicate SKU | 409 |
-| PR-BUS-004 | Duplicate Product Code | 409 |
-| PR-BUS-005 | Invalid Product Category | 422 |
-| PR-BUS-006 | Invalid Product Brand | 422 |
-| PR-BUS-007 | Invalid Unit of Measure | 422 |
-| PR-BUS-008 | Invalid Tax Category | 422 |
-| PR-BUS-009 | Product Cannot Be Archived | 409 |
-| PR-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                | HTTP Status |
+| ----------- | -------------------------- | ----------- |
+| PR-VAL-001  | Validation Failed          | 400         |
+| PR-AUTH-001 | Authentication Required    | 401         |
+| PR-AUTH-002 | Access Denied              | 403         |
+| PR-BUS-001  | Product Already Exists     | 409         |
+| PR-BUS-002  | Product Not Found          | 404         |
+| PR-BUS-003  | Duplicate SKU              | 409         |
+| PR-BUS-004  | Duplicate Product Code     | 409         |
+| PR-BUS-005  | Invalid Product Category   | 422         |
+| PR-BUS-006  | Invalid Product Brand      | 422         |
+| PR-BUS-007  | Invalid Unit of Measure    | 422         |
+| PR-BUS-008  | Invalid Tax Category       | 422         |
+| PR-BUS-009  | Product Cannot Be Archived | 409         |
+| PR-SYS-001  | Internal Server Error      | 500         |
 
 ---
 
@@ -1737,28 +1737,28 @@ The Product Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source Document | Source Requirement | Verification |
-|-------------|-----------------|--------------------|--------------|
-| PR-SYS-001 – PR-SYS-020 | FRD-Product | Product Functional Requirements | Functional Testing |
-| PR-SYS-021 – PR-SYS-035 | SRS-001 | Platform Runtime Requirements | Integration Testing |
-| PR-NFR-001 – PR-NFR-014 | PRD / HLD | Quality Attributes | Performance & Security Testing |
+| Requirement             | Source Document | Source Requirement              | Verification                   |
+| ----------------------- | --------------- | ------------------------------- | ------------------------------ |
+| PR-SYS-001 – PR-SYS-020 | FRD-Product     | Product Functional Requirements | Functional Testing             |
+| PR-SYS-021 – PR-SYS-035 | SRS-001         | Platform Runtime Requirements   | Integration Testing            |
+| PR-NFR-001 – PR-NFR-014 | PRD / HLD       | Quality Attributes              | Performance & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| PR-SYS-001 | TC-PR-001 |
-| PR-SYS-002 | TC-PR-002 |
-| PR-SYS-003 | TC-PR-003 |
-| PR-SYS-004 | TC-PR-004 |
-| PR-SYS-005 | TC-PR-005 |
-| PR-SYS-006 | TC-PR-006 |
-| PR-SYS-007 | TC-PR-007 |
-| PR-SYS-008 | TC-PR-008 |
-| PR-SYS-009 | TC-PR-009 |
-| PR-SYS-010 | TC-PR-010 |
+| ----------- | --------- |
+| PR-SYS-001  | TC-PR-001 |
+| PR-SYS-002  | TC-PR-002 |
+| PR-SYS-003  | TC-PR-003 |
+| PR-SYS-004  | TC-PR-004 |
+| PR-SYS-005  | TC-PR-005 |
+| PR-SYS-006  | TC-PR-006 |
+| PR-SYS-007  | TC-PR-007 |
+| PR-SYS-008  | TC-PR-008 |
+| PR-SYS-009  | TC-PR-009 |
+| PR-SYS-010  | TC-PR-010 |
 
 ---
 
@@ -1788,64 +1788,64 @@ The Product Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Product | Create, Update, Get, Archive, Search |
-| Product Status | Activate, Deactivate |
-| Product Price | Manage Prices |
-| Product Media | Manage Images |
-| Product Specifications | Manage Specifications |
+| Resource               | Endpoints                            |
+| ---------------------- | ------------------------------------ |
+| Product                | Create, Update, Get, Archive, Search |
+| Product Status         | Activate, Deactivate                 |
+| Product Price          | Manage Prices                        |
+| Product Media          | Manage Images                        |
+| Product Specifications | Manage Specifications                |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Product | Aggregate Root |
-| ProductCategory | Category Master |
-| ProductBrand | Brand Master |
-| ProductAttribute | Product Attributes |
-| ProductPrice | Pricing |
-| ProductTax | Tax Classification |
+| Aggregate            | Description              |
+| -------------------- | ------------------------ |
+| Product              | Aggregate Root           |
+| ProductCategory      | Category Master          |
+| ProductBrand         | Brand Master             |
+| ProductAttribute     | Product Attributes       |
+| ProductPrice         | Pricing                  |
+| ProductTax           | Tax Classification       |
 | ProductSpecification | Technical Specifications |
-| ProductMedia | Images & Documents |
+| ProductMedia         | Images & Documents       |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Redis | Product Cache |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
+| Dependency          | Purpose                               |
+| ------------------- | ------------------------------------- |
+| Platform Foundation | Shared Frameworks                     |
+| Gateway             | API Routing                           |
+| Eureka              | Service Discovery                     |
+| PostgreSQL          | Persistent Storage                    |
+| Redis               | Product Cache                         |
+| Kafka               | Event Streaming                       |
+| Identity Service    | Authentication & Authorization        |
 | Master Data Service | Category, Brand, UOM & Tax Validation |
-| Audit Service | Audit Processing |
+| Audit Service       | Audit Processing                      |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Product Service Software Requirements Specification |
+| Version | Description                                                 |
+| ------- | ----------------------------------------------------------- |
+| v1.0.0  | Initial Product Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 

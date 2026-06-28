@@ -6,18 +6,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Platform Foundation |
-| Document | Low Level Design |
-| Document ID | LLD-001 |
-| Repository | starone-dhs-platform |
-| Module | platform-foundation |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Platform Foundation                    |
+| Document    | Low Level Design                       |
+| Document ID | LLD-001                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | platform-foundation                    |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -164,18 +164,18 @@ platform-foundation
 
 ## Module Responsibilities
 
-| Module | Responsibility |
-|----------|----------------|
-| foundation-api | Common REST Models |
-| foundation-security | JWT & Security |
-| foundation-kafka | Kafka Infrastructure |
-| foundation-feign | OpenFeign Configuration |
-| foundation-audit | Audit Utilities |
-| foundation-logging | Logging Framework |
-| foundation-validation | Validation Library |
-| foundation-observability | Metrics & Tracing |
-| foundation-common | Utilities |
-| foundation-starter | Auto Configuration |
+| Module                   | Responsibility          |
+| ------------------------ | ----------------------- |
+| foundation-api           | Common REST Models      |
+| foundation-security      | JWT & Security          |
+| foundation-kafka         | Kafka Infrastructure    |
+| foundation-feign         | OpenFeign Configuration |
+| foundation-audit         | Audit Utilities         |
+| foundation-logging       | Logging Framework       |
+| foundation-validation    | Validation Library      |
+| foundation-observability | Metrics & Tracing       |
+| foundation-common        | Utilities               |
+| foundation-starter       | Auto Configuration      |
 
 ---
 
@@ -725,17 +725,17 @@ Metrics
 
 # 11. Dependency Rules
 
-| Layer | Allowed Dependencies |
-|--------|----------------------|
-| Controller | Service, DTO, Validation |
-| Service | Repository, Mapper, Kafka, Feign |
-| Repository | Entity |
-| DTO | None |
-| Entity | BaseEntity |
-| Kafka | Event Models |
-| Security | JWT |
-| Logging | Tracing |
-| Validation | Bean Validation |
+| Layer      | Allowed Dependencies             |
+| ---------- | -------------------------------- |
+| Controller | Service, DTO, Validation         |
+| Service    | Repository, Mapper, Kafka, Feign |
+| Repository | Entity                           |
+| DTO        | None                             |
+| Entity     | BaseEntity                       |
+| Kafka      | Event Models                     |
+| Security   | JWT                              |
+| Logging    | Tracing                          |
+| Validation | Bean Validation                  |
 
 ---
 
@@ -1074,38 +1074,38 @@ dto.response
 
 ## ApiResponse<T>
 
-| Field | Type |
-|---------|------|
-| success | Boolean |
-| message | String |
-| data | Generic |
-| timestamp | Instant |
-| correlationId | String |
+| Field         | Type    |
+| ------------- | ------- |
+| success       | Boolean |
+| message       | String  |
+| data          | Generic |
+| timestamp     | Instant |
+| correlationId | String  |
 
 ---
 
 ## ErrorResponse
 
-| Field | Type |
-|---------|------|
-| status | Integer |
-| code | String |
-| message | String |
-| path | String |
-| timestamp | Instant |
-| correlationId | String |
+| Field         | Type    |
+| ------------- | ------- |
+| status        | Integer |
+| code          | String  |
+| message       | String  |
+| path          | String  |
+| timestamp     | Instant |
+| correlationId | String  |
 
 ---
 
 ## PageResponse
 
-| Field | Type |
-|---------|------|
-| content | List<T> |
-| page | Integer |
-| size | Integer |
-| totalElements | Long |
-| totalPages | Integer |
+| Field         | Type    |
+| ------------- | ------- |
+| content       | List<T> |
+| page          | Integer |
+| size          | Integer |
+| totalElements | Long    |
+| totalPages    | Integer |
 
 ---
 
@@ -1124,8 +1124,8 @@ abstract class BaseEntity
 Attributes
 
 | Attribute | Type |
-|------------|------|
-| id | UUID |
+| --------- | ---- |
+| id        | UUID |
 
 ---
 
@@ -1139,11 +1139,11 @@ BaseEntity
 
 Attributes
 
-| Attribute | Type |
-|------------|------|
-| createdBy | UUID |
+| Attribute | Type    |
+| --------- | ------- |
+| createdBy | UUID    |
 | createdAt | Instant |
-| updatedBy | UUID |
+| updatedBy | UUID    |
 | updatedAt | Instant |
 
 ---
@@ -1159,8 +1159,8 @@ AuditableEntity
 Attributes
 
 | Attribute | Type |
-|------------|------|
-| version | Long |
+| --------- | ---- |
+| version   | Long |
 
 Optimistic Locking support.
 
@@ -1176,9 +1176,9 @@ VersionEntity
 
 Attributes
 
-| Attribute | Type |
-|------------|------|
-| deleted | Boolean |
+| Attribute | Type    |
+| --------- | ------- |
+| deleted   | Boolean |
 
 ---
 
@@ -1629,17 +1629,14 @@ Controller-->>Client: Response
 
 ```json
 {
-  "sub":"userId",
-  "username":"john.doe",
-  "roles":["ADMIN"],
-  "permissions":[
-      "ORDER_CREATE",
-      "ORDER_UPDATE"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID",
-  "iat":1720000000,
-  "exp":1720003600
+  "sub": "userId",
+  "username": "john.doe",
+  "roles": ["ADMIN"],
+  "permissions": ["ORDER_CREATE", "ORDER_UPDATE"],
+  "tenantId": "UUID",
+  "branchId": "UUID",
+  "iat": 1720000000,
+  "exp": 1720003600
 }
 ```
 
@@ -1764,16 +1761,16 @@ kafka
 
 ## Kafka Components
 
-| Component | Responsibility |
-|------------|----------------|
-| KafkaConfiguration | Kafka Beans |
-| ProducerFactory | Producer Configuration |
-| ConsumerFactory | Consumer Configuration |
-| KafkaProducer | Publish Events |
-| KafkaConsumer | Consume Events |
-| RetryHandler | Retry Failed Events |
-| DeadLetterPublisher | Publish to DLQ |
-| EventSerializer | JSON Serialization |
+| Component           | Responsibility         |
+| ------------------- | ---------------------- |
+| KafkaConfiguration  | Kafka Beans            |
+| ProducerFactory     | Producer Configuration |
+| ConsumerFactory     | Consumer Configuration |
+| KafkaProducer       | Publish Events         |
+| KafkaConsumer       | Consume Events         |
+| RetryHandler        | Retry Failed Events    |
+| DeadLetterPublisher | Publish to DLQ         |
+| EventSerializer     | JSON Serialization     |
 
 ---
 
@@ -1967,18 +1964,18 @@ config
 
 ## Responsibilities
 
-| Configuration | Purpose |
-|---------------|---------|
-| Security | Spring Security |
-| Kafka | Kafka |
-| Feign | OpenFeign |
-| Cache | Redis Cache |
-| Jackson | JSON Serialization |
-| Validation | Bean Validation |
-| OpenAPI | Swagger |
-| Metrics | Micrometer |
-| Async | Async Executor |
-| Scheduler | Scheduled Tasks |
+| Configuration | Purpose            |
+| ------------- | ------------------ |
+| Security      | Spring Security    |
+| Kafka         | Kafka              |
+| Feign         | OpenFeign          |
+| Cache         | Redis Cache        |
+| Jackson       | JSON Serialization |
+| Validation    | Bean Validation    |
+| OpenAPI       | Swagger            |
+| Metrics       | Micrometer         |
+| Async         | Async Executor     |
+| Scheduler     | Scheduled Tasks    |
 
 ---
 
@@ -2028,13 +2025,13 @@ propagation
 
 ## Recommended Propagation
 
-| Type | Propagation |
-|--------|-------------|
-| Create | REQUIRED |
-| Update | REQUIRED |
-| Delete | REQUIRED |
-| Read | SUPPORTS |
-| Event | REQUIRES_NEW |
+| Type   | Propagation  |
+| ------ | ------------ |
+| Create | REQUIRED     |
+| Update | REQUIRED     |
+| Delete | REQUIRED     |
+| Read   | SUPPORTS     |
+| Event  | REQUIRES_NEW |
 
 ---
 
@@ -2274,23 +2271,23 @@ The Platform Foundation Starter shall automatically expose the following Spring 
 
 # 45. Technology Standards
 
-| Concern | Standard |
-|----------|----------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Persistence | Spring Data JPA |
-| Cache | Redis |
-| Validation | Jakarta Bean Validation |
-| Serialization | Jackson |
-| Mapping | MapStruct |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Logging | SLF4J + Logback |
+| Concern        | Standard                |
+| -------------- | ----------------------- |
+| Java           | Java 21                 |
+| Framework      | Spring Boot 3.x         |
+| Security       | Spring Security 6       |
+| Authentication | JWT                     |
+| Authorization  | RBAC                    |
+| Messaging      | Apache Kafka            |
+| Service Calls  | OpenFeign               |
+| Persistence    | Spring Data JPA         |
+| Cache          | Redis                   |
+| Validation     | Jakarta Bean Validation |
+| Serialization  | Jackson                 |
+| Mapping        | MapStruct               |
+| Metrics        | Micrometer              |
+| Tracing        | OpenTelemetry           |
+| Logging        | SLF4J + Logback         |
 
 ---
 
@@ -2336,12 +2333,12 @@ Log Aggregator (ELK / OpenSearch / Splunk)
 
 # 46.2 Log Levels
 
-| Level | Usage |
-|---------|-------|
-| TRACE | Development only |
-| DEBUG | Debugging |
-| INFO | Business Events |
-| WARN | Recoverable Problems |
+| Level | Usage                    |
+| ----- | ------------------------ |
+| TRACE | Development only         |
+| DEBUG | Debugging                |
+| INFO  | Business Events          |
+| WARN  | Recoverable Problems     |
 | ERROR | Business/System Failures |
 
 ---
@@ -2382,14 +2379,14 @@ Request ID
 
 ```json
 {
-  "timestamp":"2026-06-27T12:30:00Z",
-  "level":"INFO",
-  "service":"order-service",
-  "correlationId":"UUID",
-  "traceId":"TRACE_ID",
-  "spanId":"SPAN_ID",
-  "userId":"UUID",
-  "message":"Order Created"
+  "timestamp": "2026-06-27T12:30:00Z",
+  "level": "INFO",
+  "service": "order-service",
+  "correlationId": "UUID",
+  "traceId": "TRACE_ID",
+  "spanId": "SPAN_ID",
+  "userId": "UUID",
+  "message": "Order Created"
 }
 ```
 
@@ -2564,7 +2561,7 @@ Returns
 
 ```json
 {
-  "status":"UP"
+  "status": "UP"
 }
 ```
 
@@ -2855,14 +2852,14 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Threshold |
-|---------|-----------|
-| Unit Test Coverage | ≥90% |
-| Critical Bugs | 0 |
-| Vulnerabilities | 0 Critical |
-| Code Smells | Reviewed |
-| Duplication | <3% |
-| Documentation | Mandatory |
+| Metric             | Threshold  |
+| ------------------ | ---------- |
+| Unit Test Coverage | ≥90%       |
+| Critical Bugs      | 0          |
+| Vulnerabilities    | 0 Critical |
+| Code Smells        | Reviewed   |
+| Duplication        | <3%        |
+| Documentation      | Mandatory  |
 
 ---
 
@@ -2935,38 +2932,38 @@ Before implementation verify:
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| Kafka Client | Latest Supported |
+| Component         | Version          |
+| ----------------- | ---------------- |
+| Java              | 21               |
+| Spring Boot       | 3.x              |
+| Spring Security   | 6.x              |
+| Spring Cloud      | 2025.x           |
+| Kafka Client      | Latest Supported |
 | PostgreSQL Driver | Latest Supported |
-| Redis Client | Latest Supported |
-| Micrometer | Latest |
-| OpenTelemetry | Latest |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
-| Mockito | 5.x |
+| Redis Client      | Latest Supported |
+| Micrometer        | Latest           |
+| OpenTelemetry     | Latest           |
+| MapStruct         | Latest Stable    |
+| Lombok            | Latest Stable    |
+| JUnit             | 5.x              |
+| Mockito           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Validation | Input Validation |
-| Service | Business Orchestration |
-| Repository | Persistence |
-| Mapper | DTO Conversion |
-| Kafka | Event Publishing |
-| Feign | External Calls |
-| Audit | Audit Trail |
-| Logging | Structured Logging |
-| Security | Authentication & Authorization |
+| Layer      | Responsibility                 |
+| ---------- | ------------------------------ |
+| Controller | Request Handling               |
+| Validation | Input Validation               |
+| Service    | Business Orchestration         |
+| Repository | Persistence                    |
+| Mapper     | DTO Conversion                 |
+| Kafka      | Event Publishing               |
+| Feign      | External Calls                 |
+| Audit      | Audit Trail                    |
+| Logging    | Structured Logging             |
+| Security   | Authentication & Authorization |
 
 ---
 
@@ -3048,12 +3045,12 @@ Business Services
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Standards, Governance, ADRs, Architecture Documentation |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Helm, CI/CD, Infrastructure |
-| starone-dhs-platform | Platform Foundation and Business Microservices |
+| Repository                    | Responsibility                                          |
+| ----------------------------- | ------------------------------------------------------- |
+| starone-galaxy-architecture   | Standards, Governance, ADRs, Architecture Documentation |
+| starone-galaxy-central-config | Configuration Management                                |
+| starone-galaxy-infra          | Kubernetes, Helm, CI/CD, Infrastructure                 |
+| starone-dhs-platform          | Platform Foundation and Business Microservices          |
 
 ---
 
@@ -3064,5 +3061,3 @@ The Platform Foundation provides the common implementation framework for every D
 ---
 
 # End of Document
-
-

@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Audit Service |
+| Field          | Value                                             |
+| -------------- | ------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform          |
+| Service Name   | Audit Service                                     |
 | Document Title | Audit Service Software Requirements Specification |
-| Document ID | SRS-011 |
-| Repository | starone-dhs-platform |
-| Module | audit-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-011                                           |
+| Repository     | starone-dhs-platform                              |
+| Module         | audit-service                                     |
+| Document Type  | Software Requirements Specification (SRS)         |
+| Standard       | ISO/IEC/IEEE 29148                                |
+| Version        | v1.0.0                                            |
+| Status         | Draft                                             |
+| Author         | Sachin Salunke                                    |
+| Owner          | Enterprise Architecture                           |
+| Last Updated   | 2026-06-27                                        |
 
 ---
 
@@ -26,37 +26,37 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | High-Level Design |
-| FRD-Audit | Audit Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-007 | Order Service |
-| SRS-008 | Billing Service |
-| SRS-009 | Dispatch Service |
-| SRS-010 | Notification Service |
+| Document  | Description                    |
+| --------- | ------------------------------ |
+| BRD-001   | Business Requirements Document |
+| PRD-001   | Product Requirements Document  |
+| ADR-001   | Architecture Decision Record   |
+| HLD-001   | High-Level Design              |
+| FRD-Audit | Audit Functional Requirements  |
+| SRS-001   | Platform Foundation            |
+| SRS-007   | Order Service                  |
+| SRS-008   | Billing Service                |
+| SRS-009   | Dispatch Service               |
+| SRS-010   | Notification Service           |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -105,13 +105,13 @@ The Audit Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Audit Event | Immutable record of a business or technical event |
-| Correlation ID | Identifier linking related operations |
-| Retention Policy | Rules governing audit record retention |
-| Archive | Long-term storage of historical audit records |
-| Export | Secure extraction of audit data |
+| Term             | Description                                       |
+| ---------------- | ------------------------------------------------- |
+| Audit Event      | Immutable record of a business or technical event |
+| Correlation ID   | Identifier linking related operations             |
+| Retention Policy | Rules governing audit record retention            |
+| Archive          | Long-term storage of historical audit records     |
+| Export           | Secure extraction of audit data                   |
 
 ---
 
@@ -174,37 +174,37 @@ Reporting --> AuditService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
+| Dependency          | Purpose           |
+| ------------------- | ----------------- |
 | Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Audit Database |
-| Kafka | Event Streaming |
+| Gateway             | API Routing       |
+| Eureka              | Service Discovery |
+| PostgreSQL          | Audit Database    |
+| Kafka               | Event Streaming   |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Order Service | Business Events |
-| Billing Service | Financial Events |
-| Inventory Service | Inventory Events |
-| Customer Service | Customer Events |
-| Dispatch Service | Shipment Events |
-| Identity Service | Security Events |
-| Notification Service | Delivery Events |
+| Service              | Purpose          |
+| -------------------- | ---------------- |
+| Order Service        | Business Events  |
+| Billing Service      | Financial Events |
+| Inventory Service    | Inventory Events |
+| Customer Service     | Customer Events  |
+| Dispatch Service     | Shipment Events  |
+| Identity Service     | Security Events  |
+| Notification Service | Delivery Events  |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
+| Service           | Purpose              |
+| ----------------- | -------------------- |
 | Reporting Service | Compliance Reporting |
-| BI Platform | Analytics |
-| External Archive | Long-term Retention |
+| BI Platform       | Analytics            |
+| External Archive  | Long-term Retention  |
 
 ---
 
@@ -577,54 +577,54 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| GET | /events | Search Audit Events |
-| GET | /events/{auditId} | Get Audit Event |
-| GET | /correlation/{correlationId} | Search by Correlation ID |
-| GET | /entity/{entityId} | Search by Business Entity |
-| GET | /user/{userId} | Search by User |
-| POST | /export | Export Audit Records |
-| POST | /archive | Archive Records |
-| GET | /retention | View Retention Policy |
+| Method | URI                          | Description               |
+| ------ | ---------------------------- | ------------------------- |
+| GET    | /events                      | Search Audit Events       |
+| GET    | /events/{auditId}            | Get Audit Event           |
+| GET    | /correlation/{correlationId} | Search by Correlation ID  |
+| GET    | /entity/{entityId}           | Search by Business Entity |
+| GET    | /user/{userId}               | Search by User            |
+| POST   | /export                      | Export Audit Records      |
+| POST   | /archive                     | Archive Records           |
+| GET    | /retention                   | View Retention Policy     |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC or DESC |
-| eventType | No | Audit Event Type |
-| service | No | Source Service |
-| userId | No | User Identifier |
-| fromDate | No | Event Date From |
-| toDate | No | Event Date To |
+| Parameter | Required | Description      |
+| --------- | -------- | ---------------- |
+| page      | No       | Page Number      |
+| size      | No       | Page Size        |
+| sort      | No       | Sort Field       |
+| direction | No       | ASC or DESC      |
+| eventType | No       | Audit Event Type |
+| service   | No       | Source Service   |
+| userId    | No       | User Identifier  |
+| fromDate  | No       | Event Date From  |
+| toDate    | No       | Event Date To    |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
-| auditId | Audit Identifier |
-| correlationId | Correlation Identifier |
-| entityId | Business Entity Identifier |
-| userId | User Identifier |
+| Parameter     | Description                |
+| ------------- | -------------------------- |
+| auditId       | Audit Identifier           |
+| correlationId | Correlation Identifier     |
+| entityId      | Business Entity Identifier |
+| userId        | User Identifier            |
 
 ---
 
@@ -667,10 +667,10 @@ Request
 
 ```json
 {
-  "fromDate":"2026-01-01",
-  "toDate":"2026-01-31",
-  "format":"CSV",
-  "eventType":"ORDER_CREATED"
+  "fromDate": "2026-01-01",
+  "toDate": "2026-01-31",
+  "format": "CSV",
+  "eventType": "ORDER_CREATED"
 }
 ```
 
@@ -678,8 +678,8 @@ Response
 
 ```json
 {
-  "exportId":"UUID",
-  "status":"PROCESSING"
+  "exportId": "UUID",
+  "status": "PROCESSING"
 }
 ```
 
@@ -699,34 +699,34 @@ Starts archive processing according to the configured retention policy.
 
 ## AuditSearchRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| correlationId | UUID | No |
-| service | String | No |
-| eventType | String | No |
-| userId | UUID | No |
-| fromDate | Date | No |
-| toDate | Date | No |
+| Field         | Type   | Required |
+| ------------- | ------ | -------- |
+| correlationId | UUID   | No       |
+| service       | String | No       |
+| eventType     | String | No       |
+| userId        | UUID   | No       |
+| fromDate      | Date   | No       |
+| toDate        | Date   | No       |
 
 ---
 
 ## AuditExportRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| fromDate | Date | Yes |
-| toDate | Date | Yes |
-| format | ExportFormat | Yes |
-| filters | Map<String,Object> | No |
+| Field    | Type               | Required |
+| -------- | ------------------ | -------- |
+| fromDate | Date               | Yes      |
+| toDate   | Date               | Yes      |
+| format   | ExportFormat       | Yes      |
+| filters  | Map<String,Object> | No       |
 
 ---
 
 ## ArchiveRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| retentionPolicy | String | Yes |
-| archiveBefore | Date | Yes |
+| Field           | Type   | Required |
+| --------------- | ------ | -------- |
+| retentionPolicy | String | Yes      |
+| archiveBefore   | Date   | Yes      |
 
 ---
 
@@ -734,37 +734,37 @@ Starts archive processing according to the configured retention policy.
 
 ## AuditEventResponse
 
-| Field | Type |
-|---------|------|
-| auditId | UUID |
-| correlationId | UUID |
-| eventId | UUID |
-| eventType | String |
-| sourceService | String |
+| Field          | Type      |
+| -------------- | --------- |
+| auditId        | UUID      |
+| correlationId  | UUID      |
+| eventId        | UUID      |
+| eventType      | String    |
+| sourceService  | String    |
 | eventTimestamp | Timestamp |
-| payload | JSON |
+| payload        | JSON      |
 
 ---
 
 ## AuditSummaryResponse
 
-| Field | Type |
-|---------|------|
-| auditId | UUID |
-| eventType | String |
-| service | String |
-| userId | UUID |
+| Field          | Type      |
+| -------------- | --------- |
+| auditId        | UUID      |
+| eventType      | String    |
+| service        | String    |
+| userId         | UUID      |
 | eventTimestamp | Timestamp |
 
 ---
 
 ## AuditExportResponse
 
-| Field | Type |
-|---------|------|
-| exportId | UUID |
-| status | ExportStatus |
-| generatedAt | Timestamp |
+| Field       | Type         |
+| ----------- | ------------ |
+| exportId    | UUID         |
+| status      | ExportStatus |
+| generatedAt | Timestamp    |
 
 ---
 
@@ -798,29 +798,29 @@ Starts archive processing according to the configured retention policy.
 
 # 13. Permission Matrix
 
-| API | Super Admin | Audit Administrator | Compliance Officer | Auditor | Viewer |
-|------|-------------|---------------------|--------------------|---------|--------|
-| Search Audit | ✅ | ✅ | ✅ | ✅ | ✅ |
-| View Audit Event | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Export Audit | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Archive Audit | ✅ | ✅ | ❌ | ❌ | ❌ |
-| View Retention Policy | ✅ | ✅ | ✅ | ✅ | ✅ |
+| API                   | Super Admin | Audit Administrator | Compliance Officer | Auditor | Viewer |
+| --------------------- | ----------- | ------------------- | ------------------ | ------- | ------ |
+| Search Audit          | ✅          | ✅                  | ✅                 | ✅      | ✅     |
+| View Audit Event      | ✅          | ✅                  | ✅                 | ✅      | ✅     |
+| Export Audit          | ✅          | ✅                  | ✅                 | ❌      | ❌     |
+| Archive Audit         | ✅          | ✅                  | ❌                 | ❌      | ❌     |
+| View Retention Policy | ✅          | ✅                  | ✅                 | ✅      | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 202 | Archive Started |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Audit Record Not Found |
-| 409 | Duplicate Audit Event |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 202    | Archive Started         |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Audit Record Not Found  |
+| 409    | Duplicate Audit Event   |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -853,17 +853,17 @@ Audit
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Audit | Aggregate Root |
-| AuditEvent | Business/System Event |
-| AuditEntry | Persisted Audit Record |
-| AuditPayload | Event Payload |
-| AuditMetadata | Correlation & Trace Information |
-| AuditSource | Originating Service |
-| AuditRetention | Retention Policy |
-| AuditArchive | Archived Records |
-| AuditExport | Export History |
+| Aggregate      | Responsibility                  |
+| -------------- | ------------------------------- |
+| Audit          | Aggregate Root                  |
+| AuditEvent     | Business/System Event           |
+| AuditEntry     | Persisted Audit Record          |
+| AuditPayload   | Event Payload                   |
+| AuditMetadata  | Correlation & Trace Information |
+| AuditSource    | Originating Service             |
+| AuditRetention | Retention Policy                |
+| AuditArchive   | Archived Records                |
+| AuditExport    | Export History                  |
 
 ---
 
@@ -871,127 +871,127 @@ Audit
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Audit | Aggregate Root |
-| AuditEvent | Incoming Event |
-| AuditEntry | Persisted Audit Record |
-| AuditPayload | Original Event Payload |
-| AuditMetadata | Correlation Metadata |
-| AuditSource | Originating Service |
+| Entity         | Description             |
+| -------------- | ----------------------- |
+| Audit          | Aggregate Root          |
+| AuditEvent     | Incoming Event          |
+| AuditEntry     | Persisted Audit Record  |
+| AuditPayload   | Original Event Payload  |
+| AuditMetadata  | Correlation Metadata    |
+| AuditSource    | Originating Service     |
 | AuditRetention | Retention Configuration |
-| AuditArchive | Archive Information |
-| AuditExport | Export Requests |
+| AuditArchive   | Archive Information     |
+| AuditExport    | Export Requests         |
 
 ---
 
 ## 16.2 Audit Event
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| eventId | UUID | Unique |
-| correlationId | UUID | Required |
-| traceId | UUID | Required |
-| spanId | UUID | Optional |
-| eventType | VARCHAR(100) | Required |
-| entityType | VARCHAR(100) | Required |
-| entityId | UUID | Required |
-| sourceService | VARCHAR(100) | Required |
-| eventTimestamp | TIMESTAMP | Required |
-| eventVersion | VARCHAR(20) | Required |
-| createdAt | TIMESTAMP | Required |
+| Attribute      | Type         | Constraint  |
+| -------------- | ------------ | ----------- |
+| id             | UUID         | Primary Key |
+| eventId        | UUID         | Unique      |
+| correlationId  | UUID         | Required    |
+| traceId        | UUID         | Required    |
+| spanId         | UUID         | Optional    |
+| eventType      | VARCHAR(100) | Required    |
+| entityType     | VARCHAR(100) | Required    |
+| entityId       | UUID         | Required    |
+| sourceService  | VARCHAR(100) | Required    |
+| eventTimestamp | TIMESTAMP    | Required    |
+| eventVersion   | VARCHAR(20)  | Required    |
+| createdAt      | TIMESTAMP    | Required    |
 
 ---
 
 ## 16.3 Audit Entry
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| auditEventId | UUID |
-| userId | UUID |
-| username | VARCHAR(100) |
-| action | VARCHAR(100) |
-| status | ENUM |
-| remarks | VARCHAR(500) |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| auditEventId | UUID         |
+| userId       | UUID         |
+| username     | VARCHAR(100) |
+| action       | VARCHAR(100) |
+| status       | ENUM         |
+| remarks      | VARCHAR(500) |
 
 ---
 
 ## 16.4 Audit Payload
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| auditEventId | UUID |
-| payloadType | VARCHAR(100) |
-| payload | JSONB |
-| checksum | VARCHAR(128) |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| auditEventId | UUID         |
+| payloadType  | VARCHAR(100) |
+| payload      | JSONB        |
+| checksum     | VARCHAR(128) |
 
 ---
 
 ## 16.5 Audit Metadata
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| auditEventId | UUID |
-| correlationId | UUID |
-| traceId | UUID |
-| spanId | UUID |
-| ipAddress | VARCHAR(50) |
-| userAgent | VARCHAR(500) |
+| Attribute     | Type         |
+| ------------- | ------------ |
+| id            | UUID         |
+| auditEventId  | UUID         |
+| correlationId | UUID         |
+| traceId       | UUID         |
+| spanId        | UUID         |
+| ipAddress     | VARCHAR(50)  |
+| userAgent     | VARCHAR(500) |
 
 ---
 
 ## 16.6 Audit Source
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| auditEventId | UUID |
-| serviceName | VARCHAR(100) |
-| moduleName | VARCHAR(100) |
-| hostName | VARCHAR(100) |
-| environment | VARCHAR(50) |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| auditEventId | UUID         |
+| serviceName  | VARCHAR(100) |
+| moduleName   | VARCHAR(100) |
+| hostName     | VARCHAR(100) |
+| environment  | VARCHAR(50)  |
 
 ---
 
 ## 16.7 Audit Retention
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
+| Attribute       | Type         |
+| --------------- | ------------ |
+| id              | UUID         |
 | retentionPolicy | VARCHAR(100) |
-| retentionDays | INTEGER |
-| archiveEnabled | BOOLEAN |
-| purgeEnabled | BOOLEAN |
+| retentionDays   | INTEGER      |
+| archiveEnabled  | BOOLEAN      |
+| purgeEnabled    | BOOLEAN      |
 
 ---
 
 ## 16.8 Audit Archive
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| archiveBatchId | UUID |
-| archivedAt | TIMESTAMP |
+| Attribute       | Type         |
+| --------------- | ------------ |
+| id              | UUID         |
+| archiveBatchId  | UUID         |
+| archivedAt      | TIMESTAMP    |
 | archiveLocation | VARCHAR(500) |
-| archiveStatus | ENUM |
+| archiveStatus   | ENUM         |
 
 ---
 
 ## 16.9 Audit Export
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| exportId | UUID |
-| requestedBy | UUID |
-| exportFormat | ENUM |
-| exportStatus | ENUM |
-| requestedAt | TIMESTAMP |
-| completedAt | TIMESTAMP |
+| Attribute    | Type      |
+| ------------ | --------- |
+| id           | UUID      |
+| exportId     | UUID      |
+| requestedBy  | UUID      |
+| exportFormat | ENUM      |
+| exportStatus | ENUM      |
+| requestedAt  | TIMESTAMP |
+| completedAt  | TIMESTAMP |
 
 ---
 
@@ -1013,16 +1013,16 @@ audit
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| audit_event | Incoming Events |
-| audit_entry | Audit Records |
-| audit_payload | Event Payload |
-| audit_metadata | Trace Metadata |
-| audit_source | Source Information |
-| audit_retention | Retention Policies |
-| audit_archive | Archive Information |
-| audit_export | Export History |
+| Table           | Purpose             |
+| --------------- | ------------------- |
+| audit_event     | Incoming Events     |
+| audit_entry     | Audit Records       |
+| audit_payload   | Event Payload       |
+| audit_metadata  | Trace Metadata      |
+| audit_source    | Source Information  |
+| audit_retention | Retention Policies  |
+| audit_archive   | Archive Information |
+| audit_export    | Export History      |
 
 ---
 
@@ -1034,12 +1034,12 @@ All tables shall use UUID as the Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
-| audit_entry | audit_event |
-| audit_payload | audit_event |
-| audit_metadata | audit_event |
-| audit_source | audit_event |
+| Child Table    | Parent Table |
+| -------------- | ------------ |
+| audit_entry    | audit_event  |
+| audit_payload  | audit_event  |
+| audit_metadata | audit_event  |
+| audit_source   | audit_event  |
 
 ---
 
@@ -1067,16 +1067,16 @@ Audit Export
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| audit_event | event_id |
-| audit_event | correlation_id |
-| audit_event | trace_id |
-| audit_event | entity_id |
-| audit_event | source_service |
-| audit_event | event_timestamp |
-| audit_entry | user_id |
-| audit_export | requested_at |
+| Table        | Index           |
+| ------------ | --------------- |
+| audit_event  | event_id        |
+| audit_event  | correlation_id  |
+| audit_event  | trace_id        |
+| audit_event  | entity_id       |
+| audit_event  | source_service  |
+| audit_event  | event_timestamp |
+| audit_entry  | user_id         |
+| audit_export | requested_at    |
 
 ---
 
@@ -1214,26 +1214,26 @@ The Audit Service shall consume events from all business services and may publis
 
 ## 21.1 Published Events
 
-| Topic | Event |
-|---------|------|
-| audit.persisted.v1 | AuditPersisted |
-| audit.archived.v1 | AuditArchived |
+| Topic                     | Event                |
+| ------------------------- | -------------------- |
+| audit.persisted.v1        | AuditPersisted       |
+| audit.archived.v1         | AuditArchived        |
 | audit.export.completed.v1 | AuditExportCompleted |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
-| order.* | Order Service |
-| customer.* | Customer Service |
-| product.* | Product Service |
-| inventory.* | Inventory Service |
-| billing.* | Billing Service |
-| dispatch.* | Dispatch Service |
-| notification.* | Notification Service |
-| identity.* | Identity Service |
+| Topic           | Source               |
+| --------------- | -------------------- |
+| order.\*        | Order Service        |
+| customer.\*     | Customer Service     |
+| product.\*      | Product Service      |
+| inventory.\*    | Inventory Service    |
+| billing.\*      | Billing Service      |
+| dispatch.\*     | Dispatch Service     |
+| notification.\* | Notification Service |
+| identity.\*     | Identity Service     |
 
 ---
 
@@ -1256,12 +1256,12 @@ The Audit Service shall consume events from all business services and may publis
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | REST APIs |
-| Kafka | Event Streaming |
-| PostgreSQL | Persistent Storage |
-| Object Storage | Audit Archive |
+| Interface         | Purpose              |
+| ----------------- | -------------------- |
+| API Gateway       | REST APIs            |
+| Kafka             | Event Streaming      |
+| PostgreSQL        | Persistent Storage   |
+| Object Storage    | Audit Archive        |
 | Reporting Service | Compliance Reporting |
 
 ---
@@ -1272,9 +1272,9 @@ The Audit Service shall remain primarily event-driven.
 
 OpenFeign shall be limited to administrative operations and shall not participate in normal audit ingestion.
 
-| Client | Purpose |
-|----------|---------|
-| IdentityClient | User Information Lookup |
+| Client              | Purpose                                        |
+| ------------------- | ---------------------------------------------- |
+| IdentityClient      | User Information Lookup                        |
 | ConfigurationClient | Retrieve Dynamic Retention Policies (Optional) |
 
 ---
@@ -1302,16 +1302,16 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| audit.retention.days | 2555 | Yes | Default Retention Period (7 Years) |
-| audit.archive.enabled | true | Yes | Enable Archive Processing |
-| audit.archive.schedule | 0 0 2 * * * | Yes | Daily Archive Schedule |
-| audit.export.max-records | 100000 | Yes | Maximum Export Records |
-| audit.search.max-page-size | 500 | Yes | Maximum Search Page Size |
-| audit.kafka.consumer.concurrency | 5 | Yes | Kafka Consumer Threads |
-| audit.retry.max-attempts | 3 | Yes | Retry Attempts |
-| audit.retry.backoff-ms | 1000 | Yes | Retry Backoff Interval |
+| Property                         | Default        | Required | Description                        |
+| -------------------------------- | -------------- | -------- | ---------------------------------- |
+| audit.retention.days             | 2555           | Yes      | Default Retention Period (7 Years) |
+| audit.archive.enabled            | true           | Yes      | Enable Archive Processing          |
+| audit.archive.schedule           | 0 0 2 \* \* \* | Yes      | Daily Archive Schedule             |
+| audit.export.max-records         | 100000         | Yes      | Maximum Export Records             |
+| audit.search.max-page-size       | 500            | Yes      | Maximum Search Page Size           |
+| audit.kafka.consumer.concurrency | 5              | Yes      | Kafka Consumer Threads             |
+| audit.retry.max-attempts         | 3              | Yes      | Retry Attempts                     |
+| audit.retry.backoff-ms           | 1000           | Yes      | Retry Backoff Interval             |
 
 ---
 
@@ -1419,20 +1419,20 @@ Messages that exceed retry limits shall be routed to the Dead Letter Queue (DLQ)
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP |
-|------------|-------------|------|
-| AU-VAL-001 | Validation Failed | 400 |
-| AU-AUTH-001 | Authentication Required | 401 |
-| AU-AUTH-002 | Access Denied | 403 |
-| AU-BUS-001 | Invalid Audit Event | 422 |
-| AU-BUS-002 | Audit Record Not Found | 404 |
-| AU-BUS-003 | Duplicate Audit Event | 409 |
-| AU-BUS-004 | Invalid Export Request | 422 |
-| AU-BUS-005 | Archive Already Running | 409 |
-| AU-BUS-006 | Retention Policy Missing | 422 |
-| AU-BUS-007 | Export Limit Exceeded | 422 |
-| AU-BUS-008 | Archive Storage Unavailable | 503 |
-| AU-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                 | HTTP |
+| ----------- | --------------------------- | ---- |
+| AU-VAL-001  | Validation Failed           | 400  |
+| AU-AUTH-001 | Authentication Required     | 401  |
+| AU-AUTH-002 | Access Denied               | 403  |
+| AU-BUS-001  | Invalid Audit Event         | 422  |
+| AU-BUS-002  | Audit Record Not Found      | 404  |
+| AU-BUS-003  | Duplicate Audit Event       | 409  |
+| AU-BUS-004  | Invalid Export Request      | 422  |
+| AU-BUS-005  | Archive Already Running     | 409  |
+| AU-BUS-006  | Retention Policy Missing    | 422  |
+| AU-BUS-007  | Export Limit Exceeded       | 422  |
+| AU-BUS-008  | Archive Storage Unavailable | 503  |
+| AU-SYS-001  | Internal Server Error       | 500  |
 
 ---
 
@@ -1690,28 +1690,28 @@ The Audit Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source | Verification |
-|-------------|--------|--------------|
-| AU-SYS-001 – AU-SYS-010 | FRD-Audit | Functional Testing |
-| AU-SYS-011 – AU-SYS-028 | SRS-001 Platform Foundation | Integration Testing |
-| AU-NFR-001 – AU-NFR-017 | PRD / HLD | Performance, Security & Reliability Testing |
+| Requirement             | Source                      | Verification                                |
+| ----------------------- | --------------------------- | ------------------------------------------- |
+| AU-SYS-001 – AU-SYS-010 | FRD-Audit                   | Functional Testing                          |
+| AU-SYS-011 – AU-SYS-028 | SRS-001 Platform Foundation | Integration Testing                         |
+| AU-NFR-001 – AU-NFR-017 | PRD / HLD                   | Performance, Security & Reliability Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| AU-SYS-001 | TC-AU-001 |
-| AU-SYS-002 | TC-AU-002 |
-| AU-SYS-003 | TC-AU-003 |
-| AU-SYS-004 | TC-AU-004 |
-| AU-SYS-005 | TC-AU-005 |
-| AU-SYS-006 | TC-AU-006 |
-| AU-SYS-007 | TC-AU-007 |
-| AU-SYS-008 | TC-AU-008 |
-| AU-SYS-009 | TC-AU-009 |
-| AU-SYS-010 | TC-AU-010 |
+| ----------- | --------- |
+| AU-SYS-001  | TC-AU-001 |
+| AU-SYS-002  | TC-AU-002 |
+| AU-SYS-003  | TC-AU-003 |
+| AU-SYS-004  | TC-AU-004 |
+| AU-SYS-005  | TC-AU-005 |
+| AU-SYS-006  | TC-AU-006 |
+| AU-SYS-007  | TC-AU-007 |
+| AU-SYS-008  | TC-AU-008 |
+| AU-SYS-009  | TC-AU-009 |
+| AU-SYS-010  | TC-AU-010 |
 
 ---
 
@@ -1739,73 +1739,68 @@ The Audit Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Audit Events | Search, Get by ID |
-| Correlation | Search by Correlation ID |
-| Entity | Search by Entity |
-| User | Search by User |
-| Export | Export Audit Records |
-| Archive | Archive Audit Records |
-| Retention | View Retention Policy |
+| Resource     | Endpoints                |
+| ------------ | ------------------------ |
+| Audit Events | Search, Get by ID        |
+| Correlation  | Search by Correlation ID |
+| Entity       | Search by Entity         |
+| User         | Search by User           |
+| Export       | Export Audit Records     |
+| Archive      | Archive Audit Records    |
+| Retention    | View Retention Policy    |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Audit | Aggregate Root |
-| AuditEvent | Business/System Event |
-| AuditEntry | Persisted Audit Record |
-| AuditPayload | Event Payload |
-| AuditMetadata | Trace Metadata |
-| AuditSource | Source Service |
-| AuditRetention | Retention Policy |
-| AuditArchive | Archive Information |
-| AuditExport | Export Requests |
+| Aggregate      | Description            |
+| -------------- | ---------------------- |
+| Audit          | Aggregate Root         |
+| AuditEvent     | Business/System Event  |
+| AuditEntry     | Persisted Audit Record |
+| AuditPayload   | Event Payload          |
+| AuditMetadata  | Trace Metadata         |
+| AuditSource    | Source Service         |
+| AuditRetention | Retention Policy       |
+| AuditArchive   | Archive Information    |
+| AuditExport    | Export Requests        |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
-| Object Storage | Audit Archive |
-| Reporting Service | Compliance Reporting |
-| Monitoring Platform | Operational Monitoring |
+| Dependency          | Purpose                        |
+| ------------------- | ------------------------------ |
+| Platform Foundation | Shared Frameworks              |
+| Gateway             | API Routing                    |
+| Eureka              | Service Discovery              |
+| PostgreSQL          | Persistent Storage             |
+| Kafka               | Event Streaming                |
+| Identity Service    | Authentication & Authorization |
+| Object Storage      | Audit Archive                  |
+| Reporting Service   | Compliance Reporting           |
+| Monitoring Platform | Operational Monitoring         |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Audit Service Software Requirements Specification |
+| Version | Description                                               |
+| ------- | --------------------------------------------------------- |
+| v1.0.0  | Initial Audit Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
 # End of Document
-
-
-
-
-

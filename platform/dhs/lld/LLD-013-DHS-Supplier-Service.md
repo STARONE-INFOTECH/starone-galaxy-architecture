@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Supplier Service |
-| Document | Low Level Design |
-| Document ID | LLD-013 |
-| Repository | starone-dhs-platform |
-| Module | supplier-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Supplier Service                       |
+| Document    | Low Level Design                       |
+| Document ID | LLD-013                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | supplier-service                       |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -341,16 +341,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Supplier | Supplier Master |
-| Supplier Contact | Contacts |
-| Supplier Address | Addresses |
-| Supplier Bank | Banking Information |
-| Supplier Contract | Commercial Contracts |
-| Supplier Compliance | Regulatory Compliance |
-| Supplier Performance | Performance Metrics |
-| Supplier Timeline | Lifecycle History |
+| Component            | Responsibility        |
+| -------------------- | --------------------- |
+| Supplier             | Supplier Master       |
+| Supplier Contact     | Contacts              |
+| Supplier Address     | Addresses             |
+| Supplier Bank        | Banking Information   |
+| Supplier Contract    | Commercial Contracts  |
+| Supplier Compliance  | Regulatory Compliance |
+| Supplier Performance | Performance Metrics   |
+| Supplier Timeline    | Lifecycle History     |
 
 ---
 
@@ -695,16 +695,16 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| SupplierRepository | Supplier Master |
-| SupplierContactRepository | Contacts |
-| SupplierAddressRepository | Addresses |
-| SupplierBankRepository | Bank Accounts |
-| SupplierContractRepository | Contracts |
-| SupplierComplianceRepository | Compliance |
-| SupplierPerformanceRepository | Performance |
-| SupplierTimelineRepository | Timeline |
+| Repository                    | Responsibility  |
+| ----------------------------- | --------------- |
+| SupplierRepository            | Supplier Master |
+| SupplierContactRepository     | Contacts        |
+| SupplierAddressRepository     | Addresses       |
+| SupplierBankRepository        | Bank Accounts   |
+| SupplierContractRepository    | Contracts       |
+| SupplierComplianceRepository  | Compliance      |
+| SupplierPerformanceRepository | Performance     |
+| SupplierTimelineRepository    | Timeline        |
 
 ---
 
@@ -748,17 +748,17 @@ dto.response
 
 ## SupplierResponse
 
-| Field | Type |
-|---------|------|
-| supplierId | UUID |
-| supplierCode | String |
-| supplierName | String |
-| supplierType | SupplierType |
-| supplierStatus | SupplierStatus |
-| taxRegistrationNumber | String |
-| email | String |
-| phoneNumber | String |
-| onboardingDate | LocalDate |
+| Field                 | Type           |
+| --------------------- | -------------- |
+| supplierId            | UUID           |
+| supplierCode          | String         |
+| supplierName          | String         |
+| supplierType          | SupplierType   |
+| supplierStatus        | SupplierStatus |
+| taxRegistrationNumber | String         |
+| email                 | String         |
+| phoneNumber           | String         |
+| onboardingDate        | LocalDate      |
 
 ---
 
@@ -788,116 +788,116 @@ entity
 
 ## Supplier
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierCode | String |
-| supplierName | String |
-| supplierType | SupplierType |
-| supplierStatus | SupplierStatus |
-| taxRegistrationNumber | String |
-| gstNumber | String |
-| panNumber | String |
-| email | String |
-| phoneNumber | String |
-| website | String |
-| onboardingDate | LocalDate |
+| Attribute             | Type           |
+| --------------------- | -------------- |
+| id                    | UUID           |
+| supplierCode          | String         |
+| supplierName          | String         |
+| supplierType          | SupplierType   |
+| supplierStatus        | SupplierStatus |
+| taxRegistrationNumber | String         |
+| gstNumber             | String         |
+| panNumber             | String         |
+| email                 | String         |
+| phoneNumber           | String         |
+| website               | String         |
+| onboardingDate        | LocalDate      |
 
 ---
 
 ## SupplierContact
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| contactName | String |
-| designation | String |
-| email | String |
-| mobileNumber | String |
-| isPrimary | Boolean |
+| Attribute    | Type    |
+| ------------ | ------- |
+| id           | UUID    |
+| supplierId   | UUID    |
+| contactName  | String  |
+| designation  | String  |
+| email        | String  |
+| mobileNumber | String  |
+| isPrimary    | Boolean |
 
 ---
 
 ## SupplierAddress
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| addressType | AddressType |
-| addressLine1 | String |
-| city | String |
-| state | String |
-| country | String |
-| postalCode | String |
-| isDefault | Boolean |
+| Attribute    | Type        |
+| ------------ | ----------- |
+| id           | UUID        |
+| supplierId   | UUID        |
+| addressType  | AddressType |
+| addressLine1 | String      |
+| city         | String      |
+| state        | String      |
+| country      | String      |
+| postalCode   | String      |
+| isDefault    | Boolean     |
 
 ---
 
 ## SupplierBankAccount
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| bankName | String |
-| accountNumber | String |
-| ifscCode | String |
-| accountHolderName | String |
+| Attribute          | Type               |
+| ------------------ | ------------------ |
+| id                 | UUID               |
+| supplierId         | UUID               |
+| bankName           | String             |
+| accountNumber      | String             |
+| ifscCode           | String             |
+| accountHolderName  | String             |
 | verificationStatus | VerificationStatus |
 
 ---
 
 ## SupplierContract
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| contractNumber | String |
-| startDate | LocalDate |
-| endDate | LocalDate |
+| Attribute      | Type           |
+| -------------- | -------------- |
+| id             | UUID           |
+| supplierId     | UUID           |
+| contractNumber | String         |
+| startDate      | LocalDate      |
+| endDate        | LocalDate      |
 | contractStatus | ContractStatus |
 
 ---
 
 ## SupplierCompliance
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| complianceType | ComplianceType |
-| documentReference | String |
-| expiryDate | LocalDate |
-| complianceStatus | ComplianceStatus |
+| Attribute         | Type             |
+| ----------------- | ---------------- |
+| id                | UUID             |
+| supplierId        | UUID             |
+| complianceType    | ComplianceType   |
+| documentReference | String           |
+| expiryDate        | LocalDate        |
+| complianceStatus  | ComplianceStatus |
 
 ---
 
 ## SupplierPerformance
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| qualityScore | BigDecimal |
-| deliveryScore | BigDecimal |
-| serviceScore | BigDecimal |
-| overallScore | BigDecimal |
-| rating | SupplierRating |
+| Attribute     | Type           |
+| ------------- | -------------- |
+| id            | UUID           |
+| supplierId    | UUID           |
+| qualityScore  | BigDecimal     |
+| deliveryScore | BigDecimal     |
+| serviceScore  | BigDecimal     |
+| overallScore  | BigDecimal     |
+| rating        | SupplierRating |
 
 ---
 
 ## SupplierTimeline
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| supplierId | UUID |
-| eventType | String |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| supplierId     | UUID    |
+| eventType      | String  |
 | eventTimestamp | Instant |
-| remarks | String |
+| remarks        | String  |
 
 ---
 
@@ -967,14 +967,14 @@ PerformanceValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| SupplierValidator | Supplier Validation |
-| ContactValidator | Contact Validation |
-| AddressValidator | Address Validation |
-| BankValidator | Bank Validation |
-| ContractValidator | Contract Validation |
-| ComplianceValidator | Compliance Validation |
+| Validator            | Purpose                |
+| -------------------- | ---------------------- |
+| SupplierValidator    | Supplier Validation    |
+| ContactValidator     | Contact Validation     |
+| AddressValidator     | Address Validation     |
+| BankValidator        | Bank Validation        |
+| ContractValidator    | Contract Validation    |
+| ComplianceValidator  | Compliance Validation  |
 | PerformanceValidator | Performance Validation |
 
 ---
@@ -1200,18 +1200,18 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| SUPPLIER_CREATE | Create Supplier |
-| SUPPLIER_UPDATE | Update Supplier |
-| SUPPLIER_VIEW | View Supplier |
-| SUPPLIER_ACTIVATE | Activate Supplier |
-| SUPPLIER_SUSPEND | Suspend Supplier |
-| SUPPLIER_DEACTIVATE | Deactivate Supplier |
-| SUPPLIER_CONTRACT_MANAGE | Manage Contracts |
-| SUPPLIER_COMPLIANCE_MANAGE | Manage Compliance |
-| SUPPLIER_BANK_MANAGE | Manage Bank Accounts |
-| SUPPLIER_PERFORMANCE_VIEW | View Performance |
+| Permission                 | Description          |
+| -------------------------- | -------------------- |
+| SUPPLIER_CREATE            | Create Supplier      |
+| SUPPLIER_UPDATE            | Update Supplier      |
+| SUPPLIER_VIEW              | View Supplier        |
+| SUPPLIER_ACTIVATE          | Activate Supplier    |
+| SUPPLIER_SUSPEND           | Suspend Supplier     |
+| SUPPLIER_DEACTIVATE        | Deactivate Supplier  |
+| SUPPLIER_CONTRACT_MANAGE   | Manage Contracts     |
+| SUPPLIER_COMPLIANCE_MANAGE | Manage Compliance    |
+| SUPPLIER_BANK_MANAGE       | Manage Bank Accounts |
+| SUPPLIER_PERFORMANCE_VIEW  | View Performance     |
 
 ---
 
@@ -1249,16 +1249,12 @@ Supplier Service shall consume authenticated user information from Spring Securi
 
 ```json
 {
-  "sub":"UUID",
-  "username":"supplier.manager",
-  "roles":["SUPPLIER_MANAGER"],
-  "permissions":[
-      "SUPPLIER_CREATE",
-      "SUPPLIER_UPDATE",
-      "SUPPLIER_VIEW"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "supplier.manager",
+  "roles": ["SUPPLIER_MANAGER"],
+  "permissions": ["SUPPLIER_CREATE", "SUPPLIER_UPDATE", "SUPPLIER_VIEW"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1308,18 +1304,18 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Supplier | SUPPLIER_CREATE |
-| Update Supplier | SUPPLIER_UPDATE |
-| View Supplier | SUPPLIER_VIEW |
-| Activate Supplier | SUPPLIER_ACTIVATE |
-| Suspend Supplier | SUPPLIER_SUSPEND |
-| Deactivate Supplier | SUPPLIER_DEACTIVATE |
-| Manage Contracts | SUPPLIER_CONTRACT_MANAGE |
-| Manage Compliance | SUPPLIER_COMPLIANCE_MANAGE |
-| Manage Bank Accounts | SUPPLIER_BANK_MANAGE |
-| View Performance | SUPPLIER_PERFORMANCE_VIEW |
+| API                  | Permission                 |
+| -------------------- | -------------------------- |
+| Create Supplier      | SUPPLIER_CREATE            |
+| Update Supplier      | SUPPLIER_UPDATE            |
+| View Supplier        | SUPPLIER_VIEW              |
+| Activate Supplier    | SUPPLIER_ACTIVATE          |
+| Suspend Supplier     | SUPPLIER_SUSPEND           |
+| Deactivate Supplier  | SUPPLIER_DEACTIVATE        |
+| Manage Contracts     | SUPPLIER_CONTRACT_MANAGE   |
+| Manage Compliance    | SUPPLIER_COMPLIANCE_MANAGE |
+| Manage Bank Accounts | SUPPLIER_BANK_MANAGE       |
+| View Performance     | SUPPLIER_PERFORMANCE_VIEW  |
 
 ---
 
@@ -1389,12 +1385,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"SupplierCreated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "SupplierCreated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1422,13 +1418,13 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| IdentityClient | User Validation |
-| ProcurementClient | Procurement Reference Validation |
-| NotificationClient | Supplier Notifications |
-| AuditClient | Audit Submission |
-| DocumentServiceClient | Compliance Document Storage |
+| Client                | Responsibility                   |
+| --------------------- | -------------------------------- |
+| IdentityClient        | User Validation                  |
+| ProcurementClient     | Procurement Reference Validation |
+| NotificationClient    | Supplier Notifications           |
+| AuditClient           | Audit Submission                 |
+| DocumentServiceClient | Compliance Document Storage      |
 
 ---
 
@@ -1452,16 +1448,16 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Contract & Compliance Monitoring |
-| Metrics | Micrometer |
-| OpenAPI | Swagger |
+| Configuration | Responsibility                   |
+| ------------- | -------------------------------- |
+| Security      | Spring Security                  |
+| Kafka         | Kafka Infrastructure             |
+| Feign         | OpenFeign                        |
+| Cache         | Redis                            |
+| Validation    | Bean Validation                  |
+| Scheduler     | Contract & Compliance Monitoring |
+| Metrics       | Micrometer                       |
+| OpenAPI       | Swagger                          |
 
 ---
 
@@ -1475,15 +1471,15 @@ Supplier master synchronization shall occur through Kafka events.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Create Supplier | REQUIRED |
-| Update Supplier | REQUIRED |
-| Activate Supplier | REQUIRED |
-| Manage Contract | REQUIRED |
-| Manage Compliance | REQUIRED |
-| Verify Bank Account | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation           | Propagation  |
+| ------------------- | ------------ |
+| Create Supplier     | REQUIRED     |
+| Update Supplier     | REQUIRED     |
+| Activate Supplier   | REQUIRED     |
+| Manage Contract     | REQUIRED     |
+| Manage Compliance   | REQUIRED     |
+| Verify Bank Account | REQUIRED     |
+| Publish Event       | AFTER_COMMIT |
 
 ---
 
@@ -1618,26 +1614,26 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Procurement Service | Supplier Validation |
+| Service              | Purpose                |
+| -------------------- | ---------------------- |
+| Procurement Service  | Supplier Validation    |
 | Notification Service | Supplier Notifications |
-| Audit Service | Audit Logging |
-| Reporting Service | Supplier Analytics |
-| Identity Service | User Validation |
-| Document Service | Compliance Documents |
+| Audit Service        | Audit Logging          |
+| Reporting Service    | Supplier Analytics     |
+| Identity Service     | User Validation        |
+| Document Service     | Compliance Documents   |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| supplier.cache.enabled | true |
-| supplier.cache.ttl | 3600 |
-| supplier.contract.alert.days | 30 |
-| supplier.compliance.alert.days | 30 |
-| supplier.kafka.retry | 3 |
+| Property                       | Default |
+| ------------------------------ | ------- |
+| supplier.cache.enabled         | true    |
+| supplier.cache.ttl             | 3600    |
+| supplier.contract.alert.days   | 30      |
+| supplier.compliance.alert.days | 30      |
+| supplier.kafka.retry           | 3       |
 
 ---
 
@@ -1676,23 +1672,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1734,13 +1730,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Business Errors |
-| ERROR | System Failures |
+| Level | Purpose                     |
+| ----- | --------------------------- |
+| TRACE | Framework Diagnostics       |
+| DEBUG | Development                 |
+| INFO  | Business Events             |
+| WARN  | Recoverable Business Errors |
+| ERROR | System Failures             |
 
 ---
 
@@ -2193,15 +2189,15 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
 | Supplier Lifecycle Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2267,35 +2263,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Supplier Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Supplier Audit |
+| Layer      | Responsibility          |
+| ---------- | ----------------------- |
+| Controller | Request Handling        |
+| Service    | Supplier Business Logic |
+| Repository | Persistence             |
+| Kafka      | Event Publishing        |
+| Mapper     | DTO Conversion          |
+| Validation | Request Validation      |
+| Audit      | Supplier Audit          |
 
 ---
 
@@ -2403,12 +2399,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Supplier Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Supplier Service Implementation                 |
 
 ---
 

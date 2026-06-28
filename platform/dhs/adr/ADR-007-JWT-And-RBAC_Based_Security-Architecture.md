@@ -22,26 +22,26 @@ The Distributed Hub and Sales (DHS) Platform follows a Cloud-Native Monorepo-Bas
 
 The platform manages sensitive business information including:
 
-* Customer information
-* Product catalogs
-* Inventory information
-* Orders
-* Invoices
-* Shipment information
-* Operational reports
-* Audit records
+- Customer information
+- Product catalogs
+- Inventory information
+- Orders
+- Invoices
+- Shipment information
+- Operational reports
+- Audit records
 
 The system requires:
 
-* Secure authentication
-* Fine-grained authorization
-* Multi-role access control
-* Secure APIs
-* Secure service-to-service communication
-* Comprehensive auditing
-* Independent deployments
-* Cloud-native compatibility
-* Observability and traceability
+- Secure authentication
+- Fine-grained authorization
+- Multi-role access control
+- Secure APIs
+- Secure service-to-service communication
+- Comprehensive auditing
+- Independent deployments
+- Cloud-native compatibility
+- Observability and traceability
 
 ---
 
@@ -49,33 +49,33 @@ The system requires:
 
 ## Business Drivers
 
-* Protect business data
-* Prevent unauthorized access
-* Meet compliance requirements
-* Ensure auditability
-* Support multiple business roles
+- Protect business data
+- Prevent unauthorized access
+- Meet compliance requirements
+- Ensure auditability
+- Support multiple business roles
 
 ---
 
 ## Technical Drivers
 
-* Stateless authentication
-* Horizontal scalability
-* Low latency authorization
-* API security
-* Service isolation
-* Independent deployments
-* Cloud-native compatibility
+- Stateless authentication
+- Horizontal scalability
+- Low latency authorization
+- API security
+- Service isolation
+- Independent deployments
+- Cloud-native compatibility
 
 ---
 
 ## Operational Drivers
 
-* Centralized identity management
-* Simplified administration
-* Easier user management
-* Better observability
-* Reduced operational risks
+- Centralized identity management
+- Simplified administration
+- Easier user management
+- Better observability
+- Reduced operational risks
 
 ---
 
@@ -91,15 +91,15 @@ Server-side sessions stored in memory or databases.
 
 ### Advantages
 
-* Easy implementation
-* Simple invalidation
+- Easy implementation
+- Simple invalidation
 
 ### Disadvantages
 
-* Stateful architecture
-* Poor horizontal scalability
-* Increased server memory usage
-* Complex distributed deployments
+- Stateful architecture
+- Poor horizontal scalability
+- Increased server memory usage
+- Complex distributed deployments
 
 ---
 
@@ -111,16 +111,16 @@ Authentication delegated to an external identity platform.
 
 ### Advantages
 
-* Enterprise-grade identity management
-* Single Sign-On support
-* Federation support
+- Enterprise-grade identity management
+- Single Sign-On support
+- Federation support
 
 ### Disadvantages
 
-* Additional infrastructure
-* Increased complexity
-* Higher operational overhead
-* Premature for current requirements
+- Additional infrastructure
+- Increased complexity
+- Higher operational overhead
+- Premature for current requirements
 
 ---
 
@@ -132,19 +132,19 @@ Stateless authentication using JWT tokens combined with Role-Based Access Contro
 
 ### Advantages
 
-* Stateless
-* Scalable
-* Cloud-native
-* Low latency
-* Fine-grained authorization
-* Easy service integration
-* Independent deployments
+- Stateless
+- Scalable
+- Cloud-native
+- Low latency
+- Fine-grained authorization
+- Easy service integration
+- Independent deployments
 
 ### Disadvantages
 
-* Token invalidation complexity
-* Secret management requirements
-* Authorization governance requirements
+- Token invalidation complexity
+- Secret management requirements
+- Authorization governance requirements
 
 ---
 
@@ -234,10 +234,10 @@ API Gateway-->>User: JWT Access Token
 
 ## Access Token Purpose
 
-* Authenticate requests
-* Carry identity information
-* Carry authorization information
-* Propagate user context
+- Authenticate requests
+- Carry identity information
+- Carry authorization information
+- Propagate user context
 
 ---
 
@@ -248,13 +248,8 @@ API Gateway-->>User: JWT Access Token
   "sub": "userId",
   "username": "john.doe",
   "branchId": "BR001",
-  "roles": [
-    "ROLE_BRANCH_MANAGER"
-  ],
-  "permissions": [
-    "ORDER_CREATE",
-    "ORDER_VIEW"
-  ],
+  "roles": ["ROLE_BRANCH_MANAGER"],
+  "permissions": ["ORDER_CREATE", "ORDER_VIEW"],
   "iat": 1718790000,
   "exp": 1718793600
 }
@@ -298,76 +293,76 @@ Resources
 
 ## Super Admin
 
-* Full platform access
-* User management
-* Role management
-* Security administration
-* Audit access
+- Full platform access
+- User management
+- Role management
+- Security administration
+- Audit access
 
 ---
 
 ## Company Admin
 
-* Company administration
-* Branch oversight
-* Reporting access
+- Company administration
+- Branch oversight
+- Reporting access
 
 ---
 
 ## Hub Manager
 
-* Inventory management
-* Billing oversight
-* Dispatch management
-* Reporting access
+- Inventory management
+- Billing oversight
+- Dispatch management
+- Reporting access
 
 ---
 
 ## Branch Manager
 
-* Branch operations
-* Order management
-* Customer management
-* Reporting access
+- Branch operations
+- Order management
+- Customer management
+- Reporting access
 
 ---
 
 ## Sales Executive
 
-* Customer management
-* Order creation
-* Order tracking
+- Customer management
+- Order creation
+- Order tracking
 
 ---
 
 ## Inventory Operator
 
-* Inventory operations
-* Stock adjustments
-* Barcode management
+- Inventory operations
+- Stock adjustments
+- Barcode management
 
 ---
 
 ## Billing Executive
 
-* Invoice generation
-* Partial billing
-* Invoice management
+- Invoice generation
+- Partial billing
+- Invoice management
 
 ---
 
 ## Dispatch Executive
 
-* Shipment processing
-* Delivery management
+- Shipment processing
+- Delivery management
 
 ---
 
 ## Customer
 
-* View own orders
-* View shipment status
-* Receive notifications
+- View own orders
+- View shipment status
+- Receive notifications
 
 ---
 
@@ -478,11 +473,11 @@ POST /api/shipments
 
 Business services shall communicate using:
 
-* TLS 1.3
-* JWT propagation
-* Service identity validation
-* Correlation IDs
-* Audit logging
+- TLS 1.3
+- JWT propagation
+- Service identity validation
+- Correlation IDs
+- Audit logging
 
 ---
 
@@ -490,17 +485,17 @@ Business services shall communicate using:
 
 ## Data in Transit
 
-* HTTPS
-* TLS 1.3
-* Secure Headers
+- HTTPS
+- TLS 1.3
+- Secure Headers
 
 ---
 
 ## Data at Rest
 
-* Database encryption
-* Backup encryption
-* Secret encryption
+- Database encryption
+- Backup encryption
+- Secret encryption
 
 ---
 
@@ -520,16 +515,16 @@ Encryption Keys
 
 The platform shall audit:
 
-* User login
-* Failed authentication attempts
-* User creation
-* Role assignments
-* Permission changes
-* Order creation
-* Billing operations
-* Dispatch operations
-* Security violations
-* Service authentication failures
+- User login
+- Failed authentication attempts
+- User creation
+- Role assignments
+- Permission changes
+- Order creation
+- Billing operations
+- Dispatch operations
+- Security violations
+- Service authentication failures
 
 ---
 
@@ -590,16 +585,16 @@ Sensitive data shall never be exposed in logs.
 
 Authentication Failures:
 
-* Invalid credentials
-* Expired tokens
-* Invalid signatures
-* Disabled users
+- Invalid credentials
+- Expired tokens
+- Invalid signatures
+- Disabled users
 
 Authorization Failures:
 
-* Missing permissions
-* Role restrictions
-* Resource ownership violations
+- Missing permissions
+- Role restrictions
+- Resource ownership violations
 
 Responses:
 
@@ -614,14 +609,14 @@ Responses:
 
 Monitor:
 
-* Login attempts
-* Authentication failures
-* Authorization failures
-* Token issuance
-* Token refreshes
-* Security violations
-* Suspicious activities
-* Service authentication failures
+- Login attempts
+- Authentication failures
+- Authorization failures
+- Token issuance
+- Token refreshes
+- Security violations
+- Suspicious activities
+- Service authentication failures
 
 Technology:
 
@@ -642,19 +637,19 @@ Audit Events
 
 ## Positive Consequences
 
-* Stateless authentication
-* Fine-grained authorization
-* Independent deployments
-* Better observability
-* Improved auditability
-* Cloud-native compatibility
-* Future SSO readiness
+- Stateless authentication
+- Fine-grained authorization
+- Independent deployments
+- Better observability
+- Improved auditability
+- Cloud-native compatibility
+- Future SSO readiness
 
 ## Negative Consequences
 
-* Token invalidation complexity
-* Secret management requirements
-* Additional authorization governance
+- Token invalidation complexity
+- Secret management requirements
+- Additional authorization governance
 
 ---
 
@@ -680,15 +675,15 @@ authentication, and comprehensive audit logging.
 
 # 21. Related Documents
 
-* BRD-001
-* PRD-001
-* SRS-001
-* HLD-001
-* ADR-001 Monorepo-Based Multi-Module Microservices Architecture
-* ADR-002 Database per Service Strategy
-* ADR-003 Hybrid Communication Architecture
-* ADR-004 Service Discovery Architecture
-* ADR-005 API Gateway Strategy
-* ADR-006 Saga-Based Distributed Transaction Strategy
+- BRD-001
+- PRD-001
+- SRS-001
+- HLD-001
+- ADR-001 Monorepo-Based Multi-Module Microservices Architecture
+- ADR-002 Database per Service Strategy
+- ADR-003 Hybrid Communication Architecture
+- ADR-004 Service Discovery Architecture
+- ADR-005 API Gateway Strategy
+- ADR-006 Saga-Based Distributed Transaction Strategy
 
 ---

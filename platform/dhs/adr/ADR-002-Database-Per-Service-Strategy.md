@@ -22,29 +22,29 @@ The Distributed Hub and Sales (DHS) Platform follows a Cloud-Native Monorepo-Bas
 
 The platform consists of the following services:
 
-* Identity Service
-* Branch Service
-* Customer Service
-* Product Service
-* Inventory Service
-* Order Service
-* Billing Service
-* Dispatch Service
-* Notification Service
-* Reporting Service
-* Audit Service
+- Identity Service
+- Branch Service
+- Customer Service
+- Product Service
+- Inventory Service
+- Order Service
+- Billing Service
+- Dispatch Service
+- Notification Service
+- Reporting Service
+- Audit Service
 
 The platform requires:
 
-* Clear domain ownership
-* Data isolation
-* Service autonomy
-* Independent deployment
-* Independent schema evolution
-* Reduced coupling
-* High maintainability
-* Event-driven communication
-* Future scalability
+- Clear domain ownership
+- Data isolation
+- Service autonomy
+- Independent deployment
+- Independent schema evolution
+- Reduced coupling
+- High maintainability
+- Event-driven communication
+- Future scalability
 
 A database strategy is required that preserves service boundaries and prevents services from directly manipulating data owned by other services.
 
@@ -54,36 +54,36 @@ A database strategy is required that preserves service boundaries and prevents s
 
 ## Business Drivers
 
-* Single source of truth
-* High maintainability
-* Business domain ownership
-* Future scalability
-* Lower operational risks
-* Independent service evolution
+- Single source of truth
+- High maintainability
+- Business domain ownership
+- Future scalability
+- Lower operational risks
+- Independent service evolution
 
 ---
 
 ## Technical Drivers
 
-* Service isolation
-* Loose coupling
-* Independent deployment
-* Service autonomy
-* Independent schema evolution
-* Event-driven integration
-* Auditability
-* Data ownership
+- Service isolation
+- Loose coupling
+- Independent deployment
+- Service autonomy
+- Independent schema evolution
+- Event-driven integration
+- Auditability
+- Data ownership
 
 ---
 
 ## Operational Drivers
 
-* Easier maintenance
-* Easier troubleshooting
-* Reduced data corruption risks
-* Independent deployments
-* Better observability
-* Service resilience
+- Easier maintenance
+- Easier troubleshooting
+- Reduced data corruption risks
+- Independent deployments
+- Better observability
+- Service resilience
 
 ---
 
@@ -99,18 +99,18 @@ All services share the same schema and directly access each other's tables.
 
 ### Advantages
 
-* Simple initial implementation
-* Easier reporting queries
-* Lower initial design effort
+- Simple initial implementation
+- Easier reporting queries
+- Lower initial design effort
 
 ### Disadvantages
 
-* Tight coupling
-* Data ownership violations
-* Difficult schema evolution
-* Independent deployments become difficult
-* High regression risks
-* Service autonomy violations
+- Tight coupling
+- Data ownership violations
+- Difficult schema evolution
+- Independent deployments become difficult
+- High regression risks
+- Service autonomy violations
 
 ---
 
@@ -122,17 +122,17 @@ All services use a single PostgreSQL cluster with logically separated schemas.
 
 ### Advantages
 
-* Lower infrastructure cost
-* Logical separation
-* Easier administration
+- Lower infrastructure cost
+- Logical separation
+- Easier administration
 
 ### Disadvantages
 
-* Shared infrastructure dependency
-* Potential ownership violations
-* Reduced service isolation
-* Infrastructure coupling
-* Independent database scaling limitations
+- Shared infrastructure dependency
+- Potential ownership violations
+- Reduced service isolation
+- Infrastructure coupling
+- Independent database scaling limitations
 
 ---
 
@@ -144,21 +144,21 @@ Each business service owns its own database and exclusively manages its data.
 
 ### Advantages
 
-* Strong service isolation
-* Independent deployments
-* Independent scalability
-* Service autonomy
-* Clear ownership boundaries
-* Independent schema evolution
-* Better resilience
-* Better fault isolation
+- Strong service isolation
+- Independent deployments
+- Independent scalability
+- Service autonomy
+- Clear ownership boundaries
+- Independent schema evolution
+- Better resilience
+- Better fault isolation
 
 ### Disadvantages
 
-* Distributed transactions
-* Operational complexity
-* Increased infrastructure requirements
-* More complex reporting
+- Distributed transactions
+- Operational complexity
+- Increased infrastructure requirements
+- More complex reporting
 
 ---
 
@@ -244,10 +244,10 @@ Services shall never directly query or update another service's database.
 
 Cross-service interactions shall occur through:
 
-* REST APIs
-* OpenFeign clients
-* Domain events
-* Public service contracts
+- REST APIs
+- OpenFeign clients
+- Domain events
+- Public service contracts
 
 ---
 
@@ -444,10 +444,10 @@ ACID Transactions
 
 Characteristics:
 
-* Strong consistency
-* Single transaction boundary
-* Immediate commits
-* Rollback support
+- Strong consistency
+- Single transaction boundary
+- Immediate commits
+- Rollback support
 
 ---
 
@@ -463,10 +463,10 @@ Compensating Actions
 
 Characteristics:
 
-* Loose coupling
-* Independent processing
-* Failure recovery
-* Service autonomy
+- Loose coupling
+- Independent processing
+- Failure recovery
+- Service autonomy
 
 ---
 
@@ -476,10 +476,10 @@ Characteristics:
 
 Used For:
 
-* Authentication
-* Validation
-* Master Data Queries
-* Search Operations
+- Authentication
+- Validation
+- Master Data Queries
+- Search Operations
 
 Technology:
 
@@ -494,13 +494,13 @@ OpenFeign
 
 Used For:
 
-* Order Events
-* Inventory Events
-* Billing Events
-* Dispatch Events
-* Notifications
-* Reporting Projections
-* Audit Events
+- Order Events
+- Inventory Events
+- Billing Events
+- Dispatch Events
+- Notifications
+- Reporting Projections
+- Audit Events
 
 Technology:
 
@@ -515,29 +515,29 @@ Domain Events
 
 ## Advantages
 
-* Controlled data access
-* Easier auditing
-* Clear ownership boundaries
-* Reduced accidental data corruption
-* Better fault isolation
+- Controlled data access
+- Easier auditing
+- Clear ownership boundaries
+- Reduced accidental data corruption
+- Better fault isolation
 
 ---
 
 ## Risks
 
-* Distributed transaction complexity
-* Infrastructure overhead
-* Data synchronization complexity
+- Distributed transaction complexity
+- Infrastructure overhead
+- Data synchronization complexity
 
 ---
 
 ## Mitigations
 
-* Saga pattern
-* Compensating transactions
-* Event-driven synchronization
-* Service contracts
-* Automated integration tests
+- Saga pattern
+- Compensating transactions
+- Event-driven synchronization
+- Service contracts
+- Automated integration tests
 
 ---
 
@@ -545,9 +545,9 @@ Domain Events
 
 ## Backup Strategy
 
-* Daily backups
-* Point-in-time recovery
-* Service-level restoration procedures
+- Daily backups
+- Point-in-time recovery
+- Service-level restoration procedures
 
 ---
 
@@ -555,23 +555,23 @@ Domain Events
 
 Monitor:
 
-* Database health
-* Connection pools
-* Query performance
-* Storage utilization
-* Replication health
-* Migration status
+- Database health
+- Connection pools
+- Query performance
+- Storage utilization
+- Replication health
+- Migration status
 
 ---
 
 ## Performance Strategy
 
-* Service-level indexing
-* Redis caching
-* Query optimization
-* Connection pooling
-* Read models
-* Projections
+- Service-level indexing
+- Redis caching
+- Query optimization
+- Connection pooling
+- Read models
+- Projections
 
 ---
 
@@ -579,22 +579,22 @@ Monitor:
 
 ## Positive Consequences
 
-* Strong service ownership
-* Reduced coupling
-* Independent deployments
-* Easier maintenance
-* Easier debugging
-* Better resilience
-* Better scalability
-* Improved governance
+- Strong service ownership
+- Reduced coupling
+- Independent deployments
+- Easier maintenance
+- Easier debugging
+- Better resilience
+- Better scalability
+- Improved governance
 
 ---
 
 ## Negative Consequences
 
-* Distributed transaction complexity
-* Increased operational overhead
-* More complex reporting requirements
+- Distributed transaction complexity
+- Increased operational overhead
+- More complex reporting requirements
 
 ---
 
@@ -620,14 +620,14 @@ APIs and events.
 
 # 17. Related Documents
 
-* BRD-001
-* PRD-001
-* SRS-001
-* HLD-001
-* ADR-001 Monorepo-Based Multi-Module Microservices Architecture
-* ADR-003 Communication Strategy
-* ADR-004 Service Discovery Strategy
-* ADR-005 API Gateway Strategy
-* ADR-006 Distributed Transaction Strategy
+- BRD-001
+- PRD-001
+- SRS-001
+- HLD-001
+- ADR-001 Monorepo-Based Multi-Module Microservices Architecture
+- ADR-003 Communication Strategy
+- ADR-004 Service Discovery Strategy
+- ADR-005 API Gateway Strategy
+- ADR-006 Distributed Transaction Strategy
 
 ---

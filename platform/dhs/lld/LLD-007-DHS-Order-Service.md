@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Order Service |
-| Document | Low Level Design |
-| Document ID | LLD-007 |
-| Repository | starone-dhs-platform |
-| Module | order-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Order Service                          |
+| Document    | Low Level Design                       |
+| Document ID | LLD-007                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | order-service                          |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -363,16 +363,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Order | Sales Order |
-| Order Line | Ordered Products |
-| Pricing Snapshot | Price Lock |
-| Discount | Discount Snapshot |
-| Tax | Tax Snapshot |
-| Approval | Approval Workflow |
-| Timeline | Order History |
-| Saga | Distributed Transaction |
+| Component        | Responsibility          |
+| ---------------- | ----------------------- |
+| Order            | Sales Order             |
+| Order Line       | Ordered Products        |
+| Pricing Snapshot | Price Lock              |
+| Discount         | Discount Snapshot       |
+| Tax              | Tax Snapshot            |
+| Approval         | Approval Workflow       |
+| Timeline         | Order History           |
+| Saga             | Distributed Transaction |
 
 ---
 
@@ -679,15 +679,15 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| OrderRepository | Order Master |
-| OrderLineRepository | Order Lines |
-| OrderPricingRepository | Pricing Snapshot |
+| Repository              | Responsibility    |
+| ----------------------- | ----------------- |
+| OrderRepository         | Order Master      |
+| OrderLineRepository     | Order Lines       |
+| OrderPricingRepository  | Pricing Snapshot  |
 | OrderApprovalRepository | Approval Workflow |
-| OrderTimelineRepository | Timeline |
+| OrderTimelineRepository | Timeline          |
 | OrderDiscountRepository | Discount Snapshot |
-| OrderTaxRepository | Tax Snapshot |
+| OrderTaxRepository      | Tax Snapshot      |
 
 ---
 
@@ -729,17 +729,17 @@ dto.response
 
 ## OrderResponse
 
-| Field | Type |
-|---------|------|
-| orderId | UUID |
-| orderNumber | String |
-| customerId | UUID |
-| branchId | UUID |
-| orderStatus | OrderStatus |
-| subtotal | BigDecimal |
-| discountAmount | BigDecimal |
-| taxAmount | BigDecimal |
-| totalAmount | BigDecimal |
+| Field          | Type        |
+| -------------- | ----------- |
+| orderId        | UUID        |
+| orderNumber    | String      |
+| customerId     | UUID        |
+| branchId       | UUID        |
+| orderStatus    | OrderStatus |
+| subtotal       | BigDecimal  |
+| discountAmount | BigDecimal  |
+| taxAmount      | BigDecimal  |
+| totalAmount    | BigDecimal  |
 
 ---
 
@@ -769,97 +769,97 @@ entity
 
 ## Order
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderNumber | String |
-| customerId | UUID |
-| branchId | UUID |
-| orderDate | Instant |
-| orderStatus | OrderStatus |
-| currency | String |
-| subtotal | BigDecimal |
-| discountAmount | BigDecimal |
-| taxAmount | BigDecimal |
-| totalAmount | BigDecimal |
+| Attribute      | Type        |
+| -------------- | ----------- |
+| id             | UUID        |
+| orderNumber    | String      |
+| customerId     | UUID        |
+| branchId       | UUID        |
+| orderDate      | Instant     |
+| orderStatus    | OrderStatus |
+| currency       | String      |
+| subtotal       | BigDecimal  |
+| discountAmount | BigDecimal  |
+| taxAmount      | BigDecimal  |
+| totalAmount    | BigDecimal  |
 
 ---
 
 ## OrderLine
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| productId | UUID |
-| quantity | BigDecimal |
+| Attribute        | Type       |
+| ---------------- | ---------- |
+| id               | UUID       |
+| orderId          | UUID       |
+| productId        | UUID       |
+| quantity         | BigDecimal |
 | reservedQuantity | BigDecimal |
-| unitPrice | BigDecimal |
-| discountAmount | BigDecimal |
-| taxAmount | BigDecimal |
-| lineTotal | BigDecimal |
+| unitPrice        | BigDecimal |
+| discountAmount   | BigDecimal |
+| taxAmount        | BigDecimal |
+| lineTotal        | BigDecimal |
 
 ---
 
 ## OrderPricingSnapshot
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| pricingVersion | String |
-| subtotal | BigDecimal |
+| Attribute      | Type       |
+| -------------- | ---------- |
+| id             | UUID       |
+| orderId        | UUID       |
+| pricingVersion | String     |
+| subtotal       | BigDecimal |
 | discountAmount | BigDecimal |
-| taxAmount | BigDecimal |
-| totalAmount | BigDecimal |
+| taxAmount      | BigDecimal |
+| totalAmount    | BigDecimal |
 
 ---
 
 ## OrderApproval
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| approvalLevel | Integer |
-| approverId | UUID |
+| Attribute      | Type           |
+| -------------- | -------------- |
+| id             | UUID           |
+| orderId        | UUID           |
+| approvalLevel  | Integer        |
+| approverId     | UUID           |
 | approvalStatus | ApprovalStatus |
-| approvedAt | Instant |
+| approvedAt     | Instant        |
 
 ---
 
 ## OrderTimeline
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| eventType | String |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| orderId        | UUID    |
+| eventType      | String  |
 | eventTimestamp | Instant |
-| remarks | String |
+| remarks        | String  |
 
 ---
 
 ## OrderDiscount
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| discountType | DiscountType |
-| discountPercentage | BigDecimal |
-| discountAmount | BigDecimal |
+| Attribute          | Type         |
+| ------------------ | ------------ |
+| id                 | UUID         |
+| orderId            | UUID         |
+| discountType       | DiscountType |
+| discountPercentage | BigDecimal   |
+| discountAmount     | BigDecimal   |
 
 ---
 
 ## OrderTax
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| orderId | UUID |
-| taxCode | String |
-| taxRate | BigDecimal |
+| Attribute | Type       |
+| --------- | ---------- |
+| id        | UUID       |
+| orderId   | UUID       |
+| taxCode   | String     |
+| taxRate   | BigDecimal |
 | taxAmount | BigDecimal |
 
 ---
@@ -927,14 +927,14 @@ CancellationValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| OrderValidator | Order Integrity |
-| OrderLineValidator | Product & Quantity Validation |
-| PricingValidator | Pricing Validation |
-| ReservationValidator | Inventory Reservation Validation |
-| ApprovalValidator | Approval Rules |
-| CancellationValidator | Cancellation Rules |
+| Validator             | Purpose                          |
+| --------------------- | -------------------------------- |
+| OrderValidator        | Order Integrity                  |
+| OrderLineValidator    | Product & Quantity Validation    |
+| PricingValidator      | Pricing Validation               |
+| ReservationValidator  | Inventory Reservation Validation |
+| ApprovalValidator     | Approval Rules                   |
+| CancellationValidator | Cancellation Rules               |
 
 ---
 
@@ -1182,16 +1182,16 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| ORDER_CREATE | Create Order |
-| ORDER_UPDATE | Update Order |
-| ORDER_CONFIRM | Confirm Order |
-| ORDER_CANCEL | Cancel Order |
-| ORDER_APPROVE | Approve Order |
-| ORDER_VIEW | View Order |
-| ORDER_SEARCH | Search Orders |
-| ORDER_FULFILL | Fulfill Order |
+| Permission          | Description   |
+| ------------------- | ------------- |
+| ORDER_CREATE        | Create Order  |
+| ORDER_UPDATE        | Update Order  |
+| ORDER_CONFIRM       | Confirm Order |
+| ORDER_CANCEL        | Cancel Order  |
+| ORDER_APPROVE       | Approve Order |
+| ORDER_VIEW          | View Order    |
+| ORDER_SEARCH        | Search Orders |
+| ORDER_FULFILL       | Fulfill Order |
 | ORDER_TIMELINE_VIEW | View Timeline |
 
 ---
@@ -1230,16 +1230,12 @@ Order Service shall consume authenticated user context from Spring Security.
 
 ```json
 {
-  "sub":"UUID",
-  "username":"sales.executive",
-  "roles":["SALES_EXECUTIVE"],
-  "permissions":[
-      "ORDER_CREATE",
-      "ORDER_VIEW",
-      "ORDER_CONFIRM"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "sales.executive",
+  "roles": ["SALES_EXECUTIVE"],
+  "permissions": ["ORDER_CREATE", "ORDER_VIEW", "ORDER_CONFIRM"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1289,16 +1285,16 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Order | ORDER_CREATE |
-| Update Order | ORDER_UPDATE |
-| Confirm Order | ORDER_CONFIRM |
-| Cancel Order | ORDER_CANCEL |
-| Approve Order | ORDER_APPROVE |
-| View Order | ORDER_VIEW |
-| Search Orders | ORDER_SEARCH |
-| Fulfill Order | ORDER_FULFILL |
+| API           | Permission          |
+| ------------- | ------------------- |
+| Create Order  | ORDER_CREATE        |
+| Update Order  | ORDER_UPDATE        |
+| Confirm Order | ORDER_CONFIRM       |
+| Cancel Order  | ORDER_CANCEL        |
+| Approve Order | ORDER_APPROVE       |
+| View Order    | ORDER_VIEW          |
+| Search Orders | ORDER_SEARCH        |
+| Fulfill Order | ORDER_FULFILL       |
 | View Timeline | ORDER_TIMELINE_VIEW |
 
 ---
@@ -1371,12 +1367,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"OrderConfirmed",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "OrderConfirmed",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1407,15 +1403,15 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| CustomerClient | Customer Validation |
-| ProductClient | Product Validation |
-| InventoryClient | Inventory Availability |
-| PricingClient | Price Calculation |
-| BranchClient | Branch Validation |
-| BillingClient | Billing Validation |
-| AuditClient | Audit Submission |
+| Client             | Responsibility         |
+| ------------------ | ---------------------- |
+| CustomerClient     | Customer Validation    |
+| ProductClient      | Product Validation     |
+| InventoryClient    | Inventory Availability |
+| PricingClient      | Price Calculation      |
+| BranchClient       | Branch Validation      |
+| BillingClient      | Billing Validation     |
+| AuditClient        | Audit Submission       |
 | NotificationClient | Customer Notifications |
 
 ---
@@ -1441,17 +1437,17 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Saga | Saga Configuration |
-| Cache | Redis Cache |
-| Validation | Bean Validation |
-| Scheduler | Background Jobs |
-| Metrics | Micrometer |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Saga          | Saga Configuration   |
+| Cache         | Redis Cache          |
+| Validation    | Bean Validation      |
+| Scheduler     | Background Jobs      |
+| Metrics       | Micrometer           |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1465,15 +1461,15 @@ Distributed transactions shall be coordinated using Saga orchestration.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Create Order | REQUIRED |
-| Update Order | REQUIRED |
-| Confirm Order | REQUIRED |
-| Approval | REQUIRED |
-| Cancellation | REQUIRED |
-| Timeline Update | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation       | Propagation  |
+| --------------- | ------------ |
+| Create Order    | REQUIRED     |
+| Update Order    | REQUIRED     |
+| Confirm Order   | REQUIRED     |
+| Approval        | REQUIRED     |
+| Cancellation    | REQUIRED     |
+| Timeline Update | REQUIRED     |
+| Publish Event   | AFTER_COMMIT |
 
 ---
 
@@ -1634,29 +1630,29 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Customer Service | Customer Validation |
-| Product Service | Product Validation |
-| Inventory Service | Reservation & Availability |
-| Billing Service | Invoice Generation |
-| Dispatch Service | Shipment Creation |
-| Notification Service | Customer Notification |
-| Audit Service | Audit Logging |
-| Reporting Service | Analytics |
+| Service              | Purpose                    |
+| -------------------- | -------------------------- |
+| Customer Service     | Customer Validation        |
+| Product Service      | Product Validation         |
+| Inventory Service    | Reservation & Availability |
+| Billing Service      | Invoice Generation         |
+| Dispatch Service     | Shipment Creation          |
+| Notification Service | Customer Notification      |
+| Audit Service        | Audit Logging              |
+| Reporting Service    | Analytics                  |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| order.cache.enabled | true |
-| order.cache.ttl | 3600 |
-| order.saga.timeout | 5m |
-| order.approval.enabled | true |
-| order.kafka.retry | 3 |
-| order.max.lines | 100 |
+| Property               | Default |
+| ---------------------- | ------- |
+| order.cache.enabled    | true    |
+| order.cache.ttl        | 3600    |
+| order.saga.timeout     | 5m      |
+| order.approval.enabled | true    |
+| order.kafka.retry      | 3       |
+| order.max.lines        | 100     |
 
 ---
 
@@ -1700,24 +1696,24 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Saga | Orchestration Pattern |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Saga              | Orchestration Pattern   |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1759,13 +1755,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Business Errors |
-| ERROR | System Failures |
+| Level | Purpose                     |
+| ----- | --------------------------- |
+| TRACE | Framework Diagnostics       |
+| DEBUG | Development                 |
+| INFO  | Business Events             |
+| WARN  | Recoverable Business Errors |
+| ERROR | System Failures             |
 
 ---
 
@@ -2226,15 +2222,15 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Saga Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Saga Tests               | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2302,36 +2298,36 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Order Business Logic |
-| Saga | Distributed Transaction Orchestration |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Order Audit |
+| Layer      | Responsibility                        |
+| ---------- | ------------------------------------- |
+| Controller | Request Handling                      |
+| Service    | Order Business Logic                  |
+| Saga       | Distributed Transaction Orchestration |
+| Repository | Persistence                           |
+| Kafka      | Event Publishing                      |
+| Mapper     | DTO Conversion                        |
+| Validation | Request Validation                    |
+| Audit      | Order Audit                           |
 
 ---
 
@@ -2435,12 +2431,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Architecture, Standards & Governance |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Order Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Architecture, Standards & Governance |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Order Service Implementation                    |
 
 ---
 

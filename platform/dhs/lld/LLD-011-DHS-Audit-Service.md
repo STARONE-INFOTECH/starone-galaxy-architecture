@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Audit Service |
-| Document | Low Level Design |
-| Document ID | LLD-011 |
-| Repository | starone-dhs-platform |
-| Module | audit-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Audit Service                          |
+| Document    | Low Level Design                       |
+| Document ID | LLD-011                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | audit-service                          |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -325,16 +325,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Audit Record | Immutable Audit Log |
-| Activity Log | User Activities |
-| Entity History | Entity Changes |
-| Security Audit | Security Events |
-| Compliance Report | Audit Reports |
-| Retention | Retention Policies |
-| Audit Event | Kafka Audit Events |
-| Attachment | Supporting Evidence |
+| Component         | Responsibility      |
+| ----------------- | ------------------- |
+| Audit Record      | Immutable Audit Log |
+| Activity Log      | User Activities     |
+| Entity History    | Entity Changes      |
+| Security Audit    | Security Events     |
+| Compliance Report | Audit Reports       |
+| Retention         | Retention Policies  |
+| Audit Event       | Kafka Audit Events  |
+| Attachment        | Supporting Evidence |
 
 ---
 
@@ -621,15 +621,15 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| AuditRepository | Audit Records |
-| ActivityRepository | Activity Logs |
-| EntityHistoryRepository | Entity History |
-| SecurityAuditRepository | Security Audit |
+| Repository               | Responsibility     |
+| ------------------------ | ------------------ |
+| AuditRepository          | Audit Records      |
+| ActivityRepository       | Activity Logs      |
+| EntityHistoryRepository  | Entity History     |
+| SecurityAuditRepository  | Security Audit     |
 | AuditRetentionRepository | Retention Metadata |
-| ComplianceRepository | Compliance Reports |
-| AuditEventRepository | Audit Events |
+| ComplianceRepository     | Compliance Reports |
+| AuditEventRepository     | Audit Events       |
 
 ---
 
@@ -669,16 +669,16 @@ dto.response
 
 ## AuditResponse
 
-| Field | Type |
-|---------|------|
-| auditId | UUID |
-| eventType | String |
-| entityName | String |
-| entityId | UUID |
-| operation | String |
-| performedBy | UUID |
+| Field          | Type    |
+| -------------- | ------- |
+| auditId        | UUID    |
+| eventType      | String  |
+| entityName     | String  |
+| entityId       | UUID    |
+| operation      | String  |
+| performedBy    | UUID    |
 | eventTimestamp | Instant |
-| correlationId | String |
+| correlationId  | String  |
 
 ---
 
@@ -707,90 +707,90 @@ entity
 
 ## AuditRecord
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| eventType | String |
-| entityName | String |
-| entityId | UUID |
-| operation | String |
-| performedBy | UUID |
-| correlationId | String |
+| Attribute      | Type    |
+| -------------- | ------- |
+| id             | UUID    |
+| eventType      | String  |
+| entityName     | String  |
+| entityId       | UUID    |
+| operation      | String  |
+| performedBy    | UUID    |
+| correlationId  | String  |
 | eventTimestamp | Instant |
 
 ---
 
 ## ActivityLog
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| userId | UUID |
-| activityType | String |
-| resourceName | String |
+| Attribute    | Type    |
+| ------------ | ------- |
+| id           | UUID    |
+| userId       | UUID    |
+| activityType | String  |
+| resourceName | String  |
 | activityTime | Instant |
 
 ---
 
 ## EntityHistory
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| entityName | String |
-| entityId | UUID |
-| version | Integer |
-| changeSummary | String |
-| changedAt | Instant |
+| Attribute     | Type    |
+| ------------- | ------- |
+| id            | UUID    |
+| entityName    | String  |
+| entityId      | UUID    |
+| version       | Integer |
+| changeSummary | String  |
+| changedAt     | Instant |
 
 ---
 
 ## SecurityAudit
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| eventType | String |
-| username | String |
-| ipAddress | String |
-| deviceInfo | String |
+| Attribute  | Type    |
+| ---------- | ------- |
+| id         | UUID    |
+| eventType  | String  |
+| username   | String  |
+| ipAddress  | String  |
+| deviceInfo | String  |
 | occurredAt | Instant |
 
 ---
 
 ## AuditRetention
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| retentionPolicy | String |
+| Attribute       | Type    |
+| --------------- | ------- |
+| id              | UUID    |
+| retentionPolicy | String  |
 | retentionPeriod | Integer |
-| archiveDate | Instant |
-| purgeDate | Instant |
+| archiveDate     | Instant |
+| purgeDate       | Instant |
 
 ---
 
 ## ComplianceReport
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportName | String |
-| generatedBy | UUID |
-| generatedAt | Instant |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| reportName   | String       |
+| generatedBy  | UUID         |
+| generatedAt  | Instant      |
 | reportStatus | ReportStatus |
 
 ---
 
 ## AuditEvent
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| sourceService | String |
-| eventType | String |
-| payloadReference | String |
-| receivedAt | Instant |
+| Attribute        | Type    |
+| ---------------- | ------- |
+| id               | UUID    |
+| sourceService    | String  |
+| eventType        | String  |
+| payloadReference | String  |
+| receivedAt       | Instant |
 
 ---
 
@@ -857,14 +857,14 @@ RetentionValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| AuditValidator | Audit Validation |
-| ActivityValidator | Activity Validation |
-| EntityHistoryValidator | History Validation |
-| SecurityAuditValidator | Security Validation |
-| ComplianceValidator | Compliance Validation |
-| RetentionValidator | Retention Policy Validation |
+| Validator              | Purpose                     |
+| ---------------------- | --------------------------- |
+| AuditValidator         | Audit Validation            |
+| ActivityValidator      | Activity Validation         |
+| EntityHistoryValidator | History Validation          |
+| SecurityAuditValidator | Security Validation         |
+| ComplianceValidator    | Compliance Validation       |
+| RetentionValidator     | Retention Policy Validation |
 
 ---
 
@@ -1072,17 +1072,17 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| AUDIT_VIEW | View Audit Records |
-| AUDIT_SEARCH | Search Audit Records |
-| AUDIT_EXPORT | Export Audit Data |
-| ACTIVITY_VIEW | View User Activity |
-| ENTITY_HISTORY_VIEW | View Entity History |
-| SECURITY_AUDIT_VIEW | View Security Audit |
-| COMPLIANCE_REPORT_VIEW | View Compliance Reports |
-| RETENTION_MANAGE | Manage Retention Policies |
-| AUDIT_STATISTICS | View Audit Statistics |
+| Permission             | Description               |
+| ---------------------- | ------------------------- |
+| AUDIT_VIEW             | View Audit Records        |
+| AUDIT_SEARCH           | Search Audit Records      |
+| AUDIT_EXPORT           | Export Audit Data         |
+| ACTIVITY_VIEW          | View User Activity        |
+| ENTITY_HISTORY_VIEW    | View Entity History       |
+| SECURITY_AUDIT_VIEW    | View Security Audit       |
+| COMPLIANCE_REPORT_VIEW | View Compliance Reports   |
+| RETENTION_MANAGE       | Manage Retention Policies |
+| AUDIT_STATISTICS       | View Audit Statistics     |
 
 ---
 
@@ -1120,16 +1120,12 @@ Audit Service shall consume authenticated user information from Spring Security.
 
 ```json
 {
-  "sub":"UUID",
-  "username":"audit.admin",
-  "roles":["AUDIT_ADMIN"],
-  "permissions":[
-      "AUDIT_VIEW",
-      "AUDIT_EXPORT",
-      "COMPLIANCE_REPORT_VIEW"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "audit.admin",
+  "roles": ["AUDIT_ADMIN"],
+  "permissions": ["AUDIT_VIEW", "AUDIT_EXPORT", "COMPLIANCE_REPORT_VIEW"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1179,17 +1175,17 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| View Audit | AUDIT_VIEW |
-| Search Audit | AUDIT_SEARCH |
-| Export Audit | AUDIT_EXPORT |
-| View Activity | ACTIVITY_VIEW |
-| View Entity History | ENTITY_HISTORY_VIEW |
-| View Security Audit | SECURITY_AUDIT_VIEW |
+| API                     | Permission             |
+| ----------------------- | ---------------------- |
+| View Audit              | AUDIT_VIEW             |
+| Search Audit            | AUDIT_SEARCH           |
+| Export Audit            | AUDIT_EXPORT           |
+| View Activity           | ACTIVITY_VIEW          |
+| View Entity History     | ENTITY_HISTORY_VIEW    |
+| View Security Audit     | SECURITY_AUDIT_VIEW    |
 | View Compliance Reports | COMPLIANCE_REPORT_VIEW |
-| Manage Retention | RETENTION_MANAGE |
-| View Statistics | AUDIT_STATISTICS |
+| Manage Retention        | RETENTION_MANAGE       |
+| View Statistics         | AUDIT_STATISTICS       |
 
 ---
 
@@ -1261,13 +1257,13 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "sourceService":"order-service",
-  "eventType":"OrderCreated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "sourceService": "order-service",
+  "eventType": "OrderCreated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1294,11 +1290,11 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| IdentityClient | User Information |
-| ReportingClient | Report Integration |
-| FileStorageClient | Export Storage |
+| Client              | Responsibility     |
+| ------------------- | ------------------ |
+| IdentityClient      | User Information   |
+| ReportingClient     | Report Integration |
+| FileStorageClient   | Export Storage     |
 | ConfigurationClient | Retention Policies |
 
 ---
@@ -1323,16 +1319,16 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Retention Jobs |
-| Metrics | Micrometer |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis                |
+| Validation    | Bean Validation      |
+| Scheduler     | Retention Jobs       |
+| Metrics       | Micrometer           |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1346,14 +1342,14 @@ Audit processing shall be asynchronous.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Store Audit | REQUIRED |
-| Store Activity | REQUIRED |
-| Store Entity History | REQUIRED |
-| Generate Report | REQUIRED |
-| Export Audit | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation            | Propagation  |
+| -------------------- | ------------ |
+| Store Audit          | REQUIRED     |
+| Store Activity       | REQUIRED     |
+| Store Entity History | REQUIRED     |
+| Generate Report      | REQUIRED     |
+| Export Audit         | REQUIRED     |
+| Publish Event        | AFTER_COMMIT |
 
 ---
 
@@ -1484,25 +1480,25 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Identity Service | User Information |
-| Reporting Service | Report Generation |
-| File Storage Service | Export Storage |
-| Notification Service | Report Notifications |
-| All DHS Services | Audit Event Producers |
+| Service              | Purpose               |
+| -------------------- | --------------------- |
+| Identity Service     | User Information      |
+| Reporting Service    | Report Generation     |
+| File Storage Service | Export Storage        |
+| Notification Service | Report Notifications  |
+| All DHS Services     | Audit Event Producers |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| audit.retention.enabled | true |
-| audit.retention.days | 3650 |
-| audit.archive.enabled | true |
-| audit.cache.ttl | 3600 |
-| audit.kafka.retry | 3 |
+| Property                | Default |
+| ----------------------- | ------- |
+| audit.retention.enabled | true    |
+| audit.retention.days    | 3650    |
+| audit.archive.enabled   | true    |
+| audit.cache.ttl         | 3600    |
+| audit.kafka.retry       | 3       |
 
 ---
 
@@ -1540,23 +1536,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1598,13 +1594,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Audit Events |
-| WARN | Recoverable Processing Errors |
-| ERROR | Audit Processing Failures |
+| Level | Purpose                       |
+| ----- | ----------------------------- |
+| TRACE | Framework Diagnostics         |
+| DEBUG | Development                   |
+| INFO  | Business Audit Events         |
+| WARN  | Recoverable Processing Errors |
+| ERROR | Audit Processing Failures     |
 
 ---
 
@@ -2046,15 +2042,15 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Kafka Consumer Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Kafka Consumer Tests     | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2118,33 +2114,33 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Audit Processing |
-| Repository | Persistence |
-| Kafka | Event Processing |
-| Mapper | DTO Conversion |
+| Layer      | Responsibility     |
+| ---------- | ------------------ |
+| Controller | Request Handling   |
+| Service    | Audit Processing   |
+| Repository | Persistence        |
+| Kafka      | Event Processing   |
+| Mapper     | DTO Conversion     |
 | Validation | Request Validation |
 
 ---
@@ -2235,12 +2231,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Audit Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Audit Service Implementation                    |
 
 ---
 

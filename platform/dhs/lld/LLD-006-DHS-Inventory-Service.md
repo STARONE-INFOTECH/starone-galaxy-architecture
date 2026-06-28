@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Inventory Service |
-| Document | Low Level Design |
-| Document ID | LLD-006 |
-| Repository | starone-dhs-platform |
-| Module | inventory-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Inventory Service                      |
+| Document    | Low Level Design                       |
+| Document ID | LLD-006                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | inventory-service                      |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -340,16 +340,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
-| Inventory | Current Stock |
-| Inventory Movement | Stock Transactions |
-| Reservation | Reserved Stock |
-| Batch | Batch Inventory |
-| Serial Number | Serialized Inventory |
-| Stock Adjustment | Inventory Corrections |
-| Cycle Count | Physical Verification |
-| Inventory Snapshot | Inventory History |
+| Component          | Responsibility        |
+| ------------------ | --------------------- |
+| Inventory          | Current Stock         |
+| Inventory Movement | Stock Transactions    |
+| Reservation        | Reserved Stock        |
+| Batch              | Batch Inventory       |
+| Serial Number      | Serialized Inventory  |
+| Stock Adjustment   | Inventory Corrections |
+| Cycle Count        | Physical Verification |
+| Inventory Snapshot | Inventory History     |
 
 ---
 
@@ -710,17 +710,17 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| InventoryRepository | Inventory Master |
-| InventoryMovementRepository | Stock Movements |
-| StockReservationRepository | Reservations |
-| StockAllocationRepository | Allocations |
-| StockAdjustmentRepository | Adjustments |
-| BatchRepository | Batch Inventory |
-| SerialNumberRepository | Serialized Inventory |
-| CycleCountRepository | Physical Counts |
-| InventoryTransferRepository | Transfers |
+| Repository                  | Responsibility       |
+| --------------------------- | -------------------- |
+| InventoryRepository         | Inventory Master     |
+| InventoryMovementRepository | Stock Movements      |
+| StockReservationRepository  | Reservations         |
+| StockAllocationRepository   | Allocations          |
+| StockAdjustmentRepository   | Adjustments          |
+| BatchRepository             | Batch Inventory      |
+| SerialNumberRepository      | Serialized Inventory |
+| CycleCountRepository        | Physical Counts      |
+| InventoryTransferRepository | Transfers            |
 
 ---
 
@@ -767,16 +767,16 @@ dto.response
 
 ## InventoryResponse
 
-| Field | Type |
-|---------|------|
-| inventoryId | UUID |
-| productId | UUID |
-| warehouseId | UUID |
-| availableQuantity | BigDecimal |
-| reservedQuantity | BigDecimal |
-| allocatedQuantity | BigDecimal |
-| damagedQuantity | BigDecimal |
-| status | InventoryStatus |
+| Field             | Type            |
+| ----------------- | --------------- |
+| inventoryId       | UUID            |
+| productId         | UUID            |
+| warehouseId       | UUID            |
+| availableQuantity | BigDecimal      |
+| reservedQuantity  | BigDecimal      |
+| allocatedQuantity | BigDecimal      |
+| damagedQuantity   | BigDecimal      |
+| status            | InventoryStatus |
 
 ---
 
@@ -807,116 +807,116 @@ entity
 
 ## Inventory
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| productId | UUID |
-| warehouseId | UUID |
-| availableQuantity | BigDecimal |
-| reservedQuantity | BigDecimal |
-| allocatedQuantity | BigDecimal |
-| damagedQuantity | BigDecimal |
-| reorderLevel | BigDecimal |
-| safetyStock | BigDecimal |
-| inventoryStatus | InventoryStatus |
+| Attribute         | Type            |
+| ----------------- | --------------- |
+| id                | UUID            |
+| productId         | UUID            |
+| warehouseId       | UUID            |
+| availableQuantity | BigDecimal      |
+| reservedQuantity  | BigDecimal      |
+| allocatedQuantity | BigDecimal      |
+| damagedQuantity   | BigDecimal      |
+| reorderLevel      | BigDecimal      |
+| safetyStock       | BigDecimal      |
+| inventoryStatus   | InventoryStatus |
 
 ---
 
 ## InventoryMovement
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| movementType | MovementType |
-| quantity | BigDecimal |
-| referenceDocument | String |
-| movementDate | Instant |
+| Attribute         | Type         |
+| ----------------- | ------------ |
+| id                | UUID         |
+| inventoryId       | UUID         |
+| movementType      | MovementType |
+| quantity          | BigDecimal   |
+| referenceDocument | String       |
+| movementDate      | Instant      |
 
 ---
 
 ## StockReservation
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| orderId | UUID |
-| reservedQuantity | BigDecimal |
-| reservationExpiry | Instant |
+| Attribute         | Type              |
+| ----------------- | ----------------- |
+| id                | UUID              |
+| inventoryId       | UUID              |
+| orderId           | UUID              |
+| reservedQuantity  | BigDecimal        |
+| reservationExpiry | Instant           |
 | reservationStatus | ReservationStatus |
 
 ---
 
 ## StockAllocation
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reservationId | UUID |
-| allocatedQuantity | BigDecimal |
-| allocationStatus | AllocationStatus |
+| Attribute         | Type             |
+| ----------------- | ---------------- |
+| id                | UUID             |
+| reservationId     | UUID             |
+| allocatedQuantity | BigDecimal       |
+| allocationStatus  | AllocationStatus |
 
 ---
 
 ## StockAdjustment
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
+| Attribute      | Type           |
+| -------------- | -------------- |
+| id             | UUID           |
+| inventoryId    | UUID           |
 | adjustmentType | AdjustmentType |
-| quantity | BigDecimal |
-| reason | String |
-| approvedBy | UUID |
+| quantity       | BigDecimal     |
+| reason         | String         |
+| approvedBy     | UUID           |
 
 ---
 
 ## Batch
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| batchNumber | String |
-| manufacturingDate | LocalDate |
-| expiryDate | LocalDate |
+| Attribute         | Type       |
+| ----------------- | ---------- |
+| id                | UUID       |
+| inventoryId       | UUID       |
+| batchNumber       | String     |
+| manufacturingDate | LocalDate  |
+| expiryDate        | LocalDate  |
 | availableQuantity | BigDecimal |
 
 ---
 
 ## SerialNumber
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| serialNumber | String |
+| Attribute    | Type         |
+| ------------ | ------------ |
+| id           | UUID         |
+| inventoryId  | UUID         |
+| serialNumber | String       |
 | serialStatus | SerialStatus |
 
 ---
 
 ## CycleCount
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| inventoryId | UUID |
-| expectedQuantity | BigDecimal |
-| countedQuantity | BigDecimal |
-| variance | BigDecimal |
-| countStatus | CountStatus |
+| Attribute        | Type        |
+| ---------------- | ----------- |
+| id               | UUID        |
+| inventoryId      | UUID        |
+| expectedQuantity | BigDecimal  |
+| countedQuantity  | BigDecimal  |
+| variance         | BigDecimal  |
+| countStatus      | CountStatus |
 
 ---
 
 ## InventoryTransfer
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| sourceWarehouseId | UUID |
-| destinationWarehouseId | UUID |
-| transferStatus | TransferStatus |
+| Attribute              | Type           |
+| ---------------------- | -------------- |
+| id                     | UUID           |
+| sourceWarehouseId      | UUID           |
+| destinationWarehouseId | UUID           |
+| transferStatus         | TransferStatus |
 
 ---
 
@@ -987,15 +987,15 @@ CycleCountValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
-| InventoryValidator | Inventory Integrity |
-| StockReservationValidator | Reservation Validation |
-| StockAdjustmentValidator | Adjustment Rules |
-| BatchValidator | Batch Validation |
-| SerialNumberValidator | Serial Number Uniqueness |
-| TransferValidator | Warehouse Transfer Validation |
-| CycleCountValidator | Physical Count Validation |
+| Validator                 | Purpose                       |
+| ------------------------- | ----------------------------- |
+| InventoryValidator        | Inventory Integrity           |
+| StockReservationValidator | Reservation Validation        |
+| StockAdjustmentValidator  | Adjustment Rules              |
+| BatchValidator            | Batch Validation              |
+| SerialNumberValidator     | Serial Number Uniqueness      |
+| TransferValidator         | Warehouse Transfer Validation |
+| CycleCountValidator       | Physical Count Validation     |
 
 ---
 
@@ -1238,17 +1238,17 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| INVENTORY_CREATE | Create Inventory |
-| INVENTORY_UPDATE | Update Inventory |
-| INVENTORY_VIEW | View Inventory |
-| INVENTORY_SEARCH | Search Inventory |
-| STOCK_RESERVE | Reserve Stock |
-| STOCK_ALLOCATE | Allocate Stock |
-| STOCK_ADJUST | Adjust Inventory |
-| STOCK_TRANSFER | Transfer Inventory |
-| CYCLE_COUNT | Perform Cycle Count |
+| Permission        | Description         |
+| ----------------- | ------------------- |
+| INVENTORY_CREATE  | Create Inventory    |
+| INVENTORY_UPDATE  | Update Inventory    |
+| INVENTORY_VIEW    | View Inventory      |
+| INVENTORY_SEARCH  | Search Inventory    |
+| STOCK_RESERVE     | Reserve Stock       |
+| STOCK_ALLOCATE    | Allocate Stock      |
+| STOCK_ADJUST      | Adjust Inventory    |
+| STOCK_TRANSFER    | Transfer Inventory  |
+| CYCLE_COUNT       | Perform Cycle Count |
 | INVENTORY_APPROVE | Approve Adjustments |
 
 ---
@@ -1287,15 +1287,12 @@ Inventory Service shall consume authenticated user context.
 
 ```json
 {
-  "sub":"UUID",
-  "username":"warehouse.manager",
-  "roles":["WAREHOUSE_MANAGER"],
-  "permissions":[
-      "STOCK_RESERVE",
-      "STOCK_TRANSFER"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "warehouse.manager",
+  "roles": ["WAREHOUSE_MANAGER"],
+  "permissions": ["STOCK_RESERVE", "STOCK_TRANSFER"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1345,17 +1342,17 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| Create Inventory | INVENTORY_CREATE |
-| Update Inventory | INVENTORY_UPDATE |
-| View Inventory | INVENTORY_VIEW |
-| Search Inventory | INVENTORY_SEARCH |
-| Reserve Stock | STOCK_RESERVE |
-| Allocate Stock | STOCK_ALLOCATE |
-| Adjust Inventory | STOCK_ADJUST |
-| Transfer Inventory | STOCK_TRANSFER |
-| Cycle Count | CYCLE_COUNT |
+| API                | Permission        |
+| ------------------ | ----------------- |
+| Create Inventory   | INVENTORY_CREATE  |
+| Update Inventory   | INVENTORY_UPDATE  |
+| View Inventory     | INVENTORY_VIEW    |
+| Search Inventory   | INVENTORY_SEARCH  |
+| Reserve Stock      | STOCK_RESERVE     |
+| Allocate Stock     | STOCK_ALLOCATE    |
+| Adjust Inventory   | STOCK_ADJUST      |
+| Transfer Inventory | STOCK_TRANSFER    |
+| Cycle Count        | CYCLE_COUNT       |
 | Approve Adjustment | INVENTORY_APPROVE |
 
 ---
@@ -1440,12 +1437,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"InventoryReserved",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "InventoryReserved",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1473,13 +1470,13 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|---------|----------------|
-| ProductClient | Product Validation |
-| WarehouseClient | Warehouse Validation |
-| SupplierClient | Supplier Lookup |
-| AuditClient | Audit Submission |
-| NotificationClient | Inventory Alerts |
+| Client             | Responsibility       |
+| ------------------ | -------------------- |
+| ProductClient      | Product Validation   |
+| WarehouseClient    | Warehouse Validation |
+| SupplierClient     | Supplier Lookup      |
+| AuditClient        | Audit Submission     |
+| NotificationClient | Inventory Alerts     |
 
 ---
 
@@ -1503,16 +1500,16 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis Cache |
-| Validation | Bean Validation |
-| Scheduler | Background Jobs |
-| Metrics | Micrometer |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis Cache          |
+| Validation    | Bean Validation      |
+| Scheduler     | Background Jobs      |
+| Metrics       | Micrometer           |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1526,16 +1523,16 @@ Distributed inventory workflows shall communicate using Kafka events.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Inventory Create | REQUIRED |
-| Stock Movement | REQUIRED |
-| Reservation | REQUIRED |
-| Allocation | REQUIRED |
-| Adjustment | REQUIRED |
-| Transfer | REQUIRED |
-| Cycle Count | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation        | Propagation  |
+| ---------------- | ------------ |
+| Inventory Create | REQUIRED     |
+| Stock Movement   | REQUIRED     |
+| Reservation      | REQUIRED     |
+| Allocation       | REQUIRED     |
+| Adjustment       | REQUIRED     |
+| Transfer         | REQUIRED     |
+| Cycle Count      | REQUIRED     |
+| Publish Event    | AFTER_COMMIT |
 
 ---
 
@@ -1673,29 +1670,29 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Product Service | Product Validation |
-| Warehouse Service | Warehouse Validation |
-| Procurement Service | Goods Receipt |
-| Order Service | Stock Reservation |
-| Dispatch Service | Stock Deduction |
-| Returns Service | Stock Return |
-| Audit Service | Audit Logging |
-| Notification Service | Low Stock Alerts |
+| Service              | Purpose              |
+| -------------------- | -------------------- |
+| Product Service      | Product Validation   |
+| Warehouse Service    | Warehouse Validation |
+| Procurement Service  | Goods Receipt        |
+| Order Service        | Stock Reservation    |
+| Dispatch Service     | Stock Deduction      |
+| Returns Service      | Stock Return         |
+| Audit Service        | Audit Logging        |
+| Notification Service | Low Stock Alerts     |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| inventory.cache.enabled | true |
-| inventory.cache.ttl | 3600 |
-| inventory.low-stock.enabled | true |
-| inventory.batch.expiry.days | 30 |
-| inventory.reservation.timeout | 30m |
-| inventory.kafka.retry | 3 |
+| Property                      | Default |
+| ----------------------------- | ------- |
+| inventory.cache.enabled       | true    |
+| inventory.cache.ttl           | 3600    |
+| inventory.low-stock.enabled   | true    |
+| inventory.batch.expiry.days   | 30      |
+| inventory.reservation.timeout | 30m     |
+| inventory.kafka.retry         | 3       |
 
 ---
 
@@ -1738,23 +1735,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1796,12 +1793,12 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Errors |
+| Level | Purpose                  |
+| ----- | ------------------------ |
+| TRACE | Framework Diagnostics    |
+| DEBUG | Development              |
+| INFO  | Business Events          |
+| WARN  | Recoverable Errors       |
 | ERROR | Business/System Failures |
 
 ---
@@ -2237,14 +2234,14 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2313,35 +2310,35 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Inventory Business Logic |
-| Repository | Persistence |
-| Kafka | Event Publishing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
-| Audit | Inventory Audit |
+| Layer      | Responsibility           |
+| ---------- | ------------------------ |
+| Controller | Request Handling         |
+| Service    | Inventory Business Logic |
+| Repository | Persistence              |
+| Kafka      | Event Publishing         |
+| Mapper     | DTO Conversion           |
+| Validation | Request Validation       |
+| Audit      | Inventory Audit          |
 
 ---
 
@@ -2453,12 +2450,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Centralized Configuration |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Inventory Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Centralized Configuration                       |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Inventory Service Implementation                |
 
 ---
 
@@ -2469,4 +2466,3 @@ The Inventory Service is the authoritative inventory management component of the
 ---
 
 # End of Document
-

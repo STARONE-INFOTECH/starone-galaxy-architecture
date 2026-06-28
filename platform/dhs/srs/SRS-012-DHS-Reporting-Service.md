@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Reporting Service |
+| Field          | Value                                                 |
+| -------------- | ----------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform              |
+| Service Name   | Reporting Service                                     |
 | Document Title | Reporting Service Software Requirements Specification |
-| Document ID | SRS-012 |
-| Repository | starone-dhs-platform |
-| Module | reporting-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-012                                               |
+| Repository     | starone-dhs-platform                                  |
+| Module         | reporting-service                                     |
+| Document Type  | Software Requirements Specification (SRS)             |
+| Standard       | ISO/IEC/IEEE 29148                                    |
+| Version        | v1.0.0                                                |
+| Status         | Draft                                                 |
+| Author         | Sachin Salunke                                        |
+| Owner          | Enterprise Architecture                               |
+| Last Updated   | 2026-06-27                                            |
 
 ---
 
@@ -26,37 +26,37 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | High-Level Design |
+| Document      | Description                       |
+| ------------- | --------------------------------- |
+| BRD-001       | Business Requirements Document    |
+| PRD-001       | Product Requirements Document     |
+| ADR-001       | Architecture Decision Record      |
+| HLD-001       | High-Level Design                 |
 | FRD-Reporting | Reporting Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-007 | Order Service |
-| SRS-008 | Billing Service |
-| SRS-009 | Dispatch Service |
-| SRS-011 | Audit Service |
+| SRS-001       | Platform Foundation               |
+| SRS-007       | Order Service                     |
+| SRS-008       | Billing Service                   |
+| SRS-009       | Dispatch Service                  |
+| SRS-011       | Audit Service                     |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -104,13 +104,13 @@ The Reporting Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Report | Structured business information generated from read models |
-| Dashboard | Collection of KPIs and visual reports |
-| KPI | Key Performance Indicator |
-| Read Model | Denormalized reporting data optimized for queries |
-| Report Schedule | Configuration for automated report generation |
+| Term            | Description                                                |
+| --------------- | ---------------------------------------------------------- |
+| Report          | Structured business information generated from read models |
+| Dashboard       | Collection of KPIs and visual reports                      |
+| KPI             | Key Performance Indicator                                  |
+| Read Model      | Denormalized reporting data optimized for queries          |
+| Report Schedule | Configuration for automated report generation              |
 
 ---
 
@@ -172,38 +172,38 @@ Gateway --> ReportingService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Reporting Database |
-| Kafka | Event Streaming |
+| Dependency          | Purpose            |
+| ------------------- | ------------------ |
+| Platform Foundation | Shared Frameworks  |
+| Gateway             | API Routing        |
+| Eureka              | Service Discovery  |
+| PostgreSQL          | Reporting Database |
+| Kafka               | Event Streaming    |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Order Service | Sales Data |
-| Customer Service | Customer Analytics |
-| Product Service | Product Analytics |
-| Inventory Service | Inventory Metrics |
-| Billing Service | Financial Analytics |
-| Dispatch Service | Logistics Analytics |
+| Service              | Purpose               |
+| -------------------- | --------------------- |
+| Order Service        | Sales Data            |
+| Customer Service     | Customer Analytics    |
+| Product Service      | Product Analytics     |
+| Inventory Service    | Inventory Metrics     |
+| Billing Service      | Financial Analytics   |
+| Dispatch Service     | Logistics Analytics   |
 | Notification Service | Communication Metrics |
-| Audit Service | Compliance Metrics |
+| Audit Service        | Compliance Metrics    |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
-| BI Tools | Business Intelligence |
-| Executive Dashboard | KPI Visualization |
-| External Reporting Systems | Report Distribution |
+| Service                    | Purpose               |
+| -------------------------- | --------------------- |
+| BI Tools                   | Business Intelligence |
+| Executive Dashboard        | KPI Visualization     |
+| External Reporting Systems | Report Distribution   |
 
 ---
 
@@ -561,54 +561,54 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| GET | /definitions | List Report Definitions |
-| GET | /definitions/{reportId} | Get Report Definition |
-| POST | /execute | Execute Report |
-| GET | /executions/{executionId} | Execution Status |
-| GET | /dashboard | Dashboard |
-| GET | /kpi | KPI Summary |
-| POST | /schedule | Create Schedule |
-| PUT | /schedule/{scheduleId} | Update Schedule |
-| POST | /export | Export Report |
-| GET | /history | Report History |
+| Method | URI                       | Description             |
+| ------ | ------------------------- | ----------------------- |
+| GET    | /definitions              | List Report Definitions |
+| GET    | /definitions/{reportId}   | Get Report Definition   |
+| POST   | /execute                  | Execute Report          |
+| GET    | /executions/{executionId} | Execution Status        |
+| GET    | /dashboard                | Dashboard               |
+| GET    | /kpi                      | KPI Summary             |
+| POST   | /schedule                 | Create Schedule         |
+| PUT    | /schedule/{scheduleId}    | Update Schedule         |
+| POST   | /export                   | Export Report           |
+| GET    | /history                  | Report History          |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC or DESC |
-| category | No | Report Category |
-| reportCode | No | Report Code |
-| fromDate | No | Report Date From |
-| toDate | No | Report Date To |
+| Parameter  | Required | Description      |
+| ---------- | -------- | ---------------- |
+| page       | No       | Page Number      |
+| size       | No       | Page Size        |
+| sort       | No       | Sort Field       |
+| direction  | No       | ASC or DESC      |
+| category   | No       | Report Category  |
+| reportCode | No       | Report Code      |
+| fromDate   | No       | Report Date From |
+| toDate     | No       | Report Date To   |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
-| reportId | Report Identifier |
+| Parameter   | Description                 |
+| ----------- | --------------------------- |
+| reportId    | Report Identifier           |
 | executionId | Report Execution Identifier |
-| scheduleId | Report Schedule Identifier |
+| scheduleId  | Report Schedule Identifier  |
 
 ---
 
@@ -701,29 +701,29 @@ Creates a scheduled report execution.
 
 ## ExecuteReportRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| reportCode | String | Yes |
-| parameters | Map<String,Object> | Yes |
+| Field      | Type               | Required |
+| ---------- | ------------------ | -------- |
+| reportCode | String             | Yes      |
+| parameters | Map<String,Object> | Yes      |
 
 ---
 
 ## ExportReportRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| executionId | UUID | Yes |
-| format | ExportFormat | Yes |
+| Field       | Type         | Required |
+| ----------- | ------------ | -------- |
+| executionId | UUID         | Yes      |
+| format      | ExportFormat | Yes      |
 
 ---
 
 ## ReportScheduleRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| reportCode | String | Yes |
-| cronExpression | String | Yes |
-| recipients | List<String> | No |
+| Field          | Type         | Required |
+| -------------- | ------------ | -------- |
+| reportCode     | String       | Yes      |
+| cronExpression | String       | Yes      |
+| recipients     | List<String> | No       |
 
 ---
 
@@ -731,34 +731,34 @@ Creates a scheduled report execution.
 
 ## ReportExecutionResponse
 
-| Field | Type |
-|---------|------|
-| executionId | UUID |
-| reportCode | String |
+| Field           | Type            |
+| --------------- | --------------- |
+| executionId     | UUID            |
+| reportCode      | String          |
 | executionStatus | ExecutionStatus |
-| startedAt | Timestamp |
-| completedAt | Timestamp |
+| startedAt       | Timestamp       |
+| completedAt     | Timestamp       |
 
 ---
 
 ## DashboardResponse
 
-| Field | Type |
-|---------|------|
-| dashboardName | String |
-| generatedAt | Timestamp |
-| widgets | List<DashboardWidget> |
+| Field         | Type                  |
+| ------------- | --------------------- |
+| dashboardName | String                |
+| generatedAt   | Timestamp             |
+| widgets       | List<DashboardWidget> |
 
 ---
 
 ## KPIResponse
 
-| Field | Type |
-|---------|------|
-| kpiCode | String |
-| kpiName | String |
-| value | Decimal |
-| trend | String |
+| Field   | Type    |
+| ------- | ------- |
+| kpiCode | String  |
+| kpiName | String  |
+| value   | Decimal |
+| trend   | String  |
 
 ---
 
@@ -791,31 +791,31 @@ Creates a scheduled report execution.
 
 # 13. Permission Matrix
 
-| API | Super Admin | Reporting Admin | Business Analyst | Executive | Viewer |
-|------|-------------|-----------------|------------------|-----------|--------|
-| Execute Report | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Export Report | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Dashboard | ✅ | ✅ | ✅ | ✅ | ✅ |
-| KPI | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Create Schedule | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Update Schedule | ✅ | ✅ | ❌ | ❌ | ❌ |
-| View Report History | ✅ | ✅ | ✅ | ✅ | ✅ |
+| API                 | Super Admin | Reporting Admin | Business Analyst | Executive | Viewer |
+| ------------------- | ----------- | --------------- | ---------------- | --------- | ------ |
+| Execute Report      | ✅          | ✅              | ✅               | ✅        | ❌     |
+| Export Report       | ✅          | ✅              | ✅               | ✅        | ❌     |
+| Dashboard           | ✅          | ✅              | ✅               | ✅        | ✅     |
+| KPI                 | ✅          | ✅              | ✅               | ✅        | ✅     |
+| Create Schedule     | ✅          | ✅              | ❌               | ❌        | ❌     |
+| Update Schedule     | ✅          | ✅              | ❌               | ❌        | ❌     |
+| View Report History | ✅          | ✅              | ✅               | ✅        | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 202 | Report Accepted for Processing |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Report Not Found |
-| 409 | Duplicate Schedule |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description                    |
+| ------ | ------------------------------ |
+| 200    | Success                        |
+| 202    | Report Accepted for Processing |
+| 400    | Validation Error               |
+| 401    | Unauthorized                   |
+| 403    | Forbidden                      |
+| 404    | Report Not Found               |
+| 409    | Duplicate Schedule             |
+| 422    | Business Rule Violation        |
+| 500    | Internal Server Error          |
 
 ---
 
@@ -848,17 +848,17 @@ Reporting
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Reporting | Aggregate Root |
-| ReportDefinition | Report Metadata |
-| ReportExecution | Execution History |
-| ReportDataset | Reporting Read Model |
-| ReportSchedule | Scheduled Reports |
-| ReportExport | Export Processing |
-| Dashboard | Dashboard Configuration |
-| KPI | KPI Definitions & Values |
-| ReportingAudit | Reporting Audit History |
+| Aggregate        | Responsibility           |
+| ---------------- | ------------------------ |
+| Reporting        | Aggregate Root           |
+| ReportDefinition | Report Metadata          |
+| ReportExecution  | Execution History        |
+| ReportDataset    | Reporting Read Model     |
+| ReportSchedule   | Scheduled Reports        |
+| ReportExport     | Export Processing        |
+| Dashboard        | Dashboard Configuration  |
+| KPI              | KPI Definitions & Values |
+| ReportingAudit   | Reporting Audit History  |
 
 ---
 
@@ -866,125 +866,125 @@ Reporting
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Reporting | Aggregate Root |
-| ReportDefinition | Report Metadata |
-| ReportExecution | Report Execution |
-| ReportDataset | Materialized Read Model |
-| ReportSchedule | Scheduled Execution |
-| ReportExport | Export History |
-| Dashboard | Dashboard Configuration |
-| KPI | KPI Definition |
-| ReportingAudit | Reporting Audit |
+| Entity           | Description             |
+| ---------------- | ----------------------- |
+| Reporting        | Aggregate Root          |
+| ReportDefinition | Report Metadata         |
+| ReportExecution  | Report Execution        |
+| ReportDataset    | Materialized Read Model |
+| ReportSchedule   | Scheduled Execution     |
+| ReportExport     | Export History          |
+| Dashboard        | Dashboard Configuration |
+| KPI              | KPI Definition          |
+| ReportingAudit   | Reporting Audit         |
 
 ---
 
 ## 16.2 Report Definition
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| reportCode | VARCHAR(100) | Unique |
-| reportName | VARCHAR(200) | Required |
-| category | VARCHAR(100) | Required |
-| description | TEXT | Optional |
-| reportVersion | INTEGER | Required |
-| active | BOOLEAN | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedAt | TIMESTAMP | Required |
+| Attribute     | Type         | Constraint  |
+| ------------- | ------------ | ----------- |
+| id            | UUID         | Primary Key |
+| reportCode    | VARCHAR(100) | Unique      |
+| reportName    | VARCHAR(200) | Required    |
+| category      | VARCHAR(100) | Required    |
+| description   | TEXT         | Optional    |
+| reportVersion | INTEGER      | Required    |
+| active        | BOOLEAN      | Required    |
+| createdAt     | TIMESTAMP    | Required    |
+| updatedAt     | TIMESTAMP    | Required    |
 
 ---
 
 ## 16.3 Report Execution
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportDefinitionId | UUID |
-| executionStatus | ENUM |
-| requestedBy | UUID |
-| startedAt | TIMESTAMP |
-| completedAt | TIMESTAMP |
-| executionDurationMs | BIGINT |
-| parameterJson | JSONB |
+| Attribute           | Type      |
+| ------------------- | --------- |
+| id                  | UUID      |
+| reportDefinitionId  | UUID      |
+| executionStatus     | ENUM      |
+| requestedBy         | UUID      |
+| startedAt           | TIMESTAMP |
+| completedAt         | TIMESTAMP |
+| executionDurationMs | BIGINT    |
+| parameterJson       | JSONB     |
 
 ---
 
 ## 16.4 Report Dataset
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| datasetCode | VARCHAR(100) |
-| datasetName | VARCHAR(200) |
-| datasetVersion | INTEGER |
-| refreshTime | TIMESTAMP |
-| rowCount | BIGINT |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| datasetCode    | VARCHAR(100) |
+| datasetName    | VARCHAR(200) |
+| datasetVersion | INTEGER      |
+| refreshTime    | TIMESTAMP    |
+| rowCount       | BIGINT       |
 
 ---
 
 ## 16.5 Report Schedule
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportDefinitionId | UUID |
-| cronExpression | VARCHAR(100) |
-| enabled | BOOLEAN |
-| nextExecution | TIMESTAMP |
-| lastExecution | TIMESTAMP |
+| Attribute          | Type         |
+| ------------------ | ------------ |
+| id                 | UUID         |
+| reportDefinitionId | UUID         |
+| cronExpression     | VARCHAR(100) |
+| enabled            | BOOLEAN      |
+| nextExecution      | TIMESTAMP    |
+| lastExecution      | TIMESTAMP    |
 
 ---
 
 ## 16.6 Report Export
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportExecutionId | UUID |
-| exportFormat | ENUM |
-| exportStatus | ENUM |
-| generatedFile | VARCHAR(500) |
-| generatedAt | TIMESTAMP |
+| Attribute         | Type         |
+| ----------------- | ------------ |
+| id                | UUID         |
+| reportExecutionId | UUID         |
+| exportFormat      | ENUM         |
+| exportStatus      | ENUM         |
+| generatedFile     | VARCHAR(500) |
+| generatedAt       | TIMESTAMP    |
 
 ---
 
 ## 16.7 Dashboard
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| dashboardCode | VARCHAR(100) |
-| dashboardName | VARCHAR(200) |
-| dashboardVersion | INTEGER |
-| widgetCount | INTEGER |
-| refreshInterval | INTEGER |
+| Attribute        | Type         |
+| ---------------- | ------------ |
+| id               | UUID         |
+| dashboardCode    | VARCHAR(100) |
+| dashboardName    | VARCHAR(200) |
+| dashboardVersion | INTEGER      |
+| widgetCount      | INTEGER      |
+| refreshInterval  | INTEGER      |
 
 ---
 
 ## 16.8 KPI
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| kpiCode | VARCHAR(100) |
-| kpiName | VARCHAR(200) |
-| formulaVersion | INTEGER |
-| currentValue | DECIMAL(20,4) |
-| calculatedAt | TIMESTAMP |
+| Attribute      | Type          |
+| -------------- | ------------- |
+| id             | UUID          |
+| kpiCode        | VARCHAR(100)  |
+| kpiName        | VARCHAR(200)  |
+| formulaVersion | INTEGER       |
+| currentValue   | DECIMAL(20,4) |
+| calculatedAt   | TIMESTAMP     |
 
 ---
 
 ## 16.9 Reporting Audit
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportExecutionId | UUID |
-| eventType | VARCHAR(100) |
-| correlationId | UUID |
-| eventTimestamp | TIMESTAMP |
+| Attribute         | Type         |
+| ----------------- | ------------ |
+| id                | UUID         |
+| reportExecutionId | UUID         |
+| eventType         | VARCHAR(100) |
+| correlationId     | UUID         |
+| eventTimestamp    | TIMESTAMP    |
 
 ---
 
@@ -1006,16 +1006,16 @@ reporting
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| report_definition | Report Metadata |
-| report_execution | Execution History |
-| report_dataset | Reporting Read Models |
-| report_schedule | Scheduled Reports |
-| report_export | Export History |
-| dashboard | Dashboard Metadata |
-| kpi | KPI Definitions |
-| reporting_audit | Reporting Audit |
+| Table             | Purpose               |
+| ----------------- | --------------------- |
+| report_definition | Report Metadata       |
+| report_execution  | Execution History     |
+| report_dataset    | Reporting Read Models |
+| report_schedule   | Scheduled Reports     |
+| report_export     | Export History        |
+| dashboard         | Dashboard Metadata    |
+| kpi               | KPI Definitions       |
+| reporting_audit   | Reporting Audit       |
 
 ---
 
@@ -1027,12 +1027,12 @@ All tables shall use UUID as the Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
+| Child Table      | Parent Table      |
+| ---------------- | ----------------- |
 | report_execution | report_definition |
-| report_schedule | report_definition |
-| report_export | report_execution |
-| reporting_audit | report_execution |
+| report_schedule  | report_definition |
+| report_export    | report_execution  |
+| reporting_audit  | report_execution  |
 
 ---
 
@@ -1063,16 +1063,16 @@ All tables shall use UUID as the Primary Key.
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| report_definition | report_code |
-| report_execution | execution_status |
-| report_execution | started_at |
-| report_execution | requested_by |
-| report_schedule | next_execution |
-| report_dataset | dataset_code |
-| dashboard | dashboard_code |
-| kpi | kpi_code |
+| Table             | Index            |
+| ----------------- | ---------------- |
+| report_definition | report_code      |
+| report_execution  | execution_status |
+| report_execution  | started_at       |
+| report_execution  | requested_by     |
+| report_schedule   | next_execution   |
+| report_dataset    | dataset_code     |
+| dashboard         | dashboard_code   |
+| kpi               | kpi_code         |
 
 ---
 
@@ -1212,28 +1212,28 @@ The Reporting Service shall primarily consume business events and update reporti
 
 ## 21.1 Published Events
 
-| Topic | Event |
-|---------|------|
-| report.generated.v1 | ReportGenerated |
-| report.exported.v1 | ReportExported |
+| Topic                  | Event              |
+| ---------------------- | ------------------ |
+| report.generated.v1    | ReportGenerated    |
+| report.exported.v1     | ReportExported     |
 | dashboard.refreshed.v1 | DashboardRefreshed |
-| kpi.calculated.v1 | KpiCalculated |
+| kpi.calculated.v1      | KpiCalculated      |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
-| order.* | Order Service |
-| customer.* | Customer Service |
-| branch.* | Branch Service |
-| product.* | Product Service |
-| inventory.* | Inventory Service |
-| billing.* | Billing Service |
-| dispatch.* | Dispatch Service |
-| notification.* | Notification Service |
-| audit.* | Audit Service |
+| Topic           | Source               |
+| --------------- | -------------------- |
+| order.\*        | Order Service        |
+| customer.\*     | Customer Service     |
+| branch.\*       | Branch Service       |
+| product.\*      | Product Service      |
+| inventory.\*    | Inventory Service    |
+| billing.\*      | Billing Service      |
+| dispatch.\*     | Dispatch Service     |
+| notification.\* | Notification Service |
+| audit.\*        | Audit Service        |
 
 ---
 
@@ -1254,14 +1254,14 @@ The Reporting Service shall primarily consume business events and update reporti
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | REST APIs |
-| Kafka | Event Streaming |
-| PostgreSQL | Reporting Database |
-| Redis | Dashboard Cache |
-| Object Storage | Report Files |
-| BI Platform | Analytics Integration |
+| Interface      | Purpose               |
+| -------------- | --------------------- |
+| API Gateway    | REST APIs             |
+| Kafka          | Event Streaming       |
+| PostgreSQL     | Reporting Database    |
+| Redis          | Dashboard Cache       |
+| Object Storage | Report Files          |
+| BI Platform    | Analytics Integration |
 
 ---
 
@@ -1271,11 +1271,11 @@ The Reporting Service shall remain event-driven.
 
 OpenFeign shall be used only when synchronous reference data is required.
 
-| Client | Purpose |
-|----------|---------|
-| IdentityClient | User Information |
+| Client         | Purpose                            |
+| -------------- | ---------------------------------- |
+| IdentityClient | User Information                   |
 | CustomerClient | Customer Profile Lookup (Optional) |
-| BranchClient | Branch Information (Optional) |
+| BranchClient   | Branch Information (Optional)      |
 
 > Business reporting data shall be obtained from reporting read models built from Kafka events. OpenFeign shall not be used for transactional reporting queries.
 
@@ -1306,17 +1306,17 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| reporting.scheduler.enabled | true | Yes | Enable Scheduled Reports |
-| reporting.scheduler.pool-size | 10 | Yes | Scheduler Thread Pool |
-| reporting.export.max-records | 500000 | Yes | Maximum Export Records |
-| reporting.export.file-retention-days | 30 | Yes | Export File Retention |
-| reporting.dashboard.cache.enabled | true | Yes | Dashboard Cache |
-| reporting.dashboard.cache.ttl | 300 | Yes | Cache TTL (seconds) |
-| reporting.dataset.refresh.enabled | true | Yes | Enable Dataset Refresh |
-| reporting.dataset.refresh.interval | 300 | Yes | Dataset Refresh Interval (seconds) |
-| reporting.kafka.consumer.concurrency | 5 | Yes | Kafka Consumer Threads |
+| Property                             | Default | Required | Description                        |
+| ------------------------------------ | ------- | -------- | ---------------------------------- |
+| reporting.scheduler.enabled          | true    | Yes      | Enable Scheduled Reports           |
+| reporting.scheduler.pool-size        | 10      | Yes      | Scheduler Thread Pool              |
+| reporting.export.max-records         | 500000  | Yes      | Maximum Export Records             |
+| reporting.export.file-retention-days | 30      | Yes      | Export File Retention              |
+| reporting.dashboard.cache.enabled    | true    | Yes      | Dashboard Cache                    |
+| reporting.dashboard.cache.ttl        | 300     | Yes      | Cache TTL (seconds)                |
+| reporting.dataset.refresh.enabled    | true    | Yes      | Enable Dataset Refresh             |
+| reporting.dataset.refresh.interval   | 300     | Yes      | Dataset Refresh Interval (seconds) |
+| reporting.kafka.consumer.concurrency | 5       | Yes      | Kafka Consumer Threads             |
 
 ---
 
@@ -1428,21 +1428,21 @@ Failed export operations shall support configurable retry policies.
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP Status |
-|------------|-------------|-------------|
-| RP-VAL-001 | Validation Failed | 400 |
-| RP-AUTH-001 | Authentication Required | 401 |
-| RP-AUTH-002 | Access Denied | 403 |
-| RP-BUS-001 | Invalid Report Parameters | 422 |
-| RP-BUS-002 | Report Definition Not Found | 404 |
-| RP-BUS-003 | Report Execution Not Found | 404 |
-| RP-BUS-004 | Dashboard Not Found | 404 |
-| RP-BUS-005 | KPI Not Found | 404 |
-| RP-BUS-006 | Export Format Not Supported | 422 |
-| RP-BUS-007 | Schedule Already Exists | 409 |
-| RP-BUS-008 | Report Execution Failed | 422 |
-| RP-BUS-009 | Export File Expired | 410 |
-| RP-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                 | HTTP Status |
+| ----------- | --------------------------- | ----------- |
+| RP-VAL-001  | Validation Failed           | 400         |
+| RP-AUTH-001 | Authentication Required     | 401         |
+| RP-AUTH-002 | Access Denied               | 403         |
+| RP-BUS-001  | Invalid Report Parameters   | 422         |
+| RP-BUS-002  | Report Definition Not Found | 404         |
+| RP-BUS-003  | Report Execution Not Found  | 404         |
+| RP-BUS-004  | Dashboard Not Found         | 404         |
+| RP-BUS-005  | KPI Not Found               | 404         |
+| RP-BUS-006  | Export Format Not Supported | 422         |
+| RP-BUS-007  | Schedule Already Exists     | 409         |
+| RP-BUS-008  | Report Execution Failed     | 422         |
+| RP-BUS-009  | Export File Expired         | 410         |
+| RP-SYS-001  | Internal Server Error       | 500         |
 
 ---
 
@@ -1705,28 +1705,28 @@ The Reporting Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source Document | Verification |
-|-------------|-----------------|--------------|
-| RP-SYS-001 – RP-SYS-010 | FRD-Reporting | Functional Testing |
-| RP-SYS-011 – RP-SYS-028 | SRS-001 Platform Foundation | Integration Testing |
-| RP-NFR-001 – RP-NFR-018 | PRD / HLD | Performance, Reliability & Security Testing |
+| Requirement             | Source Document             | Verification                                |
+| ----------------------- | --------------------------- | ------------------------------------------- |
+| RP-SYS-001 – RP-SYS-010 | FRD-Reporting               | Functional Testing                          |
+| RP-SYS-011 – RP-SYS-028 | SRS-001 Platform Foundation | Integration Testing                         |
+| RP-NFR-001 – RP-NFR-018 | PRD / HLD                   | Performance, Reliability & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| RP-SYS-001 | TC-RP-001 |
-| RP-SYS-002 | TC-RP-002 |
-| RP-SYS-003 | TC-RP-003 |
-| RP-SYS-004 | TC-RP-004 |
-| RP-SYS-005 | TC-RP-005 |
-| RP-SYS-006 | TC-RP-006 |
-| RP-SYS-007 | TC-RP-007 |
-| RP-SYS-008 | TC-RP-008 |
-| RP-SYS-009 | TC-RP-009 |
-| RP-SYS-010 | TC-RP-010 |
+| ----------- | --------- |
+| RP-SYS-001  | TC-RP-001 |
+| RP-SYS-002  | TC-RP-002 |
+| RP-SYS-003  | TC-RP-003 |
+| RP-SYS-004  | TC-RP-004 |
+| RP-SYS-005  | TC-RP-005 |
+| RP-SYS-006  | TC-RP-006 |
+| RP-SYS-007  | TC-RP-007 |
+| RP-SYS-008  | TC-RP-008 |
+| RP-SYS-009  | TC-RP-009 |
+| RP-SYS-010  | TC-RP-010 |
 
 ---
 
@@ -1753,75 +1753,69 @@ The Reporting Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Report Definition | List, Get |
-| Report Execution | Execute, Status |
-| Dashboard | View |
-| KPI | View |
-| Report Schedule | Create, Update |
-| Report Export | Export |
-| Report History | View |
+| Resource          | Endpoints       |
+| ----------------- | --------------- |
+| Report Definition | List, Get       |
+| Report Execution  | Execute, Status |
+| Dashboard         | View            |
+| KPI               | View            |
+| Report Schedule   | Create, Update  |
+| Report Export     | Export          |
+| Report History    | View            |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Reporting | Aggregate Root |
-| ReportDefinition | Report Metadata |
-| ReportExecution | Report Execution |
-| ReportDataset | Read Model |
-| ReportSchedule | Scheduled Reports |
-| ReportExport | Export Processing |
-| Dashboard | Dashboard Configuration |
-| KPI | KPI Definition |
-| ReportingAudit | Reporting Audit Trail |
+| Aggregate        | Description             |
+| ---------------- | ----------------------- |
+| Reporting        | Aggregate Root          |
+| ReportDefinition | Report Metadata         |
+| ReportExecution  | Report Execution        |
+| ReportDataset    | Read Model              |
+| ReportSchedule   | Scheduled Reports       |
+| ReportExport     | Export Processing       |
+| Dashboard        | Dashboard Configuration |
+| KPI              | KPI Definition          |
+| ReportingAudit   | Reporting Audit Trail   |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Reporting Database |
-| Redis | Dashboard Cache |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
-| Object Storage | Report File Storage |
-| Audit Service | Audit Trail |
-| BI Platform | Enterprise Analytics |
+| Dependency          | Purpose                        |
+| ------------------- | ------------------------------ |
+| Platform Foundation | Shared Frameworks              |
+| Gateway             | API Routing                    |
+| Eureka              | Service Discovery              |
+| PostgreSQL          | Reporting Database             |
+| Redis               | Dashboard Cache                |
+| Kafka               | Event Streaming                |
+| Identity Service    | Authentication & Authorization |
+| Object Storage      | Report File Storage            |
+| Audit Service       | Audit Trail                    |
+| BI Platform         | Enterprise Analytics           |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Reporting Service Software Requirements Specification |
+| Version | Description                                                   |
+| ------- | ------------------------------------------------------------- |
+| v1.0.0  | Initial Reporting Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
 # End of Document
-
-
-
-
-
-

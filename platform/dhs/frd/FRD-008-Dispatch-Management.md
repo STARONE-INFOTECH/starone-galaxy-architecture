@@ -85,44 +85,44 @@ The Dispatch Service provides shipment creation and delivery management capabili
 
 Responsibilities:
 
-* Shipment Creation
-* Shipment Scheduling
-* Shipment Allocation
-* Shipment Tracking
-* Shipment Dispatch
-* Delivery Confirmation
-* Partial Shipment Management
-* Shipment Status Management
-* Shipment Search
-* Dispatch Audit Logging
+- Shipment Creation
+- Shipment Scheduling
+- Shipment Allocation
+- Shipment Tracking
+- Shipment Dispatch
+- Delivery Confirmation
+- Partial Shipment Management
+- Shipment Status Management
+- Shipment Search
+- Dispatch Audit Logging
 
 The service acts as the fulfillment execution service after successful billing.
 
 The Dispatch Service supports:
 
-* Order Management
-* Billing Management
-* Notifications
-* Reporting
-* Analytics
-* Customer Order Tracking
+- Order Management
+- Billing Management
+- Notifications
+- Reporting
+- Analytics
+- Customer Order Tracking
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* REST APIs and OpenFeign Communication
-* Event-Driven Architecture
-* Kafka Integration
-* Saga-Based Distributed Transactions
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- REST APIs and OpenFeign Communication
+- Event-Driven Architecture
+- Kafka Integration
+- Saga-Based Distributed Transactions
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -146,11 +146,11 @@ dispatch-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
@@ -158,15 +158,15 @@ dispatch-db
 
 ### Synchronous Dependencies
 
-* order-service
-* billing-service
-* customer-service
+- order-service
+- billing-service
+- customer-service
 
 ### Asynchronous Dependencies
 
-* notification-service
-* reporting-service
-* audit-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -484,16 +484,16 @@ API Gateway-->>Customer: Shipment Information
 
 Technologies:
 
-* REST APIs
-* OpenFeign
-* Service Discovery
+- REST APIs
+- OpenFeign
+- Service Discovery
 
 Used For:
 
-* Invoice Validation
-* Customer Lookup
-* Shipment Search
-* Shipment Tracking
+- Invoice Validation
+- Customer Lookup
+- Shipment Search
+- Shipment Tracking
 
 ---
 
@@ -501,18 +501,18 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Shipment Lifecycle Events
-* Notification Events
-* Reporting Events
-* Audit Events
-* Saga Coordination
+- Shipment Lifecycle Events
+- Notification Events
+- Reporting Events
+- Audit Events
+- Saga Coordination
 
 # 14. Published Events
 
@@ -652,21 +652,21 @@ PATCH /api/v1/shipments/partial/{id}/deliver
 
 Fields:
 
-* Shipment Number
-* Invoice Number
-* Customer
-* Shipment Date
-* Shipment Status
-* Delivery Status
+- Shipment Number
+- Invoice Number
+- Customer
+- Shipment Date
+- Shipment Status
+- Delivery Status
 
 Actions:
 
-* Create
-* Update
-* Dispatch
-* Deliver
-* Search
-* View
+- Create
+- Update
+- Dispatch
+- Deliver
+- Search
+- View
 
 ---
 
@@ -674,17 +674,17 @@ Actions:
 
 Fields:
 
-* Shipment Number
-* Tracking Number
-* Current Status
-* Estimated Delivery Date
-* Actual Delivery Date
+- Shipment Number
+- Tracking Number
+- Current Status
+- Estimated Delivery Date
+- Actual Delivery Date
 
 Actions:
 
-* Track
-* Update Status
-* View History
+- Track
+- Update Status
+- View History
 
 ---
 
@@ -692,17 +692,17 @@ Actions:
 
 Fields:
 
-* Shipment Number
-* Delivery Date
-* Receiver Name
-* Receiver Contact
-* Proof of Delivery
+- Shipment Number
+- Delivery Date
+- Receiver Name
+- Receiver Contact
+- Proof of Delivery
 
 Actions:
 
-* Confirm Delivery
-* Upload Proof
-* View
+- Confirm Delivery
+- Upload Proof
+- View
 
 ---
 
@@ -710,18 +710,18 @@ Actions:
 
 Fields:
 
-* Shipment Number
-* Order Number
-* Dispatched Quantity
-* Pending Quantity
-* Status
+- Shipment Number
+- Order Number
+- Dispatched Quantity
+- Pending Quantity
+- Status
 
 Actions:
 
-* Create
-* Dispatch
-* Deliver
-* View
+- Create
+- Dispatch
+- Deliver
+- View
 
 ---
 
@@ -729,44 +729,44 @@ Actions:
 
 ## Shipment Number
 
-* System generated
-* Unique
-* Read-only
+- System generated
+- Unique
+- Read-only
 
 ---
 
 ## Invoice Number
 
-* Required
-* Must exist
-* Must be active
+- Required
+- Must exist
+- Must be active
 
 ---
 
 ## Tracking Number
 
-* Required
-* Unique
+- Required
+- Unique
 
 ---
 
 ## Delivery Date
 
-* Cannot be earlier than shipment date
+- Cannot be earlier than shipment date
 
 ---
 
 ## Receiver Name
 
-* Required
-* Maximum 100 characters
+- Required
+- Maximum 100 characters
 
 ---
 
 ## Proof of Delivery
 
-* Optional
-* Image or document upload supported
+- Optional
+- Image or document upload supported
 
 ---
 
@@ -856,13 +856,13 @@ SHIPMENT_SEARCHED
 
 System Notifications:
 
-* Shipment Created
-* Shipment Dispatched
-* Shipment Delivered
-* Partial Shipment Created
-* Delivery Confirmed
-* Delivery Failed
-* Estimated Delivery Updated
+- Shipment Created
+- Shipment Dispatched
+- Shipment Delivered
+- Partial Shipment Created
+- Delivery Confirmed
+- Delivery Failed
+- Estimated Delivery Updated
 
 ---
 
@@ -870,13 +870,13 @@ System Notifications:
 
 Reports:
 
-* Shipment Report
-* Shipment Status Report
-* Deliveries by Branch Report
-* Partial Shipment Report
-* Delivery Confirmation Report
-* Shipment Tracking Report
-* Dispatch Audit Report
+- Shipment Report
+- Shipment Status Report
+- Deliveries by Branch Report
+- Partial Shipment Report
+- Delivery Confirmation Report
+- Shipment Tracking Report
+- Dispatch Audit Report
 
 ---
 
@@ -959,53 +959,53 @@ ShipmentTracking
 
 Dispatch Service exclusively owns:
 
-* Shipment
-* ShipmentItem
-* PartialShipment
-* DeliveryConfirmation
-* ShipmentTracking
+- Shipment
+- ShipmentItem
+- PartialShipment
+- DeliveryConfirmation
+- ShipmentTracking
 
 ---
 
 # 24. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Circuit Breakers
-* Event Idempotency
-* Audit Logging
-* Database per Service
-* Independent Deployments
-* Observability Integration
-* Saga Participation Support
-* Dead Letter Topic Support
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Circuit Breakers
+- Event Idempotency
+- Audit Logging
+- Database per Service
+- Independent Deployments
+- Observability Integration
+- Saga Participation Support
+- Dead Letter Topic Support
 
 ---
 
 # 25. Success Criteria
 
-* Shipments can be created successfully.
-* Shipment dispatch workflows operate correctly.
-* Partial shipments are supported.
-* Delivery confirmations are captured successfully.
-* Shipment tracking provides real-time visibility.
-* Proof of delivery is maintained.
-* Dispatch reports are generated successfully.
-* Dispatch Service registers successfully with Service Discovery.
-* Dispatch APIs are accessible through API Gateway.
-* Dispatch events are published successfully to Kafka.
-* Distributed tracing is available for dispatch workflows.
-* Dispatch Service participates successfully in Saga workflows.
-* Dispatch Service remains independently deployable.
+- Shipments can be created successfully.
+- Shipment dispatch workflows operate correctly.
+- Partial shipments are supported.
+- Delivery confirmations are captured successfully.
+- Shipment tracking provides real-time visibility.
+- Proof of delivery is maintained.
+- Dispatch reports are generated successfully.
+- Dispatch Service registers successfully with Service Discovery.
+- Dispatch APIs are accessible through API Gateway.
+- Dispatch events are published successfully to Kafka.
+- Distributed tracing is available for dispatch workflows.
+- Dispatch Service participates successfully in Saga workflows.
+- Dispatch Service remains independently deployable.
 
 ---
 
@@ -1025,4 +1025,3 @@ Dispatch Service exclusively owns:
 | BR-011 | FR-DISP-010 |
 
 ---
-

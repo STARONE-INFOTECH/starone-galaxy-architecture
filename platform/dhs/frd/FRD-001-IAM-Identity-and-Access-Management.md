@@ -18,52 +18,53 @@
 
 # 2. Document Metadata
 
-| Field         | Value                            |
-| ------------- | -------------------------------- |
-| Document ID   | FRD-001                          |
-| Domain        | Security & Platform Foundation   |
-| Document Type | Functional Requirements Document |
-| Version       | v1.0.0                           |
-| Author        | Sachin Salunke                   |
-| Status        | Draft                            |
-| Date          | 2026-01-01                       |
-| Linked BRD    | BRD-001                          |
-| Linked PRD    | PRD-001                          |
-| Linked HLD    | HLD-001                          |
-| Linked SRS | SRS-001 |
-| Linked RTM | RTM-001 |
-| Linked CONTEXT | CONTEXT-001 |
-| Linked DOMAIN | DOMAIN-001 |
-| Linked ADRs | ADR-001 to ADR-007 |
+| Field          | Value                            |
+| -------------- | -------------------------------- |
+| Document ID    | FRD-001                          |
+| Domain         | Security & Platform Foundation   |
+| Document Type  | Functional Requirements Document |
+| Version        | v1.0.0                           |
+| Author         | Sachin Salunke                   |
+| Status         | Draft                            |
+| Date           | 2026-01-01                       |
+| Linked BRD     | BRD-001                          |
+| Linked PRD     | PRD-001                          |
+| Linked HLD     | HLD-001                          |
+| Linked SRS     | SRS-001                          |
+| Linked RTM     | RTM-001                          |
+| Linked CONTEXT | CONTEXT-001                      |
+| Linked DOMAIN  | DOMAIN-001                       |
+| Linked ADRs    | ADR-001 to ADR-007               |
 
 ---
 
 # 3. Revision History
 
-| Version | Date       | Author         | Description                                                   |
-| ------- | ---------- | -------------- | ------------------------------------------------------------- |
-| v1.0.0  | 2026-06-19 | Sachin Salunke | Initial Identity & Access Management functional specification |
-| v1.1.0 | 2026-06-20 | Sachin Salunke | Updated for Cloud-Native Monorepo-Based Multi-Module Microservices Architecture |
+| Version | Date       | Author         | Description                                                                     |
+| ------- | ---------- | -------------- | ------------------------------------------------------------------------------- |
+| v1.0.0  | 2026-06-19 | Sachin Salunke | Initial Identity & Access Management functional specification                   |
+| v1.1.0  | 2026-06-20 | Sachin Salunke | Updated for Cloud-Native Monorepo-Based Multi-Module Microservices Architecture |
+
 ---
 
 # 4. References
 
-| Reference ID | Document |
-|-------------|-----------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| SRS-001 | Software Requirements Specification |
-| HLD-001 | High-Level Design |
-| RTM-001 | Requirements Traceability Matrix |
-| CONTEXT-001 | System Context Document |
-| DOMAIN-001 | Domain Model |
-| ADR-001 | Monorepo-Based Multi-Module Microservices Architecture |
-| ADR-002 | Database per Service Strategy |
-| ADR-003 | Hybrid Communication Architecture |
-| ADR-004 | Service Discovery Architecture |
-| ADR-005 | API Gateway Strategy |
-| ADR-006 | Saga-Based Distributed Transaction Strategy |
-| ADR-007 | Security Architecture |
+| Reference ID | Document                                               |
+| ------------ | ------------------------------------------------------ |
+| BRD-001      | Business Requirements Document                         |
+| PRD-001      | Product Requirements Document                          |
+| SRS-001      | Software Requirements Specification                    |
+| HLD-001      | High-Level Design                                      |
+| RTM-001      | Requirements Traceability Matrix                       |
+| CONTEXT-001  | System Context Document                                |
+| DOMAIN-001   | Domain Model                                           |
+| ADR-001      | Monorepo-Based Multi-Module Microservices Architecture |
+| ADR-002      | Database per Service Strategy                          |
+| ADR-003      | Hybrid Communication Architecture                      |
+| ADR-004      | Service Discovery Architecture                         |
+| ADR-005      | API Gateway Strategy                                   |
+| ADR-006      | Saga-Based Distributed Transaction Strategy            |
+| ADR-007      | Security Architecture                                  |
 
 ---
 
@@ -661,6 +662,7 @@ POST /api/v1/auth/refresh
 POST /api/v1/auth/logout
 POST /api/v1/auth/validate
 ```
+
 ## User APIs
 
 ```text
@@ -821,4 +823,3 @@ Session
 | BR-012 | FR-IAM-008 |
 
 ---
-

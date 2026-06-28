@@ -82,17 +82,17 @@ The Distributed Hub and Sales (DHS) Platform is a cloud-native Order Management 
 
 The platform is implemented using a Monorepo-Based Multi-Module Microservices Architecture that provides:
 
-* Real-time inventory visibility
-* Centralized order management
-* Billing and dispatch operations
-* Customer order tracking
-* Operational reporting and analytics
-* Audit and compliance capabilities
-* Centralized API management
-* Service registration and discovery
-* Distributed service communication
-* Observability and monitoring capabilities
-* Independent service deployment and scalability
+- Real-time inventory visibility
+- Centralized order management
+- Billing and dispatch operations
+- Customer order tracking
+- Operational reporting and analytics
+- Audit and compliance capabilities
+- Centralized API management
+- Service registration and discovery
+- Distributed service communication
+- Observability and monitoring capabilities
+- Independent service deployment and scalability
 
 ---
 
@@ -144,50 +144,50 @@ Provide observability and distributed tracing capabilities.
 
 ## Business Principles
 
-* Centralized operations
-* Real-time information visibility
-* Single source of truth
-* Process standardization
-* Business capability ownership
-* Operational transparency
+- Centralized operations
+- Real-time information visibility
+- Single source of truth
+- Process standardization
+- Business capability ownership
+- Operational transparency
 
 ---
 
 ## Application Principles
 
-* Microservices architecture
-* Domain-driven service boundaries
-* Stateless services
-* API-first design
-* Independent deployability
-* Shared platform capabilities
-* Contract-first integration
-* Service autonomy
+- Microservices architecture
+- Domain-driven service boundaries
+- Stateless services
+- API-first design
+- Independent deployability
+- Shared platform capabilities
+- Contract-first integration
+- Service autonomy
 
 ---
 
 ## Data Principles
 
-* Database per service
-* Event-driven synchronization
-* Service ownership of data
-* No direct cross-service database access
-* Immutable audit logs
-* Data consistency through events
-* Auditability
+- Database per service
+- Event-driven synchronization
+- Service ownership of data
+- No direct cross-service database access
+- Immutable audit logs
+- Data consistency through events
+- Auditability
 
 ---
 
 ## Technology Principles
 
-* Cloud-native architecture
-* Monorepo source control strategy
-* Multi-module Maven build strategy
-* Container-first deployment
-* Infrastructure automation
-* Configuration externalization
-* Observability by default
-* Security by design
+- Cloud-native architecture
+- Monorepo source control strategy
+- Multi-module Maven build strategy
+- Container-first deployment
+- Infrastructure automation
+- Configuration externalization
+- Observability by default
+- Security by design
 
 ---
 
@@ -250,19 +250,19 @@ Cloud-Native Monorepo-Based Multi-Module Microservices Architecture
 
 Characteristics:
 
-* Single source repository (Monorepo)
-* Multi-module Maven build structure
-* Independently deployable services
-* API Gateway entry point
-* Service registration and discovery
-* Shared platform libraries
-* Database per service
-* Event-driven communication
-* API-first integration model
-* Configuration externalization
-* Observability by default
-* Horizontal scalability
-* Service autonomy
+- Single source repository (Monorepo)
+- Multi-module Maven build structure
+- Independently deployable services
+- API Gateway entry point
+- Service registration and discovery
+- Shared platform libraries
+- Database per service
+- Event-driven communication
+- API-first integration model
+- Configuration externalization
+- Observability by default
+- Horizontal scalability
+- Service autonomy
 
 ---
 
@@ -332,13 +332,13 @@ EUREKA --> AUDIT
 
 Responsibilities:
 
-* Authentication
-* Authorization
-* User Management
-* Role Management
-* Permission Management
-* Session Management
-* Token Management
+- Authentication
+- Authorization
+- User Management
+- Role Management
+- Permission Management
+- Session Management
+- Token Management
 
 ---
 
@@ -346,11 +346,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Branch Registration
-* Branch Configuration
-* Branch Lifecycle Management
-* Branch Status Management
-* Branch Hierarchy Management
+- Branch Registration
+- Branch Configuration
+- Branch Lifecycle Management
+- Branch Status Management
+- Branch Hierarchy Management
 
 ---
 
@@ -358,11 +358,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Customer Registration
-* Customer Profiles
-* Customer Addresses
-* Customer Search
-* Customer Status Management
+- Customer Registration
+- Customer Profiles
+- Customer Addresses
+- Customer Search
+- Customer Status Management
 
 ---
 
@@ -370,12 +370,12 @@ Responsibilities:
 
 Responsibilities:
 
-* Product Management
-* Categories
-* Pricing
-* Product Attributes
-* Product Search
-* Product Availability
+- Product Management
+- Categories
+- Pricing
+- Product Attributes
+- Product Search
+- Product Availability
 
 ---
 
@@ -383,12 +383,12 @@ Responsibilities:
 
 Responsibilities:
 
-* Stock Management
-* Reservations
-* Adjustments
-* Stock Movements
-* Barcode Operations
-* Inventory Auditing
+- Stock Management
+- Reservations
+- Adjustments
+- Stock Movements
+- Barcode Operations
+- Inventory Auditing
 
 ---
 
@@ -396,12 +396,12 @@ Responsibilities:
 
 Responsibilities:
 
-* Order Creation
-* Order Validation
-* Order Tracking
-* Order Lifecycle Management
-* Backorder Management
-* Order State Management
+- Order Creation
+- Order Validation
+- Order Tracking
+- Order Lifecycle Management
+- Backorder Management
+- Order State Management
 
 ---
 
@@ -409,12 +409,12 @@ Responsibilities:
 
 Responsibilities:
 
-* Invoice Generation
-* Partial Billing
-* Tax Calculation
-* Payment Management
-* E-Invoicing
-* Billing Auditing
+- Invoice Generation
+- Partial Billing
+- Tax Calculation
+- Payment Management
+- E-Invoicing
+- Billing Auditing
 
 ---
 
@@ -422,11 +422,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Shipment Creation
-* Shipment Tracking
-* Delivery Confirmation
-* Dispatch Lifecycle Management
-* Carrier Integration
+- Shipment Creation
+- Shipment Tracking
+- Delivery Confirmation
+- Dispatch Lifecycle Management
+- Carrier Integration
 
 ---
 
@@ -434,11 +434,11 @@ Responsibilities:
 
 Responsibilities:
 
-* SMS Notifications
-* Email Notifications
-* Event Notifications
-* Template Management
-* Notification Tracking
+- SMS Notifications
+- Email Notifications
+- Event Notifications
+- Template Management
+- Notification Tracking
 
 ---
 
@@ -446,11 +446,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Operational Dashboards
-* KPI Reporting
-* Analytics
-* Metrics
-* Data Aggregation
+- Operational Dashboards
+- KPI Reporting
+- Analytics
+- Metrics
+- Data Aggregation
 
 ---
 
@@ -458,11 +458,11 @@ Responsibilities:
 
 Responsibilities:
 
-* Audit Logging
-* Compliance Tracking
-* Security Auditing
-* Event Archiving
-* Operational Auditing
+- Audit Logging
+- Compliance Tracking
+- Security Auditing
+- Event Archiving
+- Operational Auditing
 
 ---
 
@@ -521,14 +521,14 @@ end
 
 ## Data Principles
 
-* Single ownership of data
-* Database per service
-* Event-driven synchronization
-* Immutable audit logs
-* No direct cross-service database access
-* Data consistency through events
-* Read-only cross-service projections where required
-* Service-owned schema evolution
+- Single ownership of data
+- Database per service
+- Event-driven synchronization
+- Immutable audit logs
+- No direct cross-service database access
+- Data consistency through events
+- Read-only cross-service projections where required
+- Service-owned schema evolution
 
 ---
 
@@ -538,20 +538,20 @@ end
 
 Technology:
 
-* Spring Cloud Gateway
-* Netflix Eureka
-* OpenFeign
-* REST APIs
-* OpenAPI Contracts
+- Spring Cloud Gateway
+- Netflix Eureka
+- OpenFeign
+- REST APIs
+- OpenAPI Contracts
 
 Used For:
 
-* Authentication
-* Master Data Queries
-* Search Operations
-* Reporting Queries
-* Service-to-Service Communication
-* Configuration Retrieval
+- Authentication
+- Master Data Queries
+- Search Operations
+- Reporting Queries
+- Service-to-Service Communication
+- Configuration Retrieval
 
 ### Communication Pattern
 
@@ -571,17 +571,17 @@ Target Service
 
 Technology:
 
-* Apache Kafka
+- Apache Kafka
 
 Used For:
 
-* Order Events
-* Inventory Events
-* Billing Events
-* Dispatch Events
-* Notification Events
-* Audit Events
-* Reporting Events
+- Order Events
+- Inventory Events
+- Billing Events
+- Dispatch Events
+- Notification Events
+- Audit Events
+- Reporting Events
 
 ### Event Communication Pattern
 
@@ -612,45 +612,45 @@ audit-created
 
 ## Authentication
 
-* JWT Authentication
-* Access Tokens
-* Refresh Tokens
-* Token Validation at Gateway
-* Service-to-Service Token Propagation
+- JWT Authentication
+- Access Tokens
+- Refresh Tokens
+- Token Validation at Gateway
+- Service-to-Service Token Propagation
 
 ---
 
 ## Authorization
 
-* RBAC
-* Permission-Based Access
-* Endpoint-Level Authorization
-* Method-Level Authorization
-* Service-Level Authorization
+- RBAC
+- Permission-Based Access
+- Endpoint-Level Authorization
+- Method-Level Authorization
+- Service-Level Authorization
 
 ---
 
 ## Transport Security
 
-* TLS 1.3
-* HTTPS-only communication
-* Secure Inter-Service Communication
+- TLS 1.3
+- HTTPS-only communication
+- Secure Inter-Service Communication
 
 ---
 
 ## Security Controls
 
-* Gateway Authentication Filters
-* Gateway Authorization Filters
-* Input Validation
-* SQL Injection Protection
-* XSS Protection
-* CSRF Protection
-* Rate Limiting
-* Correlation ID Propagation
-* Structured Audit Logging
-* Secrets Externalization
-* Configuration Encryption
+- Gateway Authentication Filters
+- Gateway Authorization Filters
+- Input Validation
+- SQL Injection Protection
+- XSS Protection
+- CSRF Protection
+- Rate Limiting
+- Correlation ID Propagation
+- Structured Audit Logging
+- Secrets Externalization
+- Configuration Encryption
 
 ---
 
@@ -658,67 +658,67 @@ audit-created
 
 ## Availability
 
-* Availability SLA: 99.9%
-* Health Monitoring
-* Self-Healing Deployments
-* Automatic Service Recovery
+- Availability SLA: 99.9%
+- Health Monitoring
+- Self-Healing Deployments
+- Automatic Service Recovery
 
 ---
 
 ## Performance
 
-* Standard API Response: < 200 ms
-* Service Discovery Response: < 50 ms
-* Configuration Retrieval: < 100 ms
-* Horizontal Service Scalability
-* Event Processing Throughput Support
+- Standard API Response: < 200 ms
+- Service Discovery Response: < 50 ms
+- Configuration Retrieval: < 100 ms
+- Horizontal Service Scalability
+- Event Processing Throughput Support
 
 ---
 
 ## Scalability
 
-* Independent service deployment
-* Independent service scaling
-* Horizontal service scaling
-* Stateless application services
-* Independent resource allocation
-* Dynamic service registration
+- Independent service deployment
+- Independent service scaling
+- Horizontal service scaling
+- Stateless application services
+- Independent resource allocation
+- Dynamic service registration
 
 ---
 
 ## Reliability
 
-* Retry mechanisms
-* Failure recovery
-* Circuit breaker support
-* Dead letter queues
-* Event replay capabilities
-* Graceful degradation
-* Fallback mechanisms
+- Retry mechanisms
+- Failure recovery
+- Circuit breaker support
+- Dead letter queues
+- Event replay capabilities
+- Graceful degradation
+- Fallback mechanisms
 
 ---
 
 ## Maintainability
 
-* Microservices architecture
-* Domain-driven service boundaries
-* API-first approach
-* Shared platform libraries
-* Configuration externalization
-* Contract-first communication
-* Observability by default
+- Microservices architecture
+- Domain-driven service boundaries
+- API-first approach
+- Shared platform libraries
+- Configuration externalization
+- Contract-first communication
+- Observability by default
 
 ---
 
 ## Observability
 
-* Distributed tracing
-* Metrics collection
-* Structured logging
-* Health indicators
-* Correlation ID propagation
-* Performance monitoring
-* Service dependency visibility
+- Distributed tracing
+- Metrics collection
+- Structured logging
+- Health indicators
+- Correlation ID propagation
+- Performance monitoring
+- Service dependency visibility
 
 ---
 
@@ -816,33 +816,33 @@ GRAFANA --> PROMETHEUS
 
 # 21. Architecture Constraints
 
-* Distributed services operating under centralized business governance.
-* Cloud-native deployment model.
-* Regulatory requirements for GST and E-Invoicing.
-* Event-driven business workflows.
-* Future multi-branch scalability requirements.
-* Services shall communicate only through APIs or events.
-* No direct cross-service database access.
-* All external traffic shall enter through API Gateway.
-* Configuration shall be externally managed.
+- Distributed services operating under centralized business governance.
+- Cloud-native deployment model.
+- Regulatory requirements for GST and E-Invoicing.
+- Event-driven business workflows.
+- Future multi-branch scalability requirements.
+- Services shall communicate only through APIs or events.
+- No direct cross-service database access.
+- All external traffic shall enter through API Gateway.
+- Configuration shall be externally managed.
 
 ---
 
 # 22. Architecture Success Criteria
 
-* Real-time inventory visibility.
-* Centralized order lifecycle management.
-* API response times below 200 ms.
-* Platform availability above 99.9%.
-* Successful partial billing support.
-* Complete auditability of business transactions.
-* Services can be deployed independently.
-* Service discovery operates successfully.
-* Gateway successfully routes requests.
-* Platform observability provides end-to-end traceability.
-* Services communicate through standardized APIs and events.
-* Independent scaling of business services.
-* Support for future business growth without architectural redesign.
+- Real-time inventory visibility.
+- Centralized order lifecycle management.
+- API response times below 200 ms.
+- Platform availability above 99.9%.
+- Successful partial billing support.
+- Complete auditability of business transactions.
+- Services can be deployed independently.
+- Service discovery operates successfully.
+- Gateway successfully routes requests.
+- Platform observability provides end-to-end traceability.
+- Services communicate through standardized APIs and events.
+- Independent scaling of business services.
+- Support for future business growth without architectural redesign.
 
 ---
 

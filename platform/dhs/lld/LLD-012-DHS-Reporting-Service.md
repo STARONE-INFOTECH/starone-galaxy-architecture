@@ -2,18 +2,18 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project | Distributed Hub & Sales (DHS) Platform |
-| Service | Reporting Service |
-| Document | Low Level Design |
-| Document ID | LLD-012 |
-| Repository | starone-dhs-platform |
-| Module | reporting-service |
-| Version | v1.0.0 |
-| Status | Draft |
-| Standard | IEEE 1016 |
-| Owner | Enterprise Architecture |
+| Field       | Value                                  |
+| ----------- | -------------------------------------- |
+| Project     | Distributed Hub & Sales (DHS) Platform |
+| Service     | Reporting Service                      |
+| Document    | Low Level Design                       |
+| Document ID | LLD-012                                |
+| Repository  | starone-dhs-platform                   |
+| Module      | reporting-service                      |
+| Version     | v1.0.0                                 |
+| Status      | Draft                                  |
+| Standard    | IEEE 1016                              |
+| Owner       | Enterprise Architecture                |
 
 ---
 
@@ -334,16 +334,16 @@ Logging --> PlatformFoundation
 
 # 11. Domain Responsibilities
 
-| Component | Responsibility |
-|------------|----------------|
+| Component | Responsibility      |
+| --------- | ------------------- |
 | Dashboard | Executive Dashboard |
-| Report | Business Reports |
-| KPI | KPI Calculations |
-| Template | Report Templates |
-| Export | Report Export |
-| Schedule | Scheduled Reports |
-| Execution | Report Execution |
-| Audit | Reporting Audit |
+| Report    | Business Reports    |
+| KPI       | KPI Calculations    |
+| Template  | Report Templates    |
+| Export    | Report Export       |
+| Schedule  | Scheduled Reports   |
+| Execution | Report Execution    |
+| Audit     | Reporting Audit     |
 
 ---
 
@@ -671,15 +671,15 @@ repository
 
 ## Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| DashboardRepository | Dashboard Metadata |
-| ReportRepository | Report Definitions |
-| KPIRepository | KPI Definitions |
-| ReportTemplateRepository | Templates |
-| ScheduledReportRepository | Scheduling |
-| ReportExecutionRepository | Execution History |
-| ReportExportRepository | Export Metadata |
+| Repository                | Responsibility     |
+| ------------------------- | ------------------ |
+| DashboardRepository       | Dashboard Metadata |
+| ReportRepository          | Report Definitions |
+| KPIRepository             | KPI Definitions    |
+| ReportTemplateRepository  | Templates          |
+| ScheduledReportRepository | Scheduling         |
+| ReportExecutionRepository | Execution History  |
+| ReportExportRepository    | Export Metadata    |
 
 ---
 
@@ -724,13 +724,13 @@ dto.response
 
 ## DashboardResponse
 
-| Field | Type |
-|---------|------|
-| dashboardId | UUID |
-| dashboardName | String |
-| generatedAt | Instant |
-| totalWidgets | Integer |
-| refreshTime | Instant |
+| Field         | Type    |
+| ------------- | ------- |
+| dashboardId   | UUID    |
+| dashboardName | String  |
+| generatedAt   | Instant |
+| totalWidgets  | Integer |
+| refreshTime   | Instant |
 
 ---
 
@@ -759,86 +759,86 @@ entity
 
 ## Dashboard
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| dashboardName | String |
-| dashboardType | DashboardType |
-| refreshInterval | Integer |
-| cacheEnabled | Boolean |
+| Attribute       | Type          |
+| --------------- | ------------- |
+| id              | UUID          |
+| dashboardName   | String        |
+| dashboardType   | DashboardType |
+| refreshInterval | Integer       |
+| cacheEnabled    | Boolean       |
 
 ---
 
 ## ReportDefinition
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportCode | String |
-| reportName | String |
+| Attribute      | Type           |
+| -------------- | -------------- |
+| id             | UUID           |
+| reportCode     | String         |
+| reportName     | String         |
 | reportCategory | ReportCategory |
-| queryName | String |
-| outputFormat | ReportFormat |
+| queryName      | String         |
+| outputFormat   | ReportFormat   |
 
 ---
 
 ## KPI
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| kpiCode | String |
-| kpiName | String |
+| Attribute       | Type            |
+| --------------- | --------------- |
+| id              | UUID            |
+| kpiCode         | String          |
+| kpiName         | String          |
 | calculationType | CalculationType |
-| refreshInterval | Integer |
+| refreshInterval | Integer         |
 
 ---
 
 ## ReportTemplate
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| templateCode | String |
-| templateName | String |
-| templateVersion | Integer |
-| reportCategory | ReportCategory |
+| Attribute       | Type           |
+| --------------- | -------------- |
+| id              | UUID           |
+| templateCode    | String         |
+| templateName    | String         |
+| templateVersion | Integer        |
+| reportCategory  | ReportCategory |
 
 ---
 
 ## ScheduledReport
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportId | UUID |
-| cronExpression | String |
-| nextExecution | Instant |
+| Attribute      | Type           |
+| -------------- | -------------- |
+| id             | UUID           |
+| reportId       | UUID           |
+| cronExpression | String         |
+| nextExecution  | Instant        |
 | scheduleStatus | ScheduleStatus |
 
 ---
 
 ## ReportExecution
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportId | UUID |
+| Attribute       | Type            |
+| --------------- | --------------- |
+| id              | UUID            |
+| reportId        | UUID            |
 | executionStatus | ExecutionStatus |
-| startedAt | Instant |
-| completedAt | Instant |
+| startedAt       | Instant         |
+| completedAt     | Instant         |
 
 ---
 
 ## ReportExport
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| reportExecutionId | UUID |
-| exportType | ExportType |
-| fileName | String |
-| storagePath | String |
+| Attribute         | Type       |
+| ----------------- | ---------- |
+| id                | UUID       |
+| reportExecutionId | UUID       |
+| exportType        | ExportType |
+| fileName          | String     |
+| storagePath       | String     |
 
 ---
 
@@ -905,14 +905,14 @@ TemplateValidator
 
 ## Validation Rules
 
-| Validator | Purpose |
-|------------|----------|
+| Validator          | Purpose              |
+| ------------------ | -------------------- |
 | DashboardValidator | Dashboard Validation |
-| ReportValidator | Report Validation |
-| KPIValidator | KPI Validation |
-| ScheduleValidator | Schedule Validation |
-| ExportValidator | Export Validation |
-| TemplateValidator | Template Validation |
+| ReportValidator    | Report Validation    |
+| KPIValidator       | KPI Validation       |
+| ScheduleValidator  | Schedule Validation  |
+| ExportValidator    | Export Validation    |
+| TemplateValidator  | Template Validation  |
 
 ---
 
@@ -1125,17 +1125,17 @@ security
 
 ## 30.3 Permissions
 
-| Permission | Description |
-|------------|-------------|
-| DASHBOARD_VIEW | View Dashboards |
-| REPORT_VIEW | View Reports |
-| REPORT_EXPORT | Export Reports |
-| REPORT_EXECUTE | Execute Reports |
-| REPORT_SCHEDULE | Schedule Reports |
-| KPI_VIEW | View KPIs |
-| TEMPLATE_MANAGE | Manage Report Templates |
-| REPORT_ADMIN | Reporting Administration |
-| REPORT_AUDIT | View Reporting Audit |
+| Permission      | Description              |
+| --------------- | ------------------------ |
+| DASHBOARD_VIEW  | View Dashboards          |
+| REPORT_VIEW     | View Reports             |
+| REPORT_EXPORT   | Export Reports           |
+| REPORT_EXECUTE  | Execute Reports          |
+| REPORT_SCHEDULE | Schedule Reports         |
+| KPI_VIEW        | View KPIs                |
+| TEMPLATE_MANAGE | Manage Report Templates  |
+| REPORT_ADMIN    | Reporting Administration |
+| REPORT_AUDIT    | View Reporting Audit     |
 
 ---
 
@@ -1173,16 +1173,12 @@ Reporting Service shall consume authenticated user information from Spring Secur
 
 ```json
 {
-  "sub":"UUID",
-  "username":"report.manager",
-  "roles":["REPORT_MANAGER"],
-  "permissions":[
-      "REPORT_VIEW",
-      "REPORT_EXPORT",
-      "REPORT_EXECUTE"
-  ],
-  "tenantId":"UUID",
-  "branchId":"UUID"
+  "sub": "UUID",
+  "username": "report.manager",
+  "roles": ["REPORT_MANAGER"],
+  "permissions": ["REPORT_VIEW", "REPORT_EXPORT", "REPORT_EXECUTE"],
+  "tenantId": "UUID",
+  "branchId": "UUID"
 }
 ```
 
@@ -1232,17 +1228,17 @@ or
 
 ## Permission Matrix
 
-| API | Permission |
-|-----|------------|
-| View Dashboard | DASHBOARD_VIEW |
-| Execute Report | REPORT_EXECUTE |
-| View Report | REPORT_VIEW |
-| Export Report | REPORT_EXPORT |
-| Schedule Report | REPORT_SCHEDULE |
-| View KPI | KPI_VIEW |
+| API              | Permission      |
+| ---------------- | --------------- |
+| View Dashboard   | DASHBOARD_VIEW  |
+| Execute Report   | REPORT_EXECUTE  |
+| View Report      | REPORT_VIEW     |
+| Export Report    | REPORT_EXPORT   |
+| Schedule Report  | REPORT_SCHEDULE |
+| View KPI         | KPI_VIEW        |
 | Manage Templates | TEMPLATE_MANAGE |
-| Administration | REPORT_ADMIN |
-| Reporting Audit | REPORT_AUDIT |
+| Administration   | REPORT_ADMIN    |
+| Reporting Audit  | REPORT_AUDIT    |
 
 ---
 
@@ -1318,12 +1314,12 @@ kafka
 
 ```json
 {
-  "eventId":"UUID",
-  "eventType":"ReportGenerated",
-  "eventVersion":"1.0",
-  "occurredAt":"2026-06-27T10:00:00Z",
-  "correlationId":"UUID",
-  "payload":{}
+  "eventId": "UUID",
+  "eventType": "ReportGenerated",
+  "eventVersion": "1.0",
+  "occurredAt": "2026-06-27T10:00:00Z",
+  "correlationId": "UUID",
+  "payload": {}
 }
 ```
 
@@ -1355,16 +1351,16 @@ client
 
 ## Responsibilities
 
-| Client | Responsibility |
-|----------|----------------|
-| OrderClient | Sales Reports |
-| InventoryClient | Inventory Reports |
-| BillingClient | Financial Reports |
-| ProcurementClient | Procurement Reports |
-| CustomerClient | Customer Reports |
-| SupplierClient | Supplier Reports |
-| DispatchClient | Logistics Reports |
-| AuditClient | Audit Reports |
+| Client             | Responsibility                 |
+| ------------------ | ------------------------------ |
+| OrderClient        | Sales Reports                  |
+| InventoryClient    | Inventory Reports              |
+| BillingClient      | Financial Reports              |
+| ProcurementClient  | Procurement Reports            |
+| CustomerClient     | Customer Reports               |
+| SupplierClient     | Supplier Reports               |
+| DispatchClient     | Logistics Reports              |
+| AuditClient        | Audit Reports                  |
 | NotificationClient | Scheduled Report Notifications |
 
 ---
@@ -1390,17 +1386,17 @@ config
 
 ## Responsibilities
 
-| Configuration | Responsibility |
-|---------------|----------------|
-| Security | Spring Security |
-| Kafka | Kafka Infrastructure |
-| Feign | OpenFeign |
-| Cache | Redis |
-| Validation | Bean Validation |
-| Scheduler | Report Scheduling |
-| Metrics | Micrometer |
-| Reporting | Reporting Engine |
-| OpenAPI | Swagger |
+| Configuration | Responsibility       |
+| ------------- | -------------------- |
+| Security      | Spring Security      |
+| Kafka         | Kafka Infrastructure |
+| Feign         | OpenFeign            |
+| Cache         | Redis                |
+| Validation    | Bean Validation      |
+| Scheduler     | Report Scheduling    |
+| Metrics       | Micrometer           |
+| Reporting     | Reporting Engine     |
+| OpenAPI       | Swagger              |
 
 ---
 
@@ -1414,13 +1410,13 @@ Report generation shall not modify business data.
 
 ## Transaction Types
 
-| Operation | Propagation |
-|------------|-------------|
-| Execute Report | SUPPORTS |
-| Dashboard Refresh | SUPPORTS |
-| Export Report | REQUIRED |
-| Schedule Report | REQUIRED |
-| Publish Event | AFTER_COMMIT |
+| Operation         | Propagation  |
+| ----------------- | ------------ |
+| Execute Report    | SUPPORTS     |
+| Dashboard Refresh | SUPPORTS     |
+| Export Report     | REQUIRED     |
+| Schedule Report   | REQUIRED     |
+| Publish Event     | AFTER_COMMIT |
 
 ---
 
@@ -1562,29 +1558,29 @@ scheduler
 
 # 40. External Integration Design
 
-| Service | Purpose |
-|----------|---------|
-| Order Service | Sales Analytics |
-| Inventory Service | Inventory Analytics |
-| Billing Service | Financial Analytics |
-| Procurement Service | Procurement Analytics |
-| Customer Service | Customer Analytics |
-| Supplier Service | Supplier Analytics |
-| Dispatch Service | Logistics Analytics |
+| Service              | Purpose                   |
+| -------------------- | ------------------------- |
+| Order Service        | Sales Analytics           |
+| Inventory Service    | Inventory Analytics       |
+| Billing Service      | Financial Analytics       |
+| Procurement Service  | Procurement Analytics     |
+| Customer Service     | Customer Analytics        |
+| Supplier Service     | Supplier Analytics        |
+| Dispatch Service     | Logistics Analytics       |
 | Notification Service | Scheduled Report Delivery |
-| Audit Service | Audit Reporting |
+| Audit Service        | Audit Reporting           |
 
 ---
 
 # 41. Configuration Properties
 
-| Property | Default |
-|----------|----------|
-| reporting.cache.enabled | true |
-| reporting.cache.ttl | 3600 |
-| reporting.export.max.rows | 100000 |
-| reporting.scheduler.enabled | true |
-| reporting.kafka.retry | 3 |
+| Property                    | Default |
+| --------------------------- | ------- |
+| reporting.cache.enabled     | true    |
+| reporting.cache.ttl         | 3600    |
+| reporting.export.max.rows   | 100000  |
+| reporting.scheduler.enabled | true    |
+| reporting.kafka.retry       | 3       |
 
 ---
 
@@ -1622,23 +1618,23 @@ scheduler
 
 # 45. Technology Standards
 
-| Concern | Technology |
-|----------|------------|
-| Java | Java 21 |
-| Framework | Spring Boot 3.x |
-| Security | Spring Security 6 |
-| Authentication | JWT |
-| Authorization | RBAC |
-| Database | PostgreSQL |
-| Cache | Redis |
-| Messaging | Apache Kafka |
-| Service Calls | OpenFeign |
-| Validation | Jakarta Bean Validation |
-| Mapping | MapStruct |
-| Logging | SLF4J + Logback |
-| Metrics | Micrometer |
-| Tracing | OpenTelemetry |
-| Service Discovery | Eureka |
+| Concern           | Technology              |
+| ----------------- | ----------------------- |
+| Java              | Java 21                 |
+| Framework         | Spring Boot 3.x         |
+| Security          | Spring Security 6       |
+| Authentication    | JWT                     |
+| Authorization     | RBAC                    |
+| Database          | PostgreSQL              |
+| Cache             | Redis                   |
+| Messaging         | Apache Kafka            |
+| Service Calls     | OpenFeign               |
+| Validation        | Jakarta Bean Validation |
+| Mapping           | MapStruct               |
+| Logging           | SLF4J + Logback         |
+| Metrics           | Micrometer              |
+| Tracing           | OpenTelemetry           |
+| Service Discovery | Eureka                  |
 
 ---
 
@@ -1680,13 +1676,13 @@ ELK / OpenSearch / Splunk
 
 ## 46.2 Log Levels
 
-| Level | Purpose |
-|---------|---------|
-| TRACE | Framework Diagnostics |
-| DEBUG | Development |
-| INFO | Business Events |
-| WARN | Recoverable Processing Errors |
-| ERROR | Report Execution Failures |
+| Level | Purpose                       |
+| ----- | ----------------------------- |
+| TRACE | Framework Diagnostics         |
+| DEBUG | Development                   |
+| INFO  | Business Events               |
+| WARN  | Recoverable Processing Errors |
+| ERROR | Report Execution Failures     |
 
 ---
 
@@ -2133,15 +2129,15 @@ Every Pull Request shall verify
 
 # 56. Quality Gates
 
-| Metric | Target |
-|---------|--------|
-| Unit Test Coverage | ≥90% |
-| Integration Tests | 100% Pass |
-| Reporting Tests | 100% Pass |
-| Critical Bugs | 0 |
-| Critical Vulnerabilities | 0 |
-| Code Duplication | <3% |
-| Documentation | Mandatory |
+| Metric                   | Target    |
+| ------------------------ | --------- |
+| Unit Test Coverage       | ≥90%      |
+| Integration Tests        | 100% Pass |
+| Reporting Tests          | 100% Pass |
+| Critical Bugs            | 0         |
+| Critical Vulnerabilities | 0         |
+| Code Duplication         | <3%       |
+| Documentation            | Mandatory |
 
 ---
 
@@ -2206,39 +2202,39 @@ Before implementation verify
 
 # 60. Appendix A – Framework Versions
 
-| Component | Version |
-|------------|---------|
-| Java | 21 |
-| Spring Boot | 3.x |
-| Spring Security | 6.x |
-| Spring Cloud | 2025.x |
-| PostgreSQL | Latest Supported |
-| Redis | Latest Supported |
-| Kafka | Latest Supported |
-| OpenFeign | Latest Supported |
-| Micrometer | Latest Supported |
-| OpenTelemetry | Latest Supported |
-| JasperReports | Latest Stable |
-| Apache POI | Latest Stable |
-| MapStruct | Latest Stable |
-| Lombok | Latest Stable |
-| JUnit | 5.x |
+| Component       | Version          |
+| --------------- | ---------------- |
+| Java            | 21               |
+| Spring Boot     | 3.x              |
+| Spring Security | 6.x              |
+| Spring Cloud    | 2025.x           |
+| PostgreSQL      | Latest Supported |
+| Redis           | Latest Supported |
+| Kafka           | Latest Supported |
+| OpenFeign       | Latest Supported |
+| Micrometer      | Latest Supported |
+| OpenTelemetry   | Latest Supported |
+| JasperReports   | Latest Stable    |
+| Apache POI      | Latest Stable    |
+| MapStruct       | Latest Stable    |
+| Lombok          | Latest Stable    |
+| JUnit           | 5.x              |
 
 ---
 
 # 61. Appendix B – Layer Responsibility Matrix
 
-| Layer | Responsibility |
-|---------|----------------|
-| Controller | Request Handling |
-| Service | Report Generation |
-| Repository | Data Access |
-| Dashboard | Dashboard Processing |
-| Export | Export Generation |
-| Scheduler | Scheduled Reports |
-| Kafka | Event Processing |
-| Mapper | DTO Conversion |
-| Validation | Request Validation |
+| Layer      | Responsibility       |
+| ---------- | -------------------- |
+| Controller | Request Handling     |
+| Service    | Report Generation    |
+| Repository | Data Access          |
+| Dashboard  | Dashboard Processing |
+| Export     | Export Generation    |
+| Scheduler  | Scheduled Reports    |
+| Kafka      | Event Processing     |
+| Mapper     | DTO Conversion       |
+| Validation | Request Validation   |
 
 ---
 
@@ -2348,12 +2344,12 @@ Response
 
 # 64. Appendix E – Repository Responsibilities
 
-| Repository | Responsibility |
-|------------|----------------|
-| starone-galaxy-architecture | Enterprise Standards, Governance & Architecture |
-| starone-galaxy-central-config | Configuration Management |
-| starone-galaxy-infra | Kubernetes, Infrastructure & CI/CD |
-| starone-dhs-platform | Reporting Service Implementation |
+| Repository                    | Responsibility                                  |
+| ----------------------------- | ----------------------------------------------- |
+| starone-galaxy-architecture   | Enterprise Standards, Governance & Architecture |
+| starone-galaxy-central-config | Configuration Management                        |
+| starone-galaxy-infra          | Kubernetes, Infrastructure & CI/CD              |
+| starone-dhs-platform          | Reporting Service Implementation                |
 
 ---
 

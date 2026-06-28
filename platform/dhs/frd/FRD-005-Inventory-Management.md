@@ -85,44 +85,44 @@ The Inventory Service provides centralized inventory management capabilities for
 
 Responsibilities:
 
-* Inventory Creation
-* Stock Management
-* Stock Reservation
-* Stock Release
-* Stock Adjustment
-* Stock Transfers
-* Barcode Management
-* Inventory Search
-* Inventory Visibility
-* Inventory Audit Logging
+- Inventory Creation
+- Stock Management
+- Stock Reservation
+- Stock Release
+- Stock Adjustment
+- Stock Transfers
+- Barcode Management
+- Inventory Search
+- Inventory Visibility
+- Inventory Audit Logging
 
 The service acts as the system of record for product stock availability and fulfillment operations.
 
 The Inventory Service supports:
 
-* Product Availability
-* Order Processing
-* Billing
-* Dispatch
-* Reporting
-* Analytics
+- Product Availability
+- Order Processing
+- Billing
+- Dispatch
+- Reporting
+- Analytics
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* REST APIs and OpenFeign Communication
-* Event-Driven Architecture
-* Kafka Integration
-* Saga Participation
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- REST APIs and OpenFeign Communication
+- Event-Driven Architecture
+- Kafka Integration
+- Saga Participation
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -146,11 +146,11 @@ inventory-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
@@ -158,16 +158,16 @@ inventory-db
 
 ### Synchronous Dependencies
 
-* product-service
-* branch-service
-* order-service
+- product-service
+- branch-service
+- order-service
 
 ### Asynchronous Dependencies
 
-* billing-service
-* dispatch-service
-* reporting-service
-* audit-service
+- billing-service
+- dispatch-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -513,17 +513,17 @@ Inventory Service-->>Order Service: Reservation Released
 
 Technologies:
 
-* REST APIs
-* OpenFeign
-* Service Discovery
+- REST APIs
+- OpenFeign
+- Service Discovery
 
 Used For:
 
-* Product Validation
-* Inventory Lookup
-* Stock Availability
-* Inventory Search
-* Branch Validation
+- Product Validation
+- Inventory Lookup
+- Stock Availability
+- Inventory Search
+- Branch Validation
 
 ---
 
@@ -531,19 +531,19 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Stock Reservation Events
-* Inventory Adjustment Events
-* Inventory Transfer Events
-* Reporting Events
-* Audit Events
-* Saga Coordination
+- Stock Reservation Events
+- Inventory Adjustment Events
+- Inventory Transfer Events
+- Reporting Events
+- Audit Events
+- Saga Coordination
 
 # 14. Published Events
 
@@ -702,18 +702,18 @@ POST /api/v1/inventories/barcodes/scan
 
 Fields:
 
-* Product
-* Branch
-* Available Quantity
-* Reserved Quantity
-* Status
+- Product
+- Branch
+- Available Quantity
+- Reserved Quantity
+- Status
 
 Actions:
 
-* Create
-* Update
-* Search
-* View
+- Create
+- Update
+- Search
+- View
 
 ---
 
@@ -721,16 +721,16 @@ Actions:
 
 Fields:
 
-* Product
-* Requested Quantity
-* Available Quantity
-* Reserved Quantity
+- Product
+- Requested Quantity
+- Available Quantity
+- Reserved Quantity
 
 Actions:
 
-* Reserve
-* Release
-* View
+- Reserve
+- Release
+- View
 
 ---
 
@@ -738,17 +738,17 @@ Actions:
 
 Fields:
 
-* Product
-* Branch
-* Adjustment Type
-* Quantity
-* Reason
+- Product
+- Branch
+- Adjustment Type
+- Quantity
+- Reason
 
 Actions:
 
-* Adjust
-* Search
-* View
+- Adjust
+- Search
+- View
 
 ---
 
@@ -756,18 +756,18 @@ Actions:
 
 Fields:
 
-* Product
-* Source Branch
-* Destination Branch
-* Quantity
-* Transfer Status
+- Product
+- Source Branch
+- Destination Branch
+- Quantity
+- Transfer Status
 
 Actions:
 
-* Create
-* Approve
-* Search
-* View
+- Create
+- Approve
+- Search
+- View
 
 ---
 
@@ -775,38 +775,38 @@ Actions:
 
 ## Product
 
-* Required
-* Must exist
-* Must be active
+- Required
+- Must exist
+- Must be active
 
 ---
 
 ## Branch
 
-* Required
-* Must exist
-* Must be active
+- Required
+- Must exist
+- Must be active
 
 ---
 
 ## Quantity
 
-* Required
-* Numeric
-* Greater than zero
+- Required
+- Numeric
+- Greater than zero
 
 ---
 
 ## Reserved Quantity
 
-* Cannot exceed available quantity
+- Cannot exceed available quantity
 
 ---
 
 ## Adjustment Reason
 
-* Required
-* Maximum 500 characters
+- Required
+- Maximum 500 characters
 
 ---
 
@@ -907,13 +907,13 @@ INVENTORY_SEARCHED
 
 System Notifications:
 
-* Inventory Created
-* Stock Reserved
-* Reservation Failed
-* Stock Released
-* Stock Adjusted
-* Stock Transfer Completed
-* Inventory Threshold Reached
+- Inventory Created
+- Stock Reserved
+- Reservation Failed
+- Stock Released
+- Stock Adjusted
+- Stock Transfer Completed
+- Inventory Threshold Reached
 
 ---
 
@@ -921,13 +921,13 @@ System Notifications:
 
 Reports:
 
-* Inventory Report
-* Inventory by Branch Report
-* Inventory Availability Report
-* Stock Reservation Report
-* Stock Adjustment Report
-* Stock Transfer Report
-* Inventory Audit Report
+- Inventory Report
+- Inventory by Branch Report
+- Inventory Availability Report
+- Stock Reservation Report
+- Stock Adjustment Report
+- Stock Transfer Report
+- Inventory Audit Report
 
 ---
 
@@ -1012,54 +1012,54 @@ Barcode
 
 Inventory Service exclusively owns:
 
-* Inventory
-* Reservation
-* StockAdjustment
-* StockTransfer
-* Barcode
+- Inventory
+- Reservation
+- StockAdjustment
+- StockTransfer
+- Barcode
 
 ---
 
 # 24. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Circuit Breakers
-* Event Idempotency
-* Audit Logging
-* Database per Service
-* Independent Deployments
-* Observability Integration
-* Saga Participation Support
-* Dead Letter Topic Support
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Circuit Breakers
+- Event Idempotency
+- Audit Logging
+- Database per Service
+- Independent Deployments
+- Observability Integration
+- Saga Participation Support
+- Dead Letter Topic Support
 
 ---
 
 # 25. Success Criteria
 
-* Inventory records can be created successfully.
-* Products and branches are validated successfully.
-* Stock reservations work correctly.
-* Stock releases support compensation workflows.
-* Inventory adjustments are auditable.
-* Inventory transfers maintain quantity consistency.
-* Real-time inventory visibility is available.
-* Inventory reports are generated successfully.
-* Inventory Service registers successfully with Service Discovery.
-* Inventory APIs are accessible through API Gateway.
-* Inventory events are published successfully to Kafka.
-* Distributed tracing is available for inventory workflows.
-* Inventory Service participates successfully in Saga workflows.
-* Inventory Service remains independently deployable.
+- Inventory records can be created successfully.
+- Products and branches are validated successfully.
+- Stock reservations work correctly.
+- Stock releases support compensation workflows.
+- Inventory adjustments are auditable.
+- Inventory transfers maintain quantity consistency.
+- Real-time inventory visibility is available.
+- Inventory reports are generated successfully.
+- Inventory Service registers successfully with Service Discovery.
+- Inventory APIs are accessible through API Gateway.
+- Inventory events are published successfully to Kafka.
+- Distributed tracing is available for inventory workflows.
+- Inventory Service participates successfully in Saga workflows.
+- Inventory Service remains independently deployable.
 
 ---
 
@@ -1079,4 +1079,3 @@ Inventory Service exclusively owns:
 | BR-011 | FR-INV-010 |
 
 ---
-

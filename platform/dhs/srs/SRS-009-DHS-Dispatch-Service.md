@@ -4,21 +4,21 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | Distributed Hub and Sales (DHS) Platform |
-| Service Name | Dispatch Service |
+| Field          | Value                                                |
+| -------------- | ---------------------------------------------------- |
+| Project Name   | Distributed Hub and Sales (DHS) Platform             |
+| Service Name   | Dispatch Service                                     |
 | Document Title | Dispatch Service Software Requirements Specification |
-| Document ID | SRS-009 |
-| Repository | starone-dhs-platform |
-| Module | dispatch-service |
-| Document Type | Software Requirements Specification (SRS) |
-| Standard | ISO/IEC/IEEE 29148 |
-| Version | v1.0.0 |
-| Status | Draft |
-| Author | Sachin Salunke |
-| Owner | Enterprise Architecture |
-| Last Updated | 2026-06-27 |
+| Document ID    | SRS-009                                              |
+| Repository     | starone-dhs-platform                                 |
+| Module         | dispatch-service                                     |
+| Document Type  | Software Requirements Specification (SRS)            |
+| Standard       | ISO/IEC/IEEE 29148                                   |
+| Version        | v1.0.0                                               |
+| Status         | Draft                                                |
+| Author         | Sachin Salunke                                       |
+| Owner          | Enterprise Architecture                              |
+| Last Updated   | 2026-06-27                                           |
 
 ---
 
@@ -26,35 +26,35 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD-001 | Business Requirements Document |
-| PRD-001 | Product Requirements Document |
-| ADR-001 | Architecture Decision Record |
-| HLD-001 | High-Level Design |
+| Document     | Description                      |
+| ------------ | -------------------------------- |
+| BRD-001      | Business Requirements Document   |
+| PRD-001      | Product Requirements Document    |
+| ADR-001      | Architecture Decision Record     |
+| HLD-001      | High-Level Design                |
 | FRD-Dispatch | Dispatch Functional Requirements |
-| SRS-001 | Platform Foundation |
-| SRS-007 | Order Service |
-| SRS-008 | Billing Service |
+| SRS-001      | Platform Foundation              |
+| SRS-007      | Order Service                    |
+| SRS-008      | Billing Service                  |
 
 ---
 
 ## 2.2 Revision History
 
-| Version | Date | Description |
-|----------|------|-------------|
-| v1.0.0 | 2026-06-27 | Initial Version |
+| Version | Date       | Description     |
+| ------- | ---------- | --------------- |
+| v1.0.0  | 2026-06-27 | Initial Version |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
@@ -100,12 +100,12 @@ The Dispatch Service shall not provide:
 
 ## 3.4 Definitions
 
-| Term | Description |
-|------|-------------|
-| Shipment | Physical delivery of an order |
-| Package | Physical package prepared for shipment |
-| POD | Proof of Delivery |
-| Tracking | Shipment location and status updates |
+| Term     | Description                            |
+| -------- | -------------------------------------- |
+| Shipment | Physical delivery of an order          |
+| Package  | Physical package prepared for shipment |
+| POD      | Proof of Delivery                      |
+| Tracking | Shipment location and status updates   |
 
 ---
 
@@ -165,36 +165,36 @@ ReportingService --> DispatchService
 
 ## 4.3 Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Dispatch Database |
-| Kafka | Event Streaming |
-| Order Service | Order Validation |
-| Billing Service | Payment Validation |
+| Dependency          | Purpose            |
+| ------------------- | ------------------ |
+| Platform Foundation | Shared Frameworks  |
+| Gateway             | API Routing        |
+| Eureka              | Service Discovery  |
+| PostgreSQL          | Dispatch Database  |
+| Kafka               | Event Streaming    |
+| Order Service       | Order Validation   |
+| Billing Service     | Payment Validation |
 
 ---
 
 ## 4.4 Upstream Services
 
-| Service | Purpose |
-|----------|---------|
-| Gateway | API Routing |
-| Identity Service | Authentication |
-| Order Service | Shipment Requests |
-| Billing Service | Payment Confirmation |
+| Service          | Purpose              |
+| ---------------- | -------------------- |
+| Gateway          | API Routing          |
+| Identity Service | Authentication       |
+| Order Service    | Shipment Requests    |
+| Billing Service  | Payment Confirmation |
 
 ---
 
 ## 4.5 Downstream Services
 
-| Service | Purpose |
-|----------|---------|
+| Service              | Purpose                |
+| -------------------- | ---------------------- |
 | Notification Service | Delivery Notifications |
-| Reporting Service | Logistics Analytics |
-| Audit Service | Audit Processing |
+| Reporting Service    | Logistics Analytics    |
+| Audit Service        | Audit Processing       |
 
 ---
 
@@ -558,52 +558,52 @@ All APIs shall be exposed through the DHS API Gateway.
 
 # 9.1 API Overview
 
-| Method | URI | Description |
-|----------|-----|-------------|
-| POST | /shipment | Create Shipment |
-| GET | /shipment/{shipmentId} | Get Shipment |
-| PUT | /shipment/{shipmentId} | Update Shipment |
-| GET | /shipment | Search Shipments |
-| POST | /shipment/{shipmentId}/assign | Assign Delivery Resource |
-| POST | /shipment/{shipmentId}/dispatch | Dispatch Shipment |
-| POST | /shipment/{shipmentId}/deliver | Confirm Delivery |
-| POST | /shipment/{shipmentId}/pod | Upload Proof of Delivery |
-| GET | /tracking/{shipmentId} | Shipment Tracking |
-| PATCH | /shipment/{shipmentId}/cancel | Cancel Shipment |
+| Method | URI                             | Description              |
+| ------ | ------------------------------- | ------------------------ |
+| POST   | /shipment                       | Create Shipment          |
+| GET    | /shipment/{shipmentId}          | Get Shipment             |
+| PUT    | /shipment/{shipmentId}          | Update Shipment          |
+| GET    | /shipment                       | Search Shipments         |
+| POST   | /shipment/{shipmentId}/assign   | Assign Delivery Resource |
+| POST   | /shipment/{shipmentId}/dispatch | Dispatch Shipment        |
+| POST   | /shipment/{shipmentId}/deliver  | Confirm Delivery         |
+| POST   | /shipment/{shipmentId}/pod      | Upload Proof of Delivery |
+| GET    | /tracking/{shipmentId}          | Shipment Tracking        |
+| PATCH  | /shipment/{shipmentId}/cancel   | Cancel Shipment          |
 
 ---
 
 # 9.2 Request Headers
 
-| Header | Required | Description |
-|----------|----------|-------------|
-| Authorization | Yes | JWT Bearer Token |
-| X-Correlation-ID | Yes | Correlation Identifier |
-| Content-Type | Yes | application/json |
-| Accept | Yes | application/json |
+| Header           | Required | Description            |
+| ---------------- | -------- | ---------------------- |
+| Authorization    | Yes      | JWT Bearer Token       |
+| X-Correlation-ID | Yes      | Correlation Identifier |
+| Content-Type     | Yes      | application/json       |
+| Accept           | Yes      | application/json       |
 
 ---
 
 # 9.3 Query Parameters
 
-| Parameter | Required | Description |
-|------------|----------|-------------|
-| page | No | Page Number |
-| size | No | Page Size |
-| sort | No | Sort Field |
-| direction | No | ASC or DESC |
-| shipmentStatus | No | Shipment Status |
-| orderId | No | Order Identifier |
-| deliveryResourceId | No | Delivery Resource |
-| fromDate | No | Dispatch Date From |
-| toDate | No | Dispatch Date To |
+| Parameter          | Required | Description        |
+| ------------------ | -------- | ------------------ |
+| page               | No       | Page Number        |
+| size               | No       | Page Size          |
+| sort               | No       | Sort Field         |
+| direction          | No       | ASC or DESC        |
+| shipmentStatus     | No       | Shipment Status    |
+| orderId            | No       | Order Identifier   |
+| deliveryResourceId | No       | Delivery Resource  |
+| fromDate           | No       | Dispatch Date From |
+| toDate             | No       | Dispatch Date To   |
 
 ---
 
 # 9.4 Path Parameters
 
-| Parameter | Description |
-|------------|-------------|
+| Parameter  | Description         |
+| ---------- | ------------------- |
 | shipmentId | Shipment Identifier |
 
 ---
@@ -621,7 +621,7 @@ Request
   "orderId": "UUID",
   "packages": [
     {
-      "weight": 2.50,
+      "weight": 2.5,
       "length": 30,
       "width": 20,
       "height": 15
@@ -710,40 +710,40 @@ Returns complete shipment tracking history.
 
 ## CreateShipmentRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| orderId | UUID | Yes |
-| packages | List<PackageRequest> | Yes |
+| Field    | Type                 | Required |
+| -------- | -------------------- | -------- |
+| orderId  | UUID                 | Yes      |
+| packages | List<PackageRequest> | Yes      |
 
 ---
 
 ## PackageRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| weight | Decimal | Yes |
-| length | Decimal | Yes |
-| width | Decimal | Yes |
-| height | Decimal | Yes |
+| Field  | Type    | Required |
+| ------ | ------- | -------- |
+| weight | Decimal | Yes      |
+| length | Decimal | Yes      |
+| width  | Decimal | Yes      |
+| height | Decimal | Yes      |
 
 ---
 
 ## AssignDeliveryRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| deliveryResourceId | UUID | Yes |
+| Field              | Type | Required |
+| ------------------ | ---- | -------- |
+| deliveryResourceId | UUID | Yes      |
 
 ---
 
 ## ProofOfDeliveryRequest
 
-| Field | Type | Required |
-|---------|------|----------|
-| receiverName | String | Yes |
-| signatureUrl | String | No |
-| photoUrl | String | No |
-| remarks | String | No |
+| Field        | Type   | Required |
+| ------------ | ------ | -------- |
+| receiverName | String | Yes      |
+| signatureUrl | String | No       |
+| photoUrl     | String | No       |
+| remarks      | String | No       |
 
 ---
 
@@ -751,34 +751,34 @@ Returns complete shipment tracking history.
 
 ## ShipmentResponse
 
-| Field | Type |
-|---------|------|
-| shipmentId | UUID |
-| shipmentNumber | String |
-| orderId | UUID |
-| shipmentStatus | ShipmentStatus |
-| dispatchDate | Timestamp |
-| expectedDeliveryDate | Timestamp |
+| Field                | Type           |
+| -------------------- | -------------- |
+| shipmentId           | UUID           |
+| shipmentNumber       | String         |
+| orderId              | UUID           |
+| shipmentStatus       | ShipmentStatus |
+| dispatchDate         | Timestamp      |
+| expectedDeliveryDate | Timestamp      |
 
 ---
 
 ## TrackingResponse
 
-| Field | Type |
-|---------|------|
-| shipmentId | UUID |
+| Field          | Type                |
+| -------------- | ------------------- |
+| shipmentId     | UUID                |
 | trackingEvents | List<TrackingEvent> |
 
 ---
 
 ## ShipmentSummaryResponse
 
-| Field | Type |
-|---------|------|
-| shipmentNumber | String |
-| orderNumber | String |
-| shipmentStatus | ShipmentStatus |
-| expectedDeliveryDate | Timestamp |
+| Field                | Type           |
+| -------------------- | -------------- |
+| shipmentNumber       | String         |
+| orderNumber          | String         |
+| shipmentStatus       | ShipmentStatus |
+| expectedDeliveryDate | Timestamp      |
 
 ---
 
@@ -819,33 +819,33 @@ Returns complete shipment tracking history.
 
 # 13. Permission Matrix
 
-| API | Super Admin | Dispatch Manager | Dispatch Executive | Delivery Executive | Viewer |
-|------|-------------|------------------|--------------------|-------------------|--------|
-| Create Shipment | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Update Shipment | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Assign Delivery | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Dispatch Shipment | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Confirm Delivery | ✅ | ✅ | ❌ | ✅ | ❌ |
-| Upload POD | ✅ | ✅ | ❌ | ✅ | ❌ |
-| View Shipment | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Search Shipment | ✅ | ✅ | ✅ | ✅ | ✅ |
+| API               | Super Admin | Dispatch Manager | Dispatch Executive | Delivery Executive | Viewer |
+| ----------------- | ----------- | ---------------- | ------------------ | ------------------ | ------ |
+| Create Shipment   | ✅          | ✅               | ✅                 | ❌                 | ❌     |
+| Update Shipment   | ✅          | ✅               | ✅                 | ❌                 | ❌     |
+| Assign Delivery   | ✅          | ✅               | ✅                 | ❌                 | ❌     |
+| Dispatch Shipment | ✅          | ✅               | ✅                 | ❌                 | ❌     |
+| Confirm Delivery  | ✅          | ✅               | ❌                 | ✅                 | ❌     |
+| Upload POD        | ✅          | ✅               | ❌                 | ✅                 | ❌     |
+| View Shipment     | ✅          | ✅               | ✅                 | ✅                 | ✅     |
+| Search Shipment   | ✅          | ✅               | ✅                 | ✅                 | ✅     |
 
 ---
 
 # 14. Standard HTTP Status Codes
 
-| Status | Description |
-|----------|-------------|
-| 200 | Success |
-| 201 | Created |
-| 204 | Updated |
-| 400 | Validation Error |
-| 401 | Unauthorized |
-| 403 | Forbidden |
-| 404 | Shipment Not Found |
-| 409 | Shipment Conflict |
-| 422 | Business Rule Violation |
-| 500 | Internal Server Error |
+| Status | Description             |
+| ------ | ----------------------- |
+| 200    | Success                 |
+| 201    | Created                 |
+| 204    | Updated                 |
+| 400    | Validation Error        |
+| 401    | Unauthorized            |
+| 403    | Forbidden               |
+| 404    | Shipment Not Found      |
+| 409    | Shipment Conflict       |
+| 422    | Business Rule Violation |
+| 500    | Internal Server Error   |
 
 ---
 
@@ -878,17 +878,17 @@ Dispatch
 
 ## Aggregate Responsibilities
 
-| Aggregate | Responsibility |
-|------------|----------------|
-| Dispatch | Aggregate Root |
-| Shipment | Shipment Lifecycle |
-| ShipmentItem | Products within Shipment |
-| ShipmentPackage | Physical Package Information |
-| ShipmentTracking | Shipment Tracking Events |
-| DeliveryAssignment | Delivery Resource Assignment |
-| DeliveryStatusHistory | Shipment Status History |
-| ProofOfDelivery | Delivery Confirmation |
-| DispatchAudit | Audit Trail |
+| Aggregate             | Responsibility               |
+| --------------------- | ---------------------------- |
+| Dispatch              | Aggregate Root               |
+| Shipment              | Shipment Lifecycle           |
+| ShipmentItem          | Products within Shipment     |
+| ShipmentPackage       | Physical Package Information |
+| ShipmentTracking      | Shipment Tracking Events     |
+| DeliveryAssignment    | Delivery Resource Assignment |
+| DeliveryStatusHistory | Shipment Status History      |
+| ProofOfDelivery       | Delivery Confirmation        |
+| DispatchAudit         | Audit Trail                  |
 
 ---
 
@@ -896,134 +896,134 @@ Dispatch
 
 ## 16.1 Entity Overview
 
-| Entity | Description |
-|----------|-------------|
-| Dispatch | Aggregate Root |
-| Shipment | Shipment Master |
-| ShipmentItem | Shipment Products |
-| ShipmentPackage | Physical Package |
-| ShipmentTracking | Tracking Events |
-| DeliveryAssignment | Delivery Executive Assignment |
-| DeliveryStatusHistory | Shipment Status Timeline |
-| ProofOfDelivery | Delivery Evidence |
-| DispatchAudit | Audit Trail |
+| Entity                | Description                   |
+| --------------------- | ----------------------------- |
+| Dispatch              | Aggregate Root                |
+| Shipment              | Shipment Master               |
+| ShipmentItem          | Shipment Products             |
+| ShipmentPackage       | Physical Package              |
+| ShipmentTracking      | Tracking Events               |
+| DeliveryAssignment    | Delivery Executive Assignment |
+| DeliveryStatusHistory | Shipment Status Timeline      |
+| ProofOfDelivery       | Delivery Evidence             |
+| DispatchAudit         | Audit Trail                   |
 
 ---
 
 ## 16.2 Shipment Entity
 
-| Attribute | Type | Constraint |
-|------------|------|------------|
-| id | UUID | Primary Key |
-| shipmentNumber | VARCHAR(30) | Unique |
-| orderId | UUID | Required |
-| branchId | UUID | Required |
-| shipmentDate | TIMESTAMP | Required |
-| expectedDeliveryDate | DATE | Required |
-| actualDeliveryDate | TIMESTAMP | Optional |
-| shipmentStatus | ENUM | Required |
-| totalPackages | INTEGER | Required |
-| totalWeight | DECIMAL(10,2) | Required |
-| createdBy | UUID | Required |
-| createdAt | TIMESTAMP | Required |
-| updatedBy | UUID | Required |
-| updatedAt | TIMESTAMP | Required |
-| deleted | BOOLEAN | Default FALSE |
+| Attribute            | Type          | Constraint    |
+| -------------------- | ------------- | ------------- |
+| id                   | UUID          | Primary Key   |
+| shipmentNumber       | VARCHAR(30)   | Unique        |
+| orderId              | UUID          | Required      |
+| branchId             | UUID          | Required      |
+| shipmentDate         | TIMESTAMP     | Required      |
+| expectedDeliveryDate | DATE          | Required      |
+| actualDeliveryDate   | TIMESTAMP     | Optional      |
+| shipmentStatus       | ENUM          | Required      |
+| totalPackages        | INTEGER       | Required      |
+| totalWeight          | DECIMAL(10,2) | Required      |
+| createdBy            | UUID          | Required      |
+| createdAt            | TIMESTAMP     | Required      |
+| updatedBy            | UUID          | Required      |
+| updatedAt            | TIMESTAMP     | Required      |
+| deleted              | BOOLEAN       | Default FALSE |
 
 ---
 
 ## 16.3 Shipment Item
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| productId | UUID |
-| quantity | DECIMAL(18,3) |
-| unitOfMeasure | VARCHAR(30) |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| shipmentId    | UUID          |
+| productId     | UUID          |
+| quantity      | DECIMAL(18,3) |
+| unitOfMeasure | VARCHAR(30)   |
 
 ---
 
 ## 16.4 Shipment Package
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| packageNumber | VARCHAR(30) |
-| weight | DECIMAL(10,2) |
-| length | DECIMAL(10,2) |
-| width | DECIMAL(10,2) |
-| height | DECIMAL(10,2) |
-| packageStatus | ENUM |
+| Attribute     | Type          |
+| ------------- | ------------- |
+| id            | UUID          |
+| shipmentId    | UUID          |
+| packageNumber | VARCHAR(30)   |
+| weight        | DECIMAL(10,2) |
+| length        | DECIMAL(10,2) |
+| width         | DECIMAL(10,2) |
+| height        | DECIMAL(10,2) |
+| packageStatus | ENUM          |
 
 ---
 
 ## 16.5 Shipment Tracking
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| trackingStatus | ENUM |
-| location | VARCHAR(255) |
-| remarks | VARCHAR(500) |
-| recordedAt | TIMESTAMP |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| shipmentId     | UUID         |
+| trackingStatus | ENUM         |
+| location       | VARCHAR(255) |
+| remarks        | VARCHAR(500) |
+| recordedAt     | TIMESTAMP    |
 
 ---
 
 ## 16.6 Delivery Assignment
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| deliveryResourceId | UUID |
-| assignedBy | UUID |
-| assignedAt | TIMESTAMP |
-| assignmentStatus | ENUM |
+| Attribute          | Type      |
+| ------------------ | --------- |
+| id                 | UUID      |
+| shipmentId         | UUID      |
+| deliveryResourceId | UUID      |
+| assignedBy         | UUID      |
+| assignedAt         | TIMESTAMP |
+| assignmentStatus   | ENUM      |
 
 ---
 
 ## 16.7 Delivery Status History
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| previousStatus | ENUM |
-| currentStatus | ENUM |
-| changedBy | UUID |
-| changedAt | TIMESTAMP |
-| remarks | VARCHAR(500) |
+| Attribute      | Type         |
+| -------------- | ------------ |
+| id             | UUID         |
+| shipmentId     | UUID         |
+| previousStatus | ENUM         |
+| currentStatus  | ENUM         |
+| changedBy      | UUID         |
+| changedAt      | TIMESTAMP    |
+| remarks        | VARCHAR(500) |
 
 ---
 
 ## 16.8 Proof Of Delivery
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| receiverName | VARCHAR(150) |
-| signatureUrl | VARCHAR(500) |
-| photoUrl | VARCHAR(500) |
-| latitude | DECIMAL(10,7) |
-| longitude | DECIMAL(10,7) |
-| deliveredAt | TIMESTAMP |
+| Attribute    | Type          |
+| ------------ | ------------- |
+| id           | UUID          |
+| shipmentId   | UUID          |
+| receiverName | VARCHAR(150)  |
+| signatureUrl | VARCHAR(500)  |
+| photoUrl     | VARCHAR(500)  |
+| latitude     | DECIMAL(10,7) |
+| longitude    | DECIMAL(10,7) |
+| deliveredAt  | TIMESTAMP     |
 
 ---
 
 ## 16.9 Dispatch Audit
 
-| Attribute | Type |
-|------------|------|
-| id | UUID |
-| shipmentId | UUID |
-| eventType | VARCHAR(100) |
-| eventSource | VARCHAR(100) |
-| correlationId | UUID |
-| eventTime | TIMESTAMP |
+| Attribute     | Type         |
+| ------------- | ------------ |
+| id            | UUID         |
+| shipmentId    | UUID         |
+| eventType     | VARCHAR(100) |
+| eventSource   | VARCHAR(100) |
+| correlationId | UUID         |
+| eventTime     | TIMESTAMP    |
 
 ---
 
@@ -1045,16 +1045,16 @@ dispatch
 
 ## 17.1 Tables
 
-| Table | Purpose |
-|---------|---------|
-| shipment | Shipment Master |
-| shipment_item | Shipment Products |
-| shipment_package | Package Information |
-| shipment_tracking | Tracking History |
-| delivery_assignment | Delivery Assignment |
+| Table                   | Purpose                 |
+| ----------------------- | ----------------------- |
+| shipment                | Shipment Master         |
+| shipment_item           | Shipment Products       |
+| shipment_package        | Package Information     |
+| shipment_tracking       | Tracking History        |
+| delivery_assignment     | Delivery Assignment     |
 | delivery_status_history | Shipment Status History |
-| proof_of_delivery | Delivery Confirmation |
-| dispatch_audit | Audit Trail |
+| proof_of_delivery       | Delivery Confirmation   |
+| dispatch_audit          | Audit Trail             |
 
 ---
 
@@ -1066,15 +1066,15 @@ All tables shall use UUID as the Primary Key.
 
 ## 17.3 Foreign Keys
 
-| Child Table | Parent Table |
-|--------------|--------------|
-| shipment_item | shipment |
-| shipment_package | shipment |
-| shipment_tracking | shipment |
-| delivery_assignment | shipment |
-| delivery_status_history | shipment |
-| proof_of_delivery | shipment |
-| dispatch_audit | shipment |
+| Child Table             | Parent Table |
+| ----------------------- | ------------ |
+| shipment_item           | shipment     |
+| shipment_package        | shipment     |
+| shipment_tracking       | shipment     |
+| delivery_assignment     | shipment     |
+| delivery_status_history | shipment     |
+| proof_of_delivery       | shipment     |
+| dispatch_audit          | shipment     |
 
 ---
 
@@ -1103,15 +1103,15 @@ Delivery Assignment
 
 ## 17.5 Indexes
 
-| Table | Index |
-|---------|-------|
-| shipment | shipment_number |
-| shipment | order_id |
-| shipment | shipment_status |
-| shipment | shipment_date |
-| shipment_tracking | recorded_at |
+| Table               | Index                |
+| ------------------- | -------------------- |
+| shipment            | shipment_number      |
+| shipment            | order_id             |
+| shipment            | shipment_status      |
+| shipment            | shipment_date        |
+| shipment_tracking   | recorded_at          |
 | delivery_assignment | delivery_resource_id |
-| proof_of_delivery | delivered_at |
+| proof_of_delivery   | delivered_at         |
 
 ---
 
@@ -1251,26 +1251,26 @@ The Dispatch Service shall publish domain events throughout the shipment lifecyc
 
 ## 21.1 Published Events
 
-| Topic | Event |
-|---------|------|
-| shipment.created.v1 | ShipmentCreated |
-| shipment.assigned.v1 | ShipmentAssigned |
-| shipment.dispatched.v1 | ShipmentDispatched |
-| shipment.in-transit.v1 | ShipmentInTransit |
-| shipment.delivered.v1 | ShipmentDelivered |
-| shipment.completed.v1 | ShipmentCompleted |
-| shipment.cancelled.v1 | ShipmentCancelled |
-| shipment.returned.v1 | ShipmentReturned |
-| pod.uploaded.v1 | ProofOfDeliveryUploaded |
+| Topic                  | Event                   |
+| ---------------------- | ----------------------- |
+| shipment.created.v1    | ShipmentCreated         |
+| shipment.assigned.v1   | ShipmentAssigned        |
+| shipment.dispatched.v1 | ShipmentDispatched      |
+| shipment.in-transit.v1 | ShipmentInTransit       |
+| shipment.delivered.v1  | ShipmentDelivered       |
+| shipment.completed.v1  | ShipmentCompleted       |
+| shipment.cancelled.v1  | ShipmentCancelled       |
+| shipment.returned.v1   | ShipmentReturned        |
+| pod.uploaded.v1        | ProofOfDeliveryUploaded |
 
 ---
 
 ## 21.2 Consumed Events
 
-| Topic | Source |
-|---------|--------|
+| Topic                | Source          |
+| -------------------- | --------------- |
 | payment.completed.v1 | Billing Service |
-| order.cancelled.v1 | Order Service |
+| order.cancelled.v1   | Order Service   |
 
 ---
 
@@ -1291,22 +1291,22 @@ The Dispatch Service shall publish domain events throughout the shipment lifecyc
 
 # 22. External Interfaces
 
-| Interface | Purpose |
-|------------|---------|
-| API Gateway | Request Routing |
-| Kafka | Event Streaming |
-| PostgreSQL | Persistent Storage |
-| Redis | Shipment Cache |
-| Audit Service | Audit Events |
+| Interface     | Purpose            |
+| ------------- | ------------------ |
+| API Gateway   | Request Routing    |
+| Kafka         | Event Streaming    |
+| PostgreSQL    | Persistent Storage |
+| Redis         | Shipment Cache     |
+| Audit Service | Audit Events       |
 
 ---
 
 # 23. OpenFeign Clients
 
-| Client | Purpose |
-|----------|---------|
-| OrderClient | Retrieve Order Details |
-| BillingClient | Verify Payment Status |
+| Client             | Purpose                                   |
+| ------------------ | ----------------------------------------- |
+| OrderClient        | Retrieve Order Details                    |
+| BillingClient      | Verify Payment Status                     |
 | NotificationClient | Trigger Delivery Notifications (Optional) |
 
 > Shipment lifecycle progression shall primarily be event-driven through Kafka. OpenFeign shall be used only for synchronous validation and read-only operations where immediate consistency is required.
@@ -1337,16 +1337,16 @@ Configuration shall be externalized using the centralized configuration reposito
 
 ## Configuration Properties
 
-| Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
-| dispatch.search.max-page-size | 100 | Yes | Maximum Search Page Size |
-| dispatch.auto.assignment.enabled | true | Yes | Enable Automatic Assignment |
-| dispatch.tracking.update.interval | 300 | Yes | Tracking Update Interval (seconds) |
-| dispatch.event.topic.shipment-created | shipment.created.v1 | Yes | Shipment Created Topic |
-| dispatch.event.topic.shipment-delivered | shipment.delivered.v1 | Yes | Shipment Delivered Topic |
-| dispatch.pod.image.max-size | 10MB | Yes | Maximum POD Image Size |
-| dispatch.retry.max-attempts | 3 | Yes | Retry Attempts |
-| dispatch.retry.backoff-ms | 1000 | Yes | Retry Backoff Interval |
+| Property                                | Default               | Required | Description                        |
+| --------------------------------------- | --------------------- | -------- | ---------------------------------- |
+| dispatch.search.max-page-size           | 100                   | Yes      | Maximum Search Page Size           |
+| dispatch.auto.assignment.enabled        | true                  | Yes      | Enable Automatic Assignment        |
+| dispatch.tracking.update.interval       | 300                   | Yes      | Tracking Update Interval (seconds) |
+| dispatch.event.topic.shipment-created   | shipment.created.v1   | Yes      | Shipment Created Topic             |
+| dispatch.event.topic.shipment-delivered | shipment.delivered.v1 | Yes      | Shipment Delivered Topic           |
+| dispatch.pod.image.max-size             | 10MB                  | Yes      | Maximum POD Image Size             |
+| dispatch.retry.max-attempts             | 3                     | Yes      | Retry Attempts                     |
+| dispatch.retry.backoff-ms               | 1000                  | Yes      | Retry Backoff Interval             |
 
 ---
 
@@ -1436,21 +1436,21 @@ Internal implementation details shall never be exposed to API consumers.
 
 ## 26.3 Business Error Catalog
 
-| Error Code | Description | HTTP Status |
-|------------|-------------|-------------|
-| DP-VAL-001 | Validation Failed | 400 |
-| DP-AUTH-001 | Authentication Required | 401 |
-| DP-AUTH-002 | Access Denied | 403 |
-| DP-BUS-001 | Shipment Already Exists | 409 |
-| DP-BUS-002 | Shipment Not Found | 404 |
-| DP-BUS-003 | Delivery Resource Not Found | 404 |
-| DP-BUS-004 | Invalid Shipment Status | 422 |
-| DP-BUS-005 | Shipment Already Dispatched | 409 |
-| DP-BUS-006 | Shipment Already Delivered | 409 |
-| DP-BUS-007 | Proof of Delivery Missing | 422 |
-| DP-BUS-008 | Payment Not Completed | 422 |
-| DP-BUS-009 | Invalid Package Information | 422 |
-| DP-SYS-001 | Internal Server Error | 500 |
+| Error Code  | Description                 | HTTP Status |
+| ----------- | --------------------------- | ----------- |
+| DP-VAL-001  | Validation Failed           | 400         |
+| DP-AUTH-001 | Authentication Required     | 401         |
+| DP-AUTH-002 | Access Denied               | 403         |
+| DP-BUS-001  | Shipment Already Exists     | 409         |
+| DP-BUS-002  | Shipment Not Found          | 404         |
+| DP-BUS-003  | Delivery Resource Not Found | 404         |
+| DP-BUS-004  | Invalid Shipment Status     | 422         |
+| DP-BUS-005  | Shipment Already Dispatched | 409         |
+| DP-BUS-006  | Shipment Already Delivered  | 409         |
+| DP-BUS-007  | Proof of Delivery Missing   | 422         |
+| DP-BUS-008  | Payment Not Completed       | 422         |
+| DP-BUS-009  | Invalid Package Information | 422         |
+| DP-SYS-001  | Internal Server Error       | 500         |
 
 ---
 
@@ -1711,28 +1711,28 @@ The Dispatch Service shall comply with enterprise coding standards.
 
 # 30. Requirement Traceability Matrix
 
-| Requirement | Source Document | Verification |
-|-------------|-----------------|--------------|
-| DP-SYS-001 – DP-SYS-010 | FRD-Dispatch | Functional Testing |
-| DP-SYS-011 – DP-SYS-026 | SRS-001 Platform Foundation | Integration Testing |
-| DP-NFR-001 – DP-NFR-018 | PRD / HLD | Performance, Reliability & Security Testing |
+| Requirement             | Source Document             | Verification                                |
+| ----------------------- | --------------------------- | ------------------------------------------- |
+| DP-SYS-001 – DP-SYS-010 | FRD-Dispatch                | Functional Testing                          |
+| DP-SYS-011 – DP-SYS-026 | SRS-001 Platform Foundation | Integration Testing                         |
+| DP-NFR-001 – DP-NFR-018 | PRD / HLD                   | Performance, Reliability & Security Testing |
 
 ---
 
 # 31. Testability Matrix
 
 | Requirement | Test Case |
-|-------------|-----------|
-| DP-SYS-001 | TC-DP-001 |
-| DP-SYS-002 | TC-DP-002 |
-| DP-SYS-003 | TC-DP-003 |
-| DP-SYS-004 | TC-DP-004 |
-| DP-SYS-005 | TC-DP-005 |
-| DP-SYS-006 | TC-DP-006 |
-| DP-SYS-007 | TC-DP-007 |
-| DP-SYS-008 | TC-DP-008 |
-| DP-SYS-009 | TC-DP-009 |
-| DP-SYS-010 | TC-DP-010 |
+| ----------- | --------- |
+| DP-SYS-001  | TC-DP-001 |
+| DP-SYS-002  | TC-DP-002 |
+| DP-SYS-003  | TC-DP-003 |
+| DP-SYS-004  | TC-DP-004 |
+| DP-SYS-005  | TC-DP-005 |
+| DP-SYS-006  | TC-DP-006 |
+| DP-SYS-007  | TC-DP-007 |
+| DP-SYS-008  | TC-DP-008 |
+| DP-SYS-009  | TC-DP-009 |
+| DP-SYS-010  | TC-DP-010 |
 
 ---
 
@@ -1760,73 +1760,70 @@ The Dispatch Service shall be considered complete when:
 
 ## Appendix A – API Summary
 
-| Resource | Endpoints |
-|----------|-----------|
-| Shipment | Create, Update, Get, Search |
-| Assignment | Assign Delivery Resource |
-| Dispatch | Dispatch Shipment |
-| Delivery | Confirm Delivery |
-| Tracking | Shipment Tracking |
-| Proof of Delivery | Upload & Retrieve POD |
+| Resource          | Endpoints                   |
+| ----------------- | --------------------------- |
+| Shipment          | Create, Update, Get, Search |
+| Assignment        | Assign Delivery Resource    |
+| Dispatch          | Dispatch Shipment           |
+| Delivery          | Confirm Delivery            |
+| Tracking          | Shipment Tracking           |
+| Proof of Delivery | Upload & Retrieve POD       |
 
 ---
 
 ## Appendix B – Aggregate Summary
 
-| Aggregate | Description |
-|------------|-------------|
-| Dispatch | Aggregate Root |
-| Shipment | Shipment Lifecycle |
-| ShipmentItem | Shipment Products |
-| ShipmentPackage | Physical Packages |
-| ShipmentTracking | Tracking Events |
-| DeliveryAssignment | Delivery Resource Assignment |
-| DeliveryStatusHistory | Shipment Status Timeline |
-| ProofOfDelivery | Delivery Evidence |
-| DispatchAudit | Audit Trail |
+| Aggregate             | Description                  |
+| --------------------- | ---------------------------- |
+| Dispatch              | Aggregate Root               |
+| Shipment              | Shipment Lifecycle           |
+| ShipmentItem          | Shipment Products            |
+| ShipmentPackage       | Physical Packages            |
+| ShipmentTracking      | Tracking Events              |
+| DeliveryAssignment    | Delivery Resource Assignment |
+| DeliveryStatusHistory | Shipment Status Timeline     |
+| ProofOfDelivery       | Delivery Evidence            |
+| DispatchAudit         | Audit Trail                  |
 
 ---
 
 ## Appendix C – Service Dependencies
 
-| Dependency | Purpose |
-|------------|---------|
-| Platform Foundation | Shared Frameworks |
-| Gateway | API Routing |
-| Eureka | Service Discovery |
-| PostgreSQL | Persistent Storage |
-| Redis | Shipment Cache |
-| Kafka | Event Streaming |
-| Identity Service | Authentication & Authorization |
-| Order Service | Order Validation |
-| Billing Service | Payment Verification |
-| Notification Service | Delivery Notifications |
-| Reporting Service | Logistics Analytics |
-| Audit Service | Audit Processing |
+| Dependency           | Purpose                        |
+| -------------------- | ------------------------------ |
+| Platform Foundation  | Shared Frameworks              |
+| Gateway              | API Routing                    |
+| Eureka               | Service Discovery              |
+| PostgreSQL           | Persistent Storage             |
+| Redis                | Shipment Cache                 |
+| Kafka                | Event Streaming                |
+| Identity Service     | Authentication & Authorization |
+| Order Service        | Order Validation               |
+| Billing Service      | Payment Verification           |
+| Notification Service | Delivery Notifications         |
+| Reporting Service    | Logistics Analytics            |
+| Audit Service        | Audit Processing               |
 
 ---
 
 ## Appendix D – Revision History
 
-| Version | Description |
-|---------|-------------|
-| v1.0.0 | Initial Dispatch Service Software Requirements Specification |
+| Version | Description                                                  |
+| ------- | ------------------------------------------------------------ |
+| v1.0.0  | Initial Dispatch Service Software Requirements Specification |
 
 ---
 
 # 34. Document Sign-off
 
-| Role | Status |
-|------|--------|
-| Product Owner | Pending |
+| Role                 | Status  |
+| -------------------- | ------- |
+| Product Owner        | Pending |
 | Enterprise Architect | Pending |
-| Platform Lead | Pending |
-| Security Lead | Pending |
-| QA Lead | Pending |
+| Platform Lead        | Pending |
+| Security Lead        | Pending |
+| QA Lead              | Pending |
 
 ---
 
 # End of Document
-
-
-

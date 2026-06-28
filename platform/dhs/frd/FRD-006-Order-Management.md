@@ -85,44 +85,44 @@ The Order Service provides centralized order lifecycle management capabilities f
 
 Responsibilities:
 
-* Order Creation
-* Order Validation
-* Order Updates
-* Order Cancellation
-* Order Search
-* Order Tracking
-* Order Status Management
-* Partial Fulfillment
-* Backorder Management
-* Order Audit Logging
+- Order Creation
+- Order Validation
+- Order Updates
+- Order Cancellation
+- Order Search
+- Order Tracking
+- Order Status Management
+- Partial Fulfillment
+- Backorder Management
+- Order Audit Logging
 
 The service acts as the orchestration service for business fulfillment workflows involving:
 
-* Customer Management
-* Product Management
-* Inventory Management
-* Billing
-* Dispatch
-* Notifications
-* Reporting
-* Audit
+- Customer Management
+- Product Management
+- Inventory Management
+- Billing
+- Dispatch
+- Notifications
+- Reporting
+- Audit
 
 ---
 
 ## Implementation Characteristics
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* REST APIs and OpenFeign Communication
-* Event-Driven Architecture
-* Kafka Integration
-* Saga-Based Distributed Transactions
-* JWT Authentication and RBAC Authorization
-* Distributed Tracing and Observability
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- REST APIs and OpenFeign Communication
+- Event-Driven Architecture
+- Kafka Integration
+- Saga-Based Distributed Transactions
+- JWT Authentication and RBAC Authorization
+- Distributed Tracing and Observability
 
 ---
 
@@ -146,11 +146,11 @@ order-db
 
 ## Platform Dependencies
 
-* API Gateway
-* Service Discovery
-* Kafka
-* Redis
-* Observability Platform
+- API Gateway
+- Service Discovery
+- Kafka
+- Redis
+- Observability Platform
 
 ---
 
@@ -158,17 +158,17 @@ order-db
 
 ### Synchronous Dependencies
 
-* customer-service
-* product-service
-* inventory-service
+- customer-service
+- product-service
+- inventory-service
 
 ### Asynchronous Dependencies
 
-* billing-service
-* dispatch-service
-* notification-service
-* reporting-service
-* audit-service
+- billing-service
+- dispatch-service
+- notification-service
+- reporting-service
+- audit-service
 
 ---
 
@@ -520,17 +520,17 @@ API Gateway-->>Customer: Order Information
 
 Technologies:
 
-* REST APIs
-* OpenFeign
-* Service Discovery
+- REST APIs
+- OpenFeign
+- Service Discovery
 
 Used For:
 
-* Customer Validation
-* Product Validation
-* Inventory Reservation
-* Order Lookup
-* Order Search
+- Customer Validation
+- Product Validation
+- Inventory Reservation
+- Order Lookup
+- Order Search
 
 ---
 
@@ -538,20 +538,20 @@ Used For:
 
 Technologies:
 
-* Apache Kafka
-* Domain Events
-* Consumer Groups
-* Dead Letter Topics
+- Apache Kafka
+- Domain Events
+- Consumer Groups
+- Dead Letter Topics
 
 Used For:
 
-* Order Lifecycle Events
-* Billing Events
-* Dispatch Events
-* Notification Events
-* Reporting Events
-* Audit Events
-* Saga Coordination
+- Order Lifecycle Events
+- Billing Events
+- Dispatch Events
+- Notification Events
+- Reporting Events
+- Audit Events
+- Saga Coordination
 
 # 14. Published Events
 
@@ -694,20 +694,20 @@ PATCH /api/v1/backorders/{id}/cancel
 
 Fields:
 
-* Order Number
-* Customer
-* Order Date
-* Branch
-* Order Status
-* Total Amount
+- Order Number
+- Customer
+- Order Date
+- Branch
+- Order Status
+- Total Amount
 
 Actions:
 
-* Create
-* Update
-* Cancel
-* Search
-* View
+- Create
+- Update
+- Cancel
+- Search
+- View
 
 ---
 
@@ -715,18 +715,18 @@ Actions:
 
 Fields:
 
-* Product
-* Quantity
-* Reserved Quantity
-* Unit Price
-* Tax
-* Total Price
+- Product
+- Quantity
+- Reserved Quantity
+- Unit Price
+- Tax
+- Total Price
 
 Actions:
 
-* Add Item
-* Update Item
-* Remove Item
+- Add Item
+- Update Item
+- Remove Item
 
 ---
 
@@ -734,17 +734,17 @@ Actions:
 
 Fields:
 
-* Backorder Number
-* Original Order
-* Product
-* Pending Quantity
-* Status
+- Backorder Number
+- Original Order
+- Product
+- Pending Quantity
+- Status
 
 Actions:
 
-* View
-* Complete
-* Cancel
+- View
+- Complete
+- Cancel
 
 ---
 
@@ -752,16 +752,16 @@ Actions:
 
 Fields:
 
-* Order Number
-* Status
-* Invoice Status
-* Shipment Status
-* Delivery Status
+- Order Number
+- Status
+- Invoice Status
+- Shipment Status
+- Delivery Status
 
 Actions:
 
-* Track
-* View History
+- Track
+- View History
 
 ---
 
@@ -769,40 +769,40 @@ Actions:
 
 ## Order Number
 
-* System generated
-* Unique
-* Read-only
+- System generated
+- Unique
+- Read-only
 
 ---
 
 ## Customer
 
-* Required
-* Must exist
-* Must be active
+- Required
+- Must exist
+- Must be active
 
 ---
 
 ## Product
 
-* Required
-* Must exist
-* Must be active
+- Required
+- Must exist
+- Must be active
 
 ---
 
 ## Quantity
 
-* Required
-* Numeric
-* Greater than zero
+- Required
+- Numeric
+- Greater than zero
 
 ---
 
 ## Order Date
 
-* Required
-* Cannot be future dated
+- Required
+- Cannot be future dated
 
 ---
 
@@ -892,13 +892,13 @@ ORDER_STATUS_UPDATED
 
 System Notifications:
 
-* Order Created
-* Order Updated
-* Order Cancelled
-* Partial Fulfillment Completed
-* Backorder Created
-* Order Dispatched
-* Order Delivered
+- Order Created
+- Order Updated
+- Order Cancelled
+- Partial Fulfillment Completed
+- Backorder Created
+- Order Dispatched
+- Order Delivered
 
 ---
 
@@ -906,13 +906,13 @@ System Notifications:
 
 Reports:
 
-* Order Report
-* Orders by Customer Report
-* Orders by Branch Report
-* Order Status Report
-* Partial Fulfillment Report
-* Backorder Report
-* Order Audit Report
+- Order Report
+- Orders by Customer Report
+- Orders by Branch Report
+- Order Status Report
+- Partial Fulfillment Report
+- Backorder Report
+- Order Audit Report
 
 ---
 
@@ -983,53 +983,53 @@ OrderHistory
 
 Order Service exclusively owns:
 
-* Order
-* OrderItem
-* BackOrder
-* OrderHistory
+- Order
+- OrderItem
+- BackOrder
+- OrderHistory
 
 ---
 
 # 24. Non-Functional Requirements
 
-* JWT Authentication
-* RBAC Authorization
-* TLS 1.3
-* API Gateway Integration
-* Service Discovery
-* Distributed Tracing
-* Correlation IDs
-* Structured Logging
-* Horizontal Scalability
-* High Availability
-* Retry Policies
-* Circuit Breakers
-* Event Idempotency
-* Audit Logging
-* Database per Service
-* Independent Deployments
-* Observability Integration
-* Saga Participation Support
-* Dead Letter Topic Support
+- JWT Authentication
+- RBAC Authorization
+- TLS 1.3
+- API Gateway Integration
+- Service Discovery
+- Distributed Tracing
+- Correlation IDs
+- Structured Logging
+- Horizontal Scalability
+- High Availability
+- Retry Policies
+- Circuit Breakers
+- Event Idempotency
+- Audit Logging
+- Database per Service
+- Independent Deployments
+- Observability Integration
+- Saga Participation Support
+- Dead Letter Topic Support
 
 ---
 
 # 25. Success Criteria
 
-* Orders can be created successfully.
-* Customers and products are validated successfully.
-* Inventory reservations work correctly.
-* Partial fulfillment is supported.
-* Backorders are generated correctly.
-* Order history remains immutable.
-* Order tracking provides real-time visibility.
-* Order reports are generated successfully.
-* Order Service registers successfully with Service Discovery.
-* Order APIs are accessible through API Gateway.
-* Order events are published successfully to Kafka.
-* Distributed tracing is available for order workflows.
-* Order Service participates successfully in Saga workflows.
-* Order Service remains independently deployable.
+- Orders can be created successfully.
+- Customers and products are validated successfully.
+- Inventory reservations work correctly.
+- Partial fulfillment is supported.
+- Backorders are generated correctly.
+- Order history remains immutable.
+- Order tracking provides real-time visibility.
+- Order reports are generated successfully.
+- Order Service registers successfully with Service Discovery.
+- Order APIs are accessible through API Gateway.
+- Order events are published successfully to Kafka.
+- Distributed tracing is available for order workflows.
+- Order Service participates successfully in Saga workflows.
+- Order Service remains independently deployable.
 
 ---
 
@@ -1049,4 +1049,3 @@ Order Service exclusively owns:
 | BR-011 | FR-ORD-010 |
 
 ---
-

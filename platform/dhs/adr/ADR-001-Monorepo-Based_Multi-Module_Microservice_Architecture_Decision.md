@@ -37,28 +37,28 @@ Approved
 
 The DHS platform is an enterprise Order Management System responsible for:
 
-* Identity and Access Management
-* Branch Management
-* Customer Management
-* Product Management
-* Inventory Management
-* Order Management
-* Billing Management
-* Dispatch Management
-* Notification Management
-* Reporting and Analytics
-* Audit and Compliance
+- Identity and Access Management
+- Branch Management
+- Customer Management
+- Product Management
+- Inventory Management
+- Order Management
+- Billing Management
+- Dispatch Management
+- Notification Management
+- Reporting and Analytics
+- Audit and Compliance
 
 The platform requires:
 
-* Clear domain boundaries
-* Independent service evolution
-* Shared engineering standards
-* Centralized governance
-* Event-driven communication
-* Future scalability
-* Cloud-native deployment capabilities
-* Operational observability
+- Clear domain boundaries
+- Independent service evolution
+- Shared engineering standards
+- Centralized governance
+- Event-driven communication
+- Future scalability
+- Cloud-native deployment capabilities
+- Operational observability
 
 ---
 
@@ -66,13 +66,13 @@ The platform requires:
 
 A single architectural style was required that:
 
-* Supports multiple business domains
-* Enables service isolation
-* Promotes code reuse
-* Simplifies dependency management
-* Allows centralized governance
-* Supports independent deployment
-* Enables future business expansion
+- Supports multiple business domains
+- Enables service isolation
+- Promotes code reuse
+- Simplifies dependency management
+- Allows centralized governance
+- Supports independent deployment
+- Enables future business expansion
 
 ---
 
@@ -131,12 +131,12 @@ starone-dhs-platform
 
 Benefits:
 
-* Single source of truth
-* Simplified dependency management
-* Centralized standards
-* Easier refactoring
-* Shared versioning
-* Improved developer productivity
+- Single source of truth
+- Simplified dependency management
+- Centralized standards
+- Easier refactoring
+- Shared versioning
+- Improved developer productivity
 
 ---
 
@@ -166,11 +166,11 @@ starone-dhs-platform
 
 Benefits:
 
-* Centralized dependency management
-* Shared build configuration
-* Controlled version management
-* Faster onboarding
-* Simplified releases
+- Centralized dependency management
+- Shared build configuration
+- Controlled version management
+- Faster onboarding
+- Simplified releases
 
 ---
 
@@ -180,25 +180,25 @@ Each business capability shall be implemented as an independently deployable ser
 
 Services:
 
-* Identity Service
-* Branch Service
-* Customer Service
-* Product Service
-* Inventory Service
-* Order Service
-* Billing Service
-* Dispatch Service
-* Notification Service
-* Reporting Service
-* Audit Service
+- Identity Service
+- Branch Service
+- Customer Service
+- Product Service
+- Inventory Service
+- Order Service
+- Billing Service
+- Dispatch Service
+- Notification Service
+- Reporting Service
+- Audit Service
 
 Characteristics:
 
-* Stateless
-* Independently deployable
-* API-first
-* Domain-owned data
-* Event-driven integration
+- Stateless
+- Independently deployable
+- API-first
+- Domain-owned data
+- Event-driven integration
 
 ---
 
@@ -206,12 +206,12 @@ Characteristics:
 
 The platform shall provide:
 
-* API Gateway
-* Service Discovery
-* Configuration Management
-* Distributed Tracing
-* Metrics Collection
-* Structured Logging
+- API Gateway
+- Service Discovery
+- Configuration Management
+- Distributed Tracing
+- Metrics Collection
+- Structured Logging
 
 ---
 
@@ -219,14 +219,14 @@ The platform shall provide:
 
 ## Synchronous Communication
 
-* Spring Cloud Gateway
-* REST APIs
-* OpenFeign
-* Service Discovery
+- Spring Cloud Gateway
+- REST APIs
+- OpenFeign
+- Service Discovery
 
 ## Asynchronous Communication
 
-* Apache Kafka
+- Apache Kafka
 
 ---
 
@@ -238,11 +238,11 @@ The platform shall implement:
 
 Principles:
 
-* Service-owned schemas
-* No direct cross-service database access
-* Event-driven synchronization
-* Service autonomy
-* Independent schema evolution
+- Service-owned schemas
+- No direct cross-service database access
+- Event-driven synchronization
+- Service autonomy
+- Independent schema evolution
 
 ---
 
@@ -250,12 +250,12 @@ Principles:
 
 The platform shall support:
 
-* Docker containerization
-* Kubernetes deployment
-* Horizontal scaling
-* Rolling deployments
-* Independent service deployment
-* Self-healing capabilities
+- Docker containerization
+- Kubernetes deployment
+- Horizontal scaling
+- Rolling deployments
+- Independent service deployment
+- Self-healing capabilities
 
 ---
 
@@ -263,12 +263,12 @@ The platform shall support:
 
 The platform shall provide:
 
-* Distributed tracing
-* Metrics collection
-* Structured logging
-* Correlation IDs
-* Health monitoring
-* Performance monitoring
+- Distributed tracing
+- Metrics collection
+- Structured logging
+- Correlation IDs
+- Health monitoring
+- Performance monitoring
 
 ---
 
@@ -280,9 +280,9 @@ Monolithic Architecture
 
 Rejected because:
 
-* Limited service isolation
-* Reduced deployment flexibility
-* High coupling
+- Limited service isolation
+- Reduced deployment flexibility
+- High coupling
 
 ---
 
@@ -292,9 +292,9 @@ Modular Monolith
 
 Rejected because:
 
-* Services are not independently deployable
-* Limited operational separation
-* Does not satisfy architectural learning objectives
+- Services are not independently deployable
+- Limited operational separation
+- Does not satisfy architectural learning objectives
 
 ---
 
@@ -304,9 +304,9 @@ Polyrepo Microservices
 
 Rejected because:
 
-* Higher repository management overhead
-* More complex dependency management
-* Increased governance effort
+- Higher repository management overhead
+- More complex dependency management
+- Increased governance effort
 
 ---
 
@@ -314,21 +314,21 @@ Rejected because:
 
 ## Positive Consequences
 
-* Clear domain ownership
-* Independent deployments
-* Improved maintainability
-* Better scalability
-* Shared engineering standards
-* Centralized governance
-* Improved observability
-* Easier service evolution
+- Clear domain ownership
+- Independent deployments
+- Improved maintainability
+- Better scalability
+- Shared engineering standards
+- Centralized governance
+- Improved observability
+- Easier service evolution
 
 ## Negative Consequences
 
-* Increased operational complexity
-* Distributed system challenges
-* Additional infrastructure requirements
-* More sophisticated testing requirements
+- Increased operational complexity
+- Distributed system challenges
+- Additional infrastructure requirements
+- More sophisticated testing requirements
 
 ---
 
@@ -345,16 +345,16 @@ Rejected because:
 
 # 19. Architecture Principles
 
-* Domain-driven service boundaries
-* API-first design
-* Service autonomy
-* Database per service
-* Event-driven communication
-* Externalized configuration
-* Security by design
-* Observability by default
-* Infrastructure automation
-* Independent deployment
+- Domain-driven service boundaries
+- API-first design
+- Service autonomy
+- Database per service
+- Event-driven communication
+- Externalized configuration
+- Security by design
+- Observability by default
+- Infrastructure automation
+- Independent deployment
 
 ---
 
@@ -398,12 +398,12 @@ TLS 1.3
 
 # 21. Related Documents
 
-* BRD-001
-* PRD-001
-* SRS-001
-* HLD-001
-* RTM-001
-* EPIC-DHS-001
+- BRD-001
+- PRD-001
+- SRS-001
+- HLD-001
+- RTM-001
+- EPIC-DHS-001
 
 ---
 
@@ -411,20 +411,20 @@ TLS 1.3
 
 ## Upstream Documents
 
-| Artifact | ID | Relationship |
-|----------|----|--------------|
-| Business Requirements | BRD-001 | Source of business drivers |
-| Product Requirements | PRD-001 | Defines product capabilities |
-| Architecture Vision | ARCH-001 | Enterprise architecture baseline |
+| Artifact              | ID       | Relationship                     |
+| --------------------- | -------- | -------------------------------- |
+| Business Requirements | BRD-001  | Source of business drivers       |
+| Product Requirements  | PRD-001  | Defines product capabilities     |
+| Architecture Vision   | ARCH-001 | Enterprise architecture baseline |
 
 ## Downstream Documents
 
-| Artifact | ID | Relationship |
-|----------|----|--------------|
-| High-Level Design | HLD-001 | Implements this architecture |
-| Software Requirements | SRS-001 | Defines technical specifications |
-| Low-Level Design | LLD-* | Implements service design |
-| Functional Requirements | FRD-* | Implements business functionality |
-| Epics | EPIC-DHS-* | Development planning |
+| Artifact                | ID          | Relationship                      |
+| ----------------------- | ----------- | --------------------------------- |
+| High-Level Design       | HLD-001     | Implements this architecture      |
+| Software Requirements   | SRS-001     | Defines technical specifications  |
+| Low-Level Design        | LLD-\*      | Implements service design         |
+| Functional Requirements | FRD-\*      | Implements business functionality |
+| Epics                   | EPIC-DHS-\* | Development planning              |
 
 ---
