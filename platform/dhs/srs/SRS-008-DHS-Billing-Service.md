@@ -364,7 +364,7 @@ The Billing Service shall enforce the following business rules to ensure financi
 
 ---
 
-# 8.1 Invoice Rules
+## 8.1 Invoice Rules
 
 ### BL-BR-001
 
@@ -408,7 +408,7 @@ Only Confirmed Orders shall generate Invoices.
 
 ---
 
-# 8.2 Invoice Item Rules
+## 8.2 Invoice Item Rules
 
 ### BL-BR-008
 
@@ -434,7 +434,7 @@ Invoice totals shall equal the sum of all Invoice Items.
 
 ---
 
-# 8.3 Tax Rules
+## 8.3 Tax Rules
 
 ### BL-BR-012
 
@@ -454,7 +454,7 @@ Tax values shall remain unchanged after Invoice generation.
 
 ---
 
-# 8.4 Payment Rules
+## 8.4 Payment Rules
 
 ### BL-BR-015
 
@@ -486,7 +486,7 @@ Invoice Status shall automatically update after Payment.
 
 ---
 
-# 8.5 Credit Note Rules
+## 8.5 Credit Note Rules
 
 ### BL-BR-020
 
@@ -506,7 +506,7 @@ Credit Notes shall reduce Outstanding Balance.
 
 ---
 
-# 8.6 Debit Note Rules
+## 8.6 Debit Note Rules
 
 ### BL-BR-023
 
@@ -520,7 +520,7 @@ Debit Notes shall increase Outstanding Balance.
 
 ---
 
-# 8.7 Billing Status Rules
+## 8.7 Billing Status Rules
 
 ### BL-BR-025
 
@@ -560,7 +560,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                        | Description        |
 | ------ | -------------------------- | ------------------ |
@@ -577,7 +577,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description      |
 | ---------------- | -------- | ---------------- |
@@ -588,7 +588,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter     | Required | Description         |
 | ------------- | -------- | ------------------- |
@@ -604,7 +604,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.4 Path Parameters
+## 9.4 Path Parameters
 
 | Parameter | Description        |
 | --------- | ------------------ |
@@ -614,7 +614,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.5 Generate Invoice API
+## 9.5 Generate Invoice API
 
 ```http
 POST /api/v1/billing/invoice
@@ -640,7 +640,7 @@ Response
 
 ---
 
-# 9.6 Record Payment API
+## 9.6 Record Payment API
 
 ```http
 POST /api/v1/billing/payment
@@ -668,7 +668,7 @@ Response
 
 ---
 
-# 9.7 Credit Note API
+## 9.7 Credit Note API
 
 ```http
 POST /api/v1/billing/credit-note
@@ -678,7 +678,7 @@ Creates a Credit Note against an Invoice.
 
 ---
 
-# 9.8 Debit Note API
+## 9.8 Debit Note API
 
 ```http
 POST /api/v1/billing/debit-note
@@ -688,7 +688,7 @@ Creates a Debit Note against an Invoice.
 
 ---
 
-# 9.9 Search Invoice API
+## 9.9 Search Invoice API
 
 ```http
 GET /api/v1/billing/invoice

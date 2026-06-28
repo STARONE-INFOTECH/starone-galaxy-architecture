@@ -435,7 +435,7 @@ The Supplier Service shall enforce the following business rules to ensure suppli
 
 ---
 
-# 8.1 Supplier Registration Rules
+## 8.1 Supplier Registration Rules
 
 ### SP-BR-001
 
@@ -473,7 +473,7 @@ Supplier records shall support soft deletion only.
 
 ---
 
-# 8.2 Supplier Verification Rules
+## 8.2 Supplier Verification Rules
 
 ### SP-BR-007
 
@@ -507,7 +507,7 @@ Rejected Suppliers shall return to Draft status.
 
 ---
 
-# 8.3 Supplier Approval Rules
+## 8.3 Supplier Approval Rules
 
 ### SP-BR-011
 
@@ -533,7 +533,7 @@ Approved Suppliers shall become Active.
 
 ---
 
-# 8.4 Supplier Lifecycle Rules
+## 8.4 Supplier Lifecycle Rules
 
 ### SP-BR-015
 
@@ -565,7 +565,7 @@ Archived Suppliers shall be read-only.
 
 ---
 
-# 8.5 Supplier Banking Rules
+## 8.5 Supplier Banking Rules
 
 ### SP-BR-020
 
@@ -591,7 +591,7 @@ IFSC/SWIFT Code validation shall be mandatory.
 
 ---
 
-# 8.6 Supplier Contract Rules
+## 8.6 Supplier Contract Rules
 
 ### SP-BR-024
 
@@ -611,7 +611,7 @@ Supplier Contracts shall support versioning.
 
 ---
 
-# 8.7 Supplier Performance Rules
+## 8.7 Supplier Performance Rules
 
 ### SP-BR-027
 
@@ -655,7 +655,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                      | Description             |
 | ------ | ------------------------ | ----------------------- |
@@ -676,7 +676,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description            |
 | ---------------- | -------- | ---------------------- |
@@ -687,7 +687,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter    | Required | Description       |
 | ------------ | -------- | ----------------- |
@@ -705,7 +705,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.4 Path Parameters
+## 9.4 Path Parameters
 
 | Parameter  | Description         |
 | ---------- | ------------------- |
@@ -713,7 +713,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.5 Create Supplier API
+## 9.5 Create Supplier API
 
 ```http
 POST /api/v1/suppliers
@@ -744,7 +744,7 @@ Response
 
 ---
 
-# 9.6 Verify Supplier API
+## 9.6 Verify Supplier API
 
 ```http
 POST /api/v1/suppliers/verify/{supplierId}
@@ -754,7 +754,7 @@ Verifies supplier registration details.
 
 ---
 
-# 9.7 Approve Supplier API
+## 9.7 Approve Supplier API
 
 ```http
 POST /api/v1/suppliers/approve/{supplierId}
@@ -764,7 +764,7 @@ Approves Supplier Registration.
 
 ---
 
-# 9.8 Blacklist Supplier API
+## 9.8 Blacklist Supplier API
 
 ```http
 POST /api/v1/suppliers/blacklist/{supplierId}
@@ -774,7 +774,7 @@ Moves Supplier to Blacklisted status.
 
 ---
 
-# 9.9 Search Supplier API
+## 9.9 Search Supplier API
 
 ```http
 GET /api/v1/suppliers

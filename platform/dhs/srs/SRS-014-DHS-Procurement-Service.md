@@ -300,7 +300,7 @@ Supplier master information shall be obtained exclusively from the **Supplier Se
 
 ---
 
-# 8.1 Purchase Requisition Rules
+## 8.1 Purchase Requisition Rules
 
 ### PR-BR-001
 
@@ -344,7 +344,7 @@ Cancelled Purchase Requisitions shall become read-only.
 
 ---
 
-# 8.2 Purchase Order Rules
+## 8.2 Purchase Order Rules
 
 ### PR-BR-008
 
@@ -400,7 +400,7 @@ Cancelled Purchase Orders shall never be reactivated.
 
 ---
 
-# 8.3 Purchase Order Item Rules
+## 8.3 Purchase Order Item Rules
 
 ### PR-BR-017
 
@@ -443,7 +443,7 @@ Purchase Order Total shall equal:
 
 ---
 
-# 8.4 Goods Receipt Rules
+## 8.4 Goods Receipt Rules
 
 ### PR-BR-022
 
@@ -475,7 +475,7 @@ Completed Goods Receipts shall become immutable.
 
 ---
 
-# 8.5 Supplier Invoice Rules
+## 8.5 Supplier Invoice Rules
 
 ### PR-BR-027
 
@@ -507,7 +507,7 @@ Supplier Payments shall be owned by Billing Service.
 
 ---
 
-# 8.6 Approval Rules
+## 8.6 Approval Rules
 
 ### PR-BR-031
 
@@ -533,7 +533,7 @@ Every approval decision shall be auditable.
 
 ---
 
-# 8.7 Integration Rules
+## 8.7 Integration Rules
 
 ### PR-BR-035
 
@@ -577,7 +577,7 @@ All APIs shall be exposed through the Platform API Gateway.
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                           | Description                 |
 | ------ | ----------------------------- | --------------------------- |
@@ -597,7 +597,7 @@ All APIs shall be exposed through the Platform API Gateway.
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description            |
 | ---------------- | -------- | ---------------------- |
@@ -608,7 +608,7 @@ All APIs shall be exposed through the Platform API Gateway.
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter           | Description           |
 | ------------------- | --------------------- |
@@ -625,7 +625,7 @@ All APIs shall be exposed through the Platform API Gateway.
 
 ---
 
-# 9.4 Create Purchase Requisition API
+## 9.4 Create Purchase Requisition API
 
 ```http
 POST /api/v1/procurement/requisitions
@@ -660,7 +660,7 @@ Response
 
 ---
 
-# 9.5 Create Purchase Order API
+## 9.5 Create Purchase Order API
 
 ```http
 POST /api/v1/procurement/purchase-orders
@@ -687,7 +687,7 @@ Response
 
 ---
 
-# 9.6 Record Goods Receipt API
+## 9.6 Record Goods Receipt API
 
 ```http
 POST /api/v1/procurement/goods-receipts
@@ -710,7 +710,7 @@ Request
 
 ---
 
-# 9.7 Register Supplier Invoice API
+## 9.7 Register Supplier Invoice API
 
 ```http
 POST /api/v1/procurement/supplier-invoices
@@ -921,7 +921,7 @@ Supplier shall **not** be part of the Procurement Aggregate.
 
 ---
 
-# 15.1 Procurement Aggregate
+## 15.1 Procurement Aggregate
 
 ```text
 Procurement
@@ -978,7 +978,7 @@ Procurement
 
 ---
 
-# 16.2 Purchase Requisition
+## 16.2 Purchase Requisition
 
 | Attribute         | Type          | Constraint  |
 | ----------------- | ------------- | ----------- |
@@ -996,7 +996,7 @@ Procurement
 
 ---
 
-# 16.3 Purchase Requisition Item
+## 16.3 Purchase Requisition Item
 
 | Attribute     | Type          |
 | ------------- | ------------- |
@@ -1009,7 +1009,7 @@ Procurement
 
 ---
 
-# 16.4 Purchase Order
+## 16.4 Purchase Order
 
 | Attribute            | Type          |
 | -------------------- | ------------- |
@@ -1030,7 +1030,7 @@ Procurement
 
 ---
 
-# 16.5 Purchase Order Item
+## 16.5 Purchase Order Item
 
 | Attribute       | Type          |
 | --------------- | ------------- |
@@ -1045,7 +1045,7 @@ Procurement
 
 ---
 
-# 16.6 Purchase Order Approval
+## 16.6 Purchase Order Approval
 
 | Attribute       | Type         |
 | --------------- | ------------ |
@@ -1059,7 +1059,7 @@ Procurement
 
 ---
 
-# 16.7 Goods Receipt
+## 16.7 Goods Receipt
 
 | Attribute          | Type        |
 | ------------------ | ----------- |
@@ -1073,7 +1073,7 @@ Procurement
 
 ---
 
-# 16.8 Goods Receipt Item
+## 16.8 Goods Receipt Item
 
 | Attribute           | Type          |
 | ------------------- | ------------- |
@@ -1087,7 +1087,7 @@ Procurement
 
 ---
 
-# 16.9 Supplier Invoice Registration
+## 16.9 Supplier Invoice Registration
 
 | Attribute       | Type          |
 | --------------- | ------------- |
@@ -1103,7 +1103,7 @@ Procurement
 
 ---
 
-# 16.10 Procurement Document
+## 16.10 Procurement Document
 
 | Attribute     | Type         |
 | ------------- | ------------ |
@@ -1117,7 +1117,7 @@ Procurement
 
 ---
 
-# 16.11 Procurement Audit
+## 16.11 Procurement Audit
 
 | Attribute     | Type         |
 | ------------- | ------------ |

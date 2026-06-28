@@ -85,13 +85,12 @@ The StarOne Galaxy ecosystem follows a **domain-specific communication model**, 
 
 ### Communication Model per Domain
 
-| Domain                          | Communication Type                                         | Justification                              |
-| ------------------------------- | ---------------------------------------------------------- | ------------------------------------------ |
-| DHS                             | Business applications may adopt synchronous, asynchronous, |
-| or hybrid communication models. | Complex asynchronous workflows                             |
-| Bookshow                        | REST (Synchronous)                                         | User-driven transactional flows            |
-| SportStats                      | API + Batch Processing                                     | Pull-based analytics system                |
-| VaultIron                       | REST (Synchronous Only)                                    | Strong consistency & security requirements |
+| Domain     | Communication Type                                                                         | Justification                              |
+| ---------- | ------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| DHS        | Business applications may adopt synchronous, asynchronous, or hybrid communication models. | Complex asynchronous workflows             |
+| Bookshow   | REST (Synchronous)                                                                         | User-driven transactional flows            |
+| SportStats | API + Batch Processing                                                                     | Pull-based analytics system                |
+| VaultIron  | REST (Synchronous Only)                                                                    | Strong consistency & security requirements |
 
 ---
 

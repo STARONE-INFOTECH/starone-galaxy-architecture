@@ -1220,7 +1220,7 @@ All errors shall conform to the DHS Platform standard error response model defin
 
 ---
 
-# 24.1 Functional Requirements
+## 24.1 Functional Requirements
 
 ### ID-SYS-021
 
@@ -1252,7 +1252,7 @@ Sensitive implementation details shall not be exposed to API consumers.
 
 ---
 
-# 24.2 Standard Error Response
+## 24.2 Standard Error Response
 
 ```json
 {
@@ -1268,7 +1268,7 @@ Sensitive implementation details shall not be exposed to API consumers.
 
 ---
 
-# 24.3 Business Error Codes
+## 24.3 Business Error Codes
 
 | Error Code  | Description                  | HTTP Status |
 | ----------- | ---------------------------- | ----------- |
@@ -1595,13 +1595,3 @@ The Identity Service shall be considered complete when:
 ---
 
 # End of Document
-
-**Document ID:** SRS-002
-
-**Title:** Identity Service Software Requirements Specification
-
-**Version:** v1.0.0
-
-**Status:** Draft
-
-**Next Document:** **SRS-003 – Branch Service**

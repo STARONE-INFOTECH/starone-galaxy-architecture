@@ -454,7 +454,7 @@ The Returns Service shall act as the single source of truth for all return trans
 
 ---
 
-# 8.1 Customer Return Rules
+## 8.1 Customer Return Rules
 
 ### RT-BR-001
 
@@ -498,7 +498,7 @@ One Order Item may support multiple partial returns until the delivered quantity
 
 ---
 
-# 8.2 Return Merchandise Authorization (RMA)
+## 8.2 Return Merchandise Authorization (RMA)
 
 ### RT-BR-008
 
@@ -524,7 +524,7 @@ Cancelled RMAs shall never be reused.
 
 ---
 
-# 8.3 Return Receipt Rules
+## 8.3 Return Receipt Rules
 
 ### RT-BR-012
 
@@ -550,7 +550,7 @@ Partial Return Receipts shall be supported.
 
 ---
 
-# 8.4 Inspection Rules
+## 8.4 Inspection Rules
 
 ### RT-BR-016
 
@@ -583,7 +583,7 @@ Inspection history shall remain immutable.
 
 ---
 
-# 8.5 Return Disposition Rules
+## 8.5 Return Disposition Rules
 
 ### RT-BR-020
 
@@ -615,7 +615,7 @@ Replacement requests shall initiate Replacement Orders.
 
 ---
 
-# 8.6 Supplier Return Rules
+## 8.6 Supplier Return Rules
 
 ### RT-BR-025
 
@@ -641,7 +641,7 @@ Supplier Credit Notes shall be processed through Billing Service.
 
 ---
 
-# 8.7 Integration Rules
+## 8.7 Integration Rules
 
 ### RT-BR-029
 
@@ -683,7 +683,7 @@ Base URL
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                          | Description            |
 | ------ | ---------------------------- | ---------------------- |
@@ -704,7 +704,7 @@ Base URL
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description      |
 | ---------------- | -------- | ---------------- |
@@ -715,7 +715,7 @@ Base URL
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter    | Description    |
 | ------------ | -------------- |
@@ -733,7 +733,7 @@ Base URL
 
 ---
 
-# 9.4 Customer Return API
+## 9.4 Customer Return API
 
 ```http
 POST /api/v1/returns/customer
@@ -767,7 +767,7 @@ Response
 
 ---
 
-# 9.5 Generate RMA API
+## 9.5 Generate RMA API
 
 ```http
 POST /api/v1/returns/rma
@@ -793,7 +793,7 @@ Response
 
 ---
 
-# 9.6 Return Receipt API
+## 9.6 Return Receipt API
 
 ```http
 POST /api/v1/returns/receipts
@@ -803,7 +803,7 @@ Records received returned products.
 
 ---
 
-# 9.7 Inspection API
+## 9.7 Inspection API
 
 ```http
 POST /api/v1/returns/inspection
@@ -813,7 +813,7 @@ Performs inspection and determines disposition.
 
 ---
 
-# 9.8 Refund API
+## 9.8 Refund API
 
 ```http
 POST /api/v1/returns/refund
@@ -823,7 +823,7 @@ Initiates refund through Billing Service.
 
 ---
 
-# 9.9 Replacement API
+## 9.9 Replacement API
 
 ```http
 POST /api/v1/returns/replacement
@@ -833,7 +833,7 @@ Creates replacement request through Order Service.
 
 ---
 
-# 9.10 Supplier Return API
+## 9.10 Supplier Return API
 
 ```http
 POST /api/v1/returns/supplier
@@ -1052,7 +1052,7 @@ The Returns Service shall not own Customers, Orders, Products, Suppliers, Invent
 
 ---
 
-# 15.1 Aggregate Structure
+## 15.1 Aggregate Structure
 
 ```text
 Returns
@@ -1123,7 +1123,7 @@ Returns
 
 ---
 
-# 16.2 Customer Return
+## 16.2 Customer Return
 
 | Attribute     | Type          | Constraint  |
 | ------------- | ------------- | ----------- |
@@ -1141,7 +1141,7 @@ Returns
 
 ---
 
-# 16.3 Customer Return Item
+## 16.3 Customer Return Item
 
 | Attribute        | Type          |
 | ---------------- | ------------- |
@@ -1155,7 +1155,7 @@ Returns
 
 ---
 
-# 16.4 Supplier Return
+## 16.4 Supplier Return
 
 | Attribute              | Type        |
 | ---------------------- | ----------- |
@@ -1169,7 +1169,7 @@ Returns
 
 ---
 
-# 16.5 Supplier Return Item
+## 16.5 Supplier Return Item
 
 | Attribute        | Type          |
 | ---------------- | ------------- |
@@ -1181,7 +1181,7 @@ Returns
 
 ---
 
-# 16.6 Return Order
+## 16.6 Return Order
 
 | Attribute         | Type        |
 | ----------------- | ----------- |
@@ -1194,7 +1194,7 @@ Returns
 
 ---
 
-# 16.7 Return Receipt
+## 16.7 Return Receipt
 
 | Attribute     | Type        |
 | ------------- | ----------- |
@@ -1207,7 +1207,7 @@ Returns
 
 ---
 
-# 16.8 Return Receipt Item
+## 16.8 Return Receipt Item
 
 | Attribute        | Type          |
 | ---------------- | ------------- |
@@ -1220,7 +1220,7 @@ Returns
 
 ---
 
-# 16.9 Return Inspection
+## 16.9 Return Inspection
 
 | Attribute        | Type         |
 | ---------------- | ------------ |
@@ -1233,7 +1233,7 @@ Returns
 
 ---
 
-# 16.10 Return Disposition
+## 16.10 Return Disposition
 
 | Attribute       | Type      |
 | --------------- | --------- |
@@ -1245,7 +1245,7 @@ Returns
 
 ---
 
-# 16.11 Return Approval
+## 16.11 Return Approval
 
 | Attribute      | Type      |
 | -------------- | --------- |
@@ -1258,7 +1258,7 @@ Returns
 
 ---
 
-# 16.12 Return Merchandise Authorization (RMA)
+## 16.12 Return Merchandise Authorization (RMA)
 
 | Attribute        | Type        |
 | ---------------- | ----------- |
@@ -1270,7 +1270,7 @@ Returns
 
 ---
 
-# 16.13 Return Refund
+## 16.13 Return Refund
 
 | Attribute          | Type          |
 | ------------------ | ------------- |
@@ -1282,7 +1282,7 @@ Returns
 
 ---
 
-# 16.14 Replacement Request
+## 16.14 Replacement Request
 
 | Attribute          | Type |
 | ------------------ | ---- |
@@ -1293,7 +1293,7 @@ Returns
 
 ---
 
-# 16.15 Return Document
+## 16.15 Return Document
 
 | Attribute    | Type         |
 | ------------ | ------------ |
@@ -1305,7 +1305,7 @@ Returns
 
 ---
 
-# 16.16 Return Audit
+## 16.16 Return Audit
 
 | Attribute     | Type         |
 | ------------- | ------------ |

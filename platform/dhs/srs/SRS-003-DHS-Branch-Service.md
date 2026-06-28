@@ -543,7 +543,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 8.1 API Overview
+## 8.1 API Overview
 
 | Method | URI                    | Description         |
 | ------ | ---------------------- | ------------------- |
@@ -559,7 +559,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 8.2 Request Headers
+## 8.2 Request Headers
 
 | Header           | Required | Description         |
 | ---------------- | -------- | ------------------- |
@@ -570,7 +570,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 8.3 Query Parameters
+## 8.3 Query Parameters
 
 Search API supports:
 
@@ -588,7 +588,7 @@ Search API supports:
 
 ---
 
-# 8.4 Path Parameters
+## 8.4 Path Parameters
 
 | Parameter  | Description       |
 | ---------- | ----------------- |
@@ -597,7 +597,7 @@ Search API supports:
 
 ---
 
-# 8.5 Create Branch API
+## 8.5 Create Branch API
 
 ## Request
 
@@ -651,7 +651,7 @@ Errors
 
 ---
 
-# 8.6 Update Branch API
+## 8.6 Update Branch API
 
 ```http
 PUT /api/v1/branches/{branchId}
@@ -663,7 +663,7 @@ Branch Code shall not be updated.
 
 ---
 
-# 8.7 Get Branch API
+## 8.7 Get Branch API
 
 ```http
 GET /api/v1/branches/{branchId}
@@ -673,7 +673,7 @@ Returns complete branch details.
 
 ---
 
-# 8.8 Search Branch API
+## 8.8 Search Branch API
 
 ```http
 GET /api/v1/branches
@@ -688,7 +688,7 @@ Supports:
 
 ---
 
-# 8.9 Activate Branch API
+## 8.9 Activate Branch API
 
 ```http
 PATCH /api/v1/branches/{branchId}/activate
@@ -698,7 +698,7 @@ Changes status to ACTIVE.
 
 ---
 
-# 8.10 Deactivate Branch API
+## 8.10 Deactivate Branch API
 
 ```http
 PATCH /api/v1/branches/{branchId}/deactivate
@@ -708,7 +708,7 @@ Changes status to INACTIVE.
 
 ---
 
-# 8.11 Delete Branch API
+## 8.11 Delete Branch API
 
 ```http
 DELETE /api/v1/branches/{branchId}
@@ -718,7 +718,7 @@ Performs soft deletion.
 
 ---
 
-# 8.12 Branch Hierarchy API
+## 8.12 Branch Hierarchy API
 
 ```http
 GET /api/v1/branches/hierarchy
@@ -881,7 +881,7 @@ No external service shall directly access or modify the Branch Service database.
 
 ---
 
-# 13.1 Entity Overview
+## 13.1 Entity Overview
 
 | Entity               | Description                 |
 | -------------------- | --------------------------- |
@@ -892,7 +892,7 @@ No external service shall directly access or modify the Branch Service database.
 
 ---
 
-# 13.2 Branch Entity
+## 13.2 Branch Entity
 
 | Attribute      | Type         | Constraint        |
 | -------------- | ------------ | ----------------- |
@@ -914,7 +914,7 @@ No external service shall directly access or modify the Branch Service database.
 
 ---
 
-# 13.3 Branch Address Entity
+## 13.3 Branch Address Entity
 
 | Attribute    | Type         |
 | ------------ | ------------ |
@@ -931,7 +931,7 @@ No external service shall directly access or modify the Branch Service database.
 
 ---
 
-# 13.4 Branch Contact Entity
+## 13.4 Branch Contact Entity
 
 | Attribute      | Type         |
 | -------------- | ------------ |
@@ -945,7 +945,7 @@ No external service shall directly access or modify the Branch Service database.
 
 ---
 
-# 13.5 Branch Operating Hours Entity
+## 13.5 Branch Operating Hours Entity
 
 | Attribute   | Type    |
 | ----------- | ------- |
@@ -974,7 +974,7 @@ branch
 
 ---
 
-# 14.1 Tables
+## 14.1 Tables
 
 | Table                  | Purpose        |
 | ---------------------- | -------------- |
@@ -985,13 +985,13 @@ branch
 
 ---
 
-# 14.2 Primary Keys
+## 14.2 Primary Keys
 
 Every table shall use UUID as its primary key.
 
 ---
 
-# 14.3 Foreign Keys
+## 14.3 Foreign Keys
 
 | Child Table            | Parent Table |
 | ---------------------- | ------------ |
@@ -1001,7 +1001,7 @@ Every table shall use UUID as its primary key.
 
 ---
 
-# 14.4 Database Constraints
+## 14.4 Database Constraints
 
 ## Branch
 
@@ -1035,7 +1035,7 @@ Every table shall use UUID as its primary key.
 
 ---
 
-# 14.5 Database Indexes
+## 14.5 Database Indexes
 
 | Table          | Index            |
 | -------------- | ---------------- |
@@ -1050,7 +1050,7 @@ Every table shall use UUID as its primary key.
 
 ---
 
-# 14.6 Entity Relationship Diagram
+## 14.6 Entity Relationship Diagram
 
 ```mermaid
 erDiagram
@@ -1299,7 +1299,7 @@ All error responses shall comply with the Platform Foundation error model define
 
 ---
 
-# 22.1 Functional Requirements
+## 22.1 Functional Requirements
 
 ### BR-SYS-021
 
@@ -1331,7 +1331,7 @@ Internal implementation details shall never be exposed to API consumers.
 
 ---
 
-# 22.2 Standard Error Response
+## 22.2 Standard Error Response
 
 ```json
 {
@@ -1347,7 +1347,7 @@ Internal implementation details shall never be exposed to API consumers.
 
 ---
 
-# 22.3 Business Error Catalog
+## 22.3 Business Error Catalog
 
 | Error Code | Description                | HTTP Status |
 | ---------- | -------------------------- | ----------- |

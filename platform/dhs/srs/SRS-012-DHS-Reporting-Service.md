@@ -354,7 +354,7 @@ The Reporting Service shall enforce the following business rules to ensure repor
 
 ---
 
-# 8.1 Report Definition Rules
+## 8.1 Report Definition Rules
 
 ### RP-BR-001
 
@@ -386,7 +386,7 @@ Report Definitions shall support versioning.
 
 ---
 
-# 8.2 Report Execution Rules
+## 8.2 Report Execution Rules
 
 ### RP-BR-006
 
@@ -418,7 +418,7 @@ Long-running reports shall execute as background jobs.
 
 ---
 
-# 8.3 Dashboard Rules
+## 8.3 Dashboard Rules
 
 ### RP-BR-011
 
@@ -444,7 +444,7 @@ Dashboard data shall originate only from Reporting read models.
 
 ---
 
-# 8.4 KPI Rules
+## 8.4 KPI Rules
 
 ### RP-BR-015
 
@@ -470,7 +470,7 @@ Historical KPI values shall remain available.
 
 ---
 
-# 8.5 Report Schedule Rules
+## 8.5 Report Schedule Rules
 
 ### RP-BR-019
 
@@ -490,7 +490,7 @@ Schedules may distribute reports automatically.
 
 ---
 
-# 8.6 Export Rules
+## 8.6 Export Rules
 
 ### RP-BR-022
 
@@ -521,7 +521,7 @@ Export history shall be retained for audit purposes.
 
 ---
 
-# 8.7 Reporting Rules
+## 8.7 Reporting Rules
 
 ### RP-BR-026
 
@@ -559,7 +559,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                       | Description             |
 | ------ | ------------------------- | ----------------------- |
@@ -576,7 +576,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description            |
 | ---------------- | -------- | ---------------------- |
@@ -587,7 +587,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter  | Required | Description      |
 | ---------- | -------- | ---------------- |
@@ -602,7 +602,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.4 Path Parameters
+## 9.4 Path Parameters
 
 | Parameter   | Description                 |
 | ----------- | --------------------------- |
@@ -612,7 +612,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.5 Execute Report API
+## 9.5 Execute Report API
 
 ```http
 POST /api/v1/reports/execute
@@ -641,7 +641,7 @@ Response
 
 ---
 
-# 9.6 Export Report API
+## 9.6 Export Report API
 
 ```http
 POST /api/v1/reports/export
@@ -667,7 +667,7 @@ Response
 
 ---
 
-# 9.7 Dashboard API
+## 9.7 Dashboard API
 
 ```http
 GET /api/v1/reports/dashboard
@@ -677,7 +677,7 @@ Returns executive dashboard data.
 
 ---
 
-# 9.8 KPI API
+## 9.8 KPI API
 
 ```http
 GET /api/v1/reports/kpi
@@ -687,7 +687,7 @@ Returns configured KPIs.
 
 ---
 
-# 9.9 Schedule Report API
+## 9.9 Schedule Report API
 
 ```http
 POST /api/v1/reports/schedule

@@ -496,7 +496,7 @@ The Order Service shall enforce the following business rules to ensure transacti
 
 ---
 
-# 8.1 Order Creation Rules
+## 8.1 Order Creation Rules
 
 ### OR-BR-001
 
@@ -552,7 +552,7 @@ Confirmed Orders shall not allow Order Item modifications.
 
 ---
 
-# 8.2 Order Item Rules
+## 8.2 Order Item Rules
 
 ### OR-BR-010
 
@@ -584,7 +584,7 @@ Price changes after confirmation shall not affect existing Orders.
 
 ---
 
-# 8.3 Pricing Rules
+## 8.3 Pricing Rules
 
 ### OR-BR-015
 
@@ -617,7 +617,7 @@ Order totals shall be rounded according to enterprise financial policy.
 
 ---
 
-# 8.4 Inventory Rules
+## 8.4 Inventory Rules
 
 ### OR-BR-019
 
@@ -643,7 +643,7 @@ Inventory shall be released when Orders are cancelled.
 
 ---
 
-# 8.5 Billing Rules
+## 8.5 Billing Rules
 
 ### OR-BR-023
 
@@ -663,7 +663,7 @@ Completed Orders shall reference generated invoices.
 
 ---
 
-# 8.6 Dispatch Rules
+## 8.6 Dispatch Rules
 
 ### OR-BR-026
 
@@ -677,7 +677,7 @@ Dispatch failures shall trigger compensation workflow.
 
 ---
 
-# 8.7 Cancellation Rules
+## 8.7 Cancellation Rules
 
 ### OR-BR-028
 
@@ -703,7 +703,7 @@ Cancelled Orders shall execute compensation transactions.
 
 ---
 
-# 8.8 Order Status Rules
+## 8.8 Order Status Rules
 
 ### OR-BR-032
 
@@ -747,7 +747,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                    | Description            |
 | ------ | ---------------------- | ---------------------- |
@@ -764,7 +764,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description            |
 | ---------------- | -------- | ---------------------- |
@@ -775,7 +775,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter   | Required | Description         |
 | ----------- | -------- | ------------------- |
@@ -790,7 +790,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.4 Path Parameters
+## 9.4 Path Parameters
 
 | Parameter   | Description         |
 | ----------- | ------------------- |
@@ -800,7 +800,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.5 Create Order API
+## 9.5 Create Order API
 
 ```http
 POST /api/v1/orders
@@ -833,7 +833,7 @@ Response
 
 ---
 
-# 9.6 Confirm Order API
+## 9.6 Confirm Order API
 
 ```http
 POST /api/v1/orders/{orderId}/confirm
@@ -843,7 +843,7 @@ This API initiates the Saga orchestration workflow.
 
 ---
 
-# 9.7 Cancel Order API
+## 9.7 Cancel Order API
 
 ```http
 POST /api/v1/orders/{orderId}/cancel
@@ -853,7 +853,7 @@ Triggers compensation workflow if required.
 
 ---
 
-# 9.8 Search Orders API
+## 9.8 Search Orders API
 
 ```http
 GET /api/v1/orders

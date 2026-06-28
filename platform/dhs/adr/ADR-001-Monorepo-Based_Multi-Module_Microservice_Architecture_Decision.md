@@ -234,7 +234,7 @@ The platform shall provide:
 
 The platform shall implement:
 
-### Database per Service
+## Database per Service
 
 Principles:
 

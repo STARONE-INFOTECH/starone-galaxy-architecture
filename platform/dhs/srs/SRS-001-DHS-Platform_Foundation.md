@@ -386,7 +386,7 @@ Each component shall have clearly defined responsibilities and shall not contain
 
 ---
 
-# 7.1 Parent Project
+## 7.1 Parent Project
 
 ## 7.1.1 Purpose
 
@@ -475,7 +475,7 @@ The Parent Project shall manage:
 
 ---
 
-# 7.2 Enterprise BOM
+## 7.2 Enterprise BOM
 
 ## 7.2.1 Purpose
 
@@ -583,7 +583,7 @@ The BOM shall manage versions for:
 
 ---
 
-# 7.3 Core Common Library
+## 7.3 Core Common Library
 
 ## 7.3.1 Purpose
 
@@ -689,7 +689,7 @@ The Core Common Library shall contain:
 
 ---
 
-# 7.4 Spring Common Library
+## 7.4 Spring Common Library
 
 ## 7.4.1 Purpose
 
@@ -794,7 +794,7 @@ The Spring Common Library shall expose:
 
 ---
 
-# 7.5 Component Dependency Diagram
+## 7.5 Component Dependency Diagram
 
 ```mermaid
 flowchart TD
@@ -851,7 +851,7 @@ Audit --> SpringCommon
 
 ---
 
-# 7.6 Component Design Principles
+## 7.6 Component Design Principles
 
 Every Platform Foundation component shall comply with the following principles:
 
@@ -878,7 +878,7 @@ No external client shall directly invoke any business service.
 
 ---
 
-# 8.1 Purpose
+## 8.1 Purpose
 
 The API Gateway shall provide a centralized ingress layer for all HTTP requests entering the DHS Platform.
 
@@ -886,7 +886,7 @@ It shall abstract internal service topology from clients while enforcing platfor
 
 ---
 
-# 8.2 Responsibilities
+## 8.2 Responsibilities
 
 The API Gateway shall provide:
 
@@ -907,7 +907,7 @@ The API Gateway shall provide:
 
 ---
 
-# 8.3 Out of Scope
+## 8.3 Out of Scope
 
 The API Gateway shall not:
 
@@ -921,7 +921,7 @@ The API Gateway shall not:
 
 ---
 
-# 8.4 Dependencies
+## 8.4 Dependencies
 
 The API Gateway depends upon:
 
@@ -934,7 +934,7 @@ The API Gateway depends upon:
 
 ---
 
-# 8.5 Functional Requirements
+## 8.5 Functional Requirements
 
 ### SYS-PF-039
 
@@ -1038,7 +1038,7 @@ The API Gateway shall expose liveness endpoints.
 
 ---
 
-# 8.6 Route Management
+## 8.6 Route Management
 
 The API Gateway shall maintain centralized route definitions.
 
@@ -1067,7 +1067,7 @@ Example:
 
 ---
 
-# 8.7 Authentication Requirements
+## 8.7 Authentication Requirements
 
 ### SEC-PF-001
 
@@ -1111,7 +1111,7 @@ The API Gateway shall forward authenticated requests only.
 
 ---
 
-# 8.8 Authorization Requirements
+## 8.8 Authorization Requirements
 
 ### SEC-PF-008
 
@@ -1143,7 +1143,7 @@ The API Gateway shall return HTTP 403 for forbidden access.
 
 ---
 
-# 8.9 Gateway Filters
+## 8.9 Gateway Filters
 
 The API Gateway shall provide the following filters:
 
@@ -1160,7 +1160,7 @@ The API Gateway shall provide the following filters:
 
 ---
 
-# 8.10 Rate Limiting
+## 8.10 Rate Limiting
 
 ### SYS-PF-056
 
@@ -1186,7 +1186,7 @@ The API Gateway shall return HTTP 429 when limits are exceeded.
 
 ---
 
-# 8.11 Request Processing
+## 8.11 Request Processing
 
 Every incoming request shall follow the sequence below.
 
@@ -1220,7 +1220,7 @@ Gateway-->>Client: HTTP Response
 
 ---
 
-# 8.12 Gateway Error Handling
+## 8.12 Gateway Error Handling
 
 The API Gateway shall standardize error responses.
 
@@ -1240,7 +1240,7 @@ Example response:
 
 ---
 
-# 8.13 Gateway Logging
+## 8.13 Gateway Logging
 
 The API Gateway shall log:
 
@@ -1259,7 +1259,7 @@ Sensitive information shall never be logged.
 
 ---
 
-# 8.14 Gateway Monitoring
+## 8.14 Gateway Monitoring
 
 The API Gateway shall expose:
 
@@ -1271,7 +1271,7 @@ The API Gateway shall expose:
 
 ---
 
-# 8.15 Performance Requirements
+## 8.15 Performance Requirements
 
 ### NFR-PF-001
 
@@ -1303,7 +1303,7 @@ Gateway startup time shall be less than 30 seconds.
 
 ---
 
-# 8.16 Acceptance Criteria
+## 8.16 Acceptance Criteria
 
 The API Gateway shall be considered complete when:
 
@@ -1331,7 +1331,7 @@ Every runtime service within the DHS Platform shall register with the Service Di
 
 ---
 
-# 9.1 Purpose
+## 9.1 Purpose
 
 The Service Discovery component shall provide centralized service registration, discovery, health monitoring, and runtime service resolution for all DHS platform services.
 
@@ -1339,7 +1339,7 @@ The Service Discovery component shall maintain an up-to-date registry of all act
 
 ---
 
-# 9.2 Responsibilities
+## 9.2 Responsibilities
 
 The Service Discovery component shall provide:
 
@@ -1356,7 +1356,7 @@ The Service Discovery component shall provide:
 
 ---
 
-# 9.3 Out of Scope
+## 9.3 Out of Scope
 
 The Service Discovery component shall not:
 
@@ -1370,7 +1370,7 @@ The Service Discovery component shall not:
 
 ---
 
-# 9.4 Dependencies
+## 9.4 Dependencies
 
 The Service Discovery component depends upon:
 
@@ -1397,7 +1397,7 @@ The following DHS services depend upon Service Discovery:
 
 ---
 
-# 9.5 Functional Requirements
+## 9.5 Functional Requirements
 
 ### SYS-PF-060
 
@@ -1459,7 +1459,7 @@ The Service Discovery component shall expose registry information to authorized 
 
 ---
 
-# 9.6 Service Registration
+## 9.6 Service Registration
 
 Every DHS runtime service shall register itself during application startup.
 
@@ -1478,7 +1478,7 @@ Each service instance shall have a unique Instance ID.
 
 ---
 
-# 9.7 Service Discovery
+## 9.7 Service Discovery
 
 Registered services shall discover target services using logical service names rather than fixed URLs.
 
@@ -1500,7 +1500,7 @@ Example:
 
 ---
 
-# 9.8 Service Registry
+## 9.8 Service Registry
 
 The Service Registry shall maintain the following information for every registered service instance.
 
@@ -1517,7 +1517,7 @@ The Service Registry shall maintain the following information for every register
 
 ---
 
-# 9.9 Heartbeat Management
+## 9.9 Heartbeat Management
 
 ### SYS-PF-070
 
@@ -1543,7 +1543,7 @@ Unavailable service instances shall be removed after lease expiration.
 
 ---
 
-# 9.10 Lease Management
+## 9.10 Lease Management
 
 ### SYS-PF-074
 
@@ -1569,7 +1569,7 @@ Lease expiration duration shall be configurable.
 
 ---
 
-# 9.11 Service Resolution
+## 9.11 Service Resolution
 
 Every DHS service shall resolve destination services using Eureka.
 
@@ -1599,7 +1599,7 @@ HTTP Request
 
 ---
 
-# 9.12 Service Discovery Workflow
+## 9.12 Service Discovery Workflow
 
 ```mermaid
 sequenceDiagram
@@ -1621,7 +1621,7 @@ Gateway->>Service: Forward Request
 
 ---
 
-# 9.13 High Availability Requirements
+## 9.13 High Availability Requirements
 
 ### NFR-PF-006
 
@@ -1647,7 +1647,7 @@ The registry shall recover automatically after restart.
 
 ---
 
-# 9.14 Performance Requirements
+## 9.14 Performance Requirements
 
 ### NFR-PF-010
 
@@ -1673,7 +1673,7 @@ The registry shall support at least 500 simultaneous service instances.
 
 ---
 
-# 9.15 Security Requirements
+## 9.15 Security Requirements
 
 ### SEC-PF-013
 
@@ -1699,7 +1699,7 @@ Registry metadata shall not expose confidential information.
 
 ---
 
-# 9.16 Logging Requirements
+## 9.16 Logging Requirements
 
 The Service Discovery component shall log:
 
@@ -1717,7 +1717,7 @@ Sensitive information shall not be logged.
 
 ---
 
-# 9.17 Monitoring Requirements
+## 9.17 Monitoring Requirements
 
 The Service Discovery component shall expose:
 
@@ -1733,7 +1733,7 @@ The Service Discovery component shall expose:
 
 ---
 
-# 9.18 Error Handling
+## 9.18 Error Handling
 
 The Service Discovery component shall return standardized errors.
 
@@ -1752,7 +1752,7 @@ Example:
 
 ---
 
-# 9.19 Acceptance Criteria
+## 9.19 Acceptance Criteria
 
 The Service Discovery component shall be considered complete when:
 
@@ -1780,7 +1780,7 @@ These requirements are technology-independent functional requirements and shall 
 
 ---
 
-# 10.1 Functional Requirement Categories
+## 10.1 Functional Requirement Categories
 
 The Platform Foundation shall provide the following functional capabilities:
 
@@ -1800,7 +1800,7 @@ The Platform Foundation shall provide the following functional capabilities:
 
 ---
 
-# 10.2 Shared Framework Requirements
+## 10.2 Shared Framework Requirements
 
 ### SYS-PF-078
 
@@ -1832,7 +1832,7 @@ Shared components shall be reusable without business-specific customization.
 
 ---
 
-# 10.3 Common DTO Framework
+## 10.3 Common DTO Framework
 
 The Platform Foundation shall provide standardized request and response models.
 
@@ -1879,7 +1879,7 @@ DTO serialization shall remain platform consistent.
 
 ---
 
-# 10.4 Response Framework
+## 10.4 Response Framework
 
 The Platform Foundation shall define a standardized API response model.
 
@@ -1930,7 +1930,7 @@ Responses shall include timestamps.
 
 ---
 
-# 10.5 Common Event Framework
+## 10.5 Common Event Framework
 
 The Platform Foundation shall define reusable event contracts.
 
@@ -1978,7 +1978,7 @@ Events shall include event timestamps.
 
 ---
 
-# 10.6 Validation Framework
+## 10.6 Validation Framework
 
 The Platform Foundation shall provide centralized validation support.
 
@@ -2016,7 +2016,7 @@ Business services shall extend the validation framework.
 
 ---
 
-# 10.7 Exception Handling Framework
+## 10.7 Exception Handling Framework
 
 The Platform Foundation shall provide centralized exception handling.
 
@@ -2063,7 +2063,7 @@ Exception handling shall support custom business exceptions.
 
 ---
 
-# 10.8 OpenAPI Framework
+## 10.8 OpenAPI Framework
 
 The Platform Foundation shall provide centralized API documentation support.
 
@@ -2102,7 +2102,7 @@ Common API responses shall be reusable.
 
 ---
 
-# 10.9 OpenFeign Framework
+## 10.9 OpenFeign Framework
 
 The Platform Foundation shall provide reusable inter-service communication support.
 
@@ -2147,7 +2147,7 @@ Feign exceptions shall use standardized error handling.
 
 ---
 
-# 10.10 Utility Framework
+## 10.10 Utility Framework
 
 The Platform Foundation shall provide reusable utility components.
 
@@ -2182,7 +2182,7 @@ Utility classes shall remain framework independent where practical.
 
 ---
 
-# 10.11 Configuration Framework
+## 10.11 Configuration Framework
 
 The Platform Foundation shall provide reusable configuration abstractions.
 
@@ -2213,7 +2213,7 @@ Configuration validation shall occur during application startup.
 
 ---
 
-# 10.12 Requirement Traceability
+## 10.12 Requirement Traceability
 
 | Requirement              | Platform Component      |
 | ------------------------ | ----------------------- |
@@ -2230,7 +2230,7 @@ Configuration validation shall occur during application startup.
 
 ---
 
-# 10.13 Platform Functional Acceptance Criteria
+## 10.13 Platform Functional Acceptance Criteria
 
 The Platform Foundation shall satisfy the following acceptance criteria:
 
@@ -2256,7 +2256,7 @@ The Platform Foundation shall expose standardized interfaces to enable secure an
 
 ---
 
-# 11.1 Interface Categories
+## 11.1 Interface Categories
 
 The Platform Foundation shall support the following interface categories:
 
@@ -2270,7 +2270,7 @@ The Platform Foundation shall support the following interface categories:
 
 ---
 
-# 11.2 REST Interface Requirements
+## 11.2 REST Interface Requirements
 
 The Platform Foundation shall expose REST APIs through the API Gateway.
 
@@ -2334,7 +2334,7 @@ REST APIs shall support idempotent operations where applicable.
 
 ---
 
-# 11.3 Gateway Interface
+## 11.3 Gateway Interface
 
 The Gateway shall expose:
 
@@ -2348,7 +2348,7 @@ The Gateway shall expose:
 
 ---
 
-# 11.4 Service Discovery Interface
+## 11.4 Service Discovery Interface
 
 The Service Discovery Server shall expose interfaces for:
 
@@ -2378,7 +2378,7 @@ Service discovery shall support multiple instances.
 
 ---
 
-# 11.5 Internal Service Communication
+## 11.5 Internal Service Communication
 
 Internal service communication shall use:
 
@@ -2420,7 +2420,7 @@ Retry behavior shall be configurable.
 
 ---
 
-# 11.6 Event Interface Requirements
+## 11.6 Event Interface Requirements
 
 Asynchronous communication shall use Apache Kafka.
 
@@ -2458,7 +2458,7 @@ Events shall include Event Timestamp.
 
 ---
 
-# 11.7 Configuration Interface
+## 11.7 Configuration Interface
 
 Configuration shall be retrieved from the centralized configuration service.
 
@@ -2484,7 +2484,7 @@ Configuration shall support runtime refresh where applicable.
 
 ---
 
-# 11.8 Monitoring Interface
+## 11.8 Monitoring Interface
 
 The Platform Foundation shall expose monitoring interfaces.
 
@@ -2516,7 +2516,7 @@ Health endpoints shall report application readiness.
 
 ---
 
-# 11.9 Management Interface
+## 11.9 Management Interface
 
 Administrative interfaces shall support:
 
@@ -2535,7 +2535,7 @@ The Platform Foundation shall satisfy the following quality attributes.
 
 ---
 
-# 12.1 Performance Requirements
+## 12.1 Performance Requirements
 
 ### NFR-PF-014
 
@@ -2567,7 +2567,7 @@ Configuration loading shall complete before service initialization.
 
 ---
 
-# 12.2 Scalability Requirements
+## 12.2 Scalability Requirements
 
 ### NFR-PF-019
 
@@ -2593,7 +2593,7 @@ Platform services shall remain stateless.
 
 ---
 
-# 12.3 Availability Requirements
+## 12.3 Availability Requirements
 
 ### NFR-PF-023
 
@@ -2619,7 +2619,7 @@ Health monitoring shall detect service failures.
 
 ---
 
-# 12.4 Reliability Requirements
+## 12.4 Reliability Requirements
 
 ### NFR-PF-027
 
@@ -2645,7 +2645,7 @@ Platform services shall fail gracefully.
 
 ---
 
-# 12.5 Security Requirements
+## 12.5 Security Requirements
 
 ### SEC-PF-017
 
@@ -2683,7 +2683,7 @@ Secrets shall never be hardcoded.
 
 ---
 
-# 12.6 Maintainability Requirements
+## 12.6 Maintainability Requirements
 
 ### NFR-PF-031
 
@@ -2709,7 +2709,7 @@ Platform components shall follow standardized coding practices.
 
 ---
 
-# 12.7 Observability Requirements
+## 12.7 Observability Requirements
 
 ### NFR-PF-035
 
@@ -2741,7 +2741,7 @@ Structured logging shall be enabled.
 
 ---
 
-# 12.8 Capacity Requirements
+## 12.8 Capacity Requirements
 
 ### NFR-PF-040
 
@@ -2761,7 +2761,7 @@ The Service Discovery registry shall support at least 500 registered instances.
 
 ---
 
-# 12.9 Compliance Requirements
+## 12.9 Compliance Requirements
 
 The Platform Foundation shall comply with:
 
@@ -2775,7 +2775,7 @@ The Platform Foundation shall comply with:
 
 ---
 
-# 12.10 Platform Constraints
+## 12.10 Platform Constraints
 
 The Platform Foundation shall operate under the following constraints:
 
@@ -2794,7 +2794,7 @@ The Platform Foundation shall operate under the following constraints:
 
 ---
 
-# 12.11 Acceptance Criteria
+## 12.11 Acceptance Criteria
 
 The Platform Foundation shall satisfy all external interface and non-functional requirements when:
 
@@ -2822,7 +2822,7 @@ All services shall use the shared logging framework provided by the Platform Fou
 
 ---
 
-# 13.1 Logging Objectives
+## 13.1 Logging Objectives
 
 The logging framework shall:
 
@@ -2836,7 +2836,7 @@ The logging framework shall:
 
 ---
 
-# 13.2 Functional Requirements
+## 13.2 Functional Requirements
 
 ### SYS-PF-122
 
@@ -2880,7 +2880,7 @@ Business services shall use the shared logging framework.
 
 ---
 
-# 13.3 Standard Log Attributes
+## 13.3 Standard Log Attributes
 
 Every log entry shall contain:
 
@@ -2899,7 +2899,7 @@ Every log entry shall contain:
 
 ---
 
-# 13.4 Log Levels
+## 13.4 Log Levels
 
 | Level | Purpose                         |
 | ----- | ------------------------------- |
@@ -2911,7 +2911,7 @@ Every log entry shall contain:
 
 ---
 
-# 13.5 Sensitive Information
+## 13.5 Sensitive Information
 
 The logging framework shall never log:
 
@@ -2934,7 +2934,7 @@ Observability shall enable proactive monitoring and diagnostics across all platf
 
 ---
 
-# 14.1 Functional Requirements
+## 14.1 Functional Requirements
 
 ### SYS-PF-129
 
@@ -2972,7 +2972,7 @@ Every service shall expose liveness status.
 
 ---
 
-# 14.2 Health Monitoring
+## 14.2 Health Monitoring
 
 The Platform Foundation shall expose:
 
@@ -2995,7 +2995,7 @@ Example endpoints:
 
 ---
 
-# 14.3 Metrics
+## 14.3 Metrics
 
 The Platform Foundation shall expose metrics including:
 
@@ -3012,7 +3012,7 @@ The Platform Foundation shall expose metrics including:
 
 ---
 
-# 14.4 Distributed Tracing
+## 14.4 Distributed Tracing
 
 Every request shall support distributed tracing.
 
@@ -3027,7 +3027,7 @@ Tracing shall propagate across every service boundary.
 
 ---
 
-# 14.5 Correlation ID
+## 14.5 Correlation ID
 
 ### SYS-PF-135
 
@@ -3055,7 +3055,7 @@ Every platform and business service shall use the shared exception framework.
 
 ---
 
-# 15.1 Functional Requirements
+## 15.1 Functional Requirements
 
 ### SYS-PF-138
 
@@ -3087,7 +3087,7 @@ Unhandled exceptions shall return HTTP 500.
 
 ---
 
-# 15.2 Standard Error Response
+## 15.2 Standard Error Response
 
 ```json
 {
@@ -3103,7 +3103,7 @@ Unhandled exceptions shall return HTTP 500.
 
 ---
 
-# 15.3 Error Categories
+## 15.3 Error Categories
 
 The Platform Foundation shall support:
 
@@ -3127,7 +3127,7 @@ Environment-specific configuration shall remain external to the application.
 
 ---
 
-# 16.1 Functional Requirements
+## 16.1 Functional Requirements
 
 ### SYS-PF-143
 
@@ -3159,7 +3159,7 @@ Secrets shall never be stored in source code.
 
 ---
 
-# 16.2 Configuration Categories
+## 16.2 Configuration Categories
 
 Configuration shall include:
 
@@ -3175,7 +3175,7 @@ Configuration shall include:
 
 ---
 
-# 16.3 Environment Profiles
+## 16.3 Environment Profiles
 
 The Platform Foundation shall support:
 
@@ -3195,7 +3195,7 @@ This SRS defines only the software requirements that platform services shall sat
 
 ---
 
-# 17.1 Functional Requirements
+## 17.1 Functional Requirements
 
 ### SYS-PF-148
 
@@ -3239,7 +3239,7 @@ Platform services shall support containerized execution.
 
 ---
 
-# 17.2 Runtime Constraints
+## 17.2 Runtime Constraints
 
 The Platform Foundation shall support:
 

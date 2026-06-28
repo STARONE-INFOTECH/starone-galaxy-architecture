@@ -411,7 +411,7 @@ The Customer Service shall expose REST APIs for authorized platform services.
 
 The Customer domain shall be modeled using Domain-Driven Design.
 
-```
+```text
 Customer (Aggregate Root)
 ├── CustomerAddress
 ├── CustomerContact

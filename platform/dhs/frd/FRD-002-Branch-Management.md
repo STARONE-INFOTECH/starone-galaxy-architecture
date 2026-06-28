@@ -96,15 +96,15 @@ Responsibilities:
 - Branch Audit Logging
   Implementation Characteristics:
 
-* Cloud-Native Architecture
-* Monorepo-Based Multi-Module Maven Structure
-* Independently Deployable Microservice
-* Database per Service
-* API Gateway Integration
-* Service Discovery Integration
-* REST APIs and OpenFeign Communication
-* Event-Driven Audit Logging
-* JWT Authentication and RBAC Authorization
+- Cloud-Native Architecture
+- Monorepo-Based Multi-Module Maven Structure
+- Independently Deployable Microservice
+- Database per Service
+- API Gateway Integration
+- Service Discovery Integration
+- REST APIs and OpenFeign Communication
+- Event-Driven Audit Logging
+- JWT Authentication and RBAC Authorization
 
 The module acts as the organizational context for:
 
@@ -841,12 +841,12 @@ BranchUser
 - Branch activities are fully audited.
 - Reporting capabilities are available.
 
-* Branch Service registers successfully with Service Discovery.
-* Branch APIs are accessible through API Gateway.
-* Branch events are published successfully to Kafka.
-* User validation works through Identity Service.
-* Distributed tracing is available for branch workflows.
-* Branch Service remains independently deployable.
+- Branch Service registers successfully with Service Discovery.
+- Branch APIs are accessible through API Gateway.
+- Branch events are published successfully to Kafka.
+- User validation works through Identity Service.
+- Distributed tracing is available for branch workflows.
+- Branch Service remains independently deployable.
 
 ---
 

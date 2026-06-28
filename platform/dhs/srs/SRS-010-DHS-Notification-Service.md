@@ -374,7 +374,7 @@ The Notification Service shall enforce the following business rules to ensure re
 
 ---
 
-# 8.1 Notification Request Rules
+## 8.1 Notification Request Rules
 
 ### NT-BR-001
 
@@ -406,7 +406,7 @@ Notification processing shall be idempotent.
 
 ---
 
-# 8.2 Recipient Rules
+## 8.2 Recipient Rules
 
 ### NT-BR-006
 
@@ -432,7 +432,7 @@ Recipients may belong to different delivery channels.
 
 ---
 
-# 8.3 Template Rules
+## 8.3 Template Rules
 
 ### NT-BR-010
 
@@ -458,7 +458,7 @@ Template placeholders shall be completely resolved before delivery.
 
 ---
 
-# 8.4 Channel Rules
+## 8.4 Channel Rules
 
 ### NT-BR-014
 
@@ -490,7 +490,7 @@ Channel failures shall not prevent delivery through alternative configured chann
 
 ---
 
-# 8.5 Delivery Rules
+## 8.5 Delivery Rules
 
 ### NT-BR-018
 
@@ -522,7 +522,7 @@ Expired notifications shall not be retried.
 
 ---
 
-# 8.6 Notification Preference Rules
+## 8.6 Notification Preference Rules
 
 ### NT-BR-023
 
@@ -542,7 +542,7 @@ Critical system notifications shall ignore opt-out preferences.
 
 ---
 
-# 8.7 Audit Rules
+## 8.7 Audit Rules
 
 ### NT-BR-026
 
@@ -574,7 +574,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                       | Description                  |
 | ------ | ------------------------- | ---------------------------- |
@@ -593,7 +593,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description            |
 | ---------------- | -------- | ---------------------- |
@@ -604,7 +604,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter        | Required | Description       |
 | ---------------- | -------- | ----------------- |
@@ -620,7 +620,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.4 Path Parameters
+## 9.4 Path Parameters
 
 | Parameter      | Description             |
 | -------------- | ----------------------- |
@@ -630,7 +630,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.5 Send Notification API
+## 9.5 Send Notification API
 
 ```http
 POST /api/v1/notifications/send
@@ -662,7 +662,7 @@ Response
 
 ---
 
-# 9.6 Retry Notification API
+## 9.6 Retry Notification API
 
 ```http
 POST /api/v1/notifications/retry/{notificationId}
@@ -672,7 +672,7 @@ Retries delivery according to the configured retry policy.
 
 ---
 
-# 9.7 Create Template API
+## 9.7 Create Template API
 
 ```http
 POST /api/v1/notifications/template
@@ -682,7 +682,7 @@ Creates a Notification Template.
 
 ---
 
-# 9.8 Save Notification Preference API
+## 9.8 Save Notification Preference API
 
 ```http
 POST /api/v1/notifications/preference
@@ -692,7 +692,7 @@ Stores recipient notification preferences.
 
 ---
 
-# 9.9 Search Notification API
+## 9.9 Search Notification API
 
 ```http
 GET /api/v1/notifications

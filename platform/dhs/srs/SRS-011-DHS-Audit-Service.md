@@ -353,7 +353,7 @@ The Audit Service shall enforce the following business rules to ensure immutabil
 
 ---
 
-# 8.1 Audit Event Rules
+## 8.1 Audit Event Rules
 
 ### AU-BR-001
 
@@ -397,7 +397,7 @@ Audit Events shall never be physically updated.
 
 ---
 
-# 8.2 Event Validation Rules
+## 8.2 Event Validation Rules
 
 ### AU-BR-008
 
@@ -423,7 +423,7 @@ Duplicate detection shall use Event ID and Correlation ID.
 
 ---
 
-# 8.3 Audit Storage Rules
+## 8.3 Audit Storage Rules
 
 ### AU-BR-012
 
@@ -449,7 +449,7 @@ Audit records shall support long-term archival.
 
 ---
 
-# 8.4 Retention Rules
+## 8.4 Retention Rules
 
 ### AU-BR-016
 
@@ -475,7 +475,7 @@ Retention processing shall execute automatically.
 
 ---
 
-# 8.5 Search Rules
+## 8.5 Search Rules
 
 ### AU-BR-020
 
@@ -513,7 +513,7 @@ Audit searches shall support Business Entity ID.
 
 ---
 
-# 8.6 Export Rules
+## 8.6 Export Rules
 
 ### AU-BR-026
 
@@ -543,7 +543,7 @@ Export operations shall support filtering.
 
 ---
 
-# 8.7 Compliance Rules
+## 8.7 Compliance Rules
 
 ### AU-BR-030
 
@@ -575,7 +575,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                          | Description               |
 | ------ | ---------------------------- | ------------------------- |
@@ -590,7 +590,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description            |
 | ---------------- | -------- | ---------------------- |
@@ -601,7 +601,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter | Required | Description      |
 | --------- | -------- | ---------------- |
@@ -617,7 +617,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.4 Path Parameters
+## 9.4 Path Parameters
 
 | Parameter     | Description                |
 | ------------- | -------------------------- |
@@ -628,7 +628,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.5 Search Audit API
+## 9.5 Search Audit API
 
 ```http
 GET /api/v1/audit/events
@@ -647,7 +647,7 @@ Supports:
 
 ---
 
-# 9.6 Get Audit Event API
+## 9.6 Get Audit Event API
 
 ```http
 GET /api/v1/audit/events/{auditId}
@@ -657,7 +657,7 @@ Returns complete Audit Event details.
 
 ---
 
-# 9.7 Export Audit API
+## 9.7 Export Audit API
 
 ```http
 POST /api/v1/audit/export
@@ -685,7 +685,7 @@ Response
 
 ---
 
-# 9.8 Archive API
+## 9.8 Archive API
 
 ```http
 POST /api/v1/audit/archive

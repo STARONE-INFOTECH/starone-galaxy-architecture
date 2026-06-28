@@ -351,7 +351,7 @@ The Dispatch Service shall enforce the following business rules to ensure accura
 
 ---
 
-# 8.1 Shipment Rules
+## 8.1 Shipment Rules
 
 ### DP-BR-001
 
@@ -395,7 +395,7 @@ Shipment creation shall only occur after successful payment confirmation.
 
 ---
 
-# 8.2 Shipment Item Rules
+## 8.2 Shipment Item Rules
 
 ### DP-BR-008
 
@@ -421,7 +421,7 @@ Shipment Items shall become immutable after dispatch.
 
 ---
 
-# 8.3 Package Rules
+## 8.3 Package Rules
 
 ### DP-BR-012
 
@@ -447,7 +447,7 @@ Packages shall be sealed before dispatch.
 
 ---
 
-# 8.4 Delivery Assignment Rules
+## 8.4 Delivery Assignment Rules
 
 ### DP-BR-016
 
@@ -467,7 +467,7 @@ Delivery assignments shall be changeable before dispatch.
 
 ---
 
-# 8.5 Tracking Rules
+## 8.5 Tracking Rules
 
 ### DP-BR-019
 
@@ -487,7 +487,7 @@ Tracking history shall never be physically deleted.
 
 ---
 
-# 8.6 Proof of Delivery Rules
+## 8.6 Proof of Delivery Rules
 
 ### DP-BR-022
 
@@ -512,7 +512,7 @@ Completed deliveries shall become read-only.
 
 ---
 
-# 8.7 Shipment Status Rules
+## 8.7 Shipment Status Rules
 
 ### DP-BR-025
 
@@ -556,7 +556,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.1 API Overview
+## 9.1 API Overview
 
 | Method | URI                             | Description              |
 | ------ | ------------------------------- | ------------------------ |
@@ -573,7 +573,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.2 Request Headers
+## 9.2 Request Headers
 
 | Header           | Required | Description            |
 | ---------------- | -------- | ---------------------- |
@@ -584,7 +584,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.3 Query Parameters
+## 9.3 Query Parameters
 
 | Parameter          | Required | Description        |
 | ------------------ | -------- | ------------------ |
@@ -600,7 +600,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.4 Path Parameters
+## 9.4 Path Parameters
 
 | Parameter  | Description         |
 | ---------- | ------------------- |
@@ -608,7 +608,7 @@ All APIs shall be exposed through the DHS API Gateway.
 
 ---
 
-# 9.5 Create Shipment API
+## 9.5 Create Shipment API
 
 ```http
 POST /api/v1/dispatch/shipment
@@ -642,7 +642,7 @@ Response
 
 ---
 
-# 9.6 Assign Delivery Resource API
+## 9.6 Assign Delivery Resource API
 
 ```http
 POST /api/v1/dispatch/shipment/{shipmentId}/assign
@@ -666,7 +666,7 @@ Response
 
 ---
 
-# 9.7 Dispatch Shipment API
+## 9.7 Dispatch Shipment API
 
 ```http
 POST /api/v1/dispatch/shipment/{shipmentId}/dispatch
@@ -676,7 +676,7 @@ Updates shipment status to **Dispatched**.
 
 ---
 
-# 9.8 Confirm Delivery API
+## 9.8 Confirm Delivery API
 
 ```http
 POST /api/v1/dispatch/shipment/{shipmentId}/deliver
@@ -686,7 +686,7 @@ Marks shipment as Delivered.
 
 ---
 
-# 9.9 Upload Proof of Delivery API
+## 9.9 Upload Proof of Delivery API
 
 ```http
 POST /api/v1/dispatch/shipment/{shipmentId}/pod
@@ -696,7 +696,7 @@ Stores customer signature and delivery evidence.
 
 ---
 
-# 9.10 Shipment Tracking API
+## 9.10 Shipment Tracking API
 
 ```http
 GET /api/v1/dispatch/tracking/{shipmentId}

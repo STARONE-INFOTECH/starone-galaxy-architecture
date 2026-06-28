@@ -8,7 +8,7 @@
 
 | Field           | Value                         |
 | --------------- | ----------------------------- |
-| Document ID     | SGE-README-v1.0    |
+| Document ID     | SGE-README-v1.0               |
 | Domain          | Governance                    |
 | Document Type   | Architectural Source of Truth |
 | Version         | 1.0.0                         |
