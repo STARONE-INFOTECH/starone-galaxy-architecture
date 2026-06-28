@@ -2,15 +2,15 @@
 
 ## 1. Milestone Information
 
-| Field | Value |
-|--------|-------|
-| Milestone ID | MS-001 |
-| Milestone Name | Platform Foundation |
-| Repository | starone-dhs-platform |
-| Version | v1.0 |
-| Status | Planned |
-| Priority | Critical |
-| Owner | Platform Engineering Team |
+| Field          | Value                     |
+| -------------- | ------------------------- |
+| Milestone ID   | MS-001                    |
+| Milestone Name | Platform Foundation       |
+| Repository     | starone-dhs-platform      |
+| Version        | v1.0                      |
+| Status         | Planned                   |
+| Priority       | Critical                  |
+| Owner          | Platform Engineering Team |
 
 ---
 

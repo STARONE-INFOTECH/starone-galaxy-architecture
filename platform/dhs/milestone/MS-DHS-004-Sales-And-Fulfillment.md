@@ -2,15 +2,15 @@
 
 ## 1. Milestone Information
 
-| Field | Value |
-|--------|-------|
-| Milestone ID | MS-004 |
-| Milestone Name | Sales & Fulfillment |
-| Repository | starone-dhs-platform |
-| Version | v1.0 |
-| Status | Planned |
-| Priority | Critical |
-| Owner | Sales & Fulfillment Engineering Team |
+| Field          | Value                                |
+| -------------- | ------------------------------------ |
+| Milestone ID   | MS-004                               |
+| Milestone Name | Sales & Fulfillment                  |
+| Repository     | starone-dhs-platform                 |
+| Version        | v1.0                                 |
+| Status         | Planned                              |
+| Priority       | Critical                             |
+| Owner          | Sales & Fulfillment Engineering Team |
 
 ---
 

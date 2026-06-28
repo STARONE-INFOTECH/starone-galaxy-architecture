@@ -2,15 +2,15 @@
 
 ## 1. Milestone Information
 
-| Field | Value |
-|--------|-------|
-| Milestone ID | MS-002 |
-| Milestone Name | Master Data Management |
-| Repository | starone-dhs-platform |
-| Version | v1.0 |
-| Status | Planned |
-| Priority | Critical |
-| Owner | Master Data Engineering Team |
+| Field          | Value                        |
+| -------------- | ---------------------------- |
+| Milestone ID   | MS-002                       |
+| Milestone Name | Master Data Management       |
+| Repository     | starone-dhs-platform         |
+| Version        | v1.0                         |
+| Status         | Planned                      |
+| Priority       | Critical                     |
+| Owner          | Master Data Engineering Team |
 
 ---
 

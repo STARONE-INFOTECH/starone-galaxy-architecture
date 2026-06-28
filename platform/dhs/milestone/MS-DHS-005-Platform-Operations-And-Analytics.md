@@ -2,15 +2,15 @@
 
 ## 1. Milestone Information
 
-| Field | Value |
-|--------|-------|
-| Milestone ID | MS-005 |
-| Milestone Name | Platform Operations & Analytics |
-| Repository | starone-dhs-platform |
-| Version | v1.0 |
-| Status | Planned |
-| Priority | High |
-| Owner | Platform Engineering & Operations Team |
+| Field          | Value                                  |
+| -------------- | -------------------------------------- |
+| Milestone ID   | MS-005                                 |
+| Milestone Name | Platform Operations & Analytics        |
+| Repository     | starone-dhs-platform                   |
+| Version        | v1.0                                   |
+| Status         | Planned                                |
+| Priority       | High                                   |
+| Owner          | Platform Engineering & Operations Team |
 
 ---
 
@@ -202,13 +202,13 @@ The milestone is complete when all included epics are implemented, tested, merge
 
 # 14. Overall DHS Platform Release Roadmap
 
-| Milestone | Name | Primary Deliverables |
-|------------|------|----------------------|
-| MS-001 | Platform Foundation | Platform Foundation, Identity, Branch |
-| MS-002 | Master Data Management | Customer, Product, Supplier |
-| MS-003 | Procurement & Inventory | Inventory, Procurement, Returns |
-| MS-004 | Sales & Fulfillment | Order, Billing, Dispatch |
-| MS-005 | Platform Operations & Analytics | Notification, Audit, Reporting |
+| Milestone | Name                            | Primary Deliverables                  |
+| --------- | ------------------------------- | ------------------------------------- |
+| MS-001    | Platform Foundation             | Platform Foundation, Identity, Branch |
+| MS-002    | Master Data Management          | Customer, Product, Supplier           |
+| MS-003    | Procurement & Inventory         | Inventory, Procurement, Returns       |
+| MS-004    | Sales & Fulfillment             | Order, Billing, Dispatch              |
+| MS-005    | Platform Operations & Analytics | Notification, Audit, Reporting        |
 
 ---
 

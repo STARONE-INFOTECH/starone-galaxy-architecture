@@ -2,15 +2,15 @@
 
 ## 1. Milestone Information
 
-| Field | Value |
-|--------|-------|
-| Milestone ID | MS-003 |
-| Milestone Name | Procurement & Inventory |
-| Repository | starone-dhs-platform |
-| Version | v1.0 |
-| Status | Planned |
-| Priority | Critical |
-| Owner | Supply Chain Engineering Team |
+| Field          | Value                         |
+| -------------- | ----------------------------- |
+| Milestone ID   | MS-003                        |
+| Milestone Name | Procurement & Inventory       |
+| Repository     | starone-dhs-platform          |
+| Version        | v1.0                          |
+| Status         | Planned                       |
+| Priority       | Critical                      |
+| Owner          | Supply Chain Engineering Team |
 
 ---
 
