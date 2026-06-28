@@ -95,11 +95,11 @@ These concerns are addressed by subsequent architecture artifacts.
 | --------------------------- | ------------------------------------------------- |
 | starone-galaxy-architecture | Architecture governance and source of truth       |
 | starone-galaxy-infra        | Shared control plane and platform services        |
-| starone-central-config       | Centralized configuration management              |
-| starone-dhs          | Enterprise OMS platform                           |
-| starone-bookshow     | Consumer ticketing platform                       |
-| starone-sport-stats                  | Planned analytics platform                        |
-| starone-vault-iron                   | Planned credential and secret management platform |
+| starone-central-config      | Centralized configuration management              |
+| starone-dhs                 | Enterprise OMS platform                           |
+| starone-bookshow            | Consumer ticketing platform                       |
+| starone-sport-stats         | Planned analytics platform                        |
+| starone-vault-iron          | Planned credential and secret management platform |
 
 ---
 

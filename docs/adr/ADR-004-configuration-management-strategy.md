@@ -106,7 +106,6 @@ Configuration shall support environment-specific overrides.
 
 Implementation is defined by the Infrastructure Repository.
 
-
 ---
 
 ## 3.4 Secure Configuration (Encryption)
@@ -145,12 +144,12 @@ Examples:
 
 ## 4.1 Parent Traceability (Backward)
 
-| Source | Reference |
-|--------|-----------|
+| Source            | Reference                              |
+| ----------------- | -------------------------------------- |
 | Enterprise Vision | StarOne Galaxy Ecosystem Charter (SGE) |
-| Related ADR | ADR-001 Repository Strategy |
-| Related ADR | ADR-002 Architecture Style |
-| Related ADR | ADR-003 Domain Isolation |
+| Related ADR       | ADR-001 Repository Strategy            |
+| Related ADR       | ADR-002 Architecture Style             |
+| Related ADR       | ADR-003 Domain Isolation               |
 
 ### Parent Relationship
 
@@ -171,15 +170,15 @@ ADR-004 Configuration Management Strategy
 
 ## 4.2 Child Traceability (Forward)
 
-| Target | Reference |
-|---------|-----------|
-| Infrastructure HLD | HLD-INFRA-001 Platform Configuration Architecture |
-| Infrastructure LLD | LLD-INFRA-001 Spring Cloud Configuration Implementation |
-| Infrastructure Repository | starone-galaxy-infra |
-| Configuration Repository | starone-galaxy-central-config |
-| Platform Component | Spring Cloud Config Server |
-| Platform Component | Configuration Management Framework |
-| Consumer | All StarOne Services |
+| Target                    | Reference                                               |
+| ------------------------- | ------------------------------------------------------- |
+| Infrastructure HLD        | HLD-INFRA-001 Platform Configuration Architecture       |
+| Infrastructure LLD        | LLD-INFRA-001 Spring Cloud Configuration Implementation |
+| Infrastructure Repository | starone-galaxy-infra                                    |
+| Configuration Repository  | starone-galaxy-central-config                           |
+| Platform Component        | Spring Cloud Config Server                              |
+| Platform Component        | Configuration Management Framework                      |
+| Consumer                  | All StarOne Services                                    |
 
 ### Forward Relationship
 
@@ -210,12 +209,12 @@ ADR-004
 
 ## 4.3 RTM Relationship
 
-| Parent Artifact | Current Artifact | Child Artifact |
-|-----------------|------------------|----------------|
-| StarOne Galaxy Ecosystem Charter | ADR-004 | HLD-INFRA-001 |
-| ADR-003 Domain Isolation | ADR-004 | LLD-INFRA-001 |
-| ADR-001 Repository Strategy | ADR-004 | starone-galaxy-infra |
-| ADR-002 Architecture Style | ADR-004 | starone-galaxy-central-config |
+| Parent Artifact                  | Current Artifact | Child Artifact                |
+| -------------------------------- | ---------------- | ----------------------------- |
+| StarOne Galaxy Ecosystem Charter | ADR-004          | HLD-INFRA-001                 |
+| ADR-003 Domain Isolation         | ADR-004          | LLD-INFRA-001                 |
+| ADR-001 Repository Strategy      | ADR-004          | starone-galaxy-infra          |
+| ADR-002 Architecture Style       | ADR-004          | starone-galaxy-central-config |
 
 ---
 
@@ -352,7 +351,6 @@ Central config repository with domain-specific separation and encryption
 ```
 
 ---
-
 
 # 11. Decision Summary
 

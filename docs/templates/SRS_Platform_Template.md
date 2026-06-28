@@ -4,19 +4,19 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | |
-| Document Title | |
-| Document ID | |
-| Repository | |
-| Module | Platform Foundation |
-| Document Type | Software Requirements Specification |
-| Version | |
-| Status | |
-| Author | |
-| Owner | |
-| Last Updated | |
+| Field          | Value                               |
+| -------------- | ----------------------------------- |
+| Project Name   |                                     |
+| Document Title |                                     |
+| Document ID    |                                     |
+| Repository     |                                     |
+| Module         | Platform Foundation                 |
+| Document Type  | Software Requirements Specification |
+| Version        |                                     |
+| Status         |                                     |
+| Author         |                                     |
+| Owner          |                                     |
+| Last Updated   |                                     |
 
 ---
 
@@ -25,31 +25,31 @@
 ## 2.1 References
 
 | Document | Description |
-|----------|-------------|
-| BRD | |
-| PRD | |
-| ADR | |
-| HLD | |
-| FRD | |
+| -------- | ----------- |
+| BRD      |             |
+| PRD      |             |
+| ADR      |             |
+| HLD      |             |
+| FRD      |             |
 
 ---
 
 ## 2.2 Revision History
 
 | Version | Date | Description |
-|----------|------|-------------|
+| ------- | ---- | ----------- |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | |
-| Enterprise Architect | |
-| Platform Lead | |
-| DevOps Lead | |
-| QA Lead | |
+| Role                 | Status |
+| -------------------- | ------ |
+| Product Owner        |        |
+| Enterprise Architect |        |
+| Platform Lead        |        |
+| DevOps Lead          |        |
+| QA Lead              |        |
 
 ---
 
@@ -94,14 +94,14 @@ Business Services
 ## 4.3 Platform Components
 
 | Component | Description |
-|------------|-------------|
+| --------- | ----------- |
 
 ---
 
 ## 4.4 Dependencies
 
 | Component | Depends On |
-|------------|------------|
+| --------- | ---------- |
 
 ---
 
@@ -200,7 +200,7 @@ Registry
 # 6. Platform Functional Requirements
 
 | Requirement ID | Description |
-|----------------|-------------|
+| -------------- | ----------- |
 
 ---
 
@@ -397,14 +397,14 @@ HTTP Status
 # 19. Requirement Traceability Matrix
 
 | Requirement | Source | Verification |
-|--------------|--------|--------------|
+| ----------- | ------ | ------------ |
 
 ---
 
 # 20. Platform Dependency Matrix
 
 | Component | Dependency |
-|------------|------------|
+| --------- | ---------- |
 
 ---
 
@@ -441,7 +441,7 @@ HTTP Status
 # 23. Document Sign-off
 
 | Role | Status |
-|------|--------|
+| ---- | ------ |
 
 ---
 

@@ -4,20 +4,20 @@
 
 # 1. Document Information
 
-| Field | Value |
-|--------|-------|
-| Project Name | |
-| Service Name | |
-| Document Title | |
-| Document ID | |
-| Repository | |
-| Module | |
-| Document Type | Software Requirements Specification |
-| Version | |
-| Status | |
-| Author | |
-| Owner | |
-| Last Updated | |
+| Field          | Value                               |
+| -------------- | ----------------------------------- |
+| Project Name   |                                     |
+| Service Name   |                                     |
+| Document Title |                                     |
+| Document ID    |                                     |
+| Repository     |                                     |
+| Module         |                                     |
+| Document Type  | Software Requirements Specification |
+| Version        |                                     |
+| Status         |                                     |
+| Author         |                                     |
+| Owner          |                                     |
+| Last Updated   |                                     |
 
 ---
 
@@ -25,33 +25,33 @@
 
 ## 2.1 References
 
-| Document | Description |
-|----------|-------------|
-| BRD | |
-| PRD | |
-| ADR | |
-| HLD | |
-| FRD | |
-| SRS-001 | Platform Foundation |
+| Document | Description         |
+| -------- | ------------------- |
+| BRD      |                     |
+| PRD      |                     |
+| ADR      |                     |
+| HLD      |                     |
+| FRD      |                     |
+| SRS-001  | Platform Foundation |
 
 ---
 
 ## 2.2 Revision History
 
 | Version | Date | Description |
-|----------|------|-------------|
+| ------- | ---- | ----------- |
 
 ---
 
 ## 2.3 Approval Matrix
 
-| Role | Status |
-|------|--------|
-| Product Owner | |
-| Enterprise Architect | |
-| Platform Lead | |
-| Security Lead | |
-| QA Lead | |
+| Role                 | Status |
+| -------------------- | ------ |
+| Product Owner        |        |
+| Enterprise Architect |        |
+| Platform Lead        |        |
+| Security Lead        |        |
+| QA Lead              |        |
 
 ---
 
@@ -94,7 +94,7 @@ Service --> External Services
 ## 4.3 Dependencies
 
 | Service | Purpose |
-|----------|---------|
+| ------- | ------- |
 
 ---
 
@@ -149,14 +149,14 @@ Gateway-->>Client
 # 6. Functional Requirements
 
 | Requirement ID | Description |
-|----------------|-------------|
+| -------------- | ----------- |
 
 ---
 
 # 7. Business Rules
 
 | Rule ID | Description |
-|----------|-------------|
+| ------- | ----------- |
 
 ---
 
@@ -165,21 +165,21 @@ Gateway-->>Client
 ## 8.1 API Overview
 
 | Method | URI | Description |
-|----------|-----|-------------|
+| ------ | --- | ----------- |
 
 ---
 
 ## 8.2 Request Headers
 
 | Header | Required |
-|----------|----------|
+| ------ | -------- |
 
 ---
 
 ## 8.3 Query Parameters
 
 | Parameter | Required | Description |
-|------------|----------|-------------|
+| --------- | -------- | ----------- |
 
 ---
 
@@ -208,14 +208,14 @@ Gateway-->>Client
 ## DTO Catalog
 
 | DTO | Purpose |
-|------|---------|
+| --- | ------- |
 
 ---
 
 # 10. Response Models
 
 | DTO | Purpose |
-|------|---------|
+| --- | ------- |
 
 ---
 
@@ -224,7 +224,7 @@ Gateway-->>Client
 ## Entity Overview
 
 | Entity | Description |
-|----------|-------------|
+| ------ | ----------- |
 
 ---
 
@@ -281,7 +281,7 @@ stateDiagram-v2
 # 14. Validation Rules
 
 | Field | Validation |
-|---------|------------|
+| ----- | ---------- |
 
 ---
 
@@ -314,21 +314,21 @@ Refresh Token
 # 17. Roles
 
 | Role | Description |
-|-------|-------------|
+| ---- | ----------- |
 
 ---
 
 # 18. Permissions
 
 | Permission | Description |
-|------------|-------------|
+| ---------- | ----------- |
 
 ---
 
 # 19. Permission Matrix
 
 | API | Admin | Manager | User |
-|------|-------|----------|------|
+| --- | ----- | ------- | ---- |
 
 ---
 
@@ -337,14 +337,14 @@ Refresh Token
 ## Published Events
 
 | Topic | Key | Payload | Version |
-|---------|-----|----------|----------|
+| ----- | --- | ------- | ------- |
 
 ---
 
 ## Consumed Events
 
 | Topic | Source |
-|---------|--------|
+| ----- | ------ |
 
 ---
 
@@ -369,14 +369,14 @@ Refresh Token
 # 22. OpenFeign Clients
 
 | Client | Purpose |
-|----------|---------|
+| ------ | ------- |
 
 ---
 
 # 23. Configuration
 
 | Property | Default | Required | Description |
-|------------|----------|-----------|-------------|
+| -------- | ------- | -------- | ----------- |
 
 ---
 
@@ -387,7 +387,7 @@ Refresh Token
 ## Error Codes
 
 | Code | Message | HTTP |
-|------|-----------|------|
+| ---- | ------- | ---- |
 
 ---
 
@@ -432,14 +432,14 @@ Refresh Token
 # 28. Requirement Traceability Matrix
 
 | Requirement | Source | Verification |
-|--------------|--------|--------------|
+| ----------- | ------ | ------------ |
 
 ---
 
 # 29. Testability Matrix
 
 | Requirement | Test Case |
-|--------------|-----------|
+| ----------- | --------- |
 
 ---
 
@@ -475,7 +475,7 @@ Refresh Token
 # 32. Document Sign-off
 
 | Role | Status |
-|------|--------|
+| ---- | ------ |
 
 ---
 

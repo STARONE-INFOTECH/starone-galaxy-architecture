@@ -4,22 +4,22 @@
 
 # 1. Title Page
 
-| Field       | Value               |
-| ----------- | ------------------- |
-| Document ID | SGE-002             |
-| Project     | StarOne Galaxy  Ecosystem    |
-| Domain      | Enterprise Architecture |
-| Author      | Sachin Salunke      |
-| Date        | Jan 2026            |
-| Version     | 1.0                 |
-| Status      | Draft               |
+| Field       | Value                    |
+| ----------- | ------------------------ |
+| Document ID | SGE-002                  |
+| Project     | StarOne Galaxy Ecosystem |
+| Domain      | Enterprise Architecture  |
+| Author      | Sachin Salunke           |
+| Date        | Jan 2026                 |
+| Version     | 1.0                      |
+| Status      | Draft                    |
 
 ---
 
 # 2. Revision History
 
-| Version | Date     | Author         | Description          |
-| ------- | -------- | -------------- | -------------------- |
+| Version | Date     | Author         | Description                             |
+| ------- | -------- | -------------- | --------------------------------------- |
 | 1.0     | Jan 2026 | Sachin Salunke | Initial Reference Architecture creation |
 
 ---
@@ -65,7 +65,6 @@ Covers:
 
 ---
 
-
 # 4. Domain Architecture
 
 ## 4.1 Domain Isolation Strategy
@@ -78,7 +77,6 @@ Covers:
 
 ---
 
-
 # 5. Integration Architecture
 
 ## 5.1 Communication Strategy
@@ -87,13 +85,13 @@ The StarOne Galaxy ecosystem follows a **domain-specific communication model**, 
 
 ### Communication Model per Domain
 
-| Domain     | Communication Type          | Justification                              |
-| ---------- | --------------------------- | ------------------------------------------ |
-| DHS        | Business applications may adopt synchronous, asynchronous,
-or hybrid communication models. | Complex asynchronous workflows             |
-| Bookshow   | REST (Synchronous)          | User-driven transactional flows            |
-| SportStats | API + Batch Processing      | Pull-based analytics system                |
-| VaultIron  | REST (Synchronous Only)     | Strong consistency & security requirements |
+| Domain                          | Communication Type                                         | Justification                              |
+| ------------------------------- | ---------------------------------------------------------- | ------------------------------------------ |
+| DHS                             | Business applications may adopt synchronous, asynchronous, |
+| or hybrid communication models. | Complex asynchronous workflows                             |
+| Bookshow                        | REST (Synchronous)                                         | User-driven transactional flows            |
+| SportStats                      | API + Batch Processing                                     | Pull-based analytics system                |
+| VaultIron                       | REST (Synchronous Only)                                    | Strong consistency & security requirements |
 
 ---
 
@@ -122,19 +120,21 @@ Kubernetes --> PostgreSQL
 
 ---
 
-
 # 7. Component Design
 
 ## Enterprise Foundation
+
 - Standards
 - Governance
 - ADRs
 
 ## Shared Platforms
+
 - Infrastructure Platform
 - Configuration Platform
 
 ## Business Applications
+
 - Independent domains
 - Service autonomy
 

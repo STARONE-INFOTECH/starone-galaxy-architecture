@@ -9,7 +9,7 @@ Business Criticality : High
 
 | Field       | Value                            |
 | ----------- | -------------------------------- |
-| Document ID | SGE-001                      |
+| Document ID | SGE-001                          |
 | Project     | StarOne Galaxy Ecosystem         |
 | Domain      | Enterprise Platform Architecture |
 | Author      | Sachin Salunke                   |
@@ -21,9 +21,9 @@ Business Criticality : High
 
 # 2. Revision History
 
-| Version | Date     | Author         | Description                   |
-| ------- | -------- | -------------- | ----------------------------- |
-| 1.0.0   | Jan 2026 | Sachin Salunke | Initial Charter creation          |
+| Version | Date     | Author         | Description              |
+| ------- | -------- | -------------- | ------------------------ |
+| 1.0.0   | Jan 2026 | Sachin Salunke | Initial Charter creation |
 
 ---
 
@@ -109,15 +109,15 @@ StarOne Galaxy aims to establish a scalable and governance-driven platform that 
 
 # 10. Business Objectives (SMART)
 
-| ID    | Objective                                       | Success Metric                                     |
-| ----- | ----------------------------------------------- | -------------------------------------------------- |
-| BO-01 | Enable multi-domain architecture                | Minimum 2 independent domains operational          |
-| BO-02 | Enforce domain isolation                        | Zero cross-domain data ownership violations        |
-| BO-03 | Standardize engineering governance              | 100% repositories aligned with governance baseline |
-| BO-04 | Enable independent deployments                  | Each domain deployable without affecting others    |
-| BO-05 | Centralize configuration management             | 100% configuration managed through Config Store    |
-| BO-06 | Improve operational efficiency                  | Reduce duplicated infrastructure by 50%            |
-| B0-07 | Establish an Enterprise Architecture Repository as the single source of truth for standards, governance, templates, ADRs, and reference architectures |Repository operational and adopted by all ecosystem repositories |
+| ID    | Objective                                                                                                                                             | Success Metric                                                   |
+| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| BO-01 | Enable multi-domain architecture                                                                                                                      | Minimum 2 independent domains operational                        |
+| BO-02 | Enforce domain isolation                                                                                                                              | Zero cross-domain data ownership violations                      |
+| BO-03 | Standardize engineering governance                                                                                                                    | 100% repositories aligned with governance baseline               |
+| BO-04 | Enable independent deployments                                                                                                                        | Each domain deployable without affecting others                  |
+| BO-05 | Centralize configuration management                                                                                                                   | 100% configuration managed through Config Store                  |
+| BO-06 | Improve operational efficiency                                                                                                                        | Reduce duplicated infrastructure by 50%                          |
+| B0-07 | Establish an Enterprise Architecture Repository as the single source of truth for standards, governance, templates, ADRs, and reference architectures | Repository operational and adopted by all ecosystem repositories |
 
 ---
 
@@ -153,17 +153,21 @@ StarOne Galaxy aims to establish a scalable and governance-driven platform that 
 ## Ecosystem Classification
 
 Enterprise Foundation
+
 - starone-galaxy-architecture
 
 Shared Platforms
+
 - starone-galaxy-infra
 - starone-central-config
 
 Business Applications
+
 - starone-dhs
 - starone-bookshow
 
 Future Applications
+
 - starone-vaultiron
 - starone-sportstats
 
@@ -236,7 +240,7 @@ Centralized configuration management.
 | starone-central-config      | Shared Platform       | Configuration Management                       | Active  |
 | starone-dhs                 | Business Application  | Enterprise OMS                                 | Active  |
 | starone-bookshow            | Business Application  | Ticket Booking Platform                        | Planned |
-| starone-vault-iron           | Business Application  | Secret Management Platform                     | Planned |
+| starone-vault-iron          | Business Application  | Secret Management Platform                     | Planned |
 | starone-sport-stats         | Business Application  | Analytics Platform                             | Planned |
 
 ---
@@ -250,8 +254,8 @@ Centralized configuration management.
 | Configuration Platform  | Configuration Management               |
 | DHS                     | OMS Capabilities                       |
 | BookShow                | Ticketing Capabilities                 |
-| Vault-Iron               | Secret Management                      |
-| Sport-Stats              | Analytics                              |
+| Vault-Iron              | Secret Management                      |
+| Sport-Stats             | Analytics                              |
 
 ---
 
@@ -264,7 +268,6 @@ Centralized configuration management.
 | Platform      | Shared infrastructure model          |
 | Configuration | Centralized configuration management |
 | Security      | Security-by-design required          |
-
 
 ---
 
@@ -287,7 +290,6 @@ Centralized configuration management.
 | DEP-01 | starone-galaxy-architecture |
 | DEP-02 | starone-galaxy-infra        |
 | DEP-03 | starone-central-config      |
-
 
 # 19. Risks & Mitigations
 

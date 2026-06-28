@@ -225,11 +225,11 @@ starone-galaxy-architecture/
 
 The StarOne Galaxy ecosystem is organized into distinct repository categories.
 
-| Repository                  | Classification           | Responsibility                              |
-| --------------------------- | ------------------------ | ------------------------------------------- |
-| starone-galaxy-architecture | Architecture Governance  | Standards, ADRs, Design Governance          |
-| starone-galaxy-infra        | Platform Governance      | CI/CD, Security, Kubernetes, Operations     |
-| starone-galaxy-central-config       | Configuration Governance | Spring Cloud Config, Environment Governance |
+| Repository                    | Classification           | Responsibility                              |
+| ----------------------------- | ------------------------ | ------------------------------------------- |
+| starone-galaxy-architecture   | Architecture Governance  | Standards, ADRs, Design Governance          |
+| starone-galaxy-infra          | Platform Governance      | CI/CD, Security, Kubernetes, Operations     |
+| starone-galaxy-central-config | Configuration Governance | Spring Cloud Config, Environment Governance |
 | starone-dhs-platform          | Business Domain          | Enterprise OMS Platform                     |
 | starone-bookshow-platform     | Business Domain          | Consumer Ticketing Platform                 |
 
@@ -361,7 +361,6 @@ This decision supports:
 | Depends On   | Standard           | STANDARD-006 CODEOWNERS Governance         |
 | Depends On   | Standard           | STANDARD-007 Enterprise Naming Conventions |
 | Depends On   | Standard           | STANDARD-008 Contribution Governance       |
-
 
 ---
 

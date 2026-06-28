@@ -203,16 +203,16 @@ AU-SYS-001
 
 # 6. Requirement Categories
 
-| Prefix | Description |
-|----------|-------------|
-| SYS | Functional Requirement |
-| SEC | Security Requirement |
-| COM | Communication Requirement |
-| CFG | Configuration Requirement |
-| EVT | Event Requirement |
-| API | API Requirement |
-| DB | Database Requirement |
-| NFR | Non-Functional Requirement |
+| Prefix | Description                |
+| ------ | -------------------------- |
+| SYS    | Functional Requirement     |
+| SEC    | Security Requirement       |
+| COM    | Communication Requirement  |
+| CFG    | Configuration Requirement  |
+| EVT    | Event Requirement          |
+| API    | API Requirement            |
+| DB     | Database Requirement       |
+| NFR    | Non-Functional Requirement |
 
 Example
 
@@ -326,7 +326,7 @@ Use
 Never use
 
 ```markdown
-* Item
+- Item
 ```
 
 ---
@@ -363,6 +363,6 @@ Before approving an SRS verify:
 
 # 14. Version History
 
-| Version | Description |
-|----------|-------------|
-| v1.0.0 | Initial Enterprise Template |
+| Version | Description                 |
+| ------- | --------------------------- |
+| v1.0.0  | Initial Enterprise Template |
