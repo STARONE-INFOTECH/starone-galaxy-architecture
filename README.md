@@ -8,13 +8,13 @@
 
 | Field           | Value                         |
 | --------------- | ----------------------------- |
-| Document ID     | STARONE-GALAXY-README-v1.0    |
+| Document ID     | SGE-README-v1.0               |
 | Domain          | Governance                    |
 | Document Type   | Architectural Source of Truth |
 | Version         | 1.0.0                         |
 | Author          | Sachin Salunke                |
 | Status          | Draft                         |
-| Date            | 2026-05-01                    |
+| Date            | 2026-01-01                    |
 | Linked Epic     | EPIC-ARCH-001                 |
 | Linked Story    | STORY-ARCH-002                |
 | Approval Status | Pending                       |
