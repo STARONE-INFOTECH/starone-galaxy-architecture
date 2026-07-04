@@ -1,14 +1,14 @@
 STARONE_ENGINEERING_GOVERNANCE_HANDBOOK.md
 
-Chapter 1  Introduction
-Chapter 2  Engineering Governance Principles
-Chapter 3  Repository Governance
-Chapter 4  Repository Responsibility Matrix
-Chapter 5  SDLC Document Hierarchy
-Chapter 6  SDLC Document Lifecycle
-Chapter 7  SDLC Document Responsibility Matrix
-Chapter 8  SDLC Document Transformation
-Chapter 9  SDLC Traceability
+Chapter 1 Introduction
+Chapter 2 Engineering Governance Principles
+Chapter 3 Repository Governance
+Chapter 4 Repository Responsibility Matrix
+Chapter 5 SDLC Document Hierarchy
+Chapter 6 SDLC Document Lifecycle
+Chapter 7 SDLC Document Responsibility Matrix
+Chapter 8 SDLC Document Transformation
+Chapter 9 SDLC Traceability
 Chapter 10 SDLC Content Guidelines
 Chapter 11 SDLC Document Boundary & Content Ownership
 Chapter 12 Engineering Review & Quality Gates
@@ -16,6 +16,7 @@ Chapter 13 Compliance & Governance
 Chapter 14 Appendices
 
 ---
+
 ---
 
 # Chapter 1 — Introduction
@@ -36,15 +37,15 @@ This handbook serves as the authoritative engineering governance reference for a
 
 The objectives of this handbook are to:
 
-* Establish a consistent engineering governance framework.
-* Define clear repository ownership boundaries.
-* Standardize SDLC documentation.
-* Eliminate duplication of engineering responsibilities.
-* Preserve separation of concerns across engineering artifacts.
-* Maintain traceability throughout the SDLC.
-* Enable scalable enterprise architecture.
-* Improve engineering consistency and maintainability.
-* Support long-term platform evolution.
+- Establish a consistent engineering governance framework.
+- Define clear repository ownership boundaries.
+- Standardize SDLC documentation.
+- Eliminate duplication of engineering responsibilities.
+- Preserve separation of concerns across engineering artifacts.
+- Maintain traceability throughout the SDLC.
+- Enable scalable enterprise architecture.
+- Improve engineering consistency and maintainability.
+- Support long-term platform evolution.
 
 ---
 
@@ -54,17 +55,17 @@ This handbook applies to every engineering activity performed within the StarOne
 
 It governs:
 
-* Enterprise Architecture
-* Product Engineering
-* Business Analysis
-* Solution Architecture
-* Software Engineering
-* Platform Engineering
-* Infrastructure Engineering
-* DevOps
-* Quality Assurance
-* Documentation
-* Technical Governance
+- Enterprise Architecture
+- Product Engineering
+- Business Analysis
+- Solution Architecture
+- Software Engineering
+- Platform Engineering
+- Infrastructure Engineering
+- DevOps
+- Quality Assurance
+- Documentation
+- Technical Governance
 
 The standards defined in this handbook are mandatory for all current and future repositories.
 
@@ -74,17 +75,17 @@ The standards defined in this handbook are mandatory for all current and future 
 
 This handbook is intended for:
 
-* Enterprise Architects
-* Solution Architects
-* Product Owners
-* Business Analysts
-* Technical Leads
-* Software Engineers
-* DevOps Engineers
-* QA Engineers
-* Platform Engineers
-* Engineering Managers
-* Project Managers
+- Enterprise Architects
+- Solution Architects
+- Product Owners
+- Business Analysts
+- Technical Leads
+- Software Engineers
+- DevOps Engineers
+- QA Engineers
+- Platform Engineers
+- Engineering Managers
+- Project Managers
 
 ---
 
@@ -92,14 +93,14 @@ This handbook is intended for:
 
 The StarOne Galaxy engineering model is founded upon the following philosophy:
 
-* Architecture drives implementation.
-* Governance precedes development.
-* Every engineering concern has one authoritative owner.
-* Every repository has clearly defined responsibilities.
-* Every SDLC artifact has a unique purpose.
-* Every requirement remains traceable throughout the SDLC.
-* Every downstream artifact elaborates, but never contradicts, its parent.
-* Enterprise standards govern all implementation activities.
+- Architecture drives implementation.
+- Governance precedes development.
+- Every engineering concern has one authoritative owner.
+- Every repository has clearly defined responsibilities.
+- Every SDLC artifact has a unique purpose.
+- Every requirement remains traceable throughout the SDLC.
+- Every downstream artifact elaborates, but never contradicts, its parent.
+- Enterprise standards govern all implementation activities.
 
 ---
 
@@ -181,12 +182,12 @@ Defines enterprise-wide policies, standards, architecture, and engineering gover
 
 Examples include:
 
-* Architecture Standards
-* Engineering Standards
-* SDLC Governance
-* Security Standards
-* Documentation Standards
-* Architecture Decision Records (ADRs)
+- Architecture Standards
+- Engineering Standards
+- SDLC Governance
+- Security Standards
+- Documentation Standards
+- Architecture Decision Records (ADRs)
 
 ---
 
@@ -196,10 +197,10 @@ Defines ownership boundaries and responsibilities for each repository.
 
 Repository governance ensures:
 
-* Single ownership
-* No duplication
-* Controlled dependencies
-* Clear architectural boundaries
+- Single ownership
+- No duplication
+- Controlled dependencies
+- Clear architectural boundaries
 
 ---
 
@@ -207,15 +208,15 @@ Repository governance ensures:
 
 Defines the engineering documentation framework governing:
 
-* Business Analysis
-* Product Engineering
-* Functional Analysis
-* Software Specification
-* Architecture
-* Detailed Design
-* Implementation
-* Testing
-* Deployment
+- Business Analysis
+- Product Engineering
+- Functional Analysis
+- Software Specification
+- Architecture
+- Detailed Design
+- Implementation
+- Testing
+- Deployment
 
 ---
 
@@ -251,6 +252,7 @@ Any deviation from the standards defined herein shall require formal approval fr
 Failure to comply with these standards shall be treated as an architecture governance finding and shall be resolved before implementation proceeds.
 
 ---
+
 ---
 
 # Chapter 2 — Engineering Governance Principles
@@ -271,16 +273,16 @@ Every subsequent chapter in this handbook derives its authority from these princ
 
 These principles apply to:
 
-* Enterprise Architecture
-* Product Management
-* Business Analysis
-* Solution Architecture
-* Software Engineering
-* Platform Engineering
-* DevOps
-* QA Engineering
-* Technical Documentation
-* Engineering Governance
+- Enterprise Architecture
+- Product Management
+- Business Analysis
+- Solution Architecture
+- Software Engineering
+- Platform Engineering
+- DevOps
+- QA Engineering
+- Technical Documentation
+- Engineering Governance
 
 Compliance with these principles is mandatory.
 
@@ -352,11 +354,11 @@ Projects may extend standards where permitted but shall not contradict them.
 
 Engineering artifacts shall use standardized:
 
-* Terminology
-* Templates
-* Naming conventions
-* Documentation structure
-* Review processes
+- Terminology
+- Templates
+- Naming conventions
+- Documentation structure
+- Review processes
 
 ---
 
@@ -398,12 +400,12 @@ Cross-cutting concerns shall be centralized whenever appropriate.
 
 Examples include:
 
-* Authentication
-* Authorization
-* Logging
-* Monitoring
-* Configuration
-* Security
+- Authentication
+- Authorization
+- Logging
+- Monitoring
+- Configuration
+- Security
 
 ---
 
@@ -587,14 +589,14 @@ Lower-level decisions shall not contradict higher-level decisions.
 
 Before approving any engineering decision, the following validations shall be performed.
 
-* Business validation
-* Product validation
-* Functional validation
-* Architectural validation
-* Repository validation
-* SDLC validation
-* Security validation
-* Compliance validation
+- Business validation
+- Product validation
+- Functional validation
+- Architectural validation
+- Repository validation
+- SDLC validation
+- Security validation
+- Compliance validation
 
 Implementation shall proceed only after successful validation.
 
@@ -619,6 +621,7 @@ Each chapter provides detailed guidance for implementing these principles within
 No chapter may contradict the principles established herein.
 
 ---
+
 ---
 
 # Chapter 3 — Repository Governance
@@ -639,13 +642,13 @@ This chapter defines repository governance rules that all current and future rep
 
 Repository Governance shall achieve the following objectives:
 
-* Establish clear repository ownership.
-* Eliminate duplication of responsibilities.
-* Preserve enterprise architecture boundaries.
-* Promote loose coupling between repositories.
-* Enable independent repository evolution.
-* Ensure a single source of truth for every engineering concern.
-* Simplify governance and maintenance.
+- Establish clear repository ownership.
+- Eliminate duplication of responsibilities.
+- Preserve enterprise architecture boundaries.
+- Promote loose coupling between repositories.
+- Enable independent repository evolution.
+- Ensure a single source of truth for every engineering concern.
+- Simplify governance and maintenance.
 
 ---
 
@@ -660,7 +663,7 @@ Repositories within the StarOne Galaxy ecosystem shall be classified into one of
 | Configuration Repository             | Owns centralized application configuration, environment configuration and configuration templates.                |
 | Platform Repository                  | Owns business platform implementation and domain services.                                                        |
 | Product Repository                   | Owns independent customer-facing products and business capabilities.                                              |
-| Shared Library Repository *(Future)* | Owns reusable frameworks and shared libraries consumed across multiple repositories.                              |
+| Shared Library Repository _(Future)_ | Owns reusable frameworks and shared libraries consumed across multiple repositories.                              |
 
 ---
 
@@ -670,12 +673,12 @@ Every repository shall belong to exactly one repository category.
 
 Every repository shall have:
 
-* Defined ownership
-* Defined purpose
-* Defined scope
-* Defined consumers
-* Defined dependencies
-* Defined governance model
+- Defined ownership
+- Defined purpose
+- Defined scope
+- Defined consumers
+- Defined dependencies
+- Defined governance model
 
 Repository ownership shall remain stable throughout its lifecycle.
 
@@ -749,11 +752,11 @@ Enterprise governance shall remain within enterprise repositories.
 
 Every repository shall explicitly define:
 
-* Business owner
-* Technical owner
-* Repository owner
-* Primary consumers
-* Primary stakeholders
+- Business owner
+- Technical owner
+- Repository owner
+- Primary consumers
+- Primary stakeholders
 
 Ownership changes shall be approved through Enterprise Architecture governance.
 
@@ -767,10 +770,10 @@ Repositories shall not be separated merely because different programming languag
 
 Boundaries shall reflect:
 
-* Business capability
-* Platform capability
-* Enterprise capability
-* Shared engineering capability
+- Business capability
+- Platform capability
+- Enterprise capability
+- Shared engineering capability
 
 ---
 
@@ -820,9 +823,9 @@ Repositories shall evolve independently whenever practical.
 
 Repository evolution shall preserve:
 
-* Backward compatibility
-* Consumer stability
-* Architectural integrity
+- Backward compatibility
+- Consumer stability
+- Architectural integrity
 
 Breaking changes shall follow approved versioning and migration strategies.
 
@@ -856,14 +859,14 @@ Repository retirement shall preserve engineering history and documentation.
 
 Every repository shall maintain:
 
-* Repository documentation
-* Ownership information
-* Architecture documentation
-* Contribution guidelines
-* Review process
-* Versioning strategy
-* Release strategy
-* Security controls
+- Repository documentation
+- Ownership information
+- Architecture documentation
+- Contribution guidelines
+- Review process
+- Versioning strategy
+- Release strategy
+- Security controls
 
 ---
 
@@ -890,14 +893,14 @@ Repositories failing governance review shall require corrective actions before a
 
 The following constitute governance violations.
 
-* Duplicate repository ownership.
-* Undefined ownership.
-* Repository boundary violations.
-* Business logic placed within governance repositories.
-* Enterprise governance placed within implementation repositories.
-* Undocumented dependencies.
-* Circular repository dependencies.
-* Unapproved architectural deviations.
+- Duplicate repository ownership.
+- Undefined ownership.
+- Repository boundary violations.
+- Business logic placed within governance repositories.
+- Enterprise governance placed within implementation repositories.
+- Undocumented dependencies.
+- Circular repository dependencies.
+- Unapproved architectural deviations.
 
 Governance violations shall be documented and remediated through Enterprise Architecture review.
 
@@ -911,13 +914,14 @@ Repository-specific ownership assignments are defined in **Chapter 4 – Reposit
 
 Repository governance shall be interpreted together with:
 
-* Chapter 2 – Engineering Governance Principles
-* Chapter 4 – Repository Responsibility Matrix
-* Chapter 11 – SDLC Document Boundary & Content Ownership
+- Chapter 2 – Engineering Governance Principles
+- Chapter 4 – Repository Responsibility Matrix
+- Chapter 11 – SDLC Document Boundary & Content Ownership
 
 No repository implementation shall violate the governance principles established in this chapter.
 
 ---
+
 ---
 
 # Chapter 4 — Repository Responsibility Matrix
@@ -930,11 +934,11 @@ This chapter establishes the authoritative ownership of engineering responsibili
 
 Its purpose is to:
 
-* Establish a single source of truth for every engineering concern.
-* Prevent duplication of responsibilities.
-* Define repository ownership boundaries.
-* Enable consistent architectural governance.
-* Support independent repository evolution.
+- Establish a single source of truth for every engineering concern.
+- Prevent duplication of responsibilities.
+- Define repository ownership boundaries.
+- Enable consistent architectural governance.
+- Support independent repository evolution.
 
 This chapter complements **Chapter 3 – Repository Governance** by assigning responsibilities to specific repositories.
 
@@ -962,30 +966,30 @@ Ownership is classified as:
 
 | Engineering Concern                 | Architecture | Infrastructure | Central Config | DHS Platform | BookShow Platform |
 | ----------------------------------- | :----------: | :------------: | :------------: | :----------: | :---------------: |
-| Enterprise Architecture             |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Enterprise Standards                |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| SDLC Governance                     |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Documentation Standards             |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Repository Governance               |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Architecture Decision Records (ADR) |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Naming Standards                    |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Security Standards                  |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Branching Strategy                  |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Contribution Guidelines             |      Own     |     Consume    |     Consume    |    Consume   |      Consume      |
-| Kubernetes                          |    Consume   |       Own      |     Consume    |    Consume   |      Consume      |
-| Helm Charts                         |    Consume   |       Own      |     Consume    |    Consume   |      Consume      |
-| GitHub Actions                      |    Consume   |       Own      |     Consume    |    Consume   |      Consume      |
-| ArgoCD                              |    Consume   |       Own      |     Consume    |    Consume   |      Consume      |
-| Infrastructure Automation           |    Consume   |       Own      |     Consume    |    Consume   |      Consume      |
-| Environment Provisioning            |    Consume   |       Own      |     Consume    |    Consume   |      Consume      |
-| Spring Cloud Configuration          |    Consume   |     Consume    |       Own      |    Consume   |      Consume      |
-| Environment Configuration           |    Consume   |     Consume    |       Own      |    Consume   |      Consume      |
-| Configuration Templates             |    Consume   |     Consume    |       Own      |    Consume   |      Consume      |
-| Configuration Validation            |    Consume   |     Consume    |       Own      |    Consume   |      Consume      |
-| OMS Business Logic                  |  Prohibited  |     Consume    |     Consume    |      Own     |      Consume      |
-| Shared Domain Libraries             |    Consume   |     Consume    |     Consume    |      Own     |      Consume      |
-| Consumer Business Logic             |  Prohibited  |     Consume    |     Consume    |    Consume   |        Own        |
-| Customer Services                   |  Prohibited  |     Consume    |     Consume    |    Consume   |        Own        |
+| Enterprise Architecture             |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Enterprise Standards                |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| SDLC Governance                     |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Documentation Standards             |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Repository Governance               |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Architecture Decision Records (ADR) |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Naming Standards                    |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Security Standards                  |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Branching Strategy                  |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Contribution Guidelines             |     Own      |    Consume     |    Consume     |   Consume    |      Consume      |
+| Kubernetes                          |   Consume    |      Own       |    Consume     |   Consume    |      Consume      |
+| Helm Charts                         |   Consume    |      Own       |    Consume     |   Consume    |      Consume      |
+| GitHub Actions                      |   Consume    |      Own       |    Consume     |   Consume    |      Consume      |
+| ArgoCD                              |   Consume    |      Own       |    Consume     |   Consume    |      Consume      |
+| Infrastructure Automation           |   Consume    |      Own       |    Consume     |   Consume    |      Consume      |
+| Environment Provisioning            |   Consume    |      Own       |    Consume     |   Consume    |      Consume      |
+| Spring Cloud Configuration          |   Consume    |    Consume     |      Own       |   Consume    |      Consume      |
+| Environment Configuration           |   Consume    |    Consume     |      Own       |   Consume    |      Consume      |
+| Configuration Templates             |   Consume    |    Consume     |      Own       |   Consume    |      Consume      |
+| Configuration Validation            |   Consume    |    Consume     |      Own       |   Consume    |      Consume      |
+| OMS Business Logic                  |  Prohibited  |    Consume     |    Consume     |     Own      |      Consume      |
+| Shared Domain Libraries             |   Consume    |    Consume     |    Consume     |     Own      |      Consume      |
+| Consumer Business Logic             |  Prohibited  |    Consume     |    Consume     |   Consume    |        Own        |
+| Customer Services                   |  Prohibited  |    Consume     |    Consume     |   Consume    |        Own        |
 
 ---
 
@@ -1003,29 +1007,29 @@ Enterprise governance and engineering standards.
 
 ### Owns
 
-* Enterprise Architecture
-* Engineering Standards
-* Repository Governance
-* SDLC Governance
-* Documentation Governance
-* Architecture Decision Records
-* Security Standards
-* Naming Standards
-* Contribution Standards
-* Branching Standards
-* Engineering Templates
-* Enterprise Policies
+- Enterprise Architecture
+- Engineering Standards
+- Repository Governance
+- SDLC Governance
+- Documentation Governance
+- Architecture Decision Records
+- Security Standards
+- Naming Standards
+- Contribution Standards
+- Branching Standards
+- Engineering Templates
+- Enterprise Policies
 
 ### Consumes
 
-* None
+- None
 
 ### Prohibited
 
-* Business Logic
-* Infrastructure Implementation
-* Runtime Configuration
-* Deployable Services
+- Business Logic
+- Infrastructure Implementation
+- Runtime Configuration
+- Deployable Services
 
 ---
 
@@ -1041,27 +1045,27 @@ Enterprise infrastructure implementation.
 
 ### Owns
 
-* Kubernetes
-* Helm
-* GitHub Actions
-* ArgoCD
-* Infrastructure Automation
-* Platform Operations
-* Deployment Automation
-* Environment Provisioning
+- Kubernetes
+- Helm
+- GitHub Actions
+- ArgoCD
+- Infrastructure Automation
+- Platform Operations
+- Deployment Automation
+- Environment Provisioning
 
 ### Consumes
 
-* Enterprise Standards
-* Security Standards
-* Architecture Standards
+- Enterprise Standards
+- Security Standards
+- Architecture Standards
 
 ### Prohibited
 
-* Business Logic
-* SDLC Governance
-* Enterprise Policies
-* Runtime Configuration
+- Business Logic
+- SDLC Governance
+- Enterprise Policies
+- Runtime Configuration
 
 ---
 
@@ -1077,25 +1081,25 @@ Centralized configuration management.
 
 ### Owns
 
-* Spring Cloud Config
-* Environment Configuration
-* Shared Configuration
-* Configuration Templates
-* Configuration Validation
-* Repository Configuration
+- Spring Cloud Config
+- Environment Configuration
+- Shared Configuration
+- Configuration Templates
+- Configuration Validation
+- Repository Configuration
 
 ### Consumes
 
-* Architecture Standards
-* Security Standards
-* Configuration Policies
+- Architecture Standards
+- Security Standards
+- Configuration Policies
 
 ### Prohibited
 
-* Enterprise Governance
-* Infrastructure Automation
-* Business Services
-* ADRs
+- Enterprise Governance
+- Infrastructure Automation
+- Business Services
+- ADRs
 
 ---
 
@@ -1111,25 +1115,25 @@ Enterprise Order Management System implementation.
 
 ### Owns
 
-* OMS Business Logic
-* Domain Services
-* Shared Business Libraries
-* Enterprise Business Modules
-* Domain Models
-* Business Workflows
+- OMS Business Logic
+- Domain Services
+- Shared Business Libraries
+- Enterprise Business Modules
+- Domain Models
+- Business Workflows
 
 ### Consumes
 
-* Enterprise Standards
-* Infrastructure
-* Configuration
-* Shared Platform Services
+- Enterprise Standards
+- Infrastructure
+- Configuration
+- Shared Platform Services
 
 ### Prohibited
 
-* Enterprise Governance
-* Infrastructure Automation
-* Configuration Governance
+- Enterprise Governance
+- Infrastructure Automation
+- Configuration Governance
 
 ---
 
@@ -1145,24 +1149,24 @@ Consumer-facing ticketing platform.
 
 ### Owns
 
-* Booking Services
-* Consumer Business Logic
-* Customer Workflows
-* Independent Microservices
-* Consumer Domain Models
+- Booking Services
+- Consumer Business Logic
+- Customer Workflows
+- Independent Microservices
+- Consumer Domain Models
 
 ### Consumes
 
-* Enterprise Standards
-* Infrastructure
-* Configuration
-* Shared Platform Services
+- Enterprise Standards
+- Infrastructure
+- Configuration
+- Shared Platform Services
 
 ### Prohibited
 
-* Enterprise Governance
-* Infrastructure Automation
-* Enterprise Policies
+- Enterprise Governance
+- Infrastructure Automation
+- Enterprise Policies
 
 ---
 
@@ -1224,14 +1228,14 @@ Artifacts failing ownership validation shall not be approved.
 
 Applying this Repository Responsibility Matrix ensures:
 
-* Single Source of Truth
-* Clear Repository Ownership
-* Elimination of Responsibility Duplication
-* Stable Architectural Boundaries
-* Independent Repository Evolution
-* Consistent Engineering Governance
-* Improved Platform Maintainability
-* Reduced Architecture Drift
+- Single Source of Truth
+- Clear Repository Ownership
+- Elimination of Responsibility Duplication
+- Stable Architectural Boundaries
+- Independent Repository Evolution
+- Consistent Engineering Governance
+- Improved Platform Maintainability
+- Reduced Architecture Drift
 
 ---
 
@@ -1241,14 +1245,15 @@ This chapter assigns repository ownership.
 
 Subsequent chapters define:
 
-* SDLC document ownership
-* SDLC document lifecycle
-* SDLC document transformation
-* SDLC document boundaries
+- SDLC document ownership
+- SDLC document lifecycle
+- SDLC document transformation
+- SDLC document boundaries
 
 Repository ownership shall always take precedence when determining where an engineering artifact belongs.
 
 ---
+
 ---
 
 # Chapter 5 — SDLC Document Hierarchy
@@ -1261,11 +1266,11 @@ This chapter defines the official Software Development Life Cycle (SDLC) documen
 
 The hierarchy establishes:
 
-* The sequence in which engineering documents are created.
-* The purpose of each document.
-* Parent-child relationships.
-* Information flow between documents.
-* Progressive elaboration across the SDLC.
+- The sequence in which engineering documents are created.
+- The purpose of each document.
+- Parent-child relationships.
+- Information flow between documents.
+- Progressive elaboration across the SDLC.
 
 The objective is to ensure every engineering artifact is derived from an approved upstream artifact while maintaining complete consistency throughout the software development lifecycle.
 
@@ -1470,10 +1475,10 @@ The dependency chain shall remain acyclic.
 
 A downstream document shall not begin until its parent document has been:
 
-* Reviewed
-* Approved
-* Baselined
-* Version controlled
+- Reviewed
+- Approved
+- Baselined
+- Version controlled
 
 Incomplete upstream documentation shall block downstream engineering activities unless formally exempted.
 
@@ -1483,13 +1488,13 @@ Incomplete upstream documentation shall block downstream engineering activities 
 
 A document shall be considered complete when:
 
-* All mandatory sections are completed.
-* Review comments are resolved.
-* Parent traceability is established.
-* Document ownership validation passes.
-* Boundary validation passes.
-* Approval is obtained.
-* Version baseline is established.
+- All mandatory sections are completed.
+- Review comments are resolved.
+- Parent traceability is established.
+- Document ownership validation passes.
+- Boundary validation passes.
+- Approval is obtained.
+- Version baseline is established.
 
 ---
 
@@ -1509,15 +1514,16 @@ This chapter defines the **order** of engineering documentation.
 
 Subsequent chapters define:
 
-* Document lifecycle (Chapter 6)
-* Document responsibilities (Chapter 7)
-* Document transformation (Chapter 8)
-* Traceability (Chapter 9)
-* Content ownership (Chapter 11)
+- Document lifecycle (Chapter 6)
+- Document responsibilities (Chapter 7)
+- Document transformation (Chapter 8)
+- Traceability (Chapter 9)
+- Content ownership (Chapter 11)
 
 The hierarchy defined in this chapter forms the structural foundation of the StarOne Galaxy documentation framework.
 
 ---
+
 ---
 
 # Chapter 6 — SDLC Document Lifecycle
@@ -1538,13 +1544,13 @@ The objective is to ensure that every engineering document remains accurate, tra
 
 The SDLC documentation lifecycle shall adhere to the following principles.
 
-* Every document shall have an identified owner.
-* Every document shall follow a controlled lifecycle.
-* Every document shall be version controlled.
-* Every document shall undergo formal review before approval.
-* Every approved document shall be baselined.
-* Every document change shall be traceable.
-* Every obsolete document shall be retired rather than deleted.
+- Every document shall have an identified owner.
+- Every document shall follow a controlled lifecycle.
+- Every document shall be version controlled.
+- Every document shall undergo formal review before approval.
+- Every approved document shall be baselined.
+- Every document change shall be traceable.
+- Every obsolete document shall be retired rather than deleted.
 
 ---
 
@@ -1608,11 +1614,11 @@ Every document shall originate from an approved parent artifact.
 
 Each document shall have:
 
-* Document Identifier
-* Version
-* Owner
-* Repository
-* Creation Date
+- Document Identifier
+- Version
+- Owner
+- Repository
+- Creation Date
 
 ---
 
@@ -1634,12 +1640,12 @@ Before approval, every document shall undergo a structured review.
 
 Review activities shall include:
 
-* Business Review
-* Functional Review
-* Architecture Review
-* Technical Review
-* Quality Review
-* Compliance Review
+- Business Review
+- Functional Review
+- Architecture Review
+- Technical Review
+- Quality Review
+- Compliance Review
 
 Review comments shall be resolved before approval.
 
@@ -1649,11 +1655,11 @@ Review comments shall be resolved before approval.
 
 A document shall be approved only when:
 
-* Mandatory content is complete.
-* Parent document alignment is verified.
-* Governance validation passes.
-* Review findings are resolved.
-* Stakeholder approval is obtained.
+- Mandatory content is complete.
+- Parent document alignment is verified.
+- Governance validation passes.
+- Review findings are resolved.
+- Stakeholder approval is obtained.
 
 Approved documents shall become eligible for baselining.
 
@@ -1665,9 +1671,9 @@ Baselining establishes the official version of a document.
 
 Once baselined:
 
-* The version becomes the authoritative reference.
-* Downstream documents shall reference the baseline.
-* Changes require formal revision.
+- The version becomes the authoritative reference.
+- Downstream documents shall reference the baseline.
+- Changes require formal revision.
 
 Only one baseline version shall be active at any time.
 
@@ -1677,13 +1683,13 @@ Only one baseline version shall be active at any time.
 
 Revisions shall occur whenever:
 
-* Business requirements change.
-* Product capabilities evolve.
-* Functional behavior changes.
-* Architecture changes.
-* Design changes.
-* Regulatory requirements change.
-* Governance standards evolve.
+- Business requirements change.
+- Product capabilities evolve.
+- Functional behavior changes.
+- Architecture changes.
+- Design changes.
+- Regulatory requirements change.
+- Governance standards evolve.
 
 Every revision shall maintain complete revision history.
 
@@ -1701,10 +1707,10 @@ Documents shall use Semantic Versioning.
 
 Examples:
 
-* v1.0.0 – Initial approved release
-* v1.1.0 – Functional enhancement
-* v1.1.1 – Editorial correction
-* v2.0.0 – Major revision
+- v1.0.0 – Initial approved release
+- v1.1.0 – Functional enhancement
+- v1.1.1 – Editorial correction
+- v2.0.0 – Major revision
 
 ---
 
@@ -1816,15 +1822,16 @@ This chapter defines **how** SDLC documents evolve over time.
 
 Subsequent chapters define:
 
-* Document responsibilities (Chapter 7)
-* Document transformation (Chapter 8)
-* Document traceability (Chapter 9)
-* Document content guidelines (Chapter 10)
-* Document boundaries and ownership (Chapter 11)
+- Document responsibilities (Chapter 7)
+- Document transformation (Chapter 8)
+- Document traceability (Chapter 9)
+- Document content guidelines (Chapter 10)
+- Document boundaries and ownership (Chapter 11)
 
 All lifecycle activities shall comply with the governance principles established in Chapters 2 through 5.
 
 ---
+
 ---
 
 # Chapter 7 — SDLC Document Responsibility Matrix
@@ -1837,11 +1844,11 @@ This chapter defines the ownership, responsibilities, objectives, and deliverabl
 
 Its objectives are to:
 
-* Establish a single responsibility for every SDLC artifact.
-* Eliminate content duplication.
-* Preserve separation of concerns.
-* Enable progressive elaboration throughout the SDLC.
-* Maintain engineering consistency and governance.
+- Establish a single responsibility for every SDLC artifact.
+- Eliminate content duplication.
+- Preserve separation of concerns.
+- Enable progressive elaboration throughout the SDLC.
+- Maintain engineering consistency and governance.
 
 This chapter defines **who owns what**.
 
@@ -1912,8 +1919,7 @@ Document ownership shall remain stable throughout the SDLC.
 | Deployment     | Deploy software                                            | Operations Team                                                       |
 | Operations     | Operate and maintain software                              | Engineering Teams                                                     |
 
-
-*Note: Unlike BRD, PRD, FRD, SRS, HLD, and LLD, an ADR is not a sequential SDLC transformation artifact. It is a cross-cutting governance artifact created whenever a significant architectural decision is required. ADRs guide and constrain HLD, LLD, implementation, and future architectural evolution but are not derived from a parent SDLC document*.
+_Note: Unlike BRD, PRD, FRD, SRS, HLD, and LLD, an ADR is not a sequential SDLC transformation artifact. It is a cross-cutting governance artifact created whenever a significant architectural decision is required. ADRs guide and constrain HLD, LLD, implementation, and future architectural evolution but are not derived from a parent SDLC document_.
 
 ---
 
@@ -1927,10 +1933,10 @@ Identify the business problem or opportunity.
 
 ### Owns
 
-* Business opportunity
-* Business drivers
-* Strategic goals
-* Business justification
+- Business opportunity
+- Business drivers
+- Strategic goals
+- Business justification
 
 ### Produces
 
@@ -1950,12 +1956,12 @@ Define business expectations.
 
 ### Owns
 
-* Business requirements
-* Business scope
-* Business objectives
-* Business processes
-* Business stakeholders
-* Business constraints
+- Business requirements
+- Business scope
+- Business objectives
+- Business processes
+- Business stakeholders
+- Business constraints
 
 ### Produces
 
@@ -1975,13 +1981,13 @@ Translate business requirements into product capabilities.
 
 ### Owns
 
-* Product vision
-* Product goals
-* Product capabilities
-* Product modules
-* Product roadmap
-* Product releases
-* Personas
+- Product vision
+- Product goals
+- Product capabilities
+- Product modules
+- Product roadmap
+- Product releases
+- Personas
 
 ### Produces
 
@@ -2001,13 +2007,13 @@ Define functional behavior of product modules.
 
 ### Owns
 
-* Functional requirements
-* Business rules
-* Functional workflows
-* User interaction requirements
-* Validation rules
-* Reporting requirements
-* Functional acceptance criteria
+- Functional requirements
+- Business rules
+- Functional workflows
+- User interaction requirements
+- Validation rules
+- Reporting requirements
+- Functional acceptance criteria
 
 ### Produces
 
@@ -2027,13 +2033,13 @@ Define software specifications required to implement functional behavior.
 
 ### Owns
 
-* Software specifications
-* Service interfaces
-* APIs
-* Data contracts
-* Integration contracts
-* Error handling specifications
-* Technical constraints
+- Software specifications
+- Service interfaces
+- APIs
+- Data contracts
+- Integration contracts
+- Error handling specifications
+- Technical constraints
 
 ### Produces
 
@@ -2053,12 +2059,12 @@ Define solution architecture.
 
 ### Owns
 
-* Logical architecture
-* Physical architecture
-* Component architecture
-* Integration architecture
-* Deployment architecture
-* Security architecture
+- Logical architecture
+- Physical architecture
+- Component architecture
+- Integration architecture
+- Deployment architecture
+- Security architecture
 
 ### Produces
 
@@ -2078,12 +2084,12 @@ Define implementation design.
 
 ### Owns
 
-* Class design
-* Database design
-* Sequence diagrams
-* Algorithms
-* Component implementation
-* Internal design
+- Class design
+- Database design
+- Sequence diagrams
+- Algorithms
+- Component implementation
+- Internal design
 
 ### Produces
 
@@ -2103,10 +2109,10 @@ Develop software according to approved design.
 
 ### Owns
 
-* Source code
-* Unit tests
-* Build artifacts
-* Executables
+- Source code
+- Unit tests
+- Build artifacts
+- Executables
 
 ### Produces
 
@@ -2126,11 +2132,11 @@ Verify implementation.
 
 ### Owns
 
-* Test cases
-* Test execution
-* Test reports
-* Defect reports
-* Verification evidence
+- Test cases
+- Test execution
+- Test reports
+- Defect reports
+- Verification evidence
 
 ### Produces
 
@@ -2150,10 +2156,10 @@ Release verified software.
 
 ### Owns
 
-* Release packages
-* Deployment plans
-* Rollback plans
-* Release notes
+- Release packages
+- Deployment plans
+- Rollback plans
+- Release notes
 
 ### Produces
 
@@ -2173,11 +2179,11 @@ Operate and maintain deployed software.
 
 ### Owns
 
-* Operational procedures
-* Monitoring
-* Incident records
-* Operational runbooks
-* Maintenance activities
+- Operational procedures
+- Monitoring
+- Incident records
+- Operational runbooks
+- Maintenance activities
 
 ### Produces
 
@@ -2241,14 +2247,14 @@ If any validation fails, the content shall be relocated to the appropriate docum
 
 Applying this responsibility model ensures:
 
-* Clear ownership
-* Single source of truth
-* No document overlap
-* Progressive elaboration
-* Predictable SDLC evolution
-* Simplified governance
-* Improved maintainability
-* Consistent engineering documentation
+- Clear ownership
+- Single source of truth
+- No document overlap
+- Progressive elaboration
+- Predictable SDLC evolution
+- Simplified governance
+- Improved maintainability
+- Consistent engineering documentation
 
 ---
 
@@ -2258,14 +2264,15 @@ This chapter defines **who owns each SDLC responsibility**.
 
 The following chapters build upon this foundation:
 
-* **Chapter 8** defines how responsibilities transform between documents.
-* **Chapter 9** defines how responsibilities remain traceable.
-* **Chapter 10** defines the standard content expected within each document.
-* **Chapter 11** defines the boundaries that prevent responsibilities from crossing into other SDLC artifacts.
+- **Chapter 8** defines how responsibilities transform between documents.
+- **Chapter 9** defines how responsibilities remain traceable.
+- **Chapter 10** defines the standard content expected within each document.
+- **Chapter 11** defines the boundaries that prevent responsibilities from crossing into other SDLC artifacts.
 
 This responsibility model shall be used by Enterprise Architects, Product Managers, Business Analysts, Solution Architects, Technical Leads, and Engineering teams to determine the correct destination for every engineering artifact.
 
 ---
+
 ---
 
 # Chapter 8 — SDLC Document Transformation
@@ -2278,11 +2285,11 @@ This chapter defines how engineering information is transformed throughout the S
 
 The objective is to ensure that:
 
-* Every downstream document is derived from an approved upstream document.
-* Information is progressively elaborated.
-* No engineering information is lost.
-* No downstream document introduces unauthorized requirements.
-* Complete traceability is preserved across the SDLC.
+- Every downstream document is derived from an approved upstream document.
+- Information is progressively elaborated.
+- No engineering information is lost.
+- No downstream document introduces unauthorized requirements.
+- Complete traceability is preserved across the SDLC.
 
 This chapter governs the transformation of engineering knowledge—not the ownership of content.
 
@@ -2296,10 +2303,10 @@ Each document shall transform the information contained in its immediate parent 
 
 Transformation shall:
 
-* Preserve intent.
-* Increase precision.
-* Add engineering detail.
-* Never redefine upstream decisions.
+- Preserve intent.
+- Increase precision.
+- Add engineering detail.
+- Never redefine upstream decisions.
 
 ---
 
@@ -2557,15 +2564,15 @@ Transformation shall not proceed until all validations succeed.
 
 The following constraints apply to all SDLC transformations.
 
-* Business intent shall remain unchanged.
-* Product scope shall remain consistent with approved business requirements.
-* Functional behavior shall remain consistent with approved product capabilities.
-* Software specifications shall remain consistent with approved functional behavior.
-* Architecture shall satisfy approved software specifications.
-* Technical design shall conform to approved architecture.
-* Implementation shall conform to approved technical design.
-* Testing shall verify approved implementation.
-* Deployment shall release verified software only.
+- Business intent shall remain unchanged.
+- Product scope shall remain consistent with approved business requirements.
+- Functional behavior shall remain consistent with approved product capabilities.
+- Software specifications shall remain consistent with approved functional behavior.
+- Architecture shall satisfy approved software specifications.
+- Technical design shall conform to approved architecture.
+- Implementation shall conform to approved technical design.
+- Testing shall verify approved implementation.
+- Deployment shall release verified software only.
 
 ---
 
@@ -2573,14 +2580,14 @@ The following constraints apply to all SDLC transformations.
 
 Successful transformation shall result in:
 
-* Progressive elaboration
-* Complete engineering continuity
-* Controlled engineering evolution
-* Full requirement coverage
-* Elimination of duplicate information
-* Consistent engineering documentation
-* Improved maintainability
-* End-to-end traceability
+- Progressive elaboration
+- Complete engineering continuity
+- Controlled engineering evolution
+- Full requirement coverage
+- Elimination of duplicate information
+- Consistent engineering documentation
+- Improved maintainability
+- End-to-end traceability
 
 ---
 
@@ -2590,15 +2597,16 @@ This chapter defines **how engineering information evolves** throughout the SDLC
 
 It shall be interpreted together with:
 
-* **Chapter 5 – SDLC Document Hierarchy** (defines the sequence of artifacts)
-* **Chapter 6 – SDLC Document Lifecycle** (defines document states and governance)
-* **Chapter 7 – SDLC Document Responsibility Matrix** (defines ownership)
-* **Chapter 9 – SDLC Traceability** (defines requirement relationships)
-* **Chapter 11 – SDLC Document Boundary & Content Ownership** (defines permissible content)
+- **Chapter 5 – SDLC Document Hierarchy** (defines the sequence of artifacts)
+- **Chapter 6 – SDLC Document Lifecycle** (defines document states and governance)
+- **Chapter 7 – SDLC Document Responsibility Matrix** (defines ownership)
+- **Chapter 9 – SDLC Traceability** (defines requirement relationships)
+- **Chapter 11 – SDLC Document Boundary & Content Ownership** (defines permissible content)
 
 Together, these chapters establish a controlled, traceable, and governance-driven transformation process for all engineering artifacts within the StarOne Galaxy ecosystem.
 
 ---
+
 ---
 
 # Chapter 9 — SDLC Traceability
@@ -2613,12 +2621,12 @@ The purpose of traceability is to ensure that every engineering artifact can be 
 
 Effective traceability provides:
 
-* Complete engineering visibility
-* Change impact analysis
-* Requirement verification
-* Compliance support
-* Audit readiness
-* Controlled engineering evolution
+- Complete engineering visibility
+- Change impact analysis
+- Requirement verification
+- Compliance support
+- Audit readiness
+- Controlled engineering evolution
 
 ---
 
@@ -2626,12 +2634,12 @@ Effective traceability provides:
 
 The SDLC traceability model shall ensure that:
 
-* Every requirement has an identifiable origin.
-* Every downstream artifact references an approved upstream artifact.
-* Every implementation can be traced to an approved requirement.
-* Every test verifies an approved requirement.
-* Every deployed capability can be traced back to its business objective.
-* Engineering changes remain fully auditable.
+- Every requirement has an identifiable origin.
+- Every downstream artifact references an approved upstream artifact.
+- Every implementation can be traced to an approved requirement.
+- Every test verifies an approved requirement.
+- Every deployed capability can be traced back to its business objective.
+- Engineering changes remain fully auditable.
 
 ---
 
@@ -2854,14 +2862,14 @@ Traceability shall support engineering impact analysis.
 
 Whenever an upstream artifact changes, the following shall be identified:
 
-* Affected downstream documents
-* Affected architecture
-* Affected implementation
-* Affected APIs
-* Affected database design
-* Affected test cases
-* Affected deployment artifacts
-* Affected operational procedures
+- Affected downstream documents
+- Affected architecture
+- Affected implementation
+- Affected APIs
+- Affected database design
+- Affected test cases
+- Affected deployment artifacts
+- Affected operational procedures
 
 Impact analysis shall be completed before approving significant changes.
 
@@ -2871,12 +2879,12 @@ Impact analysis shall be completed before approving significant changes.
 
 Enterprise Architecture shall ensure that:
 
-* Traceability remains complete.
-* Traceability remains current.
-* Missing relationships are corrected.
-* Orphaned artifacts are eliminated.
-* Duplicate requirements are removed.
-* Traceability is auditable.
+- Traceability remains complete.
+- Traceability remains current.
+- Missing relationships are corrected.
+- Orphaned artifacts are eliminated.
+- Duplicate requirements are removed.
+- Traceability is auditable.
 
 ---
 
@@ -2886,12 +2894,12 @@ The RTM is the authoritative artifact for maintaining engineering traceability.
 
 The RTM shall contain:
 
-* Forward Traceability
-* Backward Traceability
-* Requirement Coverage
-* Verification Coverage
-* Test Coverage
-* Implementation Coverage
+- Forward Traceability
+- Backward Traceability
+- Requirement Coverage
+- Verification Coverage
+- Test Coverage
+- Implementation Coverage
 
 Individual SDLC documents shall reference upstream artifacts but shall **not** embed complete traceability matrices.
 
@@ -2918,14 +2926,15 @@ This chapter governs the relationships between engineering artifacts throughout 
 
 It complements:
 
-* **Chapter 5 – SDLC Document Hierarchy** (artifact sequence)
-* **Chapter 7 – SDLC Document Responsibility Matrix** (artifact ownership)
-* **Chapter 8 – SDLC Document Transformation** (artifact evolution)
-* **Chapter 11 – SDLC Document Boundary & Content Ownership** (artifact content ownership)
+- **Chapter 5 – SDLC Document Hierarchy** (artifact sequence)
+- **Chapter 7 – SDLC Document Responsibility Matrix** (artifact ownership)
+- **Chapter 8 – SDLC Document Transformation** (artifact evolution)
+- **Chapter 11 – SDLC Document Boundary & Content Ownership** (artifact content ownership)
 
 Together, these chapters ensure that every engineering artifact is correctly owned, correctly transformed, and fully traceable from business need to production operation.
 
 ---
+
 ---
 
 # Chapter 10 — SDLC Content Guidelines
@@ -2938,12 +2947,12 @@ This chapter establishes the enterprise content standards for every Software Dev
 
 The objective is to ensure that every document:
 
-* Has a consistent structure.
-* Contains only appropriate information.
-* Maintains a uniform level of abstraction.
-* Supports progressive elaboration.
-* Eliminates duplication.
-* Enables maintainability and governance.
+- Has a consistent structure.
+- Contains only appropriate information.
+- Maintains a uniform level of abstraction.
+- Supports progressive elaboration.
+- Eliminates duplication.
+- Enables maintainability and governance.
 
 This chapter defines **what every SDLC document should contain**, while **Chapter 11** defines **what every SDLC document must not contain**.
 
@@ -3018,17 +3027,17 @@ The BRD shall document the business perspective.
 
 Typical content includes:
 
-* Business background
-* Business objectives
-* Business problems
-* Stakeholders
-* Business scope
-* Business processes
-* Business requirements
-* Business assumptions
-* Business constraints
-* Business risks
-* Business success criteria
+- Business background
+- Business objectives
+- Business problems
+- Stakeholders
+- Business scope
+- Business processes
+- Business requirements
+- Business assumptions
+- Business constraints
+- Business risks
+- Business success criteria
 
 The BRD shall not define product capabilities or technical solutions.
 
@@ -3040,16 +3049,16 @@ The PRD shall document the product perspective.
 
 Typical content includes:
 
-* Product vision
-* Product objectives
-* Personas
-* Product scope
-* Product capabilities
-* Product modules
-* Product workflows
-* Product decisions
-* Product roadmap
-* Product acceptance criteria
+- Product vision
+- Product objectives
+- Personas
+- Product scope
+- Product capabilities
+- Product modules
+- Product workflows
+- Product decisions
+- Product roadmap
+- Product acceptance criteria
 
 The PRD shall not define implementation details.
 
@@ -3061,18 +3070,18 @@ The FRD shall document functional behavior.
 
 Typical content includes:
 
-* Functional overview
-* User roles
-* Functional requirements
-* Business rules
-* Functional workflows
-* User interaction requirements
-* Validation rules
-* Exception scenarios
-* Audit requirements
-* Notification requirements
-* Reporting requirements
-* Functional acceptance criteria
+- Functional overview
+- User roles
+- Functional requirements
+- Business rules
+- Functional workflows
+- User interaction requirements
+- Validation rules
+- Exception scenarios
+- Audit requirements
+- Notification requirements
+- Reporting requirements
+- Functional acceptance criteria
 
 The FRD shall not specify software implementation.
 
@@ -3084,16 +3093,16 @@ The SRS shall document software specifications.
 
 Typical content includes:
 
-* Software architecture context
-* APIs
-* Service contracts
-* Request models
-* Response models
-* Data contracts
-* Integration contracts
-* Error handling
-* Technical constraints
-* Software acceptance criteria
+- Software architecture context
+- APIs
+- Service contracts
+- Request models
+- Response models
+- Data contracts
+- Integration contracts
+- Error handling
+- Technical constraints
+- Software acceptance criteria
 
 The SRS shall remain implementation-independent.
 
@@ -3105,13 +3114,13 @@ The HLD shall document solution architecture.
 
 Typical content includes:
 
-* Logical architecture
-* Physical architecture
-* Service architecture
-* Integration architecture
-* Security architecture
-* Deployment architecture
-* Technology decisions
+- Logical architecture
+- Physical architecture
+- Service architecture
+- Integration architecture
+- Security architecture
+- Deployment architecture
+- Technology decisions
 
 The HLD shall not contain implementation-level design.
 
@@ -3123,14 +3132,14 @@ The LLD shall document implementation design.
 
 Typical content includes:
 
-* Package design
-* Component design
-* Class design
-* Database design
-* Sequence diagrams
-* Algorithms
-* Internal interfaces
-* Technical implementation details
+- Package design
+- Component design
+- Class design
+- Database design
+- Sequence diagrams
+- Algorithms
+- Internal interfaces
+- Technical implementation details
 
 ---
 
@@ -3155,12 +3164,12 @@ Every SDLC document shall satisfy the following quality characteristics.
 
 Engineering documentation shall:
 
-* Use consistent terminology.
-* Use standardized section names.
-* Use unique identifiers where applicable.
-* Use concise and precise language.
-* Avoid implementation assumptions.
-* Avoid duplicated explanations.
+- Use consistent terminology.
+- Use standardized section names.
+- Use unique identifiers where applicable.
+- Use concise and precise language.
+- Avoid implementation assumptions.
+- Avoid duplicated explanations.
 
 Normative language shall be used where appropriate.
 
@@ -3200,11 +3209,11 @@ Requirement identifiers should follow document-specific prefixes.
 
 Examples:
 
-* BR-001
-* PR-001
-* FR-IAM-001
-* SR-001
-* ADR-001
+- BR-001
+- PR-001
+- FR-IAM-001
+- SR-001
+- ADR-001
 
 Identifiers shall remain stable throughout the document lifecycle.
 
@@ -3214,14 +3223,14 @@ Identifiers shall remain stable throughout the document lifecycle.
 
 Before approving an SDLC document, validate:
 
-* Does the document satisfy its defined purpose?
-* Does every section belong to this document?
-* Is any content duplicated from another SDLC document?
-* Is the level of abstraction appropriate?
-* Does the document align with its parent artifact?
-* Are mandatory sections complete?
-* Are references correct?
-* Is the document ready for downstream transformation?
+- Does the document satisfy its defined purpose?
+- Does every section belong to this document?
+- Is any content duplicated from another SDLC document?
+- Is the level of abstraction appropriate?
+- Does the document align with its parent artifact?
+- Are mandatory sections complete?
+- Are references correct?
+- Is the document ready for downstream transformation?
 
 Documents failing validation shall be corrected before approval.
 
@@ -3233,14 +3242,15 @@ This chapter defines **what should be included** within each SDLC document.
 
 It shall be interpreted together with:
 
-* **Chapter 7 – SDLC Document Responsibility Matrix** (who owns the responsibility)
-* **Chapter 8 – SDLC Document Transformation** (how content evolves)
-* **Chapter 9 – SDLC Traceability** (how content is traced)
-* **Chapter 11 – SDLC Document Boundary & Content Ownership** (what content is prohibited)
+- **Chapter 7 – SDLC Document Responsibility Matrix** (who owns the responsibility)
+- **Chapter 8 – SDLC Document Transformation** (how content evolves)
+- **Chapter 9 – SDLC Traceability** (how content is traced)
+- **Chapter 11 – SDLC Document Boundary & Content Ownership** (what content is prohibited)
 
 Together, these chapters ensure that every SDLC artifact contains the appropriate content while preserving document ownership, consistency, and engineering governance.
 
 ---
+
 ---
 
 # Chapter 11 — SDLC Document Boundary & Content Ownership
@@ -3253,12 +3263,12 @@ This chapter establishes the content ownership boundaries for every Software Dev
 
 Its objectives are to:
 
-* Establish a single owner for every engineering concern.
-* Prevent duplication across SDLC artifacts.
-* Preserve separation of concerns.
-* Define document ownership boundaries.
-* Ensure progressive elaboration without overlap.
-* Enable maintainable engineering documentation.
+- Establish a single owner for every engineering concern.
+- Prevent duplication across SDLC artifacts.
+- Preserve separation of concerns.
+- Define document ownership boundaries.
+- Ensure progressive elaboration without overlap.
+- Enable maintainable engineering documentation.
 
 This chapter is the authoritative standard for determining **where engineering information belongs**.
 
@@ -3345,7 +3355,7 @@ Cross-document duplication is prohibited.
 | Business Scope                     | BRD             |
 | Business Requirements              | BRD             |
 | Business Processes                 | BRD             |
-| Business Rules *(Business Policy)* | BRD             |
+| Business Rules _(Business Policy)_ | BRD             |
 | Product Vision                     | PRD             |
 | Product Goals                      | PRD             |
 | Product Scope                      | PRD             |
@@ -3357,7 +3367,7 @@ Cross-document duplication is prohibited.
 | Functional Workflows               | FRD             |
 | User Interaction                   | FRD             |
 | Validation Rules                   | FRD             |
-| Exception Handling *(Business)*    | FRD             |
+| Exception Handling _(Business)_    | FRD             |
 | Functional Business Rules          | FRD             |
 | Notification Requirements          | FRD             |
 | Reporting Requirements             | FRD             |
@@ -3398,26 +3408,26 @@ Cross-document duplication is prohibited.
 
 ### Owns
 
-* Business problem
-* Business objectives
-* Business scope
-* Business stakeholders
-* Business processes
-* Business requirements
-* Business assumptions
-* Business constraints
-* Business risks
-* Business success criteria
+- Business problem
+- Business objectives
+- Business scope
+- Business stakeholders
+- Business processes
+- Business requirements
+- Business assumptions
+- Business constraints
+- Business risks
+- Business success criteria
 
 ### Shall Not Own
 
-* Product modules
-* Personas
-* Functional workflows
-* APIs
-* Architecture
-* Database design
-* Source code
+- Product modules
+- Personas
+- Functional workflows
+- APIs
+- Architecture
+- Database design
+- Source code
 
 ---
 
@@ -3425,25 +3435,25 @@ Cross-document duplication is prohibited.
 
 ### Owns
 
-* Product vision
-* Product goals
-* Product capabilities
-* Product modules
-* Product releases
-* Product roadmap
-* Personas
-* Product workflows
-* Product decisions
+- Product vision
+- Product goals
+- Product capabilities
+- Product modules
+- Product releases
+- Product roadmap
+- Personas
+- Product workflows
+- Product decisions
 
 ### Shall Not Own
 
-* Business objectives
-* Business processes
-* Functional requirements
-* APIs
-* Database schema
-* Architecture
-* Source code
+- Business objectives
+- Business processes
+- Functional requirements
+- APIs
+- Database schema
+- Architecture
+- Source code
 
 ---
 
@@ -3451,30 +3461,30 @@ Cross-document duplication is prohibited.
 
 ### Owns
 
-* Functional behavior
-* Functional requirements
-* Functional business rules
-* User interaction requirements
-* Functional workflows
-* Screen requirements
-* Validation rules
-* Business exception scenarios
-* Audit requirements
-* Notification requirements
-* Reporting requirements
-* Functional acceptance criteria
+- Functional behavior
+- Functional requirements
+- Functional business rules
+- User interaction requirements
+- Functional workflows
+- Screen requirements
+- Validation rules
+- Business exception scenarios
+- Audit requirements
+- Notification requirements
+- Reporting requirements
+- Functional acceptance criteria
 
 ### Shall Not Own
 
-* REST APIs
-* Request/Response DTOs
-* Database schema
-* SQL
-* Entity relationships
-* Service implementation
-* Deployment architecture
-* Infrastructure design
-* Source code
+- REST APIs
+- Request/Response DTOs
+- Database schema
+- SQL
+- Entity relationships
+- Service implementation
+- Deployment architecture
+- Infrastructure design
+- Source code
 
 ---
 
@@ -3482,24 +3492,24 @@ Cross-document duplication is prohibited.
 
 ### Owns
 
-* APIs
-* Service contracts
-* Interface specifications
-* Request models
-* Response models
-* Integration specifications
-* Error codes
-* Technical constraints
-* Software acceptance criteria
+- APIs
+- Service contracts
+- Interface specifications
+- Request models
+- Response models
+- Integration specifications
+- Error codes
+- Technical constraints
+- Software acceptance criteria
 
 ### Shall Not Own
 
-* Business objectives
-* Product roadmap
-* Functional workflows
-* Architecture diagrams
-* Database schema
-* Source code
+- Business objectives
+- Product roadmap
+- Functional workflows
+- Architecture diagrams
+- Database schema
+- Source code
 
 ---
 
@@ -3507,22 +3517,22 @@ Cross-document duplication is prohibited.
 
 ### Owns
 
-* Solution architecture
-* Component architecture
-* Service architecture
-* Integration architecture
-* Security architecture
-* Deployment architecture
-* Technology architecture
+- Solution architecture
+- Component architecture
+- Service architecture
+- Integration architecture
+- Security architecture
+- Deployment architecture
+- Technology architecture
 
 ### Shall Not Own
 
-* Business requirements
-* Product capabilities
-* Functional requirements
-* Database tables
-* Class implementation
-* Source code
+- Business requirements
+- Product capabilities
+- Functional requirements
+- Database tables
+- Class implementation
+- Source code
 
 ---
 
@@ -3530,21 +3540,21 @@ Cross-document duplication is prohibited.
 
 ### Owns
 
-* Database design
-* Entity relationships
-* Class diagrams
-* Package design
-* Internal component design
-* Algorithms
-* Technical implementation design
+- Database design
+- Entity relationships
+- Class diagrams
+- Package design
+- Internal component design
+- Algorithms
+- Technical implementation design
 
 ### Shall Not Own
 
-* Business objectives
-* Product roadmap
-* Functional requirements
-* Enterprise architecture
-* Source code
+- Business objectives
+- Product roadmap
+- Functional requirements
+- Enterprise architecture
+- Source code
 
 ---
 
@@ -3604,13 +3614,13 @@ Testing shall not redefine requirements.
 
 Before approving any SDLC document, verify:
 
-* Does every section belong to this document?
-* Does another SDLC document own any included content?
-* Has any content been duplicated?
-* Does the document remain at the correct abstraction level?
-* Can the document transform cleanly into its downstream artifact?
-* Does the document comply with the SDLC hierarchy?
-* Does the document preserve separation of concerns?
+- Does every section belong to this document?
+- Does another SDLC document own any included content?
+- Has any content been duplicated?
+- Does the document remain at the correct abstraction level?
+- Can the document transform cleanly into its downstream artifact?
+- Does the document comply with the SDLC hierarchy?
+- Does the document preserve separation of concerns?
 
 Approval shall not proceed until all validations succeed.
 
@@ -3636,14 +3646,14 @@ Negative responses shall result in corrective action before approval.
 
 Applying this standard ensures:
 
-* Single Source of Truth
-* Clear Document Ownership
-* No Cross-Document Duplication
-* Progressive Elaboration
-* Consistent Engineering Documentation
-* Simplified Maintenance
-* Predictable SDLC Evolution
-* Enterprise Architecture Compliance
+- Single Source of Truth
+- Clear Document Ownership
+- No Cross-Document Duplication
+- Progressive Elaboration
+- Consistent Engineering Documentation
+- Simplified Maintenance
+- Predictable SDLC Evolution
+- Enterprise Architecture Compliance
 
 ---
 
@@ -3655,15 +3665,16 @@ It is the governing standard used whenever uncertainty exists regarding the corr
 
 This chapter shall be interpreted together with:
 
-* **Chapter 5 – SDLC Document Hierarchy**
-* **Chapter 7 – SDLC Document Responsibility Matrix**
-* **Chapter 8 – SDLC Document Transformation**
-* **Chapter 9 – SDLC Traceability**
-* **Chapter 10 – SDLC Content Guidelines**
+- **Chapter 5 – SDLC Document Hierarchy**
+- **Chapter 7 – SDLC Document Responsibility Matrix**
+- **Chapter 8 – SDLC Document Transformation**
+- **Chapter 9 – SDLC Traceability**
+- **Chapter 10 – SDLC Content Guidelines**
 
 In the event of conflicting interpretations, **this chapter shall take precedence** when determining document ownership and content placement.
 
 ---
+
 ---
 
 # Chapter 12 — Engineering Review & Quality Gates
@@ -3676,12 +3687,12 @@ This chapter establishes the engineering review process and quality gates govern
 
 Its objectives are to:
 
-* Ensure engineering quality.
-* Verify document completeness.
-* Prevent downstream defects.
-* Enforce architecture governance.
-* Maintain documentation consistency.
-* Ensure compliance with enterprise standards.
+- Ensure engineering quality.
+- Verify document completeness.
+- Prevent downstream defects.
+- Enforce architecture governance.
+- Maintain documentation consistency.
+- Ensure compliance with enterprise standards.
 
 No SDLC artifact shall progress to the next lifecycle stage without successfully passing the applicable quality gates.
 
@@ -3693,12 +3704,12 @@ Engineering reviews are **quality assurance activities**, not approval formaliti
 
 Every review shall verify:
 
-* Correctness
-* Completeness
-* Consistency
-* Traceability
-* Maintainability
-* Compliance
+- Correctness
+- Completeness
+- Consistency
+- Traceability
+- Maintainability
+- Compliance
 
 Reviews shall identify defects as early as possible within the SDLC.
 
@@ -3763,10 +3774,10 @@ Performed by the document author.
 
 Objectives:
 
-* Verify completeness.
-* Remove obvious defects.
-* Ensure template compliance.
-* Confirm references.
+- Verify completeness.
+- Remove obvious defects.
+- Ensure template compliance.
+- Confirm references.
 
 ---
 
@@ -3776,10 +3787,10 @@ Performed by engineering peers.
 
 Objectives:
 
-* Improve clarity.
-* Identify inconsistencies.
-* Validate technical correctness.
-* Improve readability.
+- Improve clarity.
+- Identify inconsistencies.
+- Validate technical correctness.
+- Improve readability.
 
 ---
 
@@ -3789,9 +3800,9 @@ Performed by domain experts.
 
 Objectives:
 
-* Validate domain correctness.
-* Validate business terminology.
-* Validate functional behavior.
+- Validate domain correctness.
+- Validate business terminology.
+- Validate functional behavior.
 
 ---
 
@@ -3801,11 +3812,11 @@ Performed by Solution Architect and Enterprise Architect.
 
 Objectives:
 
-* Validate architecture alignment.
-* Validate repository ownership.
-* Validate SDLC boundaries.
-* Validate document responsibilities.
-* Validate ADR compliance.
+- Validate architecture alignment.
+- Validate repository ownership.
+- Validate SDLC boundaries.
+- Validate document responsibilities.
+- Validate ADR compliance.
 
 ---
 
@@ -3815,11 +3826,11 @@ Performed by Enterprise Architecture.
 
 Objectives:
 
-* Validate handbook compliance.
-* Validate engineering standards.
-* Validate document ownership.
-* Validate traceability.
-* Validate lifecycle compliance.
+- Validate handbook compliance.
+- Validate engineering standards.
+- Validate document ownership.
+- Validate traceability.
+- Validate lifecycle compliance.
 
 ---
 
@@ -3848,41 +3859,41 @@ Every SDLC document shall satisfy the following checklist before approval.
 
 ## General
 
-* Document metadata completed.
-* Version assigned.
-* Revision history updated.
-* References completed.
-* Sign-off table completed.
+- Document metadata completed.
+- Version assigned.
+- Revision history updated.
+- References completed.
+- Sign-off table completed.
 
 ---
 
 ## Content
 
-* Mandatory sections completed.
-* No placeholder content.
-* No duplicated information.
-* Terminology is consistent.
-* Diagrams are accurate.
+- Mandatory sections completed.
+- No placeholder content.
+- No duplicated information.
+- Terminology is consistent.
+- Diagrams are accurate.
 
 ---
 
 ## Engineering
 
-* Parent alignment verified.
-* Downstream transformation possible.
-* Traceability established.
-* Document boundaries respected.
-* Repository ownership validated.
+- Parent alignment verified.
+- Downstream transformation possible.
+- Traceability established.
+- Document boundaries respected.
+- Repository ownership validated.
 
 ---
 
 ## Governance
 
-* Handbook compliance verified.
-* Enterprise standards applied.
-* Review comments resolved.
-* Approval recorded.
-* Baseline established.
+- Handbook compliance verified.
+- Enterprise standards applied.
+- Review comments resolved.
+- Approval recorded.
+- Baseline established.
 
 ---
 
@@ -3890,11 +3901,11 @@ Every SDLC document shall satisfy the following checklist before approval.
 
 An SDLC artifact is **Ready for Review** when:
 
-* Mandatory sections are complete.
-* Parent artifact is approved.
-* Internal review is complete.
-* Obvious defects are removed.
-* Traceability references exist.
+- Mandatory sections are complete.
+- Parent artifact is approved.
+- Internal review is complete.
+- Obvious defects are removed.
+- Traceability references exist.
 
 Artifacts not meeting the Definition of Ready shall not enter formal review.
 
@@ -3904,13 +3915,13 @@ Artifacts not meeting the Definition of Ready shall not enter formal review.
 
 An SDLC artifact is **Done** when:
 
-* All quality gates are passed.
-* Review comments are resolved.
-* Required approvals are obtained.
-* Traceability is complete.
-* Compliance validation succeeds.
-* Baseline version is established.
-* Repository is updated.
+- All quality gates are passed.
+- Review comments are resolved.
+- Required approvals are obtained.
+- Traceability is complete.
+- Compliance validation succeeds.
+- Baseline version is established.
+- Repository is updated.
 
 ---
 
@@ -4011,15 +4022,16 @@ This chapter defines **how engineering artifacts are reviewed before approval**.
 
 It shall be interpreted together with:
 
-* **Chapter 6 – SDLC Document Lifecycle**
-* **Chapter 7 – SDLC Document Responsibility Matrix**
-* **Chapter 9 – SDLC Traceability**
-* **Chapter 10 – SDLC Content Guidelines**
-* **Chapter 11 – SDLC Document Boundary & Content Ownership**
+- **Chapter 6 – SDLC Document Lifecycle**
+- **Chapter 7 – SDLC Document Responsibility Matrix**
+- **Chapter 9 – SDLC Traceability**
+- **Chapter 10 – SDLC Content Guidelines**
+- **Chapter 11 – SDLC Document Boundary & Content Ownership**
 
 Only artifacts that satisfy the governance requirements defined throughout this handbook shall progress through the SDLC.
 
 ---
+
 ---
 
 # Chapter 13 — Compliance & Governance
@@ -4032,12 +4044,12 @@ This chapter establishes the governance framework governing engineering standard
 
 Its objectives are to:
 
-* Ensure consistent application of enterprise engineering standards.
-* Govern the evolution of SDLC documentation.
-* Establish engineering accountability.
-* Enable compliance verification.
-* Support continuous improvement.
-* Preserve long-term architectural integrity.
+- Ensure consistent application of enterprise engineering standards.
+- Govern the evolution of SDLC documentation.
+- Establish engineering accountability.
+- Enable compliance verification.
+- Support continuous improvement.
+- Preserve long-term architectural integrity.
 
 This chapter defines **how engineering governance is administered**, not how engineering artifacts are created.
 
@@ -4047,14 +4059,14 @@ This chapter defines **how engineering governance is administered**, not how eng
 
 Enterprise Architecture is the governing authority for:
 
-* Engineering Standards
-* Repository Governance
-* SDLC Governance
-* Documentation Standards
-* Architecture Governance
-* Architecture Decision Records (ADRs)
-* Engineering Templates
-* Engineering Reviews
+- Engineering Standards
+- Repository Governance
+- SDLC Governance
+- Documentation Standards
+- Architecture Governance
+- Architecture Decision Records (ADRs)
+- Engineering Templates
+- Engineering Reviews
 
 Enterprise Architecture is responsible for maintaining this handbook.
 
@@ -4154,13 +4166,13 @@ Compliance assessments should be performed at major project milestones.
 
 Governance reviews shall occur during:
 
-* Project initiation
-* Architecture approval
-* Major release planning
-* Production readiness
-* Significant architectural changes
-* Repository onboarding
-* Engineering standard revisions
+- Project initiation
+- Architecture approval
+- Major release planning
+- Production readiness
+- Significant architectural changes
+- Repository onboarding
+- Engineering standard revisions
 
 Governance reviews may also be initiated following major incidents or organizational changes.
 
@@ -4170,22 +4182,22 @@ Governance reviews may also be initiated following major incidents or organizati
 
 Non-compliance occurs when:
 
-* Repository boundaries are violated.
-* SDLC document boundaries are violated.
-* Duplicate engineering responsibilities exist.
-* Traceability is incomplete.
-* Architecture deviates from approved designs.
-* Enterprise standards are ignored.
-* Mandatory reviews are bypassed.
+- Repository boundaries are violated.
+- SDLC document boundaries are violated.
+- Duplicate engineering responsibilities exist.
+- Traceability is incomplete.
+- Architecture deviates from approved designs.
+- Enterprise standards are ignored.
+- Mandatory reviews are bypassed.
 
 Each non-compliance finding shall include:
 
-* Description
-* Severity
-* Impact
-* Corrective action
-* Owner
-* Target resolution date
+- Description
+- Severity
+- Impact
+- Corrective action
+- Owner
+- Target resolution date
 
 ---
 
@@ -4206,11 +4218,11 @@ Business realities may occasionally require temporary deviations.
 
 Exceptions shall be:
 
-* Documented
-* Risk assessed
-* Time-bound
-* Approved
-* Reviewed periodically
+- Documented
+- Risk assessed
+- Time-bound
+- Approved
+- Reviewed periodically
 
 Exceptions shall not become permanent practices without formal governance approval.
 
@@ -4220,15 +4232,15 @@ Exceptions shall not become permanent practices without formal governance approv
 
 Every exception request shall include:
 
-* Exception Identifier
-* Requestor
-* Business Justification
-* Impact Assessment
-* Risk Assessment
-* Alternatives Considered
-* Mitigation Plan
-* Expiration Date
-* Required Approvals
+- Exception Identifier
+- Requestor
+- Business Justification
+- Impact Assessment
+- Risk Assessment
+- Alternatives Considered
+- Mitigation Plan
+- Expiration Date
+- Required Approvals
 
 Expired exceptions shall be reviewed and either closed or renewed.
 
@@ -4240,12 +4252,12 @@ Changes to this handbook shall follow controlled governance.
 
 Proposed changes shall include:
 
-* Change description
-* Business rationale
-* Engineering impact
-* Affected chapters
-* Backward compatibility assessment
-* Implementation plan
+- Change description
+- Business rationale
+- Engineering impact
+- Affected chapters
+- Backward compatibility assessment
+- Implementation plan
 
 Major governance changes shall be reviewed by Enterprise Architecture before approval.
 
@@ -4290,13 +4302,13 @@ Engineering governance shall evolve through continuous improvement.
 
 Improvement opportunities may originate from:
 
-* Architecture reviews
-* Engineering retrospectives
-* Audit findings
-* Project lessons learned
-* Technology evolution
-* Regulatory changes
-* Organizational growth
+- Architecture reviews
+- Engineering retrospectives
+- Audit findings
+- Project lessons learned
+- Technology evolution
+- Regulatory changes
+- Organizational growth
 
 Approved improvements shall be incorporated through controlled handbook revisions.
 
@@ -4320,14 +4332,14 @@ Approved improvements shall be incorporated through controlled handbook revision
 
 Successful governance shall provide:
 
-* Consistent engineering practices
-* Stable repository ownership
-* Controlled SDLC evolution
-* Predictable architecture
-* Improved maintainability
-* Reduced engineering risk
-* Increased documentation quality
-* Enterprise-wide consistency
+- Consistent engineering practices
+- Stable repository ownership
+- Controlled SDLC evolution
+- Predictable architecture
+- Improved maintainability
+- Reduced engineering risk
+- Increased documentation quality
+- Enterprise-wide consistency
 
 ---
 
@@ -4337,17 +4349,18 @@ This chapter governs the application and maintenance of every standard defined w
 
 It provides the overarching compliance framework for:
 
-* Repository Governance
-* SDLC Governance
-* Engineering Reviews
-* Document Lifecycle
-* Traceability
-* Document Boundaries
-* Content Standards
+- Repository Governance
+- SDLC Governance
+- Engineering Reviews
+- Document Lifecycle
+- Traceability
+- Document Boundaries
+- Content Standards
 
 All engineering artifacts, repositories, and engineering activities shall comply with this chapter unless an approved exception exists.
 
 ---
+
 ---
 
 # Chapter 14 — Appendices
@@ -4531,13 +4544,13 @@ Repository names shall be lowercase and use hyphen-separated words.
 
 Engineering documentation shall:
 
-* Use Markdown as the primary authoring format.
-* Use ATX headings (`#`, `##`, `###`).
-* Use GitHub Flavored Markdown.
-* Prefer tables for structured information.
-* Prefer fenced code blocks.
-* Avoid embedded HTML unless necessary.
-* Maintain consistent heading hierarchy.
+- Use Markdown as the primary authoring format.
+- Use ATX headings (`#`, `##`, `###`).
+- Use GitHub Flavored Markdown.
+- Prefer tables for structured information.
+- Prefer fenced code blocks.
+- Avoid embedded HTML unless necessary.
+- Maintain consistent heading hierarchy.
 
 ---
 
@@ -4600,13 +4613,13 @@ starone-galaxy-architecture/
 
 This handbook aligns with the principles and practices of:
 
-* ISO/IEC/IEEE 29148 — Requirements Engineering
-* IEEE 1016 — Software Design Description
-* ISO/IEC/IEEE 12207 — Software Life Cycle Processes
-* TOGAF Standard (The Open Group)
-* CMMI Development Model
-* PMBOK Guide (Project Management Institute)
-* BABOK Guide (Business Analysis Body of Knowledge)
+- ISO/IEC/IEEE 29148 — Requirements Engineering
+- IEEE 1016 — Software Design Description
+- ISO/IEC/IEEE 12207 — Software Life Cycle Processes
+- TOGAF Standard (The Open Group)
+- CMMI Development Model
+- PMBOK Guide (Project Management Institute)
+- BABOK Guide (Business Analysis Body of Knowledge)
 
 Project-specific guidance may extend this handbook but shall not contradict it.
 
@@ -4618,11 +4631,11 @@ The governance framework is designed to evolve.
 
 Future chapters or standards should:
 
-* Preserve existing governance principles.
-* Maintain backward compatibility where practical.
-* Avoid redefining established responsibilities.
-* Follow the progressive elaboration model.
-* Integrate with the SDLC hierarchy without disrupting existing artifacts.
+- Preserve existing governance principles.
+- Maintain backward compatibility where practical.
+- Avoid redefining established responsibilities.
+- Follow the progressive elaboration model.
+- Integrate with the SDLC hierarchy without disrupting existing artifacts.
 
 Major structural changes require Enterprise Architecture approval.
 
@@ -4634,11 +4647,11 @@ This handbook is the **authoritative engineering governance document** for the S
 
 It shall be:
 
-* Version controlled.
-* Reviewed periodically.
-* Updated through formal governance.
-* Approved by Enterprise Architecture.
-* Communicated to all engineering teams.
+- Version controlled.
+- Reviewed periodically.
+- Updated through formal governance.
+- Approved by Enterprise Architecture.
+- Communicated to all engineering teams.
 
 Superseded versions shall be archived for historical reference and audit purposes.
 
@@ -4690,5 +4703,5 @@ All engineering artifacts shall conform to the principles, standards, governance
 This handbook shall serve as the constitutional document for engineering governance and shall take precedence over project-specific conventions where conflicts arise.
 
 ---
----
 
+---

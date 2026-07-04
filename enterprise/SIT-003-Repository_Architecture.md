@@ -4,36 +4,36 @@
 
 # 1. Title Page
 
-| Field | Value |
-|-------|-------|
-| Document ID | SIT-003 |
-| Document Name | Repository Architecture |
-| Organization | STARONE INFOTECH |
-| Domain | Enterprise Engineering |
-| Document Type | Enterprise Standard |
-| Version | 1.0.0 |
-| Status | Approved |
-| Owner | Enterprise Architecture |
-| Classification | Internal |
-| Effective Date | TBD |
+| Field          | Value                   |
+| -------------- | ----------------------- |
+| Document ID    | SIT-003                 |
+| Document Name  | Repository Architecture |
+| Organization   | STARONE INFOTECH        |
+| Domain         | Enterprise Engineering  |
+| Document Type  | Enterprise Standard     |
+| Version        | 1.0.0                   |
+| Status         | Approved                |
+| Owner          | Enterprise Architecture |
+| Classification | Internal                |
+| Effective Date | TBD                     |
 
 ---
 
 # 2. Revision History
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Repository Architecture |
+| Version | Date       | Author                  | Description                     |
+| ------- | ---------- | ----------------------- | ------------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Repository Architecture |
 
 ---
 
 # 3. Approval & Sign-Off
 
-| Role | Status |
-|------|--------|
+| Role                 | Status   |
+| -------------------- | -------- |
 | Enterprise Architect | Approved |
-| Platform Architect | Approved |
-| Engineering Lead | Approved |
+| Platform Architect   | Approved |
+| Engineering Lead     | Approved |
 | Platform Engineering | Approved |
 
 ---
@@ -159,18 +159,18 @@ Repositories shall evolve independently while remaining governed by enterprise s
 
 # 9. Repository Objectives
 
-| ID | Objective |
-|----|-----------|
-| REP-001 | Define repository ownership. |
-| REP-002 | Standardize repository organization. |
+| ID      | Objective                             |
+| ------- | ------------------------------------- |
+| REP-001 | Define repository ownership.          |
+| REP-002 | Standardize repository organization.  |
 | REP-003 | Eliminate duplicate responsibilities. |
-| REP-004 | Support platform engineering. |
+| REP-004 | Support platform engineering.         |
 | REP-005 | Enable independent product evolution. |
-| REP-006 | Improve maintainability. |
-| REP-007 | Centralize enterprise assets. |
-| REP-008 | Simplify governance. |
-| REP-009 | Improve developer experience. |
-| REP-010 | Support long-term ecosystem growth. |
+| REP-006 | Improve maintainability.              |
+| REP-007 | Centralize enterprise assets.         |
+| REP-008 | Simplify governance.                  |
+| REP-009 | Improve developer experience.         |
+| REP-010 | Support long-term ecosystem growth.   |
 
 ---
 
@@ -397,12 +397,12 @@ Implementation responsibilities may be delegated while ownership remains unchang
 
 # 15. Repository Ownership Matrix
 
-| Repository Type | Primary Owner | Supporting Functions |
-|-----------------|---------------|----------------------|
-| Enterprise Repository | Enterprise Architecture | Platform Engineering |
-| Platform Repository | Platform Engineering | DevSecOps |
-| Shared Repository | Platform Engineering | Software Engineering |
-| Application Repository | Product Engineering | Software Engineering |
+| Repository Type        | Primary Owner           | Supporting Functions |
+| ---------------------- | ----------------------- | -------------------- |
+| Enterprise Repository  | Enterprise Architecture | Platform Engineering |
+| Platform Repository    | Platform Engineering    | DevSecOps            |
+| Shared Repository      | Platform Engineering    | Software Engineering |
+| Application Repository | Product Engineering     | Software Engineering |
 
 ---
 
@@ -907,19 +907,19 @@ Repository expansion shall preserve the established architectural principles and
 
 # 31. Repository Decision Matrix
 
-| Engineering Asset | Repository |
-|-------------------|------------|
-| Enterprise Standards | Enterprise Repository |
-| Engineering Governance | Enterprise Repository |
-| SDLC Templates | Enterprise Repository |
-| Architecture Documents | Enterprise Repository |
-| Kubernetes | Infrastructure Repository |
-| Helm Charts | Infrastructure Repository |
-| GitHub Actions | Infrastructure Repository |
-| Spring Cloud Config | Configuration Repository |
-| Shared Libraries | Shared Repository |
-| Business Source Code | Application Repository |
-| Business Documentation | Application Repository |
+| Engineering Asset      | Repository                |
+| ---------------------- | ------------------------- |
+| Enterprise Standards   | Enterprise Repository     |
+| Engineering Governance | Enterprise Repository     |
+| SDLC Templates         | Enterprise Repository     |
+| Architecture Documents | Enterprise Repository     |
+| Kubernetes             | Infrastructure Repository |
+| Helm Charts            | Infrastructure Repository |
+| GitHub Actions         | Infrastructure Repository |
+| Spring Cloud Config    | Configuration Repository  |
+| Shared Libraries       | Shared Repository         |
+| Business Source Code   | Application Repository    |
+| Business Documentation | Application Repository    |
 
 Ownership shall not be duplicated across repositories.
 
@@ -942,29 +942,29 @@ Any deviation from this architecture requires:
 
 # 33. Related Documents
 
-| Document ID | Document |
-|-------------|----------|
-| SIT-001 | Engineering Operating Model |
-| SIT-002 | Engineering Governance |
-| SIT-004 | Technology Strategy |
-| SIT-005 | Architecture Principles |
-| SIT-006 | Platform Architecture |
-| SIT-007 | Enterprise Reference Architecture |
+| Document ID | Document                          |
+| ----------- | --------------------------------- |
+| SIT-001     | Engineering Operating Model       |
+| SIT-002     | Engineering Governance            |
+| SIT-004     | Technology Strategy               |
+| SIT-005     | Architecture Principles           |
+| SIT-006     | Platform Architecture             |
+| SIT-007     | Enterprise Reference Architecture |
 
 ---
 
 # 34. Glossary
 
-| Term | Definition |
-|------|------------|
-| Repository | Version-controlled engineering asset |
-| Enterprise Repository | Repository containing enterprise engineering knowledge |
-| Platform Repository | Repository providing shared engineering capabilities |
-| Shared Repository | Repository containing reusable software assets |
-| Application Repository | Repository implementing business functionality |
-| Repository Owner | Accountable engineering function responsible for a repository |
-| Repository Governance | Framework controlling repository management and compliance |
-| Repository Lifecycle | Stages from repository creation to retirement |
+| Term                   | Definition                                                    |
+| ---------------------- | ------------------------------------------------------------- |
+| Repository             | Version-controlled engineering asset                          |
+| Enterprise Repository  | Repository containing enterprise engineering knowledge        |
+| Platform Repository    | Repository providing shared engineering capabilities          |
+| Shared Repository      | Repository containing reusable software assets                |
+| Application Repository | Repository implementing business functionality                |
+| Repository Owner       | Accountable engineering function responsible for a repository |
+| Repository Governance  | Framework controlling repository management and compliance    |
+| Repository Lifecycle   | Stages from repository creation to retirement                 |
 
 ---
 
@@ -983,13 +983,13 @@ This document shall be read together with:
 
 # 36. Document Ownership
 
-| Responsibility | Owner |
-|---------------|-------|
-| Document Owner | Enterprise Architecture |
+| Responsibility       | Owner                   |
+| -------------------- | ----------------------- |
+| Document Owner       | Enterprise Architecture |
 | Repository Authority | Enterprise Architecture |
 | Document Maintenance | Enterprise Architecture |
-| Review Authority | Enterprise Architecture |
-| Approval Authority | Enterprise Architecture |
+| Review Authority     | Enterprise Architecture |
+| Approval Authority   | Enterprise Architecture |
 
 This document shall be reviewed annually or when significant changes occur in the repository ecosystem.
 
@@ -997,9 +997,9 @@ This document shall be reviewed annually or when significant changes occur in th
 
 # 37. Revision History (Current Version)
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Repository Architecture |
+| Version | Date       | Author                  | Description                     |
+| ------- | ---------- | ----------------------- | ------------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Repository Architecture |
 
 ---
 

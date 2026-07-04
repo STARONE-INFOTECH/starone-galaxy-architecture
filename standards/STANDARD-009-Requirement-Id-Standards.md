@@ -14,12 +14,12 @@ This standard defines the enterprise convention for uniquely identifying require
 
 The objective is to ensure that every requirement is:
 
-* Globally unique
-* Human-readable
-* Traceable
-* Repository-independent
-* Consistent across all documentation
-* Suitable for implementation, testing, and audit
+- Globally unique
+- Human-readable
+- Traceable
+- Repository-independent
+- Consistent across all documentation
+- Suitable for implementation, testing, and audit
 
 ---
 
@@ -27,16 +27,16 @@ The objective is to ensure that every requirement is:
 
 This standard applies to all requirement-bearing documents, including:
 
-* BRD
-* PRD
-* FRD
-* SRS
-* HLD
-* LLD
-* ADR (Decision IDs)
-* Test Specifications
-* User Stories
-* Epics
+- BRD
+- PRD
+- FRD
+- SRS
+- HLD
+- LLD
+- ADR (Decision IDs)
+- Test Specifications
+- User Stories
+- Epics
 
 ---
 
@@ -44,11 +44,11 @@ This standard applies to all requirement-bearing documents, including:
 
 Requirement identifiers shall be:
 
-* Unique
-* Immutable
-* Sequential
-* Meaningful
-* Stable throughout the project lifecycle
+- Unique
+- Immutable
+- Sequential
+- Meaningful
+- Stable throughout the project lifecycle
 
 Requirement IDs shall never be reused, even if a requirement is deleted or deprecated.
 
@@ -246,9 +246,9 @@ ID-SYS-003
 
 Numbers shall be:
 
-* Sequential
-* Unique within the service and category
-* Never reused
+- Sequential
+- Unique within the service and category
+- Never reused
 
 Deleted requirements shall remain reserved.
 
@@ -365,12 +365,12 @@ Additional prefixes shall be approved through the architecture governance proces
 
 Every requirement shall:
 
-* Follow this naming convention.
-* Be unique.
-* Have a documented source.
-* Be verifiable.
-* Be traceable.
-* Be testable.
+- Follow this naming convention.
+- Be unique.
+- Have a documented source.
+- Be verifiable.
+- Be traceable.
+- Be testable.
 
 Requirement IDs shall never change after publication.
 
@@ -378,11 +378,11 @@ Requirement IDs shall never change after publication.
 
 # 14. Related Standards
 
-* documentation-compliance.md
-* documentation-metadata.md
-* traceability.md
-* naming-conventions.md
-* architecture-standards.md
+- documentation-compliance.md
+- documentation-metadata.md
+- traceability.md
+- naming-conventions.md
+- architecture-standards.md
 
 ---
 

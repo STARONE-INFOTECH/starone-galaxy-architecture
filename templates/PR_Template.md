@@ -38,11 +38,12 @@ Describe what is included.
 
 ### Included
 
--
+
 
 ### Excluded
 
-- ***
+
+---
 
 ## Components Impacted
 

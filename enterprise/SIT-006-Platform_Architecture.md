@@ -4,37 +4,37 @@
 
 # 1. Title Page
 
-| Field | Value |
-|-------|-------|
-| Document ID | SIT-006 |
-| Document Name | Platform Architecture |
-| Organization | STARONE INFOTECH |
-| Domain | Enterprise Platform Architecture |
-| Document Type | Enterprise Standard |
-| Version | 1.0.0 |
-| Status | Approved |
-| Owner | Enterprise Architecture |
-| Classification | Internal |
-| Effective Date | TBD |
+| Field          | Value                            |
+| -------------- | -------------------------------- |
+| Document ID    | SIT-006                          |
+| Document Name  | Platform Architecture            |
+| Organization   | STARONE INFOTECH                 |
+| Domain         | Enterprise Platform Architecture |
+| Document Type  | Enterprise Standard              |
+| Version        | 1.0.0                            |
+| Status         | Approved                         |
+| Owner          | Enterprise Architecture          |
+| Classification | Internal                         |
+| Effective Date | TBD                              |
 
 ---
 
 # 2. Revision History
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Platform Architecture |
+| Version | Date       | Author                  | Description                   |
+| ------- | ---------- | ----------------------- | ----------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Platform Architecture |
 
 ---
 
 # 3. Approval & Sign-Off
 
-| Role | Status |
-|------|--------|
+| Role                 | Status   |
+| -------------------- | -------- |
 | Enterprise Architect | Approved |
-| Platform Architect | Approved |
-| DevSecOps Lead | Approved |
-| Engineering Lead | Approved |
+| Platform Architect   | Approved |
+| DevSecOps Lead       | Approved |
+| Engineering Lead     | Approved |
 
 ---
 
@@ -160,18 +160,18 @@ The platform shall continuously evolve while remaining transparent to business a
 
 # 9. Platform Objectives
 
-| ID | Objective |
-|----|-----------|
-| PLA-001 | Standardize platform services. |
+| ID      | Objective                            |
+| ------- | ------------------------------------ |
+| PLA-001 | Standardize platform services.       |
 | PLA-002 | Eliminate duplicated infrastructure. |
-| PLA-003 | Improve engineering productivity. |
-| PLA-004 | Support cloud-native applications. |
+| PLA-003 | Improve engineering productivity.    |
+| PLA-004 | Support cloud-native applications.   |
 | PLA-005 | Centralize operational capabilities. |
-| PLA-006 | Enable independent deployments. |
-| PLA-007 | Improve platform reliability. |
-| PLA-008 | Support platform scalability. |
-| PLA-009 | Simplify operations. |
-| PLA-010 | Enable future platform evolution. |
+| PLA-006 | Enable independent deployments.      |
+| PLA-007 | Improve platform reliability.        |
+| PLA-008 | Support platform scalability.        |
+| PLA-009 | Simplify operations.                 |
+| PLA-010 | Enable future platform evolution.    |
 
 ---
 
@@ -231,14 +231,14 @@ Each component owns one well-defined responsibility.
 
 The engineering platform is implemented through dedicated repositories.
 
-| Repository | Purpose |
-|------------|---------|
-| starone-galaxy-architecture | Enterprise standards and architecture |
-| starone-galaxy-infra | Infrastructure platform |
-| starone-galaxy-central-config | Centralized configuration |
-| starone-galaxy-shared *(Future)* | Shared engineering libraries |
-| starone-galaxy-security *(Future)* | Security platform |
-| starone-galaxy-observability *(Future)* | Monitoring and observability |
+| Repository                              | Purpose                               |
+| --------------------------------------- | ------------------------------------- |
+| starone-galaxy-architecture             | Enterprise standards and architecture |
+| starone-galaxy-infra                    | Infrastructure platform               |
+| starone-galaxy-central-config           | Centralized configuration             |
+| starone-galaxy-shared _(Future)_        | Shared engineering libraries          |
+| starone-galaxy-security _(Future)_      | Security platform                     |
+| starone-galaxy-observability _(Future)_ | Monitoring and observability          |
 
 Each repository shall remain independently maintainable.
 
@@ -310,15 +310,15 @@ Applications shall never directly manage infrastructure resources.
 
 ## 14.1 Core Infrastructure
 
-| Component | Purpose |
-|-----------|---------|
-| Kubernetes | Container orchestration |
-| Docker | Application containerization |
-| Helm | Kubernetes package management |
-| Container Registry | Image storage |
-| Networking | Service communication |
-| Persistent Storage | Stateful workloads |
-| Ingress Controller | External traffic routing |
+| Component          | Purpose                       |
+| ------------------ | ----------------------------- |
+| Kubernetes         | Container orchestration       |
+| Docker             | Application containerization  |
+| Helm               | Kubernetes package management |
+| Container Registry | Image storage                 |
+| Networking         | Service communication         |
+| Persistent Storage | Stateful workloads            |
+| Ingress Controller | External traffic routing      |
 
 ---
 
@@ -369,14 +369,14 @@ Software delivery shall be standardized across every application.
 
 Platform Components
 
-| Component | Purpose |
-|-----------|---------|
-| GitHub | Source Control |
-| GitHub Actions | Continuous Integration |
-| Docker | Image Creation |
-| Container Registry | Artifact Storage |
-| Argo CD | Continuous Deployment |
-| Kubernetes | Runtime Platform |
+| Component          | Purpose                |
+| ------------------ | ---------------------- |
+| GitHub             | Source Control         |
+| GitHub Actions     | Continuous Integration |
+| Docker             | Image Creation         |
+| Container Registry | Artifact Storage       |
+| Argo CD            | Continuous Deployment  |
+| Kubernetes         | Runtime Platform       |
 
 ---
 
@@ -454,8 +454,8 @@ Enterprise messaging enables asynchronous communication.
 
 Primary messaging platform:
 
-| Technology | Purpose |
-|------------|---------|
+| Technology   | Purpose                   |
+| ------------ | ------------------------- |
 | Apache Kafka | Enterprise Event Backbone |
 
 Messaging supports:
@@ -581,18 +581,18 @@ Applications shall remain independent from platform implementation details.
 
 # 23. Platform Service Responsibilities
 
-| Platform Capability | Responsibility |
-|---------------------|----------------|
-| Kubernetes | Runtime |
-| Helm | Deployment Packaging |
-| GitHub Actions | Build Automation |
-| Argo CD | Continuous Delivery |
-| Spring Cloud Config | Configuration |
-| Kafka | Messaging |
-| Prometheus | Monitoring |
-| Grafana | Visualization |
-| Redis | Distributed Cache |
-| PostgreSQL | Persistent Storage |
+| Platform Capability | Responsibility       |
+| ------------------- | -------------------- |
+| Kubernetes          | Runtime              |
+| Helm                | Deployment Packaging |
+| GitHub Actions      | Build Automation     |
+| Argo CD             | Continuous Delivery  |
+| Spring Cloud Config | Configuration        |
+| Kafka               | Messaging            |
+| Prometheus          | Monitoring           |
+| Grafana             | Visualization        |
+| Redis               | Distributed Cache    |
+| PostgreSQL          | Persistent Storage   |
 
 Each platform capability owns a single engineering responsibility.
 
@@ -633,12 +633,12 @@ The STARONE ecosystem follows a domain-specific communication model.
 
 Each product may adopt synchronous, asynchronous, or hybrid communication depending on business requirements.
 
-| Domain | Communication Model | Rationale |
-|---------|---------------------|-----------|
-| DHS | Hybrid (REST + Events) | Complex business workflows requiring both immediate responses and asynchronous processing |
-| BookShow | REST APIs | User-driven transactional interactions with immediate feedback |
-| SportStats | REST APIs + Batch Processing | Data ingestion, scheduled analytics, and reporting |
-| VaultIron | REST APIs | Strong consistency and security requirements |
+| Domain     | Communication Model          | Rationale                                                                                 |
+| ---------- | ---------------------------- | ----------------------------------------------------------------------------------------- |
+| DHS        | Hybrid (REST + Events)       | Complex business workflows requiring both immediate responses and asynchronous processing |
+| BookShow   | REST APIs                    | User-driven transactional interactions with immediate feedback                            |
+| SportStats | REST APIs + Batch Processing | Data ingestion, scheduled analytics, and reporting                                        |
+| VaultIron  | REST APIs                    | Strong consistency and security requirements                                              |
 
 Communication patterns shall be selected based on business requirements rather than technical preference.
 
@@ -814,29 +814,29 @@ Platform deviations require:
 
 # 31. Related Documents
 
-| Document ID | Document |
-|-------------|----------|
-| SIT-001 | Engineering Operating Model |
-| SIT-002 | Engineering Governance |
-| SIT-003 | Repository Architecture |
-| SIT-004 | Technology Strategy |
-| SIT-005 | Architecture Principles |
-| SIT-007 | Enterprise Reference Architecture |
+| Document ID | Document                          |
+| ----------- | --------------------------------- |
+| SIT-001     | Engineering Operating Model       |
+| SIT-002     | Engineering Governance            |
+| SIT-003     | Repository Architecture           |
+| SIT-004     | Technology Strategy               |
+| SIT-005     | Architecture Principles           |
+| SIT-007     | Enterprise Reference Architecture |
 
 ---
 
 # 32. Glossary
 
-| Term | Definition |
-|------|------------|
-| Platform | Shared engineering capabilities consumed by applications |
-| Platform Service | Reusable infrastructure or engineering capability |
-| Domain | Independent business boundary |
-| Saga | Distributed transaction coordination pattern |
-| Compensation | Business action that reverses a completed operation |
-| Eventual Consistency | Distributed consistency achieved asynchronously |
-| Infrastructure Platform | Shared runtime environment |
-| Observability | Monitoring, logging, metrics, and tracing capabilities |
+| Term                    | Definition                                               |
+| ----------------------- | -------------------------------------------------------- |
+| Platform                | Shared engineering capabilities consumed by applications |
+| Platform Service        | Reusable infrastructure or engineering capability        |
+| Domain                  | Independent business boundary                            |
+| Saga                    | Distributed transaction coordination pattern             |
+| Compensation            | Business action that reverses a completed operation      |
+| Eventual Consistency    | Distributed consistency achieved asynchronously          |
+| Infrastructure Platform | Shared runtime environment                               |
+| Observability           | Monitoring, logging, metrics, and tracing capabilities   |
 
 ---
 
@@ -855,13 +855,13 @@ This document shall be read together with:
 
 # 34. Document Ownership
 
-| Responsibility | Owner |
-|---------------|-------|
-| Document Owner | Enterprise Architecture |
-| Platform Authority | Platform Engineering |
+| Responsibility       | Owner                   |
+| -------------------- | ----------------------- |
+| Document Owner       | Enterprise Architecture |
+| Platform Authority   | Platform Engineering    |
 | Document Maintenance | Enterprise Architecture |
-| Review Authority | Enterprise Architecture |
-| Approval Authority | Enterprise Architecture |
+| Review Authority     | Enterprise Architecture |
+| Approval Authority   | Enterprise Architecture |
 
 This document shall be reviewed annually or whenever significant changes occur to the engineering platform.
 
@@ -869,9 +869,9 @@ This document shall be reviewed annually or whenever significant changes occur t
 
 # 35. Revision History (Current Version)
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Platform Architecture |
+| Version | Date       | Author                  | Description                   |
+| ------- | ---------- | ----------------------- | ----------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Platform Architecture |
 
 ---
 

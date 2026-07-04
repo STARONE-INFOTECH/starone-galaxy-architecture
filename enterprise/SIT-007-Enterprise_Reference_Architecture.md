@@ -4,37 +4,37 @@
 
 # 1. Title Page
 
-| Field | Value |
-|-------|-------|
-| Document ID | SIT-007 |
-| Document Name | Enterprise Reference Architecture |
-| Organization | STARONE INFOTECH |
-| Domain | Enterprise Architecture |
-| Document Type | Enterprise Standard |
-| Version | 1.0.0 |
-| Status | Approved |
-| Owner | Enterprise Architecture |
-| Classification | Internal |
-| Effective Date | TBD |
+| Field          | Value                             |
+| -------------- | --------------------------------- |
+| Document ID    | SIT-007                           |
+| Document Name  | Enterprise Reference Architecture |
+| Organization   | STARONE INFOTECH                  |
+| Domain         | Enterprise Architecture           |
+| Document Type  | Enterprise Standard               |
+| Version        | 1.0.0                             |
+| Status         | Approved                          |
+| Owner          | Enterprise Architecture           |
+| Classification | Internal                          |
+| Effective Date | TBD                               |
 
 ---
 
 # 2. Revision History
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Enterprise Reference Architecture |
+| Version | Date       | Author                  | Description                               |
+| ------- | ---------- | ----------------------- | ----------------------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Enterprise Reference Architecture |
 
 ---
 
 # 3. Approval & Sign-Off
 
-| Role | Status |
-|------|--------|
+| Role                 | Status   |
+| -------------------- | -------- |
 | Enterprise Architect | Approved |
-| Platform Architect | Approved |
-| Solution Architect | Approved |
-| Engineering Lead | Approved |
+| Platform Architect   | Approved |
+| Solution Architect   | Approved |
+| Engineering Lead     | Approved |
 
 ---
 
@@ -170,18 +170,18 @@ Architecture shall remain business-driven while enabling long-term technological
 
 # 9. Architecture Objectives
 
-| ID | Objective |
-|----|-----------|
-| ERA-001 | Standardize enterprise architecture. |
+| ID      | Objective                                  |
+| ------- | ------------------------------------------ |
+| ERA-001 | Standardize enterprise architecture.       |
 | ERA-002 | Promote reusable engineering capabilities. |
-| ERA-003 | Enable independent business domains. |
-| ERA-004 | Reduce duplicated engineering effort. |
-| ERA-005 | Support cloud-native deployment. |
-| ERA-006 | Enable platform engineering. |
-| ERA-007 | Improve operational consistency. |
-| ERA-008 | Maintain engineering governance. |
-| ERA-009 | Enable enterprise scalability. |
-| ERA-010 | Support future ecosystem growth. |
+| ERA-003 | Enable independent business domains.       |
+| ERA-004 | Reduce duplicated engineering effort.      |
+| ERA-005 | Support cloud-native deployment.           |
+| ERA-006 | Enable platform engineering.               |
+| ERA-007 | Improve operational consistency.           |
+| ERA-008 | Maintain engineering governance.           |
+| ERA-009 | Enable enterprise scalability.             |
+| ERA-010 | Support future ecosystem growth.           |
 
 ---
 
@@ -443,12 +443,12 @@ Technology:
 
 Each product adopts the communication model appropriate to its business requirements.
 
-| Domain | Communication | Primary Pattern | Reason |
-|----------|--------------|----------------|--------|
-| DHS | Hybrid | REST + Kafka | Complex business workflows |
-| BookShow | Synchronous | REST APIs | Immediate transactional response |
-| SportStats | Hybrid | REST + Batch Processing | Analytics and reporting |
-| VaultIron | Synchronous | REST APIs | Strong consistency and security |
+| Domain     | Communication | Primary Pattern         | Reason                           |
+| ---------- | ------------- | ----------------------- | -------------------------------- |
+| DHS        | Hybrid        | REST + Kafka            | Complex business workflows       |
+| BookShow   | Synchronous   | REST APIs               | Immediate transactional response |
+| SportStats | Hybrid        | REST + Batch Processing | Analytics and reporting          |
+| VaultIron  | Synchronous   | REST APIs               | Strong consistency and security  |
 
 This matrix provides enterprise guidance. Individual solutions may refine implementation details while remaining consistent with these patterns.
 
@@ -863,14 +863,14 @@ Architecture deviations require:
 
 # 30. Related Documents
 
-| Document ID | Document |
-|-------------|----------|
-| SIT-001 | Engineering Operating Model |
-| SIT-002 | Engineering Governance |
-| SIT-003 | Repository Architecture |
-| SIT-004 | Technology Strategy |
-| SIT-005 | Architecture Principles |
-| SIT-006 | Platform Architecture |
+| Document ID | Document                    |
+| ----------- | --------------------------- |
+| SIT-001     | Engineering Operating Model |
+| SIT-002     | Engineering Governance      |
+| SIT-003     | Repository Architecture     |
+| SIT-004     | Technology Strategy         |
+| SIT-005     | Architecture Principles     |
+| SIT-006     | Platform Architecture       |
 
 Together, these documents form the STARONE Enterprise Engineering Framework.
 
@@ -878,16 +878,16 @@ Together, these documents form the STARONE Enterprise Engineering Framework.
 
 # 31. Glossary
 
-| Term | Definition |
-|------|------------|
-| Enterprise Reference Architecture | Target-state architecture for the STARONE ecosystem |
-| Domain | Independent business capability with clear ownership |
-| Platform | Shared engineering capabilities consumed by applications |
-| API Gateway | Centralized entry point for external API requests |
-| Saga | Distributed transaction coordination pattern |
-| Eventual Consistency | Consistency achieved asynchronously across distributed systems |
-| Observability | Combined capability of logging, metrics, tracing, and health monitoring |
-| IDP | Internal Developer Platform |
+| Term                              | Definition                                                              |
+| --------------------------------- | ----------------------------------------------------------------------- |
+| Enterprise Reference Architecture | Target-state architecture for the STARONE ecosystem                     |
+| Domain                            | Independent business capability with clear ownership                    |
+| Platform                          | Shared engineering capabilities consumed by applications                |
+| API Gateway                       | Centralized entry point for external API requests                       |
+| Saga                              | Distributed transaction coordination pattern                            |
+| Eventual Consistency              | Consistency achieved asynchronously across distributed systems          |
+| Observability                     | Combined capability of logging, metrics, tracing, and health monitoring |
+| IDP                               | Internal Developer Platform                                             |
 
 ---
 
@@ -908,13 +908,13 @@ These documents collectively define the enterprise engineering and architecture 
 
 # 33. Document Ownership
 
-| Responsibility | Owner |
-|---------------|-------|
-| Document Owner | Enterprise Architecture |
+| Responsibility         | Owner                   |
+| ---------------------- | ----------------------- |
+| Document Owner         | Enterprise Architecture |
 | Architecture Authority | Enterprise Architecture |
-| Document Maintenance | Enterprise Architecture |
-| Review Authority | Enterprise Architecture |
-| Approval Authority | Enterprise Architecture |
+| Document Maintenance   | Enterprise Architecture |
+| Review Authority       | Enterprise Architecture |
+| Approval Authority     | Enterprise Architecture |
 
 This document shall be reviewed annually or whenever significant architectural changes occur within the STARONE ecosystem.
 
@@ -922,9 +922,9 @@ This document shall be reviewed annually or whenever significant architectural c
 
 # 34. Revision History (Current Version)
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Enterprise Reference Architecture |
+| Version | Date       | Author                  | Description                               |
+| ------- | ---------- | ----------------------- | ----------------------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Enterprise Reference Architecture |
 
 ---
 

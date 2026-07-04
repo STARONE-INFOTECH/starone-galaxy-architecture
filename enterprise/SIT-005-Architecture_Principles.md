@@ -4,37 +4,37 @@
 
 # 1. Title Page
 
-| Field | Value |
-|-------|-------|
-| Document ID | SIT-005 |
-| Document Name | Architecture Principles |
-| Organization | STARONE INFOTECH |
-| Domain | Enterprise Architecture |
-| Document Type | Enterprise Standard |
-| Version | 1.0.0 |
-| Status | Approved |
-| Owner | Enterprise Architecture |
-| Classification | Internal |
-| Effective Date | TBD |
+| Field          | Value                   |
+| -------------- | ----------------------- |
+| Document ID    | SIT-005                 |
+| Document Name  | Architecture Principles |
+| Organization   | STARONE INFOTECH        |
+| Domain         | Enterprise Architecture |
+| Document Type  | Enterprise Standard     |
+| Version        | 1.0.0                   |
+| Status         | Approved                |
+| Owner          | Enterprise Architecture |
+| Classification | Internal                |
+| Effective Date | TBD                     |
 
 ---
 
 # 2. Revision History
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Architecture Principles |
+| Version | Date       | Author                  | Description                     |
+| ------- | ---------- | ----------------------- | ------------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Architecture Principles |
 
 ---
 
 # 3. Approval & Sign-Off
 
-| Role | Status |
-|------|--------|
+| Role                 | Status   |
+| -------------------- | -------- |
 | Enterprise Architect | Approved |
-| Platform Architect | Approved |
-| Solution Architect | Approved |
-| Engineering Lead | Approved |
+| Platform Architect   | Approved |
+| Solution Architect   | Approved |
+| Engineering Lead     | Approved |
 
 ---
 
@@ -144,18 +144,18 @@ Architecture shall enable long-term business growth while minimizing technical c
 
 # 9. Architecture Objectives
 
-| ID | Objective |
-|----|-----------|
-| AP-OBJ-001 | Standardize enterprise architecture. |
+| ID         | Objective                               |
+| ---------- | --------------------------------------- |
+| AP-OBJ-001 | Standardize enterprise architecture.    |
 | AP-OBJ-002 | Promote reusable platform capabilities. |
-| AP-OBJ-003 | Minimize architectural complexity. |
-| AP-OBJ-004 | Improve maintainability. |
-| AP-OBJ-005 | Enable scalable software solutions. |
-| AP-OBJ-006 | Support cloud-native engineering. |
-| AP-OBJ-007 | Reduce technical debt. |
-| AP-OBJ-008 | Improve engineering consistency. |
-| AP-OBJ-009 | Support independent product evolution. |
-| AP-OBJ-010 | Preserve architectural integrity. |
+| AP-OBJ-003 | Minimize architectural complexity.      |
+| AP-OBJ-004 | Improve maintainability.                |
+| AP-OBJ-005 | Enable scalable software solutions.     |
+| AP-OBJ-006 | Support cloud-native engineering.       |
+| AP-OBJ-007 | Reduce technical debt.                  |
+| AP-OBJ-008 | Improve engineering consistency.        |
+| AP-OBJ-009 | Support independent product evolution.  |
+| AP-OBJ-010 | Preserve architectural integrity.       |
 
 ---
 
@@ -454,18 +454,18 @@ Architecture shall continuously evolve through:
 
 Every enterprise solution shall satisfy the following quality attributes.
 
-| Attribute | Description |
-|------------|-------------|
-| Availability | Services remain operational |
-| Scalability | Support increasing workloads |
-| Performance | Meet response time objectives |
-| Reliability | Operate predictably under load |
+| Attribute       | Description                      |
+| --------------- | -------------------------------- |
+| Availability    | Services remain operational      |
+| Scalability     | Support increasing workloads     |
+| Performance     | Meet response time objectives    |
+| Reliability     | Operate predictably under load   |
 | Maintainability | Simplify enhancement and support |
-| Security | Protect business assets |
-| Observability | Support operational diagnostics |
-| Reusability | Promote platform reuse |
-| Extensibility | Enable future capabilities |
-| Portability | Support deployment flexibility |
+| Security        | Protect business assets          |
+| Observability   | Support operational diagnostics  |
+| Reusability     | Promote platform reuse           |
+| Extensibility   | Enable future capabilities       |
+| Portability     | Support deployment flexibility   |
 
 Architecture decisions shall balance these attributes according to business priorities.
 
@@ -496,14 +496,14 @@ Every significant architectural decision shall be documented using an Architectu
 
 The following architecture styles are approved.
 
-| Style | Usage |
-|--------|------|
-| Modular Monolith | Medium-sized business systems |
-| Microservices | Large distributed systems |
-| Event-Driven Architecture | Asynchronous business workflows |
-| REST APIs | Synchronous communication |
-| API Gateway Pattern | External service access |
-| Saga Pattern | Distributed transaction coordination |
+| Style                     | Usage                                |
+| ------------------------- | ------------------------------------ |
+| Modular Monolith          | Medium-sized business systems        |
+| Microservices             | Large distributed systems            |
+| Event-Driven Architecture | Asynchronous business workflows      |
+| REST APIs                 | Synchronous communication            |
+| API Gateway Pattern       | External service access              |
+| Saga Pattern              | Distributed transaction coordination |
 
 Architecture style selection shall be driven by business requirements rather than technical preference.
 
@@ -762,29 +762,29 @@ Architecture compliance shall be reviewed periodically.
 
 # 22. Related Documents
 
-| Document ID | Document |
-|-------------|----------|
-| SIT-001 | Engineering Operating Model |
-| SIT-002 | Engineering Governance |
-| SIT-003 | Repository Architecture |
-| SIT-004 | Technology Strategy |
-| SIT-006 | Platform Architecture |
-| SIT-007 | Enterprise Reference Architecture |
+| Document ID | Document                          |
+| ----------- | --------------------------------- |
+| SIT-001     | Engineering Operating Model       |
+| SIT-002     | Engineering Governance            |
+| SIT-003     | Repository Architecture           |
+| SIT-004     | Technology Strategy               |
+| SIT-006     | Platform Architecture             |
+| SIT-007     | Enterprise Reference Architecture |
 
 ---
 
 # 23. Glossary
 
-| Term | Definition |
-|------|------------|
-| Architecture Principle | Fundamental rule guiding architectural decisions |
-| Architecture Governance | Framework governing architectural decisions |
-| Domain | Logical business boundary |
-| API | Application Programming Interface |
-| Event | Immutable business fact used for asynchronous communication |
-| ADR | Architecture Decision Record |
-| Platform | Shared engineering capabilities |
-| Cloud Native | Applications designed for cloud environments |
+| Term                    | Definition                                                  |
+| ----------------------- | ----------------------------------------------------------- |
+| Architecture Principle  | Fundamental rule guiding architectural decisions            |
+| Architecture Governance | Framework governing architectural decisions                 |
+| Domain                  | Logical business boundary                                   |
+| API                     | Application Programming Interface                           |
+| Event                   | Immutable business fact used for asynchronous communication |
+| ADR                     | Architecture Decision Record                                |
+| Platform                | Shared engineering capabilities                             |
+| Cloud Native            | Applications designed for cloud environments                |
 
 ---
 
@@ -803,13 +803,13 @@ This document shall be read together with:
 
 # 25. Document Ownership
 
-| Responsibility | Owner |
-|---------------|-------|
-| Document Owner | Enterprise Architecture |
+| Responsibility         | Owner                   |
+| ---------------------- | ----------------------- |
+| Document Owner         | Enterprise Architecture |
 | Architecture Authority | Enterprise Architecture |
-| Document Maintenance | Enterprise Architecture |
-| Review Authority | Enterprise Architecture |
-| Approval Authority | Enterprise Architecture |
+| Document Maintenance   | Enterprise Architecture |
+| Review Authority       | Enterprise Architecture |
+| Approval Authority     | Enterprise Architecture |
 
 This document shall be reviewed annually or whenever significant architectural changes occur.
 
@@ -817,9 +817,9 @@ This document shall be reviewed annually or whenever significant architectural c
 
 # 26. Revision History (Current Version)
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Architecture Principles |
+| Version | Date       | Author                  | Description                     |
+| ------- | ---------- | ----------------------- | ------------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Architecture Principles |
 
 ---
 

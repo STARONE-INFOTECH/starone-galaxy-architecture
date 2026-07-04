@@ -150,16 +150,16 @@ Every engineering template shall contain a metadata section.
 
 Mandatory fields:
 
-| Field | Mandatory |
-|--------|-----------|
-| Document ID | Yes |
-| Document Name | Yes |
-| Document Type | Yes |
-| Domain | Yes |
-| Version | Yes |
-| Status | Yes |
-| Author | Yes |
-| Date | Yes |
+| Field         | Mandatory |
+| ------------- | --------- |
+| Document ID   | Yes       |
+| Document Name | Yes       |
+| Document Type | Yes       |
+| Domain        | Yes       |
+| Version       | Yes       |
+| Status        | Yes       |
+| Author        | Yes       |
+| Date          | Yes       |
 
 Optional fields:
 
@@ -298,17 +298,17 @@ Preferred notation:
 
 Recommended diagrams by document:
 
-| Document | Preferred Diagram |
-|----------|-------------------|
-| Business Need | Flowchart |
-| BRD | Business Process |
-| PRD | User Journey |
-| FRD | Workflow |
-| SRS | Sequence |
-| HLD | Architecture |
-| LLD | Class Diagram |
-| LLD | ER Diagram |
-| ADR | Decision Diagram |
+| Document      | Preferred Diagram |
+| ------------- | ----------------- |
+| Business Need | Flowchart         |
+| BRD           | Business Process  |
+| PRD           | User Journey      |
+| FRD           | Workflow          |
+| SRS           | Sequence          |
+| HLD           | Architecture      |
+| LLD           | Class Diagram     |
+| LLD           | ER Diagram        |
+| ADR           | Decision Diagram  |
 
 Avoid embedded images whenever practical.
 

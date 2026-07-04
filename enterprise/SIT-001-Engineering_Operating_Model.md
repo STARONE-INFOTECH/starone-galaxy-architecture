@@ -4,37 +4,37 @@
 
 # 1. Title Page
 
-| Field | Value |
-|-------|-------|
-| Document ID | SIT-001 |
-| Document Name | Engineering Operating Model |
-| Organization | STARONE INFOTECH |
-| Domain | Enterprise Engineering |
-| Document Type | Enterprise Standard |
-| Version | 1.0.0 |
-| Status | Approved |
-| Owner | Enterprise Architecture |
-| Classification | Internal |
-| Effective Date | TBD |
+| Field          | Value                       |
+| -------------- | --------------------------- |
+| Document ID    | SIT-001                     |
+| Document Name  | Engineering Operating Model |
+| Organization   | STARONE INFOTECH            |
+| Domain         | Enterprise Engineering      |
+| Document Type  | Enterprise Standard         |
+| Version        | 1.0.0                       |
+| Status         | Approved                    |
+| Owner          | Enterprise Architecture     |
+| Classification | Internal                    |
+| Effective Date | TBD                         |
 
 ---
 
 # 2. Revision History
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Engineering Operating Model |
+| Version | Date       | Author                  | Description                         |
+| ------- | ---------- | ----------------------- | ----------------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Engineering Operating Model |
 
 ---
 
 # 3. Approval & Sign-Off
 
-| Role | Status |
-|------|--------|
+| Role                 | Status   |
+| -------------------- | -------- |
 | Enterprise Architect | Approved |
-| Platform Architect | Approved |
-| Solution Architect | Approved |
-| Engineering Lead | Approved |
+| Platform Architect   | Approved |
+| Solution Architect   | Approved |
+| Engineering Lead     | Approved |
 
 ---
 
@@ -242,18 +242,18 @@ Every engineering decision shall balance business value, technical quality, oper
 
 # 10. Strategic Engineering Objectives
 
-| ID | Objective |
-|----|-----------|
+| ID      | Objective                                      |
+| ------- | ---------------------------------------------- |
 | OBJ-001 | Establish standardized engineering governance. |
-| OBJ-002 | Build reusable engineering platforms. |
-| OBJ-003 | Enable independent product delivery. |
-| OBJ-004 | Standardize software delivery processes. |
-| OBJ-005 | Reduce technology fragmentation. |
-| OBJ-006 | Improve software quality. |
-| OBJ-007 | Increase engineering productivity. |
-| OBJ-008 | Support cloud-native application development. |
-| OBJ-009 | Maintain engineering traceability. |
-| OBJ-010 | Enable long-term platform evolution. |
+| OBJ-002 | Build reusable engineering platforms.          |
+| OBJ-003 | Enable independent product delivery.           |
+| OBJ-004 | Standardize software delivery processes.       |
+| OBJ-005 | Reduce technology fragmentation.               |
+| OBJ-006 | Improve software quality.                      |
+| OBJ-007 | Increase engineering productivity.             |
+| OBJ-008 | Support cloud-native application development.  |
+| OBJ-009 | Maintain engineering traceability.             |
+| OBJ-010 | Enable long-term platform evolution.           |
 
 ---
 
@@ -261,18 +261,18 @@ Every engineering decision shall balance business value, technical quality, oper
 
 The Engineering Operating Model delivers measurable business value.
 
-| Area | Expected Benefit |
-|------|------------------|
-| Engineering Governance | Consistent engineering decisions |
-| Software Quality | Higher reliability and maintainability |
-| Platform Engineering | Reduced duplication |
-| Delivery | Faster product development |
-| Architecture | Improved consistency |
-| Operations | Simplified deployment and maintenance |
-| Engineering Productivity | Increased developer efficiency |
-| Scalability | Independent product evolution |
-| Traceability | Complete SDLC visibility |
-| Risk Reduction | Standardized engineering controls |
+| Area                     | Expected Benefit                       |
+| ------------------------ | -------------------------------------- |
+| Engineering Governance   | Consistent engineering decisions       |
+| Software Quality         | Higher reliability and maintainability |
+| Platform Engineering     | Reduced duplication                    |
+| Delivery                 | Faster product development             |
+| Architecture             | Improved consistency                   |
+| Operations               | Simplified deployment and maintenance  |
+| Engineering Productivity | Increased developer efficiency         |
+| Scalability              | Independent product evolution          |
+| Traceability             | Complete SDLC visibility               |
+| Risk Reduction           | Standardized engineering controls      |
 
 ---
 
@@ -545,19 +545,19 @@ No engineering phase shall bypass its required predecessor.
 
 Engineering responsibilities are assigned to roles rather than individuals.
 
-| Role | Primary Responsibility |
-|------|------------------------|
-| Enterprise Architect | Engineering strategy, governance, architecture |
-| Solution Architect | Solution architecture, HLD, LLD |
-| Software Architect | Software architecture, SRS |
-| Business Analyst | Business Need, BRD |
-| Product Manager | Product strategy, PRD |
-| Functional Analyst | Functional analysis, FRD |
-| Technical Lead | Technical leadership, implementation guidance |
-| Platform Engineer | Infrastructure, Kubernetes, platform services |
-| DevSecOps Engineer | CI/CD, deployment automation, operational readiness |
-| Quality Engineer | Testing, quality assurance |
-| Software Engineer | Software implementation |
+| Role                 | Primary Responsibility                              |
+| -------------------- | --------------------------------------------------- |
+| Enterprise Architect | Engineering strategy, governance, architecture      |
+| Solution Architect   | Solution architecture, HLD, LLD                     |
+| Software Architect   | Software architecture, SRS                          |
+| Business Analyst     | Business Need, BRD                                  |
+| Product Manager      | Product strategy, PRD                               |
+| Functional Analyst   | Functional analysis, FRD                            |
+| Technical Lead       | Technical leadership, implementation guidance       |
+| Platform Engineer    | Infrastructure, Kubernetes, platform services       |
+| DevSecOps Engineer   | CI/CD, deployment automation, operational readiness |
+| Quality Engineer     | Testing, quality assurance                          |
+| Software Engineer    | Software implementation                             |
 
 One individual may perform multiple roles while maintaining separation of responsibilities.
 
@@ -565,18 +565,18 @@ One individual may perform multiple roles while maintaining separation of respon
 
 # 17. Engineering Responsibility Matrix
 
-| Activity | Primary Owner |
-|----------|---------------|
-| Engineering Strategy | Enterprise Architecture |
-| Enterprise Standards | Enterprise Architecture |
-| Technology Strategy | Enterprise Architecture |
-| Platform Architecture | Platform Engineering |
-| Product Delivery | Product Engineering |
-| Software Development | Software Engineering |
-| Quality Assurance | Quality Engineering |
-| CI/CD | DevSecOps |
-| Production Deployment | DevSecOps |
-| Platform Operations | Platform Engineering |
+| Activity              | Primary Owner           |
+| --------------------- | ----------------------- |
+| Engineering Strategy  | Enterprise Architecture |
+| Enterprise Standards  | Enterprise Architecture |
+| Technology Strategy   | Enterprise Architecture |
+| Platform Architecture | Platform Engineering    |
+| Product Delivery      | Product Engineering     |
+| Software Development  | Software Engineering    |
+| Quality Assurance     | Quality Engineering     |
+| CI/CD                 | DevSecOps               |
+| Production Deployment | DevSecOps               |
+| Platform Operations   | Platform Engineering    |
 
 ---
 
@@ -584,17 +584,17 @@ One individual may perform multiple roles while maintaining separation of respon
 
 Engineering decisions shall be evaluated using the following criteria.
 
-| Priority | Evaluation Criteria |
-|----------|---------------------|
-| 1 | Business Value |
-| 2 | Architecture Alignment |
-| 3 | Security |
-| 4 | Maintainability |
-| 5 | Scalability |
-| 6 | Operational Simplicity |
-| 7 | Engineering Standards |
-| 8 | Cost of Ownership |
-| 9 | Future Evolution |
+| Priority | Evaluation Criteria    |
+| -------- | ---------------------- |
+| 1        | Business Value         |
+| 2        | Architecture Alignment |
+| 3        | Security               |
+| 4        | Maintainability        |
+| 5        | Scalability            |
+| 6        | Operational Simplicity |
+| 7        | Engineering Standards  |
+| 8        | Cost of Ownership      |
+| 9        | Future Evolution       |
 
 Technology selection shall never override architectural integrity.
 
@@ -770,18 +770,18 @@ The roadmap shall evolve as engineering capabilities mature.
 
 The Engineering Operating Model provides measurable enterprise value.
 
-| Area | Benefit |
-|------|---------|
-| Engineering Governance | Consistent engineering practices |
-| Product Delivery | Faster and predictable software delivery |
-| Platform Engineering | Reduced duplication of engineering effort |
-| Software Quality | Higher maintainability and reliability |
-| Architecture | Standardized enterprise architecture |
-| Operations | Simplified deployment and operations |
-| Scalability | Independent product evolution |
-| Reusability | Shared engineering capabilities |
-| Traceability | Complete SDLC visibility |
-| Risk Management | Reduced engineering and operational risks |
+| Area                   | Benefit                                   |
+| ---------------------- | ----------------------------------------- |
+| Engineering Governance | Consistent engineering practices          |
+| Product Delivery       | Faster and predictable software delivery  |
+| Platform Engineering   | Reduced duplication of engineering effort |
+| Software Quality       | Higher maintainability and reliability    |
+| Architecture           | Standardized enterprise architecture      |
+| Operations             | Simplified deployment and operations      |
+| Scalability            | Independent product evolution             |
+| Reusability            | Shared engineering capabilities           |
+| Traceability           | Complete SDLC visibility                  |
+| Risk Management        | Reduced engineering and operational risks |
 
 ---
 
@@ -808,14 +808,14 @@ Any deviation from this Engineering Operating Model shall require approval throu
 
 The Engineering Operating Model is supported by the following enterprise documents.
 
-| Document ID | Document Name |
-|-------------|---------------|
-| SIT-002 | Engineering Governance |
-| SIT-003 | Repository Architecture |
-| SIT-004 | Technology Strategy |
-| SIT-005 | Architecture Principles |
-| SIT-006 | Platform Architecture |
-| SIT-007 | Enterprise Reference Architecture |
+| Document ID | Document Name                     |
+| ----------- | --------------------------------- |
+| SIT-002     | Engineering Governance            |
+| SIT-003     | Repository Architecture           |
+| SIT-004     | Technology Strategy               |
+| SIT-005     | Architecture Principles           |
+| SIT-006     | Platform Architecture             |
+| SIT-007     | Enterprise Reference Architecture |
 
 These documents collectively define the STARONE Engineering Framework.
 
@@ -823,18 +823,18 @@ These documents collectively define the STARONE Engineering Framework.
 
 # 26. Glossary
 
-| Term | Definition |
-|------|------------|
-| Engineering Operating Model | Enterprise framework defining how engineering operates |
-| Enterprise Architecture | Strategic architectural governance of the engineering ecosystem |
-| Platform Engineering | Shared engineering capabilities supporting all applications |
-| Product Engineering | Engineering function responsible for delivering business products |
-| SDLC | Software Development Life Cycle |
-| ADR | Architecture Decision Record |
-| Repository | Version-controlled engineering asset |
-| Platform | Shared engineering services consumed by applications |
-| Application | Independent business software product |
-| Governance | Policies, standards, reviews, and controls governing engineering |
+| Term                        | Definition                                                        |
+| --------------------------- | ----------------------------------------------------------------- |
+| Engineering Operating Model | Enterprise framework defining how engineering operates            |
+| Enterprise Architecture     | Strategic architectural governance of the engineering ecosystem   |
+| Platform Engineering        | Shared engineering capabilities supporting all applications       |
+| Product Engineering         | Engineering function responsible for delivering business products |
+| SDLC                        | Software Development Life Cycle                                   |
+| ADR                         | Architecture Decision Record                                      |
+| Repository                  | Version-controlled engineering asset                              |
+| Platform                    | Shared engineering services consumed by applications              |
+| Application                 | Independent business software product                             |
+| Governance                  | Policies, standards, reviews, and controls governing engineering  |
 
 ---
 
@@ -853,12 +853,12 @@ This document should be read together with:
 
 # 28. Document Ownership
 
-| Responsibility | Owner |
-|---------------|-------|
-| Document Owner | Enterprise Architecture |
+| Responsibility       | Owner                   |
+| -------------------- | ----------------------- |
+| Document Owner       | Enterprise Architecture |
 | Document Maintenance | Enterprise Architecture |
-| Review Authority | Enterprise Architecture |
-| Approval Authority | Enterprise Architecture |
+| Review Authority     | Enterprise Architecture |
+| Approval Authority   | Enterprise Architecture |
 
 This document shall be reviewed annually or when significant engineering operating changes occur.
 
@@ -866,9 +866,9 @@ This document shall be reviewed annually or when significant engineering operati
 
 # 29. Revision History (Current Version)
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial release of the Engineering Operating Model |
+| Version | Date       | Author                  | Description                                        |
+| ------- | ---------- | ----------------------- | -------------------------------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial release of the Engineering Operating Model |
 
 ---
 
@@ -883,4 +883,5 @@ Together with the supporting SIT documents, this operating model forms the autho
 All future enterprise initiatives, platform capabilities, repositories, and application developments shall align with this Engineering Operating Model to ensure consistency, scalability, maintainability, and long-term engineering excellence.
 
 ---
+
 **End of Document**

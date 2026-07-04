@@ -4,37 +4,37 @@
 
 # 1. Title Page
 
-| Field | Value |
-|-------|-------|
-| Document ID | SIT-004 |
-| Document Name | Technology Strategy |
-| Organization | STARONE INFOTECH |
-| Domain | Enterprise Engineering |
-| Document Type | Enterprise Standard |
-| Version | 1.0.0 |
-| Status | Approved |
-| Owner | Enterprise Architecture |
-| Classification | Internal |
-| Effective Date | TBD |
+| Field          | Value                   |
+| -------------- | ----------------------- |
+| Document ID    | SIT-004                 |
+| Document Name  | Technology Strategy     |
+| Organization   | STARONE INFOTECH        |
+| Domain         | Enterprise Engineering  |
+| Document Type  | Enterprise Standard     |
+| Version        | 1.0.0                   |
+| Status         | Approved                |
+| Owner          | Enterprise Architecture |
+| Classification | Internal                |
+| Effective Date | TBD                     |
 
 ---
 
 # 2. Revision History
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Technology Strategy |
+| Version | Date       | Author                  | Description                 |
+| ------- | ---------- | ----------------------- | --------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Technology Strategy |
 
 ---
 
 # 3. Approval & Sign-Off
 
-| Role | Status |
-|------|--------|
+| Role                 | Status   |
+| -------------------- | -------- |
 | Enterprise Architect | Approved |
-| Platform Architect | Approved |
-| Solution Architect | Approved |
-| Engineering Lead | Approved |
+| Platform Architect   | Approved |
+| Solution Architect   | Approved |
+| Engineering Lead     | Approved |
 
 ---
 
@@ -145,18 +145,18 @@ Technology decisions shall prioritize long-term maintainability over short-term 
 
 # 9. Strategic Technology Objectives
 
-| ID | Objective |
-|----|-----------|
-| TECH-001 | Standardize enterprise technologies. |
-| TECH-002 | Reduce technology diversity. |
+| ID       | Objective                               |
+| -------- | --------------------------------------- |
+| TECH-001 | Standardize enterprise technologies.    |
+| TECH-002 | Reduce technology diversity.            |
 | TECH-003 | Promote reusable engineering platforms. |
-| TECH-004 | Improve engineering productivity. |
-| TECH-005 | Support cloud-native architecture. |
-| TECH-006 | Enable platform engineering. |
-| TECH-007 | Simplify operations. |
-| TECH-008 | Improve software quality. |
-| TECH-009 | Enable future scalability. |
-| TECH-010 | Support continuous modernization. |
+| TECH-004 | Improve engineering productivity.       |
+| TECH-005 | Support cloud-native architecture.      |
+| TECH-006 | Enable platform engineering.            |
+| TECH-007 | Simplify operations.                    |
+| TECH-008 | Improve software quality.               |
+| TECH-009 | Enable future scalability.              |
+| TECH-010 | Support continuous modernization.       |
 
 ---
 
@@ -256,16 +256,16 @@ Each technology domain has an approved enterprise stack.
 
 # 12. Technology Domains
 
-| Domain | Purpose |
-|---------|---------|
-| Application | Business software development |
-| Platform | Shared engineering capabilities |
-| Infrastructure | Runtime platform |
-| Data | Persistent storage and caching |
-| Integration | APIs and Messaging |
-| DevSecOps | Software delivery automation |
-| Observability | Monitoring, Logging, Tracing |
-| Security | Identity, Authentication, Authorization |
+| Domain         | Purpose                                 |
+| -------------- | --------------------------------------- |
+| Application    | Business software development           |
+| Platform       | Shared engineering capabilities         |
+| Infrastructure | Runtime platform                        |
+| Data           | Persistent storage and caching          |
+| Integration    | APIs and Messaging                      |
+| DevSecOps      | Software delivery automation            |
+| Observability  | Monitoring, Logging, Tracing            |
+| Security       | Identity, Authentication, Authorization |
 
 ---
 
@@ -291,106 +291,106 @@ The following technologies are approved for enterprise engineering.
 
 ## 14.1 Programming Languages
 
-| Technology | Version | Status | Purpose |
-|------------|---------|--------|---------|
-| Java | 21 LTS | Approved | Enterprise Application Development |
+| Technology | Version | Status   | Purpose                            |
+| ---------- | ------- | -------- | ---------------------------------- |
+| Java       | 21 LTS  | Approved | Enterprise Application Development |
 
 ---
 
 ## 14.2 Frameworks
 
-| Technology | Status | Purpose |
-|------------|--------|---------|
-| Spring Boot | Approved | Backend Development |
-| Spring Cloud | Approved | Distributed Systems |
-| Spring Security | Approved | Security |
-| Spring Data JPA | Approved | Persistence |
+| Technology          | Status   | Purpose                  |
+| ------------------- | -------- | ------------------------ |
+| Spring Boot         | Approved | Backend Development      |
+| Spring Cloud        | Approved | Distributed Systems      |
+| Spring Security     | Approved | Security                 |
+| Spring Data JPA     | Approved | Persistence              |
 | Spring Cloud Config | Approved | Configuration Management |
 
 ---
 
 ## 14.3 Build & Dependency Management
 
-| Technology | Status |
-|------------|--------|
-| Maven | Approved |
+| Technology | Status   |
+| ---------- | -------- |
+| Maven      | Approved |
 
 ---
 
 ## 14.4 API Technologies
 
-| Technology | Status |
-|------------|--------|
-| REST APIs | Enterprise Standard |
-| OpenAPI | Enterprise Standard |
+| Technology | Status              |
+| ---------- | ------------------- |
+| REST APIs  | Enterprise Standard |
+| OpenAPI    | Enterprise Standard |
 
 ---
 
 ## 14.5 Messaging
 
-| Technology | Status |
-|------------|--------|
+| Technology   | Status                        |
+| ------------ | ----------------------------- |
 | Apache Kafka | Enterprise Messaging Platform |
 
 ---
 
 ## 14.6 Databases
 
-| Technology | Status | Purpose |
-|------------|--------|---------|
-| PostgreSQL | Approved | Primary Database |
-| Redis | Approved | Cache & Distributed Data |
+| Technology | Status   | Purpose                  |
+| ---------- | -------- | ------------------------ |
+| PostgreSQL | Approved | Primary Database         |
+| Redis      | Approved | Cache & Distributed Data |
 
 ---
 
 ## 14.7 Containerization
 
-| Technology | Status |
-|------------|--------|
-| Docker | Enterprise Standard |
+| Technology | Status              |
+| ---------- | ------------------- |
+| Docker     | Enterprise Standard |
 
 ---
 
 ## 14.8 Container Orchestration
 
-| Technology | Status |
-|------------|--------|
+| Technology | Status              |
+| ---------- | ------------------- |
 | Kubernetes | Enterprise Standard |
 
 ---
 
 ## 14.9 Package Management
 
-| Technology | Status |
-|------------|--------|
-| Helm | Enterprise Standard |
+| Technology | Status              |
+| ---------- | ------------------- |
+| Helm       | Enterprise Standard |
 
 ---
 
 ## 14.10 Source Control
 
-| Technology | Status |
-|------------|--------|
-| Git | Enterprise Standard |
-| GitHub | Enterprise Git Platform |
+| Technology | Status                  |
+| ---------- | ----------------------- |
+| Git        | Enterprise Standard     |
+| GitHub     | Enterprise Git Platform |
 
 ---
 
 ## 14.11 CI/CD
 
-| Technology | Status |
-|------------|--------|
-| GitHub Actions | Enterprise CI |
-| Argo CD | Enterprise GitOps CD |
+| Technology     | Status               |
+| -------------- | -------------------- |
+| GitHub Actions | Enterprise CI        |
+| Argo CD        | Enterprise GitOps CD |
 
 ---
 
 ## 14.12 Monitoring
 
-| Technology | Status |
-|------------|--------|
+| Technology | Status   |
+| ---------- | -------- |
 | Prometheus | Approved |
-| Grafana | Approved |
+| Grafana    | Approved |
 
 ---
 
@@ -419,12 +419,12 @@ Detailed security implementation is defined within Platform Architecture.
 
 The following architectural styles are approved.
 
-| Architecture Style | Status | Usage |
-|--------------------|--------|-------|
-| Modular Monolith | Approved | Small and Medium Systems |
-| Microservices | Approved | Large Distributed Systems |
-| Event-Driven Architecture | Approved | Asynchronous Workflows |
-| REST APIs | Approved | Synchronous Communication |
+| Architecture Style        | Status   | Usage                     |
+| ------------------------- | -------- | ------------------------- |
+| Modular Monolith          | Approved | Small and Medium Systems  |
+| Microservices             | Approved | Large Distributed Systems |
+| Event-Driven Architecture | Approved | Asynchronous Workflows    |
+| REST APIs                 | Approved | Synchronous Communication |
 
 Architecture style selection shall be driven by business complexity rather than technical preference.
 
@@ -434,18 +434,18 @@ Architecture style selection shall be driven by business complexity rather than 
 
 Technology evaluations shall consider the following criteria.
 
-| Criteria | Description |
-|----------|-------------|
-| Business Value | Solves a measurable business problem |
-| Architecture Alignment | Fits enterprise architecture |
-| Security | Meets security requirements |
-| Community Support | Mature ecosystem |
-| Long-Term Support | LTS availability |
-| Maintainability | Ease of maintenance |
-| Scalability | Supports enterprise growth |
-| Operational Complexity | Deployment and operational effort |
-| Learning Curve | Adoption effort |
-| Cost | Total cost of ownership |
+| Criteria               | Description                          |
+| ---------------------- | ------------------------------------ |
+| Business Value         | Solves a measurable business problem |
+| Architecture Alignment | Fits enterprise architecture         |
+| Security               | Meets security requirements          |
+| Community Support      | Mature ecosystem                     |
+| Long-Term Support      | LTS availability                     |
+| Maintainability        | Ease of maintenance                  |
+| Scalability            | Supports enterprise growth           |
+| Operational Complexity | Deployment and operational effort    |
+| Learning Curve         | Adoption effort                      |
+| Cost                   | Total cost of ownership              |
 
 Technology approval requires architecture review.
 
@@ -516,16 +516,16 @@ Technology shall not be adopted directly into production without approval.
 
 # 19. Technology Decision Matrix
 
-| Decision Area | Approval Authority |
-|---------------|--------------------|
-| New Programming Language | Enterprise Architect |
-| Framework Adoption | Enterprise Architect |
-| Infrastructure Technology | Platform Architect |
-| Database Technology | Enterprise Architect |
-| Messaging Platform | Enterprise Architect |
-| CI/CD Technology | Platform Engineering |
-| Security Technology | Enterprise Architecture |
-| Monitoring Platform | Platform Engineering |
+| Decision Area             | Approval Authority      |
+| ------------------------- | ----------------------- |
+| New Programming Language  | Enterprise Architect    |
+| Framework Adoption        | Enterprise Architect    |
+| Infrastructure Technology | Platform Architect      |
+| Database Technology       | Enterprise Architect    |
+| Messaging Platform        | Enterprise Architect    |
+| CI/CD Technology          | Platform Engineering    |
+| Security Technology       | Enterprise Architecture |
+| Monitoring Platform       | Platform Engineering    |
 
 Significant technology decisions require an Architecture Decision Record (ADR).
 
@@ -712,14 +712,14 @@ Technology metrics shall support informed architectural decision-making.
 
 Technology strategy shall proactively manage risks.
 
-| Risk | Mitigation |
-|------|------------|
-| Technology Fragmentation | Enterprise Standards |
-| Unsupported Software | Lifecycle Management |
-| Vendor Lock-In | Open Standards |
-| Security Vulnerabilities | Continuous Updates |
-| Operational Complexity | Platform Engineering |
-| Skill Gaps | Documentation & Training |
+| Risk                     | Mitigation               |
+| ------------------------ | ------------------------ |
+| Technology Fragmentation | Enterprise Standards     |
+| Unsupported Software     | Lifecycle Management     |
+| Vendor Lock-In           | Open Standards           |
+| Security Vulnerabilities | Continuous Updates       |
+| Operational Complexity   | Platform Engineering     |
+| Skill Gaps               | Documentation & Training |
 | Rapid Technology Changes | Periodic Strategy Review |
 
 Risk assessments shall accompany significant technology adoption decisions.
@@ -767,29 +767,29 @@ Reviews shall ensure continued alignment with enterprise objectives.
 
 # 28. Related Documents
 
-| Document ID | Document |
-|-------------|----------|
-| SIT-001 | Engineering Operating Model |
-| SIT-002 | Engineering Governance |
-| SIT-003 | Repository Architecture |
-| SIT-005 | Architecture Principles |
-| SIT-006 | Platform Architecture |
-| SIT-007 | Enterprise Reference Architecture |
+| Document ID | Document                          |
+| ----------- | --------------------------------- |
+| SIT-001     | Engineering Operating Model       |
+| SIT-002     | Engineering Governance            |
+| SIT-003     | Repository Architecture           |
+| SIT-005     | Architecture Principles           |
+| SIT-006     | Platform Architecture             |
+| SIT-007     | Enterprise Reference Architecture |
 
 ---
 
 # 29. Glossary
 
-| Term | Definition |
-|------|------------|
-| Technology Strategy | Enterprise direction for technology selection and adoption |
-| LTS | Long-Term Support release |
-| Platform Engineering | Engineering discipline providing reusable platform capabilities |
-| Technology Lifecycle | Stages through which technologies progress from evaluation to retirement |
-| Technology Governance | Process for managing technology adoption and compliance |
-| ADR | Architecture Decision Record |
-| Cloud Native | Applications designed for cloud environments using containers, orchestration, and automation |
-| IDP | Internal Developer Platform |
+| Term                  | Definition                                                                                   |
+| --------------------- | -------------------------------------------------------------------------------------------- |
+| Technology Strategy   | Enterprise direction for technology selection and adoption                                   |
+| LTS                   | Long-Term Support release                                                                    |
+| Platform Engineering  | Engineering discipline providing reusable platform capabilities                              |
+| Technology Lifecycle  | Stages through which technologies progress from evaluation to retirement                     |
+| Technology Governance | Process for managing technology adoption and compliance                                      |
+| ADR                   | Architecture Decision Record                                                                 |
+| Cloud Native          | Applications designed for cloud environments using containers, orchestration, and automation |
+| IDP                   | Internal Developer Platform                                                                  |
 
 ---
 
@@ -808,13 +808,13 @@ This document shall be read together with:
 
 # 31. Document Ownership
 
-| Responsibility | Owner |
-|---------------|-------|
-| Document Owner | Enterprise Architecture |
+| Responsibility       | Owner                   |
+| -------------------- | ----------------------- |
+| Document Owner       | Enterprise Architecture |
 | Technology Authority | Enterprise Architecture |
 | Document Maintenance | Enterprise Architecture |
-| Review Authority | Enterprise Architecture |
-| Approval Authority | Enterprise Architecture |
+| Review Authority     | Enterprise Architecture |
+| Approval Authority   | Enterprise Architecture |
 
 This document shall be reviewed annually or whenever significant technology changes occur.
 
@@ -822,9 +822,9 @@ This document shall be reviewed annually or whenever significant technology chan
 
 # 32. Revision History (Current Version)
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Technology Strategy |
+| Version | Date       | Author                  | Description                 |
+| ------- | ---------- | ----------------------- | --------------------------- |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Technology Strategy |
 
 ---
 

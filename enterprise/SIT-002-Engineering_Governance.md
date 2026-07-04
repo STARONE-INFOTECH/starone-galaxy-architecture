@@ -4,37 +4,37 @@
 
 # 1. Title Page
 
-| Field | Value |
-|-------|-------|
-| Document ID | SIT-002 |
-| Document Name | Engineering Governance |
-| Organization | STARONE INFOTECH |
-| Domain | Enterprise Engineering |
-| Document Type | Enterprise Standard |
-| Version | 1.0.0 |
-| Status | Approved |
-| Owner | Enterprise Architecture |
-| Classification | Internal |
-| Effective Date | TBD |
+| Field          | Value                   |
+| -------------- | ----------------------- |
+| Document ID    | SIT-002                 |
+| Document Name  | Engineering Governance  |
+| Organization   | STARONE INFOTECH        |
+| Domain         | Enterprise Engineering  |
+| Document Type  | Enterprise Standard     |
+| Version        | 1.0.0                   |
+| Status         | Approved                |
+| Owner          | Enterprise Architecture |
+| Classification | Internal                |
+| Effective Date | TBD                     |
 
 ---
 
 # 2. Revision History
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Engineering Governance |
+| Version | Date       | Author                  | Description                    |
+| ------- | ---------- | ----------------------- | ------------------------------ |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Engineering Governance |
 
 ---
 
 # 3. Approval & Sign-Off
 
-| Role | Status |
-|------|--------|
+| Role                 | Status   |
+| -------------------- | -------- |
 | Enterprise Architect | Approved |
-| Platform Architect | Approved |
-| Solution Architect | Approved |
-| Engineering Lead | Approved |
+| Platform Architect   | Approved |
+| Solution Architect   | Approved |
+| Engineering Lead     | Approved |
 
 ---
 
@@ -143,18 +143,18 @@ Governance shall enable engineering excellence without creating unnecessary bure
 
 # 9. Governance Objectives
 
-| ID | Objective |
-|----|-----------|
+| ID      | Objective                          |
+| ------- | ---------------------------------- |
 | GOV-001 | Standardize engineering practices. |
-| GOV-002 | Govern architecture decisions. |
-| GOV-003 | Maintain engineering quality. |
-| GOV-004 | Ensure SDLC compliance. |
-| GOV-005 | Reduce engineering risks. |
-| GOV-006 | Improve software maintainability. |
-| GOV-007 | Increase platform reuse. |
-| GOV-008 | Maintain complete traceability. |
-| GOV-009 | Enable engineering scalability. |
-| GOV-010 | Support continuous improvement. |
+| GOV-002 | Govern architecture decisions.     |
+| GOV-003 | Maintain engineering quality.      |
+| GOV-004 | Ensure SDLC compliance.            |
+| GOV-005 | Reduce engineering risks.          |
+| GOV-006 | Improve software maintainability.  |
+| GOV-007 | Increase platform reuse.           |
+| GOV-008 | Maintain complete traceability.    |
+| GOV-009 | Enable engineering scalability.    |
+| GOV-010 | Support continuous improvement.    |
 
 ---
 
@@ -247,31 +247,31 @@ Each governance function operates independently while supporting the common engi
 
 # 12. Governance Domains
 
-| Domain | Responsibility |
-|---------|----------------|
-| Enterprise Governance | Engineering strategy and policies |
+| Domain                  | Responsibility                     |
+| ----------------------- | ---------------------------------- |
+| Enterprise Governance   | Engineering strategy and policies  |
 | Architecture Governance | Architecture reviews and decisions |
-| Technology Governance | Technology selection and lifecycle |
-| Repository Governance | Repository ownership and standards |
-| Platform Governance | Shared engineering platform |
-| SDLC Governance | Software delivery lifecycle |
-| Quality Governance | Engineering quality |
-| Security Governance | Secure engineering practices |
+| Technology Governance   | Technology selection and lifecycle |
+| Repository Governance   | Repository ownership and standards |
+| Platform Governance     | Shared engineering platform        |
+| SDLC Governance         | Software delivery lifecycle        |
+| Quality Governance      | Engineering quality                |
+| Security Governance     | Secure engineering practices       |
 
 ---
 
 # 13. Governance Ownership
 
-| Governance Area | Primary Owner |
-|-----------------|---------------|
+| Governance Area       | Primary Owner           |
+| --------------------- | ----------------------- |
 | Engineering Standards | Enterprise Architecture |
-| Architecture Reviews | Enterprise Architecture |
-| Technology Strategy | Enterprise Architecture |
-| Repository Standards | Enterprise Architecture |
-| Platform Governance | Platform Engineering |
-| SDLC Governance | Enterprise Architecture |
-| Quality Governance | Quality Engineering |
-| Security Governance | DevSecOps |
+| Architecture Reviews  | Enterprise Architecture |
+| Technology Strategy   | Enterprise Architecture |
+| Repository Standards  | Enterprise Architecture |
+| Platform Governance   | Platform Engineering    |
+| SDLC Governance       | Enterprise Architecture |
+| Quality Governance    | Quality Engineering     |
+| Security Governance   | DevSecOps               |
 
 Governance ownership defines accountability, regardless of team size or organizational structure.
 
@@ -442,19 +442,19 @@ Engineering Lead
 
 # 16. Engineering Approval Matrix
 
-| Artifact | Primary Owner | Approval Authority |
-|-----------|---------------|--------------------|
-| Business Need | Business Analyst | Product Manager |
-| BRD | Business Analyst | Product Manager |
-| PRD | Product Manager | Product Owner / Business Sponsor |
-| FRD | Functional Analyst | Solution Architect |
-| SRS | Software Architect | Enterprise Architect |
-| HLD | Solution Architect | Enterprise Architect |
-| LLD | Solution Architect | Technical Lead |
-| ADR | Enterprise Architect | Enterprise Architect |
-| RTM | PMO / Engineering Governance | Enterprise Architect |
-| Source Code | Software Engineer | Technical Lead |
-| Release | DevSecOps | Engineering Lead |
+| Artifact      | Primary Owner                | Approval Authority               |
+| ------------- | ---------------------------- | -------------------------------- |
+| Business Need | Business Analyst             | Product Manager                  |
+| BRD           | Business Analyst             | Product Manager                  |
+| PRD           | Product Manager              | Product Owner / Business Sponsor |
+| FRD           | Functional Analyst           | Solution Architect               |
+| SRS           | Software Architect           | Enterprise Architect             |
+| HLD           | Solution Architect           | Enterprise Architect             |
+| LLD           | Solution Architect           | Technical Lead                   |
+| ADR           | Enterprise Architect         | Enterprise Architect             |
+| RTM           | PMO / Engineering Governance | Enterprise Architect             |
+| Source Code   | Software Engineer            | Technical Lead                   |
+| Release       | DevSecOps                    | Engineering Lead                 |
 
 ---
 
@@ -462,20 +462,20 @@ Engineering Lead
 
 Every engineering initiative shall satisfy mandatory quality gates before progressing.
 
-| Gate | Description | Mandatory |
-|------|-------------|-----------|
-| QG-001 | Business Approval | Yes |
-| QG-002 | Requirements Approval | Yes |
-| QG-003 | Functional Approval | Yes |
-| QG-004 | Architecture Approval | Yes |
-| QG-005 | Design Approval | Yes |
-| QG-006 | Code Review | Yes |
-| QG-007 | Build Verification | Yes |
-| QG-008 | Unit Testing | Yes |
-| QG-009 | Integration Testing | Yes |
-| QG-010 | Security Validation | Yes |
-| QG-011 | Deployment Validation | Yes |
-| QG-012 | Release Approval | Yes |
+| Gate   | Description           | Mandatory |
+| ------ | --------------------- | --------- |
+| QG-001 | Business Approval     | Yes       |
+| QG-002 | Requirements Approval | Yes       |
+| QG-003 | Functional Approval   | Yes       |
+| QG-004 | Architecture Approval | Yes       |
+| QG-005 | Design Approval       | Yes       |
+| QG-006 | Code Review           | Yes       |
+| QG-007 | Build Verification    | Yes       |
+| QG-008 | Unit Testing          | Yes       |
+| QG-009 | Integration Testing   | Yes       |
+| QG-010 | Security Validation   | Yes       |
+| QG-011 | Deployment Validation | Yes       |
+| QG-012 | Release Approval      | Yes       |
 
 Quality gates shall not be bypassed without formal approval.
 
@@ -606,16 +606,16 @@ Engineering Governance proactively manages engineering risks.
 
 Primary governance risks include:
 
-| Risk | Mitigation |
-|------|------------|
-| Architecture Drift | Architecture Reviews |
-| Technology Sprawl | Technology Strategy |
-| Poor Documentation | Documentation Standards |
-| Low Code Quality | Code Reviews |
-| Security Vulnerabilities | Security Reviews |
-| SDLC Non-Compliance | Governance Audits |
-| Platform Duplication | Platform Architecture |
-| Repository Inconsistency | Repository Standards |
+| Risk                     | Mitigation              |
+| ------------------------ | ----------------------- |
+| Architecture Drift       | Architecture Reviews    |
+| Technology Sprawl        | Technology Strategy     |
+| Poor Documentation       | Documentation Standards |
+| Low Code Quality         | Code Reviews            |
+| Security Vulnerabilities | Security Reviews        |
+| SDLC Non-Compliance      | Governance Audits       |
+| Platform Duplication     | Platform Architecture   |
+| Repository Inconsistency | Repository Standards    |
 
 Risk management shall be integrated into all engineering activities.
 
@@ -627,28 +627,28 @@ The effectiveness of Engineering Governance shall be measured using objective en
 
 ## 24.1 Governance KPIs
 
-| KPI | Objective |
-|-----|-----------|
-| Governance Compliance | >95% |
-| Architecture Compliance | >95% |
-| Repository Compliance | 100% |
-| SDLC Traceability | 100% |
-| Documentation Completeness | >95% |
-| ADR Coverage | 100% for significant decisions |
-| Standards Adoption | >95% |
+| KPI                        | Objective                      |
+| -------------------------- | ------------------------------ |
+| Governance Compliance      | >95%                           |
+| Architecture Compliance    | >95%                           |
+| Repository Compliance      | 100%                           |
+| SDLC Traceability          | 100%                           |
+| Documentation Completeness | >95%                           |
+| ADR Coverage               | 100% for significant decisions |
+| Standards Adoption         | >95%                           |
 
 ---
 
 ## 24.2 Engineering Quality Metrics
 
-| Metric | Purpose |
-|---------|---------|
-| Code Review Completion | Measure review discipline |
-| Unit Test Coverage | Measure software quality |
-| Build Success Rate | Measure delivery stability |
-| Deployment Success Rate | Measure operational readiness |
-| Static Code Analysis Score | Measure code quality |
-| Security Vulnerability Count | Measure security posture |
+| Metric                       | Purpose                       |
+| ---------------------------- | ----------------------------- |
+| Code Review Completion       | Measure review discipline     |
+| Unit Test Coverage           | Measure software quality      |
+| Build Success Rate           | Measure delivery stability    |
+| Deployment Success Rate      | Measure operational readiness |
+| Static Code Analysis Score   | Measure code quality          |
+| Security Vulnerability Count | Measure security posture      |
 
 ---
 
@@ -715,12 +715,12 @@ Feedback from engineering teams shall be incorporated through the established go
 
 Engineering Governance shall evolve through progressive maturity levels.
 
-| Level | Description |
-|--------|-------------|
-| Level 1 | Initial and ad hoc governance |
-| Level 2 | Defined engineering standards |
-| Level 3 | Standardized governance processes |
-| Level 4 | Measured and automated governance |
+| Level   | Description                                       |
+| ------- | ------------------------------------------------- |
+| Level 1 | Initial and ad hoc governance                     |
+| Level 2 | Defined engineering standards                     |
+| Level 3 | Standardized governance processes                 |
+| Level 4 | Measured and automated governance                 |
 | Level 5 | Continuous optimization and predictive governance |
 
 The objective of STARONE INFOTECH is to continuously mature its governance capabilities while maintaining engineering agility.
@@ -778,29 +778,29 @@ Non-compliance shall be documented, assessed, and resolved through the governanc
 
 # 30. Related Documents
 
-| Document ID | Document |
-|-------------|----------|
-| SIT-001 | Engineering Operating Model |
-| SIT-003 | Repository Architecture |
-| SIT-004 | Technology Strategy |
-| SIT-005 | Architecture Principles |
-| SIT-006 | Platform Architecture |
-| SIT-007 | Enterprise Reference Architecture |
+| Document ID | Document                          |
+| ----------- | --------------------------------- |
+| SIT-001     | Engineering Operating Model       |
+| SIT-003     | Repository Architecture           |
+| SIT-004     | Technology Strategy               |
+| SIT-005     | Architecture Principles           |
+| SIT-006     | Platform Architecture             |
+| SIT-007     | Enterprise Reference Architecture |
 
 ---
 
 # 31. Glossary
 
-| Term | Definition |
-|------|------------|
-| Governance | Framework for directing and controlling engineering activities |
-| Engineering Review | Formal evaluation of engineering deliverables |
-| Quality Gate | Mandatory checkpoint before progressing to the next lifecycle stage |
-| Compliance | Conformance to approved standards and policies |
-| ADR | Architecture Decision Record documenting significant technical decisions |
-| Traceability | Ability to relate engineering artifacts across the SDLC |
-| Exception | Approved deviation from an enterprise standard |
-| Audit | Formal assessment of governance compliance |
+| Term               | Definition                                                               |
+| ------------------ | ------------------------------------------------------------------------ |
+| Governance         | Framework for directing and controlling engineering activities           |
+| Engineering Review | Formal evaluation of engineering deliverables                            |
+| Quality Gate       | Mandatory checkpoint before progressing to the next lifecycle stage      |
+| Compliance         | Conformance to approved standards and policies                           |
+| ADR                | Architecture Decision Record documenting significant technical decisions |
+| Traceability       | Ability to relate engineering artifacts across the SDLC                  |
+| Exception          | Approved deviation from an enterprise standard                           |
+| Audit              | Formal assessment of governance compliance                               |
 
 ---
 
@@ -819,13 +819,13 @@ This document shall be read in conjunction with:
 
 # 33. Document Ownership
 
-| Responsibility | Owner |
-|---------------|-------|
-| Document Owner | Enterprise Architecture |
+| Responsibility       | Owner                   |
+| -------------------- | ----------------------- |
+| Document Owner       | Enterprise Architecture |
 | Governance Authority | Enterprise Architecture |
 | Document Maintenance | Enterprise Architecture |
-| Review Authority | Enterprise Architecture |
-| Approval Authority | Enterprise Architecture |
+| Review Authority     | Enterprise Architecture |
+| Approval Authority   | Enterprise Architecture |
 
 This document shall be reviewed annually or whenever significant changes to the engineering governance framework occur.
 
@@ -833,9 +833,9 @@ This document shall be reviewed annually or whenever significant changes to the 
 
 # 34. Revision History (Current Version)
 
-| Version | Date | Author | Description |
-|----------|------|--------|-------------|
-| 1.0.0 | 2026-07-02 | Enterprise Architecture | Initial Engineering Governance |
+| Version | Date       | Author                  | Description                    |
+| ------- | ---------- | ----------------------- | ------------------------------ |
+| 1.0.0   | 2026-07-02 | Enterprise Architecture | Initial Engineering Governance |
 
 ---
 
