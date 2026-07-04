@@ -1,1309 +1,263 @@
-# ⭐ StarOne Galaxy
+# ⭐ StarOne Galaxy Architecture
 
-> Architecture Source Of Truth
-
----
-
-# README Metadata
-
-| Field           | Value                         |
-| --------------- | ----------------------------- |
-| Document ID     | SGE-README-v1.0               |
-| Domain          | Governance                    |
-| Document Type   | Architectural Source of Truth |
-| Version         | 1.0.0                         |
-| Author          | Sachin Salunke                |
-| Status          | Draft                         |
-| Date            | 2026-01-01                    |
-| Linked Epic     | EPIC-ARCH-001                 |
-| Linked Story    | STORY-ARCH-002                |
-| Approval Status | Pending                       |
+> Enterprise Architecture, Engineering Standards, Governance, and SDLC Source of Truth for the STARONE INFOTECH Engineering Ecosystem.
 
 ---
 
-# Revision History
+# Overview
 
-| Version | Date     | Author              | Description                               |
-| ------- | -------- | ------------------- | ----------------------------------------- |
-| 1.0     | Jan 2026 | Sachin Salunke      | Initial Global Architecture README        |
-| 1.1     | Jan 2026 | Platform Governance | C4 and Governance Navigation Added        |
-| 1.2     | Jan 2026 | Sachin Salunke      | Governance, Runtime and SDLC Enhancements |
+The **StarOne Galaxy Architecture** repository is the central engineering repository for the STARONE INFOTECH ecosystem.
 
----
+It provides the enterprise engineering foundation used by all current and future STARONE products.
 
-# Sign-Off
+This repository owns:
 
-| Role               | Status  |
-| ------------------ | ------- |
-| Platform Architect | Pending |
-| Security Review    | Pending |
-| DevOps Governance  | Pending |
+- Enterprise Architecture
+- Engineering Standards
+- Engineering Governance
+- SDLC Templates
+- Architecture Decision Records (ADRs)
+- Enterprise Reference Documentation
 
----
-
-## How to Navigate
-
-This README serves as the primary architectural entry point for the StarOne Galaxy ecosystem.
-
-### For New Engineers
-
-Follow this order:
-
-1. Ecosystem Overview
-2. Repository Structure
-3. Architecture Overview
-4. Technology Stack
-5. Getting Started
-6. Domain Catalog
-7. Contribution Path
+All platform and application repositories inherit the standards defined here.
 
 ---
 
-### For Architects
+# Repository Purpose
 
-Follow this order:
+This repository establishes the engineering foundation for:
 
-1. Architecture Overview
-2. C4 Context View
-3. C4 Container View
-4. Dependency Relationships
-5. High-Level Integration Overview
-6. Governance Links
-7. Documentation Links
-
----
-
-### For Platform Engineers
-
-Follow this order:
-
-1. Repository Structure
-2. Technology Stack
-3. Dependency Relationships
-4. High-Level Integration Overview
-5. Governance Links
-6. Contribution Path
-
----
-
-### For Reviewers & Auditors
-
-Follow this order:
-
-1. Governance Links
-2. Documentation Links
-3. Traceability Artifacts
-4. Ownership
-5. Contribution Standards
-6. Appendix A – Traceability Governance
-7. Appendix B – Governance Lifecycles
-
----
-
-### Architecture Repository Navigation
-
-```text
-/docs/adr/          -> Architecture Decision Records
-/docs/brd/          -> Business Requirements
-/docs/prd/          -> Product Requirements
-/docs/frd/          -> Functional Requirements
-/docs/hld/          -> High-Level Designs
-/docs/lld/          -> Low-Level Designs
-/docs/srs/          -> System Requirements
-/docs/rtm/          -> Traceability Matrix
-
-/architecture/c4/   -> C4 Architecture Models
-/governance/        -> Governance Standards
-/docs/templates/    -> Approved Templates
-```
-
----
-
-## 1. Ecosystem Overview
-
-### 1.1 Executive Overview
-
-**StarOne Galaxy** is the architectural and governance source-of-truth for the STARONE-INFOTECH ecosystem.
-The repository establishes:
-
-- Platform Governance
-- Domain Isolation Standards
+- Platform Engineering
+- Product Engineering
+- Solution Architecture
+- Enterprise Governance
 - Documentation-as-Code
-- Architecture Traceability
-- SDLC Governance
-- Security & Compliance Baselines
-- Platform Engineering Standards
+- Architecture Decision Management
 
-The ecosystem consists of:
-
-1. starone-galaxy-architecture — Architecture Source of Truth
-2. starone-galaxy-infra — Shared Control Plane
-3. starone-galaxy-config — Centralized Configuration Store
-4. starone-dhs-system — Enterprise OMS Platform
-5. starone-bookshow-system — Consumer Ticketing Platform
+It is the **single source of truth** for enterprise engineering guidance.
 
 ---
 
-### 1.2 Architecture Highlights
-
-This project demonstrates:
-
-- Domain-Isolated Microservices Architecture
-- Event-driven microservices architecture using Kafka
-- Strict domain isolation (DHS vs Bookshow)
-- Shared platform control plane (Kubernetes + CI/CD)
-- Documentation-as-Code with full traceability (EPIC → RTM)
-- Governance-first engineering model
-- Saga-based distributed transaction management
-- Kubernetes Native Platform Operations
-
----
-
-### 1.3 Design Intent
-
-This architecture is designed to:
-
-- Separate enterprise and consumer domains with clear boundaries
-- Establish governance as a foundational layer rather than an afterthought
-- Enable scalable, event-driven communication between systems
-- Provide a reusable platform model for future services
-
-The goal is to simulate a production-grade ecosystem with strong architectural discipline.
-
----
-
-## 2. Repository Structure
-
-### 2.1 Repository Map
+# Repository Structure
 
 ```text
 starone-galaxy-architecture/
 │
 ├── .github/
-│   ├── workflows/
-│   ├── ISSUE_TEMPLATE/
-│   ├── PULL_REQUEST_TEMPLATE.md
-│   └── CODEOWNERS
 │
-├── docs/
-│   ├── adr/
-│   ├── brd/
-│   ├── frd/
-│   ├── hld/
-│   ├── lld/
-│   ├── prd/
-│   ├── rtm/
-│   ├── srs/
-│   ├── epic/
-│   ├── stories/
-│   ├── milestones/
-│   ├── standards/
-│   └── templates/
+├── enterprise/
+│   └── sit/
+│
+├── standards/
+│
+├── templates/
 │
 ├── architecture/
-│   ├── c4/
-│   ├── deployment/
-│   ├── integration/
-│   ├── security/
-│   ├── runtime/
-│   └── domain/
 │
 ├── governance/
-│   ├── policies/
-│   ├── controls/
-│   ├── compliance/
-│   ├── standards/
-│   ├── branching/
-│   └── naming/
+│
+├── adr/
 │
 ├── references/
-│   ├── diagrams/
-│   ├── samples/
-│   └── onboarding/
 │
 ├── scripts/
 │
 ├── README.md
-├── CONTRIBUTING.md
-├── LICENSE
-└── .gitignore
+└── CONTRIBUTING.md
 ```
+---
+
+# Enterprise Engineering Documents
+
+The following documents define the STARONE engineering framework.
+
+| Document | Purpose                           |
+| -------- | --------------------------------- |
+| SIT-001  | Engineering Operating Model       |
+| SIT-002  | Engineering Governance            |
+| SIT-003  | Repository Architecture           |
+| SIT-004  | Technology Strategy               |
+| SIT-005  | Architecture Principles           |
+| SIT-006  | Platform Architecture             |
+| SIT-007  | Enterprise Reference Architecture |
 
 ---
 
-### 2.2 Internal Taxonomy Standard
+# Standards
+
+Enterprise standards are maintained under:
 
 ```text
-/apps
-/platform
-/libs
-/bom
-/docs
-/scripts
-.github
+standards/
 ```
 
----
+## Current standards include:
 
-## 3. Architecture Overview
+- Engineering Governance Handbook
+- Document Template Standard
 
-### 3.2 Architecture Principles
+## Future standards include:
 
-Mandatory principles:
-
-- Platform First
-- Domain Isolation
-- API Gateway Security
-- Database per Service
-- Event-Driven Integration
-- Saga Patterns
-- Compensating Transactions
+- Java Coding Standard
+- REST API Standard
+- Spring Boot Standard
+- Database Standard
+- Security Standard
+- Kubernetes Standard
 
 ---
 
-### 3.3 Distributed Transaction Governance
+# Templates
 
-All distributed workflows across DHS and Bookshow domains must implement:
-
-- Saga Orchestration or Saga Choreography
-- Mandatory Compensating Transactions
-- Event Traceability
-- Idempotent Consumers
-- Retry + Dead Letter Queue (DLQ) handling
-- Distributed correlation identifiers
-
-Two-Phase Commit (2PC) is prohibited for cross-domain runtime flows due to scalability and availability constraints.
-
----
-
-### 3.4 Repository Visibility Strategy
-
-| Repository                  | Visibility | Reason                 |
-| --------------------------- | ---------- | ---------------------- |
-| starone-galaxy-architecture | Public     | Architecture portfolio |
-| starone-galaxy-infra        | Private    | Deployment configs     |
-| starone-dhs-system          | Private    | Enterprise domain      |
-| starone-bookshow-system     | Private    | Consumer domain        |
-| starone-galaxy-config       | Private    | Secrets/config         |
-
----
-
-## 4. Technology Stack
-
-### 4.1 Tech Stack Standards
-
-| Layer             | Standard             |
-| ----------------- | -------------------- |
-| Language          | Java 21              |
-| Framework         | Spring Boot 3.x      |
-| API Communication | REST + OpenFeign     |
-| Messaging         | Kafka                |
-| Database          | PostgreSQL           |
-| Cache             | Redis                |
-| Security          | JWT / RBAC / TLS 1.3 |
-| DevOps            | Docker + Kubernetes  |
-| CI/CD             | GitHub Actions       |
-
----
-
-### 4.2 Architecture Standards
-
-| Category            | Standard                |
-| ------------------- | ----------------------- |
-| Requirements        | ISO/IEC/IEEE 29148      |
-| Architecture Design | IEEE 1016               |
-| API Standards       | OpenAPI 3.x             |
-| Diagrams            | Mermaid.js              |
-| Documentation       | Markdown-as-Code        |
-| CI Governance       | GitHub Actions          |
-| Branching           | Trunk-Based Development |
-
----
-
-### 4.3 Visual Modeling Governance
-
-All architecture diagrams shall comply with:
-
-- Mermaid Modeling Standard
-- C4 Modeling Conventions
-- Domain Boundary Standards
-- Architecture Review Controls
-
----
-
-## 5. Repository Catalog
-
-The StarOne Galaxy ecosystem consists of shared platform repositories and domain-specific repositories. The following catalog provides repository ownership and responsibility boundaries.
-
-### 5.1 Repository Responsibility Matrix
-
-| Repository                  | Responsibility                             | Type    |
-| --------------------------- | ------------------------------------------ | ------- |
-| starone-galaxy-architecture | Architecture governance & source-of-truth  | Public  |
-| starone-galaxy-infra        | Shared runtime platform & Kubernetes       | Private |
-| starone-galaxy-config       | Centralized Spring Cloud Config repository | Private |
-| starone-dhs-system          | Enterprise OMS ecosystem                   | Private |
-| starone-bookshow-system     | Consumer ticketing platform                | Private |
-| sportstats                  | Sports analytics                           | Planned |
-| vaultiron                   | Secret management                          | Planned |
-
----
-
-## 6. Getting Started
-
-### 6.1 Engineer Onboarding Guide
-
-Welcome to the StarOne Galaxy ecosystem.
-
-This onboarding path helps new engineers understand the architecture, governance model, repository structure, and contribution workflow.
-
-### 6.2 Recommended Learning Path
-
-### 6.2.1 Repository Discovery
-
-New engineers should explore repositories in the following order:
-
-| Repository                  | Purpose                         |
-| --------------------------- | ------------------------------- |
-| starone-galaxy-architecture | Architecture Source of Truth    |
-| starone-galaxy-infra        | Shared Control Plane            |
-| starone-galaxy-config       | Centralized Configuration Store |
-| starone-dhs-system          | Enterprise OMS Platform         |
-| starone-bookshow-system     | Consumer Ticketing Platform     |
-
-Recommended starting point:
+Reusable SDLC templates are maintained under:
 
 ```text
-starone-galaxy-architecture
+templates/
 ```
 
+## Templates include:
+
+- BRD
+- PRD
+- FRD
+- SRS
+- HLD
+- LLD
+- ADR
+- RTM
+- Epic
+- Story
+- README
+
 ---
 
-#### Step 1 — Understand the Ecosystem
+# Architecture
 
-Review:
-
-- Executive Overview
-- Architecture Highlights
-- Ecosystem Repository Topology
-
-Objective:
-
-Understand domain boundaries and platform responsibilities.
-
----
-
-#### Step 2 — Learn the Architecture
-
-Recommended order:
-
-**1. Read ADRs**
+Enterprise architecture assets are maintained under:
 
 ```text
-/docs/adr/
+architecture/
 ```
+Architecture includes:
 
-**2. Review C4 Models**
+- C4 Models
+- Domain Architecture
+- Deployment Architecture
+- Runtime Architecture
+- Integration Architecture
+- Security Architecture
 
-```text
-/architecture/c4/
-```
-
-**3. Review HLD**
-
-```text
-/docs/hld/
-```
-
-**4. Review Standards**
-
-```text
-/governance/
-```
-
-Objective:
-
-Understand system context, repository relationships, and architecture decisions.
+Refer to SIT-006 and SIT-007 for complete architecture documentation.
 
 ---
 
-#### Step 3 — Understand Governance
+# Governance
 
-Review:
-
-```text
-/governance/
-/governance/standards/
-/docs/rtm/
-/docs/templates/
-```
-
-Objective:
-
-Learn contribution standards, traceability requirements, and governance controls.
-
----
-
-#### Step 4 — Explore Platform & Domain Systems
-
-Repositories:
-
-- starone-galaxy-architecture
-- starone-galaxy-infra
-- starone-galaxy-config
-- starone-dhs-system
-- starone-bookshow-system
-
-Objective:
-
-Understand platform services, governance ownership, and business domain responsibilities.
-
----
-
-#### Step 5 — Start Contributing
-
-Follow:
-
-Issue
-→ Branch
-→ Pull Request
-→ Review
-→ Merge
-
-Objective:
-
-Contribute using approved engineering workflows.
-
----
-
-### 6.3 Prerequisites
-
-Before contributing to the StarOne Galaxy ecosystem, engineers should be familiar with the following tools and technologies:
-
-| Tool    | Purpose                 |
-| ------- | ----------------------- |
-| Java 21 | Application Development |
-| Maven   | Build Management        |
-| Docker  | Containerization        |
-| Git     | Source Control          |
-| kubectl | Kubernetes Operations   |
-
-Recommended knowledge:
-
-- Spring Boot 3.x
-- Kafka Event-Driven Architecture
-- PostgreSQL
-- Redis
-- GitHub Actions
-- Kubernetes
-
----
-
-### 6.4 Clone Repositories
-
-```bash
-git clone --recursive git@github.com:starone/starone-galaxy-architecture.git
-```
-
----
-
-### 6.5 Local Bootstrap
-
-```bash
-# Start infrastructure
-docker compose up -d
-
-# Build shared modules
-./mvnw clean install -DskipTests
-```
-
----
-
-### 6.6 Engineer Onboarding Flow
-
-```mermaid
-flowchart TD
-
-Start[New Engineer]
-
-Start --> README[Read README]
-
-README --> ADR[Review ADRs]
-
-ADR --> C4[Review C4 Architecture]
-
-C4 --> GOV[Review Governance]
-
-GOV --> DOMAINS[Explore Domains]
-
-DOMAINS --> CONTRIBUTE[Start Contributing]
-```
-
----
-
-## 7. Governance Links
-
-### 7.1 Architecture Decisions
-
-```text
-/docs/adr/
-```
-
-- ADR-001 Repository Taxonomy
-- ADR-002 Documentation-as-Code
-- ADR-003 BOM Governance
-
----
-
-### 7.2 Architecture Designs
-
-```text
-/docs/hld/
-```
-
-- HLD-001 Global Ecosystem Architecture
-
----
-
-### 7.3 Technical Specifications
-
-```text
-/docs/srs/
-```
-
-- SRS-001 Documentation Standards Engine
-
----
-
-### 7.4 Traceability
-
-```text
-/docs/rtm/
-```
-
-- RTM-001 Governance Traceability
-
----
-
-### 7.5 Policies and Standards
-
-```text
-/governance/
-```
-
-- Contribution Standards
-- Architecture Review Policies
-- Compliance Controls
-
----
-
-### 7.6 Governance Artifact Catalog
-
-| Location               | Purpose                |
-| ---------------------- | ---------------------- |
-| /docs/adr              | Architecture Decisions |
-| /docs/brd              | Business Requirements  |
-| /docs/hld              | High-Level Designs     |
-| /docs/srs              | System Requirements    |
-| /docs/rtm              | Traceability Matrix    |
-| /governance/policies   | Governance Policies    |
-| /governance/controls   | Governance Controls    |
-| /governance/compliance | Compliance Artifacts   |
-| /governance/standards  | Standards Repository   |
-
----
-
-### 7.7 Governance Repository Structure
+Engineering governance artifacts are maintained under:
 
 ```text
 governance/
-├── policies/
-├── controls/
-├── compliance/
-├── standards/
-├── branching/
-└── naming/
 ```
 
----
+Governance includes:
 
-### 7.8 Governance Navigation Diagram
+- Policies
+- Controls
+- Compliance
+- Naming Standards
+- Branching Standards
 
-```mermaid
-flowchart TD
-
-README[Global README]
-
-README --> ADR[ADR]
-README --> BRD[BRD]
-README --> HLD[HLD]
-README --> SRS[SRS]
-README --> RTM[RTM]
-
-README --> Policies[Policies]
-README --> Controls[Controls]
-README --> Compliance[Compliance]
-README --> Standards[Standards]
-
-Standards --> Naming[Naming Standards]
-Standards --> Contribution[Contribution Governance]
-```
+Refer to SIT-002 Engineering Governance for governance rules.
 
 ---
 
-### 7.9 Standards Navigation
+# Repository Catalog
 
-| Standard Area           | Location              |
-| ----------------------- | --------------------- |
-| Documentation Standards | /governance/standards |
-| Traceability Standards  | /governance/standards |
-| Mermaid Standards       | /governance/standards |
-| Review Standards        | /governance/standards |
-| Naming Standards        | /governance/naming    |
-| Branching Standards     | /governance/branching |
+The STARONE ecosystem consists of the following repositories.
 
----
-
-### 7.10 Governance Principles
-
-The StarOne Galaxy ecosystem follows the following governance principles:
-
-- Documentation-as-Code
-- Platform First Governance
-- Single Source of Truth
-- Traceability First SDLC
-- Architecture Review Before Implementation
-- Governance Ownership Visibility
-- Repository-Level Accountability
+| Repository                    | Purpose                              |
+| ----------------------------- | ------------------------------------ |
+| starone-galaxy-architecture   | Enterprise Architecture & Governance |
+| starone-galaxy-infra          | Infrastructure Platform              |
+| starone-galaxy-central-config | Centralized Configuration            |
+| starone-galaxy-dhs            | DHS Product                          |
+| starone-galaxy-bookshow       | BookShow Product                     |
+| starone-galaxy-sportstats     | SportStats Product *(Planned)*       |
+| starone-galaxy-vaultiron      | VaultIron Product *(Planned)*        |
 
 ---
 
-### 7.11 Related Governance Ownership
+# Technology Stack
 
-Refer to:
-
-```text
-Section 9. Ownership
-```
-
----
-
-## 8. Documentation Links
-
-| Artifact  | Location        |
-| --------- | --------------- |
-| ADR       | /docs/adr       |
-| BRD       | /docs/brd       |
-| PRD       | /docs/prd       |
-| FRD       | /docs/frd       |
-| HLD       | /docs/hld       |
-| LLD       | /docs/lld       |
-| SRS       | /docs/srs       |
-| RTM       | /docs/rtm       |
-| Templates | /docs/templates |
+| Area            | Technology     |
+| --------------- | -------------- |
+| Language        | Java 21        |
+| Framework       | Spring Boot    |
+| Database        | PostgreSQL     |
+| Messaging       | Apache Kafka   |
+| Cache           | Redis          |
+| Containers      | Docker         |
+| Orchestration   | Kubernetes     |
+| Package Manager | Helm           |
+| CI              | GitHub Actions |
+| CD              | Argo CD        |
 
 ---
 
-## 9. Ownership
+# Getting Started
 
-### 9.1 Ownership Model Summary
+Recommended reading order:
 
-| Area                    | Owner                   |
-| ----------------------- | ----------------------- |
-| Architecture            | Platform Architect      |
-| Governance Standards    | Governance Board        |
-| Security Controls       | Security Governance     |
-| CI/CD Governance        | Platform Engineering    |
-| Documentation Standards | Architecture Governance |
+1. README
+2. SIT-001 Engineering Operating Model
+3. SIT-002 Engineering Governance
+4. SIT-003 Repository Architecture
+5. SIT-004 Technology Strategy
+6. SIT-005 Architecture Principles
+7. SIT-006 Platform Architecture
+8. SIT-007 Enterprise Reference Architecture
 
----
-
-## 10. Domain Catalog
-
-### 10.1 Overview
-
-The StarOne Galaxy ecosystem follows a centralized governance and platform model where shared services are consumed by business domains while architecture remains the authoritative source of truth.
+After understanding the enterprise foundation, continue with the appropriate platform or application repository.
 
 ---
 
-### 10.2 Domain Inventory
-
-| Domain                      | Responsibility                       | Status  |
-| --------------------------- | ------------------------------------ | ------- |
-| starone-galaxy-infra        | Shared platform infrastructure       | Active  |
-| starone-galaxy-config       | Centralized configuration management | Active  |
-| starone-galaxy-architecture | Architecture governance              | Active  |
-| starone-dhs-system          | Enterprise OMS domain                | Active  |
-| starone-bookshow-system     | Consumer ticketing domain            | Active  |
-| sportstats                  | Sports analytics platform            | Planned |
-| vaultiron                   | Secret management platform           | Planned |
-
----
-
-### 10.3 Related Domains
-
-| Repository                  | Purpose                   |
-| --------------------------- | ------------------------- |
-| starone-galaxy-infra        | Shared platform services  |
-| starone-galaxy-config       | Centralized configuration |
-| starone-galaxy-architecture | Architecture governance   |
-| starone-dhs-system          | Enterprise OMS            |
-| starone-bookshow-system     | Consumer Ticketing        |
-
----
-
-### 10.4 Domain Boundary Summary
-
-| Domain         | Boundary                                                     |
-| -------------- | ------------------------------------------------------------ |
-| Architecture   | Governance, standards, documentation, architecture decisions |
-| Infrastructure | CI/CD, Kubernetes, shared platform services                  |
-| Configuration  | Environment and application configuration                    |
-| DHS            | Enterprise order management capabilities                     |
-| Bookshow       | Consumer ticketing capabilities                              |
-| SportStats     | Future sports analytics capabilities                         |
-| VaultIron      | Future secret management capabilities                        |
-
----
-
-## 11. C4 Context View
-
-```mermaid
-
-flowchart LR
-
-Users((Business Users))
-Engineers((Platform Engineers))
-
-subgraph StarOne_Galaxy
-    Architecture[Architecture Repository]
-    Infra[Control Plane]
-    Config[Config Store]
-
-    DHS[DHS Platform]
-    Bookshow[Bookshow Platform]
-
-    SportStats[SportStats - Planned]
-    VaultIron[VaultIron - Planned]
-end
-
-Engineers -->|Architecture & Governance| Architecture
-Engineers -->|Develop & Operate| Infra
-
-Users -->|Use| DHS
-Users -->|Use| Bookshow
-
-Architecture --> |Standards & Governance| DHS
-Architecture --> |Standards & Governance| Bookshow
-Architecture -. Future .-> SportStats
-Architecture -. Future .-> VaultIron
-
-Infra -->|Deployment Platform| DHS
-Infra -->|Deployment Platform| Bookshow
-Infra -. Future .-> SportStats
-Infra -. Future .-> VaultIron
-
-Config -->|Configuration| DHS
-Config -->|Configuration| Bookshow
-Config -. Future .-> SportStats
-Config -. Future .-> VaultIron
-```
-
----
-
-### 11.1 Context Description
-
-The StarOne Galaxy ecosystem is composed of shared platform capabilities and independent business domains.
-
-Platform Engineers interact with the Architecture Repository and Control Plane to govern, build, deploy, and operate the ecosystem.
-
-Business Users consume business-facing capabilities exposed through the DHS and Bookshow platforms.
-
-The Architecture Repository acts as the governance source of truth, while the Control Plane and Config Store provide shared operational capabilities to runtime domains.
-
-Future domains such as SportStats and VaultIron will adopt the same governance and platform standards.
-
----
-
-### 11.2 Related Architecture Artifacts
-
-| Artifact                | Purpose                       |
-| ----------------------- | ----------------------------- |
-| C4-001 System Context   | Ecosystem boundaries          |
-| C4-002 Container View   | Internal repository structure |
-| Domain Dependency Map   | Cross-domain dependencies     |
-| Infrastructure Overview | Runtime platform architecture |
-
----
-
-## 12. C4 Container View
-
-### 12.1 Container Diagram
-
-```mermaid
-flowchart TD
-
-Client[Engineering Teams]
-
-Client --> README[Global README Entry Point]
-
-README --> Docs[Documentation Domain]
-README --> Architecture[C4 Architecture]
-README --> Governance[Governance Controls]
-README --> Systems[Business Systems]
-
-Systems --> DHS[DHS System]
-Systems --> Bookshow[Bookshow System]
-
-Governance --> Policies[Policies]
-Governance --> Controls[Controls]
-Governance --> Templates[Templates]
-```
-
----
-
-### 12.2 Container Description
-
-The StarOne Galaxy Architecture Repository is organized into logical architecture containers that simplify navigation, governance, documentation management, and engineering onboarding.
-
-The README serves as the primary ecosystem entry point and guides engineers toward the appropriate architecture, documentation, governance, and reference domains.
-
-The container model is structured around the following responsibilities:
-
-| Container             | Responsibility                                                            |
-| --------------------- | ------------------------------------------------------------------------- |
-| README Entry Point    | Primary ecosystem navigation and discovery                                |
-| Repository Catalog    | Repository discovery and ownership visibility                             |
-| Domain Catalog        | Domain boundaries and ecosystem responsibilities                          |
-| Documentation Domain  | Requirements, architecture, design, and traceability artifacts            |
-| Architecture Domain   | C4 models, domain architecture, and integration architecture              |
-| Governance Domain     | Policies, standards, controls, and compliance artifacts                   |
-| Reference Assets      | Reusable diagrams, examples, onboarding assets, and supporting references |
-| Repository Governance | Repository automation, workflows, approvals, and ownership controls       |
-
-The container relationships provide a structured navigation path that enables engineers to move from ecosystem understanding to detailed architectural and governance artifacts.
-
----
-
-### 12.3 Repository Navigation Mapping
-
-| Starting Point        | Navigation Target        | Purpose                                            |
-| --------------------- | ------------------------ | -------------------------------------------------- |
-| README Entry Point    | Repository Catalog       | Discover ecosystem repositories                    |
-| README Entry Point    | Domain Catalog           | Understand domain responsibilities                 |
-| README Entry Point    | Documentation Domain     | Access architecture and requirements documentation |
-| README Entry Point    | Architecture Domain      | Explore C4 models and architecture artifacts       |
-| README Entry Point    | Governance Domain        | Review governance standards and controls           |
-| README Entry Point    | Reference Assets         | Access reusable reference materials                |
-| README Entry Point    | Repository Governance    | Review automation and repository controls          |
-| Repository Catalog    | Domain Catalog           | Understand repository ownership boundaries         |
-| Documentation Domain  | ADR                      | Architecture decision tracking                     |
-| Documentation Domain  | BRD                      | Business requirements documentation                |
-| Documentation Domain  | HLD                      | High-level design documentation                    |
-| Documentation Domain  | SRS                      | System requirements documentation                  |
-| Documentation Domain  | RTM                      | Requirements traceability                          |
-| Architecture Domain   | C4 Models                | Architecture visualization                         |
-| Architecture Domain   | Domain Architecture      | Domain-specific architecture documentation         |
-| Architecture Domain   | Integration Architecture | Cross-domain integration documentation             |
-| Governance Domain     | Policies                 | Governance policies                                |
-| Governance Domain     | Standards                | Engineering standards                              |
-| Governance Domain     | Controls                 | Governance controls                                |
-| Governance Domain     | Compliance               | Compliance requirements                            |
-| Repository Governance | GitHub Workflows         | Automation and CI/CD governance                    |
-| Repository Governance | CODEOWNERS               | Ownership and review controls                      |
-| Repository Governance | PR Governance            | Pull request governance and approvals              |
-
----
-
-### 12.4 Related Architecture Artifacts
-
-| Artifact                                | Purpose                                                   |
-| --------------------------------------- | --------------------------------------------------------- |
-| README.md                               | Ecosystem entry point and navigation hub                  |
-| C4-001-StarOne-Galaxy-System-Context.md | Ecosystem boundaries and external interactions            |
-| C4-002-StarOne-Galaxy-Container-View.md | Internal repository architecture and navigation structure |
-| Domain Dependency Map                   | Cross-domain dependency relationships                     |
-| Integration Architecture                | Domain integration patterns and interactions              |
-| Infrastructure Overview                 | Shared platform and runtime architecture                  |
-| Governance Standards                    | Governance policies, standards, and controls              |
-| ADR Repository                          | Architecture decisions and rationale                      |
-| Repository Catalog                      | Repository ownership and responsibility mapping           |
-| Domain Catalog                          | Domain boundaries and responsibilities                    |
-
-The C4 Container View builds upon the System Context View and provides a deeper understanding of the internal organizational structure of the StarOne Galaxy Architecture Repository.
-
-This model serves as the foundation for subsequent dependency maps, integration models, governance navigation artifacts, and engineering onboarding documentation.
-
----
-
-## 13. Dependency Relationships
-
-### 13.1 Dependency Relationship Matrix
-
-| Source Domain           | Target Domain               | Dependency Type |
-| ----------------------- | --------------------------- | --------------- |
-| starone-dhs-system      | starone-galaxy-infra        | Platform        |
-| starone-dhs-system      | starone-galaxy-config       | Configuration   |
-| starone-bookshow-system | starone-galaxy-infra        | Platform        |
-| starone-bookshow-system | starone-galaxy-config       | Configuration   |
-| SportStats              | starone-galaxy-infra        | Planned         |
-| SportStats              | starone-galaxy-config       | Planned         |
-| VaultIron               | starone-galaxy-infra        | Planned         |
-| VaultIron               | starone-galaxy-config       | Planned         |
-| All Domains             | starone-galaxy-architecture | Governance      |
-
----
-
-### 13.2 Dependency Navigation Diagram
-
-```mermaid
-graph TD
-
-    Architecture[Architecture Repository]
-
-    Infra[Control Plane]
-    Config[Config Store]
-
-    DHS[DHS System]
-    Bookshow[Bookshow System]
-
-    SportStats[SportStats - Planned]
-    VaultIron[VaultIron - Planned]
-
-    Architecture --> Infra
-    Architecture --> DHS
-    Architecture --> Bookshow
-    Architecture --> SportStats
-    Architecture --> VaultIron
-
-    Infra --> DHS
-    Infra --> Bookshow
-    Infra --> SportStats
-    Infra --> VaultIron
-
-
-    Config --> DHS
-    Config --> Bookshow
-    Config --> SportStats
-    Config --> VaultIron
-```
-
----
-
-### 13.3 Dependency Rules
-
-| Dependency                 | Rule                                  |
-| -------------------------- | ------------------------------------- |
-| Infrastructure → Domains   | Shared platform services              |
-| Configuration → Domains    | Centralized configuration inheritance |
-| Architecture → All Domains | Governance ownership and standards    |
-| Domain → Domain            | Direct dependency prohibited          |
-| Platform → Domains         | Shared services only                  |
-| Domains → Platform         | Allowed through approved interfaces   |
-
----
-
-### 13.4 Architecture Dependency Hierarchy
+# Related Repositories
 
 ```text
 starone-galaxy-architecture
-│
-├── Governance Standards
-│
-├── starone-galaxy-infra
-│   │
-│   ├── starone-dhs-system
-│   ├── starone-bookshow-system
-│   ├── sportstats (Planned)
-│   └── vaultiron (Planned)
-│
-└── starone-galaxy-config
-    │
-    ├── starone-dhs-system
-    ├── starone-bookshow-system
-    ├── sportstats (Planned)
-    └── vaultiron (Planned)
+        │
+        ├── starone-galaxy-infra
+        ├── starone-galaxy-central-config
+        ├── starone-galaxy-dhs
+        ├── starone-galaxy-bookshow
+        ├── starone-galaxy-sportstats
+        └── starone-galaxy-vaultiron
 ```
-
 ---
 
-### 13.5 Repository Dependency References
+# Contributing
 
-| Repository                  | Dependency Ownership             |
-| --------------------------- | -------------------------------- |
-| starone-galaxy-architecture | Governance & Standards           |
-| starone-galaxy-infra        | Shared Platform Services         |
-| starone-galaxy-config       | Configuration Management         |
-| starone-dhs-system          | Enterprise OMS Capabilities      |
-| starone-bookshow-system     | Consumer Ticketing Capabilities  |
-| sportstats                  | Planned Analytics Domain         |
-| vaultiron                   | Planned Secret Management Domain |
+All contributions shall comply with:
 
----
+- Engineering Governance Handbook
+- Document Template Standard
+- Enterprise Architecture Principles
+- Repository Standards
 
-### 13.6 Dependency Governance Principles
+See:
 
-The StarOne Galaxy ecosystem follows strict dependency governance.
-
-Principles:
-
-- Domains remain isolated from one another.
-- Shared capabilities are provided through platform repositories.
-- Governance is centralized through the Architecture Repository.
-- Configuration is centralized through the Config Store.
-- Runtime capabilities are provided through the Control Plane.
-- Direct cross-domain coupling is prohibited.
-
----
-
-## 14. High-Level Integration Overview
-
-### 14.1 Infrastructure Overview
-
-```mermaid
-flowchart LR
-
-Dev[Developer] --> GitHub[GitHub Repo]
-
-GitHub --> CI[GitHub Actions]
-CI --> Docker[Docker Build]
-Docker --> Registry[Container Registry]
-
-Registry --> K8s[Kubernetes Cluster]
-
-K8s --> DHS[DHS Services]
-K8s --> Bookshow[Bookshow Services]
-
-K8s --> Redis[Redis Cache]
-K8s --> Postgres[PostgreSQL]
-```
-
----
-
-### 14.2 Key Capabilities
-
-- Containerized microservices (Docker)
-- Kubernetes orchestration
-- GitHub Actions CI/CD pipelines
-- Centralized configuration (Spring Cloud Config)
-- Event backbone using Kafka
-
-Infrastructure implementation is maintained in a private repository to ensure security and operational integrity. The architecture and deployment model are fully represented here.
-
----
-
-## 15. Contribution Path
-
-### 15.1 Documentation Standards
-
-```text
-/docs/templates/
-/governance/standards/
-```
-
-Artifacts:
-
-- ADR Template
-- HLD Template
-- SRS Template
-- RTM Template
-- EPIC Story Linkage Template
-- Documentation Compliance Standard
-- Traceability Standard
-- Mermaid Modeling Standard
-- Review Workflow Standard
-
----
-
-### 15.2 Contribution Workflow
-
-Every contribution should follow:
-
-```text
-Issue
-→ Feature Branch
-→ Pull Request
-→ Architecture Review
-→ Merge
-```
-
-Example:
-
-```bash
-git checkout -b feature/s2-i05-onboarding-guide
-```
-
----
-
-### 15.3 Definition of Done For New Domain Repos
-
-Every new domain repository must include:
-
-- README.md using global template
+- CONTRIBUTING.md
 - CODEOWNERS
-- Reusable workflows
-- Documentation templates
-- Architecture diagrams
-- RTM linkage
-- Security baselines
+- Pull Request Template
 
 ---
 
-### 15.4 Contribution Model
+# License
 
-This repository follows:
-
-- PR-based contribution workflow
-- Protected branch governance
-- Conventional Commits
-- Architecture review approval
-- Documentation-first engineering
-- Traceability-first SDLC governance
+Refer to the repository LICENSE file.
 
 ---
 
-### 15.5 Governance Rules
-
-Required:
-
-- Trunk based development
-- Conventional commits
-- CODEOWNER approval mandatory
-- Protected branches
-- Architecture review gate
-- Security review gate
+STARONE Galaxy Architecture serves as the authoritative engineering foundation for enterprise architecture, governance, standards, templates, and platform guidance across the STARONE ecosystem.
 
 ---
-
-## Appendix A – Traceability Governance
-
-### Artifact Traceability Model
-
-```mermaid
-flowchart TD
-
-Vision --> Epic
-Epic --> Stories
-Stories --> ADR
-ADR --> HLD
-HLD --> SRS
-SRS --> RTM
-RTM --> Validation
-```
-
----
-
-### Traceability Governance
-
-Mandatory rules:
-
-```text
-Every Requirement must map to:
-ADR
-HLD
-LLD
-Implementation
-Testing
-Validation
-```
-
-No orphan requirements, architecture artifacts, implementations, or test cases are permitted.
-
----
-
-## Appendix B – Governance Lifecycles
-
-### SDLC Governance Lifecycle
-
-```mermaid
-flowchart LR
-
-BRD --> PRD
-PRD --> EPIC
-EPIC --> STORY
-STORY --> ADR
-ADR --> HLD
-HLD --> SRS
-SRS --> LLD
-LLD --> IMPLEMENTATION
-IMPLEMENTATION --> RTM
-RTM --> QA
-```
-
----
-
-### Documentation Governance Lifecycle
-
-```mermaid
-flowchart TD
-
-Draft --> PeerReview
-
-PeerReview --> ArchitectureReview
-
-ArchitectureReview --> SecurityReview
-
-SecurityReview --> Approval
-
-Approval --> Published
-```
-
----
-
-## Appendix C – Standards References
-
-### Documentation Standards Reference
-
-- ISO/IEC/IEEE 29148
-- IEEE 1016
-- MADR
-- C4 Model
-
-### Internal Governance Standards
-
-- Documentation Compliance Standard
-- Traceability Standard
-- Mermaid Modeling Standard
-- Review Workflow Standard
-
----
-
-## Appendix D – Architecture Roadmap
-
-### Current Baseline
-
-- Repository Taxonomy
-- Governance Standards
-- Documentation-as-Code
-- C4 Architecture Models
-
-### Next Evolution
-
-- Platform HLD
-- Domain HLDs
-- Control Plane Architecture
-- Runtime Deployment Models
-- Event Catalog & Schema Registry
-- Shared Platform Libraries
-- Observability Architecture
-
----
-
-### Planned Evolution
-
-Future roadmap includes:
-
-- Full Control Plane HLD
-- Runtime deployment topology
-- Kubernetes namespace governance
-- Shared platform libraries
-- API gateway security architecture
-- Event catalog & schema registry
-- Observability architecture
-- Service dependency graph
-
----
-
-Architectural Source of Truth — Built with Governance, Designed for Scale.
-
-It serves as the central reference point for all architectural decisions, system boundaries, and governance standards across the ecosystem.
