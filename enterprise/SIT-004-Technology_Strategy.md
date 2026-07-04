@@ -84,14 +84,14 @@ This document establishes:
 
 This strategy applies to:
 
-### Enterprise Engineering
+## Enterprise Engineering
 
 - Engineering standards
 - Enterprise repositories
 
 ---
 
-### Platform Engineering
+## Platform Engineering
 
 - Infrastructure platform
 - Configuration platform
@@ -99,14 +99,14 @@ This strategy applies to:
 
 ---
 
-### Product Engineering
+## Product Engineering
 
 - All products
 - Future products
 
 ---
 
-### Application Engineering
+## Application Engineering
 
 - Backend services
 - APIs
@@ -115,7 +115,7 @@ This strategy applies to:
 
 ---
 
-### DevSecOps
+## DevSecOps
 
 - CI/CD
 - Infrastructure

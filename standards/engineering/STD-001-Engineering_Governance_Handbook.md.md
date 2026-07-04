@@ -4436,7 +4436,7 @@ Engineering documents shall follow the naming convention below.
 <Document Type>-<Sequential Number>_<Module Name>.md
 ```
 
-### Examples
+## Examples
 
 ```text
 BRD-001_Identity_Access_Management.md
@@ -4507,7 +4507,7 @@ All engineering documents shall use Semantic Versioning.
 | Minor   | Functional enhancement           |
 | Patch   | Editorial correction             |
 
-### Examples
+## Examples
 
 ```text
 v1.0.0
@@ -4526,7 +4526,7 @@ Repositories shall follow the naming convention:
 starone-<platform>-<purpose>
 ```
 
-### Examples
+## Examples
 
 ```text
 starone-galaxy-architecture

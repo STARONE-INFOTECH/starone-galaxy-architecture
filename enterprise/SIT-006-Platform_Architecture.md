@@ -87,7 +87,7 @@ This document establishes:
 
 The Platform Architecture governs:
 
-### Infrastructure Platform
+## Infrastructure Platform
 
 - Kubernetes
 - Container Runtime
@@ -96,7 +96,7 @@ The Platform Architecture governs:
 
 ---
 
-### Deployment Platform
+## Deployment Platform
 
 - GitHub Actions
 - Argo CD
@@ -105,7 +105,7 @@ The Platform Architecture governs:
 
 ---
 
-### Configuration Platform
+## Configuration Platform
 
 - Spring Cloud Config
 - Environment Configuration
@@ -113,7 +113,7 @@ The Platform Architecture governs:
 
 ---
 
-### Integration Platform
+## Integration Platform
 
 - REST APIs
 - Kafka
@@ -121,7 +121,7 @@ The Platform Architecture governs:
 
 ---
 
-### Observability Platform
+## Observability Platform
 
 - Logging
 - Metrics
@@ -130,7 +130,7 @@ The Platform Architecture governs:
 
 ---
 
-### Security Platform
+## Security Platform
 
 - Authentication
 - Authorization
@@ -751,7 +751,7 @@ Platform changes that affect multiple products shall undergo Enterprise Architec
 
 The platform shall evolve incrementally.
 
-### Phase 1 – Foundation
+## Phase 1 – Foundation
 
 - Kubernetes Platform
 - GitHub
@@ -763,7 +763,7 @@ The platform shall evolve incrementally.
 
 ---
 
-### Phase 2 – Shared Platform Services
+## Phase 2 – Shared Platform Services
 
 - Kafka
 - Monitoring
@@ -773,7 +773,7 @@ The platform shall evolve incrementally.
 
 ---
 
-### Phase 3 – Enterprise Platform
+## Phase 3 – Enterprise Platform
 
 - Internal Developer Platform (IDP)
 - Self-Service Provisioning
@@ -782,7 +782,7 @@ The platform shall evolve incrementally.
 
 ---
 
-### Phase 4 – Intelligent Platform
+## Phase 4 – Intelligent Platform
 
 - AI-Assisted Operations
 - Automated Platform Optimization

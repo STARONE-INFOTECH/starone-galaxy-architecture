@@ -99,7 +99,7 @@ This document establishes:
 
 This architecture applies to:
 
-### Enterprise Architecture
+## Enterprise Architecture
 
 - Standards
 - Governance
@@ -107,7 +107,7 @@ This architecture applies to:
 
 ---
 
-### Platform Architecture
+## Platform Architecture
 
 - Infrastructure
 - Configuration
@@ -115,7 +115,7 @@ This architecture applies to:
 
 ---
 
-### Product Architecture
+## Product Architecture
 
 - DHS
 - BookShow
@@ -124,7 +124,7 @@ This architecture applies to:
 
 ---
 
-### Infrastructure
+## Infrastructure
 
 - Kubernetes
 - Networking
@@ -133,7 +133,7 @@ This architecture applies to:
 
 ---
 
-### Enterprise Integration
+## Enterprise Integration
 
 - APIs
 - Events
@@ -141,7 +141,7 @@ This architecture applies to:
 
 ---
 
-### Runtime Architecture
+## Runtime Architecture
 
 - Containers
 - Kubernetes

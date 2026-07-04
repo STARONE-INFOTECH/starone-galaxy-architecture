@@ -95,7 +95,7 @@ Detailed implementation guidance is intentionally delegated to other enterprise 
 
 This Engineering Operating Model applies to:
 
-### Enterprise Engineering
+## Enterprise Engineering
 
 - Enterprise Architecture
 - Engineering Governance
@@ -103,14 +103,14 @@ This Engineering Operating Model applies to:
 - Standards
 - Templates
 
-### Platform Engineering
+## Platform Engineering
 
 - Infrastructure Platform
 - Configuration Platform
 - CI/CD Platform
 - Shared Engineering Services
 
-### Product Engineering
+## Product Engineering
 
 - DHS
 - BookShow
@@ -118,7 +118,7 @@ This Engineering Operating Model applies to:
 - SportStats
 - Future Products
 
-### Software Delivery
+## Software Delivery
 
 - SDLC
 - Architecture
@@ -128,7 +128,7 @@ This Engineering Operating Model applies to:
 - Deployment
 - Operations
 
-### Repository Landscape
+## Repository Landscape
 
 - Enterprise Repositories
 - Platform Repositories

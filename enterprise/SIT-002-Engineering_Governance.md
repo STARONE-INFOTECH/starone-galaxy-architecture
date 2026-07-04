@@ -88,26 +88,26 @@ This document establishes:
 
 This document applies to:
 
-### Enterprise Engineering
+## Enterprise Engineering
 
 - Standards
 - Policies
 - Templates
 - Enterprise Architecture
 
-### Platform Engineering
+## Platform Engineering
 
 - Infrastructure
 - Platform Services
 - Shared Components
 
-### Product Engineering
+## Product Engineering
 
 - Business Products
 - Software Delivery
 - Product Architecture
 
-### Application Engineering
+## Application Engineering
 
 - Design
 - Development
@@ -115,7 +115,7 @@ This document applies to:
 - Deployment
 - Operations
 
-### Engineering Repositories
+## Engineering Repositories
 
 - Enterprise
 - Platform

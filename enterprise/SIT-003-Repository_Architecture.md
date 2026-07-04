@@ -93,7 +93,7 @@ This document establishes:
 
 This architecture applies to:
 
-### Enterprise Repository
+## Enterprise Repository
 
 Engineering standards
 
@@ -107,7 +107,7 @@ Reference documentation
 
 ---
 
-### Platform Repositories
+## Platform Repositories
 
 Infrastructure
 
@@ -119,7 +119,7 @@ Automation
 
 ---
 
-### Shared Component Repositories
+## Shared Component Repositories
 
 Internal frameworks
 
@@ -129,7 +129,7 @@ Reusable libraries
 
 ---
 
-### Application Repositories
+## Application Repositories
 
 Business applications
 

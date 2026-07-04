@@ -86,7 +86,7 @@ This document establishes:
 
 These principles apply to:
 
-### Enterprise Architecture
+## Enterprise Architecture
 
 - Enterprise standards
 - Enterprise platforms
@@ -94,7 +94,7 @@ These principles apply to:
 
 ---
 
-### Platform Architecture
+## Platform Architecture
 
 - Infrastructure platform
 - Configuration platform
@@ -102,7 +102,7 @@ These principles apply to:
 
 ---
 
-### Application Architecture
+## Application Architecture
 
 - DHS
 - BookShow
@@ -112,7 +112,7 @@ These principles apply to:
 
 ---
 
-### Software Design
+## Software Design
 
 - Services
 - APIs
