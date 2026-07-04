@@ -4,14 +4,14 @@
 
 # 1. Title Page
 
-| Field       | Value                                          |
-| ------------|------------------------------------------------|
-| Document ID | ADR-012                                        |
-| Project     | StarOne Galaxy                                 |
-| Decision    | Observability Strategy                         |
-| Author      | Sachin Salunke                                 |
-| Date        | Jan 2026                                       |
-| Status      | Accepted                                       |
+| Field       | Value                  |
+| ----------- | ---------------------- |
+| Document ID | ADR-012                |
+| Project     | StarOne Galaxy         |
+| Decision    | Observability Strategy |
+| Author      | Sachin Salunke         |
+| Date        | Jan 2026               |
+| Status      | Accepted               |
 
 ---
 
@@ -202,10 +202,10 @@ Alert implementation belongs to the Infrastructure Repository.
 
 # 6. Trade-offs
 
-| Trade-off | Decision |
-|-----------|----------|
-| Simplicity vs Operational Visibility | Chose Visibility |
-| Lower Cost vs Better Diagnostics | Chose Diagnostics |
+| Trade-off                                   | Decision            |
+| ------------------------------------------- | ------------------- |
+| Simplicity vs Operational Visibility        | Chose Visibility    |
+| Lower Cost vs Better Diagnostics            | Chose Diagnostics   |
 | Minimal Logging vs Structured Observability | Chose Observability |
 
 ---

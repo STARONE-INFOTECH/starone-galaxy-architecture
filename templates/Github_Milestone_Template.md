@@ -8,12 +8,12 @@ Provide a concise summary of the delivery objective for this milestone.
 
 ## Release Information
 
-| Field | Value |
-|--------|-------|
-| Release | |
-| Version | |
-| Target Date | |
-| Status | Planned / In Progress / Completed |
+| Field       | Value                             |
+| ----------- | --------------------------------- |
+| Release     |                                   |
+| Version     |                                   |
+| Target Date |                                   |
+| Status      | Planned / In Progress / Completed |
 
 ---
 

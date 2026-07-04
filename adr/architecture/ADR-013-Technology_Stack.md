@@ -4,14 +4,14 @@
 
 # 1. Title Page
 
-| Field       | Value                                    |
-| ------------|------------------------------------------|
-| Document ID | ADR-013                                  |
-| Project     | StarOne Galaxy                           |
-| Decision    | Enterprise Technology Standard           |
-| Author      | Sachin Salunke                           |
-| Date        | Jan 2026                                 |
-| Status      | Accepted                                 |
+| Field       | Value                          |
+| ----------- | ------------------------------ |
+| Document ID | ADR-013                        |
+| Project     | StarOne Galaxy                 |
+| Decision    | Enterprise Technology Standard |
+| Author      | Sachin Salunke                 |
+| Date        | Jan 2026                       |
+| Status      | Accepted                       |
 
 ---
 
@@ -263,10 +263,10 @@ Experimental technologies shall not become platform standards without architectu
 
 # 7. Trade-offs
 
-| Trade-off | Decision |
-|-----------|----------|
-| Innovation vs Stability | Chose Stability |
-| Flexibility vs Standardization | Chose Standardization |
+| Trade-off                                           | Decision              |
+| --------------------------------------------------- | --------------------- |
+| Innovation vs Stability                             | Chose Stability       |
+| Flexibility vs Standardization                      | Chose Standardization |
 | Short-Term Convenience vs Long-Term Maintainability | Chose Maintainability |
 
 ---

@@ -6,25 +6,25 @@
 
 ## 2. Document Metadata
 
-| Field | Value |
-|-------|-------|
-| Document ID | |
-| Domain | |
-| Document Type | Milestone |
-| Version | |
-| Author | |
-| Status | |
-| Date | |
-| Release | |
-| Target Completion Date | |
-| Approval Status | |
+| Field                  | Value     |
+| ---------------------- | --------- |
+| Document ID            |           |
+| Domain                 |           |
+| Document Type          | Milestone |
+| Version                |           |
+| Author                 |           |
+| Status                 |           |
+| Date                   |           |
+| Release                |           |
+| Target Completion Date |           |
+| Approval Status        |           |
 
 ---
 
 ## 3. Revision History
 
 | Version | Date | Author | Description |
-|---------|------|--------|-------------|
+| ------- | ---- | ------ | ----------- |
 
 ---
 

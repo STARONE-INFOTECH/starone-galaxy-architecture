@@ -6,25 +6,25 @@
 
 ## 2. Document Metadata
 
-| Field | Value |
-|-------|-------|
-| Document ID | |
-| Domain | |
-| Document Type | Epic |
-| Version | |
-| Author | |
-| Status | |
-| Date | |
-| Linked PRD | |
-| Release | |
-| Approval Status | |
+| Field           | Value |
+| --------------- | ----- |
+| Document ID     |       |
+| Domain          |       |
+| Document Type   | Epic  |
+| Version         |       |
+| Author          |       |
+| Status          |       |
+| Date            |       |
+| Linked PRD      |       |
+| Release         |       |
+| Approval Status |       |
 
 ---
 
 ## 3. Revision History
 
 | Version | Date | Author | Description |
-|---------|------|--------|-------------|
+| ------- | ---- | ------ | ----------- |
 
 ---
 

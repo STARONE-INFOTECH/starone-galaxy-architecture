@@ -4,14 +4,14 @@
 
 # 1. Title Page
 
-| Field       | Value                                      |
-| ----------- | ------------------------------------------ |
-| Document ID | ADR-008                                    |
-| Project     | StarOne Galaxy                             |
-| Decision    | Domain Decomposition Strategy              |
-| Author      | Sachin Salunke                             |
-| Date        | Jan 2026                                   |
-| Status      | Accepted                                   |
+| Field       | Value                         |
+| ----------- | ----------------------------- |
+| Document ID | ADR-008                       |
+| Project     | StarOne Galaxy                |
+| Decision    | Domain Decomposition Strategy |
+| Author      | Sachin Salunke                |
+| Date        | Jan 2026                      |
+| Status      | Accepted                      |
 
 ---
 
@@ -209,11 +209,11 @@ Direct coupling between domain internals is not permitted.
 
 # 6. Trade-offs
 
-| Trade-off | Decision |
-|-----------|----------|
-| Simplicity vs Business Isolation | Chose Business Isolation |
-| Larger Applications vs Independent Services | Chose Independent Services |
-| Initial Complexity vs Long-Term Maintainability | Chose Maintainability |
+| Trade-off                                       | Decision                   |
+| ----------------------------------------------- | -------------------------- |
+| Simplicity vs Business Isolation                | Chose Business Isolation   |
+| Larger Applications vs Independent Services     | Chose Independent Services |
+| Initial Complexity vs Long-Term Maintainability | Chose Maintainability      |
 
 ---
 

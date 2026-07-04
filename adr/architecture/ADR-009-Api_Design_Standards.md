@@ -4,14 +4,14 @@
 
 # 1. Title Page
 
-| Field       | Value                                     |
-| ----------- | ----------------------------------------- |
-| Document ID | ADR-009                                   |
-| Project     | StarOne Galaxy                            |
-| Decision    | API Design Strategy                       |
-| Author      | Sachin Salunke                            |
-| Date        | Jan 2026                                  |
-| Status      | Accepted                                  |
+| Field       | Value               |
+| ----------- | ------------------- |
+| Document ID | ADR-009             |
+| Project     | StarOne Galaxy      |
+| Decision    | API Design Strategy |
+| Author      | Sachin Salunke      |
+| Date        | Jan 2026            |
+| Status      | Accepted            |
 
 ---
 
@@ -101,13 +101,13 @@ URI naming rules:
 
 ## 3.3 HTTP Methods
 
-| Method | Purpose |
-|---------|---------|
-| GET | Retrieve resources |
-| POST | Create resources |
-| PUT | Replace resources |
-| PATCH | Partial updates |
-| DELETE | Remove resources |
+| Method | Purpose            |
+| ------ | ------------------ |
+| GET    | Retrieve resources |
+| POST   | Create resources   |
+| PUT    | Replace resources  |
+| PATCH  | Partial updates    |
+| DELETE | Remove resources   |
 
 ---
 
@@ -223,10 +223,10 @@ Existing versions shall remain supported according to the platform deprecation p
 
 # 6. Trade-offs
 
-| Trade-off | Decision |
-|-----------|----------|
-| Simplicity vs Flexibility | Chose Simplicity |
-| Performance vs Interoperability | Chose Interoperability |
+| Trade-off                         | Decision               |
+| --------------------------------- | ---------------------- |
+| Simplicity vs Flexibility         | Chose Simplicity       |
+| Performance vs Interoperability   | Chose Interoperability |
 | Rapid Changes vs Stable Contracts | Chose Stable Contracts |
 
 ---

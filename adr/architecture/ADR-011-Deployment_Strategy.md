@@ -4,14 +4,14 @@
 
 # 1. Title Page
 
-| Field       | Value                                            |
-| ------------|--------------------------------------------------|
-| Document ID | ADR-011                                          |
-| Project     | StarOne Galaxy                                   |
-| Decision    | Deployment Strategy                              |
-| Author      | Sachin Salunke                                   |
-| Date        | Jan 2026                                         |
-| Status      | Accepted                                         |
+| Field       | Value               |
+| ----------- | ------------------- |
+| Document ID | ADR-011             |
+| Project     | StarOne Galaxy      |
+| Decision    | Deployment Strategy |
+| Author      | Sachin Salunke      |
+| Date        | Jan 2026            |
+| Status      | Accepted            |
 
 ---
 
@@ -209,11 +209,11 @@ Run all services using standalone Docker containers.
 
 # 6. Trade-offs
 
-| Trade-off | Decision |
-|-----------|----------|
-| Simplicity vs Scalability | Chose Scalability |
-| Manual Deployment vs Automation | Chose Automation |
-| Local Convenience vs Production Alignment | Balanced Both |
+| Trade-off                                 | Decision          |
+| ----------------------------------------- | ----------------- |
+| Simplicity vs Scalability                 | Chose Scalability |
+| Manual Deployment vs Automation           | Chose Automation  |
+| Local Convenience vs Production Alignment | Balanced Both     |
 
 ---
 

@@ -8,12 +8,12 @@ Provide a brief summary of the changes introduced by this Pull Request.
 
 ## Related Work
 
-| Artifact | Reference |
-|----------|-----------|
-| Milestone | |
-| Epic | |
-| Story | |
-| Issue | |
+| Artifact  | Reference |
+| --------- | --------- |
+| Milestone |           |
+| Epic      |           |
+| Story     |           |
+| Issue     |           |
 
 ---
 
@@ -42,9 +42,7 @@ Describe what is included.
 
 ### Excluded
 
--
-
----
+- ***
 
 ## Components Impacted
 

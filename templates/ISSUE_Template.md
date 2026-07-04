@@ -6,27 +6,27 @@
 
 ## 2. Document Metadata
 
-| Field | Value |
-|-------|-------|
-| Document ID | |
-| Domain | |
-| Document Type | Issue |
-| Version | |
-| Author | |
-| Status | |
-| Date | |
-| Linked Story | |
-| Repository | |
-| Module | |
-| Priority | |
-| Approval Status | |
+| Field           | Value |
+| --------------- | ----- |
+| Document ID     |       |
+| Domain          |       |
+| Document Type   | Issue |
+| Version         |       |
+| Author          |       |
+| Status          |       |
+| Date            |       |
+| Linked Story    |       |
+| Repository      |       |
+| Module          |       |
+| Priority        |       |
+| Approval Status |       |
 
 ---
 
 ## 3. Revision History
 
 | Version | Date | Author | Description |
-|---------|------|--------|-------------|
+| ------- | ---- | ------ | ----------- |
 
 ---
 

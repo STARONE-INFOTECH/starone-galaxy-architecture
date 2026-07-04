@@ -4,14 +4,14 @@
 
 # 1. Title Page
 
-| Field       | Value                                           |
-| ----------- | ----------------------------------------------- |
-| Document ID | ADR-007                                         |
-| Project     | StarOne Galaxy                                  |
-| Decision    | Architecture Style                              |
-| Author      | Sachin Salunke                                  |
-| Date        | Jan 2026                                        |
-| Status      | Accepted                                        |
+| Field       | Value              |
+| ----------- | ------------------ |
+| Document ID | ADR-007            |
+| Project     | StarOne Galaxy     |
+| Decision    | Architecture Style |
+| Author      | Sachin Salunke     |
+| Date        | Jan 2026           |
+| Status      | Accepted           |
 
 ---
 
@@ -227,11 +227,11 @@ Technology changes shall not require modifications to business logic.
 
 # 6. Trade-offs
 
-| Trade-off | Decision |
-|-----------|----------|
-| Simplicity vs Maintainability | Chose Maintainability |
-| Initial Development Speed vs Long-Term Flexibility | Chose Flexibility |
-| More Abstraction vs Better Testability | Chose Testability |
+| Trade-off                                          | Decision              |
+| -------------------------------------------------- | --------------------- |
+| Simplicity vs Maintainability                      | Chose Maintainability |
+| Initial Development Speed vs Long-Term Flexibility | Chose Flexibility     |
+| More Abstraction vs Better Testability             | Chose Testability     |
 
 ---
 
