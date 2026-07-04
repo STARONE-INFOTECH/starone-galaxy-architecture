@@ -362,7 +362,6 @@ Preferred:
 Avoid:
 
 > The system will...
-
 > The system can...
 
 unless optional.
