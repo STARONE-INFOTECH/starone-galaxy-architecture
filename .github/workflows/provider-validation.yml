@@ -1,0 +1,54 @@
+name: Architecture Provider Validation
+
+on:
+  pull_request:
+  push:
+    branches:
+      - 'feature/**'
+      - 'docs/**'
+  workflow_dispatch:
+    
+permissions:
+  contents: read
+
+jobs:
+  governance-artifact-validation:
+    name: Governance Artifact Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Governance Artifacts
+        run: |
+          test -d governance/
+          test -f CONTRIBUTING.md
+          test -f .github/CODEOWNERS
+
+  pr-template-validation:
+    name: PR Template Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate PR Template
+        run: |
+          test -f .github/PULL_REQUEST_TEMPLATE.md
+
+  issue-template-validation:
+    name: Issue Template Validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Validate Issue Templates
+        run: |
+          test -f .github/ISSUE_TEMPLATES/story.yml
+          test -f .github/ISSUE_TEMPLATES/task.yml
+          test -f .github/ISSUE_TEMPLATES/bug.yml
+          test -f .github/ISSUE_TEMPLATES/enhancement.yml
