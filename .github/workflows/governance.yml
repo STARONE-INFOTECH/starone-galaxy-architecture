@@ -41,14 +41,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
         with:
-          node-version: 22
-
-      - name: Install Dependencies
-        run: npm install
+          fetch-depth: 0
 
       - name: Validate Commit Messages
         uses: wagoid/commitlint-github-action@v6
