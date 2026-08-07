@@ -17,12 +17,12 @@ The standards apply to:
 
 ## Standards
 
-| Document | Purpose |
-|----------|---------|
-| docker-engineering-standards.md | Overall Docker engineering principles |
-| dockerfile-conventions.md | Dockerfile structure and conventions |
-| image-naming-and-versioning.md | Image naming and semantic versioning |
-| container-security-standards.md | Container security requirements |
+| Document                        | Purpose                                |
+| ------------------------------- | -------------------------------------- |
+| docker-engineering-standards.md | Overall Docker engineering principles  |
+| dockerfile-conventions.md       | Dockerfile structure and conventions   |
+| image-naming-and-versioning.md  | Image naming and semantic versioning   |
+| container-security-standards.md | Container security requirements        |
 | build-optimization-standards.md | Build and image optimization practices |
 
 ## Governance
