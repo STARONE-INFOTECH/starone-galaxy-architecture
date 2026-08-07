@@ -94,3 +94,61 @@ The `latest` tag shall not be used for production deployments.
 The Architecture Repository defines the base image strategy.
 
 Infrastructure repositories implement this strategy.
+
+## Linux Distribution Standard
+
+The default runtime operating system shall be Eclipse Temurin's supported Linux runtime image.
+
+Selection criteria:
+
+- Official vendor support
+- Long-Term Support (LTS)
+- Security update cadence
+- Small runtime footprint
+- Compatibility with Java 21
+
+Alternative runtime images require Architecture approval.
+
+## Image Maintenance Procedure
+
+Platform Engineering shall maintain all enterprise base images.
+
+Maintenance activities include:
+
+- Monthly security patch review
+- Quarterly base image upgrades
+- Java LTS update verification
+- Vulnerability scanning
+- Deprecation review
+
+Applications consume platform images and shall not maintain independent base images.
+
+## Image Governance
+
+Ownership
+
+- Architecture Repository
+  - Standards
+  - Versioning Policy
+  - Security Policy
+  - Runtime Selection
+
+- Infrastructure Repository
+  - Base Image Implementation
+  - Dockerfiles
+  - Runtime Templates
+  - Builder Images
+
+Any deviation requires an approved Architecture Decision Record (ADR).
+
+## Documentation Standard
+
+Each base image shall include:
+
+- Purpose
+- Base image reference
+- Supported Java version
+- Supported operating system
+- Build instructions
+- Maintenance owner
+- Version history
