@@ -13,6 +13,7 @@ This directory contains GitHub Actions workflows that implement Governance-as-Co
 | security.yml       | Security validation and compliance checks  |
 | pr-validation.yml  | Pull request governance enforcement        |
 | lint-standards.yml | Repository standards linting               |
+| maven-build.yml    | Reusable Java 21 Maven build verification  |
 
 ## Validation Composition
 
@@ -50,6 +51,37 @@ Security validation includes:
 - Workflow Security
 - Security Reporting
 
+---
+
+## Engineering Build Capabilities
+
+### Maven Build
+
+The `maven-build.yml` workflow provides the `ENG-BUILD-MAVEN` reusable
+engineering capability for Java 21 Maven repositories.
+
+The workflow:
+
+- provisions Java 21 using the Temurin distribution;
+- enables Maven dependency caching;
+- reports the Maven Wrapper runtime;
+- executes `./mvnw --batch-mode --no-transfer-progress clean verify`.
+
+Consumer repositories retain ownership of dependency versions, Maven plugins,
+module structure, and project-specific build configuration.
+
+### Maven Consumer Prerequisites
+
+Consumer repositories must:
+
+- include the Maven Wrapper (`mvnw`, `mvnw.cmd`, and `.mvn/wrapper/`);
+- use Maven 3.9 or later;
+- support Java 21;
+- provide a valid Maven project;
+- ensure `./mvnw clean verify` succeeds from the repository root.
+
+---
+
 ## Reusable Workflow Consumption
 
 Consumer repositories can use the centralized validation workflow:
@@ -59,6 +91,19 @@ jobs:
   validation:
     uses: STARONE-INFOTECH/starone-galaxy-architecture/.github/workflows/validation.yml@v1
 ```
+---
+
+Java 21 Maven repositories can consume the reusable Maven build capability:
+
+```yaml
+jobs:
+  maven-build:
+```
+```markdown
+    uses: STARONE-INFOTECH/starone-galaxy-architecture/.github/workflows/maven-build.yml@v1
+```
+
+---
 
 ## Future Expansion
 
